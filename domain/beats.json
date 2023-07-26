@@ -1,22 +1,19 @@
 {
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "A0.NIC.BEATS",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:3a:0:0:0:0:9"
-            ],
             "v4" : [
                "65.22.60.9"
+            ],
+            "v6" : [
+               "2a01:8840:3a:0:0:0:0:9"
             ]
-         },
-         "ldhName" : "A0.NIC.BEATS"
+         }
       },
       {
+         "ldhName" : "A2.NIC.BEATS",
          "ipAddresses" : {
             "v4" : [
                "65.22.63.9"
@@ -25,11 +22,10 @@
                "2a01:8840:3d:0:0:0:0:9"
             ]
          },
-         "ldhName" : "A2.NIC.BEATS",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.BEATS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.61.9"
@@ -38,9 +34,10 @@
                "2a01:8840:3b:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "B0.NIC.BEATS"
       },
       {
+         "ldhName" : "C0.NIC.BEATS",
          "ipAddresses" : {
             "v4" : [
                "65.22.62.9"
@@ -49,19 +46,34 @@
                "2a01:8840:3c:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C0.NIC.BEATS",
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "beats",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/beats.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://beatsbydre.com",
+         "rel" : "related"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -72,8 +84,90 @@
          ]
       }
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://beatsbydre.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-08-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-09-16"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Beats Electronics, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "8600 Hayden Place\nCulver City CA 90232\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "beats-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "beats-technical",
          "vcardArray" : [
             "vcard",
@@ -136,54 +230,14 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "beats-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Beats Electronics, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "8600 Hayden Place\nCulver City CA 90232\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "beats-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "handle" : "beats-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -242,93 +296,39 @@
                   "ngtld-apple@cscglobal.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/beats.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://beatsbydre.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "beats",
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "3234",
-            "digestType" : "2",
+            "digest" : "3bad4fe26537c9b141eba6cb27f3e5640f302028b78c767d1780f1d85fb659d1",
             "algorithm" : "7",
-            "digest" : "3bad4fe26537c9b141eba6cb27f3e5640f302028b78c767d1780f1d85fb659d1"
+            "keyTag" : "3234",
+            "digestType" : "2"
          },
          {
+            "algorithm" : "7",
             "keyTag" : "3234",
             "digestType" : "1",
-            "algorithm" : "7",
             "digest" : "d046927a7b31b59e7aaa612d56e1f8da77cc9e91"
          },
          {
-            "keyTag" : "4606",
-            "digestType" : "1",
+            "digest" : "5016cfafb58908893b6288c1150b6debb1c0436f",
             "algorithm" : "7",
-            "digest" : "5016cfafb58908893b6288c1150b6debb1c0436f"
+            "keyTag" : "4606",
+            "digestType" : "1"
          },
          {
             "digest" : "a5f26c1dd2b6f050bf9c1439e0c53295e502769be20991866084aaef6ba2ed7d",
-            "keyTag" : "4606",
+            "algorithm" : "7",
             "digestType" : "2",
-            "algorithm" : "7"
+            "keyTag" : "4606"
          }
       ],
       "delegationSigned" : true
    },
-   "events" : [
-      {
-         "eventDate" : "2015-08-13",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-09-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:12",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://beatsbydre.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "objectClassName" : "domain",
    "handle" : "beats"
 }

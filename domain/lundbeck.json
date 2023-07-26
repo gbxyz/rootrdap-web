@@ -1,14 +1,90 @@
 {
-   "handle" : "lundbeck",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:6e:0:0:0:0:60"
+            ],
+            "v4" : [
+               "65.22.112.60"
+            ]
+         },
+         "ldhName" : "A0.NIC.LUNDBECK"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:71:0:0:0:0:60"
+            ],
+            "v4" : [
+               "65.22.115.60"
+            ]
+         },
+         "ldhName" : "A2.NIC.LUNDBECK"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.113.60"
+            ],
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:60"
+            ]
+         },
+         "ldhName" : "B0.NIC.LUNDBECK"
+      },
+      {
+         "ldhName" : "C0.NIC.LUNDBECK",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.114.60"
+            ],
+            "v6" : [
+               "2a01:8840:70:0:0:0:0:60"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/lundbeck.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.LUNDBECK."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -23,48 +99,92 @@
          "title" : "Source"
       }
    ],
-   "ldhName" : "lundbeck",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-06-16"
+         "eventDate" : "2016-06-16",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2023-05-25",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-25"
       },
       {
-         "eventDate" : "2023-07-26T12:30:49",
+         "eventDate" : "2023-07-26T13:16:52",
          "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "38580c9480c824da9cb65a5ffaccdf2f6aedc660b98c6166e0a843ff13fab368",
-            "keyTag" : "10564",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lundbeck.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Project Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "H. Lundbeck A/S"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ottiliavej 9\nValby DK-2500\nDenmark"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+45 299 94400"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-lundbeck@cscinfo.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "lundbeck-administrative",
+         "objectClassName" : "entity"
+      },
+      {
          "handle" : "lundbeck-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -123,11 +243,7 @@
                   "tldtech@identity.digital"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "roles" : [
@@ -168,136 +284,20 @@
          ],
          "handle" : "lundbeck-registrant",
          "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "lundbeck-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Project Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "H. Lundbeck A/S"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ottiliavej 9\nValby DK-2500\nDenmark"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+45 299 94400"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-lundbeck@cscinfo.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.LUNDBECK",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.112.60"
-            ],
-            "v6" : [
-               "2a01:8840:6e:0:0:0:0:60"
-            ]
+   "ldhName" : "lundbeck",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "38580c9480c824da9cb65a5ffaccdf2f6aedc660b98c6166e0a843ff13fab368",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "10564"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.115.60"
-            ],
-            "v6" : [
-               "2a01:8840:71:0:0:0:0:60"
-            ]
-         },
-         "ldhName" : "A2.NIC.LUNDBECK",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B0.NIC.LUNDBECK",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:60"
-            ],
-            "v4" : [
-               "65.22.113.60"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:70:0:0:0:0:60"
-            ],
-            "v4" : [
-               "65.22.114.60"
-            ]
-         },
-         "ldhName" : "C0.NIC.LUNDBECK",
-         "objectClassName" : "nameserver"
-      }
-   ],
+      ],
+      "delegationSigned" : true
+   },
+   "handle" : "lundbeck",
    "objectClassName" : "domain"
 }

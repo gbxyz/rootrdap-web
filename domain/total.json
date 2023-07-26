@@ -2,12 +2,15 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TOTAL."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -16,31 +19,46 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "total",
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
             ]
          },
-         "ldhName" : "D.NIC.FR",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.FR"
       },
       {
          "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:1010:11:0:0:0:53"
@@ -48,10 +66,11 @@
             "v4" : [
                "194.146.106.46"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.36.1"
@@ -59,32 +78,14 @@
             "v6" : [
                "2001:678:4c:0:0:0:0:1"
             ]
-         },
-         "ldhName" : "G.EXT.NIC.FR",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "total",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-02-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:07"
+         }
       }
    ],
    "links" : [
       {
+         "href" : "https://www.iana.org/domains/root/db/total.html",
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/total.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -92,29 +93,28 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
          "href" : "http://www.nic.total",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
+   "handle" : "total",
+   "objectClassName" : "domain",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
+            "digest" : "eb38c07816fdf6cf8277071f558ac0c7c787088263271b55eee4e59981414d93",
             "algorithm" : "13",
-            "keyTag" : "60785",
-            "digest" : "eb38c07816fdf6cf8277071f558ac0c7c787088263271b55eee4e59981414d93"
+            "digestType" : "2",
+            "keyTag" : "60785"
          }
       ]
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "total",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "total-registrant",
          "vcardArray" : [
             "vcard",
@@ -148,76 +148,12 @@
                   ]
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Technical Contact"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Immeuble Le Stephenson\n1, rue Stephenson\nMontigny-Le-Bretonneux 78180\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33 1 39 30 83 00"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33 1 39 30 83 01"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "poctotal@afnic.fr"
-               ]
-            ]
-         ],
-         "handle" : "total-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -280,25 +216,89 @@
                ]
             ]
          ],
-         "handle" : "total-administrative"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "handle" : "total-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "objectClassName" : "entity",
+         "handle" : "total-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Technical Contact"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Immeuble Le Stephenson\n1, rue Stephenson\nMontigny-Le-Bretonneux 78180\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33 1 39 30 83 00"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33 1 39 30 83 01"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "poctotal@afnic.fr"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
          ]
       }
-   ]
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-02-05",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
+      }
+   ],
+   "port43" : "whois.iana.org"
 }

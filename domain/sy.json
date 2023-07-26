@@ -19,64 +19,6 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "sy",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.TLD.SY",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "82.137.200.85"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6071:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.71"
-            ]
-         },
-         "ldhName" : "PCH.ANYCAST.TLD.SY",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "SY.CCTLD.AUTHDNS.RIPE.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:113"
-            ],
-            "v4" : [
-               "193.0.9.113"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1996-02-20"
-      },
-      {
-         "eventDate" : "2023-02-28",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:58",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
          "rel" : "related",
@@ -84,20 +26,83 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
+         "href" : "http://tld.sy",
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://tld.sy"
+         "title" : "URL for registration services"
       }
    ],
-   "port43" : "whois.iana.org",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "82.137.200.85"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.TLD.SY"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.71"
+            ],
+            "v6" : [
+               "2001:500:14:6071:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "PCH.ANYCAST.TLD.SY"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:113"
+            ],
+            "v4" : [
+               "193.0.9.113"
+            ]
+         },
+         "ldhName" : "SY.CCTLD.AUTHDNS.RIPE.NET"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
          "handle" : "sy-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -130,13 +135,76 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Head of Licensing Department"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "National Agency for Network Services (NANS)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Sahara-Sabboura Crossroads\nP.O. Box 47/Kudsaya\nDamascus\nSyrian Arab Republic (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+963 11 3937096"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+963 11 3937079"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dnsadmin@tld.sy"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "sy-administrative"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "sy-technical",
          "vcardArray" : [
             "vcard",
@@ -199,93 +267,25 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "sy-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Head of Licensing Department"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "National Agency for Network Services (NANS)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Sahara-Sabboura Crossroads\nP.O. Box 47/Kudsaya\nDamascus\nSyrian Arab Republic (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+963 11 3937096"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+963 11 3937079"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dnsadmin@tld.sy"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "notices" : [
+   "ldhName" : "sy",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "1996-02-20",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventDate" : "2023-02-28",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "sy"
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "sy"
 }

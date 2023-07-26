@@ -1,13 +1,70 @@
 {
-   "ldhName" : "mls",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MLS."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:8"
+            ],
+            "v4" : [
+               "185.159.197.8"
+            ]
+         },
+         "ldhName" : "A.NS.NIC.MLS"
+      },
+      {
+         "ldhName" : "B.NS.NIC.MLS",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:8"
+            ],
+            "v4" : [
+               "185.159.198.8"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/mls.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -18,11 +75,56 @@
          ]
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
-         "roles" : [
-            "technical"
+         "handle" : "mls-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "The Canadian Real Estate Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "200 Catherine Street, 6th Floor\nOttawa ON K2P 2K9\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "handle" : "mls-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -82,52 +184,11 @@
                ]
             ]
          ],
-         "handle" : "mls-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "mls-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "The Canadian Real Estate Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "200 Catherine Street, 6th Floor\nOttawa ON K2P 2K9\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+            "technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "mls-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -181,99 +242,38 @@
          ],
          "roles" : [
             "administrative"
-         ]
+         ],
+         "handle" : "mls-administrative",
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/mls.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
+   "ldhName" : "mls",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "keyTag" : "32866",
-            "algorithm" : "8",
             "digestType" : "2",
+            "algorithm" : "8",
             "digest" : "ea3c1c5994bb36364acb0a9b8c09cd84477d6707c9317259bcbc8149992a485c"
          }
       ]
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-08-20"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-09-13"
+         "eventDate" : "2022-09-13",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:57"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NS.NIC.MLS",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:8"
-            ],
-            "v4" : [
-               "185.159.197.8"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:8"
-            ],
-            "v4" : [
-               "185.159.198.8"
-            ]
-         },
-         "ldhName" : "B.NS.NIC.MLS"
+         "eventDate" : "2023-07-26T13:16:52"
       }
    ],
    "handle" : "mls",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MLS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ]
+   "objectClassName" : "domain"
 }

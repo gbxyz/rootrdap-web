@@ -1,69 +1,6 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "DNS1.TLD.BECLOUDBY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:c827:a:2:0:0:0:2"
-            ],
-            "v4" : [
-               "93.125.25.72"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS2.TLD.BECLOUDBY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:c827:a:3:0:0:0:2"
-            ],
-            "v4" : [
-               "93.125.25.73"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.98.83.4"
-            ],
-            "v6" : [
-               "2a01:ba80:e:c:1:0:0:4c"
-            ]
-         },
-         "ldhName" : "DNS3.TLD.BECLOUDBY.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a0e:b81:8001:1001:0:0:0:2"
-            ],
-            "v4" : [
-               "31.44.1.137"
-            ]
-         },
-         "ldhName" : "DNS4.TLD.BECLOUDBY.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS7.TLD.BECLOUDBY.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "31.44.5.245"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
+   "handle" : "by",
    "objectClassName" : "domain",
-   "ldhName" : "by",
    "events" : [
       {
          "eventAction" : "registration",
@@ -75,44 +12,67 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:35"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "13",
-            "keyTag" : "495",
-            "digest" : "2d14284f8e47b53f839bd8068d438680b4b6c7a645769c9d89b47df0c5359b7b"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/by.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://cctld.by",
-         "rel" : "related"
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "keyTag" : "495",
+            "digestType" : "2",
+            "digest" : "2d14284f8e47b53f839bd8068d438680b4b6c7a645769c9d89b47df0c5359b7b"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "by",
    "entities" : [
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Belarusian Cloud Technologies LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "K. Marks Str. 29\nMinsk 220030\nBelarus"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "by-registrant"
+      },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "by-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -172,54 +132,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "by-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "by-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Belarusian Cloud Technologies LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "K. Marks Str. 29\nMinsk 220030\nBelarus"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "by-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -278,8 +194,19 @@
                   "admin-c@oac.gov.by"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "by-administrative",
+         "objectClassName" : "entity"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -291,23 +218,97 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "93.125.25.72"
+            ],
+            "v6" : [
+               "2a00:c827:a:2:0:0:0:2"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS1.TLD.BECLOUDBY.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:c827:a:3:0:0:0:2"
+            ],
+            "v4" : [
+               "93.125.25.73"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS2.TLD.BECLOUDBY.COM"
+      },
+      {
+         "ldhName" : "DNS3.TLD.BECLOUDBY.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:ba80:e:c:1:0:0:4c"
+            ],
+            "v4" : [
+               "185.98.83.4"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNS4.TLD.BECLOUDBY.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a0e:b81:8001:1001:0:0:0:2"
+            ],
+            "v4" : [
+               "31.44.1.137"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNS7.TLD.BECLOUDBY.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "31.44.5.245"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/by.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://cctld.by",
+         "title" : "URL for registration services"
+      }
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.CCTLD.BY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -316,11 +317,10 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "handle" : "by"
+   ]
 }

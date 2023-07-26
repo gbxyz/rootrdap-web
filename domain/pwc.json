@@ -1,79 +1,25 @@
 {
+   "handle" : "pwc",
    "objectClassName" : "domain",
-   "nameservers" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "ldhName" : "A0.NIC.PWC",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.80.9"
-            ],
-            "v6" : [
-               "2a01:8840:4e:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-15"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.PWC",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.83.9"
-            ],
-            "v6" : [
-               "2a01:8840:51:0:0:0:0:9"
-            ]
-         }
+         "eventDate" : "2020-11-17",
+         "eventAction" : "last changed"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.PWC",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:4f:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.81.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:50:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.82.9"
-            ]
-         },
-         "ldhName" : "C0.NIC.PWC",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
       }
    ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "pwc-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -82,12 +28,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Head of Online"
                ],
                [
                   "org",
@@ -110,36 +50,17 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 (0)20 7583 5000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+44 (0)20 7822 4652"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-pwc@cscglobal.com"
                ]
             ]
          ],
-         "handle" : "pwc-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       },
       {
-         "handle" : "pwc-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -199,16 +120,10 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "pwc-technical"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "pwc-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -217,6 +132,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Head of Online"
                ],
                [
                   "org",
@@ -239,24 +160,54 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 (0)20 7583 5000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+44 (0)20 7822 4652"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-pwc@cscglobal.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "pwc-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "pwc",
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "53a702c1bc2e7246d8027839bc8c43ecb48a28139d2ecbc0350e4c6ca3bc623a",
+            "algorithm" : "8",
             "keyTag" : "50191",
-            "digestType" : "2",
-            "algorithm" : "8"
+            "digestType" : "2"
          }
       ],
       "delegationSigned" : true
    },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -264,31 +215,84 @@
          "rel" : "related"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
-         "href" : "http://pwc.com",
          "title" : "URL for registration services",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://pwc.com"
       }
    ],
-   "events" : [
+   "nameservers" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-15"
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.80.9"
+            ],
+            "v6" : [
+               "2a01:8840:4e:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.PWC"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-17"
+         "ldhName" : "A2.NIC.PWC",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:51:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.83.9"
+            ]
+         }
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:27"
+         "ldhName" : "B0.NIC.PWC",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.81.9"
+            ],
+            "v6" : [
+               "2a01:8840:4f:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C0.NIC.PWC",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:50:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.82.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "pwc",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "remarks" : [
       {
          "description" : [
@@ -303,14 +307,10 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "pwc"
+   ]
 }

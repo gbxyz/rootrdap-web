@@ -1,92 +1,20 @@
 {
-   "ldhName" : "ovh",
-   "events" : [
-      {
-         "eventDate" : "2014-05-01",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:15"
-      }
-   ],
+   "objectClassName" : "domain",
+   "handle" : "ovh",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
-            "algorithm" : "13",
+            "digest" : "02a3f789b7d6c726513eebadf7f64741fed1acd57405339d9d50191c620cd914",
             "keyTag" : "24939",
-            "digest" : "02a3f789b7d6c726513eebadf7f64741fed1acd57405339d9d50191c620cd914"
+            "digestType" : "2",
+            "algorithm" : "13"
          }
       ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/ovh.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.ovh.com"
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "ovh",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ovh-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "OVH SAS"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2, rue Kellermann\nRoubaix 59100\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "ovh-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -148,11 +76,16 @@
          ],
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "ovh-technical"
       },
       {
          "objectClassName" : "entity",
          "handle" : "ovh-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -211,75 +144,69 @@
                   "whois@domain.ovh.net"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "OVH SAS"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2, rue Kellermann\nRoubaix 59100\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "ovh-registrant",
+         "objectClassName" : "entity"
       }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-05-01",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "D.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
-            ],
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.46"
-            ],
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.36.1"
-            ]
-         },
-         "ldhName" : "G.EXT.NIC.FR"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "ovh",
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -295,10 +222,83 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.9.1"
+            ]
+         }
+      },
+      {
+         "ldhName" : "F.EXT.NIC.FR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ],
+            "v4" : [
+               "194.146.106.46"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.36.1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "G.EXT.NIC.FR"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/ovh.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.ovh.com"
       }
    ]
 }

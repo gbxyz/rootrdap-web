@@ -1,78 +1,81 @@
 {
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "events" : [
       {
-         "ldhName" : "A.NIC.HOST",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:53"
-            ],
-            "v4" : [
-               "194.169.218.53"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2014-05-22",
+         "eventAction" : "registration"
       },
       {
-         "ldhName" : "B.NIC.HOST",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.53"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:53"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2021-10-12",
+         "eventAction" : "last changed"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.53"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:53"
-            ]
-         },
-         "ldhName" : "E.NIC.HOST"
-      },
-      {
-         "ldhName" : "F.NIC.HOST",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.53"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "86b9716c2e5daadc785ada27d4e8bfb190947d14",
+            "algorithm" : "8",
+            "digestType" : "1",
+            "keyTag" : "61142"
+         },
+         {
+            "digest" : "d15742398f5291b0e2642bee5da6ed6ef3f4497c65bac0f5a6c9c8ff495cf286",
+            "digestType" : "2",
+            "keyTag" : "61142",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "host",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Radix FZC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Directiplex\nNext to Andheri Subway\nOld Nagardas Road, Andheri (East)\nMumbai Maharashtra 400069\nIndia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "host-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "host-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -134,54 +137,9 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "host-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "handle" : "host-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Radix FZC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Directiplex\nNext to Andheri Subway\nOld Nagardas Road, Andheri (East)\nMumbai Maharashtra 400069\nIndia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -241,33 +199,38 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "handle" : "host-administrative",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "1",
-            "algorithm" : "8",
-            "keyTag" : "61142",
-            "digest" : "86b9716c2e5daadc785ada27d4e8bfb190947d14"
-         },
-         {
-            "keyTag" : "61142",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "d15742398f5291b0e2642bee5da6ed6ef3f4497c65bac0f5a6c9c8ff495cf286"
-         }
-      ]
-   },
+   "handle" : "host",
+   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "links" : [
       {
-         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/host.html"
+         "href" : "https://www.iana.org/domains/root/db/host.html",
+         "rel" : "related"
       },
       {
          "title" : "About RDAP",
@@ -275,32 +238,67 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://radixregistry.com/"
       }
    ],
-   "events" : [
+   "nameservers" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-05-22"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:53"
+            ],
+            "v4" : [
+               "194.169.218.53"
+            ]
+         },
+         "ldhName" : "A.NIC.HOST"
       },
       {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:53"
+            ],
+            "v4" : [
+               "185.24.64.53"
+            ]
+         },
+         "ldhName" : "B.NIC.HOST"
       },
       {
-         "eventDate" : "2023-07-26T12:30:19",
-         "eventAction" : "last update of RDAP database"
+         "ldhName" : "E.NIC.HOST",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:53"
+            ],
+            "v4" : [
+               "212.18.248.53"
+            ]
+         }
+      },
+      {
+         "ldhName" : "F.NIC.HOST",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.53"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:53"
+            ]
+         }
       }
    ],
-   "ldhName" : "host",
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.HOST."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -309,14 +307,16 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "host"
+   "status" : [
+      "active"
+   ]
 }

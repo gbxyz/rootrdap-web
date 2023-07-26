@@ -1,35 +1,62 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.booking.com"
          ]
       },
       {
-         "title" : "Source",
+         "description" : [
+            "Registration information: http://www.booking.com"
+         ],
+         "title" : "Remark"
+      },
+      {
          "description" : [
             "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "handle" : "booking",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/booking.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.booking.com"
+      }
    ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.BOOKING",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -37,47 +64,46 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
             ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.BOOKING",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
          },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "ldhName" : "C.NIC.BOOKING",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.BOOKING",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.27"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:1b"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "ldhName" : "A.NIC.BOOKING"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.BOOKING",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.BOOKING"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.BOOKING"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:1b"
+            ],
+            "v4" : [
+               "156.154.144.27"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.BOOKING"
+      },
+      {
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1072:0:0:0:0:1b"
@@ -85,29 +111,44 @@
             "v4" : [
                "156.154.145.27"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.BOOKING"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.BOOKING",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:1b"
-            ],
             "v4" : [
                "156.154.159.27"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:1b"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS3.DNS.NIC.BOOKING"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "booking",
-   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "0e779c706c569b36a19a7d788c043979b9ab862ef84e913b51920a9c4106c9ab",
+            "digestType" : "2",
+            "keyTag" : "5470",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "booking-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -118,15 +159,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Christopher Niemi"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Booking.com B.V."
+                  "MarkMonitor Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "Herengracht 597\nAmsterdam Noord-Holland 1017 CE\nNetherlands (the)"
+                     "label" : "3540 East Longwing Lane, Suite 300\nMeridian ID 83646\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -138,13 +185,35 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 208-389-5740"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 208-389-5771"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotbooking@markmonitor.com"
                ]
             ]
          ],
-         "handle" : "booking-registrant",
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "handle" : "booking-technical",
          "vcardArray" : [
             "vcard",
@@ -207,13 +276,11 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -225,21 +292,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Christopher Niemi"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "MarkMonitor Inc."
+                  "Booking.com B.V."
                ],
                [
                   "adr",
                   {
-                     "label" : "3540 East Longwing Lane, Suite 300\nMeridian ID 83646\nUnited States of America (the)"
+                     "label" : "Herengracht 597\nAmsterdam Noord-Holland 1017 CE\nNetherlands (the)"
                   },
                   "text",
                   [
@@ -251,90 +312,29 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 208-389-5740"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 208-389-5771"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotbooking@markmonitor.com"
                ]
             ]
          ],
-         "handle" : "booking-administrative"
+         "objectClassName" : "entity",
+         "handle" : "booking-registrant"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "booking",
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2016-07-07",
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:23"
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/booking.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.booking.com"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "0e779c706c569b36a19a7d788c043979b9ab862ef84e913b51920a9c4106c9ab",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "5470"
-         }
-      ],
-      "delegationSigned" : true
-   }
+   "handle" : "booking",
+   "objectClassName" : "domain"
 }

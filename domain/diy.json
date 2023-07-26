@@ -1,29 +1,10 @@
 {
-   "handle" : "diy",
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DIY."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "ldhName" : "diy",
    "links" : [
       {
          "rel" : "related",
@@ -32,43 +13,68 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "25674",
-            "digest" : "06c661d544490aaf9c0efa121f0fd66ae957cb1900309fdae4a670ac4af1d37d"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM"
+      },
+      {
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-02"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:20"
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -79,9 +85,50 @@
          "title" : "Comments"
       }
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DIY."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: "
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "diy",
+   "events" : [
+      {
+         "eventDate" : "2016-07-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-02"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:48",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "diy-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -114,17 +161,69 @@
                   ]
                ]
             ]
+         ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Jennifer Wolfe"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Wolfe Domain"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1196 Fording Island Road\nBluffton SC 29910\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 513 238-4348"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "jwolfe@wolfedomain.com"
+               ]
+            ]
          ],
-         "handle" : "diy-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
+         "handle" : "diy-administrative",
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "diy-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -184,120 +283,21 @@
                ]
             ]
          ],
-         "handle" : "diy-technical",
-         "objectClassName" : "entity"
-      },
-      {
          "roles" : [
-            "administrative"
-         ],
-         "handle" : "diy-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Jennifer Wolfe"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Wolfe Domain"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1196 Fording Island Road\nBluffton SC 29910\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 513 238-4348"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "jwolfe@wolfedomain.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+            "technical"
+         ]
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC1.NSTLD.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
+   "ldhName" : "diy",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "25674",
+            "digest" : "06c661d544490aaf9c0efa121f0fd66ae957cb1900309fdae4a670ac4af1d37d"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      }
-   ]
+      ],
+      "delegationSigned" : true
+   }
 }

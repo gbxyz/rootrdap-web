@@ -1,33 +1,28 @@
 {
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "NS1.UNIREGISTRY.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2620:57:4000:1:0:0:0:1"
-            ],
             "v4" : [
                "64.96.1.1"
+            ],
+            "v6" : [
+               "2620:57:4000:1:0:0:0:1"
             ]
          },
-         "ldhName" : "NS1.UNIREGISTRY.NET",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "NS2.UNIREGISTRY.INFO",
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "64.96.2.1"
-            ],
-            "v6" : []
+            ]
          },
-         "ldhName" : "NS2.UNIREGISTRY.INFO",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.UNIREGISTRY.NET",
          "ipAddresses" : {
             "v6" : [
                "2620:10a:80aa:0:0:0:0:3"
@@ -36,9 +31,11 @@
                "185.159.197.3"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.UNIREGISTRY.NET"
       },
       {
+         "ldhName" : "NS4.UNIREGISTRY.INFO",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -47,57 +44,24 @@
             "v4" : [
                "185.159.198.3"
             ]
-         },
-         "ldhName" : "NS4.UNIREGISTRY.INFO"
+         }
       }
    ],
-   "ldhName" : "photo",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a9c731e215bc6ba13a585782939de293da96e91dec2a3ed9cd27d34868719371",
-            "keyTag" : "56016",
-            "algorithm" : "13",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "7f11b4d8e82f14ace5adcfa2c5cb6701d6e40d87c4f92b129aa62118a7890beb",
-            "algorithm" : "13",
-            "digestType" : "2",
-            "keyTag" : "8311"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/photo.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
          "href" : "http://nic.photo/",
          "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-01-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-07-06"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:19"
       }
    ],
    "notices" : [
@@ -118,67 +82,50 @@
          ]
       }
    ],
-   "entities" : [
+   "remarks" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "photo-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Francisco Obispo"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Tucows Inc"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.949.903.3449"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "trs-ops@tucows.com"
-               ]
-            ]
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.UNIREGISTRY.NET."
          ],
-         "roles" : [
-            "technical"
-         ]
+         "title" : "Whois Service"
       },
       {
-         "objectClassName" : "entity",
+         "description" : [
+            "Registration information: http://nic.photo/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-16"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-06"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "photo",
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -212,13 +159,16 @@
                ]
             ]
          ],
-         "handle" : "photo-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "handle" : "photo-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -279,34 +229,84 @@
             ]
          ],
          "handle" : "photo-administrative",
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.UNIREGISTRY.NET."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.photo/"
+            "technical"
          ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Francisco Obispo"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Tucows Inc"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.949.903.3449"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "trs-ops@tucows.com"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "photo-technical"
       }
    ],
-   "handle" : "photo"
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "56016",
+            "algorithm" : "13",
+            "digest" : "a9c731e215bc6ba13a585782939de293da96e91dec2a3ed9cd27d34868719371"
+         },
+         {
+            "digest" : "7f11b4d8e82f14ace5adcfa2c5cb6701d6e40d87c4f92b129aa62118a7890beb",
+            "algorithm" : "13",
+            "digestType" : "2",
+            "keyTag" : "8311"
+         }
+      ]
+   },
+   "handle" : "photo",
+   "objectClassName" : "domain"
 }

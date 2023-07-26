@@ -1,167 +1,18 @@
 {
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.112.75"
-            ],
-            "v6" : [
-               "2a01:8840:6e:0:0:0:0:75"
-            ]
-         },
-         "ldhName" : "A0.NIC.WEIR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.WEIR",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.115.75"
-            ],
-            "v6" : [
-               "2a01:8840:71:0:0:0:0:75"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:75"
-            ],
-            "v4" : [
-               "65.22.113.75"
-            ]
-         },
-         "ldhName" : "B0.NIC.WEIR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.114.75"
-            ],
-            "v6" : [
-               "2a01:8840:70:0:0:0:0:75"
-            ]
-         },
-         "ldhName" : "C0.NIC.WEIR"
-      }
-   ],
+   "handle" : "weir",
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-04-02",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-05-25"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:22"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/weir.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://weir.co.uk/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "bfffb5b824d7cc802beb433840269cd57749aa46593c40b9967bfba4c376fc6f",
-            "keyTag" : "7762",
             "algorithm" : "8",
+            "keyTag" : "7762",
             "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "handle" : "weir-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Head of IT Service Delivery"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Head of IT Service Delivery"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1 West Regent Street\nGlasgow G2 1RW\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 141 637 7111"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+44 141 221 9789"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-weir@cscinfo.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
-      },
       {
          "vcardArray" : [
             "vcard",
@@ -196,17 +47,13 @@
                ]
             ]
          ],
-         "handle" : "weir-registrant",
          "roles" : [
             "registrant"
          ],
+         "handle" : "weir-registrant",
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "weir-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -266,18 +113,129 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "weir-technical"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "weir-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Head of IT Service Delivery"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Head of IT Service Delivery"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1 West Regent Street\nGlasgow G2 1RW\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 141 637 7111"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+44 141 221 9789"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-weir@cscinfo.com"
+               ]
+            ]
+         ]
       }
    ],
+   "ldhName" : "weir",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-04-02",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-25"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.WEIR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://weir.co.uk/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -288,29 +246,71 @@
          ]
       }
    ],
-   "ldhName" : "weir",
-   "remarks" : [
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.WEIR."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/weir.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://weir.co.uk/"
-         ]
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "title" : "URL for registration services",
+         "href" : "http://weir.co.uk/",
+         "rel" : "related"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "weir"
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.WEIR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:6e:0:0:0:0:75"
+            ],
+            "v4" : [
+               "65.22.112.75"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:71:0:0:0:0:75"
+            ],
+            "v4" : [
+               "65.22.115.75"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.WEIR"
+      },
+      {
+         "ldhName" : "B0.NIC.WEIR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.113.75"
+            ],
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:75"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C0.NIC.WEIR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.114.75"
+            ],
+            "v6" : [
+               "2a01:8840:70:0:0:0:0:75"
+            ]
+         }
+      }
+   ]
 }

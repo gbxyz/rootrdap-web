@@ -2,7 +2,9 @@
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
@@ -17,25 +19,25 @@
          "ldhName" : "A0.NIC.BMS"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A2.NIC.BMS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.115.45"
-            ],
             "v6" : [
                "2a01:8840:71:0:0:0:0:45"
+            ],
+            "v4" : [
+               "65.22.115.45"
             ]
          }
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:45"
-            ],
             "v4" : [
                "65.22.113.45"
+            ],
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:45"
             ]
          },
          "ldhName" : "B0.NIC.BMS"
@@ -49,34 +51,82 @@
                "2a01:8840:70:0:0:0:0:45"
             ]
          },
-         "ldhName" : "C0.NIC.BMS",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.BMS"
       }
    ],
-   "ldhName" : "bms",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bms.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BMS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "bms",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-09-10"
+      },
+      {
+         "eventDate" : "2023-06-26",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "bms",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "bms-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -136,52 +186,13 @@
                ]
             ]
          ],
-         "handle" : "bms-administrative",
-         "objectClassName" : "entity"
-      },
-      {
          "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Bristol-Myers Squibb Company"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "345 Park Avenue\nNew York NY 10154\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "bms-registrant",
-         "objectClassName" : "entity"
+            "administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "bms-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -244,74 +255,63 @@
          "roles" : [
             "technical"
          ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bms.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Bristol-Myers Squibb Company"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "345 Park Avenue\nNew York NY 10154\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "bms-registrant"
       }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "0ee826ffe41ead6fc120d8d76539643da18a56d0b19bb23e8a92ef083fcb09fb",
-            "keyTag" : "22689",
             "algorithm" : "8",
-            "digestType" : "2"
+            "keyTag" : "22689",
+            "digestType" : "2",
+            "digest" : "0ee826ffe41ead6fc120d8d76539643da18a56d0b19bb23e8a92ef083fcb09fb"
          },
          {
-            "keyTag" : "6109",
             "digestType" : "2",
+            "keyTag" : "6109",
             "algorithm" : "8",
             "digest" : "cf017a68f34ccc1a4f72fb998385a5e9eeb60cfd9ff8043ab6e6b4f9495a4a6f"
          }
       ]
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-09-10"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-26"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:20",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BMS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "bms"
+   }
 }

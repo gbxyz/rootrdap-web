@@ -1,32 +1,22 @@
 {
+   "objectClassName" : "domain",
    "handle" : "gw",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "keyTag" : "31518",
+            "digestType" : "2",
+            "digest" : "cae77fe2299b3a08a4c78b400327c2a62bf65421d4bd98836228800c3b0722aa"
+         }
+      ]
+   },
    "ldhName" : "gw",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "gw-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -60,14 +50,72 @@
                ]
             ]
          ],
-         "handle" : "gw-registrant",
          "roles" : [
             "registrant"
          ]
       },
       {
+         "handle" : "gw-administrative",
          "objectClassName" : "entity",
-         "handle" : "gw-technical",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Davi Severiano Goia Cabral D'almada"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Autoridade Reguladora Nacional - Tecnologias de Informação e Comunicação da Guiné-Bissau"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Enterramento, Traseiros do Hospital Militar\nBissau 1372\nGuinea-Bissau"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+245 955400003"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "d.almada@arn.gw"
+               ]
+            ]
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -127,86 +175,8 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Davi Severiano Goia Cabral D'almada"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Autoridade Reguladora Nacional - Tecnologias de Informação e Comunicação da Guiné-Bissau"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Enterramento, Traseiros do Hospital Militar\nBissau 1372\nGuinea-Bissau"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+245 955400003"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "d.almada@arn.gw"
-               ]
-            ]
-         ],
-         "handle" : "gw-administrative",
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "gw-technical"
       }
    ],
    "events" : [
@@ -219,39 +189,71 @@
          "eventDate" : "2022-07-11"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:14"
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "10",
-            "digestType" : "2",
-            "keyTag" : "31518",
-            "digest" : "cae77fe2299b3a08a4c78b400327c2a62bf65421d4bd98836228800c3b0722aa"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gw.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gw.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
    "nameservers" : [
       {
          "ldhName" : "GW01.DNS.PT",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a04:6d80:0:0:0:0:0:19"
@@ -259,33 +261,31 @@
             "v4" : [
                "185.39.208.19"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "GW03.DNS.PT",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "204.61.216.114"
-            ],
             "v6" : [
                "2001:500:14:6114:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.114"
             ]
          }
       },
       {
-         "ldhName" : "H.DNS.PT",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:35:0:0:0:53"
-            ],
             "v4" : [
                "194.146.106.138"
+            ],
+            "v6" : [
+               "2001:67c:1010:35:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "H.DNS.PT"
       }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

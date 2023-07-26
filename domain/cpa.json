@@ -1,6 +1,63 @@
 {
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CPA."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://www.cpa.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/cpa.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.cpa.com"
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "A.NIC.CPA",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -8,13 +65,9 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
             ]
-         },
-         "ldhName" : "A.NIC.CPA",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.CPA",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
@@ -22,11 +75,13 @@
             "v4" : [
                "37.209.194.9"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.CPA"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "C.NIC.CPA",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
@@ -37,7 +92,7 @@
          }
       },
       {
-         "ldhName" : "X.NIC.CPA",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -46,7 +101,7 @@
                "2610:a1:1074:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "X.NIC.CPA"
       },
       {
          "ldhName" : "Y.NIC.CPA",
@@ -62,28 +117,38 @@
       },
       {
          "ldhName" : "Z.NIC.CPA",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.174.82"
-            ],
             "v6" : [
                "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "a5062c23ef5598a091792978fd4f5ba6729a9a30bfcf880fc1cc7d0708a3313d",
+            "keyTag" : "25351",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "cpa-technical",
+         "objectClassName" : "entity",
+         "handle" : "cpa-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -143,13 +208,80 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Domain Operator"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CPA.com"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "PO Box 4836\nNew York NY 10185\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "408-653-4400"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "408-653-4500"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domains@hq.cpa.com"
+               ]
+            ]
+         ],
+         "handle" : "cpa-technical",
          "objectClassName" : "entity"
       },
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "cpa-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -183,93 +315,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Domain Operator"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CPA.com"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "PO Box 4836\nNew York NY 10185\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "408-653-4400"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "408-653-4500"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domains@hq.cpa.com"
-               ]
-            ]
-         ],
-         "handle" : "cpa-administrative",
+         "handle" : "cpa-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "cpa",
    "events" : [
       {
          "eventAction" : "registration",
@@ -281,60 +331,10 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:05"
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cpa.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://www.cpa.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "25351",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "a5062c23ef5598a091792978fd4f5ba6729a9a30bfcf880fc1cc7d0708a3313d"
-         }
-      ]
-   },
-   "ldhName" : "cpa",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CPA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.cpa.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
    "handle" : "cpa"
 }

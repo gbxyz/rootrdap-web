@@ -1,109 +1,19 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nba.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "nba",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.NBA",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "B.NIC.NBA"
-      },
-      {
-         "ldhName" : "C.NIC.NBA",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:77"
-            ],
-            "v4" : [
-               "156.154.144.119"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.NBA"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:77"
-            ],
-            "v4" : [
-               "156.154.145.119"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.NBA"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.NBA",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:77"
-            ],
-            "v4" : [
-               "156.154.159.119"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "59911",
+            "digestType" : "2",
+            "digest" : "734021820d7b1fdeb0567389bcb05a0f47df5f2a0f156d6e9177a9edcb6a8716"
+         }
+      ]
+   },
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "nba-administrative",
          "roles" : [
             "administrative"
          ],
@@ -165,15 +75,14 @@
                   "ngtld-nba@cscglobal.com"
                ]
             ]
-         ],
-         "handle" : "nba-administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "nba-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "nba-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -235,10 +144,8 @@
          ]
       },
       {
+         "handle" : "nba-registrant",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -272,18 +179,57 @@
                ]
             ]
          ],
-         "handle" : "nba-registrant"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
+   "ldhName" : "nba",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2016-07-14",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
+      }
+   ],
+   "handle" : "nba",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nba.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -294,20 +240,6 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2016-07-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:04",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
          "rel" : "related",
@@ -316,25 +248,93 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
+         "title" : "URL for registration services",
          "rel" : "related",
-         "href" : "http://www.nba.com",
-         "title" : "URL for registration services"
+         "href" : "http://www.nba.com"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "59911",
-            "digest" : "734021820d7b1fdeb0567389bcb05a0f47df5f2a0f156d6e9177a9edcb6a8716"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.NBA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.NBA"
+      },
+      {
+         "ldhName" : "C.NIC.NBA",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.119"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:77"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.NBA"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.NBA",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:77"
+            ],
+            "v4" : [
+               "156.154.145.119"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.NBA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:77"
+            ],
+            "v4" : [
+               "156.154.159.119"
+            ]
          }
-      ]
-   },
-   "ldhName" : "nba"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

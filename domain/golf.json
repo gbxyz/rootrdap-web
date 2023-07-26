@@ -1,83 +1,30 @@
 {
-   "nameservers" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "ldhName" : "V0N0.NIC.GOLF",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.46"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:46"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2015-03-12",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.46"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:46"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.GOLF"
+         "eventDate" : "2021-11-10",
+         "eventAction" : "last changed"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.GOLF",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.30.46"
-            ],
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:46"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N3.NIC.GOLF",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:46"
-            ],
-            "v4" : [
-               "161.232.14.46"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.GOLF",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.31.46"
-            ],
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:46"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.46"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:46"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.GOLF",
-         "objectClassName" : "nameserver"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "10444",
+            "algorithm" : "8",
+            "digest" : "fff548bede169fe52de3106f856e5a31a0b349d1a54cbec3c2ff0bb837b29108"
+         }
+      ]
+   },
    "entities" : [
       {
          "vcardArray" : [
@@ -139,54 +86,13 @@
                ]
             ]
          ],
-         "handle" : "golf-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "golf-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "golf-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -246,12 +152,56 @@
                ]
             ]
          ],
-         "handle" : "golf-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "golf-administrative"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "golf-registrant",
+         "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "golf",
+   "objectClassName" : "domain",
+   "handle" : "golf",
    "notices" : [
       {
          "description" : [
@@ -262,33 +212,19 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-12"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:06"
+         ]
       }
    ],
    "links" : [
       {
+         "href" : "https://www.iana.org/domains/root/db/golf.html",
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/golf.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -296,29 +232,91 @@
          "rel" : "related"
       },
       {
+         "href" : "http://www.donuts.domains/",
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "fff548bede169fe52de3106f856e5a31a0b349d1a54cbec3c2ff0bb837b29108",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "10444"
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.GOLF",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:46"
+            ],
+            "v4" : [
+               "65.22.28.46"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "golf",
+      },
+      {
+         "ldhName" : "V0N1.NIC.GOLF",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.46"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:46"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V0N2.NIC.GOLF",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:46"
+            ],
+            "v4" : [
+               "65.22.30.46"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V0N3.NIC.GOLF",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.46"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:46"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.31.46"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:46"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.GOLF"
+      },
+      {
+         "ldhName" : "V2N1.NIC.GOLF",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.46"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:46"
+            ]
+         }
+      }
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GOLF."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -327,14 +325,16 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "golf"
+   "status" : [
+      "active"
+   ]
 }

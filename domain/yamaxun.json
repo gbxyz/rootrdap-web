@@ -1,107 +1,6 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.218.88"
-            ],
-            "v6" : [
-               "2a01:618:402:0:0:0:0:88"
-            ]
-         },
-         "ldhName" : "DNS1.NIC.YAMAXUN"
-      },
-      {
-         "ldhName" : "DNS2.NIC.YAMAXUN",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:88"
-            ],
-            "v4" : [
-               "103.49.82.88"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:88"
-            ],
-            "v4" : [
-               "213.248.222.88"
-            ]
-         },
-         "ldhName" : "DNS3.NIC.YAMAXUN"
-      },
-      {
-         "ldhName" : "DNS4.NIC.YAMAXUN",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:88"
-            ],
-            "v4" : [
-               "43.230.50.88"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         },
-         "ldhName" : "DNSA.NIC.YAMAXUN"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.YAMAXUN",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.101.3"
-            ],
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSC.NIC.YAMAXUN",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.YAMAXUN",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.103.3"
-            ]
-         }
-      }
-   ],
+   "handle" : "yamaxun",
    "objectClassName" : "domain",
-   "ldhName" : "yamaxun",
    "events" : [
       {
          "eventDate" : "2015-09-10",
@@ -112,41 +11,25 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:32:58",
+         "eventDate" : "2023-07-26T13:16:58",
          "eventAction" : "last update of RDAP database"
       }
    ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "fd24cfe326a910cbb3f11cddc381abc7e296bd29e75dac6de13b4b5dbb130ea7",
             "digestType" : "2",
+            "keyTag" : "24775",
             "algorithm" : "8",
-            "keyTag" : "24775"
+            "digest" : "fd24cfe326a910cbb3f11cddc381abc7e296bd29e75dac6de13b4b5dbb130ea7"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/yamaxun.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.amazonregistry.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "yamaxun-registrant",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -181,7 +64,6 @@
                ]
             ]
          ],
-         "handle" : "yamaxun-registrant",
          "roles" : [
             "registrant"
          ]
@@ -189,6 +71,9 @@
       {
          "objectClassName" : "entity",
          "handle" : "yamaxun-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -239,12 +124,10 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "yamaxun-administrative",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -305,11 +188,17 @@
                ]
             ]
          ],
-         "handle" : "yamaxun-administrative",
          "roles" : [
             "administrative"
          ]
       }
+   ],
+   "ldhName" : "yamaxun",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -329,8 +218,120 @@
          "title" : "Comments"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:618:402:0:0:0:0:88"
+            ],
+            "v4" : [
+               "213.248.218.88"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS1.NIC.YAMAXUN"
+      },
+      {
+         "ldhName" : "DNS2.NIC.YAMAXUN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:88"
+            ],
+            "v4" : [
+               "103.49.82.88"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNS3.NIC.YAMAXUN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.222.88"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:88"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNS4.NIC.YAMAXUN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:88"
+            ],
+            "v4" : [
+               "43.230.50.88"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNSA.NIC.YAMAXUN",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.100.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSB.NIC.YAMAXUN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.101.3"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNSC.NIC.YAMAXUN",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSD.NIC.YAMAXUN"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/yamaxun.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://www.amazonregistry.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "remarks" : [
       {
@@ -340,17 +341,16 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.amazonregistry.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "handle" : "yamaxun"
+   ]
 }

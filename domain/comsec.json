@@ -1,4 +1,72 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/comsec.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "AC1.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC4.NSTLD.COM"
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -17,9 +85,48 @@
          "title" : "Comments"
       }
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.COMSEC."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "comsec",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-10-08"
+      },
+      {
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:48"
+      }
+   ],
    "port43" : "whois.iana.org",
+   "ldhName" : "comsec",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "comsec-technical",
          "roles" : [
             "technical"
          ],
@@ -81,48 +188,6 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "handle" : "comsec-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "comsec-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "VeriSign, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "12061 Bluemont Way\nReston VA 20190\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
@@ -185,127 +250,62 @@
                ]
             ]
          ],
-         "handle" : "comsec-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/comsec.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "objectClassName" : "entity",
+         "handle" : "comsec-administrative"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "VeriSign, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "12061 Bluemont Way\nReston VA 20190\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "comsec-registrant"
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "690fa5ece1031be50ddd9ac71d413546cb3d1f3d9914563c0b8c32e53f491b32",
             "keyTag" : "34356",
+            "digestType" : "2",
             "algorithm" : "8",
-            "digestType" : "2"
+            "digest" : "690fa5ece1031be50ddd9ac71d413546cb3d1f3d9914563c0b8c32e53f491b32"
          }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventDate" : "2015-10-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:01",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "comsec",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "ldhName" : "AC1.NSTLD.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "AC4.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "comsec",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.COMSEC."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+      ]
+   }
 }

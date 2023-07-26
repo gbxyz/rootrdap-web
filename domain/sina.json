@@ -1,24 +1,20 @@
 {
-   "ldhName" : "sina",
-   "notices" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventAction" : "registration",
+         "eventDate" : "2016-02-29"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-20"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "sina",
    "entities" : [
       {
          "roles" : [
@@ -87,8 +83,9 @@
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "sina-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -148,15 +145,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "sina-technical"
       },
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "sina-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -190,59 +185,26 @@
                ]
             ]
          ],
+         "handle" : "sina-registrant",
          "objectClassName" : "entity"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "b177daef81c0ebd0c85dba9092550eb8d14333806e1db4c2c44ac9ece76432a5",
             "keyTag" : "39217",
             "digestType" : "2",
-            "algorithm" : "8"
+            "algorithm" : "8",
+            "digest" : "b177daef81c0ebd0c85dba9092550eb8d14333806e1db4c2c44ac9ece76432a5"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/sina.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.sina.com"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-02-29"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-20"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "handle" : "sina",
    "objectClassName" : "domain",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.SINA",
          "ipAddresses" : {
             "v4" : [
                "65.22.140.33"
@@ -250,11 +212,11 @@
             "v6" : [
                "2a01:8840:8a:0:0:0:0:33"
             ]
-         }
+         },
+         "ldhName" : "A0.NIC.SINA"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.SINA",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:8d:0:0:0:0:33"
@@ -262,21 +224,24 @@
             "v4" : [
                "65.22.143.33"
             ]
-         }
+         },
+         "ldhName" : "A2.NIC.SINA"
       },
       {
-         "ldhName" : "B0.NIC.SINA",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:8b:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.141.33"
+            ],
+            "v6" : [
+               "2a01:8840:8b:0:0:0:0:33"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.SINA"
       },
       {
+         "ldhName" : "C0.NIC.SINA",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.142.33"
@@ -284,14 +249,43 @@
             "v6" : [
                "2a01:8840:8c:0:0:0:0:33"
             ]
-         },
-         "ldhName" : "C0.NIC.SINA",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "handle" : "sina",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/sina.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.sina.com"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
@@ -312,5 +306,11 @@
             "IANA"
          ]
       }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

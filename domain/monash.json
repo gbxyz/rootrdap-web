@@ -1,50 +1,187 @@
 {
-   "ldhName" : "monash",
-   "events" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
       {
-         "eventDate" : "2014-01-09",
-         "eventAction" : "registration"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:58"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
    "links" : [
       {
+         "href" : "https://www.iana.org/domains/root/db/monash.html",
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/monash.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.monash"
+         "href" : "http://nic.monash",
+         "title" : "URL for registration services"
       }
    ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.MONASH",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.MONASH",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.MONASH"
+      },
+      {
+         "ldhName" : "D.NIC.MONASH",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.9"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:9"
+            ]
+         }
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MONASH."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.monash"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "monash",
+   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-09"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "d344b67791659d1f21f6181494a347040694c757c57a8d76cbccfd00caa1348f",
             "keyTag" : "59965",
-            "algorithm" : "8",
-            "digestType" : "2"
+            "digestType" : "2",
+            "algorithm" : "8"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Monash University"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Monash University\nMelbourne VIC 3800\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "monash-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "monash-technical",
          "roles" : [
             "technical"
          ],
@@ -98,54 +235,11 @@
                   "registry.operator@monash.edu"
                ]
             ]
-         ],
-         "handle" : "monash-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "monash-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Monash University"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Monash University\nMelbourne VIC 3800\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "monash-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -197,104 +291,10 @@
                ]
             ]
          ],
-         "handle" : "monash-administrative",
-         "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "roles" : [
+            "administrative"
          ]
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.MONASH",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "B.NIC.MONASH"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "ldhName" : "C.NIC.MONASH",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.9"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "D.NIC.MONASH",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "monash",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MONASH."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.monash"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ]
+   "ldhName" : "monash"
 }

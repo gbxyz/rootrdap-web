@@ -1,10 +1,16 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.LONDON."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -25,10 +31,36 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "handle" : "london",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/london.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
@@ -44,6 +76,7 @@
       },
       {
          "ldhName" : "B.NIC.LONDON",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.141"
@@ -51,11 +84,11 @@
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:141"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "C.NIC.LONDON",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.141"
@@ -63,31 +96,43 @@
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:141"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "D.NIC.LONDON",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.249.141"
-            ],
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:141"
+            ],
+            "v4" : [
+               "212.18.249.141"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       }
    ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
+   "handle" : "london",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "11861",
+            "algorithm" : "8",
+            "digest" : "5083facfd25edc276c25d2d3da986f370c82bf31a01821abf462c35800548f77"
+         },
+         {
+            "digest" : "dded8bee7362bbbf9f4186b413c901ff293f5897412fd92e5ef507765d0a6443",
+            "digestType" : "2",
+            "keyTag" : "9956",
+            "algorithm" : "8"
+         }
+      ]
+   },
+   "ldhName" : "london",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "london-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -98,15 +143,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "IT Systems Lead"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Dot London Domains Limited"
+                  "London & Partners"
                ],
                [
                   "adr",
                   {
-                     "label" : "London & Partners, 169 Union Street\nLondon SE1 0LL\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                     "label" : "169 Union Street\nLondon SE1 0LL\nUnited Kingdom of Great Britain and Northern Ireland (the)"
                   },
                   "text",
                   [
@@ -118,14 +169,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 (0)20 7234 5853"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "contact@domains.london"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
-         ]
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "london-administrative"
       },
       {
+         "handle" : "london-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -184,15 +254,12 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "london-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "handle" : "london-administrative",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -203,21 +270,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "IT Systems Lead"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "London & Partners"
+                  "Dot London Domains Limited"
                ],
                [
                   "adr",
                   {
-                     "label" : "169 Union Street\nLondon SE1 0LL\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                     "label" : "London & Partners, 169 Union Street\nLondon SE1 0LL\nUnited Kingdom of Great Britain and Northern Ireland (the)"
                   },
                   "text",
                   [
@@ -229,87 +290,26 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 (0)20 7234 5853"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "contact@domains.london"
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "london-registrant",
          "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
       }
    ],
    "events" : [
       {
-         "eventDate" : "2014-02-13",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-13"
       },
       {
          "eventDate" : "2021-10-13",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:46",
+         "eventDate" : "2023-07-26T13:16:52",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/london.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "5083facfd25edc276c25d2d3da986f370c82bf31a01821abf462c35800548f77",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "11861"
-         },
-         {
-            "digest" : "dded8bee7362bbbf9f4186b413c901ff293f5897412fd92e5ef507765d0a6443",
-            "keyTag" : "9956",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "ldhName" : "london"
+   "port43" : "whois.iana.org"
 }

@@ -1,66 +1,150 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/tvs.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.tvs.in"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.TVS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c6:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.204.9"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.207.9"
+            ],
+            "v6" : [
+               "2a01:8840:c9:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A2.NIC.TVS"
+      },
+      {
+         "ldhName" : "B0.NIC.TVS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.205.9"
+            ],
+            "v6" : [
+               "2a01:8840:c7:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c8:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.206.9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.TVS"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TVS."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.tvs.in"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "tvs",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-02-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:56",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
+            "algorithm" : "8",
             "keyTag" : "29161",
             "digestType" : "2",
-            "algorithm" : "8",
             "digest" : "a36cbb75c2c810d16fdd5562c334351bdd007f5aeb008537115586951ac39240"
          }
       ],
       "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tvs.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.tvs.in",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-02-05",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:11"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "tvs-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -119,15 +203,12 @@
                   "registry.gtld@tvs.in"
                ]
             ]
-         ],
-         "handle" : "tvs-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -187,16 +268,13 @@
                ]
             ]
          ],
-         "handle" : "tvs-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "tvs-technical"
       },
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "tvs-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -230,87 +308,9 @@
                ]
             ]
          ],
+         "handle" : "tvs-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "tvs",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.TVS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.204.9"
-            ],
-            "v6" : [
-               "2a01:8840:c6:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.207.9"
-            ],
-            "v6" : [
-               "2a01:8840:c9:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A2.NIC.TVS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.205.9"
-            ],
-            "v6" : [
-               "2a01:8840:c7:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "B0.NIC.TVS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c8:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.206.9"
-            ]
-         },
-         "ldhName" : "C0.NIC.TVS"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "tvs",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TVS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.tvs.in"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "ldhName" : "tvs"
 }

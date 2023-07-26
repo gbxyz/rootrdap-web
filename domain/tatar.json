@@ -1,10 +1,47 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tatar.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.dottatar.ru"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.DNS.RIPN.NET",
          "ipAddresses" : {
             "v6" : [
@@ -13,10 +50,11 @@
             "v4" : [
                "193.232.128.6"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.DNS.RIPN.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.85.252.62"
@@ -25,7 +63,7 @@
                "2001:678:16:0:194:85:252:62"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "B.DNS.RIPN.NET"
       },
       {
          "objectClassName" : "nameserver",
@@ -48,11 +86,10 @@
                "193.232.142.17"
             ]
          },
-         "ldhName" : "E.DNS.RIPN.NET",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "E.DNS.RIPN.NET"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "F.DNS.RIPN.NET",
          "ipAddresses" : {
             "v4" : [
@@ -61,98 +98,65 @@
             "v6" : [
                "2001:678:14:0:193:232:156:17"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TATAR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.dottatar.ru"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "tatar",
    "objectClassName" : "domain",
-   "ldhName" : "tatar",
    "events" : [
       {
-         "eventDate" : "2014-07-03",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-03"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2023-03-15"
       },
       {
-         "eventDate" : "2023-07-26T12:32:00",
+         "eventDate" : "2023-07-26T13:16:55",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/tatar.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.dottatar.ru",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "cced6d290e870530527adfda81f3277c9f64b8dc2724dc9d90640946d176a01f",
-            "keyTag" : "27077",
             "digestType" : "2",
-            "algorithm" : "8"
+            "keyTag" : "27077",
+            "algorithm" : "8",
+            "digest" : "cced6d290e870530527adfda81f3277c9f64b8dc2724dc9d90640946d176a01f"
          }
       ]
    },
-   "port43" : "whois.iana.org",
    "entities" : [
-      {
-         "handle" : "tatar-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Limited Liability Company \"Coordination Center of Regional Domain of Tatarstan Republic\""
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "52, Peterburgskaya St.\nKazan Republic of Tatarstan 420107\nRussian Federation (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
       {
          "objectClassName" : "entity",
          "handle" : "tatar-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -211,16 +215,12 @@
                   "gtld-tech@tcinet.ru"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "tatar-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -272,49 +272,49 @@
                ]
             ]
          ],
+         "handle" : "tatar-administrative",
          "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
+      },
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+         "handle" : "tatar-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Limited Liability Company \"Coordination Center of Regional Domain of Tatarstan Republic\""
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "52, Peterburgskaya St.\nKazan Republic of Tatarstan 420107\nRussian Federation (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TATAR."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.dottatar.ru"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "tatar"
+   "ldhName" : "tatar"
 }

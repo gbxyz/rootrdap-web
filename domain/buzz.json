@@ -1,146 +1,22 @@
 {
-   "status" : [
-      "active"
-   ],
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "A.NIC.BUZZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.BUZZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C.NIC.BUZZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.29"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:1d"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.BUZZ"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.29"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:1d"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.BUZZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:1d"
-            ],
-            "v4" : [
-               "156.154.159.29"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.BUZZ",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "buzz",
+   "handle" : "buzz",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "eea009d624a40b9afaa8f0fa040a3d0fc900ab565e27aa90cebb67b481c9816c",
+            "keyTag" : "21817",
             "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "21817"
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/buzz.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.buzznames.biz",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2013-12-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:34"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "buzz",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "buzz-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -151,10 +27,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "William Doshier"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "DOTSTRATEGY CO."
+                  "dotStrategy, Co"
                ],
                [
                   "adr",
@@ -171,17 +53,34 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "5013529385"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "5015683834"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "bill@nameshops.com"
                ]
             ]
          ],
-         "handle" : "buzz-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "buzz-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -243,12 +142,11 @@
          ],
          "roles" : [
             "technical"
-         ]
+         ],
+         "handle" : "buzz-technical",
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -259,16 +157,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "William Doshier"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "dotStrategy, Co"
+                  "DOTSTRATEGY CO."
                ],
                [
                   "adr",
@@ -285,36 +177,36 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "5013529385"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "5015683834"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "bill@nameshops.com"
                ]
             ]
          ],
-         "handle" : "buzz-administrative",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "buzz-registrant",
          "objectClassName" : "entity"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ],
    "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "remarks" : [
       {
@@ -336,5 +228,113 @@
          "title" : "Source"
       }
    ],
-   "handle" : "buzz"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/buzz.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.buzznames.biz",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.BUZZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.BUZZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.BUZZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.BUZZ",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.29"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:1d"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.BUZZ",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.29"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:1d"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.BUZZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:1d"
+            ],
+            "v4" : [
+               "156.154.159.29"
+            ]
+         }
+      }
+   ]
 }

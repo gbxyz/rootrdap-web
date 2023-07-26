@@ -1,11 +1,31 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "DNS.RYCE-RSP.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:678:e:114:0:0:0:53"
@@ -14,7 +34,7 @@
                "194.0.11.114"
             ]
          },
-         "ldhName" : "DNS.RYCE-RSP.COM"
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -25,47 +45,90 @@
                "157.90.205.138"
             ]
          },
-         "ldhName" : "NS1.DNS.BUSINESS",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.BUSINESS"
       },
       {
          "ldhName" : "NS1.RYCE-RSP.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a0c:8f40:0:701:0:0:0:153"
-            ],
             "v4" : [
                "193.56.204.153"
+            ],
+            "v6" : [
+               "2a0c:8f40:0:701:0:0:0:153"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "ldhName" : "cologne",
-   "notices" : [
+   "links" : [
       {
-         "title" : "About This Service",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/cologne.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.nic.koeln"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
          "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+            "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
          ]
       },
       {
-         "title" : "Comments",
+         "title" : "Remark",
          "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+            "Registration information: https://www.nic.koeln"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "cologne",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-13"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-11"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:48"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "26533",
+            "digestType" : "2",
+            "algorithm" : "10",
+            "digest" : "b3a50f0fe5e706e83b98eafe1ae7ac0dbb95219c8c6eafb94ce1de36b2a7f51f"
+         }
+      ]
+   },
+   "ldhName" : "cologne",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -99,79 +162,15 @@
                ]
             ]
          ],
+         "roles" : [
+            "registrant"
+         ],
          "handle" : "cologne-registrant",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "cologne-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Technical Operations"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "RyCE GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+431981160"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+43198116111"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tech@dns.business"
-               ]
-            ]
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "cologne-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -231,74 +230,75 @@
                ]
             ]
          ],
-         "handle" : "cologne-administrative",
-         "objectClassName" : "entity"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b3a50f0fe5e706e83b98eafe1ae7ac0dbb95219c8c6eafb94ce1de36b2a7f51f",
-            "keyTag" : "26533",
-            "algorithm" : "10",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cologne.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.nic.koeln",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-13"
-      },
-      {
-         "eventDate" : "2021-03-11",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:58"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
+         "roles" : [
+            "administrative"
          ]
       },
       {
-         "description" : [
-            "Registration information: https://www.nic.koeln"
+         "handle" : "cologne-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
          ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Technical Operations"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "RyCE GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+431981160"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+43198116111"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tech@dns.business"
+               ]
+            ]
+         ]
       }
-   ],
-   "handle" : "cologne"
+   ]
 }

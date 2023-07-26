@@ -1,108 +1,36 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.ROTLD.RO."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.rotld.ro/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "handle" : "ro",
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:628:453:bb:0:0:0:6"
-            ],
-            "v4" : [
-               "78.104.145.6"
-            ]
-         },
-         "ldhName" : "DNS-AT.ROTLD.RO"
+         "eventAction" : "registration",
+         "eventDate" : "1993-02-26"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.11.113"
-            ],
-            "v6" : [
-               "2001:678:e:113:0:0:0:53"
-            ]
-         },
-         "ldhName" : "DNS-C.ROTLD.RO"
+         "eventDate" : "2023-05-08",
+         "eventAction" : "last changed"
       },
       {
-         "ldhName" : "DNS-RO.DENIC.DE",
-         "ipAddresses" : {
-            "v4" : [
-               "81.91.161.99"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "PRIMARY.ROTLD.RO",
-         "ipAddresses" : {
-            "v4" : [
-               "192.162.16.18"
-            ],
-            "v6" : [
-               "2a03:5e80:0:4:192:162:16:18"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a03:5e80:0:4:192:162:16:20"
-            ],
-            "v4" : [
-               "192.162.16.20"
-            ]
-         },
-         "ldhName" : "SEC-DNS-A.ROTLD.RO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "SEC-DNS-B.ROTLD.RO",
-         "ipAddresses" : {
-            "v4" : [
-               "193.230.31.230"
-            ],
-            "v6" : [
-               "2a03:5e80:0:5:193:230:31:230"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "9784",
+            "digest" : "0a8ed773f6bbf8c5d2f687c26a9a904c76de41db74f329501e23f206c9c3b078"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "ro-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -141,7 +69,11 @@
          ]
       },
       {
+         "objectClassName" : "entity",
          "handle" : "ro-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -200,14 +132,14 @@
                   "dns@rotld.ro"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "ro-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -266,14 +198,16 @@
                   "ionut@rotld.ro"
                ]
             ]
-         ],
-         "handle" : "ro-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "ro",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -292,41 +226,88 @@
          ]
       }
    ],
-   "events" : [
+   "nameservers" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1993-02-26"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "78.104.145.6"
+            ],
+            "v6" : [
+               "2001:628:453:bb:0:0:0:6"
+            ]
+         },
+         "ldhName" : "DNS-AT.ROTLD.RO"
       },
       {
-         "eventDate" : "2023-05-08",
-         "eventAction" : "last changed"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:e:113:0:0:0:53"
+            ],
+            "v4" : [
+               "194.0.11.113"
+            ]
+         },
+         "ldhName" : "DNS-C.ROTLD.RO"
       },
       {
-         "eventDate" : "2023-07-26T12:31:34",
-         "eventAction" : "last update of RDAP database"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "81.91.161.99"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "DNS-RO.DENIC.DE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a03:5e80:0:4:192:162:16:18"
+            ],
+            "v4" : [
+               "192.162.16.18"
+            ]
+         },
+         "ldhName" : "PRIMARY.ROTLD.RO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a03:5e80:0:4:192:162:16:20"
+            ],
+            "v4" : [
+               "192.162.16.20"
+            ]
+         },
+         "ldhName" : "SEC-DNS-A.ROTLD.RO"
+      },
+      {
+         "ldhName" : "SEC-DNS-B.ROTLD.RO",
+         "ipAddresses" : {
+            "v4" : [
+               "193.230.31.230"
+            ],
+            "v6" : [
+               "2a03:5e80:0:5:193:230:31:230"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "9784",
-            "digest" : "0a8ed773f6bbf8c5d2f687c26a9a904c76de41db74f329501e23f206c9c3b078"
-         }
-      ]
-   },
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/ro.html",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
@@ -334,5 +315,24 @@
          "title" : "URL for registration services"
       }
    ],
-   "ldhName" : "ro"
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.ROTLD.RO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.rotld.ro/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

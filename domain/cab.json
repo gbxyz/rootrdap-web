@@ -1,22 +1,18 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "cab",
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "33811",
+            "digest" : "b0ac01be28d9aa827609e9cee95d686c81d7fcf279d75b54444cc00d9126d8cb"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "cab",
    "entities" : [
       {
          "vcardArray" : [
@@ -78,58 +74,16 @@
                ]
             ]
          ],
-         "handle" : "cab-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "cab-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "cab-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "handle" : "cab-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -188,69 +142,143 @@
                   "tldadmin@donuts.email"
                ]
             ]
+         ],
+         "handle" : "cab-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "cab-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cab.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "33811",
-            "digest" : "b0ac01be28d9aa827609e9cee95d686c81d7fcf279d75b54444cc00d9126d8cb"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "2013-12-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-12"
       },
       {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
       },
       {
-         "eventDate" : "2023-07-26T12:28:36",
+         "eventDate" : "2023-07-26T13:16:47",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "cab",
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CAB."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/cab.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "V0N0.NIC.CAB",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:29"
-            ],
             "v4" : [
                "65.22.28.29"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:29"
             ]
          },
-         "ldhName" : "V0N0.NIC.CAB",
          "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "V0N1.NIC.CAB",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1f:0:0:0:0:29"
@@ -258,12 +286,9 @@
             "v4" : [
                "65.22.29.29"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.CAB",
          "ipAddresses" : {
             "v4" : [
                "65.22.30.29"
@@ -271,7 +296,9 @@
             "v6" : [
                "2a01:8840:20:0:0:0:0:29"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.CAB"
       },
       {
          "ldhName" : "V0N3.NIC.CAB",
@@ -288,18 +315,17 @@
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:29"
-            ],
             "v4" : [
                "65.22.31.29"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:29"
             ]
          },
          "ldhName" : "V2N0.NIC.CAB"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.CAB",
          "ipAddresses" : {
             "v4" : [
                "161.232.15.29"
@@ -307,34 +333,8 @@
             "v6" : [
                "2a01:8840:f9:0:0:0:0:29"
             ]
-         }
+         },
+         "ldhName" : "V2N1.NIC.CAB"
       }
-   ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "cab",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CAB."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

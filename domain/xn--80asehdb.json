@@ -1,13 +1,25 @@
 {
-   "ldhName" : "xn--80asehdb",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2013-10-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:57"
+      }
+   ],
+   "ldhName" : "xn--80asehdb",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "xn--80asehdb-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -16,12 +28,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Administrative Contact"
                ],
                [
                   "org",
@@ -44,32 +50,18 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 223 125 610"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 223 125 612"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "secretariat@corenic.org"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "xn--80asehdb-registrant"
       },
       {
          "handle" : "xn--80asehdb-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -128,18 +120,11 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "xn--80asehdb-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "xn--80asehdb-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -148,6 +133,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Administrative Contact"
                ],
                [
                   "org",
@@ -170,83 +161,56 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 223 125 610"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 223 125 612"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "secretariat@corenic.org"
                ]
             ]
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2013-10-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-01-07"
-      },
-      {
-         "eventDate" : "2023-07-26T12:32:31",
-         "eventAction" : "last update of RDAP database"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digestType" : "2",
-            "algorithm" : "10",
             "keyTag" : "54606",
+            "algorithm" : "10",
             "digest" : "a1a13fcd0afb413657352eba09765c81e0ba0af0b8452f03eb0d0e4c9661241d"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/xn--80asehdb.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://corenic.org",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "handle" : "xn--80asehdb",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v4" : [
-               "195.253.64.12"
-            ],
             "v6" : [
                "2a01:5b0:4:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.64.12"
             ]
          },
          "objectClassName" : "nameserver"
@@ -260,12 +224,10 @@
                "195.253.65.11"
             ]
          },
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.12"
@@ -273,10 +235,12 @@
             "v6" : [
                "2a01:5b0:5:0:0:0:0:c"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST24.IRONDNS.NET"
       },
       {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:4:0:0:0:0:b"
@@ -285,13 +249,43 @@
                "195.253.64.11"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "xn--80asehdb",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/xn--80asehdb.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://corenic.org",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
@@ -301,16 +295,22 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://corenic.org"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

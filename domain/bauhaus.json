@@ -1,23 +1,53 @@
 {
-   "events" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-12"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BAUHAUS."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "eventDate" : "2023-07-07",
-         "eventAction" : "last changed"
+         "description" : [
+            "Registration information: http://www.bauhaus.info"
+         ],
+         "title" : "Remark"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:09"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/bauhaus.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -26,28 +56,76 @@
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.bauhaus.info"
+         "href" : "http://www.bauhaus.info",
+         "title" : "URL for registration services"
       }
    ],
+   "nameservers" : [
+      {
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         }
+      },
+      {
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
+      }
+   ],
+   "handle" : "bauhaus",
+   "objectClassName" : "domain",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "8e5c6c53e04001f14305794f1b28eb612b8d297cc190f8662b53e3710ce82456",
-            "digestType" : "2",
             "algorithm" : "10",
-            "keyTag" : "3408"
+            "keyTag" : "3408",
+            "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "bauhaus",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "bauhaus-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -81,11 +159,79 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "bauhaus-registrant"
       },
       {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Digital Commerce | Head of Foundation"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "BAHAG Baus Handelsgesellschaft AG Zug/Schweiz Zweigniederlassung Mannheim"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Gutenbergstrasse 21\nMannheim 68167\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49 621 3905 393"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+49 621 3905 7393"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domains@bahag.com"
+               ]
+            ]
+         ],
          "objectClassName" : "entity",
-         "handle" : "bauhaus-technical",
+         "handle" : "bauhaus-administrative"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -147,170 +293,24 @@
          ],
          "roles" : [
             "technical"
-         ]
-      },
-      {
-         "handle" : "bauhaus-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Digital Commerce | Head of Foundation"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "BAHAG Baus Handelsgesellschaft AG Zug/Schweiz Zweigniederlassung Mannheim"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Gutenbergstrasse 21\nMannheim 68167\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49 621 3905 393"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+49 621 3905 7393"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domains@bahag.com"
-               ]
-            ]
          ],
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "bauhaus-technical",
          "objectClassName" : "entity"
       }
    ],
-   "notices" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
       }
-   ],
-   "ldhName" : "bauhaus",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.65.11"
-            ]
-         },
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
-      },
-      {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.65.12"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         },
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "handle" : "bauhaus",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BAUHAUS."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.bauhaus.info"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

@@ -1,7 +1,4 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -10,10 +7,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.verisign.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -22,12 +19,9 @@
          ]
       }
    ],
-   "handle" : "verisign",
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
+         "ldhName" : "AC1.NSTLD.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -36,11 +30,9 @@
             "v4" : [
                "192.42.173.30"
             ]
-         },
-         "ldhName" : "AC1.NSTLD.COM"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
@@ -49,37 +41,79 @@
             "v6" : [
                "2001:500:121:0:0:0:0:30"
             ]
-         }
-      },
-      {
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
          },
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
          "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/verisign.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.verisign.com/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "ldhName" : "verisign",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "handle" : "verisign-registrant",
          "vcardArray" : [
             "vcard",
@@ -116,12 +150,12 @@
          ],
          "roles" : [
             "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "verisign-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -181,15 +215,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "verisign-technical"
       },
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "verisign-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -249,68 +281,36 @@
                ]
             ]
          ],
+         "handle" : "verisign-administrative",
          "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-11-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:15"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/verisign.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.verisign.com/",
-         "rel" : "related"
       }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digestType" : "2",
             "keyTag" : "34740",
+            "algorithm" : "8",
             "digest" : "7468287539bbb69b7d1fce14b16e16b6f75b6a1a8e50832dc333fd0f177c633f"
          }
       ]
-   }
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-06"
+      },
+      {
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:56",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "handle" : "verisign",
+   "objectClassName" : "domain"
 }

@@ -1,34 +1,83 @@
 {
-   "events" : [
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-11-26"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TRUST."
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-05-16"
+         "description" : [
+            "Registration information: https://internetnaming.co"
+         ],
+         "title" : "Remark"
       },
       {
-         "eventDate" : "2023-07-26T12:32:09",
-         "eventAction" : "last update of RDAP database"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "33872",
-            "digestType" : "2",
-            "algorithm" : "13",
-            "digest" : "d324a81281464251e04686f4e75d2978b119496fe596012a89647ff6af0eefc3"
-         }
-      ]
-   },
+   "nameservers" : [
+      {
+         "ldhName" : "NS1.UNIREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.1.1"
+            ],
+            "v6" : [
+               "2620:57:4000:1:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "64.96.2.1"
+            ]
+         },
+         "ldhName" : "NS2.UNIREGISTRY.INFO"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.197.3"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:3"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.UNIREGISTRY.NET"
+      },
+      {
+         "ldhName" : "NS4.UNIREGISTRY.INFO",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:3"
+            ],
+            "v4" : [
+               "185.159.198.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/trust.html"
+         "href" : "https://www.iana.org/domains/root/db/trust.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -41,9 +90,130 @@
          "title" : "URL for registration services"
       }
    ],
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "handle" : "trust",
+   "objectClassName" : "domain",
+   "ldhName" : "trust",
    "entities" : [
       {
+         "handle" : "trust-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Internet Naming Co."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "23 Lime Tree Bay, West Bay\nGrand Cayman KY1-1505\nCayman Islands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "trust-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Francisco Obispo"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Tucows Inc"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.949.903.3449"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "trs-ops@tucows.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -96,203 +266,33 @@
             ]
          ],
          "handle" : "trust-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Francisco Obispo"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Tucows Inc"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.949.903.3449"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "trs-ops@tucows.com"
-               ]
-            ]
-         ],
-         "handle" : "trust-technical"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "trust-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Internet Naming Co."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "23 Lime Tree Bay, West Bay\nGrand Cayman KY1-1505\nCayman Islands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "ldhName" : "trust",
-   "nameservers" : [
-      {
-         "ldhName" : "NS1.UNIREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:57:4000:1:0:0:0:1"
-            ],
-            "v4" : [
-               "64.96.1.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.UNIREGISTRY.INFO",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "64.96.2.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS3.UNIREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.197.3"
-            ],
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.UNIREGISTRY.INFO",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.198.3"
-            ],
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:3"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "d324a81281464251e04686f4e75d2978b119496fe596012a89647ff6af0eefc3",
+            "algorithm" : "13",
+            "keyTag" : "33872",
+            "digestType" : "2"
          }
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "handle" : "trust",
-   "remarks" : [
+      ],
+      "delegationSigned" : true
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TRUST."
-         ],
-         "title" : "Whois Service"
+         "eventAction" : "registration",
+         "eventDate" : "2014-11-26"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://internetnaming.co"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-16"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventDate" : "2023-07-26T13:16:56",
+         "eventAction" : "last update of RDAP database"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

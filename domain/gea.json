@@ -1,6 +1,82 @@
 {
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.DNS.NIC.GEA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:20:0:0:0:0:33"
+            ],
+            "v4" : [
+               "194.0.25.33"
+            ]
+         }
+      },
+      {
+         "ldhName" : "M.DNS.NIC.GEA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.26.13"
+            ],
+            "v6" : [
+               "2001:67c:10e0:0:0:0:0:13"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.24.13"
+            ],
+            "v6" : [
+               "2001:678:24:0:0:0:0:13"
+            ]
+         },
+         "ldhName" : "N.DNS.NIC.GEA"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/gea.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.geagroup.com",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
@@ -22,54 +98,28 @@
          ]
       }
    ],
+   "objectClassName" : "domain",
    "handle" : "gea",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:20:0:0:0:0:33"
-            ],
-            "v4" : [
-               "194.0.25.33"
-            ]
-         },
-         "ldhName" : "A.DNS.NIC.GEA",
-         "objectClassName" : "nameserver"
+         "eventAction" : "registration",
+         "eventDate" : "2015-07-09"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:10e0:0:0:0:0:13"
-            ],
-            "v4" : [
-               "194.0.26.13"
-            ]
-         },
-         "ldhName" : "M.DNS.NIC.GEA",
-         "objectClassName" : "nameserver"
+         "eventDate" : "2022-06-15",
+         "eventAction" : "last changed"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "N.DNS.NIC.GEA",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.24.13"
-            ],
-            "v6" : [
-               "2001:678:24:0:0:0:0:13"
-            ]
-         }
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "objectClassName" : "domain",
    "ldhName" : "gea",
    "entities" : [
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -81,21 +131,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "CEO"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "LEMARIT GmbH"
+                  "GEA Group Aktiengesellschaft"
                ],
                [
                   "adr",
                   {
-                     "label" : "Werkstrasse 12\nHarrislee Schleswig-Holstein 24955\nGermany"
+                     "label" : "Peter-Mueller-Str. 12\nDuesseldorf NRW 40468\nGermany"
                   },
                   "text",
                   [
@@ -107,30 +151,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49 461 5050 35 0"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gearegistry@lemarit.com"
                ]
             ]
          ],
-         "handle" : "gea-administrative",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "gea-registrant"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "gea-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -189,11 +216,14 @@
                   "gearegistry@lemarit.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "gea-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "gea-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -204,15 +234,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "CEO"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "GEA Group Aktiengesellschaft"
+                  "LEMARIT GmbH"
                ],
                [
                   "adr",
                   {
-                     "label" : "Peter-Mueller-Str. 12\nDuesseldorf NRW 40468\nGermany"
+                     "label" : "Werkstrasse 12\nHarrislee Schleswig-Holstein 24955\nGermany"
                   },
                   "text",
                   [
@@ -224,73 +260,37 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49 461 5050 35 0"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gearegistry@lemarit.com"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+            "administrative"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-07-09"
-      },
-      {
-         "eventDate" : "2022-06-15",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:58"
+         "objectClassName" : "entity",
+         "handle" : "gea-administrative"
       }
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digestType" : "2",
             "keyTag" : "60191",
+            "digestType" : "2",
+            "algorithm" : "8",
             "digest" : "62049b91e513b7230f960b356c6e70634af960efbfe5ddd4f33741a26b2583f0"
          }
       ],
       "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/gea.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.geagroup.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ]
+   }
 }

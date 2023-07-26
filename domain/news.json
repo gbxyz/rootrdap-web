@@ -1,66 +1,37 @@
 {
-   "notices" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventDate" : "2015-03-12",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "39979",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "40c36d4b7aff71b956abbfd5710bb34dbdab3f020d58cb613da94fc359e63c36"
+         }
+      ]
+   },
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dog Beach, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "news-registrant",
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
+         "handle" : "news-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -119,16 +90,11 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "news-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "news-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -188,57 +154,75 @@
                ]
             ]
          ],
-         "handle" : "news-administrative",
-         "objectClassName" : "entity"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/news.html"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "39979",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "40c36d4b7aff71b956abbfd5710bb34dbdab3f020d58cb613da94fc359e63c36"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:06",
-         "eventAction" : "last update of RDAP database"
+         "handle" : "news-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dog Beach, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
    "ldhName" : "news",
    "objectClassName" : "domain",
+   "handle" : "news",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.NEWS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.32.3"
@@ -247,10 +231,9 @@
                "2a01:8840:22:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N0.NIC.NEWS"
       },
       {
-         "ldhName" : "V0N1.NIC.NEWS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:23:0:0:0:0:3"
@@ -259,9 +242,11 @@
                "65.22.33.3"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.NEWS"
       },
       {
+         "ldhName" : "V0N2.NIC.NEWS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:24:0:0:0:0:3"
@@ -270,71 +255,86 @@
                "65.22.34.3"
             ]
          },
-         "ldhName" : "V0N2.NIC.NEWS",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N3.NIC.NEWS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.16.3"
-            ],
             "v6" : [
                "2a01:8840:fa:0:0:0:0:3"
+            ],
+            "v4" : [
+               "161.232.16.3"
             ]
          }
       },
       {
          "ldhName" : "V2N0.NIC.NEWS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.35.3"
-            ],
             "v6" : [
                "2a01:8840:25:0:0:0:0:3"
+            ],
+            "v4" : [
+               "65.22.35.3"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "V2N1.NIC.NEWS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.17.3"
-            ],
             "v6" : [
                "2a01:8840:fb:0:0:0:0:3"
+            ],
+            "v4" : [
+               "161.232.17.3"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "V2N1.NIC.NEWS"
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/news.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
-   "handle" : "news",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.NEWS."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ]
 }

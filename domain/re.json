@@ -1,34 +1,7 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RE."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.re"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "re",
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
-         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.9.1"
@@ -37,72 +10,45 @@
                "2001:678:c:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "D.NIC.FR"
       },
       {
+         "ldhName" : "E.EXT.NIC.FR",
          "ipAddresses" : {
-            "v6" : [
-               "2a00:d78:0:102:193:176:144:22"
-            ],
             "v4" : [
                "193.176.144.22"
+            ],
+            "v6" : [
+               "2a00:d78:0:102:193:176:144:22"
             ]
          },
-         "ldhName" : "E.EXT.NIC.FR",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "F.EXT.NIC.FR",
          "ipAddresses" : {
-            "v4" : [
-               "194.146.106.46"
-            ],
             "v6" : [
                "2001:67c:1010:11:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "G.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
             ],
             "v4" : [
-               "194.0.36.1"
+               "194.146.106.46"
             ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "re",
-   "events" : [
-      {
-         "eventDate" : "1997-04-07",
-         "eventAction" : "registration"
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-10-04"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:29",
-         "eventAction" : "last update of RDAP database"
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "G.EXT.NIC.FR"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "13",
-            "digestType" : "2",
-            "keyTag" : "49754",
-            "digest" : "ce6c40407ed006c7a2d34b04f01ea0d825a64fa2418d6e994192ad05ad24ff68"
-         }
-      ]
-   },
    "links" : [
       {
          "rel" : "related",
@@ -116,18 +62,73 @@
       },
       {
          "title" : "URL for registration services",
-         "href" : "http://www.nic.re",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://www.nic.re"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RE."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.re"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-04-07"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-04"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "entities" : [
       {
+         "handle" : "re-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "re-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -136,6 +137,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin Contact"
                ],
                [
                   "org",
@@ -158,8 +165,31 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33 1 39 30 83 05"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33 1 39 30 83 01"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-admin@nic.fr"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       },
       {
@@ -225,10 +255,12 @@
                ]
             ]
          ],
-         "handle" : "re-technical",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "re-technical"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "re-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -237,12 +269,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin Contact"
                ],
                [
                   "org",
@@ -265,52 +291,26 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33 1 39 30 83 05"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33 1 39 30 83 01"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-admin@nic.fr"
                ]
             ]
          ],
-         "handle" : "re-administrative",
          "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+            "registrant"
+         ]
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ]
+   "ldhName" : "re",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "ce6c40407ed006c7a2d34b04f01ea0d825a64fa2418d6e994192ad05ad24ff68",
+            "keyTag" : "49754",
+            "digestType" : "2",
+            "algorithm" : "13"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "objectClassName" : "domain",
+   "handle" : "re"
 }

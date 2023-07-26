@@ -1,27 +1,94 @@
 {
-   "handle" : "physio",
-   "remarks" : [
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PHYSIO."
-         ],
-         "title" : "Whois Service"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/physio.html"
       },
       {
-         "description" : [
-            "Registration information: http://www.registry.physio"
-         ],
-         "title" : "Remark"
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.registry.physio"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.PHYSIO",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         },
+         "ldhName" : "B.NIC.PHYSIO"
+      },
+      {
+         "ldhName" : "C.NIC.PHYSIO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "X.NIC.PHYSIO"
+      },
+      {
+         "ldhName" : "Y.NIC.PHYSIO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Z.NIC.PHYSIO"
+      }
    ],
    "notices" : [
       {
@@ -41,9 +108,49 @@
          ]
       }
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PHYSIO."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.registry.physio"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-06-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-06"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
+      }
+   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -80,7 +187,8 @@
                ]
             ]
          ],
-         "handle" : "physio-registrant"
+         "handle" : "physio-registrant",
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
@@ -137,12 +245,15 @@
                ]
             ]
          ],
-         "handle" : "physio-technical",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "physio-technical"
       },
       {
          "objectClassName" : "entity",
          "handle" : "physio-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,132 +304,21 @@
                   "enquiries@registry.physio"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/physio.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.registry.physio",
-         "title" : "URL for registration services"
-      }
-   ],
+   "ldhName" : "physio",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "ae268396dd64c1fcce4fd3ea3a3f6c427e4daad035aa4de961b6b8380a800153",
-            "algorithm" : "8",
             "digestType" : "2",
-            "keyTag" : "49021"
+            "keyTag" : "49021",
+            "algorithm" : "8"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-06-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-06"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:20"
-      }
-   ],
-   "ldhName" : "physio",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.PHYSIO",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "B.NIC.PHYSIO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.PHYSIO",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "X.NIC.PHYSIO",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         },
-         "ldhName" : "Y.NIC.PHYSIO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "ldhName" : "Z.NIC.PHYSIO"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "handle" : "physio",
+   "objectClassName" : "domain"
 }

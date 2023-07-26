@@ -2,12 +2,15 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.VISA."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -22,26 +25,38 @@
          "title" : "Source"
       }
    ],
-   "handle" : "visa",
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -49,9 +64,12 @@
             "v6" : [
                "2001:500:121:0:0:0:0:30"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM"
       },
       {
+         "ldhName" : "AC3.NSTLD.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -60,72 +78,98 @@
             "v4" : [
                "192.42.175.30"
             ]
-         },
-         "ldhName" : "AC3.NSTLD.COM"
+         }
       },
       {
          "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
             ]
          },
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "visa",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-06-30"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:32:17",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/visa.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
+         "title" : "URL for registration services",
          "rel" : "related",
-         "href" : "http://visa.com",
-         "title" : "URL for registration services"
+         "href" : "http://visa.com"
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "visa",
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "b7d4dd6e17c137c8d9121055ec796100868870d2d31ac0dc5a2ce1972f692cb4",
             "algorithm" : "8",
             "digestType" : "2",
-            "keyTag" : "55863"
+            "keyTag" : "55863",
+            "digest" : "b7d4dd6e17c137c8d9121055ec796100868870d2d31ac0dc5a2ce1972f692cb4"
          }
       ],
       "delegationSigned" : true
    },
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Visa Worldwide Pte. Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "71 ROBINSON ROAD Unit #09-01\n068895\nSingapore"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "visa-registrant"
+      },
+      {
+         "handle" : "visa-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "handle" : "visa-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -184,11 +228,9 @@
                   "ngtld-visa@cscinfo.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "handle" : "visa-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -251,66 +293,24 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Visa Worldwide Pte. Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "71 ROBINSON ROAD Unit #09-01\n068895\nSingapore"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "visa-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "handle" : "visa-technical"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
+   "ldhName" : "visa",
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-30"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:56",
+         "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org"
 }

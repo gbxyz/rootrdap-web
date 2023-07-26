@@ -1,8 +1,4 @@
 {
-   "handle" : "aetna",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "description" : [
@@ -23,54 +19,139 @@
          ]
       }
    ],
-   "ldhName" : "aetna",
-   "events" : [
+   "notices" : [
       {
-         "eventDate" : "2016-04-21",
-         "eventAction" : "registration"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.AETNA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         }
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:44"
+         "ldhName" : "B.NIC.AETNA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C.NIC.AETNA",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.AETNA",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:5"
+            ],
+            "v4" : [
+               "156.154.144.5"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.AETNA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:5"
+            ],
+            "v4" : [
+               "156.154.145.5"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.AETNA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:5"
+            ],
+            "v4" : [
+               "156.154.159.5"
+            ]
+         }
       }
    ],
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/aetna.html",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/aetna.html"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "https://www.aetna.com"
+         "href" : "https://www.aetna.com",
+         "rel" : "related"
       }
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "2f8cd71c2ca149b4da0f60092c775fecdff60b52d0a61064f458e0a99f378012",
-            "keyTag" : "49819",
             "algorithm" : "8",
-            "digestType" : "2"
+            "keyTag" : "49819",
+            "digestType" : "2",
+            "digest" : "2f8cd71c2ca149b4da0f60092c775fecdff60b52d0a61064f458e0a99f378012"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
          "handle" : "aetna-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -121,14 +202,11 @@
                   "domains@aetna.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "aetna-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -193,7 +271,6 @@
          ]
       },
       {
-         "handle" : "aetna-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -230,103 +307,26 @@
          "roles" : [
             "registrant"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "aetna-registrant"
       }
    ],
-   "notices" : [
+   "ldhName" : "aetna",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-21"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.AETNA",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.AETNA",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C.NIC.AETNA"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.AETNA",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.5"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:5"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.AETNA",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.5"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:5"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.AETNA",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:5"
-            ],
-            "v4" : [
-               "156.154.159.5"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain"
+   "objectClassName" : "domain",
+   "handle" : "aetna"
 }

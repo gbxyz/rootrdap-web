@@ -1,133 +1,63 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A.NIC.MLB"
-      },
-      {
-         "ldhName" : "B.NIC.MLB",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C.NIC.MLB"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.MLB",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.113"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:71"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.113"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:71"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.MLB",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.MLB",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.113"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:71"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "mlb",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-05-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:56"
-      }
-   ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "88b16b31916a70182f0809393aa481af43c61350734e0d1e8107ea8cf2348b83",
-            "algorithm" : "8",
             "digestType" : "2",
-            "keyTag" : "4324"
+            "keyTag" : "4324",
+            "algorithm" : "8",
+            "digest" : "88b16b31916a70182f0809393aa481af43c61350734e0d1e8107ea8cf2348b83"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mlb.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.mlb.com",
-         "rel" : "related"
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "mlb",
    "entities" : [
       {
+         "handle" : "mlb-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "MLB Advanced Media DH, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "75 Ninth Avenue\nNew York NY 10011\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "mlb-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "mlb-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -189,47 +119,9 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "MLB Advanced Media DH, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "75 Ninth Avenue\nNew York NY 10011\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "mlb-registrant"
-      },
-      {
-         "handle" : "mlb-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -289,10 +181,45 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
+         "objectClassName" : "entity",
+         "handle" : "mlb-administrative"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-05-05"
+      },
+      {
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "mlb",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
          ],
-         "objectClassName" : "entity"
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.mlb.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "notices" : [
@@ -313,28 +240,101 @@
          "title" : "Comments"
       }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.MLB"
+      },
+      {
+         "ldhName" : "B.NIC.MLB",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.MLB"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:71"
+            ],
+            "v4" : [
+               "156.154.144.113"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.MLB"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.MLB",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:71"
+            ],
+            "v4" : [
+               "156.154.145.113"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.MLB",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:71"
+            ],
+            "v4" : [
+               "156.154.159.113"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/mlb.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.mlb.com",
+         "title" : "URL for registration services"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.mlb.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "mlb"
+   "status" : [
+      "active"
+   ]
 }

@@ -1,107 +1,58 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.XXX."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.xxx"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "xxx",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.XXX",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "B.NIC.XXX"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "C.NIC.XXX",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.XXX",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         },
-         "ldhName" : "Y.NIC.XXX"
-      },
-      {
-         "ldhName" : "Z.NIC.XXX",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "handle" : "xxx",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "4654",
+            "digestType" : "2",
+            "digest" : "0a2255017ab65ca9d9a3d1a1d74da6f19e9c4dad8b7b452e547d2420f9e74c39"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
+      {
+         "objectClassName" : "entity",
+         "handle" : "xxx-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ICM Registry LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "roles" : [
             "technical"
@@ -165,50 +116,11 @@
                ]
             ]
          ],
-         "handle" : "xxx-technical",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "xxx-technical"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ICM Registry LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "xxx-registrant",
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "xxx-administrative",
          "objectClassName" : "entity",
          "roles" : [
             "administrative"
@@ -271,29 +183,10 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "handle" : "xxx-administrative"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
+   "ldhName" : "xxx",
    "events" : [
       {
          "eventDate" : "2011-04-15",
@@ -304,21 +197,55 @@
          "eventDate" : "2022-12-01"
       },
       {
-         "eventDate" : "2023-07-26T12:32:57",
+         "eventDate" : "2023-07-26T13:16:58",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "0a2255017ab65ca9d9a3d1a1d74da6f19e9c4dad8b7b452e547d2420f9e74c39",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "4654"
-         }
-      ]
-   },
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.XXX."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.xxx"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
@@ -327,14 +254,87 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
-         "href" : "http://nic.xxx",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://nic.xxx"
       }
    ],
-   "ldhName" : "xxx"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.XXX"
+      },
+      {
+         "ldhName" : "B.NIC.XXX",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.XXX"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.172.82"
+            ]
+         },
+         "ldhName" : "X.NIC.XXX"
+      },
+      {
+         "ldhName" : "Y.NIC.XXX",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.173.82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "Z.NIC.XXX",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ]
 }

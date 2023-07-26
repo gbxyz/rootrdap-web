@@ -1,51 +1,40 @@
 {
    "handle" : "fly",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "objectClassName" : "domain",
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ],
-         "title" : "Whois Service"
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-23"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "ldhName" : "fly",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventDate" : "2023-07-26T13:16:49",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "78e00a911e48a9109506338e1fb131c462333aa1e35c00e2f24971d28a97cbd0",
+            "digestType" : "2",
+            "keyTag" : "65399",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "fly",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "fly-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -104,54 +93,11 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "handle" : "fly-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "handle" : "fly-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
          "handle" : "fly-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -213,59 +159,76 @@
          ],
          "roles" : [
             "technical"
+         ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "fly-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/fly.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.registry.google",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "65399",
-            "digest" : "78e00a911e48a9109506338e1fb131c462333aa1e35c00e2f24971d28a97cbd0"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-08-23"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:47"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:32:0:0:0:69"
@@ -274,9 +237,10 @@
                "216.239.32.105"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:34:0:0:0:69"
@@ -285,10 +249,11 @@
                "216.239.34.105"
             ]
          },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
       },
       {
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.36.105"
@@ -296,12 +261,11 @@
             "v6" : [
                "2001:4860:4802:36:0:0:0:69"
             ]
-         },
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:38:0:0:0:69"
@@ -309,20 +273,56 @@
             "v4" : [
                "216.239.38.105"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
             "v4" : [
                "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
             ]
          }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/fly.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "https://www.registry.google",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

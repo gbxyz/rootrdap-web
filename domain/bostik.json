@@ -1,92 +1,7 @@
 {
-   "handle" : "bostik",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BOSTIK."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.bostik.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "ldhName" : "bostik",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bostik.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "https://www.bostik.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "13",
-            "digestType" : "2",
-            "keyTag" : "45431",
-            "digest" : "16d460de3b5d232225100e179ab80bd20a398618160c5b1c934a39f5e207ed45"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventDate" : "2015-11-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-28",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:24"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "bostik-registrant",
          "objectClassName" : "entity",
          "roles" : [
             "registrant"
@@ -123,15 +38,12 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "bostik-registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "bostik-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -190,13 +102,16 @@
                   "pocbostik@afnic.fr"
                ]
             ]
-         ]
+         ],
+         "handle" : "bostik-technical",
+         "objectClassName" : "entity"
       },
       {
+         "handle" : "bostik-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "handle" : "bostik-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -255,29 +170,91 @@
                   "tldbostik@safebrands.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "status" : [
-      "active"
+   "ldhName" : "bostik",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "16d460de3b5d232225100e179ab80bd20a398618160c5b1c934a39f5e207ed45",
+            "algorithm" : "13",
+            "keyTag" : "45431",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-06"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-28"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
+      }
    ],
+   "handle" : "bostik",
    "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BOSTIK."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.bostik.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bostik.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://www.bostik.com",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
             ]
          }
       },
       {
          "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:1010:11:0:0:0:53"
@@ -285,20 +262,43 @@
             "v4" : [
                "194.146.106.46"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
             ]
-         },
-         "ldhName" : "G.EXT.NIC.FR",
-         "objectClassName" : "nameserver"
+         }
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

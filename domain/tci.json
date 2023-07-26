@@ -1,61 +1,20 @@
 {
-   "nameservers" : [
-      {
-         "ldhName" : "A.NS.NIC.TCI",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:a01:ad:0:0:0:8"
-            ],
-            "v4" : [
-               "72.0.49.8"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NS.NIC.TCI",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:d01:dc:0:0:0:8"
-            ],
-            "v4" : [
-               "72.42.113.8"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
-            "v4" : [
-               "185.38.108.108"
-            ]
-         },
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "185.28.194.194"
-            ]
-         }
-      }
-   ],
+   "handle" : "tci",
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "12317",
+            "algorithm" : "8",
+            "digest" : "1d37f5016c69d56f3a3732434a0471fff1fffd580e4a7ce26816bc525095de83"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "tci",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "tci-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -91,12 +50,13 @@
          ],
          "roles" : [
             "registrant"
-         ]
+         ],
+         "handle" : "tci-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "tci-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -156,12 +116,11 @@
                ]
             ]
          ],
-         "handle" : "tci-technical",
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "tci-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -223,31 +182,15 @@
          ],
          "roles" : [
             "administrative"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "handle" : "tci-administrative",
+         "objectClassName" : "entity"
       }
    ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-25"
+         "eventDate" : "2015-11-25",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
@@ -255,50 +198,28 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:00"
+         "eventDate" : "2023-07-26T13:16:55"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tci.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.tci"
-      }
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "12317",
-            "digest" : "1d37f5016c69d56f3a3732434a0471fff1fffd580e4a7ce26816bc525095de83"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "tci",
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TCI."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.tci"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -307,8 +228,87 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
-   "handle" : "tci"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "72.0.49.8"
+            ],
+            "v6" : [
+               "2620:171:a01:ad:0:0:0:8"
+            ]
+         },
+         "ldhName" : "A.NS.NIC.TCI"
+      },
+      {
+         "ldhName" : "B.NS.NIC.TCI",
+         "ipAddresses" : {
+            "v4" : [
+               "72.42.113.8"
+            ],
+            "v6" : [
+               "2620:171:d01:dc:0:0:0:8"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.38.108.108"
+            ],
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "185.28.194.194"
+            ]
+         },
+         "ldhName" : "NS2.ANYCASTDNS.CZ"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tci.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://nic.tci",
+         "rel" : "related"
+      }
+   ]
 }

@@ -2,6 +2,9 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -10,10 +13,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.registry.si/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -22,44 +25,74 @@
          ]
       }
    ],
-   "handle" : "si",
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/si.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.registry.si/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
          "ldhName" : "B.DNS.SI",
          "ipAddresses" : {
-            "v4" : [
-               "153.5.81.140"
-            ],
             "v6" : [
                "2001:1470:8000:53:0:0:0:44"
+            ],
+            "v4" : [
+               "153.5.81.140"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "F.DNS.SI",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:1010:15:0:0:0:53"
+            ],
+            "v4" : [
+               "194.146.106.62"
             ]
          },
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "F.DNS.SI",
          "ipAddresses" : {
-            "v4" : [
-               "194.146.106.62"
-            ],
-            "v6" : [
-               "2001:67c:1010:15:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.54"
-            ],
             "v6" : [
                "2001:500:14:6054:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.54"
             ]
          },
          "ldhName" : "H.DNS.SI"
@@ -77,8 +110,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.DNS.SI",
          "ipAddresses" : {
             "v4" : [
                "185.159.197.11"
@@ -86,7 +117,9 @@
             "v6" : [
                "2620:10a:80aa:0:0:0:0:11"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "K.DNS.SI"
       },
       {
          "ipAddresses" : {
@@ -97,36 +130,134 @@
                "2620:10a:80ab:0:0:0:0:11"
             ]
          },
-         "ldhName" : "L.DNS.SI",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "L.DNS.SI"
       }
    ],
+   "handle" : "si",
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "53074",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "d3bbe46af529561a317922df27d89686e06b87343f22bac2569d38a549d996eb"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "si",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Academic and Research Network of Slovenia (ARNES)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Tehnološki park 18\nLjubljana 1000\nSlovenia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "si-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "si-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Benjamin Zwittnig"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Academic and Research Network of Slovenia (ARNES)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Tehnološki park 18\nLjubljana 1000\nSlovenia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+386 1 4798800"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+386 1 4798899"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "benjamin.zwittnig@register.si"
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "si-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -186,155 +317,24 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Benjamin Zwittnig"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Academic and Research Network of Slovenia (ARNES)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Tehnološki park 18\nLjubljana 1000\nSlovenia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+386 1 4798800"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+386 1 4798899"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "benjamin.zwittnig@register.si"
-               ]
-            ]
-         ],
-         "handle" : "si-technical",
          "roles" : [
-            "technical"
+            "administrative"
          ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "si-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Academic and Research Network of Slovenia (ARNES)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Tehnološki park 18\nLjubljana 1000\nSlovenia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/si.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.registry.si/"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "d3bbe46af529561a317922df27d89686e06b87343f22bac2569d38a549d996eb",
-            "keyTag" : "53074",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1992-04-01"
+         "eventDate" : "1992-04-01",
+         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-07-10"
+         "eventDate" : "2023-07-10",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:47"
+         "eventDate" : "2023-07-26T13:16:55"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org"
 }

@@ -1,85 +1,38 @@
 {
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "handle" : "skype",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.SKYPE",
-         "objectClassName" : "nameserver"
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-19"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "ldhName" : "B.NIC.SKYPE",
-         "objectClassName" : "nameserver"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C.NIC.SKYPE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:97"
-            ],
-            "v4" : [
-               "156.154.144.151"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.SKYPE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:97"
-            ],
-            "v4" : [
-               "156.154.145.151"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.SKYPE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.SKYPE",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:97"
-            ],
-            "v4" : [
-               "156.154.159.151"
-            ]
-         }
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "4519",
+            "digest" : "fd50adcd586d68b58ad4081bfa7566e3e438f0cbe991ceed726ad4485b62d97b"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "skype",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -88,12 +41,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Cole Quinn"
                ],
                [
                   "org",
@@ -116,33 +63,11 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 425-706-3546"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 425-457-2511"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tlddom@microsoft.com"
                ]
             ]
          ],
-         "handle" : "skype-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "handle" : "skype-registrant",
+         "objectClassName" : "entity"
       },
       {
          "vcardArray" : [
@@ -204,14 +129,15 @@
                ]
             ]
          ],
-         "handle" : "skype-technical",
          "roles" : [
             "technical"
          ],
+         "handle" : "skype-technical",
          "objectClassName" : "entity"
       },
       {
-         "handle" : "skype-registrant",
+         "handle" : "skype-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -220,6 +146,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Cole Quinn"
                ],
                [
                   "org",
@@ -242,69 +174,68 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 425-706-3546"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 425-457-2511"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tlddom@microsoft.com"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+            "administrative"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2015-03-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "fd50adcd586d68b58ad4081bfa7566e3e438f0cbe991ceed726ad4485b62d97b",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "4519"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/skype.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
          "title" : "URL for registration services",
@@ -312,13 +243,86 @@
          "rel" : "related"
       }
    ],
-   "ldhName" : "skype",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.SKYPE"
+      },
+      {
+         "ldhName" : "B.NIC.SKYPE",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.SKYPE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.SKYPE",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:97"
+            ],
+            "v4" : [
+               "156.154.144.151"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.SKYPE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:97"
+            ],
+            "v4" : [
+               "156.154.145.151"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.SKYPE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:97"
+            ],
+            "v4" : [
+               "156.154.159.151"
+            ]
+         }
+      }
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -327,14 +331,10 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "skype"
+   ]
 }

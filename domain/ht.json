@@ -1,10 +1,67 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.HT."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.ht"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ht.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.ht",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "200.0.68.10"
@@ -13,10 +70,10 @@
                "2801:14:a000:0:0:0:0:10"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "A.LACTLD.ORG"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:678:c:0:0:0:0:1"
@@ -25,10 +82,11 @@
                "194.0.9.1"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS-HT.NIC.FR"
       },
       {
-         "ldhName" : "PCH.NIC.HT",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6038:ad:0:0:1"
@@ -37,17 +95,25 @@
                "204.61.216.38"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "PCH.NIC.HT"
       }
    ],
    "objectClassName" : "domain",
+   "handle" : "ht",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "2176",
+            "digestType" : "2",
+            "digest" : "7ca97faad5fd19728c3cedfb2f647eadc144ee21d01dafb7f821954b38bdda78"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "ht",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -99,52 +165,13 @@
                ]
             ]
          ],
-         "handle" : "ht-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Consortium FDS/RDDH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "17, 2e Ruelle Wilson, Pacot\nPort au Prince\nHaiti"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "ht-registrant",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "ht-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "ht-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -198,24 +225,48 @@
          ],
          "roles" : [
             "administrative"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
+         "objectClassName" : "entity",
+         "handle" : "ht-administrative"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "objectClassName" : "entity",
+         "handle" : "ht-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Consortium FDS/RDDH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "17, 2e Ruelle Wilson, Pacot\nPort au Prince\nHaiti"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       }
    ],
@@ -229,60 +280,9 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:21",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "2176",
-            "digest" : "7ca97faad5fd19728c3cedfb2f647eadc144ee21d01dafb7f821954b38bdda78"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ht.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.ht",
-         "rel" : "related"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.HT."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nic.ht"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "ht"
+   "port43" : "whois.iana.org"
 }

@@ -1,8 +1,4 @@
 {
-   "handle" : "im",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -11,58 +7,87 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.im"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "ldhName" : "im",
+   "nameservers" : [
+      {
+         "ldhName" : "BARNEY.ADVSYS.CO.UK",
+         "ipAddresses" : {
+            "v4" : [
+               "217.23.160.50"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "HOPPY.IOM.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "217.23.163.140"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "NS4.JA.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "193.62.157.66"
+            ],
+            "v6" : [
+               "2001:630:0:47:0:0:0:42"
+            ]
+         }
+      },
+      {
+         "ldhName" : "PEBBLES.IOM.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "83.218.14.53"
+            ]
+         }
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/im.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/im.html",
          "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "href" : "http://www.nic.im",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1996-09-11",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2018-11-24"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:23",
-         "eventAction" : "last update of RDAP database"
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -73,10 +98,19 @@
          "title" : "Comments"
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
+         "handle" : "im-administrative",
          "objectClassName" : "entity",
-         "handle" : "im-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -87,6 +121,18 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Brian Osborn"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Information Systems Division,"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -95,7 +141,7 @@
                [
                   "adr",
                   {
-                     "label" : "Bucks Road\nDouglas Isle of Man IM1\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                     "label" : "St Andrew's House\nFinch Road\nDouglas IM1 3PX\nUnited Kingdom of Great Britain and Northern Ireland (the)"
                   },
                   "text",
                   [
@@ -107,19 +153,23 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 1624 685685"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "imdomainadmin@nic.im"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "im-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -178,10 +228,14 @@
                   "padcock@domicilium.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "im-technical"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -192,18 +246,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Brian Osborn"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Information Systems Division,"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -212,7 +254,7 @@
                [
                   "adr",
                   {
-                     "label" : "St Andrew's House\nFinch Road\nDouglas IM1 3PX\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                     "label" : "Bucks Road\nDouglas Isle of Man IM1\nUnited Kingdom of Great Britain and Northern Ireland (the)"
                   },
                   "text",
                   [
@@ -224,74 +266,32 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 1624 685685"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "imdomainadmin@nic.im"
                ]
             ]
          ],
-         "handle" : "im-administrative",
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "im-registrant"
+      }
+   ],
+   "ldhName" : "im",
+   "events" : [
+      {
+         "eventDate" : "1996-09-11",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2018-11-24",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
    ],
    "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "BARNEY.ADVSYS.CO.UK",
-         "ipAddresses" : {
-            "v4" : [
-               "217.23.160.50"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "ldhName" : "HOPPY.IOM.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "217.23.163.140"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "193.62.157.66"
-            ],
-            "v6" : [
-               "2001:630:0:47:0:0:0:42"
-            ]
-         },
-         "ldhName" : "NS4.JA.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "PEBBLES.IOM.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "83.218.14.53"
-            ],
-            "v6" : []
-         }
-      }
-   ]
+   "handle" : "im"
 }

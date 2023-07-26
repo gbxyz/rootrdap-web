@@ -7,10 +7,10 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.gmoregistry.com/en/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -19,13 +19,28 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "handle" : "datsun",
    "nameservers" : [
       {
          "ldhName" : "A.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.4"
@@ -33,115 +48,78 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
             "v4" : [
                "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.4"
             ],
             "v6" : []
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "K.GMOREGISTRY.NET"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
             "v6" : [
                "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
             ]
          },
          "ldhName" : "L.GMOREGISTRY.NET"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/datsun.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.gmoregistry.com/en/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "fb16fd51d18855f4127721bab619ca805d69817a84ce73b90be152205ca31a40",
+            "digestType" : "2",
+            "keyTag" : "11344",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "datsun-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Representative Director"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "GMO Registry, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 1508512\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81-3-5456-1601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81-3-3780-5239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
-               ]
-            ]
-         ]
-      },
       {
          "vcardArray" : [
             "vcard",
@@ -202,13 +180,84 @@
                ]
             ]
          ],
-         "handle" : "datsun-technical",
          "roles" : [
             "technical"
          ],
+         "handle" : "datsun-technical",
          "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Representative Director"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "GMO Registry, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 1508512\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81-3-5456-1601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81-3-3780-5239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
+               ]
+            ]
+         ],
+         "handle" : "datsun-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "datsun-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -241,37 +290,14 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "datsun-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "datsun",
    "events" : [
       {
-         "eventDate" : "2014-07-10",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-10"
       },
       {
          "eventDate" : "2019-08-20",
@@ -279,36 +305,10 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:12"
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "11344",
-            "digest" : "fb16fd51d18855f4127721bab619ca805d69817a84ce73b90be152205ca31a40"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/datsun.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.gmoregistry.com/en/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "ldhName" : "datsun"
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "datsun"
 }

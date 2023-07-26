@@ -1,132 +1,65 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.THEATER",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:64"
-            ],
-            "v4" : [
-               "65.22.20.64"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N1.NIC.THEATER",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:64"
-            ],
-            "v4" : [
-               "65.22.21.64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N2.NIC.THEATER",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.64"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.THEATER",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:64"
-            ],
-            "v4" : [
-               "161.232.10.64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:64"
-            ],
-            "v4" : [
-               "65.22.23.64"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.THEATER"
-      },
-      {
-         "ldhName" : "V2N1.NIC.THEATER",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:64"
-            ],
-            "v4" : [
-               "161.232.11.64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "ldhName" : "theater",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-30"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-27"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:03"
-      }
-   ],
+   "handle" : "theater",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "1f2f456aa1f487103616fe00b21f4c6b8238213f5fc85401cfe49dc4b4c2da10",
             "digestType" : "2",
-            "algorithm" : "8",
             "keyTag" : "835",
-            "digest" : "1f2f456aa1f487103616fe00b21f4c6b8238213f5fc85401cfe49dc4b4c2da10"
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/theater.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "theater",
    "entities" : [
       {
+         "handle" : "theater-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "handle" : "theater-administrative",
          "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "handle" : "theater-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -188,9 +121,7 @@
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "theater-technical",
          "vcardArray" : [
             "vcard",
@@ -251,77 +182,38 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "theater-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+            "technical"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventDate" : "2015-04-30",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2021-10-27",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:55"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.THEATER."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -336,5 +228,113 @@
          ]
       }
    ],
-   "handle" : "theater"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/theater.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:64"
+            ],
+            "v4" : [
+               "65.22.20.64"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.THEATER"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:64"
+            ],
+            "v4" : [
+               "65.22.21.64"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.THEATER"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.22.64"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:64"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.THEATER"
+      },
+      {
+         "ldhName" : "V0N3.NIC.THEATER",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.64"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:64"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:64"
+            ],
+            "v4" : [
+               "65.22.23.64"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.THEATER"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.64"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:64"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.THEATER"
+      }
+   ]
 }

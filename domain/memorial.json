@@ -1,104 +1,54 @@
 {
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.MEMORIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.32.64"
-            ],
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:64"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:64"
-            ],
-            "v4" : [
-               "65.22.33.64"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.MEMORIAL"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.MEMORIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.34.64"
-            ],
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:64"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.16.64"
-            ],
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:64"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.MEMORIAL",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.MEMORIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.35.64"
-            ],
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:64"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V2N1.NIC.MEMORIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.17.64"
-            ],
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "handle" : "memorial",
+   "ldhName" : "memorial",
    "entities" : [
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dog Beach, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "memorial-registrant",
+         "objectClassName" : "entity"
+      },
       {
          "objectClassName" : "entity",
          "handle" : "memorial-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -157,50 +107,7 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "memorial-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dog Beach, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
       },
       {
          "roles" : [
@@ -269,50 +176,38 @@
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
+            "keyTag" : "17102",
             "digestType" : "2",
             "algorithm" : "8",
-            "keyTag" : "17102",
             "digest" : "125500a7dfbea41e4b90c1b086db21277340df1fbace51ac8e9aaa0c773d1d23"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/memorial.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
-      }
-   ],
    "events" : [
       {
-         "eventDate" : "2014-11-20",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-11-20"
       },
       {
          "eventDate" : "2021-11-18",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:54",
+         "eventDate" : "2023-07-26T13:16:52",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "memorial",
+   "port43" : "whois.iana.org",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -333,8 +228,113 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.MEMORIAL",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:64"
+            ],
+            "v4" : [
+               "65.22.32.64"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:64"
+            ],
+            "v4" : [
+               "65.22.33.64"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.MEMORIAL"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.34.64"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:64"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.MEMORIAL"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:64"
+            ],
+            "v4" : [
+               "161.232.16.64"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.MEMORIAL"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:64"
+            ],
+            "v4" : [
+               "65.22.35.64"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N0.NIC.MEMORIAL"
+      },
+      {
+         "ldhName" : "V2N1.NIC.MEMORIAL",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:64"
+            ],
+            "v4" : [
+               "161.232.17.64"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
    ],
-   "handle" : "memorial"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/memorial.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ]
 }

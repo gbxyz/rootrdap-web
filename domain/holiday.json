@@ -1,9 +1,80 @@
 {
+   "objectClassName" : "domain",
+   "handle" : "holiday",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2013-12-19",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-02"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "34267e711a8fc7a8bb25ee22e87508951cafad73f29d332cddeb3190bb9982f9",
+            "algorithm" : "8",
+            "keyTag" : "61717",
+            "digestType" : "2"
+         }
+      ]
+   },
+   "ldhName" : "holiday",
    "entities" : [
       {
+         "handle" : "holiday-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "holiday-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -62,56 +133,11 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "holiday-technical",
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "holiday-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -171,8 +197,16 @@
                ]
             ]
          ],
-         "handle" : "holiday-technical"
+         "roles" : [
+            "technical"
+         ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -192,53 +226,8 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-19"
-      },
-      {
-         "eventDate" : "2021-11-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:18",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "34267e711a8fc7a8bb25ee22e87508951cafad73f29d332cddeb3190bb9982f9",
-            "keyTag" : "61717",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/holiday.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "ldhName" : "holiday",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.HOLIDAY",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1a:0:0:0:0:24"
@@ -246,33 +235,36 @@
             "v4" : [
                "65.22.24.24"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.HOLIDAY"
       },
       {
+         "ldhName" : "V0N1.NIC.HOLIDAY",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:24"
-            ],
             "v4" : [
                "65.22.25.24"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:24"
             ]
          },
-         "ldhName" : "V0N1.NIC.HOLIDAY",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:24"
-            ],
             "v4" : [
                "65.22.26.24"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:24"
             ]
          },
-         "ldhName" : "V0N2.NIC.HOLIDAY",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.HOLIDAY"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:f6:0:0:0:0:24"
@@ -281,8 +273,7 @@
                "161.232.12.24"
             ]
          },
-         "ldhName" : "V0N3.NIC.HOLIDAY",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N3.NIC.HOLIDAY"
       },
       {
          "ipAddresses" : {
@@ -293,10 +284,11 @@
                "65.22.27.24"
             ]
          },
-         "ldhName" : "V2N0.NIC.HOLIDAY",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N0.NIC.HOLIDAY"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.13.24"
@@ -305,15 +297,26 @@
                "2a01:8840:f7:0:0:0:0:24"
             ]
          },
-         "ldhName" : "V2N1.NIC.HOLIDAY",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V2N1.NIC.HOLIDAY"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/holiday.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
-   "handle" : "holiday",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -328,13 +331,10 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

@@ -1,49 +1,22 @@
 {
-   "handle" : "rest",
-   "remarks" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.REST."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-06"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.register.rest/"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "rest",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -106,49 +79,12 @@
                ]
             ]
          ],
-         "handle" : "rest-technical"
+         "handle" : "rest-technical",
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Juan Escutia 29 Col. Condesa\nMexico D.F. 06140\nMexico"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "rest-registrant"
-      },
-      {
+         "handle" : "rest-administrative",
          "roles" : [
             "administrative"
          ],
@@ -210,65 +146,71 @@
                   "info@punto2012.com"
                ]
             ]
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
          ],
-         "handle" : "rest-administrative",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Juan Escutia 29 Col. Condesa\nMexico D.F. 06140\nMexico"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "rest-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "25199",
             "algorithm" : "8",
             "digestType" : "1",
+            "keyTag" : "25199",
             "digest" : "c43af7dec8b165d6c8b832bcb984c2407ef5ed8d"
          },
          {
-            "algorithm" : "8",
+            "digest" : "8f477474f47c387d246b6849202ca0c54c4d5a50d322c79718a98100314d08b7",
             "digestType" : "2",
             "keyTag" : "25199",
-            "digest" : "8f477474f47c387d246b6849202ca0c54c4d5a50d322c79718a98100314d08b7"
+            "algorithm" : "8"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/rest.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.register.rest/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-06"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-12"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:32"
-      }
-   ],
-   "ldhName" : "rest",
+   "handle" : "rest",
    "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.REST",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:13cc:0:0:0:1:35"
@@ -277,10 +219,9 @@
                "194.169.218.35"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "A.NIC.REST"
       },
       {
-         "ldhName" : "B.NIC.REST",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:35"
@@ -289,34 +230,93 @@
                "185.24.64.35"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.REST"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:35"
-            ],
             "v4" : [
                "212.18.248.35"
-            ]
-         },
-         "ldhName" : "C.NIC.REST",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.REST",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.35"
             ],
             "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:35"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.REST"
+      },
+      {
+         "ldhName" : "D.NIC.REST",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
                "2a04:2b00:13ff:0:0:0:0:35"
+            ],
+            "v4" : [
+               "212.18.249.35"
             ]
          }
       }
    ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/rest.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.register.rest/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.REST."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.register.rest/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

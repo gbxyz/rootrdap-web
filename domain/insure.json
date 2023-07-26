@@ -1,7 +1,4 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "description" : [
@@ -16,43 +13,39 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "insure",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.INSURE",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:53"
-            ],
             "v4" : [
                "65.22.24.53"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N1.NIC.INSURE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:53"
             ],
-            "v4" : [
-               "65.22.25.53"
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.INSURE"
       },
       {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.25.53"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:53"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.INSURE"
+      },
+      {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1c:0:0:0:0:53"
@@ -61,22 +54,22 @@
                "65.22.26.53"
             ]
          },
-         "ldhName" : "V0N2.NIC.INSURE",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N2.NIC.INSURE"
       },
       {
+         "ldhName" : "V0N3.NIC.INSURE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.12.53"
-            ],
             "v6" : [
                "2a01:8840:f6:0:0:0:0:53"
+            ],
+            "v4" : [
+               "161.232.12.53"
             ]
-         },
-         "ldhName" : "V0N3.NIC.INSURE",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "V2N0.NIC.INSURE",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1d:0:0:0:0:53"
@@ -85,87 +78,65 @@
                "65.22.27.53"
             ]
          },
-         "ldhName" : "V2N0.NIC.INSURE",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.INSURE",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.13.53"
-            ],
             "v6" : [
                "2a01:8840:f7:0:0:0:0:53"
+            ],
+            "v4" : [
+               "161.232.13.53"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.INSURE"
       }
    ],
-   "ldhName" : "insure",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/insure.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "ldhName" : "insure",
    "entities" : [
       {
-         "handle" : "insure-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "insure-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -225,6 +196,10 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "insure-technical",
          "objectClassName" : "entity"
       },
       {
@@ -292,32 +267,54 @@
          ],
          "handle" : "insure-administrative",
          "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/insure.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "objectClassName" : "entity",
+         "handle" : "insure-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
    "secureDNS" : {
       "dsData" : [
          {
+            "digestType" : "2",
             "keyTag" : "54472",
             "algorithm" : "8",
-            "digestType" : "2",
             "digest" : "fbe73379c21c9221115f502eae725983064c91d82af0c293a8c718ccbee36529"
          }
       ],
@@ -325,16 +322,19 @@
    },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-24"
+         "eventDate" : "2014-04-24",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-11-02"
       },
       {
-         "eventDate" : "2023-07-26T12:30:26",
+         "eventDate" : "2023-07-26T13:16:51",
          "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org",
+   "handle" : "insure",
+   "objectClassName" : "domain"
 }

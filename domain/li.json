@@ -1,8 +1,4 @@
 {
-   "handle" : "li",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -11,10 +7,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: https://www.nic.li"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -23,7 +19,6 @@
          "title" : "Source"
       }
    ],
-   "ldhName" : "li",
    "notices" : [
       {
          "title" : "About This Service",
@@ -34,17 +29,113 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/li.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.nic.li"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.LI",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:620:0:ff:0:0:0:57"
+            ],
+            "v4" : [
+               "130.59.31.42"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.LI",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "130.59.31.44"
+            ],
+            "v6" : [
+               "2001:620:0:ff:0:0:0:59"
+            ]
+         }
+      },
+      {
+         "ldhName" : "D.NIC.LI",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:20:0:0:0:0:40"
+            ],
+            "v4" : [
+               "194.0.25.40"
+            ]
+         }
+      },
+      {
+         "ldhName" : "E.NIC.LI",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.17.1"
+            ],
+            "v6" : [
+               "2001:678:3:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:1010:3:0:0:0:53"
+            ],
+            "v4" : [
+               "194.146.106.14"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.NIC.LI"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "43984",
+            "digestType" : "2",
+            "algorithm" : "13",
+            "digest" : "844e2b8c231f43692d319a33657a9a83c9f22baf53f276ef23f8405e20a0f1fa"
+         }
+      ]
+   },
+   "ldhName" : "li",
    "entities" : [
       {
-         "handle" : "li-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -53,12 +144,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "SWITCH TLD Administration"
                ],
                [
                   "org",
@@ -81,39 +166,18 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 44 268 15 40"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 44 268 15 78"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-admin@switch.ch"
                ]
             ]
          ],
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "li-registrant"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "li-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -173,11 +237,16 @@
                ]
             ]
          ],
-         "handle" : "li-technical"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "handle" : "li-administrative",
          "objectClassName" : "entity",
-         "handle" : "li-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -186,6 +255,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "SWITCH TLD Administration"
                ],
                [
                   "org",
@@ -208,41 +283,29 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 44 268 15 40"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 44 268 15 78"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-admin@switch.ch"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "43984",
-            "algorithm" : "13",
-            "digestType" : "2",
-            "digest" : "844e2b8c231f43692d319a33657a9a83c9f22baf53f276ef23f8405e20a0f1fa"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/li.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://www.nic.li",
-         "title" : "URL for registration services",
-         "rel" : "related"
       }
    ],
    "events" : [
@@ -256,73 +319,10 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:43"
+         "eventDate" : "2023-07-26T13:16:52"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "130.59.31.42"
-            ],
-            "v6" : [
-               "2001:620:0:ff:0:0:0:57"
-            ]
-         },
-         "ldhName" : "A.NIC.LI"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "130.59.31.44"
-            ],
-            "v6" : [
-               "2001:620:0:ff:0:0:0:59"
-            ]
-         },
-         "ldhName" : "B.NIC.LI",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:20:0:0:0:0:40"
-            ],
-            "v4" : [
-               "194.0.25.40"
-            ]
-         },
-         "ldhName" : "D.NIC.LI",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "E.NIC.LI",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.17.1"
-            ],
-            "v6" : [
-               "2001:678:3:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.NIC.LI",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.14"
-            ],
-            "v6" : [
-               "2001:67c:1010:3:0:0:0:53"
-            ]
-         }
-      }
-   ]
+   "port43" : "whois.iana.org",
+   "handle" : "li",
+   "objectClassName" : "domain"
 }

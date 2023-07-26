@@ -1,7 +1,4 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -10,10 +7,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.lamborghini.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -22,20 +19,45 @@
          ]
       }
    ],
-   "handle" : "lamborghini",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/lamborghini.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.lamborghini.com"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A0.NIC.LAMBORGHINI",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ca:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.208.33"
+            ],
+            "v6" : [
+               "2a01:8840:ca:0:0:0:0:33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.LAMBORGHINI",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:cd:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.211.33"
             ]
          }
       },
@@ -43,44 +65,99 @@
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
-               "65.22.211.33"
+               "65.22.209.33"
             ],
-            "v6" : [
-               "2a01:8840:cd:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "A2.NIC.LAMBORGHINI"
-      },
-      {
-         "ipAddresses" : {
             "v6" : [
                "2a01:8840:cb:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.209.33"
             ]
          },
-         "ldhName" : "B0.NIC.LAMBORGHINI",
-         "objectClassName" : "nameserver"
+         "ldhName" : "B0.NIC.LAMBORGHINI"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.210.33"
-            ],
             "v6" : [
                "2a01:8840:cc:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.210.33"
             ]
          },
-         "ldhName" : "C0.NIC.LAMBORGHINI",
-         "objectClassName" : "nameserver"
+         "ldhName" : "C0.NIC.LAMBORGHINI"
       }
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "ldhName" : "lamborghini",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Automobili Lamborghini S.p.A."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Via Modena, 12\nSant Agata Bolognese BO 40019\nItaly"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "lamborghini-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "handle" : "lamborghini-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -131,57 +208,14 @@
                   "dotlamborghini@domainexperten.de"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Automobili Lamborghini S.p.A."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Via Modena, 12\nSant Agata Bolognese BO 40019\nItaly"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "lamborghini-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
+         "objectClassName" : "entity",
+         "handle" : "lamborghini-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "lamborghini-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -240,69 +274,35 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "a10d1ea44cb7fb0a404807548f2cabd4def69b874ce31632c870e108c673cb09",
+            "keyTag" : "61360",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventDate" : "2015-11-12",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2020-12-16",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-16"
       },
       {
-         "eventDate" : "2023-07-26T12:30:39",
+         "eventDate" : "2023-07-26T13:16:51",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/lamborghini.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.lamborghini.com"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "61360",
-            "digest" : "a10d1ea44cb7fb0a404807548f2cabd4def69b874ce31632c870e108c673cb09"
-         }
-      ]
-   }
+   "port43" : "whois.iana.org",
+   "handle" : "lamborghini",
+   "objectClassName" : "domain"
 }

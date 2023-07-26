@@ -2,12 +2,15 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.BRADESCO."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -16,68 +19,12 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "bradesco",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.BRADESCO",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:7a:0:0:0:0:2"
-            ],
-            "v4" : [
-               "65.22.124.2"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.127.2"
-            ],
-            "v6" : [
-               "2a01:8840:7d:0:0:0:0:2"
-            ]
-         },
-         "ldhName" : "A2.NIC.BRADESCO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.125.2"
-            ],
-            "v6" : [
-               "2a01:8840:7b:0:0:0:0:2"
-            ]
-         },
-         "ldhName" : "B0.NIC.BRADESCO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:7c:0:0:0:0:2"
-            ],
-            "v4" : [
-               "65.22.126.2"
-            ]
-         },
-         "ldhName" : "C0.NIC.BRADESCO",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "bradesco",
    "notices" : [
       {
          "description" : [
@@ -96,10 +43,93 @@
          ]
       }
    ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bradesco.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.nic.bradesco/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:7a:0:0:0:0:2"
+            ],
+            "v4" : [
+               "65.22.124.2"
+            ]
+         },
+         "ldhName" : "A0.NIC.BRADESCO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:7d:0:0:0:0:2"
+            ],
+            "v4" : [
+               "65.22.127.2"
+            ]
+         },
+         "ldhName" : "A2.NIC.BRADESCO"
+      },
+      {
+         "ldhName" : "B0.NIC.BRADESCO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.125.2"
+            ],
+            "v6" : [
+               "2a01:8840:7b:0:0:0:0:2"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.126.2"
+            ],
+            "v6" : [
+               "2a01:8840:7c:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "C0.NIC.BRADESCO"
+      }
+   ],
+   "handle" : "bradesco",
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "61375",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "a0ffe5a2c7c1cb086855963d43117563e509ca1e6b27d87ef9ce011c195b8344"
+         }
+      ]
+   },
    "entities" : [
       {
          "objectClassName" : "entity",
          "handle" : "bradesco-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -158,56 +188,12 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Banco Bradesco S.A."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Avenida Yara SN - Cidade de Deus - Prédio Rubi - Osasco\nSão Paulo SP 06029-900\nBrazil"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "bradesco-registrant"
       },
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "bradesco-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -259,50 +245,64 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "bradesco-administrative"
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Banco Bradesco S.A."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Avenida Yara SN - Cidade de Deus - Prédio Rubi - Osasco\nSão Paulo SP 06029-900\nBrazil"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "bradesco-registrant"
       }
    ],
+   "ldhName" : "bradesco",
    "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/bradesco.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.bradesco/"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a0ffe5a2c7c1cb086855963d43117563e509ca1e6b27d87ef9ce011c195b8344",
-            "keyTag" : "61375",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-05-29"
+         "eventDate" : "2015-05-29",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2022-04-12",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-04-12"
       },
       {
-         "eventDate" : "2023-07-26T12:28:26",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ]
 }

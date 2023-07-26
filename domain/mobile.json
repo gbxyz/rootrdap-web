@@ -1,67 +1,9 @@
 {
+   "objectClassName" : "domain",
+   "handle" : "mobile",
    "ldhName" : "mobile",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dish DBS Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "9601 S. Meridian Boulevard\nEnglewood CO 80112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "mobile-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "mobile-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -124,11 +66,15 @@
          "roles" : [
             "technical"
          ],
+         "handle" : "mobile-technical",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
          "handle" : "mobile-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -187,109 +133,78 @@
                   "cscngtlds28@cscinfo.com"
                ]
             ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "mobile-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dish DBS Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "9601 S. Meridian Boulevard\nEnglewood CO 80112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "7e9719c718c3954d6f5d3c8967b1424f663ac3ff24d49ba6c26a52ebcd2c3b0f",
             "digestType" : "2",
-            "algorithm" : "8",
             "keyTag" : "85",
-            "digest" : "7e9719c718c3954d6f5d3c8967b1424f663ac3ff24d49ba6c26a52ebcd2c3b0f"
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/mobile.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.dish.com/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
    "events" : [
       {
-         "eventDate" : "2016-12-15",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-12-15"
       },
       {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
       },
       {
-         "eventDate" : "2023-07-26T12:30:58",
+         "eventDate" : "2023-07-26T13:16:52",
          "eventAction" : "last update of RDAP database"
       }
    ],
+   "port43" : "whois.iana.org",
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.96.9"
-            ],
-            "v6" : [
-               "2a01:8840:5e:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A0.NIC.MOBILE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.99.9"
-            ],
-            "v6" : [
-               "2a01:8840:61:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A2.NIC.MOBILE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.MOBILE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:5f:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.97.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:60:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.98.9"
-            ]
-         },
-         "ldhName" : "C0.NIC.MOBILE"
-      }
-   ],
-   "handle" : "mobile",
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -311,6 +226,91 @@
             "IANA"
          ],
          "title" : "Source"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/mobile.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.dish.com/"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.MOBILE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:5e:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.96.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.MOBILE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:61:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.99.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.97.9"
+            ],
+            "v6" : [
+               "2a01:8840:5f:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B0.NIC.MOBILE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:60:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.98.9"
+            ]
+         },
+         "ldhName" : "C0.NIC.MOBILE"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ]
 }

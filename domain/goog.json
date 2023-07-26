@@ -1,140 +1,19 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "goog",
-   "nameservers" : [
-      {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.32.105"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.34.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.36.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.60.105"
-            ],
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ]
-         }
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-01-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:07",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "handle" : "goog",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "8029",
+            "digest" : "01509dc8d2d79e32f9a9c7f9845fdf26e4c4b7b2d6040e0d9381ebabe5331801",
             "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "01509dc8d2d79e32f9a9c7f9845fdf26e4c4b7b2d6040e0d9381ebabe5331801"
+            "keyTag" : "8029",
+            "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/goog.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.registry.google",
-         "rel" : "related"
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "goog-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -196,9 +75,14 @@
          ],
          "roles" : [
             "administrative"
-         ]
+         ],
+         "handle" : "goog-administrative",
+         "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -258,17 +142,12 @@
                ]
             ]
          ],
-         "handle" : "goog-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "goog-technical"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "goog-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -302,10 +181,53 @@
                ]
             ]
          ],
-         "handle" : "goog-registrant"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
+   "ldhName" : "goog",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-01-08"
+      },
+      {
+         "eventDate" : "2020-04-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -324,5 +246,83 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "goog"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/goog.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://www.registry.google",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
+      },
+      {
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.38.105"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
+      },
+      {
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ]
+         }
+      }
+   ]
 }

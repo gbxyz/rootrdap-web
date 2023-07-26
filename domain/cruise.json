@@ -1,5 +1,30 @@
 {
-   "ldhName" : "cruise",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CRUISE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "http://www.vikingrivercruises.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -18,8 +43,88 @@
          "title" : "Comments"
       }
    ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.192.25"
+            ],
+            "v6" : [
+               "2a01:8840:ba:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "A0.NIC.CRUISE"
+      },
+      {
+         "ldhName" : "A2.NIC.CRUISE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:bd:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.195.25"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:bb:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.193.25"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.CRUISE"
+      },
+      {
+         "ldhName" : "C0.NIC.CRUISE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.194.25"
+            ],
+            "v6" : [
+               "2a01:8840:bc:0:0:0:0:25"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cruise.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "33220",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "254d748f9e700bd632010eeffe96cc5a1dfef5b4a85a18a1ab4962ea81f9937f"
+         }
+      ]
+   },
    "entities" : [
       {
+         "handle" : "cruise-administrative",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -80,55 +185,11 @@
                ]
             ]
          ],
-         "handle" : "cruise-administrative",
          "roles" : [
             "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "cruise-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Viking River Cruises (Bermuda) Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "5700 Canoga Avenue Suite 200\nWoodland Hills CA 91367\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -188,38 +249,58 @@
                ]
             ]
          ],
-         "handle" : "cruise-technical",
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/cruise.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "cruise-technical"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "objectClassName" : "entity",
+         "handle" : "cruise-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Viking River Cruises (Bermuda) Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "5700 Canoga Avenue Suite 200\nWoodland Hills CA 91367\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "33220",
-            "digest" : "254d748f9e700bd632010eeffe96cc5a1dfef5b4a85a18a1ab4962ea81f9937f"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "ldhName" : "cruise",
    "events" : [
       {
-         "eventDate" : "2016-10-21",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-10-21"
       },
       {
          "eventAction" : "last changed",
@@ -227,91 +308,10 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:07"
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "port43" : "whois.iana.org",
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.CRUISE",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.192.25"
-            ],
-            "v6" : [
-               "2a01:8840:ba:0:0:0:0:25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bd:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.195.25"
-            ]
-         },
-         "ldhName" : "A2.NIC.CRUISE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B0.NIC.CRUISE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bb:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.193.25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.194.25"
-            ],
-            "v6" : [
-               "2a01:8840:bc:0:0:0:0:25"
-            ]
-         },
-         "ldhName" : "C0.NIC.CRUISE",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "handle" : "cruise",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CRUISE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.vikingrivercruises.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ]
+   "handle" : "cruise"
 }

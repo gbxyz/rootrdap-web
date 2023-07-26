@@ -1,13 +1,16 @@
 {
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.AIRBUS."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -16,19 +19,27 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "airbus",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/airbus.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.173.30"
@@ -37,28 +48,28 @@
                "2001:500:120:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC1.NSTLD.COM"
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
             "v6" : [
                "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "AC2.NSTLD.COM"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
             "v6" : [
                "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
             ]
          },
          "ldhName" : "AC3.NSTLD.COM"
@@ -76,16 +87,71 @@
          "objectClassName" : "nameserver"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "objectClassName" : "domain",
-   "ldhName" : "airbus",
-   "port43" : "whois.iana.org",
+   "handle" : "airbus",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Airbus S.A.S."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1 rond point Maurice Bellonte\nBlagnac 31700\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity",
+         "handle" : "airbus-registrant"
+      },
+      {
          "roles" : [
             "administrative"
          ],
-         "handle" : "airbus-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -144,14 +210,11 @@
                   "ngtld-airbus@cscinfo.com"
                ]
             ]
-         ]
+         ],
+         "handle" : "airbus-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "airbus-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -210,102 +273,39 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "airbus-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Airbus S.A.S."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1 rond point Maurice Bellonte\nBlagnac 31700\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
          "roles" : [
-            "registrant"
-         ]
+            "technical"
+         ],
+         "handle" : "airbus-technical",
+         "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "airbus",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "31023",
+            "digestType" : "2",
+            "digest" : "fafdd4f89fa42d1396b42a972019bd3de013bd1708888fd77bd7dada8a38936d"
+         }
+      ]
+   },
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2016-05-26",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:47"
+         "eventDate" : "2023-07-26T13:16:46"
       }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/airbus.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "31023",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "fafdd4f89fa42d1396b42a972019bd3de013bd1708888fd77bd7dada8a38936d"
-         }
-      ]
-   }
+   ]
 }

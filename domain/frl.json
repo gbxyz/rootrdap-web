@@ -1,30 +1,21 @@
 {
    "handle" : "frl",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FRL."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://registreer.frl"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digestType" : "2",
+            "keyTag" : "16639",
+            "digest" : "d3ccc215301c0738fc3b1aa14deb7602421ff42d3889bd15d018ee2212373d38"
+         }
+      ]
+   },
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "frl-administrative",
          "roles" : [
             "administrative"
          ],
@@ -86,51 +77,14 @@
                   "info@frlregistry.com"
                ]
             ]
-         ],
-         "handle" : "frl-administrative",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "frl-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "FRLregistry B.V."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Willemskade 3\nLeeuwarden 8911AM\nNetherlands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       },
       {
+         "handle" : "frl-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -189,23 +143,99 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "frl-technical",
+         ]
+      },
+      {
          "roles" : [
-            "technical"
+            "registrant"
          ],
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "FRLregistry B.V."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Willemskade 3\nLeeuwarden 8911AM\nNetherlands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "frl-registrant"
       }
    ],
+   "ldhName" : "frl",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-08-22",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:49"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FRL."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://registreer.frl"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -216,52 +246,25 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-08-22"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:51"
-      }
-   ],
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/frl.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
          "rel" : "related"
       },
       {
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://registreer.frl"
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://registreer.frl",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "d3ccc215301c0738fc3b1aa14deb7602421ff42d3889bd15d018ee2212373d38",
-            "keyTag" : "16639",
-            "algorithm" : "13",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "frl",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.FRL",
          "ipAddresses" : {
             "v6" : [
@@ -270,47 +273,44 @@
             "v4" : [
                "194.169.218.87"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.FRL",
          "ipAddresses" : {
-            "v4" : [
-               "185.24.64.87"
-            ],
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:87"
+            ],
+            "v4" : [
+               "185.24.64.87"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.FRL"
       },
       {
+         "ldhName" : "C.NIC.FRL",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.248.87"
-            ],
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:87"
+            ],
+            "v4" : [
+               "212.18.248.87"
             ]
          },
-         "ldhName" : "C.NIC.FRL",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NIC.FRL",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.249.87"
-            ],
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:87"
+            ],
+            "v4" : [
+               "212.18.249.87"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "D.NIC.FRL"
       }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
    ]
 }

@@ -1,45 +1,81 @@
 {
-   "ldhName" : "gl",
-   "links" : [
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gl.html"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GL."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "description" : [
+            "Registration information: http://www.nic.gl/"
+         ],
+         "title" : "Remark"
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.gl/"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "11560",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "3d44df84c78a82e0e9824440f3e82b402551341dbff3bce72cd786435d15f1aa"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.49"
+            ],
+            "v6" : [
+               "2001:500:14:6049:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.GL"
+      },
+      {
+         "ldhName" : "NS1.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.38.108.108"
+            ],
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
+            ]
          }
-      ]
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1994-04-08"
       },
       {
-         "eventDate" : "2022-11-26",
-         "eventAction" : "last changed"
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "185.28.194.194"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.ANYCASTDNS.CZ"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gl.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "eventDate" : "2023-07-26T12:30:02",
-         "eventAction" : "last update of RDAP database"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.gl/",
+         "rel" : "related"
       }
    ],
    "notices" : [
@@ -52,16 +88,23 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "gl",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "gl-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -120,14 +163,11 @@
                   "gl-admin@telepost.gl"
                ]
             ]
-         ],
-         "handle" : "gl-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "gl-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -187,15 +227,11 @@
                ]
             ]
          ],
-         "handle" : "gl-technical",
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "gl-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -231,72 +267,36 @@
          ],
          "roles" : [
             "registrant"
-         ]
+         ],
+         "handle" : "gl-registrant",
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "D.NIC.GL",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.49"
-            ],
-            "v6" : [
-               "2001:500:14:6049:ad:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
-            "v4" : [
-               "185.38.108.108"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v4" : [
-               "185.28.194.194"
-            ],
-            "v6" : []
+   "ldhName" : "gl",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "11560",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "3d44df84c78a82e0e9824440f3e82b402551341dbff3bce72cd786435d15f1aa"
          }
-      }
-   ],
-   "handle" : "gl",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+      ]
+   },
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GL."
-         ]
+         "eventDate" : "1994-04-08",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "Registration information: http://www.nic.gl/"
-         ],
-         "title" : "Remark"
+         "eventDate" : "2022-11-26",
+         "eventAction" : "last changed"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org"
 }

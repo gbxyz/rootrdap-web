@@ -1,97 +1,22 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.4"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.196.4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "yokohama",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-27"
+         "eventDate" : "2014-03-27",
+         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
+         "eventDate" : "2019-08-20",
+         "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:59"
+         "eventDate" : "2023-07-26T13:16:58",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "40754",
-            "digest" : "e03e2af9c07c1acde150dc51e5a2d8803f70626fb5b6deecdabc5f8fdd0bdbaa"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/yokohama.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "yokohama",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -102,6 +27,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Representative Director and CEO"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -110,7 +41,7 @@
                [
                   "adr",
                   {
-                     "label" : "26-1 Sakuragaoka-cho\nShibuya-ku Tokyo\nJapan"
+                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
                   },
                   "text",
                   [
@@ -122,15 +53,38 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81 354561601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81 337805239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
                ]
             ]
          ],
-         "handle" : "yokohama-registrant",
          "roles" : [
-            "registrant"
-         ]
+            "administrative"
+         ],
+         "handle" : "yokohama-administrative",
+         "objectClassName" : "entity"
       },
       {
+         "handle" : "yokohama-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -192,16 +146,12 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "handle" : "yokohama-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "yokohama-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -212,12 +162,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Representative Director and CEO"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -226,7 +170,7 @@
                [
                   "adr",
                   {
-                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                     "label" : "26-1 Sakuragaoka-cho\nShibuya-ku Tokyo\nJapan"
                   },
                   "text",
                   [
@@ -238,59 +182,110 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81 354561601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81 337805239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "yokohama-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "e03e2af9c07c1acde150dc51e5a2d8803f70626fb5b6deecdabc5f8fdd0bdbaa",
+            "keyTag" : "40754",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
+   "handle" : "yokohama",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET"
+      },
+      {
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/yokohama.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.YOKOHAMA."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -299,10 +294,10 @@
          "title" : "Remark"
       },
       {
-         "title" : "Remark",
          "description" : [
             "http://www.gmo-registry.com/en/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -311,5 +306,10 @@
          ]
       }
    ],
-   "handle" : "yokohama"
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

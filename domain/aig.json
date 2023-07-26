@@ -1,18 +1,54 @@
 {
-   "nameservers" : [
+   "notices" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.AIG",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         }
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/aig.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.aig.com",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.AIG",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.AIG",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -21,10 +57,10 @@
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
             ]
-         },
-         "ldhName" : "B.NIC.AIG"
+         }
       },
       {
+         "ldhName" : "C.NIC.AIG",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -33,10 +69,10 @@
             "v4" : [
                "37.209.196.9"
             ]
-         },
-         "ldhName" : "C.NIC.AIG"
+         }
       },
       {
+         "ldhName" : "NS1.DNS.NIC.AIG",
          "ipAddresses" : {
             "v4" : [
                "156.154.144.6"
@@ -45,44 +81,130 @@
                "2610:a1:1071:0:0:0:0:6"
             ]
          },
-         "ldhName" : "NS1.DNS.NIC.AIG",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "NS2.DNS.NIC.AIG",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.145.6"
-            ],
             "v6" : [
                "2610:a1:1072:0:0:0:0:6"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.AIG",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.AIG",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:6"
             ],
             "v4" : [
+               "156.154.145.6"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
                "156.154.159.6"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:6"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.AIG"
       }
    ],
-   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.aig.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "18592",
+            "digestType" : "2",
+            "digest" : "5561856a59f0b23749c885d4dd398a52b087ed06216daee0aeb88b965c4f6994"
+         }
+      ]
+   },
+   "ldhName" : "aig",
    "entities" : [
       {
-         "roles" : [
-            "technical"
+         "objectClassName" : "entity",
+         "handle" : "aig-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "American International Group, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "80 Pine Street, 30th Floor\nNew York NY NY10005\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
          "handle" : "aig-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -142,50 +264,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "aig-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "American International Group, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "80 Pine Street, 30th Floor\nNew York NY NY10005\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -245,96 +328,13 @@
                ]
             ]
          ],
-         "handle" : "aig-administrative",
          "roles" : [
             "administrative"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "handle" : "aig-administrative",
+         "objectClassName" : "entity"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-09"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:47"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/aig.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.aig.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "18592",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "5561856a59f0b23749c885d4dd398a52b087ed06216daee0aeb88b965c4f6994"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "aig",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.aig.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
    "handle" : "aig"
 }

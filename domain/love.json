@@ -1,120 +1,9 @@
 {
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "NS1.UNIREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:57:4000:1:0:0:0:1"
-            ],
-            "v4" : [
-               "64.96.1.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "64.96.2.1"
-            ]
-         },
-         "ldhName" : "NS2.UNIREGISTRY.INFO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.UNIREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.197.3"
-            ],
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS4.UNIREGISTRY.INFO",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:3"
-            ],
-            "v4" : [
-               "185.159.198.3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "099baacef86a52379cdc0f6756d1eadaa7963ff5c3a16cfe32340b109580b84b",
-            "keyTag" : "27205",
-            "algorithm" : "13",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/love.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://get.love"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-25"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-04-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:47"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,53 +64,12 @@
             ]
          ],
          "handle" : "love-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "handle" : "love-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Merchant Law Group LLP"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100–2401 Saskatchewan Drive\nRegina SK S4P 4H8\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "love-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -273,24 +121,91 @@
                ]
             ]
          ],
+         "handle" : "love-technical",
+         "objectClassName" : "entity"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Merchant Law Group LLP"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100–2401 Saskatchewan Drive\nRegina SK S4P 4H8\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "roles" : [
-            "technical"
-         ]
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "love-registrant"
       }
    ],
    "ldhName" : "love",
-   "remarks" : [
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "099baacef86a52379cdc0f6756d1eadaa7963ff5c3a16cfe32340b109580b84b",
+            "algorithm" : "13",
+            "digestType" : "2",
+            "keyTag" : "27205"
+         }
+      ]
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LOVE."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-25"
       },
       {
+         "eventDate" : "2023-04-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "handle" : "love",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LOVE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://get.love"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -299,8 +214,93 @@
          ]
       }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.1.1"
+            ],
+            "v6" : [
+               "2620:57:4000:1:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.UNIREGISTRY.NET"
+      },
+      {
+         "ldhName" : "NS2.UNIREGISTRY.INFO",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "64.96.2.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.197.3"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "NS3.UNIREGISTRY.NET"
+      },
+      {
+         "ldhName" : "NS4.UNIREGISTRY.INFO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.198.3"
+            ],
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:3"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/love.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://get.love",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "handle" : "love"
+   ]
 }

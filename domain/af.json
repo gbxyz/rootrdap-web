@@ -1,10 +1,10 @@
 {
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.AF."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -13,20 +13,31 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/af.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.af",
+         "rel" : "related"
+      }
    ],
-   "handle" : "af",
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "NS.ANYCAST.NIC.AF",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6013:ad:0:0:1"
@@ -35,10 +46,10 @@
                "204.61.216.13"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS.ANYCAST.NIC.AF"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a00:fea0:dead:0:0:0:0:beef"
@@ -47,30 +58,28 @@
                "185.38.108.108"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS1.ANYCASTDNS.CZ"
       },
       {
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.28.194.194"
             ],
             "v6" : []
-         },
-         "ldhName" : "NS2.ANYCASTDNS.CZ"
+         }
       }
-   ],
-   "status" : [
-      "active"
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -81,11 +90,16 @@
          ]
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "ldhName" : "af",
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "af-technical",
          "vcardArray" : [
             "vcard",
@@ -138,49 +152,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "af-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Ministry of Communications and IT"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Mohammad Jan Khan Watt\nKabul 26000\nAfghanistan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+            "technical"
+         ]
       },
       {
+         "handle" : "af-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -232,55 +210,77 @@
                ]
             ]
          ],
-         "handle" : "af-administrative",
          "roles" : [
             "administrative"
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Ministry of Communications and IT"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Mohammad Jan Khan Watt\nKabul 26000\nAfghanistan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "af-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "56c77864a2cd726f252634c8804a2af33ea2ce70c49091e08c223bd2bb33cf5c",
             "algorithm" : "8",
+            "keyTag" : "3691",
             "digestType" : "2",
-            "keyTag" : "3691"
+            "digest" : "56c77864a2cd726f252634c8804a2af33ea2ce70c49091e08c223bd2bb33cf5c"
          }
       ]
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/af.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.af",
-         "title" : "URL for registration services"
-      }
-   ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1997-10-16"
+         "eventDate" : "1997-10-16",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2022-11-21",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-21"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:45"
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "af"
+   "port43" : "whois.iana.org",
+   "handle" : "af",
+   "objectClassName" : "domain"
 }

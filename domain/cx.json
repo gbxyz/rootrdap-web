@@ -1,8 +1,62 @@
 {
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CX."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://cxda.org.cx"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cx.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://cxda.org.cx",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS.ANYCAST.NIC.CX",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6016:ad:0:0:1"
@@ -10,41 +64,52 @@
             "v4" : [
                "204.61.216.16"
             ]
-         }
+         },
+         "ldhName" : "NS.ANYCAST.NIC.CX"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
          "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
             "v4" : [
                "185.38.108.108"
+            ],
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
             ]
-         }
+         },
+         "ldhName" : "NS1.ANYCASTDNS.CZ"
       },
       {
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "185.28.194.194"
-            ],
-            "v6" : []
+            ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS2.ANYCASTDNS.CZ"
       }
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "4854a102492ce0c50c714f366ebbd520cba38bbefc91cf295eee8e6ef7d48ca5",
+            "algorithm" : "8",
+            "keyTag" : "6500",
+            "digestType" : "2"
+         }
+      ]
+   },
+   "ldhName" : "cx",
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -96,51 +161,18 @@
                ]
             ]
          ],
-         "handle" : "cx-technical",
-         "objectClassName" : "entity"
-      },
-      {
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Christmas Island Domain Administration Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Christmas Island Technology Centre (6RCI)\nNursery Road, Drumsite\nChristmas Island WA 6798\nChristmas Island"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "cx-registrant",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "cx-technical"
       },
       {
          "handle" : "cx-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -191,96 +223,64 @@
                   "admin@cxda.org.cx"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "cx-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Christmas Island Domain Administration Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Christmas Island Technology Centre (6RCI)\nNursery Road, Drumsite\nChristmas Island WA 6798\nChristmas Island"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "1997-04-24",
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-21"
+         "eventDate" : "2023-03-21",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:09"
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "6500",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "4854a102492ce0c50c714f366ebbd520cba38bbefc91cf295eee8e6ef7d48ca5"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cx.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://cxda.org.cx",
-         "rel" : "related"
-      }
-   ],
-   "ldhName" : "cx",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CX."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://cxda.org.cx"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
    "handle" : "cx"
 }

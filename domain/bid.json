@@ -1,44 +1,99 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/bid.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://www.iana.org/domains/root/db/bid.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "href" : "http://nic.bid",
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
          "title" : "URL for registration services",
+         "href" : "http://nic.bid",
          "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "20119",
-            "digest" : "eb851ab057822a4c0092b8a500066227424c6bce0e50b45d40b21476b18056b8"
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.BID",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
          }
-      ]
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-13"
       },
       {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
+         "ldhName" : "B.NIC.BID",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "eventDate" : "2023-07-26T12:28:16",
-         "eventAction" : "last update of RDAP database"
+         "ldhName" : "C.NIC.BID",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.25"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:19"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.BID"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.BID",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.25"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:19"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:19"
+            ],
+            "v4" : [
+               "156.154.159.25"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.BID"
       }
    ],
    "notices" : [
@@ -51,18 +106,56 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BID."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.bid"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "bid",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-02-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
+      }
+   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -97,11 +190,70 @@
             ]
          ],
          "handle" : "bid-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "bid-administrative",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Edgar Charles Andrew Lavarello"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Pricewaterhousecoopers Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+350 200 73520"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "edgar.c.lavarello@gi.pwc.com"
+               ]
+            ]
+         ],
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       },
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -161,172 +313,20 @@
                ]
             ]
          ],
-         "handle" : "bid-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
-         "handle" : "bid-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Edgar Charles Andrew Lavarello"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Pricewaterhousecoopers Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+350 200 73520"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "edgar.c.lavarello@gi.pwc.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
+         "handle" : "bid-technical"
       }
    ],
    "ldhName" : "bid",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         },
-         "ldhName" : "A.NIC.BID",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.NIC.BID",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.BID",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "eb851ab057822a4c0092b8a500066227424c6bce0e50b45d40b21476b18056b8",
+            "algorithm" : "8",
+            "keyTag" : "20119",
+            "digestType" : "2"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.25"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:19"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.BID"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.BID",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:19"
-            ],
-            "v4" : [
-               "156.154.145.25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.BID",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.25"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:19"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "bid",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BID."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.bid"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+      ],
+      "delegationSigned" : true
+   }
 }

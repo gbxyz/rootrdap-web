@@ -1,5 +1,4 @@
 {
-   "handle" : "kerryproperties",
    "remarks" : [
       {
          "description" : [
@@ -8,10 +7,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.kerryprops.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -19,9 +18,6 @@
             "IANA"
          ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "notices" : [
       {
@@ -41,13 +37,98 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.112.55"
+            ],
+            "v6" : [
+               "2a01:8840:6e:0:0:0:0:55"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.KERRYPROPERTIES"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:71:0:0:0:0:55"
+            ],
+            "v4" : [
+               "65.22.115.55"
+            ]
+         },
+         "ldhName" : "A2.NIC.KERRYPROPERTIES"
+      },
+      {
+         "ldhName" : "B0.NIC.KERRYPROPERTIES",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.113.55"
+            ],
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:55"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:70:0:0:0:0:55"
+            ],
+            "v4" : [
+               "65.22.114.55"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.KERRYPROPERTIES"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/kerryproperties.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.kerryprops.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "8dd03bb4024d3556271625130bf9c705c16fa0d91e5ec8233ea8c4dd48fc6b3f",
+            "keyTag" : "3063",
+            "digestType" : "2",
+            "algorithm" : "8"
+         },
+         {
+            "digestType" : "2",
+            "keyTag" : "48565",
+            "algorithm" : "8",
+            "digest" : "98e8c6905df7915e05a6af4cf38ad9e4bad214dfec3f14d2a62aca1a1a8c53b2"
+         }
+      ]
+   },
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "kerryproperties-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -107,51 +188,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "kerryproperties-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Kerry Trading Co. Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "31/F Kerry Centre\n683 King’s Road\nQuarry Bay\nHong Kong"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "kerryproperties-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "kerryproperties-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -211,45 +257,51 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
+         "handle" : "kerryproperties-administrative"
+      },
+      {
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Kerry Trading Co. Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "31/F Kerry Centre\n683 King’s Road\nQuarry Bay\nHong Kong"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "kerryproperties-registrant"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "8dd03bb4024d3556271625130bf9c705c16fa0d91e5ec8233ea8c4dd48fc6b3f",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "3063"
-         },
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "48565",
-            "digest" : "98e8c6905df7915e05a6af4cf38ad9e4bad214dfec3f14d2a62aca1a1a8c53b2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/kerryproperties.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://www.kerryprops.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "kerryproperties",
    "events" : [
       {
          "eventAction" : "registration",
@@ -261,62 +313,10 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:33"
+         "eventDate" : "2023-07-26T13:16:51"
       }
    ],
-   "ldhName" : "kerryproperties",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.112.55"
-            ],
-            "v6" : [
-               "2a01:8840:6e:0:0:0:0:55"
-            ]
-         },
-         "ldhName" : "A0.NIC.KERRYPROPERTIES"
-      },
-      {
-         "ldhName" : "A2.NIC.KERRYPROPERTIES",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:71:0:0:0:0:55"
-            ],
-            "v4" : [
-               "65.22.115.55"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.KERRYPROPERTIES",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.113.55"
-            ],
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:55"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.114.55"
-            ],
-            "v6" : [
-               "2a01:8840:70:0:0:0:0:55"
-            ]
-         },
-         "ldhName" : "C0.NIC.KERRYPROPERTIES"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "port43" : "whois.iana.org",
+   "handle" : "kerryproperties",
+   "objectClassName" : "domain"
 }

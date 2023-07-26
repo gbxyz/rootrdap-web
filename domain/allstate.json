@@ -1,104 +1,33 @@
 {
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:2e:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.48.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.ALLSTATE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.51.9"
-            ],
-            "v6" : [
-               "2a01:8840:31:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A2.NIC.ALLSTATE"
-      },
-      {
-         "ldhName" : "B0.NIC.ALLSTATE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:2f:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.49.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.50.9"
-            ],
-            "v6" : [
-               "2a01:8840:30:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C0.NIC.ALLSTATE"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2016-02-05",
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-18"
+         "eventDate" : "2020-11-18",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:27:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/allstate.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.allstate.com/"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "47509",
+            "digest" : "101757b35bfec8d399987d94b495b60acc0da525cf92d900c7566bce6ecf9356",
             "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "101757b35bfec8d399987d94b495b60acc0da525cf92d900c7566bce6ecf9356"
+            "keyTag" : "47509",
+            "algorithm" : "8"
          }
       ],
       "delegationSigned" : true
    },
+   "ldhName" : "allstate",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "allstate-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -160,13 +89,11 @@
          ],
          "roles" : [
             "administrative"
-         ]
+         ],
+         "handle" : "allstate-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "allstate-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -226,10 +153,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "allstate-technical"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -266,29 +196,97 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
          "handle" : "allstate-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
+   "handle" : "allstate",
+   "objectClassName" : "domain",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
-   "ldhName" : "allstate",
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.ALLSTATE",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.48.9"
+            ],
+            "v6" : [
+               "2a01:8840:2e:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.ALLSTATE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.51.9"
+            ],
+            "v6" : [
+               "2a01:8840:31:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.49.9"
+            ],
+            "v6" : [
+               "2a01:8840:2f:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.ALLSTATE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:30:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.50.9"
+            ]
+         },
+         "ldhName" : "C0.NIC.ALLSTATE"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/allstate.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://www.allstate.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "remarks" : [
       {
          "description" : [
@@ -303,14 +301,16 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "allstate"
+   "status" : [
+      "active"
+   ]
 }

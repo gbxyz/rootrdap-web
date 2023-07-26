@@ -1,77 +1,48 @@
 {
-   "handle" : "archi",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ARCHI."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-03-20",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-12-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:57"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/archi.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://donuts.domains/"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "ed2b030f401540096b716481cd8897e37d9a8cecbdfd98c709f4860c77501680",
-            "keyTag" : "11134",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
+         "handle" : "archi-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "handle" : "archi-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -131,12 +102,12 @@
                ]
             ]
          ],
-         "handle" : "archi-administrative"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "archi-technical",
          "vcardArray" : [
             "vcard",
@@ -197,47 +168,125 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
+      }
+   ],
+   "ldhName" : "archi",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "11134",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "ed2b030f401540096b716481cd8897e37d9a8cecbdfd98c709f4860c77501680"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "2014-03-20",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "archi-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-12-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "archi",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ARCHI."
          ]
+      },
+      {
+         "description" : [
+            "Registration information: https://donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:52:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.84.1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.ARCHI"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:55:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.87.1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.ARCHI"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.85.1"
+            ],
+            "v6" : [
+               "2a01:8840:53:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.ARCHI"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:54:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.86.1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.ARCHI"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/archi.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://donuts.domains/",
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -250,67 +299,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "ldhName" : "archi",
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.ARCHI",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.84.1"
-            ],
-            "v6" : [
-               "2a01:8840:52:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "A2.NIC.ARCHI",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:55:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.87.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:53:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.85.1"
-            ]
-         },
-         "ldhName" : "B0.NIC.ARCHI",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.ARCHI",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.86.1"
-            ],
-            "v6" : [
-               "2a01:8840:54:0:0:0:0:1"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

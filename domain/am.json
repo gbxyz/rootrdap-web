@@ -1,54 +1,58 @@
 {
-   "handle" : "am",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AMNIC.NET."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.amnic.net/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "49625",
+            "algorithm" : "13",
+            "digest" : "30aea154b17d52884c12dab5650ce87b9628aa55110de1890f1d335d995a606d"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "am",
    "entities" : [
       {
+         "handle" : "am-registrant",
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "\"Internet Society\" Non-governmental Organization"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "17 A.Khachaturyan str. #3\nYerevan 0012\nArmenia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "am-technical",
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -99,50 +103,16 @@
                   "misak@amnic.net"
                ]
             ]
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "\"Internet Society\" Non-governmental Organization"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "17 A.Khachaturyan str. #3\nYerevan 0012\nArmenia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "handle" : "am-registrant",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "am-technical"
       },
       {
          "handle" : "am-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -204,26 +174,69 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "30aea154b17d52884c12dab5650ce87b9628aa55110de1890f1d335d995a606d",
-            "digestType" : "2",
-            "algorithm" : "13",
-            "keyTag" : "49625"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1994-08-26"
+      },
+      {
+         "eventDate" : "2022-10-05",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "am",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AMNIC.NET."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://www.amnic.net/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/am.html",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/am.html"
       },
       {
          "title" : "About RDAP",
@@ -236,37 +249,22 @@
          "rel" : "related"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "1994-08-26",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-10-05"
-      },
-      {
-         "eventDate" : "2023-07-26T12:27:50",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "am",
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "FORK.STH.DNSNODE.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:3f0:0:306:0:0:0:53"
-            ],
             "v4" : [
                "77.72.229.254"
+            ],
+            "v6" : [
+               "2a01:3f0:0:306:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "FORK.STH.DNSNODE.NET"
       },
       {
          "ldhName" : "NS-CDN.AMNIC.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.1.26"
@@ -274,23 +272,21 @@
             "v6" : [
                "2001:678:4:0:0:0:0:1a"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS-PCH.AMNIC.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6096:ad:0:0:1"
-            ],
             "v4" : [
                "204.61.216.96"
+            ],
+            "v6" : [
+               "2001:500:14:6096:ad:0:0:1"
             ]
          }
       },
       {
-         "ldhName" : "NS-PRI.NIC.AM",
          "ipAddresses" : {
             "v4" : [
                "195.43.75.53"
@@ -299,8 +295,12 @@
                "2001:7f9:8:53:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-PRI.NIC.AM"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"

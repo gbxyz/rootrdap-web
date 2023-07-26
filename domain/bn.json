@@ -1,41 +1,86 @@
 {
-   "handle" : "bn",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.BNNIC.BN."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.bnnic.bn"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "title" : "Source",
+         "title" : "Comments",
          "description" : [
-            "IANA"
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "ldhName" : "bn",
-   "events" : [
+   "nameservers" : [
       {
-         "eventDate" : "1994-06-03",
-         "eventAction" : "registration"
+         "ldhName" : "BN-NS.ANYCAST.PCH.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.87"
+            ],
+            "v6" : [
+               "2001:500:14:6087:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "eventDate" : "2023-07-24",
-         "eventAction" : "last changed"
+         "ldhName" : "NS1.BNNIC.BN",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "194.0.1.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:21"
+         "ldhName" : "NS2.BNNIC.BN",
+         "ipAddresses" : {
+            "v4" : [
+               "202.93.214.163"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS4.APNIC.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dd8:12:0:0:0:0:53"
+            ],
+            "v4" : [
+               "202.12.31.53"
+            ]
+         }
       }
    ],
    "links" : [
@@ -45,17 +90,24 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.bnnic.bn",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "keyTag" : "37217",
@@ -63,13 +115,11 @@
             "algorithm" : "8",
             "digest" : "c07408e9e9e8d893257b987ebcb7b8c11889a2e40a66106cc05a6f12fbf629e6"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "ldhName" : "bn",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "bn-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -131,50 +181,11 @@
          ],
          "roles" : [
             "administrative"
-         ]
-      },
-      {
-         "roles" : [
-            "registrant"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Authority for Info-communications Technology Industry of Brunei Darussalam (AITI)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Block 13, Simpang 32-5, Kampung Anggerek Desa, Jalan Berakas\nBandar Seri Begawan BB3713\nBrunei Darussalam"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "bn-registrant",
+         "handle" : "bn-administrative",
          "objectClassName" : "entity"
       },
       {
-         "handle" : "bn-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -237,76 +248,65 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "bn-technical"
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Authority for Info-communications Technology Industry of Brunei Darussalam (AITI)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Block 13, Simpang 32-5, Kampung Anggerek Desa, Jalan Berakas\nBandar Seri Begawan BB3713\nBrunei Darussalam"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "bn-registrant"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "1994-06-03",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-24"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "BN-NS.ANYCAST.PCH.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6087:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.87"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "194.0.1.33"
-            ]
-         },
-         "ldhName" : "NS1.BNNIC.BN"
-      },
-      {
-         "ldhName" : "NS2.BNNIC.BN",
-         "ipAddresses" : {
-            "v4" : [
-               "202.93.214.163"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.APNIC.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "202.12.31.53"
-            ],
-            "v6" : [
-               "2001:dd8:12:0:0:0:0:53"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain"
+   "objectClassName" : "domain",
+   "handle" : "bn"
 }

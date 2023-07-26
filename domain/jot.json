@@ -1,136 +1,77 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.JOT."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "jot",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS1.NIC.JOT",
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.218.70"
-            ],
-            "v6" : [
-               "2a01:618:402:0:0:0:0:70"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS2.NIC.JOT",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:70"
-            ],
-            "v4" : [
-               "103.49.82.70"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:70"
-            ],
-            "v4" : [
-               "213.248.222.70"
-            ]
-         },
-         "ldhName" : "DNS3.NIC.JOT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS4.NIC.JOT",
-         "ipAddresses" : {
-            "v4" : [
-               "43.230.50.70"
-            ],
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:70"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         },
-         "ldhName" : "DNSA.NIC.JOT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.JOT",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.101.3"
-            ],
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSC.NIC.JOT",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.JOT",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.103.3"
-            ],
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ]
-         }
-      }
-   ],
    "objectClassName" : "domain",
-   "ldhName" : "jot",
+   "handle" : "jot",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e6238d8e60f3d9967690f2d435f35503ca777fc828b7deba61a1e4cc7e97bfcc",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "60425"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
+         "handle" : "jot-registrant",
          "objectClassName" : "entity",
-         "handle" : "jot-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amazon Registry Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,54 +123,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "jot-technical"
       },
       {
          "objectClassName" : "entity",
-         "handle" : "jot-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amazon Registry Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "jot-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -289,9 +188,17 @@
                ]
             ]
          ],
-         "handle" : "jot-administrative",
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
+   ],
+   "ldhName" : "jot",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -311,20 +218,6 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:31",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
          "rel" : "related",
@@ -332,25 +225,132 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "https://www.amazonregistry.com",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "60425",
-            "digest" : "e6238d8e60f3d9967690f2d435f35503ca777fc828b7deba61a1e4cc7e97bfcc"
+   "nameservers" : [
+      {
+         "ldhName" : "DNS1.NIC.JOT",
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.218.70"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:70"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNS2.NIC.JOT",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:70"
+            ],
+            "v4" : [
+               "103.49.82.70"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.222.70"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:70"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS3.NIC.JOT"
+      },
+      {
+         "ldhName" : "DNS4.NIC.JOT",
+         "ipAddresses" : {
+            "v4" : [
+               "43.230.50.70"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:70"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSA.NIC.JOT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ]
          }
-      ]
-   }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.101.3"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSB.NIC.JOT"
+      },
+      {
+         "ldhName" : "DNSC.NIC.JOT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNSD.NIC.JOT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.103.3"
+            ]
+         }
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.JOT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

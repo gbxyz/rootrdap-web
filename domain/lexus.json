@@ -1,155 +1,24 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LEXUS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://lexus.jp/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "lexus",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "lexus",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-07-16"
+      },
+      {
+         "eventDate" : "2023-06-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:52",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "lexus",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Director"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "GMO Registry, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81.354561601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81.337805239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
-               ]
-            ]
-         ],
-         "handle" : "lexus-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "lexus-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -182,11 +51,12 @@
                   ]
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "lexus-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -248,67 +118,197 @@
          ],
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "lexus-administrative"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Director"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "GMO Registry, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81.354561601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81.337805239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "lexus-technical"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "5e836746a8e2e867c1eb27292293f5af3e849c0b5f2462c86ffa9ee85668348d",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "59681"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "handle" : "lexus",
+   "objectClassName" : "domain",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/lexus.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://lexus.jp/",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET"
+      },
+      {
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.194.4"
+            ]
+         }
+      },
+      {
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LEXUS."
          ],
-         "title" : "Comments"
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://lexus.jp/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-07-16"
-      },
-      {
-         "eventDate" : "2023-06-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:42"
-      }
+   "status" : [
+      "active"
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/lexus.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://lexus.jp/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "59681",
-            "digest" : "5e836746a8e2e867c1eb27292293f5af3e849c0b5f2462c86ffa9ee85668348d"
-         }
-      ]
-   }
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

@@ -1,12 +1,105 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.travelers.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.TRV",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.200.25"
+            ],
+            "v6" : [
+               "2a01:8840:c2:0:0:0:0:25"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c5:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.203.25"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.TRV"
+      },
+      {
+         "ldhName" : "B0.NIC.TRV",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.201.25"
+            ],
+            "v6" : [
+               "2a01:8840:c3:0:0:0:0:25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c4:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.202.25"
+            ]
+         },
+         "ldhName" : "C0.NIC.TRV"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/trv.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://www.travelers.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -17,9 +110,56 @@
          "title" : "Comments"
       }
    ],
+   "handle" : "trv",
+   "objectClassName" : "domain",
+   "ldhName" : "trv",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "trv-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Travelers TLD, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "One Tower Square\nHartford CT 06183\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "trv-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -78,51 +218,7 @@
                   "ngtld-travelers@cscglobal.com"
                ]
             ]
-         ],
-         "handle" : "trv-administrative",
-         "roles" : [
-            "administrative"
          ]
-      },
-      {
-         "handle" : "trv-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Travelers TLD, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "One Tower Square\nHartford CT 06183\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
       },
       {
          "vcardArray" : [
@@ -184,42 +280,24 @@
                ]
             ]
          ],
-         "handle" : "trv-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "trv-technical"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "f525871ee63ffed32856ba0c67f5115d5b011a437b67250e357df2bdcf1ea31c",
-            "keyTag" : "48547",
             "algorithm" : "8",
+            "keyTag" : "48547",
             "digestType" : "2"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/trv.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.travelers.com",
-         "rel" : "related"
-      }
-   ],
    "events" : [
       {
          "eventDate" : "2015-11-25",
@@ -231,86 +309,8 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:09"
+         "eventDate" : "2023-07-26T13:16:56"
       }
    ],
-   "ldhName" : "trv",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c2:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.200.25"
-            ]
-         },
-         "ldhName" : "A0.NIC.TRV",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c5:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.203.25"
-            ]
-         },
-         "ldhName" : "A2.NIC.TRV"
-      },
-      {
-         "ldhName" : "B0.NIC.TRV",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c3:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.201.25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C0.NIC.TRV",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.202.25"
-            ],
-            "v6" : [
-               "2a01:8840:c4:0:0:0:0:25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "trv",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.travelers.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "port43" : "whois.iana.org"
 }

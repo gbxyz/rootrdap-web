@@ -1,146 +1,21 @@
 {
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "D.NIC.BANK",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:27"
-            ],
-            "v4" : [
-               "156.154.103.27"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.104.27"
-            ],
-            "v6" : [
-               "2610:a1:1011:0:0:0:0:27"
-            ]
-         },
-         "ldhName" : "E.NIC.BANK",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1012:0:0:0:0:27"
-            ],
-            "v4" : [
-               "156.154.105.27"
-            ]
-         },
-         "ldhName" : "F.NIC.BANK"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         },
-         "ldhName" : "W.NIC.BANK"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.BANK",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "Y.NIC.BANK",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bank.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.ftld.com/"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "15994",
-            "digest" : "659d10863a42e4957ad8f9ad97a56f8de227aa74fc9e3aa4c0e8afac0458071a"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "2014-11-26",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-11-26"
       },
       {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:07"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "bank-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -149,6 +24,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Managing Director"
                ],
                [
                   "org",
@@ -171,19 +52,29 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 202 236 1154"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ftld@ftld.com"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "bank-administrative"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "handle" : "bank-technical",
          "vcardArray" : [
             "vcard",
@@ -243,13 +134,14 @@
                   "iana@registry.godaddy"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "bank-administrative",
+         "objectClassName" : "entity",
+         "handle" : "bank-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -258,12 +150,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Managing Director"
                ],
                [
                   "org",
@@ -286,25 +172,137 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 202 236 1154"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ftld@ftld.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
    "ldhName" : "bank",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "15994",
+            "digestType" : "2",
+            "digest" : "659d10863a42e4957ad8f9ad97a56f8de227aa74fc9e3aa4c0e8afac0458071a"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "handle" : "bank",
+   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bank.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://www.ftld.com/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "D.NIC.BANK",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.27"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:27"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "E.NIC.BANK",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1011:0:0:0:0:27"
+            ],
+            "v4" : [
+               "156.154.104.27"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1012:0:0:0:0:27"
+            ],
+            "v4" : [
+               "156.154.105.27"
+            ]
+         },
+         "ldhName" : "F.NIC.BANK"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "W.NIC.BANK"
+      },
+      {
+         "ldhName" : "X.NIC.BANK",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         },
+         "ldhName" : "Y.NIC.BANK"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "remarks" : [
       {
          "description" : [
@@ -313,20 +311,22 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.ftld.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "status" : [
+      "active"
    ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "handle" : "bank"
+   ]
 }

@@ -1,12 +1,105 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CHRISTMAS."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://nic.christmas"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/christmas.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://nic.christmas",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.CHRISTMAS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.153"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:153"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.CHRISTMAS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:153"
+            ],
+            "v4" : [
+               "185.24.64.153"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.CHRISTMAS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:153"
+            ],
+            "v4" : [
+               "212.18.248.153"
+            ]
+         }
+      },
+      {
+         "ldhName" : "D.NIC.CHRISTMAS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:153"
+            ],
+            "v4" : [
+               "212.18.249.153"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -17,10 +110,53 @@
          ]
       }
    ],
+   "handle" : "christmas",
+   "objectClassName" : "domain",
+   "ldhName" : "christmas",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "christmas-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "XYZ.COM LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
          "handle" : "christmas-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -78,6 +214,10 @@
       },
       {
          "objectClassName" : "entity",
+         "handle" : "christmas-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -136,203 +276,63 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "christmas-technical",
-         "roles" : [
-            "technical"
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "christmas-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "XYZ.COM LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/christmas.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://nic.christmas",
-         "title" : "URL for registration services"
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "5",
             "digestType" : "1",
             "keyTag" : "51184",
+            "algorithm" : "5",
             "digest" : "b14c7aa2999b35f27382961870cb8e480a1f5f0b"
          },
          {
             "digest" : "b359c6393c81c5c19e651290ce278f6d9e6b73b625e2809ea4fa7cee67df4a3e",
+            "digestType" : "2",
             "keyTag" : "2827",
-            "algorithm" : "5",
-            "digestType" : "2"
+            "algorithm" : "5"
          },
          {
             "digest" : "45a7ab7ffc9aed55e130deebc6a12a007052c326",
-            "digestType" : "1",
             "algorithm" : "5",
-            "keyTag" : "2827"
+            "keyTag" : "2827",
+            "digestType" : "1"
          },
          {
             "digest" : "1a80057885de5c3e07689cd77e954733a4b21658c65bee06f69b8f8e5f47170d",
+            "algorithm" : "5",
             "keyTag" : "51184",
-            "algorithm" : "5",
             "digestType" : "2"
          },
          {
-            "digest" : "31b3839a387cf1c59f5a9fd953e54c7d5852606c0b20e86281148b6d4aaac042",
             "keyTag" : "23941",
+            "digestType" : "2",
             "algorithm" : "5",
-            "digestType" : "2"
+            "digest" : "31b3839a387cf1c59f5a9fd953e54c7d5852606c0b20e86281148b6d4aaac042"
          },
          {
+            "digest" : "bc0c1ccffabd83a031323c84e60b6b755356a8be",
             "digestType" : "1",
-            "algorithm" : "5",
             "keyTag" : "23941",
-            "digest" : "bc0c1ccffabd83a031323c84e60b6b755356a8be"
+            "algorithm" : "5"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-13"
+         "eventDate" : "2014-02-13",
+         "eventAction" : "registration"
       },
       {
          "eventDate" : "2022-08-16",
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:50"
+         "eventDate" : "2023-07-26T13:16:48",
+         "eventAction" : "last update of RDAP database"
       }
-   ],
-   "ldhName" : "christmas",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.CHRISTMAS",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.153"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:153"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:153"
-            ],
-            "v4" : [
-               "185.24.64.153"
-            ]
-         },
-         "ldhName" : "B.NIC.CHRISTMAS"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.153"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:153"
-            ]
-         },
-         "ldhName" : "C.NIC.CHRISTMAS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "D.NIC.CHRISTMAS",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.153"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:153"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "christmas",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CHRISTMAS."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://nic.christmas"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

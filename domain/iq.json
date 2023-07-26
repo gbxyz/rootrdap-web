@@ -2,18 +2,21 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.CMC.IQ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: https://registrar.cmc.iq"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -22,48 +25,6 @@
          ]
       }
    ],
-   "handle" : "iq",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:81"
-            ],
-            "v4" : [
-               "193.0.9.81"
-            ]
-         },
-         "ldhName" : "IQ.CCTLD.AUTHDNS.RIPE.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "194.117.57.100"
-            ]
-         },
-         "ldhName" : "NS1.CMC.IQ"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:8001:ad:0:0:42"
-            ],
-            "v4" : [
-               "194.117.58.42"
-            ]
-         },
-         "ldhName" : "NSP-ANYCAST.CMC.IQ",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "iq",
    "notices" : [
       {
          "title" : "About This Service",
@@ -82,12 +43,65 @@
          ]
       }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:81"
+            ],
+            "v4" : [
+               "193.0.9.81"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "IQ.CCTLD.AUTHDNS.RIPE.NET"
+      },
+      {
+         "ldhName" : "NS1.CMC.IQ",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "194.117.57.100"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NSP-ANYCAST.CMC.IQ",
+         "ipAddresses" : {
+            "v4" : [
+               "194.117.58.42"
+            ],
+            "v6" : [
+               "2001:500:14:8001:ad:0:0:42"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/iq.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://registrar.cmc.iq",
+         "title" : "URL for registration services"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "iq",
    "entities" : [
       {
+         "handle" : "iq-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -147,14 +161,11 @@
                ]
             ]
          ],
-         "handle" : "iq-administrative"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "iq-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -213,13 +224,15 @@
                   "it.iq@cmc.iq"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "iq-technical"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "iq-registrant",
          "vcardArray" : [
             "vcard",
@@ -253,27 +266,13 @@
                   ]
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/iq.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://registrar.cmc.iq",
-         "title" : "URL for registration services"
-      }
-   ],
+   "ldhName" : "iq",
    "events" : [
       {
          "eventAction" : "registration",
@@ -284,8 +283,9 @@
          "eventDate" : "2023-06-22"
       },
       {
-         "eventDate" : "2023-07-26T12:30:27",
+         "eventDate" : "2023-07-26T13:16:51",
          "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org"
 }

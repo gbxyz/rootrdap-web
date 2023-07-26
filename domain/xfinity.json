@@ -1,54 +1,26 @@
 {
-   "ldhName" : "xfinity",
+   "objectClassName" : "domain",
+   "handle" : "xfinity",
    "events" : [
       {
          "eventDate" : "2016-06-16",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2021-10-19",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-19"
       },
       {
-         "eventDate" : "2023-07-26T12:32:26",
+         "eventDate" : "2023-07-26T13:16:56",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "42454",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "c4d6cfeb973503edaa89943505206bf8c406fc92c80abad132318165aa1cb445"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/xfinity.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.xfinity/"
-      }
-   ],
    "port43" : "whois.iana.org",
+   "ldhName" : "xfinity",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "xfinity-administrative",
+         "objectClassName" : "entity",
+         "handle" : "xfinity-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -59,21 +31,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Registry Services Management"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Nominet"
+                  "Comcast IP Holdings I, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "Nominet\nMinerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                     "label" : "c/o Comcast Capital Corporation\n1201 North Market Street, Suite 100\nWilmington DE 19801\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -85,22 +51,12 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44.1865332211"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registrymanagement@nominet.uk"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
          "vcardArray" : [
@@ -154,18 +110,18 @@
                ]
             ]
          ],
-         "handle" : "xfinity-technical",
          "roles" : [
             "technical"
          ],
+         "handle" : "xfinity-technical",
          "objectClassName" : "entity"
       },
       {
+         "handle" : "xfinity-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "xfinity-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -176,15 +132,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Registry Services Management"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Comcast IP Holdings I, LLC"
+                  "Nominet"
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Comcast Capital Corporation\n1201 North Market Street, Suite 100\nWilmington DE 19801\nUnited States of America (the)"
+                     "label" : "Nominet\nMinerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
                   },
                   "text",
                   [
@@ -196,34 +158,44 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44.1865332211"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registrymanagement@nominet.uk"
                ]
             ]
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "42454",
+            "digest" : "c4d6cfeb973503edaa89943505206bf8c406fc92c80abad132318165aa1cb445"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "status" : [
       "active"
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
+         "ldhName" : "DNS1.NIC.XFINITY",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:618:403:0:0:0:0:7"
@@ -231,21 +203,19 @@
             "v4" : [
                "213.248.219.7"
             ]
-         },
-         "ldhName" : "DNS1.NIC.XFINITY",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS2.NIC.XFINITY",
          "ipAddresses" : {
-            "v4" : [
-               "103.49.83.7"
-            ],
             "v6" : [
                "2401:fd80:403:0:0:0:0:7"
+            ],
+            "v4" : [
+               "103.49.83.7"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS2.NIC.XFINITY"
       },
       {
          "objectClassName" : "nameserver",
@@ -260,8 +230,6 @@
          "ldhName" : "DNS3.NIC.XFINITY"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS4.NIC.XFINITY",
          "ipAddresses" : {
             "v6" : [
                "2401:fd80:407:0:0:0:0:7"
@@ -269,21 +237,24 @@
             "v4" : [
                "43.230.51.7"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS4.NIC.XFINITY"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "DNSA.NIC.XFINITY",
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "DNSB.NIC.XFINITY",
          "ipAddresses" : {
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
@@ -292,45 +263,74 @@
                "156.154.101.3"
             ]
          },
-         "ldhName" : "DNSB.NIC.XFINITY",
          "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "DNSC.NIC.XFINITY",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
             "v6" : [
                "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNSD.NIC.XFINITY",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
          },
          "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.XFINITY",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.103.3"
-            ]
-         }
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "xfinity",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/xfinity.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://nic.xfinity/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.XFINITY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -339,10 +339,10 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ]
 }

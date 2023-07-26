@@ -1,12 +1,122 @@
 {
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.218.67"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:67"
+            ]
+         },
+         "ldhName" : "DNS1.NIC.FREE"
+      },
+      {
+         "ldhName" : "DNS2.NIC.FREE",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:67"
+            ],
+            "v4" : [
+               "103.49.82.67"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNS3.NIC.FREE",
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.222.67"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:67"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNS4.NIC.FREE",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:67"
+            ],
+            "v4" : [
+               "43.230.50.67"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSA.NIC.FREE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNSB.NIC.FREE",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.101.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSC.NIC.FREE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSD.NIC.FREE"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/free.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -17,8 +127,58 @@
          ]
       }
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FREE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information:"
+         ]
+      },
+      {
+         "description" : [
+            "https://www.amazonregistry.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-10-27",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:49",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "free",
    "entities" : [
       {
+         "handle" : "free-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -54,16 +214,14 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "free-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "free-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "free-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -117,6 +275,7 @@
          ]
       },
       {
+         "objectClassName" : "entity",
          "handle" : "free-administrative",
          "vcardArray" : [
             "vcard",
@@ -179,179 +338,20 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "04de92a2ccfbb31f3fe8b80a9e1c03b604062bb5726b1fe18d95c62f3cb8a26c",
             "algorithm" : "8",
             "digestType" : "2",
-            "keyTag" : "24446"
+            "keyTag" : "24446",
+            "digest" : "04de92a2ccfbb31f3fe8b80a9e1c03b604062bb5726b1fe18d95c62f3cb8a26c"
          }
       ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/free.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-10-27"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:50",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "free",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS1.NIC.FREE",
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.218.67"
-            ],
-            "v6" : [
-               "2a01:618:402:0:0:0:0:67"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "103.49.82.67"
-            ],
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:67"
-            ]
-         },
-         "ldhName" : "DNS2.NIC.FREE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS3.NIC.FREE",
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.222.67"
-            ],
-            "v6" : [
-               "2a01:618:406:0:0:0:0:67"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS4.NIC.FREE",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:67"
-            ],
-            "v4" : [
-               "43.230.50.67"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNSA.NIC.FREE",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNSB.NIC.FREE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.101.3"
-            ],
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNSC.NIC.FREE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.FREE",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.103.3"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "handle" : "free",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FREE."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "https://www.amazonregistry.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "objectClassName" : "domain"
 }

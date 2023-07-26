@@ -1,74 +1,35 @@
 {
    "handle" : "compare",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.COMPARE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.compare/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-12-23",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-23"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-01"
+         "eventDate" : "2022-12-01",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:00"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/compare.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.compare/",
-         "title" : "URL for registration services"
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "algorithm" : "8",
-            "digestType" : "2",
             "keyTag" : "12634",
+            "digestType" : "2",
             "digest" : "40c8dbba65ac7385a2dd35e299ee6010d850197dd7a438dccac7d13c2d32d953"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "compare",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -131,50 +92,12 @@
                ]
             ]
          ],
-         "handle" : "compare-technical"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Registry Services, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "compare-registrant",
+         "handle" : "compare-technical",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "compare-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -234,11 +157,56 @@
                ]
             ]
          ],
-         "handle" : "compare-administrative",
          "roles" : [
             "administrative"
          ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "compare-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Registry Services, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -258,9 +226,26 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "compare",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/compare.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://nic.compare/",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "A.NIC.COMPARE",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
@@ -269,24 +254,23 @@
                "37.209.192.9"
             ]
          },
-         "ldhName" : "A.NIC.COMPARE",
          "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "B.NIC.COMPARE",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
             ]
          },
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "C.NIC.COMPARE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
@@ -297,31 +281,30 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
             "v6" : [
                "2610:a1:1074:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.172.82"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "X.NIC.COMPARE"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "Y.NIC.COMPARE"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "Z.NIC.COMPARE",
          "ipAddresses" : {
             "v6" : [
@@ -330,11 +313,28 @@
             "v4" : [
                "156.154.174.82"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.COMPARE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.compare/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
    ]
 }

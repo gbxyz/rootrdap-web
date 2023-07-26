@@ -1,11 +1,16 @@
 {
-   "handle" : "sener",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -20,17 +25,14 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -41,52 +43,91 @@
          "title" : "Comments"
       }
    ],
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/sener.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://sener.es"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM"
+      },
+      {
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC4.NSTLD.COM"
+      }
+   ],
+   "handle" : "sener",
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "40020",
+            "digestType" : "2",
+            "digest" : "f580b1e1f989e14eb37da8cd7201254150e4c28f95ca0d1db7822a78c93eaf17"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "sener",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Sener Ingeniería y Sistemas, S.A."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Avda. De Zugazarte, 56\nGetxo 48930\nSpain"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "sener-registrant"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "sener-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -146,11 +187,16 @@
                ]
             ]
          ],
-         "handle" : "sener-technical",
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "sener-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -209,41 +255,50 @@
                   "ngtld-sener@cscinfo.com"
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "sener-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Sener Ingeniería y Sistemas, S.A."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Avda. De Zugazarte, 56\nGetxo 48930\nSpain"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "sener-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/sener.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://sener.es"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "f580b1e1f989e14eb37da8cd7201254150e4c28f95ca0d1db7822a78c93eaf17",
-            "keyTag" : "40020",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2015-04-02",
@@ -254,63 +309,8 @@
          "eventDate" : "2020-10-01"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:44"
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
-   ],
-   "ldhName" : "sener",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "AC1.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM"
-      }
-   ],
-   "status" : [
-      "active"
    ]
 }

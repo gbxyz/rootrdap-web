@@ -1,98 +1,22 @@
 {
+   "objectClassName" : "domain",
    "handle" : "rip",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RIP."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "ldhName" : "rip",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e5771475fcab4c6df4608be0ede2efd5cfbcfa1405ca0b121c57557b959a40bd",
+            "keyTag" : "64594",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
-               ]
-            ]
-         ],
-         "handle" : "rip-administrative",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "rip-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -126,17 +50,15 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "rip-registrant",
          "objectClassName" : "entity"
       },
       {
+         "handle" : "rip-technical",
          "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "rip-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -196,9 +118,116 @@
                ]
             ]
          ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "rip-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
+   "ldhName" : "rip",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-10-09"
+      },
+      {
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RIP."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -209,26 +238,12 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-10-09"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:34",
-         "eventAction" : "last update of RDAP database"
+         ]
       }
    ],
    "links" : [
@@ -239,32 +254,19 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
       }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "e5771475fcab4c6df4608be0ede2efd5cfbcfa1405ca0b121c57557b959a40bd",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "64594"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
    ],
    "nameservers" : [
       {
          "ldhName" : "V0N0.NIC.RIP",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:22:0:0:0:0:22"
@@ -272,22 +274,22 @@
             "v4" : [
                "65.22.32.22"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "V0N1.NIC.RIP",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:22"
-            ],
             "v4" : [
                "65.22.33.22"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:22"
             ]
          },
-         "ldhName" : "V0N1.NIC.RIP",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V0N2.NIC.RIP",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -296,8 +298,7 @@
             "v6" : [
                "2a01:8840:24:0:0:0:0:22"
             ]
-         },
-         "ldhName" : "V0N2.NIC.RIP"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -312,20 +313,19 @@
          "ldhName" : "V0N3.NIC.RIP"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V2N0.NIC.RIP",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.35.22"
-            ],
             "v6" : [
                "2a01:8840:25:0:0:0:0:22"
+            ],
+            "v4" : [
+               "65.22.35.22"
             ]
          }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.RIP",
          "ipAddresses" : {
             "v4" : [
                "161.232.17.22"
@@ -333,8 +333,8 @@
             "v6" : [
                "2a01:8840:fb:0:0:0:0:22"
             ]
-         }
+         },
+         "ldhName" : "V2N1.NIC.RIP"
       }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

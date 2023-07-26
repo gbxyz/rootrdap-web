@@ -1,27 +1,7 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "deloitte",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -32,21 +12,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Lead Network Analyst"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Deloitte Touche Tohmatsu Services, Inc."
+                  "Deloitte Touche Tohmatsu"
                ],
                [
                   "adr",
                   {
-                     "label" : "111 S Wacker Dr\nChicago IL 60606\nUnited States of America (the)"
+                     "label" : "30 Rockefeller Plaza\nNew York NY 10112-0015\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -58,26 +32,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 312 486 4145"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dttdomainadmin@deloitte.com"
                ]
             ]
          ],
-         "handle" : "deloitte-administrative",
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "deloitte-registrant"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -132,14 +96,15 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
          "handle" : "deloitte-technical"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "deloitte-administrative",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "deloitte-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -150,15 +115,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Lead Network Analyst"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Deloitte Touche Tohmatsu"
+                  "Deloitte Touche Tohmatsu Services, Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "30 Rockefeller Plaza\nNew York NY 10112-0015\nUnited States of America (the)"
+                     "label" : "111 S Wacker Dr\nChicago IL 60606\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -170,14 +141,24 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 312 486 4145"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dttdomainadmin@deloitte.com"
                ]
             ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "456b29b8b2f010f1159bd118e9a3e9fcb29e385e3bf206199379a65e5baa7f7d",
@@ -186,48 +167,54 @@
             "algorithm" : "7"
          },
          {
-            "keyTag" : "41922",
+            "digest" : "fd71f550c4e968f52e85dfb13eb0da6068b0fa4970ade6cbf96300c872a90998",
             "algorithm" : "13",
-            "digestType" : "2",
-            "digest" : "fd71f550c4e968f52e85dfb13eb0da6068b0fa4970ade6cbf96300c872a90998"
+            "keyTag" : "41922",
+            "digestType" : "2"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/deloitte.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.deloitte"
-      }
-   ],
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-12-23"
       },
       {
-         "eventDate" : "2023-02-14",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-02-14"
       },
       {
-         "eventDate" : "2023-07-26T12:29:15",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "ldhName" : "deloitte",
+   "port43" : "whois.iana.org",
    "objectClassName" : "domain",
+   "handle" : "deloitte",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DELOITTE."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.deloitte"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "A.NIC.DELOITTE",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:13cc:0:0:0:1:80"
@@ -236,7 +223,6 @@
                "194.169.218.80"
             ]
          },
-         "ldhName" : "A.NIC.DELOITTE",
          "objectClassName" : "nameserver"
       },
       {
@@ -252,7 +238,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "C.NIC.DELOITTE",
          "ipAddresses" : {
             "v6" : [
@@ -261,44 +246,59 @@
             "v4" : [
                "212.18.248.80"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "D.NIC.DELOITTE",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.249.80"
-            ],
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:80"
+            ],
+            "v4" : [
+               "212.18.249.80"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/deloitte.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://nic.deloitte"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "status" : [
       "active"
-   ],
-   "handle" : "deloitte",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DELOITTE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.deloitte"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
    ],
    "rdapConformance" : [
       "rdap_level_0"

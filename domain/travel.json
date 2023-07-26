@@ -1,61 +1,11 @@
 {
+   "objectClassName" : "domain",
    "handle" : "travel",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TRAVEL."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.travel.travel/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "ldhName" : "travel",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/travel.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.travel.travel/",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "df8590752dcf2cc075f91d5a6178c38a7ba1dbbc0c2327b88ca37be4797be126",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "60277"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2005-07-27"
+         "eventDate" : "2005-07-27",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
@@ -63,30 +13,78 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:09"
+         "eventDate" : "2023-07-26T13:16:56"
       }
    ],
-   "notices" : [
+   "ldhName" : "travel",
+   "entities" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+         "objectClassName" : "entity",
+         "handle" : "travel-technical",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldtech@donuts.email"
+               ]
+            ]
          ]
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "entities" : [
-      {
-         "handle" : "travel-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -149,77 +147,13 @@
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "travel-administrative"
       },
       {
          "roles" : [
-            "technical"
+            "registrant"
          ],
-         "handle" : "travel-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldtech@donuts.email"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "travel-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -253,32 +187,58 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "travel-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "60277",
+            "digest" : "df8590752dcf2cc075f91d5a6178c38a7ba1dbbc0c2327b88ca37be4797be126"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/travel.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.travel.travel/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.28.8"
-            ],
             "v6" : [
                "2a01:8840:1e:0:0:0:0:8"
+            ],
+            "v4" : [
+               "65.22.28.8"
             ]
          },
          "ldhName" : "V0N0.NIC.TRAVEL"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.TRAVEL",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1f:0:0:0:0:8"
@@ -286,22 +246,23 @@
             "v4" : [
                "65.22.29.8"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.TRAVEL"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:8"
-            ],
             "v4" : [
                "65.22.30.8"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:8"
             ]
          },
-         "ldhName" : "V0N2.NIC.TRAVEL",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N2.NIC.TRAVEL"
       },
       {
-         "ldhName" : "V0N3.NIC.TRAVEL",
          "ipAddresses" : {
             "v4" : [
                "161.232.14.8"
@@ -310,9 +271,11 @@
                "2a01:8840:f8:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.TRAVEL"
       },
       {
+         "ldhName" : "V2N0.NIC.TRAVEL",
          "ipAddresses" : {
             "v4" : [
                "65.22.31.8"
@@ -321,20 +284,57 @@
                "2a01:8840:21:0:0:0:0:8"
             ]
          },
-         "ldhName" : "V2N0.NIC.TRAVEL",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:8"
-            ],
             "v4" : [
                "161.232.15.8"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:8"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "V2N1.NIC.TRAVEL"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TRAVEL."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.travel.travel/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ]
 }

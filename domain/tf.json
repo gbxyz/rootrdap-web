@@ -1,52 +1,40 @@
 {
-   "ldhName" : "tf",
+   "handle" : "tf",
+   "objectClassName" : "domain",
    "events" : [
       {
-         "eventDate" : "1997-08-26",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1997-08-26"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-10-04"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:02"
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "4110abe221396d1a9493c5dd67140890e14c73d7ac0fcd67f4b60979e9881283",
-            "digestType" : "2",
             "algorithm" : "13",
+            "digestType" : "2",
             "keyTag" : "12095"
          }
       ]
    },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tf.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.tf",
-         "title" : "URL for registration services"
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "tf",
    "entities" : [
       {
+         "handle" : "tf-administrative",
          "objectClassName" : "entity",
-         "handle" : "tf-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -55,6 +43,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin Contact"
                ],
                [
                   "org",
@@ -77,14 +71,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33 1 39 30 83 05"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33 1 39 30 83 01"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-admin@nic.fr"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "tf-technical",
          "roles" : [
             "technical"
          ],
@@ -146,16 +159,9 @@
                   "tld-tech@nic.fr"
                ]
             ]
-         ],
-         "handle" : "tf-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "tf-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -164,12 +170,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin Contact"
                ],
                [
                   "org",
@@ -192,30 +192,21 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33 1 39 30 83 05"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33 1 39 30 83 01"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-admin@nic.fr"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "tf-registrant",
+         "objectClassName" : "entity"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -235,49 +226,62 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/tf.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.tf",
+         "rel" : "related"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "D.NIC.FR",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "193.176.144.22"
+            ],
+            "v6" : [
+               "2a00:d78:0:102:193:176:144:22"
+            ]
+         },
+         "ldhName" : "E.EXT.NIC.FR"
+      },
+      {
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ],
+            "v4" : [
+               "194.146.106.46"
             ]
          }
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:d78:0:102:193:176:144:22"
-            ],
-            "v4" : [
-               "193.176.144.22"
-            ]
-         },
-         "ldhName" : "E.EXT.NIC.FR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.46"
-            ],
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ]
-         },
-         "ldhName" : "F.EXT.NIC.FR",
-         "objectClassName" : "nameserver"
-      },
-      {
          "objectClassName" : "nameserver",
-         "ldhName" : "G.EXT.NIC.FR",
          "ipAddresses" : {
             "v6" : [
                "2001:678:4c:0:0:0:0:1"
@@ -285,20 +289,16 @@
             "v4" : [
                "194.0.36.1"
             ]
-         }
+         },
+         "ldhName" : "G.EXT.NIC.FR"
       }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "tf",
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TF."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [

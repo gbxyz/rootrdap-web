@@ -1,19 +1,39 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
          },
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
@@ -25,18 +45,18 @@
                "195.253.65.11"
             ]
          },
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
             ]
          }
       },
@@ -53,70 +73,78 @@
          "ldhName" : "ANYCAST9.IRONDNS.NET"
       }
    ],
-   "ldhName" : "radio",
-   "notices" : [
+   "links" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/radio.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "https://www.nic.radio/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "remarks" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "European Broadcasting Union (EBU)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ancienne-Route 17A\nLe Grand-Saconnex\nGeneva CH-1218\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RADIO."
          ],
-         "handle" : "radio-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "title" : "Whois Service"
       },
       {
-         "objectClassName" : "entity",
+         "description" : [
+            "Registration information: https://www.nic.radio/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "radio",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2016-09-22",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-01-07",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "3863e4a0c36a262785c1703b5cff54cdbd56cd40bb414b45599848ce972e26b9",
+            "algorithm" : "10",
+            "keyTag" : "62727",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "entities" : [
+      {
          "handle" : "radio-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,12 +203,14 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "radio-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -239,78 +269,48 @@
                   "secretariat@corenic.org"
                ]
             ]
-         ],
-         "handle" : "radio-administrative",
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "radio-registrant",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/radio.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.nic.radio/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "3863e4a0c36a262785c1703b5cff54cdbd56cd40bb414b45599848ce972e26b9",
-            "keyTag" : "62727",
-            "digestType" : "2",
-            "algorithm" : "10"
-         }
-      ]
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-09-22"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-01-07"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:29"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RADIO."
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "European Broadcasting Union (EBU)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ancienne-Route 17A\nLe Grand-Saconnex\nGeneva CH-1218\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.nic.radio/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
-   "handle" : "radio"
+   "ldhName" : "radio"
 }

@@ -1,12 +1,99 @@
 {
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.UNO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.radix.website"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.UNO",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.21"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:21"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.21"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:21"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.UNO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.21"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:21"
+            ]
+         },
+         "ldhName" : "C.NIC.UNO"
+      },
+      {
+         "ldhName" : "D.NIC.UNO",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.21"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:21"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/uno.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.radix.website",
+         "title" : "URL for registration services"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -17,13 +104,55 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "ldhName" : "uno",
    "entities" : [
       {
          "roles" : [
-            "technical"
+            "registrant"
          ],
-         "handle" : "uno-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Radix FZC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Directiplex\nNext to Andheri Subway\nOld Nagardas Road, Andheri (East)\nMumbai Maharashtra 400069\nIndia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "uno-registrant"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -83,53 +212,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Radix FZC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Directiplex\nNext to Andheri Subway\nOld Nagardas Road, Andheri (East)\nMumbai Maharashtra 400069\nIndia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "uno-registrant"
+         "handle" : "uno-technical"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "uno-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -189,15 +280,17 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
    "secureDNS" : {
       "dsData" : [
          {
+            "digestType" : "1",
             "keyTag" : "57892",
             "algorithm" : "8",
-            "digestType" : "1",
             "digest" : "3b49fdc11daee5187a4170a5badf77a917bce481"
          },
          {
@@ -208,52 +301,36 @@
          },
          {
             "digest" : "e0d6f2ecbe3f28f3f59d4193198240f9966011e8",
-            "keyTag" : "64285",
+            "algorithm" : "8",
             "digestType" : "1",
+            "keyTag" : "64285"
+         },
+         {
+            "digest" : "3b4dd0febfbd51cb5f15db43ccfc832de0989445d6bb70c31a9b96f681cc6c77",
+            "digestType" : "2",
+            "keyTag" : "64285",
             "algorithm" : "8"
          },
          {
-            "digestType" : "2",
+            "digest" : "a6654717b1b97394de61bfe6d043459ba3a0112a",
             "algorithm" : "8",
-            "keyTag" : "64285",
-            "digest" : "3b4dd0febfbd51cb5f15db43ccfc832de0989445d6bb70c31a9b96f681cc6c77"
+            "keyTag" : "35737",
+            "digestType" : "1"
          },
          {
-            "keyTag" : "35737",
-            "digestType" : "1",
+            "digest" : "0dfccfc8e90286393539413d9f228fd96f7b08b8f15143020c07e32e3d254936",
             "algorithm" : "8",
-            "digest" : "a6654717b1b97394de61bfe6d043459ba3a0112a"
-         },
-         {
-            "keyTag" : "35737",
             "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "0dfccfc8e90286393539413d9f228fd96f7b08b8f15143020c07e32e3d254936"
+            "keyTag" : "35737"
          }
       ],
       "delegationSigned" : true
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/uno.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.radix.website",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2013-11-13"
+         "eventDate" : "2013-11-13",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
@@ -261,86 +338,9 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:12"
+         "eventDate" : "2023-07-26T13:16:56"
       }
-   ],
-   "ldhName" : "uno",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.21"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:21"
-            ]
-         },
-         "ldhName" : "A.NIC.UNO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:21"
-            ],
-            "v4" : [
-               "185.24.64.21"
-            ]
-         },
-         "ldhName" : "B.NIC.UNO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.UNO",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.21"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:21"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:21"
-            ],
-            "v4" : [
-               "212.18.249.21"
-            ]
-         },
-         "ldhName" : "D.NIC.UNO"
-      }
-   ],
-   "status" : [
-      "active"
    ],
    "handle" : "uno",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.UNO."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.radix.website"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "objectClassName" : "domain"
 }

@@ -1,54 +1,19 @@
 {
-   "ldhName" : "rich",
-   "events" : [
-      {
-         "eventDate" : "2014-01-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-01-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:33"
-      }
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digestType" : "2",
             "keyTag" : "12391",
+            "digestType" : "2",
+            "algorithm" : "8",
             "digest" : "aa344ed8e0615ff242ec66edea4160269d0ec1d36437965a8d1d1aba6a4d97d8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/rich.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.i-registry.com"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "rich-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -108,10 +73,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "handle" : "rich-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -171,13 +140,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "rich-technical",
          "objectClassName" : "entity"
       },
       {
          "handle" : "rich-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -213,8 +181,45 @@
          ],
          "roles" : [
             "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
+      }
+   ],
+   "ldhName" : "rich",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-16"
+      },
+      {
+         "eventDate" : "2022-01-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "rich",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.i-registry.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "notices" : [
@@ -235,25 +240,21 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
+         "ldhName" : "A0.NIC.RICH",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.136.17"
-            ],
             "v6" : [
                "2a01:8840:86:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.136.17"
             ]
-         },
-         "ldhName" : "A0.NIC.RICH",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.RICH",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:89:0:0:0:0:17"
@@ -261,10 +262,11 @@
             "v4" : [
                "65.22.139.17"
             ]
-         }
+         },
+         "ldhName" : "A2.NIC.RICH"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.RICH",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:87:0:0:0:0:17"
@@ -273,44 +275,42 @@
                "65.22.137.17"
             ]
          },
-         "ldhName" : "B0.NIC.RICH"
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.RICH",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.138.17"
-            ],
             "v6" : [
                "2a01:8840:88:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.138.17"
             ]
          },
-         "ldhName" : "C0.NIC.RICH"
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "rich",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/rich.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.i-registry.com",
+         "title" : "URL for registration services"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.i-registry.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
+   "status" : [
+      "active"
    ]
 }

@@ -1,57 +1,36 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "remarks" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.UNIREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "64.96.1.1"
-            ],
-            "v6" : [
-               "2620:57:4000:1:0:0:0:1"
-            ]
-         }
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CREDITUNION."
+         ]
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "64.96.2.1"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "NS2.UNIREGISTRY.INFO"
+         "title" : "Remark",
+         "description" : [
+            "Registration information:"
+         ]
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.217.2"
-            ],
-            "v6" : [
-               "2001:500:14:7002:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "NS5.UNIREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         "description" : [
+            "http://www.identity.coop/creditunion"
+         ],
+         "title" : "Remark"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:804:ad2:0:0:0:2"
-            ],
-            "v4" : [
-               "206.51.254.2"
-            ]
-         },
-         "ldhName" : "NS6.UNIREGISTRY.INFO",
-         "objectClassName" : "nameserver"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "ldhName" : "creditunion",
    "notices" : [
       {
          "title" : "About This Service",
@@ -62,17 +41,91 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/creditunion.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.1.1"
+            ],
+            "v6" : [
+               "2620:57:4000:1:0:0:0:1"
+            ]
+         },
+         "ldhName" : "NS1.UNIREGISTRY.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.2.1"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.UNIREGISTRY.INFO"
+      },
+      {
+         "ldhName" : "NS5.UNIREGISTRY.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:7002:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.217.2"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2620:171:804:ad2:0:0:0:2"
+            ],
+            "v4" : [
+               "206.51.254.2"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS6.UNIREGISTRY.INFO"
+      }
+   ],
+   "handle" : "creditunion",
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "2393ddf8501d382cb4a700c85abcc974a95aad110898b8becc4bdba60b5e50f1",
+            "algorithm" : "13",
+            "keyTag" : "11419",
+            "digestType" : "2"
+         }
+      ]
+   },
    "entities" : [
       {
          "handle" : "creditunion-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -126,13 +179,11 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "creditunion-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -184,11 +235,14 @@
                ]
             ]
          ],
-         "handle" : "creditunion-technical",
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "handle" : "creditunion-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -222,78 +276,24 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "creditunion-registrant",
          "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "creditunion",
    "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/creditunion.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "11419",
-            "digestType" : "2",
-            "algorithm" : "13",
-            "digest" : "2393ddf8501d382cb4a700c85abcc974a95aad110898b8becc4bdba60b5e50f1"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-10-15"
+         "eventDate" : "2015-10-15",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2023-06-07"
       },
       {
-         "eventDate" : "2023-07-26T12:29:06",
+         "eventDate" : "2023-07-26T13:16:48",
          "eventAction" : "last update of RDAP database"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CREDITUNION."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "description" : [
-            "http://www.identity.coop/creditunion"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "creditunion"
+   ]
 }

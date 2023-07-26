@@ -7,24 +7,56 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.swiss"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
-            "IANA"
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "title" : "Source"
+         "title" : "Comments"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/swiss.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.nic.swiss",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
-   "handle" : "swiss",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:4:0:0:0:0:c"
@@ -33,8 +65,7 @@
                "195.253.64.12"
             ]
          },
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "objectClassName" : "nameserver"
+         "ldhName" : "ANYCAST10.IRONDNS.NET"
       },
       {
          "objectClassName" : "nameserver",
@@ -61,7 +92,6 @@
          "ldhName" : "ANYCAST24.IRONDNS.NET"
       },
       {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.64.11"
@@ -70,10 +100,10 @@
                "2a01:5b0:4:0:0:0:0:b"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "G.NIC.SWISS",
          "ipAddresses" : {
             "v4" : [
@@ -82,7 +112,8 @@
             "v6" : [
                "2a01:5b0:4:0:0:0:0:9"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "NS15.RCODE0.NET",
@@ -98,6 +129,7 @@
       },
       {
          "ldhName" : "U.NIC.SWISS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:5:0:0:0:0:9"
@@ -105,21 +137,32 @@
             "v4" : [
                "195.253.65.9"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "b974351f3624a85d4304c09a005203d8cbd8ff0d790095413b19c31538f1ae31",
+            "digestType" : "2",
+            "keyTag" : "16056",
+            "algorithm" : "10"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "swiss",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "handle" : "swiss-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -178,50 +221,11 @@
                   "domainnames@bakom.admin.ch"
                ]
             ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
          ],
-         "handle" : "swiss-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Swiss Confederation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Federal Office of Communications (OFCOM)\nRue de l'Avenir 44\nP.O Box\nBiel/Bienne BE CH-2501\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
+         "handle" : "swiss-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -284,28 +288,51 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
          "handle" : "swiss-technical"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Swiss Confederation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Federal Office of Communications (OFCOM)\nRue de l'Avenir 44\nP.O Box\nBiel/Bienne BE CH-2501\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "swiss-registrant",
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "events" : [
       {
          "eventDate" : "2015-04-16",
@@ -316,37 +343,10 @@
          "eventDate" : "2022-01-07"
       },
       {
-         "eventDate" : "2023-07-26T12:31:58",
+         "eventDate" : "2023-07-26T13:16:55",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b974351f3624a85d4304c09a005203d8cbd8ff0d790095413b19c31538f1ae31",
-            "digestType" : "2",
-            "algorithm" : "10",
-            "keyTag" : "16056"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/swiss.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.swiss",
-         "rel" : "related"
-      }
-   ],
-   "ldhName" : "swiss"
+   "handle" : "swiss",
+   "objectClassName" : "domain"
 }

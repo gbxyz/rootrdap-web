@@ -2,9 +2,50 @@
    "status" : [
       "active"
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FAIRWINDS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information:"
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://www.fairwindspartners.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/fairwinds.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.173.30"
@@ -13,10 +54,9 @@
                "2001:500:120:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC1.NSTLD.COM"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -25,40 +65,60 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
             "v6" : [
                "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
             ]
          }
       },
       {
+         "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
             "v6" : [
                "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
             ]
          },
-         "ldhName" : "AC4.NSTLD.COM",
          "objectClassName" : "nameserver"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "objectClassName" : "domain",
+   "handle" : "fairwinds",
    "ldhName" : "fairwinds",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "fairwinds-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -118,16 +178,15 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "fairwinds-administrative"
       },
       {
+         "handle" : "fairwinds-technical",
          "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "fairwinds-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -189,9 +248,8 @@
          ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "fairwinds-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -225,93 +283,35 @@
                ]
             ]
          ],
-         "handle" : "fairwinds-registrant",
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "4b1c638c7fc58d11bf54b976ce4fba1cdb935f993f6b50194093b2479bff8504",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "8913"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-10-29"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:37"
+         "eventDate" : "2023-07-26T13:16:49"
       }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "4b1c638c7fc58d11bf54b976ce4fba1cdb935f993f6b50194093b2479bff8504",
-            "keyTag" : "8913",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/fairwinds.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FAIRWINDS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.fairwindspartners.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "fairwinds"
+   ]
 }

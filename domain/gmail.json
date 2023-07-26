@@ -1,6 +1,74 @@
 {
+   "objectClassName" : "domain",
+   "handle" : "gmail",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-23"
+      },
+      {
+         "eventDate" : "2020-04-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "bffd3d45856e1cb03607f334362ce795e0c8f9f75b7010357699c72ff2dce648",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "39661"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "gmail",
    "entities" : [
+      {
+         "objectClassName" : "entity",
+         "handle" : "gmail-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
       {
          "roles" : [
             "technical"
@@ -64,51 +132,15 @@
                ]
             ]
          ],
-         "handle" : "gmail-technical",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "gmail-technical"
       },
       {
+         "handle" : "gmail-administrative",
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "gmail-registrant",
          "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -167,12 +199,14 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "handle" : "gmail-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -184,85 +218,42 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-08-23"
-      },
-      {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:04",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/gmail.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.registry.google",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "39661",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "bffd3d45856e1cb03607f334362ce795e0c8f9f75b7010357699c72ff2dce648"
-         }
-      ]
-   },
-   "ldhName" : "gmail",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
-            "v4" : [
-               "216.239.32.105"
-            ],
             "v6" : [
                "2001:4860:4802:32:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.32.105"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
-            "v4" : [
-               "216.239.34.105"
-            ],
             "v6" : [
                "2001:4860:4802:34:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.34.105"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.36.105"
@@ -273,56 +264,65 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "216.239.38.105"
-            ],
             "v6" : [
                "2001:4860:4802:38:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.38.105"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
       },
       {
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
             "v4" : [
                "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
             ]
-         },
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "handle" : "gmail",
-   "remarks" : [
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ],
-         "title" : "Whois Service"
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/gmail.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://www.registry.google",
+         "rel" : "related"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
          "description" : [
-            "Registration information: https://www.registry.google"
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
          ]
       },
       {
          "description" : [
-            "IANA"
+            "Registration information: https://www.registry.google"
          ],
-         "title" : "Source"
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

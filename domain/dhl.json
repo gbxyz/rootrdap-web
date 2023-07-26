@@ -1,25 +1,51 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "objectClassName" : "domain",
+   "handle" : "dhl",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Deutsche Post AG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Charles-de-Gaulle-Strasse 20\nBonn 53113\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "objectClassName" : "entity",
+         "handle" : "dhl-registrant"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,12 +105,12 @@
                ]
             ]
          ],
-         "handle" : "dhl-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "dhl-administrative"
       },
       {
+         "handle" : "dhl-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -146,163 +172,60 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "dhl-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "dhl-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Deutsche Post AG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Charles-de-Gaulle-Strasse 20\nBonn 53113\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "dhl",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "e2fbee1cc8da9ce0bd4d74a688491ed1315d0568",
             "digestType" : "1",
-            "algorithm" : "7",
             "keyTag" : "33051",
-            "digest" : "e2fbee1cc8da9ce0bd4d74a688491ed1315d0568"
-         },
-         {
-            "digest" : "8f83e4018fb981e5f7d18df96549ec57b31a143c6f8a6d010038108525425b7e",
-            "keyTag" : "33051",
-            "digestType" : "2",
             "algorithm" : "7"
          },
          {
+            "keyTag" : "33051",
             "digestType" : "2",
             "algorithm" : "7",
+            "digest" : "8f83e4018fb981e5f7d18df96549ec57b31a143c6f8a6d010038108525425b7e"
+         },
+         {
             "keyTag" : "31860",
+            "digestType" : "2",
+            "algorithm" : "7",
             "digest" : "bcd5350bd4181a15de2fe9fb448aae594da19bfbfce42afc9d63693dbd45a4b9"
          },
          {
             "digest" : "89fe558d6ea8dcaf797b2235dc3c246108a2b74e",
             "keyTag" : "31860",
-            "algorithm" : "7",
-            "digestType" : "1"
+            "digestType" : "1",
+            "algorithm" : "7"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/dhl.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
    "events" : [
       {
-         "eventDate" : "2016-05-26",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-05-26"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
+         "eventDate" : "2020-04-20",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:17"
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "ldhName" : "dhl",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.82"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:82"
-            ]
-         },
-         "ldhName" : "A.NIC.DHL",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.NIC.DHL",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.82"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.NIC.DHL",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:82"
-            ],
-            "v4" : [
-               "212.18.248.82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.82"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:82"
-            ]
-         },
-         "ldhName" : "D.NIC.DHL",
-         "objectClassName" : "nameserver"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "status" : [
       "active"
    ],
-   "handle" : "dhl",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -323,7 +246,84 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/dhl.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:82"
+            ],
+            "v4" : [
+               "194.169.218.82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.DHL"
+      },
+      {
+         "ldhName" : "B.NIC.DHL",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:82"
+            ],
+            "v4" : [
+               "185.24.64.82"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C.NIC.DHL",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:82"
+            ],
+            "v4" : [
+               "212.18.248.82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:82"
+            ],
+            "v4" : [
+               "212.18.249.82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.DHL"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ]
 }

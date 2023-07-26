@@ -2,7 +2,9 @@
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
          "ldhName" : "A.LACTLD.ORG",
@@ -17,16 +19,16 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "200.12.199.1"
-            ],
             "v6" : [
                "2801:0:60:0:0:0:0:1"
+            ],
+            "v4" : [
+               "200.12.199.1"
             ]
          },
-         "ldhName" : "N2.NIC.EC",
-         "objectClassName" : "nameserver"
+         "ldhName" : "N2.NIC.EC"
       },
       {
          "ipAddresses" : {
@@ -37,37 +39,36 @@
                "2001:500:14:6039:ad:0:0:1"
             ]
          },
-         "ldhName" : "N3.DNS.EC",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "N3.DNS.EC"
       },
       {
          "ldhName" : "NS1.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "185.38.108.108"
-            ],
             "v6" : [
                "2a00:fea0:dead:0:0:0:0:beef"
+            ],
+            "v4" : [
+               "185.38.108.108"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "185.28.194.194"
-            ],
-            "v6" : []
-         }
+            ]
+         },
+         "ldhName" : "NS2.ANYCASTDNS.CZ"
       }
    ],
-   "ldhName" : "ec",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/ec.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
@@ -76,15 +77,55 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.nic.ec"
       }
    ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.EC."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.ec"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "ec",
+   "objectClassName" : "domain",
    "events" : [
       {
-         "eventDate" : "1991-02-01",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1991-02-01"
       },
       {
          "eventAction" : "last changed",
@@ -92,31 +133,13 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:27"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventDate" : "2023-07-26T13:16:49"
       }
    ],
    "port43" : "whois.iana.org",
+   "ldhName" : "ec",
    "entities" : [
       {
-         "handle" : "ec-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -171,9 +194,13 @@
          "roles" : [
             "administrative"
          ],
+         "handle" : "ec-administrative",
          "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -226,13 +253,9 @@
             ]
          ],
          "handle" : "ec-technical",
-         "roles" : [
-            "technical"
-         ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -266,34 +289,11 @@
                ]
             ]
          ],
-         "handle" : "ec-registrant",
          "roles" : [
             "registrant"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.EC."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.ec"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
          ],
-         "title" : "Source"
+         "handle" : "ec-registrant",
+         "objectClassName" : "entity"
       }
-   ],
-   "handle" : "ec"
+   ]
 }

@@ -1,74 +1,37 @@
 {
+   "objectClassName" : "domain",
    "handle" : "safe",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SAFE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "ldhName" : "safe",
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:31:37",
+         "eventDate" : "2023-07-26T13:16:54",
          "eventAction" : "last update of RDAP database"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "25204",
-            "digestType" : "2",
+            "digest" : "e7d00d17f0781fe00111cda8875099bb36432f10c3dfefa6e0521ad2090690d1",
             "algorithm" : "8",
-            "digest" : "e7d00d17f0781fe00111cda8875099bb36432f10c3dfefa6e0521ad2090690d1"
+            "digestType" : "2",
+            "keyTag" : "25204"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/safe.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.amazonregistry.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -128,14 +91,13 @@
                ]
             ]
          ],
-         "handle" : "safe-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "safe-administrative"
       },
       {
-         "handle" : "safe-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -187,12 +149,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "safe-technical"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "safe-registrant",
          "roles" : [
             "registrant"
          ],
@@ -228,10 +190,15 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "safe-registrant",
-         "objectClassName" : "entity"
+         ]
       }
+   ],
+   "ldhName" : "safe",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -243,31 +210,46 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/safe.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://www.amazonregistry.com",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:402:0:0:0:0:78"
-            ],
             "v4" : [
                "213.248.218.78"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:78"
             ]
          },
-         "ldhName" : "DNS1.NIC.SAFE",
-         "objectClassName" : "nameserver"
+         "ldhName" : "DNS1.NIC.SAFE"
       },
       {
+         "ldhName" : "DNS2.NIC.SAFE",
          "ipAddresses" : {
             "v4" : [
                "103.49.82.78"
@@ -276,31 +258,30 @@
                "2401:fd80:402:0:0:0:0:78"
             ]
          },
-         "ldhName" : "DNS2.NIC.SAFE",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "DNS3.NIC.SAFE",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:78"
-            ],
             "v4" : [
                "213.248.222.78"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:78"
             ]
-         },
-         "ldhName" : "DNS3.NIC.SAFE"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:78"
-            ],
             "v4" : [
                "43.230.50.78"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:78"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "DNS4.NIC.SAFE"
       },
       {
@@ -312,12 +293,10 @@
                "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSA.NIC.SAFE",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSA.NIC.SAFE"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.SAFE",
          "ipAddresses" : {
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
@@ -325,23 +304,23 @@
             "v4" : [
                "156.154.101.3"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSB.NIC.SAFE"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
             "v6" : [
                "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
             ]
          },
          "ldhName" : "DNSC.NIC.SAFE"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.SAFE",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1010:0:0:0:0:3"
@@ -349,8 +328,29 @@
             "v4" : [
                "156.154.103.3"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSD.NIC.SAFE"
       }
    ],
-   "objectClassName" : "domain"
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SAFE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

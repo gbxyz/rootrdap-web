@@ -1,65 +1,7 @@
 {
    "ldhName" : "bv",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "13",
-            "keyTag" : "33800",
-            "digest" : "5fa7fb1c36c810cbbeea4557ce1b96175fb14b5e5f400a9d7aa36ba6b60fbd0e"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/bv.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1997-08-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-01-14",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -111,11 +53,15 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "handle" : "bv-administrative",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "bv-technical",
          "roles" : [
             "technical"
          ],
@@ -169,15 +115,12 @@
                   "jarle@norid.no"
                ]
             ]
-         ],
-         "handle" : "bv-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "bv-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -210,98 +153,45 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "handle" : "bv-registrant",
+         "objectClassName" : "entity"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "33800",
+            "algorithm" : "13",
+            "digest" : "5fa7fb1c36c810cbbeea4557ce1b96175fb14b5e5f400a9d7aa36ba6b60fbd0e"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "1997-08-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-14"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "128.39.2.22"
-            ],
-            "v6" : [
-               "2001:700:0:102:0:0:0:aa53"
-            ]
-         },
-         "ldhName" : "NAC.NO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NN.UNINETT.NO",
-         "ipAddresses" : {
-            "v4" : [
-               "158.38.0.181"
-            ],
-            "v6" : [
-               "2001:700:0:503:0:0:aa:5302"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "SERVER.NORDU.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:948:4:2:0:0:0:19"
-            ],
-            "v4" : [
-               "193.10.252.19"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:700:0:412f:0:0:0:40"
-            ],
-            "v4" : [
-               "128.39.8.40"
-            ]
-         },
-         "ldhName" : "X.NIC.NO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:8c0:8200:1:0:0:0:2"
-            ],
-            "v4" : [
-               "193.75.4.22"
-            ]
-         },
-         "ldhName" : "Y.NIC.NO"
-      },
-      {
-         "ldhName" : "Z.NIC.NO",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:700:0:52d:158:38:8:133"
-            ],
-            "v4" : [
-               "158.38.8.133"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "handle" : "bv",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -321,5 +211,115 @@
             "IANA"
          ]
       }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bv.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NAC.NO",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:700:0:102:0:0:0:aa53"
+            ],
+            "v4" : [
+               "128.39.2.22"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:700:0:503:0:0:aa:5302"
+            ],
+            "v4" : [
+               "158.38.0.181"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NN.UNINETT.NO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "193.10.252.19"
+            ],
+            "v6" : [
+               "2001:948:4:2:0:0:0:19"
+            ]
+         },
+         "ldhName" : "SERVER.NORDU.NET"
+      },
+      {
+         "ldhName" : "X.NIC.NO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:700:0:412f:0:0:0:40"
+            ],
+            "v4" : [
+               "128.39.8.40"
+            ]
+         }
+      },
+      {
+         "ldhName" : "Y.NIC.NO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "193.75.4.22"
+            ],
+            "v6" : [
+               "2001:8c0:8200:1:0:0:0:2"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:700:0:52d:158:38:8:133"
+            ],
+            "v4" : [
+               "158.38.8.133"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "Z.NIC.NO"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

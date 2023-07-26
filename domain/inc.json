@@ -1,89 +1,77 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.INC."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://get.inc"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "inc",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:137"
-            ],
-            "v4" : [
-               "194.169.218.137"
-            ]
-         },
-         "ldhName" : "A.NIC.INC",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.INC",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:137"
-            ],
-            "v4" : [
-               "185.24.64.137"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:137"
-            ],
-            "v4" : [
-               "212.18.248.137"
-            ]
-         },
-         "ldhName" : "C.NIC.INC",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.INC",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:137"
-            ],
-            "v4" : [
-               "212.18.249.137"
-            ]
-         }
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
+   "handle" : "inc",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "6eaebc6ddc7e32668027d425fe37084d6cb2d13d",
+            "keyTag" : "13636",
+            "digestType" : "1",
+            "algorithm" : "8"
+         },
+         {
+            "digest" : "1f6e64cbe2f9ff7a4d33195d8ee394e09e58cb89477523a1b5b1113b0cd6c3f5",
+            "digestType" : "2",
+            "keyTag" : "13636",
+            "algorithm" : "8"
+         },
+         {
+            "algorithm" : "8",
+            "keyTag" : "18077",
+            "digestType" : "2",
+            "digest" : "42f81b888d9b44d561060b7dc32796807f2a99f2d151b3837019aba31c8966a0"
+         },
+         {
+            "keyTag" : "18077",
+            "digestType" : "1",
+            "algorithm" : "8",
+            "digest" : "b1d522ed8feeeaf6ead2504c9460101cfb98a195"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Intercap Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "4th Floor, Harbour Place, 103 South Church Street\nPO Box 10240\nGrand Cayman KY1-1002\nCayman Islands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "inc-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -135,50 +123,13 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
          "handle" : "inc-administrative"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Intercap Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "4th Floor, Harbour Place, 103 South Church Street\nPO Box 10240\nGrand Cayman KY1-1002\nCayman Islands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "inc-registrant"
-      },
-      {
-         "handle" : "inc-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -241,86 +192,135 @@
          "roles" : [
             "technical"
          ],
+         "handle" : "inc-technical",
          "objectClassName" : "entity"
+      }
+   ],
+   "ldhName" : "inc",
+   "events" : [
+      {
+         "eventDate" : "2018-07-03",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-28"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.INC."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://get.inc"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2018-07-03"
-      },
-      {
-         "eventDate" : "2022-10-28",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:24"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "1",
-            "algorithm" : "8",
-            "keyTag" : "13636",
-            "digest" : "6eaebc6ddc7e32668027d425fe37084d6cb2d13d"
-         },
-         {
-            "digest" : "1f6e64cbe2f9ff7a4d33195d8ee394e09e58cb89477523a1b5b1113b0cd6c3f5",
-            "keyTag" : "13636",
-            "algorithm" : "8",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "42f81b888d9b44d561060b7dc32796807f2a99f2d151b3837019aba31c8966a0",
-            "keyTag" : "18077",
-            "algorithm" : "8",
-            "digestType" : "2"
-         },
-         {
-            "digestType" : "1",
-            "algorithm" : "8",
-            "keyTag" : "18077",
-            "digest" : "b1d522ed8feeeaf6ead2504c9460101cfb98a195"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/inc.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/inc.html",
          "rel" : "related"
       },
       {
+         "title" : "About RDAP",
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "href" : "https://about.rdap.org"
       },
       {
          "title" : "URL for registration services",
-         "href" : "https://get.inc",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://get.inc"
       }
    ],
-   "ldhName" : "inc"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:137"
+            ],
+            "v4" : [
+               "194.169.218.137"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.INC"
+      },
+      {
+         "ldhName" : "B.NIC.INC",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.137"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:137"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.137"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:137"
+            ]
+         },
+         "ldhName" : "C.NIC.INC"
+      },
+      {
+         "ldhName" : "D.NIC.INC",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:137"
+            ],
+            "v4" : [
+               "212.18.249.137"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ]
 }

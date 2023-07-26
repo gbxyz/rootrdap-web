@@ -1,67 +1,21 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:42:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.68.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.CBS"
+         "eventDate" : "2016-07-21",
+         "eventAction" : "registration"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.71.9"
-            ],
-            "v6" : [
-               "2a01:8840:45:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A2.NIC.CBS",
-         "objectClassName" : "nameserver"
+         "eventDate" : "2020-10-15",
+         "eventAction" : "last changed"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.69.9"
-            ],
-            "v6" : [
-               "2a01:8840:43:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "B0.NIC.CBS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.CBS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.70.9"
-            ],
-            "v6" : [
-               "2a01:8840:44:0:0:0:0:9"
-            ]
-         }
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "cbs",
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "cbs-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -72,15 +26,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Christopher Niemi"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "CBS Domains Inc."
+                  "MarkMonitor Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "51 West 52nd Street\nNew York NY 10019\nUnited States of America (the)"
+                     "label" : "3540 East Longwing Lane, Suite 300\nMeridian ID 83646\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -92,12 +52,36 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "1-208-389-5740"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "1-208-389-5771"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotcbs@markmonitor.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "cbs-administrative"
       },
       {
-         "handle" : "cbs-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -160,12 +144,12 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "cbs-technical"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -177,21 +161,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Christopher Niemi"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "MarkMonitor Inc."
+                  "CBS Domains Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "3540 East Longwing Lane, Suite 300\nMeridian ID 83646\nUnited States of America (the)"
+                     "label" : "51 West 52nd Street\nNew York NY 10019\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -203,30 +181,92 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "1-208-389-5740"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "1-208-389-5771"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotcbs@markmonitor.com"
                ]
             ]
          ],
-         "handle" : "cbs-administrative"
+         "handle" : "cbs-registrant",
+         "objectClassName" : "entity"
+      }
+   ],
+   "ldhName" : "cbs",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "30409",
+            "algorithm" : "8",
+            "digest" : "ea9d4289fab50bab2a4f682a1f450a0d5b7802aac66b478703be109fbd489959"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "objectClassName" : "domain",
+   "handle" : "cbs",
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.CBS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.68.9"
+            ],
+            "v6" : [
+               "2a01:8840:42:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.CBS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:45:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.71.9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B0.NIC.CBS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:43:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.69.9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C0.NIC.CBS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:44:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.70.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/cbs.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.cbs.com/",
+         "rel" : "related"
       }
    ],
    "notices" : [
@@ -239,65 +279,20 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-15"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:44"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/cbs.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.cbs.com/"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "ea9d4289fab50bab2a4f682a1f450a0d5b7802aac66b478703be109fbd489959",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "30409"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -312,5 +307,10 @@
          "title" : "Source"
       }
    ],
-   "handle" : "cbs"
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

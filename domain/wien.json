@@ -1,13 +1,10 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.WIEN."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -16,29 +13,42 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "handle" : "wien",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "DNS.RYCE-RSP.COM",
          "ipAddresses" : {
-            "v4" : [
-               "194.0.11.114"
-            ],
             "v6" : [
                "2001:678:e:114:0:0:0:53"
+            ],
+            "v4" : [
+               "194.0.11.114"
             ]
-         }
+         },
+         "ldhName" : "DNS.RYCE-RSP.COM"
       },
       {
          "ldhName" : "NS1.DNS.BUSINESS",
@@ -53,7 +63,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a0c:8f40:0:701:0:0:0:153"
@@ -62,140 +71,48 @@
                "193.56.204.153"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS1.RYCE-RSP.COM"
       }
    ],
-   "ldhName" : "wien",
-   "notices" : [
+   "links" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/wien.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://www.nic.wien",
+         "title" : "URL for registration services"
       }
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "e2aa9ba196c7d4f10a8320a710fc24ad4bc86ce362239c307af3b875d5cf44c7",
+            "keyTag" : "57889",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Technical Operations"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "RyCE GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+431981160"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+43198116111"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tech@dns.business"
-               ]
-            ]
-         ],
-         "handle" : "wien-technical"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "punkt.wien GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "wien-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "wien-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -255,38 +172,118 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Technical Operations"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "RyCE GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+431981160"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+43198116111"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tech@dns.business"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "wien-technical"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "punkt.wien GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "wien-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/wien.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.nic.wien",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "57889",
-            "digest" : "e2aa9ba196c7d4f10a8320a710fc24ad4bc86ce362239c307af3b875d5cf44c7"
-         }
-      ]
-   },
+   "ldhName" : "wien",
    "events" : [
       {
          "eventDate" : "2013-12-19",
@@ -297,8 +294,11 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:32:22",
+         "eventDate" : "2023-07-26T13:16:56",
          "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "wien"
 }

@@ -1,74 +1,11 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "202.3.225.10"
-            ]
-         },
-         "ldhName" : "NS1.MANA.PF",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.MANA.PF",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "202.3.225.20"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "ldhName" : "pf",
-   "port43" : "whois.iana.org",
+   "handle" : "pf",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "handle" : "pf-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Gouvernement de la Polynésie française"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Avenue POUVANAA A OOPA\nPapeete Tahiti 98714\nFrench Polynesia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
          "vcardArray" : [
             "vcard",
             [
@@ -129,13 +66,9 @@
             ]
          ],
          "handle" : "pf-technical",
-         "roles" : [
-            "technical"
-         ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -198,27 +131,51 @@
                ]
             ]
          ],
-         "handle" : "pf-administrative"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "handle" : "pf-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "pf-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Gouvernement de la Polynésie française"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Avenue POUVANAA A OOPA\nPapeete Tahiti 98714\nFrench Polynesia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "title" : "Comments"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
+   "ldhName" : "pf",
    "events" : [
       {
          "eventDate" : "1996-03-19",
@@ -229,21 +186,13 @@
          "eventDate" : "2020-10-27"
       },
       {
-         "eventDate" : "2023-07-26T12:31:18",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pf.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      }
+   "port43" : "whois.iana.org",
+   "status" : [
+      "active"
    ],
    "rdapConformance" : [
       "rdap_level_0"
@@ -268,5 +217,56 @@
          "title" : "Source"
       }
    ],
-   "handle" : "pf"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/pf.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NS1.MANA.PF",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "202.3.225.10"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "NS2.MANA.PF",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "202.3.225.20"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ]
 }

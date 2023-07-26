@@ -1,93 +1,40 @@
 {
+   "handle" : "mn",
+   "objectClassName" : "domain",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1995-03-02"
+         "eventDate" : "1995-03-02",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-06-15"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:57"
+         "eventDate" : "2023-07-26T13:16:52",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mn.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.mn",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "c069cd3e147e1f008fd2394a7112509c96d26094f876e48e56192779e1c47ba6",
-            "keyTag" : "22489",
+            "algorithm" : "8",
             "digestType" : "2",
-            "algorithm" : "8"
+            "keyTag" : "22489",
+            "digest" : "c069cd3e147e1f008fd2394a7112509c96d26094f876e48e56192779e1c47ba6"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "mn",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Datacom Co., Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Galaxy Tower Office Bldg, #5007,\nMahatma Gandhi Street,\nKhan-Uul district\nUlaanbaatar 17010\nMongolia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "mn-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
+         "handle" : "mn-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "mn-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -146,11 +93,11 @@
                   "enkhbold@datacom.mn"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "mn-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -212,9 +159,54 @@
          ],
          "roles" : [
             "administrative"
+         ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Datacom Co., Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Galaxy Tower Office Bldg, #5007,\nMahatma Gandhi Street,\nKhan-Uul district\nUlaanbaatar 17010\nMongolia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "mn-registrant"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -226,18 +218,16 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
-   "ldhName" : "mn",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO",
          "ipAddresses" : {
             "v4" : [
@@ -246,21 +236,24 @@
             "v6" : [
                "2001:500:25:0:0:0:0:1"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
          "ipAddresses" : {
-            "v4" : [
-               "199.249.116.1"
-            ],
             "v6" : [
                "2001:500:44:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.249.116.1"
             ]
-         }
+         },
+         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO"
       },
       {
+         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.254.60.1"
@@ -268,12 +261,9 @@
             "v6" : [
                "2001:500:26:0:0:0:0:1"
             ]
-         },
-         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG",
          "ipAddresses" : {
             "v6" : [
                "2001:500:4c:0:0:0:0:1"
@@ -282,41 +272,42 @@
                "199.249.124.1"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG"
       },
       {
          "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:27:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.61.1"
+            ],
+            "v6" : [
+               "2001:500:27:0:0:0:0:1"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:28:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.62.1"
+            ],
+            "v6" : [
+               "2001:500:28:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG"
       },
       {
+         "ldhName" : "NS1.MAGIC.MN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "202.131.0.10"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "NS1.MAGIC.MN",
-         "objectClassName" : "nameserver"
+            ]
+         }
       },
       {
          "ldhName" : "NS2.MAGIC.MN",
@@ -330,30 +321,42 @@
       },
       {
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "202.131.224.80"
-            ],
-            "v6" : []
+            ]
          },
-         "ldhName" : "NS3.MAGIC.MN",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.MAGIC.MN"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS4.MAGIC.MN",
          "ipAddresses" : {
             "v4" : [
                "218.100.84.26"
             ],
             "v6" : []
-         }
+         },
+         "ldhName" : "NS4.MAGIC.MN"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/mn.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://www.nic.mn",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
-   "handle" : "mn",
    "remarks" : [
       {
          "description" : [
@@ -368,13 +371,10 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

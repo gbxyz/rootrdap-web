@@ -1,127 +1,73 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LGBT."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
    "handle" : "lgbt",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.32.1"
-            ]
-         },
-         "ldhName" : "A0.NIC.LGBT"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.LGBT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.35.1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.LGBT",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.33.1"
-            ],
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C0.NIC.LGBT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.34.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "ldhName" : "lgbt",
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-06-26",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-06-26"
       },
       {
-         "eventDate" : "2021-12-02",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-12-02"
       },
       {
-         "eventDate" : "2023-07-26T12:30:42",
+         "eventDate" : "2023-07-26T13:16:52",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lgbt.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://donuts.domains/",
-         "rel" : "related"
-      }
-   ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "58fc6791daa780f1b589fb72ce7f1e43f39dcd185df0e57ae60178e81fa174b6",
+            "keyTag" : "16912",
             "digestType" : "2",
             "algorithm" : "8",
-            "keyTag" : "16912"
+            "digest" : "58fc6791daa780f1b589fb72ce7f1e43f39dcd185df0e57ae60178e81fa174b6"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
    "entities" : [
+      {
+         "handle" : "lgbt-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "roles" : [
             "technical"
@@ -185,51 +131,12 @@
                ]
             ]
          ],
-         "handle" : "lgbt-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "lgbt-registrant",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "lgbt-technical"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "lgbt-administrative",
          "roles" : [
             "administrative"
          ],
@@ -291,18 +198,24 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "handle" : "lgbt-administrative"
+         ]
       }
+   ],
+   "ldhName" : "lgbt",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -311,6 +224,93 @@
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
          ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lgbt.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.32.1"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A0.NIC.LGBT"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.35.1"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.LGBT"
+      },
+      {
+         "ldhName" : "B0.NIC.LGBT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.33.1"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C0.NIC.LGBT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.34.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LGBT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

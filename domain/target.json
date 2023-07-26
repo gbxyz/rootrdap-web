@@ -1,147 +1,22 @@
 {
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A.NIC.TARGET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.TARGET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "ldhName" : "C.NIC.TARGET"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.TARGET",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.158"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:9e"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:9e"
-            ],
-            "v4" : [
-               "156.154.145.158"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.TARGET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.TARGET",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.158"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:9e"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "target",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "0168137c6e180963663c74f30e4b581847c1d17e674b59aa1cb2c76d671d5ed3",
-            "keyTag" : "64351",
             "algorithm" : "8",
+            "keyTag" : "64351",
             "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/target.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.target.com",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:59",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "target-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -150,6 +25,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Administrative Contact"
                ],
                [
                   "org",
@@ -172,17 +53,31 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 612 696-3400"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 612 696-3399"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domainname.admin@target.com"
                ]
             ]
-         ],
-         "handle" : "target-registrant",
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "target-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -244,13 +139,14 @@
          ],
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "target-technical"
       },
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "target-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -259,12 +155,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Administrative Contact"
                ],
                [
                   "org",
@@ -287,35 +177,31 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 612 696-3400"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 612 696-3399"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domainname.admin@target.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "target-registrant"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "ldhName" : "target",
+   "events" : [
+      {
+         "eventDate" : "2016-07-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:55"
+      }
    ],
+   "port43" : "whois.iana.org",
+   "handle" : "target",
+   "objectClassName" : "domain",
    "remarks" : [
       {
          "description" : [
@@ -336,5 +222,119 @@
          ]
       }
    ],
-   "handle" : "target"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.TARGET"
+      },
+      {
+         "ldhName" : "B.NIC.TARGET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C.NIC.TARGET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.TARGET",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.158"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:9e"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:9e"
+            ],
+            "v4" : [
+               "156.154.145.158"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.TARGET"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.TARGET",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.158"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:9e"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/target.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.target.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

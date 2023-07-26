@@ -1,7 +1,89 @@
 {
-   "handle" : "hdfcbank",
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.HDFCBANK",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:ae:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.180.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b1:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.183.33"
+            ]
+         },
+         "ldhName" : "A2.NIC.HDFCBANK"
+      },
+      {
+         "ldhName" : "B0.NIC.HDFCBANK",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:af:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.181.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b0:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.182.33"
+            ]
+         },
+         "ldhName" : "C0.NIC.HDFCBANK"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/hdfcbank.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
@@ -17,54 +99,33 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "ldhName" : "hdfcbank",
+   "handle" : "hdfcbank",
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-02-05"
+         "eventDate" : "2016-02-05",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2023-05-03"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:15"
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b8f2ca908cc4e3526a25ad74da7f2d9962b4a1692805ae8f5c0cef5542745029",
-            "keyTag" : "63937",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/hdfcbank.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "hdfcbank-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -73,6 +134,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Deputy Vice President"
                ],
                [
                   "org",
@@ -95,19 +162,29 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+91 223 395 9000"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "agnel.dsouza@hdfcbank.com"
                ]
             ]
          ],
-         "handle" : "hdfcbank-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "hdfcbank-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -167,12 +244,14 @@
                ]
             ]
          ],
+         "handle" : "hdfcbank-technical",
          "objectClassName" : "entity"
       },
       {
+         "handle" : "hdfcbank-registrant",
          "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -182,12 +261,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Deputy Vice President"
                ],
                [
                   "org",
@@ -210,94 +283,21 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+91 223 395 9000"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "agnel.dsouza@hdfcbank.com"
                ]
             ]
-         ],
-         "handle" : "hdfcbank-administrative"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.HDFCBANK",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.180.33"
-            ],
-            "v6" : [
-               "2a01:8840:ae:0:0:0:0:33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "A2.NIC.HDFCBANK",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b1:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.183.33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:af:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.181.33"
-            ]
-         },
-         "ldhName" : "B0.NIC.HDFCBANK"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b0:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.182.33"
-            ]
-         },
-         "ldhName" : "C0.NIC.HDFCBANK",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain"
+   "ldhName" : "hdfcbank",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "63937",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "b8f2ca908cc4e3526a25ad74da7f2d9962b4a1692805ae8f5c0cef5542745029"
+         }
+      ]
+   }
 }

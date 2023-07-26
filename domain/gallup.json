@@ -1,9 +1,58 @@
 {
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "ae9bba11562a260aaa062e2eb9881443044fdb8998b6a81c25d34d0d6bf49cb5",
+            "algorithm" : "8",
+            "keyTag" : "34159",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "gallup",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Gallup, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1001 Gallup Drive\nOmaha NE 68102\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity",
-         "handle" : "gallup-administrative",
+         "handle" : "gallup-registrant"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -65,50 +114,14 @@
          ],
          "roles" : [
             "administrative"
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Gallup, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1001 Gallup Drive\nOmaha NE 68102\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "handle" : "gallup-registrant",
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "gallup-administrative",
          "objectClassName" : "entity"
       },
       {
-         "handle" : "gallup-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,13 +181,47 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "gallup-technical",
          "objectClassName" : "entity"
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-10-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "gallup",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GALLUP."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://gallup.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -185,62 +232,16 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-10-15"
-      },
-      {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:55"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gallup.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://gallup.com"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "ae9bba11562a260aaa062e2eb9881443044fdb8998b6a81c25d34d0d6bf49cb5",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "34159"
-         }
-      ]
-   },
-   "status" : [
-      "active"
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:a2:0:0:0:0:17"
@@ -249,10 +250,11 @@
                "65.22.168.17"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "A0.NIC.GALLUP"
       },
       {
-         "ldhName" : "A2.NIC.GALLUP",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:a5:0:0:0:0:17"
@@ -261,7 +263,7 @@
                "65.22.171.17"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "A2.NIC.GALLUP"
       },
       {
          "ipAddresses" : {
@@ -272,45 +274,43 @@
                "2a01:8840:a3:0:0:0:0:17"
             ]
          },
-         "ldhName" : "B0.NIC.GALLUP",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.GALLUP"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.GALLUP",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.170.17"
-            ],
             "v6" : [
                "2a01:8840:a4:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.170.17"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.GALLUP"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "gallup",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/gallup.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://gallup.com",
+         "title" : "URL for registration services"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GALLUP."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://gallup.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
+   "status" : [
+      "active"
    ]
 }

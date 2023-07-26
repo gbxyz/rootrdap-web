@@ -1,112 +1,14 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DATING."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "dating",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.DATING",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.28"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:28"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:28"
-            ],
-            "v4" : [
-               "65.22.29.28"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.DATING",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:28"
-            ],
-            "v4" : [
-               "65.22.30.28"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.DATING"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.28"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:28"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.DATING"
-      },
-      {
-         "ldhName" : "V2N0.NIC.DATING",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:28"
-            ],
-            "v4" : [
-               "65.22.31.28"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N1.NIC.DATING",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:28"
-            ],
-            "v4" : [
-               "161.232.15.28"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
+   "handle" : "dating",
    "ldhName" : "dating",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "dating-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -165,56 +67,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "dating-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "dating-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
          "roles" : [
             "administrative"
          ],
-         "handle" : "dating-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -273,68 +133,208 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "dating-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "46e07950175a552b198f6739926f1b881c5ccab279839247684840018a9f4cc0",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "14914"
+         }
+      ]
+   },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-01-23"
+         "eventDate" : "2014-01-23",
+         "eventAction" : "registration"
       },
       {
          "eventDate" : "2021-11-10",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:29:12",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "46e07950175a552b198f6739926f1b881c5ccab279839247684840018a9f4cc0",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "14914"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DATING."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/dating.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
          "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.DATING",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.28.28"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N1.NIC.DATING",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.29.28"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N2.NIC.DATING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.30.28"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V0N3.NIC.DATING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.28"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:28"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V2N0.NIC.DATING",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.31.28"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:28"
+            ],
+            "v4" : [
+               "161.232.15.28"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.DATING"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ]
 }

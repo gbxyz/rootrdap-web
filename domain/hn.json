@@ -1,28 +1,5 @@
 {
-   "handle" : "hn",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.HN."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.nic.hn"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "1993-04-16",
@@ -33,41 +10,18 @@
          "eventDate" : "2022-11-21"
       },
       {
-         "eventDate" : "2023-07-26T12:30:17",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b7ca2a70dea7188cb7319a8049164ef9d0e3496d8fe4e3c135cba8452544ba72",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "20599"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/hn.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.nic.hn"
-      }
-   ],
+   "ldhName" : "hn",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "handle" : "hn-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -126,14 +80,11 @@
                   "raquel@rds.org.hn"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "hn-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -193,15 +144,12 @@
                ]
             ]
          ],
-         "handle" : "hn-technical",
          "roles" : [
             "technical"
          ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
          "handle" : "hn-registrant",
          "vcardArray" : [
             "vcard",
@@ -236,10 +184,89 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "20599",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "b7ca2a70dea7188cb7319a8049164ef9d0e3496d8fe4e3c135cba8452544ba72"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "objectClassName" : "domain",
+   "handle" : "hn",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/hn.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.nic.hn",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2801:14:a000:0:0:0:0:10"
+            ],
+            "v4" : [
+               "200.0.68.10"
+            ]
+         },
+         "ldhName" : "A.LACTLD.ORG"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.38.108.108"
+            ],
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
+            ]
+         },
+         "ldhName" : "NS1.ANYCASTDNS.CZ"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "185.28.194.194"
+            ]
+         },
+         "ldhName" : "NS2.ANYCASTDNS.CZ"
+      },
+      {
+         "ldhName" : "PCH-ANYCAST.RDS.ORG.HN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6064:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.64"
+            ]
+         }
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -258,57 +285,30 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "hn",
-   "nameservers" : [
+   "remarks" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "200.0.68.10"
-            ],
-            "v6" : [
-               "2801:14:a000:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "A.LACTLD.ORG"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.HN."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v4" : [
-               "185.38.108.108"
-            ],
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ]
-         }
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.nic.hn"
+         ]
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.28.194.194"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "NS2.ANYCASTDNS.CZ"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.64"
-            ],
-            "v6" : [
-               "2001:500:14:6064:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "PCH-ANYCAST.RDS.ORG.HN"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "objectClassName" : "domain",
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

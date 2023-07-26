@@ -1,74 +1,26 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.dns.ao/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "ao",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:6d80:0:0:0:0:0:17"
-            ],
-            "v4" : [
-               "185.39.208.17"
-            ]
-         },
-         "ldhName" : "AO01.DNS.PT"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6113:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.113"
-            ]
-         },
-         "ldhName" : "AO03.DNS.PT"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.138"
-            ],
-            "v6" : [
-               "2001:67c:1010:35:0:0:0:53"
-            ]
-         },
-         "ldhName" : "H.DNS.PT"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1995-11-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-05"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
+      }
+   ],
    "entities" : [
       {
+         "handle" : "ao-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -101,14 +53,9 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "ao-registrant",
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "handle" : "ao-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -171,10 +118,10 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "ao-technical"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -226,12 +173,16 @@
                ]
             ]
          ],
-         "handle" : "ao-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "ao-administrative"
       }
    ],
+   "ldhName" : "ao",
+   "objectClassName" : "domain",
+   "handle" : "ao",
    "notices" : [
       {
          "title" : "About This Service",
@@ -242,44 +193,93 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1995-11-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-12-05",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:54"
+         ],
+         "title" : "Comments"
       }
    ],
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/ao.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
-         "href" : "http://www.dns.ao/",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://www.dns.ao/"
       }
    ],
-   "ldhName" : "ao"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:6d80:0:0:0:0:0:17"
+            ],
+            "v4" : [
+               "185.39.208.17"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AO01.DNS.PT"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.113"
+            ],
+            "v6" : [
+               "2001:500:14:6113:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AO03.DNS.PT"
+      },
+      {
+         "ldhName" : "H.DNS.PT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.138"
+            ],
+            "v6" : [
+               "2001:67c:1010:35:0:0:0:53"
+            ]
+         }
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.dns.ao/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

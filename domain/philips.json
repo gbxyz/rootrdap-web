@@ -1,11 +1,39 @@
 {
-   "ldhName" : "philips",
+   "handle" : "philips",
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-02-05",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "fa65d969b695c8e73ddc89724cae9d83e352b23b57cf5571fd711e2627026638",
+            "digestType" : "2",
+            "keyTag" : "3100",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
+         "handle" : "philips-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "philips-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -38,62 +66,10 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "philips-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Project & Process Manager"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "High Tech Campus 5\nEindhoven 5656AE\nNetherlands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+442070151717"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-philips@cscinfo.com"
-               ]
-            ]
          ]
       },
       {
+         "handle" : "philips-administrative",
          "objectClassName" : "entity",
          "roles" : [
             "administrative"
@@ -142,11 +118,68 @@
                   "ngtld-philips@cscinfo.com"
                ]
             ]
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
          ],
-         "handle" : "philips-administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Project & Process Manager"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "High Tech Campus 5\nEindhoven 5656AE\nNetherlands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+442070151717"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-philips@cscinfo.com"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "philips-technical"
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "philips",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -165,54 +198,10 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-02-05"
-      },
-      {
-         "eventDate" : "2023-01-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:19",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "fa65d969b695c8e73ddc89724cae9d83e352b23b57cf5571fd711e2627026638",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "3100"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/philips.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.philips",
-         "title" : "URL for registration services"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
          "ldhName" : "A.NIC.PHILIPS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -220,34 +209,35 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "B.NIC.PHILIPS"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "C.NIC.PHILIPS"
       },
       {
+         "ldhName" : "X.NIC.PHILIPS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -255,12 +245,9 @@
             "v6" : [
                "2610:a1:1074:0:0:0:1:82"
             ]
-         },
-         "ldhName" : "X.NIC.PHILIPS",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.173.82"
@@ -269,9 +256,11 @@
                "2610:a1:1075:0:0:0:1:82"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "Y.NIC.PHILIPS"
       },
       {
+         "ldhName" : "Z.NIC.PHILIPS",
          "ipAddresses" : {
             "v4" : [
                "156.154.174.82"
@@ -280,33 +269,44 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "ldhName" : "Z.NIC.PHILIPS",
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "philips",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/philips.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://nic.philips",
+         "title" : "URL for registration services"
+      }
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.PHILIPS."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.philips"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ]
 }

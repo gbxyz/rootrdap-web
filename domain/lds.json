@@ -1,111 +1,7 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LDS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.lds.org"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "handle" : "lds",
-   "status" : [
-      "active"
-   ],
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.LDS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:96:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.152.9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "A2.NIC.LDS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:99:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.155.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.LDS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:97:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.153.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.LDS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.154.9"
-            ],
-            "v6" : [
-               "2a01:8840:98:0:0:0:0:9"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "lds",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "36055",
-            "digest" : "cd5ac0cb52d71dc6d369cc4cca8aad970690bcf3bc33f2202890668e47d34a5a"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lds.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.lds.org",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -116,31 +12,54 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:41"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "entities" : [
       {
+         "handle" : "lds-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "IRI Domain Management, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "50 E. North Temple Street, Floor 13\nSalt Lake City UT 84150-0018\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "lds-administrative",
          "roles" : [
             "administrative"
          ],
@@ -202,54 +121,12 @@
                   "sgunnarson@kmclaw.com"
                ]
             ]
-         ],
-         "handle" : "lds-administrative"
-      },
-      {
-         "handle" : "lds-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "IRI Domain Management, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "50 E. North Temple Street, Floor 13\nSalt Lake City UT 84150-0018\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "lds-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -309,8 +186,131 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "lds-technical"
       }
    ],
-   "port43" : "whois.iana.org"
+   "ldhName" : "lds",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "36055",
+            "digest" : "cd5ac0cb52d71dc6d369cc4cca8aad970690bcf3bc33f2202890668e47d34a5a"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/lds.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://www.lds.org",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:96:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.152.9"
+            ]
+         },
+         "ldhName" : "A0.NIC.LDS"
+      },
+      {
+         "ldhName" : "A2.NIC.LDS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:99:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.155.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:97:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.153.9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.LDS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.154.9"
+            ],
+            "v6" : [
+               "2a01:8840:98:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C0.NIC.LDS"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LDS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.lds.org"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

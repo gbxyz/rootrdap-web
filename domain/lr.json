@@ -1,7 +1,9 @@
 {
-   "handle" : "lr",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "remarks" : [
       {
@@ -11,43 +13,84 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://psg.com/dns/lr"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
          "description" : [
-            "IANA"
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "title" : "Source"
+         "title" : "Comments"
       }
    ],
-   "ldhName" : "lr",
-   "events" : [
+   "nameservers" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1997-04-09"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:3f0:0:306:0:0:0:53"
+            ],
+            "v4" : [
+               "77.72.229.254"
+            ]
+         },
+         "ldhName" : "FORK.STH.DNSNODE.NET"
       },
       {
-         "eventDate" : "2020-01-24",
-         "eventAction" : "last changed"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:61"
+            ],
+            "v4" : [
+               "196.216.168.61"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-LR.AFRINIC.NET"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:48"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:418:1:0:0:0:0:39"
+            ],
+            "v4" : [
+               "147.28.0.39"
+            ]
+         },
+         "ldhName" : "RIP.PSG.COM"
       }
    ],
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/lr.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
+         "title" : "About RDAP",
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
@@ -55,24 +98,78 @@
          "title" : "URL for registration services"
       }
    ],
+   "handle" : "lr",
+   "objectClassName" : "domain",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "29984",
+            "digest" : "aa0ec78a15474b054759a26a2be9d85a97f5fe9fe485a206e68b4f83b07789f8",
             "algorithm" : "8",
             "digestType" : "2",
-            "digest" : "aa0ec78a15474b054759a26a2be9d85a97f5fe9fe485a206e68b4f83b07789f8"
+            "keyTag" : "29984"
          },
          {
             "digest" : "a5e2025d5c3b1f4853bdda21aa6a751e552dc715",
+            "keyTag" : "29984",
             "digestType" : "1",
-            "algorithm" : "8",
-            "keyTag" : "29984"
+            "algorithm" : "8"
          }
       ]
    },
    "entities" : [
+      {
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Randy Bush"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "5147 Crystal Springs Drive NE\nBainbridge Island WA 98110\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 206 356 8341"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "randy@psg.com"
+               ]
+            ]
+         ],
+         "handle" : "lr-technical",
+         "objectClassName" : "entity"
+      },
       {
          "roles" : [
             "administrative"
@@ -136,66 +233,15 @@
                ]
             ]
          ],
-         "handle" : "lr-administrative",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "lr-administrative"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Randy Bush"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "5147 Crystal Springs Drive NE\nBainbridge Island WA 98110\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 206 356 8341"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "randy@psg.com"
-               ]
-            ]
-         ],
-         "handle" : "lr-technical",
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "lr-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "lr-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -228,69 +274,23 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
+   "ldhName" : "lr",
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "FORK.STH.DNSNODE.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:3f0:0:306:0:0:0:53"
-            ],
-            "v4" : [
-               "77.72.229.254"
-            ]
-         }
+         "eventDate" : "1997-04-09",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-LR.AFRINIC.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "196.216.168.61"
-            ],
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:61"
-            ]
-         }
+         "eventAction" : "last changed",
+         "eventDate" : "2020-01-24"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "RIP.PSG.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:418:1:0:0:0:0:39"
-            ],
-            "v4" : [
-               "147.28.0.39"
-            ]
-         }
+         "eventDate" : "2023-07-26T13:16:52",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain"
+   "port43" : "whois.iana.org"
 }

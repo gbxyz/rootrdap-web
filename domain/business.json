@@ -1,106 +1,27 @@
 {
    "objectClassName" : "domain",
-   "nameservers" : [
+   "handle" : "business",
+   "events" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:38"
-            ],
-            "v4" : [
-               "65.22.32.38"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.BUSINESS",
-         "objectClassName" : "nameserver"
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-18"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:38"
-            ],
-            "v4" : [
-               "65.22.33.38"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.BUSINESS"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.BUSINESS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:38"
-            ],
-            "v4" : [
-               "65.22.34.38"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.16.38"
-            ],
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:38"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.BUSINESS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.BUSINESS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:38"
-            ],
-            "v4" : [
-               "65.22.35.38"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V2N1.NIC.BUSINESS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:38"
-            ],
-            "v4" : [
-               "161.232.17.38"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "business",
    "entities" : [
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "business-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -160,14 +81,10 @@
                ]
             ]
          ],
+         "handle" : "business-administrative",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "business-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -226,12 +143,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "business-technical"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -265,60 +184,145 @@
                ]
             ]
          ],
+         "roles" : [
+            "registrant"
+         ],
          "handle" : "business-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "7f17414b2ebdd17b8bf3f1205bc82e2ee158df8de4cf46daceff55447f0ee429",
+            "algorithm" : "8",
+            "keyTag" : "27997",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "links" : [
       {
+         "href" : "https://www.iana.org/domains/root/db/business.html",
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/business.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "27997",
-            "digest" : "7f17414b2ebdd17b8bf3f1205bc82e2ee158df8de4cf46daceff55447f0ee429"
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.BUSINESS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.32.38"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:38"
+            ]
          }
-      ]
-   },
-   "events" : [
-      {
-         "eventDate" : "2014-08-18",
-         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
+         "ldhName" : "V0N1.NIC.BUSINESS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.33.38"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:38"
+            ]
+         }
       },
       {
-         "eventDate" : "2023-07-26T12:28:33",
-         "eventAction" : "last update of RDAP database"
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:38"
+            ],
+            "v4" : [
+               "65.22.34.38"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.BUSINESS"
+      },
+      {
+         "ldhName" : "V0N3.NIC.BUSINESS",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.16.38"
+            ],
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:38"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N0.NIC.BUSINESS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:38"
+            ],
+            "v4" : [
+               "65.22.35.38"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.17.38"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:38"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.BUSINESS"
       }
    ],
-   "ldhName" : "business",
-   "remarks" : [
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
       {
          "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BUSINESS."
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "title" : "Whois Service"
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BUSINESS."
+         ]
       },
       {
          "description" : [
@@ -327,14 +331,10 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "business"
+   ]
 }

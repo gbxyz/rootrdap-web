@@ -1,34 +1,93 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/sx.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://registry.sx"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS1.NS.SX",
          "ipAddresses" : {
-            "v4" : [
-               "185.159.197.10"
-            ],
             "v6" : [
                "2620:10a:80aa:0:0:0:0:10"
+            ],
+            "v4" : [
+               "185.159.197.10"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:10"
-            ],
             "v4" : [
                "185.159.198.10"
+            ],
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:10"
             ]
          },
          "ldhName" : "NS2.NS.SX"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.SX."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://registry.sx"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
    ],
+   "objectClassName" : "domain",
+   "handle" : "sx",
    "events" : [
       {
          "eventDate" : "2010-12-20",
@@ -39,41 +98,66 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:58"
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/sx.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://registry.sx",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "4347640217ef8340c38cf28327de8bf0c8b3db7d30e5d62f04c29af24738f83f",
             "digestType" : "2",
+            "keyTag" : "18379",
             "algorithm" : "8",
-            "keyTag" : "18379"
+            "digest" : "4347640217ef8340c38cf28327de8bf0c8b3db7d30e5d62f04c29af24738f83f"
          }
       ]
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "sx",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "SX Registry SA B.V."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Skyline Drive #2\nIndigo Bay\nSint Maarten (Dutch part)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "sx-registrant"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "sx-technical",
          "vcardArray" : [
             "vcard",
@@ -136,54 +220,9 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "sx-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "SX Registry SA B.V."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Skyline Drive #2\nIndigo Bay\nSint Maarten (Dutch part)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "sx-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -243,50 +282,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "roles" : [
+            "administrative"
          ],
-         "title" : "Comments"
+         "objectClassName" : "entity",
+         "handle" : "sx-administrative"
       }
-   ],
-   "ldhName" : "sx",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.SX."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://registry.sx"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "sx"
+   ]
 }

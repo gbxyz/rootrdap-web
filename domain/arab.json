@@ -1,129 +1,26 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ARAB."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
    "handle" : "arab",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "GTLD.ALPHA.ARIDNS.NET.AU",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "GTLD.BETA.ARIDNS.NET.AU",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.198.10"
-            ]
-         },
-         "ldhName" : "GTLD.DELTA.ARIDNS.NET.AU"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "GTLD.GAMMA.ARIDNS.NET.AU",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         }
-      }
-   ],
    "objectClassName" : "domain",
-   "ldhName" : "arab",
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2017-05-11",
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-05-14"
+         "eventDate" : "2020-05-14",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:56"
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/arab.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "1",
-            "keyTag" : "20671",
-            "digest" : "a3cc3ad421ec53930b28b255900f9f005c881ae7"
-         },
-         {
-            "digest" : "164f98c3ddc5c95932ed38afc1eac629b8b10484598dd6b3d288c6bd95778730",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "20671"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,13 +72,10 @@
                ]
             ]
          ],
-         "handle" : "arab-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "arab-administrative"
       },
       {
-         "handle" : "arab-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -236,14 +130,15 @@
          "roles" : [
             "technical"
          ],
+         "handle" : "arab-technical",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "arab-registrant",
          "roles" : [
             "registrant"
          ],
-         "handle" : "arab-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -279,7 +174,92 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "arab",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "20671",
+            "digestType" : "1",
+            "digest" : "a3cc3ad421ec53930b28b255900f9f005c881ae7"
+         },
+         {
+            "digestType" : "2",
+            "keyTag" : "20671",
+            "algorithm" : "8",
+            "digest" : "164f98c3ddc5c95932ed38afc1eac629b8b10484598dd6b3d288c6bd95778730"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "GTLD.ALPHA.ARIDNS.NET.AU",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "GTLD.BETA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "GTLD.DELTA.ARIDNS.NET.AU",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.10"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "GTLD.GAMMA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/arab.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -290,12 +270,32 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ARAB."
          ],
-         "title" : "Comments"
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

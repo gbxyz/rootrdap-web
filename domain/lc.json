@@ -2,6 +2,9 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -10,10 +13,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.lc"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -22,9 +25,23 @@
          ]
       }
    ],
-   "handle" : "lc",
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "nameservers" : [
       {
@@ -40,6 +57,8 @@
          "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO"
       },
       {
+         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.249.116.1"
@@ -47,9 +66,7 @@
             "v6" : [
                "2001:500:44:0:0:0:0:1"
             ]
-         },
-         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -64,20 +81,20 @@
          "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG"
       },
       {
-         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "199.249.124.1"
-            ],
             "v6" : [
                "2001:500:4c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.249.124.1"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:27:0:0:0:0:1"
@@ -88,32 +105,16 @@
          }
       },
       {
+         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG",
          "ipAddresses" : {
-            "v4" : [
-               "199.254.62.1"
-            ],
             "v6" : [
                "2001:500:28:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.254.62.1"
             ]
          },
-         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "lc",
-   "events" : [
-      {
-         "eventDate" : "1991-09-03",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:41"
       }
    ],
    "links" : [
@@ -128,25 +129,67 @@
          "rel" : "related"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.nic.lc",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "lc",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "a729b4e0d245d3cc81fc71893943df13f55c26d8415aa042c5adff42c76d25de",
             "keyTag" : "28069",
             "digestType" : "2",
-            "algorithm" : "8"
+            "algorithm" : "8",
+            "digest" : "a729b4e0d245d3cc81fc71893943df13f55c26d8415aa042c5adff42c76d25de"
          }
       ]
    },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "University of Puerto Rico"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Central Administration Building\nP.O. Box 364984G\nSan Juan 00936\nPuerto Rico"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "lc-registrant"
+      },
+      {
+         "handle" : "lc-administrative",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -207,7 +250,6 @@
                ]
             ]
          ],
-         "handle" : "lc-administrative",
          "roles" : [
             "administrative"
          ]
@@ -272,69 +314,27 @@
                ]
             ]
          ],
-         "handle" : "lc-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "lc-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "University of Puerto Rico"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Central Administration Building\nP.O. Box 364984G\nSan Juan 00936\nPuerto Rico"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "lc-technical"
       }
    ],
-   "notices" : [
+   "ldhName" : "lc",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1991-09-03"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
       }
    ]
 }

@@ -1,131 +1,33 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         "eventAction" : "registration",
+         "eventDate" : "2015-09-24"
       },
       {
-         "description" : [
-            "Registration information: http://www.ping.com"
-         ],
-         "title" : "Remark"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
       }
    ],
-   "handle" : "ping",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.PING"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "ldhName" : "B.NIC.PING",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C.NIC.PING"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.PING",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:1:1d"
-            ],
-            "v4" : [
-               "156.154.169.29"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:1:1d"
-            ],
-            "v4" : [
-               "156.154.170.29"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.PING"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:1:1d"
-            ],
-            "v4" : [
-               "156.154.171.29"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.PING"
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "17914",
+            "digestType" : "2",
+            "digest" : "128d6bf21796bcdb0997673c07ca67cbdec3a09339034f311b1fecab03391a6d"
+         }
+      ]
+   },
    "ldhName" : "ping",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -136,16 +38,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Eric Hart"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Ping Registry Provider"
+                  "Ping Registry Provider, Inc."
                ],
                [
                   "adr",
@@ -162,32 +58,17 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 (602) 687-5343"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 (602) 687-5028"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "admin@pingregistryprovider.com"
                ]
             ]
          ],
-         "handle" : "ping-administrative"
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "ping-registrant",
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "ping-technical",
          "vcardArray" : [
             "vcard",
@@ -250,15 +131,11 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "ping-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ping-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -269,10 +146,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Eric Hart"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Ping Registry Provider, Inc."
+                  "Ping Registry Provider"
                ],
                [
                   "adr",
@@ -289,52 +172,169 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 (602) 687-5343"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 (602) 687-5028"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "admin@pingregistryprovider.com"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "128d6bf21796bcdb0997673c07ca67cbdec3a09339034f311b1fecab03391a6d",
-            "keyTag" : "17914",
-            "algorithm" : "8",
-            "digestType" : "2"
+   "handle" : "ping",
+   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.PING"
+      },
+      {
+         "ldhName" : "B.NIC.PING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.PING"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.169.29"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:1d"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.PING"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.PING",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.170.29"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:1:1d"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.PING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.171.29"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:1:1d"
+            ]
+         }
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/ping.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ping.html"
       },
       {
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.ping.com"
       }
    ],
-   "events" : [
+   "remarks" : [
       {
-         "eventDate" : "2015-09-24",
-         "eventAction" : "registration"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
+         "description" : [
+            "Registration information: http://www.ping.com"
+         ],
+         "title" : "Remark"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:21"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ]
 }

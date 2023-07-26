@@ -1,59 +1,6 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.220.41"
-            ],
-            "v6" : [
-               "2a01:8840:d6:0:0:0:0:41"
-            ]
-         },
-         "ldhName" : "A0.NIC.STOCKHOLM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d9:0:0:0:0:41"
-            ],
-            "v4" : [
-               "65.22.223.41"
-            ]
-         },
-         "ldhName" : "A2.NIC.STOCKHOLM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d7:0:0:0:0:41"
-            ],
-            "v4" : [
-               "65.22.221.41"
-            ]
-         },
-         "ldhName" : "B0.NIC.STOCKHOLM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C0.NIC.STOCKHOLM",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.222.41"
-            ],
-            "v6" : [
-               "2a01:8840:d8:0:0:0:0:41"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
+   "handle" : "stockholm",
    "objectClassName" : "domain",
-   "ldhName" : "stockholm",
    "events" : [
       {
          "eventAction" : "registration",
@@ -64,44 +11,15 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:31:55",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:55"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "cd787970d0a7de33bc49589fb72d41bde6db32c4470c93c170eb8f2d25978128",
-            "keyTag" : "28681",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/stockholm.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.stockholm.se/"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "stockholm-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -153,53 +71,11 @@
                ]
             ]
          ],
-         "handle" : "stockholm-administrative"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "stockholm-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Stockholms kommun"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ragnar Östbergs plan 1\nStockholm SE-10535\nSweden"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "stockholm-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -259,10 +135,138 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "stockholm-technical"
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Stockholms kommun"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ragnar Östbergs plan 1\nStockholm SE-10535\nSweden"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "stockholm-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "stockholm",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "cd787970d0a7de33bc49589fb72d41bde6db32c4470c93c170eb8f2d25978128",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "28681"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/stockholm.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.stockholm.se/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.STOCKHOLM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.220.41"
+            ],
+            "v6" : [
+               "2a01:8840:d6:0:0:0:0:41"
+            ]
+         }
+      },
+      {
+         "ldhName" : "A2.NIC.STOCKHOLM",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:d9:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.223.41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B0.NIC.STOCKHOLM",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:d7:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.221.41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:d8:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.222.41"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.STOCKHOLM"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -281,15 +285,12 @@
          "title" : "Comments"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -303,6 +304,5 @@
             "IANA"
          ]
       }
-   ],
-   "handle" : "stockholm"
+   ]
 }

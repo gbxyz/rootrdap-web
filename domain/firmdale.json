@@ -1,127 +1,22 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FIRMDALE."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "firmdale",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "72.0.51.1"
-            ],
-            "v6" : [
-               "2620:171:a03:ad:0:0:0:1"
-            ]
-         },
-         "ldhName" : "NS1.NIC.FIRMDALE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.NIC.FIRMDALE",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:d03:dc:0:0:0:1"
-            ],
-            "v4" : [
-               "72.42.115.1"
-            ]
-         }
-      }
-   ],
    "objectClassName" : "domain",
+   "handle" : "firmdale",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "242c19944d9422f066f20d3686225c2370d150d0",
+            "keyTag" : "46150",
+            "digestType" : "1",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "firmdale",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Pon Hoong Foong"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Qinetics Solutions Sdn Bhd"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "L4-E-2, Level 4, Enterprise 4,\nTechnology Park Malaysia,\nBukit Jalil\nKuala Lumpur 57000\nMalaysia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+60389966788"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+60389966788"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dev@registryasp.com"
-               ]
-            ]
-         ],
-         "handle" : "firmdale-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "firmdale-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -157,13 +52,9 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "firmdale-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "firmdale-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -225,28 +116,78 @@
          ],
          "roles" : [
             "administrative"
+         ],
+         "handle" : "firmdale-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "firmdale-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Pon Hoong Foong"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Qinetics Solutions Sdn Bhd"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "L4-E-2, Level 4, Enterprise 4,\nTechnology Park Malaysia,\nBukit Jalil\nKuala Lumpur 57000\nMalaysia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+60389966788"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+60389966788"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dev@registryasp.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "events" : [
       {
          "eventDate" : "2014-09-04",
@@ -257,31 +198,90 @@
          "eventDate" : "2020-01-10"
       },
       {
-         "eventDate" : "2023-07-26T12:29:43",
+         "eventDate" : "2023-07-26T13:16:49",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "46150",
-            "digestType" : "1",
-            "algorithm" : "8",
-            "digest" : "242c19944d9422f066f20d3686225c2370d150d0"
-         }
-      ]
-   },
-   "links" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/firmdale.html",
-         "rel" : "related"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FIRMDALE."
+         ]
       },
       {
-         "href" : "https://about.rdap.org",
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NS1.NIC.FIRMDALE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "72.0.51.1"
+            ],
+            "v6" : [
+               "2620:171:a03:ad:0:0:0:1"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:171:d03:dc:0:0:0:1"
+            ],
+            "v4" : [
+               "72.42.115.1"
+            ]
+         },
+         "ldhName" : "NS2.NIC.FIRMDALE"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/firmdale.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       }
    ]
 }

@@ -1,59 +1,71 @@
 {
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.208.17"
-            ],
-            "v6" : [
-               "2a01:8840:ca:0:0:0:0:17"
-            ]
-         },
-         "ldhName" : "A0.NIC.AUDI"
+         "eventDate" : "2015-11-12",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.AUDI",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.211.17"
-            ],
-            "v6" : [
-               "2a01:8840:cd:0:0:0:0:17"
-            ]
-         }
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-16"
       },
       {
-         "ldhName" : "B0.NIC.AUDI",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.209.17"
-            ],
-            "v6" : [
-               "2a01:8840:cb:0:0:0:0:17"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:cc:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.210.17"
-            ]
-         },
-         "ldhName" : "C0.NIC.AUDI",
-         "objectClassName" : "nameserver"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "47809",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "aa1fa212d47d097669f357c0c70ed8be45edcd5ba04d951f4ed9f9a260476fca"
+         }
+      ]
+   },
    "entities" : [
+      {
+         "handle" : "audi-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "AUDI Aktiengesellschaft"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Auto-Union-Strasse 1\nIngolstadt Bavaria 85045\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "objectClassName" : "entity",
          "handle" : "audi-administrative",
@@ -113,8 +125,11 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "audi-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -173,53 +188,12 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "AUDI Aktiengesellschaft"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Auto-Union-Strasse 1\nIngolstadt Bavaria 85045\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "audi-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "audi",
+   "handle" : "audi",
+   "objectClassName" : "domain",
    "notices" : [
       {
          "title" : "About This Service",
@@ -238,49 +212,73 @@
          ]
       }
    ],
-   "events" : [
+   "nameservers" : [
       {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.208.17"
+            ],
+            "v6" : [
+               "2a01:8840:ca:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A0.NIC.AUDI"
       },
       {
-         "eventDate" : "2020-12-16",
-         "eventAction" : "last changed"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.211.17"
+            ],
+            "v6" : [
+               "2a01:8840:cd:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A2.NIC.AUDI"
       },
       {
-         "eventDate" : "2023-07-26T12:28:01",
-         "eventAction" : "last update of RDAP database"
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.209.17"
+            ],
+            "v6" : [
+               "2a01:8840:cb:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.AUDI"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:cc:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.210.17"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.AUDI"
       }
    ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/audi.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "title" : "About RDAP",
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "href" : "https://about.rdap.org"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.audi.com"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "47809",
-            "digest" : "aa1fa212d47d097669f357c0c70ed8be45edcd5ba04d951f4ed9f9a260476fca"
-         }
-      ]
-   },
-   "ldhName" : "audi",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -304,5 +302,7 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "audi"
+   "status" : [
+      "active"
+   ]
 }

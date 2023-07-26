@@ -1,32 +1,21 @@
 {
+   "objectClassName" : "domain",
    "handle" : "rehab",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.REHAB."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "5731",
+            "digest" : "d3ba72f70047888faae7f22dead5112c540fa6aac533dcc55d9ee4920de4cca9"
+         }
+      ]
+   },
    "entities" : [
       {
          "handle" : "rehab-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -88,11 +77,14 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "rehab-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -151,14 +143,12 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "rehab-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,29 +183,11 @@
             ]
          ],
          "handle" : "rehab-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "rehab",
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2014-05-29",
@@ -226,54 +198,68 @@
          "eventDate" : "2021-11-10"
       },
       {
-         "eventDate" : "2023-07-26T12:31:30",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
       }
    ],
-   "links" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/rehab.html"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.REHAB."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
       },
       {
-         "rel" : "related",
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "5731",
-            "digest" : "d3ba72f70047888faae7f22dead5112c540fa6aac533dcc55d9ee4920de4cca9"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "rehab",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N0.NIC.REHAB",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:61"
-            ],
             "v4" : [
                "65.22.28.61"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:61"
             ]
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N1.NIC.REHAB",
          "ipAddresses" : {
             "v6" : [
@@ -282,11 +268,11 @@
             "v4" : [
                "65.22.29.61"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.REHAB",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:20:0:0:0:0:61"
@@ -294,10 +280,11 @@
             "v4" : [
                "65.22.30.61"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.REHAB"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.REHAB",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:f8:0:0:0:0:61"
@@ -306,9 +293,10 @@
                "161.232.14.61"
             ]
          },
-         "ldhName" : "V0N3.NIC.REHAB"
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V2N0.NIC.REHAB",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:21:0:0:0:0:61"
@@ -317,10 +305,11 @@
                "65.22.31.61"
             ]
          },
-         "ldhName" : "V2N0.NIC.REHAB",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V2N1.NIC.REHAB",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.15.61"
@@ -328,13 +317,24 @@
             "v6" : [
                "2a01:8840:f9:0:0:0:0:61"
             ]
-         },
-         "ldhName" : "V2N1.NIC.REHAB",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/rehab.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
    ]
 }

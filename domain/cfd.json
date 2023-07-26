@@ -1,7 +1,9 @@
 {
-   "handle" : "cfd",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "remarks" : [
       {
@@ -11,27 +13,26 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://bostonivy.co"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "ldhName" : "cfd",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -42,11 +43,136 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/cfd.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://bostonivy.co",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.CFD",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:122"
+            ],
+            "v4" : [
+               "194.169.218.122"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:122"
+            ],
+            "v4" : [
+               "185.24.64.122"
+            ]
+         },
+         "ldhName" : "B.NIC.CFD"
+      },
+      {
+         "ldhName" : "C.NIC.CFD",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.122"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:122"
+            ]
+         }
+      },
+      {
+         "ldhName" : "D.NIC.CFD",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:122"
+            ],
+            "v4" : [
+               "212.18.249.122"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "cfd",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "63f199e72594324007d15c0b77b25f4c643e07f0064eaadf08341287856571aa",
+            "digestType" : "2",
+            "keyTag" : "27333",
+            "algorithm" : "8"
+         },
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "10525",
+            "digest" : "42fd41d6533ac785ef64cf9bd36b16463c5a161da2af25ec08c114b40e82f2d8"
+         }
+      ]
+   },
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DOTCFD REGISTRY LTD"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Boston Ivy\nCannon Bridge House\n25 Dowgate Hill\nLondon EC4R 2YA\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "objectClassName" : "entity",
+         "handle" : "cfd-registrant"
+      },
+      {
          "handle" : "cfd-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -111,51 +237,6 @@
          ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "cfd-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DOTCFD REGISTRY LTD"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Boston Ivy\nCannon Bridge House\n25 Dowgate Hill\nLondon EC4R 2YA\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "cfd-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -206,109 +287,28 @@
                   "ig@centralnic.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "cfd-administrative"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "63f199e72594324007d15c0b77b25f4c643e07f0064eaadf08341287856571aa",
-            "keyTag" : "27333",
-            "algorithm" : "8",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "42fd41d6533ac785ef64cf9bd36b16463c5a161da2af25ec08c114b40e82f2d8",
-            "keyTag" : "10525",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cfd.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://bostonivy.co"
-      }
-   ],
+   "ldhName" : "cfd",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-03-06"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-09-23"
+         "eventDate" : "2021-09-23",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:28:47",
+         "eventDate" : "2023-07-26T13:16:48",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.CFD",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:122"
-            ],
-            "v4" : [
-               "194.169.218.122"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.CFD",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:122"
-            ],
-            "v4" : [
-               "185.24.64.122"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.122"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:122"
-            ]
-         },
-         "ldhName" : "C.NIC.CFD",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.CFD",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:122"
-            ],
-            "v4" : [
-               "212.18.249.122"
-            ]
-         }
-      }
-   ]
+   "port43" : "whois.iana.org"
 }

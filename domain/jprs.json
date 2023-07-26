@@ -1,75 +1,75 @@
 {
-   "handle" : "jprs",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://nic.jprs/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "ldhName" : "jprs",
    "events" : [
       {
-         "eventDate" : "2014-12-18",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-12-18"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:32",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
    ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "77aa8b5ceda1af87b2b11b4549263b915d1a8b571838047eba7cbb9dca51f4ac",
-            "algorithm" : "8",
+            "keyTag" : "37444",
             "digestType" : "2",
-            "keyTag" : "37444"
+            "algorithm" : "8"
          }
       ],
       "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/jprs.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://nic.jprs/"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "jprs-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Japan Registry Services Co., Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3-8-1 Nishi-Kanda\nChiyoda-ku Tokyo\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "jprs-registrant"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -121,56 +121,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "jprs-administrative",
          "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "jprs-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Japan Registry Services Co., Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3-8-1 Nishi-Kanda\nChiyoda-ku Tokyo\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "jprs-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -230,17 +187,21 @@
                ]
             ]
          ],
+         "handle" : "jprs-technical",
          "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "jprs",
+   "objectClassName" : "domain",
+   "handle" : "jprs",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -251,11 +212,26 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/jprs.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://nic.jprs/",
+         "rel" : "related"
+      }
    ],
    "nameservers" : [
       {
+         "ldhName" : "TLD1.NIC.JPRS",
          "ipAddresses" : {
             "v6" : [
                "2001:dda:0:0:0:0:0:1"
@@ -264,10 +240,10 @@
                "103.47.2.1"
             ]
          },
-         "ldhName" : "TLD1.NIC.JPRS",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "TLD2.NIC.JPRS",
          "ipAddresses" : {
             "v4" : [
                "117.104.133.16"
@@ -276,12 +252,9 @@
                "2001:218:3001:0:0:0:0:1"
             ]
          },
-         "ldhName" : "TLD2.NIC.JPRS",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "TLD3.NIC.JPRS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1ba:0:0:0:0:1"
@@ -289,11 +262,13 @@
             "v4" : [
                "65.22.40.1"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "TLD3.NIC.JPRS"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "TLD4.NIC.JPRS",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2403:2880:0:0:0:0:0:1"
@@ -304,17 +279,42 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1ba:0:0:0:0:129"
-            ],
             "v4" : [
                "65.22.40.129"
+            ],
+            "v6" : [
+               "2a01:8840:1ba:0:0:0:0:129"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "TLD5.NIC.JPRS"
       }
    ],
-   "objectClassName" : "domain"
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://nic.jprs/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

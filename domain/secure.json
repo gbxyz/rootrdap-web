@@ -1,48 +1,79 @@
 {
-   "ldhName" : "secure",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-07-21"
+         "eventDate" : "2016-07-21",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-11-19"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:43"
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/secure.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "e15c59f280c66d3582c2a0b218728143e1c6db5acf0a4a17dc8858dbcb0c1cd7",
-            "keyTag" : "30610",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Registry Services Technical"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Nominet"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44.1865332211"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registrytechnical@nominet.uk"
+               ]
+            ]
          ],
-         "handle" : "secure-administrative",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "secure-technical",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -102,69 +133,18 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "secure-administrative",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Registry Services Technical"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Nominet"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44.1865332211"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registrytechnical@nominet.uk"
-               ]
-            ]
-         ],
-         "handle" : "secure-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "secure-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -197,48 +177,39 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "ldhName" : "secure",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "30610",
+            "algorithm" : "8",
+            "digest" : "e15c59f280c66d3582c2a0b218728143e1c6db5acf0a4a17dc8858dbcb0c1cd7"
+         }
+      ]
+   },
+   "objectClassName" : "domain",
+   "handle" : "secure",
    "nameservers" : [
       {
+         "ldhName" : "DNS1.NIC.SECURE",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:402:0:0:0:0:80"
-            ],
             "v4" : [
                "213.248.218.80"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:80"
             ]
          },
-         "ldhName" : "DNS1.NIC.SECURE",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "DNS2.NIC.SECURE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "103.49.82.80"
@@ -246,24 +217,21 @@
             "v6" : [
                "2401:fd80:402:0:0:0:0:80"
             ]
-         },
-         "ldhName" : "DNS2.NIC.SECURE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.SECURE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:80"
-            ],
-            "v4" : [
-               "213.248.222.80"
-            ]
          }
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.222.80"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:80"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.SECURE"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "43.230.50.80"
@@ -272,6 +240,7 @@
                "2401:fd80:406:0:0:0:0:80"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "DNS4.NIC.SECURE"
       },
       {
@@ -283,10 +252,11 @@
                "156.154.100.3"
             ]
          },
-         "ldhName" : "DNSA.NIC.SECURE",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSA.NIC.SECURE"
       },
       {
+         "ldhName" : "DNSB.NIC.SECURE",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -295,51 +265,75 @@
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
             ]
-         },
-         "ldhName" : "DNSB.NIC.SECURE"
+         }
       },
       {
-         "ldhName" : "DNSC.NIC.SECURE",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSC.NIC.SECURE"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "156.154.103.3"
-            ],
             "v6" : [
                "2610:a1:1010:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.103.3"
             ]
          },
-         "ldhName" : "DNSD.NIC.SECURE",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSD.NIC.SECURE"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "secure",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/secure.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.SECURE."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information:"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -353,5 +347,11 @@
             "IANA"
          ]
       }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

@@ -1,52 +1,76 @@
 {
    "handle" : "mitsubishi",
-   "remarks" : [
+   "objectClassName" : "domain",
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
-         ],
-         "title" : "Whois Service"
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-24"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.gmoregistry.com/en/"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-20"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T13:16:52",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "45959",
+            "digestType" : "2",
+            "digest" : "1e5bc196fd959fbefb2cbd681475be0ff1de7fbd074b2ce338894ec2b011c0dc"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Mitsubishi Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3-1, Marunouchi 2-Chome\nChiyoda-ku Tokyo 100-8086\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "mitsubishi-registrant"
+      },
+      {
+         "handle" : "mitsubishi-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -106,54 +130,11 @@
                ]
             ]
          ],
-         "handle" : "mitsubishi-administrative"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Mitsubishi Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3-1, Marunouchi 2-Chome\nChiyoda-ku Tokyo 100-8086\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "mitsubishi-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "mitsubishi-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -212,103 +193,122 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "45959",
-            "digest" : "1e5bc196fd959fbefb2cbd681475be0ff1de7fbd074b2ce338894ec2b011c0dc"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mitsubishi.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.gmoregistry.com/en/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-06-24",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-20"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:56",
-         "eventAction" : "last update of RDAP database"
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "mitsubishi-technical",
+         "objectClassName" : "entity"
       }
    ],
    "ldhName" : "mitsubishi",
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/mitsubishi.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.gmoregistry.com/en/"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
             "v4" : [
                "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
             ]
          }
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
             "v4" : [
                "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
             ]
          },
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.GMOREGISTRY.NET"
       },
       {
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "37.209.196.4"
             ]
-         },
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
             "v4" : [
                "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
             ]
          },
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "L.GMOREGISTRY.NET"
       }
    ],
-   "status" : [
-      "active"
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.gmoregistry.com/en/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
    ]
 }

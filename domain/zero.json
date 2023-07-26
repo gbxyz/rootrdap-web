@@ -1,104 +1,24 @@
 {
+   "handle" : "zero",
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.ZERO",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.NIC.ZERO",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "ldhName" : "C.NIC.ZERO"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.ZERO",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:bc"
-            ],
-            "v4" : [
-               "156.154.144.188"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.ZERO",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:bc"
-            ],
-            "v4" : [
-               "156.154.145.188"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.ZERO",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:bc"
-            ],
-            "v4" : [
-               "156.154.159.188"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:58",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "zero",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -107,12 +27,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Carolyn Mitchell"
                ],
                [
                   "org",
@@ -135,36 +49,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 206 646 5990"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 206 946 7702"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "zero-rzm@amazon.com"
                ]
             ]
          ],
-         "handle" : "zero-administrative",
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "handle" : "zero-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "zero-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -227,10 +121,12 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "zero-technical"
       },
       {
-         "handle" : "zero-registrant",
+         "handle" : "zero-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -239,6 +135,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Carolyn Mitchell"
                ],
                [
                   "org",
@@ -261,19 +163,55 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 206 646 5990"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 206 946 7702"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "zero-rzm@amazon.com"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+            "administrative"
+         ]
       }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "47974",
+            "digestType" : "2",
+            "digest" : "331d019e413914c99d9ae0e89862063a248694e12c4d40764eaa91b109c3e4e8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/zero.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
@@ -282,43 +220,109 @@
          "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.amazonregistry.com"
+         "href" : "http://www.amazonregistry.com",
+         "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "47974",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "331d019e413914c99d9ae0e89862063a248694e12c4d40764eaa91b109c3e4e8"
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.ZERO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
          }
-      ]
-   },
-   "events" : [
-      {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.ZERO"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:33:01"
+         "ldhName" : "C.NIC.ZERO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:bc"
+            ],
+            "v4" : [
+               "156.154.144.188"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.ZERO"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:bc"
+            ],
+            "v4" : [
+               "156.154.145.188"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.ZERO"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.ZERO",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.188"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:bc"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "zero",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -332,9 +336,5 @@
             "IANA"
          ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "zero"
+   ]
 }

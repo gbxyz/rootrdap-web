@@ -1,8 +1,7 @@
 {
-   "port43" : "whois.iana.org",
+   "ldhName" : "kp",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -62,17 +61,16 @@
                ]
             ]
          ],
-         "handle" : "kp-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "kp-technical",
+         "objectClassName" : "entity",
+         "handle" : "kp-technical"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -131,9 +129,13 @@
                   "mptird@star-co.net.kp"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "kp-administrative"
       },
       {
+         "handle" : "kp-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -167,11 +169,46 @@
                ]
             ]
          ],
-         "handle" : "kp-registrant",
          "roles" : [
             "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2007-09-24"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-02-28"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "kp",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.star.co.kp"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "notices" : [
@@ -184,94 +221,57 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
-   "events" : [
+   "nameservers" : [
       {
-         "eventDate" : "2007-09-24",
-         "eventAction" : "registration"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "175.45.176.15"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.KPTC.KP"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-02-28"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:36"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "175.45.176.16"
+            ]
+         },
+         "ldhName" : "NS2.KPTC.KP"
       }
    ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/kp.html"
+         "href" : "https://www.iana.org/domains/root/db/kp.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.star.co.kp"
-      }
-   ],
-   "ldhName" : "kp",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.KPTC.KP",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "175.45.176.15"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS2.KPTC.KP",
-         "ipAddresses" : {
-            "v4" : [
-               "175.45.176.16"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "handle" : "kp",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.star.co.kp"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.star.co.kp",
+         "rel" : "related"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ]
 }

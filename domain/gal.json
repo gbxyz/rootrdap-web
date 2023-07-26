@@ -1,4 +1,7 @@
 {
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -22,26 +25,21 @@
          "title" : "Source"
       }
    ],
-   "handle" : "gal",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST10.IRONDNS.NET"
       },
       {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:5:0:0:0:0:b"
@@ -50,7 +48,7 @@
                "195.253.65.11"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
       },
       {
          "objectClassName" : "nameserver",
@@ -65,7 +63,7 @@
          "ldhName" : "ANYCAST24.IRONDNS.NET"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:4:0:0:0:0:b"
@@ -74,18 +72,34 @@
                "195.253.64.11"
             ]
          },
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "gal",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gal.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://asociacion.dominio.gal/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -96,12 +110,13 @@
          ]
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "gal",
    "entities" : [
       {
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "gal-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -112,15 +127,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Administrative Contact"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Asociación puntoGAL"
+                  "CORE Association"
                ],
                [
                   "adr",
                   {
-                     "label" : "Tabernas 11\nA Coruña Galicia 15701\nSpain"
+                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
                   },
                   "text",
                   [
@@ -132,12 +153,34 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 223 125 610"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 223 125 612"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "secretariat@corenic.org"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "gal-administrative"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "gal-technical",
          "vcardArray" : [
             "vcard",
@@ -200,15 +243,14 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "gal-registrant",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "gal-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -219,21 +261,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Administrative Contact"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "CORE Association"
+                  "Asociación puntoGAL"
                ],
                [
                   "adr",
                   {
-                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
+                     "label" : "Tabernas 11\nA Coruña Galicia 15701\nSpain"
                   },
                   "text",
                   [
@@ -245,72 +281,36 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 223 125 610"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 223 125 612"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "secretariat@corenic.org"
                ]
             ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gal.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://asociacion.dominio.gal/",
-         "title" : "URL for registration services"
-      }
-   ],
+   "ldhName" : "gal",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "31d40665954899244190d71e2365cf3623a825580b9bf277953adef2599b49ab",
-            "keyTag" : "32469",
             "algorithm" : "10",
-            "digestType" : "2"
+            "digestType" : "2",
+            "keyTag" : "32469"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
    "events" : [
       {
-         "eventDate" : "2014-03-13",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-13"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-01-07"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:54"
+         "eventDate" : "2023-07-26T13:16:49",
+         "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org"
 }

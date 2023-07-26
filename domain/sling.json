@@ -1,82 +1,74 @@
 {
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6a:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.108.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.SLING"
+         "eventAction" : "registration",
+         "eventDate" : "2016-08-04"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6d:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.111.9"
-            ]
-         },
-         "ldhName" : "A2.NIC.SLING"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6b:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.109.9"
-            ]
-         },
-         "ldhName" : "B0.NIC.SLING",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6c:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.110.9"
-            ]
-         },
-         "ldhName" : "C0.NIC.SLING",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "46550",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "fc817bc7bcc7edcc930cf73483fde9a88386e85674d7cf438e36ed5d00cdf74f"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "sling",
    "entities" : [
       {
-         "roles" : [
-            "technical"
+         "objectClassName" : "entity",
+         "handle" : "sling-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Hughes Satellite Systems Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Inverness Terrace East\nEnglewood CO 80112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "sling-technical",
          "vcardArray" : [
             "vcard",
@@ -137,51 +129,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "sling-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Hughes Satellite Systems Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Inverness Terrace East\nEnglewood CO 80112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "sling-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -243,52 +195,98 @@
          ],
          "roles" : [
             "administrative"
+         ],
+         "handle" : "sling-administrative",
+         "objectClassName" : "entity"
+      }
+   ],
+   "handle" : "sling",
+   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "46550",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "fc817bc7bcc7edcc930cf73483fde9a88386e85674d7cf438e36ed5d00cdf74f"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/sling.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
          "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
          "title" : "URL for registration services",
-         "href" : "http://www.echostar.com/"
+         "href" : "http://www.echostar.com/",
+         "rel" : "related"
       }
    ],
-   "events" : [
+   "nameservers" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-08-04"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.108.9"
+            ],
+            "v6" : [
+               "2a01:8840:6a:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A0.NIC.SLING"
       },
       {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
+         "ldhName" : "A2.NIC.SLING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:6d:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.111.9"
+            ]
+         }
       },
       {
-         "eventDate" : "2023-07-26T12:31:49",
-         "eventAction" : "last update of RDAP database"
+         "ldhName" : "B0.NIC.SLING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.109.9"
+            ],
+            "v6" : [
+               "2a01:8840:6b:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:6c:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.110.9"
+            ]
+         },
+         "ldhName" : "C0.NIC.SLING"
       }
    ],
-   "ldhName" : "sling",
    "remarks" : [
       {
          "description" : [
@@ -303,14 +301,16 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "sling"
+   "status" : [
+      "active"
+   ]
 }

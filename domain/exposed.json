@@ -1,5 +1,10 @@
 {
-   "handle" : "exposed",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -8,10 +13,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -20,8 +25,96 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:58"
+            ],
+            "v4" : [
+               "65.22.24.58"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.EXPOSED"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.25.58"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:58"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.EXPOSED"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.26.58"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:58"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.EXPOSED"
+      },
+      {
+         "ldhName" : "V0N3.NIC.EXPOSED",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.12.58"
+            ],
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:58"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N0.NIC.EXPOSED",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.27.58"
+            ],
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:58"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:58"
+            ],
+            "v4" : [
+               "161.232.13.58"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.EXPOSED"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/exposed.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "notices" : [
       {
@@ -41,9 +134,78 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "handle" : "exposed",
+   "objectClassName" : "domain",
+   "ldhName" : "exposed",
    "entities" : [
       {
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldtech@donuts.email"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "exposed-technical"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "exposed-administrative",
          "vcardArray" : [
             "vcard",
@@ -106,15 +268,14 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "exposed-registrant",
          "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "exposed-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -148,193 +309,32 @@
                ]
             ]
          ]
-      },
-      {
-         "handle" : "exposed-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldtech@donuts.email"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/exposed.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
       }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "43324",
             "algorithm" : "8",
             "digestType" : "2",
+            "keyTag" : "43324",
             "digest" : "06db817955e79f54d71e1d818b4f4c7edbbaff2ac602db75fa95e5b4c9dbce6c"
          }
       ]
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-01-30",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-30"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-03"
+         "eventDate" : "2021-11-03",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:29:35",
+         "eventDate" : "2023-07-26T13:16:49",
          "eventAction" : "last update of RDAP database"
       }
-   ],
-   "ldhName" : "exposed",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:58"
-            ],
-            "v4" : [
-               "65.22.24.58"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.EXPOSED"
-      },
-      {
-         "ldhName" : "V0N1.NIC.EXPOSED",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:58"
-            ],
-            "v4" : [
-               "65.22.25.58"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:58"
-            ],
-            "v4" : [
-               "65.22.26.58"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.EXPOSED",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.12.58"
-            ],
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:58"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.EXPOSED",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.27.58"
-            ],
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:58"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.EXPOSED"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.EXPOSED",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.13.58"
-            ],
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:58"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
    ]
 }

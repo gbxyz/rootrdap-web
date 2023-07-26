@@ -1,34 +1,20 @@
 {
    "handle" : "itau",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.itau.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "32626",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "4abe223f5ad4bdbd1c42de183c76722afeda52267f4166f23483204ad0ce4afb"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "itau",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -88,10 +74,15 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "handle" : "itau-administrative",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "itau-technical",
          "roles" : [
             "technical"
          ],
@@ -153,11 +144,12 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "handle" : "itau-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -192,21 +184,58 @@
             ]
          ],
          "handle" : "itau-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-05-29",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.itau.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -217,55 +246,8 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2015-05-29",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:28",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "32626",
-            "digest" : "4abe223f5ad4bdbd1c42de183c76722afeda52267f4166f23483204ad0ce4afb"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/itau.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.itau.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.ITAU",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1071:0:0:0:0:54"
@@ -273,7 +255,9 @@
             "v4" : [
                "156.154.144.84"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.ITAU"
       },
       {
          "ipAddresses" : {
@@ -284,11 +268,11 @@
                "2610:a1:1072:0:0:0:0:54"
             ]
          },
-         "ldhName" : "NS2.DNS.NIC.ITAU",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.ITAU"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.ITAU",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1073:0:0:0:0:54"
@@ -297,11 +281,9 @@
                "156.154.159.84"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS3.DNS.NIC.ITAU"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.DNS.NIC.ITAU",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1074:0:0:0:0:54"
@@ -309,32 +291,50 @@
             "v4" : [
                "156.154.156.84"
             ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:54"
-            ],
-            "v4" : [
-               "156.154.157.84"
-            ]
          },
-         "ldhName" : "NS5.DNS.NIC.ITAU",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS4.DNS.NIC.ITAU"
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.157.84"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:54"
+            ]
+         },
+         "ldhName" : "NS5.DNS.NIC.ITAU"
+      },
+      {
          "ldhName" : "NS6.DNS.NIC.ITAU",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:0:54"
-            ],
             "v4" : [
                "156.154.158.84"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:0:54"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/itau.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.itau.com",
+         "title" : "URL for registration services"
+      }
+   ]
 }

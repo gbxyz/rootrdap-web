@@ -1,10 +1,16 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -13,41 +19,36 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "hitachi",
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.GMOREGISTRY.NET",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.192.4"
-            ],
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
             ],
             "v4" : [
-               "37.209.194.4"
+               "37.209.192.4"
             ]
          },
          "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET"
       },
       {
          "ldhName" : "K.GMOREGISTRY.NET",
@@ -60,29 +61,43 @@
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
             "v6" : [
                "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
             ]
-         },
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/hitachi.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.gmoregistry.com/en/"
+      }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -93,8 +108,79 @@
          ]
       }
    ],
+   "handle" : "hitachi",
+   "objectClassName" : "domain",
+   "ldhName" : "hitachi",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "hitachi-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Representative Director"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "GMO Registry, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81-3-5456-1601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81-3-3780-5239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "hitachi-technical",
          "roles" : [
             "technical"
          ],
@@ -156,12 +242,14 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "handle" : "hitachi-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "hitachi-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -194,107 +282,19 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Representative Director"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "GMO Registry, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81-3-5456-1601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81-3-3780-5239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
-               ]
-            ]
-         ],
-         "handle" : "hitachi-administrative"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/hitachi.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.gmoregistry.com/en/",
-         "title" : "URL for registration services"
+         ]
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "03ea91ac19aeb9ffa37874a5f0f27f2a04c6eeae162fd7d9c87f083447d31e5f",
+            "keyTag" : "14525",
             "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "14525"
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
    "events" : [
       {
@@ -302,13 +302,13 @@
          "eventDate" : "2015-04-23"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
+         "eventDate" : "2019-08-20",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:16"
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "ldhName" : "hitachi"
+   "port43" : "whois.iana.org"
 }

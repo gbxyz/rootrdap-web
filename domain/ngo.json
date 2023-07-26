@@ -1,151 +1,67 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.NGO."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.ngo"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "ngo",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "199.19.56.1"
-            ],
-            "v6" : [
-               "2001:500:e:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "A0.NIC.NGO"
-      },
-      {
-         "ldhName" : "A2.NIC.NGO",
-         "ipAddresses" : {
-            "v4" : [
-               "199.249.112.1"
-            ],
-            "v6" : [
-               "2001:500:40:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "199.19.54.1"
-            ],
-            "v6" : [
-               "2001:500:c:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "B0.NIC.NGO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:48:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.249.120.1"
-            ]
-         },
-         "ldhName" : "B2.NIC.NGO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.NGO",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:b:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.19.53.1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:f:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.19.57.1"
-            ]
-         },
-         "ldhName" : "D0.NIC.NGO"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "handle" : "ngo",
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2014-07-10"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-06-03"
+         "eventDate" : "2022-06-03",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:31:07",
+         "eventDate" : "2023-07-26T13:16:53",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/ngo.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://nic.ngo",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "dfec23291372ba32bc2bde96f88a383373be1c4ba7bcdb65d5e34f1607400f63",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "23944"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
+   "ldhName" : "ngo",
    "entities" : [
       {
+         "handle" : "ngo-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Public Interest Registry"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "11911 Freedom Drive,\n10th Floor, Suite 1000\nReston VA 20190\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -205,14 +121,15 @@
                ]
             ]
          ],
-         "handle" : "ngo-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "ngo-administrative"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "ngo-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -271,61 +188,125 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "dfec23291372ba32bc2bde96f88a383373be1c4ba7bcdb65d5e34f1607400f63",
+            "algorithm" : "8",
+            "keyTag" : "23944",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.NGO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "199.19.56.1"
+            ],
+            "v6" : [
+               "2001:500:e:0:0:0:0:1"
+            ]
+         }
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Public Interest Registry"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "11911 Freedom Drive,\n10th Floor, Suite 1000\nReston VA 20190\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         "ldhName" : "A2.NIC.NGO",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:40:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.249.112.1"
             ]
-         ],
-         "handle" : "ngo-registrant"
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.19.54.1"
+            ]
+         },
+         "ldhName" : "B0.NIC.NGO"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.249.120.1"
+            ],
+            "v6" : [
+               "2001:500:48:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B2.NIC.NGO"
+      },
+      {
+         "ldhName" : "C0.NIC.NGO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:b:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.19.53.1"
+            ]
+         }
+      },
+      {
+         "ldhName" : "D0.NIC.NGO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "199.19.57.1"
+            ],
+            "v6" : [
+               "2001:500:f:0:0:0:0:1"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ngo.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://nic.ngo",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -336,5 +317,24 @@
          ]
       }
    ],
-   "ldhName" : "ngo"
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.NGO."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.ngo"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

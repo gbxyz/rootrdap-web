@@ -1,5 +1,4 @@
 {
-   "handle" : "aramco",
    "remarks" : [
       {
          "description" : [
@@ -8,20 +7,17 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.aramco.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "notices" : [
       {
@@ -41,53 +37,116 @@
          "title" : "Comments"
       }
    ],
-   "entities" : [
+   "nameservers" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Aramco Services Company"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "9009 West Loop South\nHouston TX 77096\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         "ldhName" : "NS1.DNS.NIC.ARAMCO",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:e"
+            ],
+            "v4" : [
+               "156.154.144.14"
             ]
-         ],
-         "handle" : "aramco-registrant",
-         "objectClassName" : "entity"
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "aramco-technical",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:e"
+            ],
+            "v4" : [
+               "156.154.145.14"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.ARAMCO"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.ARAMCO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:e"
+            ],
+            "v4" : [
+               "156.154.159.14"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1074:0:0:0:0:e"
+            ],
+            "v4" : [
+               "156.154.156.14"
+            ]
+         },
+         "ldhName" : "NS4.DNS.NIC.ARAMCO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:e"
+            ],
+            "v4" : [
+               "156.154.157.14"
+            ]
+         },
+         "ldhName" : "NS5.DNS.NIC.ARAMCO"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.158.14"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:0:e"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS6.DNS.NIC.ARAMCO"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/aramco.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.aramco.com"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "22207",
+            "algorithm" : "8",
+            "digest" : "2af8a3fc1aab39c9117f19956a83f0353fb0c206b33f253331080c91343781b3"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -146,10 +205,16 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "aramco-technical"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "aramco-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -209,132 +274,67 @@
                ]
             ]
          ],
-         "handle" : "aramco-administrative",
          "roles" : [
             "administrative"
          ]
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Aramco Services Company"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "9009 West Loop South\nHouston TX 77096\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "aramco-registrant",
+         "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "aramco",
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "22207",
-            "digest" : "2af8a3fc1aab39c9117f19956a83f0353fb0c206b33f253331080c91343781b3"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/aramco.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.aramco.com",
-         "title" : "URL for registration services"
-      }
-   ],
    "events" : [
       {
-         "eventDate" : "2015-08-20",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-08-20"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-07-21"
       },
       {
-         "eventDate" : "2023-07-26T12:27:56",
+         "eventDate" : "2023-07-26T13:16:46",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "aramco",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:e"
-            ],
-            "v4" : [
-               "156.154.144.14"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.ARAMCO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.ARAMCO",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.14"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:e"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.14"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:e"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.ARAMCO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.DNS.NIC.ARAMCO",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.156.14"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:0:e"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS5.DNS.NIC.ARAMCO",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.157.14"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:e"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS6.DNS.NIC.ARAMCO",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:0:e"
-            ],
-            "v4" : [
-               "156.154.158.14"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "handle" : "aramco",
+   "objectClassName" : "domain"
 }

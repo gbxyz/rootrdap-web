@@ -2,6 +2,70 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NS.NIC.CROWN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.197.5"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:5"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NS.NIC.CROWN",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:5"
+            ],
+            "v4" : [
+               "185.159.198.5"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/crown.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.crown.com/",
+         "rel" : "related"
+      }
+   ],
    "remarks" : [
       {
          "description" : [
@@ -10,10 +74,10 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.crown.com/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -22,44 +86,142 @@
          "title" : "Source"
       }
    ],
+   "objectClassName" : "domain",
    "handle" : "crown",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.197.5"
-            ],
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:5"
-            ]
-         },
-         "ldhName" : "A.NS.NIC.CROWN",
-         "objectClassName" : "nameserver"
+         "eventDate" : "2015-06-04",
+         "eventAction" : "registration"
       },
       {
-         "ldhName" : "B.NS.NIC.CROWN",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.198.5"
-            ],
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:5"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2023-06-26",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:48",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "crown",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "f7c822b56b709256e744781b677c0b32da1e218eac286a2543b064a19a40f3d5",
+            "digestType" : "2",
+            "keyTag" : "41194",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
       {
+         "handle" : "crown-registrant",
          "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Crown Equipment Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "44 S. Washington Street\nNew Bremen OH 45869\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "crown-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Ron Meyer"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Crown Equipment Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "44 S. Washington Street\nNew Bremen OH 45869\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "1-419-629-2311"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "1-419-629-9202"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registryops@crown.com"
+               ]
+            ]
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -119,174 +281,12 @@
                ]
             ]
          ],
-         "handle" : "crown-technical"
-      },
-      {
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "handle" : "crown-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Crown Equipment Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "44 S. Washington Street\nNew Bremen OH 45869\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "crown-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Ron Meyer"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Crown Equipment Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "44 S. Washington Street\nNew Bremen OH 45869\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "1-419-629-2311"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "1-419-629-9202"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registryops@crown.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "crown-technical",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-06-04",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-06-26",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:06",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/crown.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.crown.com/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "f7c822b56b709256e744781b677c0b32da1e218eac286a2543b064a19a40f3d5",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "41194"
-         }
-      ]
-   }
+   "ldhName" : "crown"
 }

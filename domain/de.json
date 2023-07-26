@@ -2,12 +2,15 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.DENIC.DE."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -22,14 +25,26 @@
          "title" : "Source"
       }
    ],
-   "handle" : "de",
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:678:2:0:0:0:0:53"
@@ -38,34 +53,34 @@
                "194.0.0.53"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.DE"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "F.NIC.DE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a02:568:0:2:0:0:0:53"
-            ],
             "v4" : [
                "81.91.164.5"
+            ],
+            "v6" : [
+               "2a02:568:0:2:0:0:0:53"
             ]
          }
       },
       {
+         "ldhName" : "L.DE.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:668:1f:11:0:0:0:105"
-            ],
             "v4" : [
                "77.67.63.105"
+            ],
+            "v6" : [
+               "2001:668:1f:11:0:0:0:105"
             ]
-         },
-         "ldhName" : "L.DE.NET",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "N.DE.NET",
          "ipAddresses" : {
             "v6" : [
@@ -74,9 +89,11 @@
             "v4" : [
                "194.146.107.6"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "S.DE.NET",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -85,44 +102,55 @@
             "v4" : [
                "195.243.137.26"
             ]
-         },
-         "ldhName" : "S.DE.NET"
+         }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "194.246.96.1"
-            ],
             "v6" : [
                "2a02:568:fe02:0:0:0:0:de"
+            ],
+            "v4" : [
+               "194.246.96.1"
             ]
          },
-         "ldhName" : "Z.NIC.DE",
-         "objectClassName" : "nameserver"
+         "ldhName" : "Z.NIC.DE"
       }
    ],
-   "ldhName" : "de",
-   "notices" : [
+   "links" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/de.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.denic.de/",
+         "rel" : "related"
       }
    ],
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "de",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "f341357809a5954311ccb82ade114c6c1d724a75c0395137aa3978035425e78d",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "26755"
+         }
+      ]
+   },
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "de-technical",
          "roles" : [
             "technical"
          ],
@@ -184,53 +212,14 @@
                   "dbs@denic.de"
                ]
             ]
-         ],
-         "handle" : "de-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DENIC eG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Theodor-Stern-Kai 1\nFrankfurt am Main 60596\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "de-registrant"
+         ]
       },
       {
          "objectClassName" : "entity",
          "handle" : "de-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -289,44 +278,54 @@
                   "ianacontact@denic.de"
                ]
             ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "de-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DENIC eG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Theodor-Stern-Kai 1\nFrankfurt am Main 60596\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "26755",
-            "digest" : "f341357809a5954311ccb82ade114c6c1d724a75c0395137aa3978035425e78d"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/de.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.denic.de/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "de",
    "events" : [
       {
-         "eventDate" : "1986-11-05",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1986-11-05"
       },
       {
          "eventDate" : "2023-04-04",
@@ -334,7 +333,8 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:13"
+         "eventDate" : "2023-07-26T13:16:48"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org"
 }

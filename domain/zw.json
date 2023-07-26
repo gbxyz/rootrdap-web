@@ -1,23 +1,91 @@
 {
-   "events" : [
+   "remarks" : [
       {
-         "eventDate" : "1991-11-06",
-         "eventAction" : "registration"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
       },
       {
-         "eventDate" : "2021-03-11",
-         "eventAction" : "last changed"
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:33:03"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2c0f:fe40:0:0:5:11:11:1"
+            ],
+            "v4" : [
+               "5.11.11.1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.LIQUIDTELECOM.NET"
+      },
+      {
+         "ldhName" : "NS1ZIM.TELONE.CO.ZW",
+         "ipAddresses" : {
+            "v6" : [
+               "2c0f:f758:0:a:0:0:0:81"
+            ],
+            "v4" : [
+               "41.220.30.81"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2c0f:fe40:0:0:5:11:11:10"
+            ],
+            "v4" : [
+               "5.11.11.10"
+            ]
+         },
+         "ldhName" : "NS2.LIQUIDTELECOM.NET"
+      },
+      {
+         "ldhName" : "NS2ZIM.TELONE.CO.ZW",
+         "ipAddresses" : {
+            "v4" : [
+               "41.220.30.82"
+            ],
+            "v6" : [
+               "2c0f:f758:0:a:0:0:0:82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6128:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.128"
+            ]
+         },
+         "ldhName" : "ZW-NS.ANYCAST.PCH.NET"
       }
    ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/zw.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -25,13 +93,34 @@
          "rel" : "related"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
+         "handle" : "zw-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "zw-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -42,15 +131,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Manager Internet & Data Operations"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)"
+                  "TelOne Pvt Ltd"
                ],
                [
                   "adr",
                   {
-                     "label" : "Block A, Emerald office Park\n30 The Chase, Emerald Hill\nP.O. Box MP 843, Mt Pleasant\nHarare\nZimbabwe"
+                     "label" : "Cnr Sam Nujoma St. & Samorah Machel Ave\nP.O.Box CY 792\nCauseway\nHarare\nZimbabwe"
                   },
                   "text",
                   [
@@ -62,12 +157,36 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+263 4 791701"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+263 4 708981"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dns-admin@telone.co.zw"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       },
       {
          "handle" : "zw-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -129,11 +248,9 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -144,21 +261,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Manager Internet & Data Operations"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "TelOne Pvt Ltd"
+                  "Postal and Telecommunications Regulatory Authority of Zimbabwe (POTRAZ)"
                ],
                [
                   "adr",
                   {
-                     "label" : "Cnr Sam Nujoma St. & Samorah Machel Ave\nP.O.Box CY 792\nCauseway\nHarare\nZimbabwe"
+                     "label" : "Block A, Emerald office Park\n30 The Chase, Emerald Hill\nP.O. Box MP 843, Mt Pleasant\nHarare\nZimbabwe"
                   },
                   "text",
                   [
@@ -170,143 +281,32 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+263 4 791701"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+263 4 708981"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dns-admin@telone.co.zw"
                ]
             ]
          ],
-         "handle" : "zw-administrative",
          "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "zw-registrant"
       }
    ],
    "ldhName" : "zw",
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.LIQUIDTELECOM.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2c0f:fe40:0:0:5:11:11:1"
-            ],
-            "v4" : [
-               "5.11.11.1"
-            ]
-         }
+         "eventDate" : "1991-11-06",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1ZIM.TELONE.CO.ZW",
-         "ipAddresses" : {
-            "v4" : [
-               "41.220.30.81"
-            ],
-            "v6" : [
-               "2c0f:f758:0:a:0:0:0:81"
-            ]
-         }
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-11"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2c0f:fe40:0:0:5:11:11:10"
-            ],
-            "v4" : [
-               "5.11.11.10"
-            ]
-         },
-         "ldhName" : "NS2.LIQUIDTELECOM.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2ZIM.TELONE.CO.ZW",
-         "ipAddresses" : {
-            "v4" : [
-               "41.220.30.82"
-            ],
-            "v6" : [
-               "2c0f:f758:0:a:0:0:0:82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.128"
-            ],
-            "v6" : [
-               "2001:500:14:6128:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "ZW-NS.ANYCAST.PCH.NET"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:58"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "port43" : "whois.iana.org",
    "handle" : "zw",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "objectClassName" : "domain"
 }

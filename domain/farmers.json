@@ -1,173 +1,38 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.farmers.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "farmers",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A.NIC.FARMERS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "ldhName" : "B.NIC.FARMERS"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "ldhName" : "C.NIC.FARMERS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.FARMERS",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.55"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:37"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.FARMERS",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.55"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:37"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.55"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:37"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.FARMERS"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/farmers.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://www.farmers.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "11494",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "cd092da4b2e46bab4b5fea2310c7c8007e8b5732f5bb3cb6e0a01a4cef212c70"
-         }
-      ]
-   },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-04-21",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-21"
       },
       {
          "eventDate" : "2022-07-21",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:29:38",
+         "eventDate" : "2023-07-26T13:16:49",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "11494",
+            "digestType" : "2",
+            "digest" : "cd092da4b2e46bab4b5fea2310c7c8007e8b5732f5bb3cb6e0a01a4cef212c70"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "farmers",
    "entities" : [
       {
+         "handle" : "farmers-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "farmers-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -200,13 +65,10 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "farmers-technical",
          "vcardArray" : [
             "vcard",
@@ -267,12 +129,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "farmers-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -324,9 +187,146 @@
                ]
             ]
          ],
-         "handle" : "farmers-administrative",
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "ldhName" : "farmers"
+   "objectClassName" : "domain",
+   "handle" : "farmers",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.FARMERS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.FARMERS"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.FARMERS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:37"
+            ],
+            "v4" : [
+               "156.154.144.55"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.FARMERS"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:37"
+            ],
+            "v4" : [
+               "156.154.145.55"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.FARMERS"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.55"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:37"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.FARMERS"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/farmers.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://www.farmers.com",
+         "rel" : "related"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.farmers.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

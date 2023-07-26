@@ -1,106 +1,12 @@
 {
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:56"
-            ],
-            "v4" : [
-               "65.22.28.56"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.APARTMENTS"
-      },
-      {
-         "ldhName" : "V0N1.NIC.APARTMENTS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.56"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:56"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.30.56"
-            ],
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:56"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.APARTMENTS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.APARTMENTS",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.56"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:56"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:56"
-            ],
-            "v4" : [
-               "65.22.31.56"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.APARTMENTS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.APARTMENTS",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.56"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:56"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "apartments",
+   "ldhName" : "apartments",
    "entities" : [
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "apartments-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -134,10 +40,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "apartments-registrant"
       },
       {
          "handle" : "apartments-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -199,11 +107,14 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "apartments-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -262,63 +173,47 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "handle" : "apartments-administrative",
-         "roles" : [
-            "administrative"
          ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/apartments.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
       }
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "36754",
+            "digest" : "e176954cd1754d3ab3e01a778f531d79db8a010d674c6f6934f019c0e690f183",
             "algorithm" : "8",
             "digestType" : "2",
-            "digest" : "e176954cd1754d3ab3e01a778f531d79db8a010d674c6f6934f019c0e690f183"
+            "keyTag" : "36754"
          }
       ],
       "delegationSigned" : true
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-02-05"
+         "eventDate" : "2015-02-05",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:54"
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "apartments",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.APARTMENTS."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -333,8 +228,113 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.APARTMENTS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.28.56"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:56"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N1.NIC.APARTMENTS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.56"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:56"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:56"
+            ],
+            "v4" : [
+               "65.22.30.56"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.APARTMENTS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:56"
+            ],
+            "v4" : [
+               "161.232.14.56"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.APARTMENTS"
+      },
+      {
+         "ldhName" : "V2N0.NIC.APARTMENTS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.31.56"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:56"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N1.NIC.APARTMENTS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:56"
+            ],
+            "v4" : [
+               "161.232.15.56"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
    ],
-   "handle" : "apartments"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/apartments.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ]
 }

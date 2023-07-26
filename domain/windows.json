@@ -1,156 +1,25 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-30"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.microsoft.com"
-         ]
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
       }
    ],
-   "handle" : "windows",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "AC1.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "windows",
    "port43" : "whois.iana.org",
+   "ldhName" : "windows",
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Program Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Microsoft Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "One Microsoft Way\nRedmond WA 98052\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "425-706-3546"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "425-457-2511"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tlddom@microsoft.com"
-               ]
-            ]
-         ],
-         "handle" : "windows-administrative"
-      },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "windows-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -210,13 +79,81 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "windows-technical"
       },
       {
+         "handle" : "windows-administrative",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Program Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Microsoft Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "One Microsoft Way\nRedmond WA 98052\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "425-706-3546"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "425-457-2511"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tlddom@microsoft.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "windows-registrant",
          "roles" : [
             "registrant"
          ],
-         "handle" : "windows-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -249,8 +186,87 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "f6dda2f2e3e99e70c47f0393f0154d1641435abdf20e5e5c0a8416c0da34a922",
+            "algorithm" : "8",
+            "keyTag" : "44526",
+            "digestType" : "2"
+         }
+      ]
+   },
+   "objectClassName" : "domain",
+   "handle" : "windows",
+   "nameservers" : [
+      {
+         "ldhName" : "AC1.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         }
+      },
+      {
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         }
+      },
+      {
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/windows.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.microsoft.com",
+         "rel" : "related"
       }
    ],
    "notices" : [
@@ -263,54 +279,38 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
          ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.microsoft.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-30"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:32:23",
-         "eventAction" : "last update of RDAP database"
-      }
+   "status" : [
+      "active"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "f6dda2f2e3e99e70c47f0393f0154d1641435abdf20e5e5c0a8416c0da34a922",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "44526"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/windows.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.microsoft.com"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

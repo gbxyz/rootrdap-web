@@ -1,50 +1,74 @@
 {
-   "ldhName" : "hkt",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/hkt.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:72:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.116.33"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.HKT"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:75:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.119.33"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.HKT"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.117.33"
+            ],
+            "v6" : [
+               "2a01:8840:73:0:0:0:0:33"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.HKT"
+      },
+      {
+         "ldhName" : "C0.NIC.HKT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:74:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.118.33"
+            ]
+         }
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "b467734f0f2a8287ba3a0eddf252055d740f2fd0072f81095eb6a56be2405ee0",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "2077"
-         }
-      ]
-   },
-   "events" : [
+   "links" : [
       {
-         "eventDate" : "2016-04-15",
-         "eventAction" : "registration"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/hkt.html"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-05"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:17",
-         "eventAction" : "last update of RDAP database"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -55,10 +79,57 @@
          ]
       }
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.HKT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "http://www.dot.asia/namesphere/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-04-15",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-11-05",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "handle" : "hkt-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -120,14 +191,12 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "hkt-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -187,10 +256,15 @@
                ]
             ]
          ],
+         "handle" : "hkt-technical",
          "objectClassName" : "entity"
       },
       {
          "handle" : "hkt-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -223,95 +297,21 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "ldhName" : "hkt",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "b467734f0f2a8287ba3a0eddf252055d740f2fd0072f81095eb6a56be2405ee0",
+            "digestType" : "2",
+            "keyTag" : "2077",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.HKT",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.116.33"
-            ],
-            "v6" : [
-               "2a01:8840:72:0:0:0:0:33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "A2.NIC.HKT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:75:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.119.33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:73:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.117.33"
-            ]
-         },
-         "ldhName" : "B0.NIC.HKT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C0.NIC.HKT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:74:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.118.33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "handle" : "hkt",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.HKT."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.dot.asia/namesphere/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ]
+   "handle" : "hkt"
 }

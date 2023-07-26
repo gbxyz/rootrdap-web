@@ -1,39 +1,11 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.SO",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:54"
-            ],
-            "v4" : [
-               "196.216.168.54"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.NIC.SO",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6101:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.101"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "so",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "so-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -44,21 +16,41 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Administrator"
+               ],
+               [
                   "org",
                   {},
                   "text",
                   "Ministry of Post and Telecommunications"
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+252 1 587 1200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+252 1 231 599"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "admin@mipt.gov.so"
                ]
             ]
-         ],
-         "handle" : "so-registrant",
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "so-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -120,10 +112,16 @@
          ],
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "so-technical"
       },
       {
-         "handle" : "so-administrative",
+         "handle" : "so-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -134,97 +132,33 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Administrator"
-               ],
-               [
                   "org",
                   {},
                   "text",
                   "Ministry of Post and Telecommunications"
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+252 1 587 1200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+252 1 231 599"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "admin@mipt.gov.so"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ],
+   "ldhName" : "so",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1997-08-28"
+         "eventDate" : "1997-08-28",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2016-04-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2016-04-18"
       },
       {
-         "eventDate" : "2023-07-26T12:31:50",
+         "eventDate" : "2023-07-26T13:16:55",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/so.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.so/"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "so",
    "remarks" : [
       {
          "description" : [
@@ -245,5 +179,71 @@
          ]
       }
    ],
-   "handle" : "so"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/so.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.nic.so/"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:54"
+            ],
+            "v4" : [
+               "196.216.168.54"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.SO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.101"
+            ],
+            "v6" : [
+               "2001:500:14:6101:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "E.NIC.SO"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

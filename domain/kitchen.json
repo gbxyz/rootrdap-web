@@ -1,11 +1,119 @@
 {
-   "handle" : "kitchen",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.32.17"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.KITCHEN"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.33.17"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.KITCHEN"
+      },
+      {
+         "ldhName" : "V0N2.NIC.KITCHEN",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.34.17"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:17"
+            ],
+            "v4" : [
+               "161.232.16.17"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.KITCHEN"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.35.17"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.KITCHEN"
+      },
+      {
+         "ldhName" : "V2N1.NIC.KITCHEN",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.17.17"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/kitchen.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.KITCHEN."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -20,12 +128,73 @@
          "title" : "Source"
       }
    ],
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-11-13"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
+      }
+   ],
    "port43" : "whois.iana.org",
+   "ldhName" : "kitchen",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "kitchen-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -85,18 +254,15 @@
                ]
             ]
          ],
-         "handle" : "kitchen-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "kitchen-administrative"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "kitchen-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "kitchen-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -156,185 +322,19 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "kitchen-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-11-13"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:35",
-         "eventAction" : "last update of RDAP database"
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "7f36f037e4bd2b909479811f3b3ad76c00db04f1f7f6476d00483d653b744ca4",
+            "digestType" : "2",
             "keyTag" : "47935",
             "algorithm" : "8",
-            "digestType" : "2"
+            "digest" : "7f36f037e4bd2b909479811f3b3ad76c00db04f1f7f6476d00483d653b744ca4"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/kitchen.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "ldhName" : "kitchen",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.KITCHEN",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.32.17"
-            ],
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:17"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N1.NIC.KITCHEN",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.33.17"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.KITCHEN",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.34.17"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.16.17"
-            ],
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:17"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.KITCHEN"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.35.17"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.KITCHEN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N1.NIC.KITCHEN",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.17.17"
-            ],
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:17"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ]
+   "handle" : "kitchen"
 }

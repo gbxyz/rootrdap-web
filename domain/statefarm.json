@@ -2,6 +2,9 @@
    "status" : [
       "active"
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -12,8 +15,8 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "ldhName" : "A.NIC.STATEFARM",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.STATEFARM"
       },
       {
          "ldhName" : "B.NIC.STATEFARM",
@@ -29,18 +32,17 @@
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.STATEFARM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.STATEFARM"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.STATEFARM",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1071:0:0:0:0:9a"
@@ -49,7 +51,8 @@
                "156.154.144.154"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.STATEFARM"
       },
       {
          "objectClassName" : "nameserver",
@@ -65,131 +68,92 @@
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "156.154.159.154"
-            ],
             "v6" : [
                "2610:a1:1073:0:0:0:0:9a"
+            ],
+            "v4" : [
+               "156.154.159.154"
             ]
          },
-         "ldhName" : "NS3.DNS.NIC.STATEFARM",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "statefarm",
-   "events" : [
-      {
-         "eventDate" : "2015-11-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:54"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.STATEFARM"
       }
    ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/statefarm.html"
+         "href" : "https://www.iana.org/domains/root/db/statefarm.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.statefarm.com"
+         "href" : "http://www.statefarm.com",
+         "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "1ed8a8c0e5102a11cc8659d9d0543ea7ef5f44b63d553a4aa78d46d398ff5356",
-            "keyTag" : "64867",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "entities" : [
+   "notices" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "statefarm-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Christopher Niemi"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "MarkMonitor, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "391 N. Ancestor Place, Suite 150\nBoise ID 83704\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 208 685 1857"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 208 389 5771"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotstatefarm-notices@markmonitor.com"
-               ]
-            ]
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "statefarm-registrant",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.statefarm.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "statefarm",
+   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-06"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:55"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "statefarm",
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -225,12 +189,13 @@
          ],
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "statefarm-registrant"
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "statefarm-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -290,51 +255,86 @@
                ]
             ]
          ],
-         "handle" : "statefarm-technical",
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Christopher Niemi"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "MarkMonitor, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "391 N. Ancestor Place, Suite 150\nBoise ID 83704\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 208 685 1857"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 208 389 5771"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotstatefarm-notices@markmonitor.com"
+               ]
+            ]
+         ],
+         "handle" : "statefarm-administrative",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.statefarm.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "statefarm"
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "1ed8a8c0e5102a11cc8659d9d0543ea7ef5f44b63d553a4aa78d46d398ff5356",
+            "algorithm" : "8",
+            "keyTag" : "64867",
+            "digestType" : "2"
+         }
+      ]
+   }
 }

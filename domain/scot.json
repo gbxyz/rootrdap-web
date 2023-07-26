@@ -1,22 +1,37 @@
 {
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET"
       },
       {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.11"
@@ -25,42 +40,105 @@
                "2a01:5b0:5:0:0:0:0:b"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.65.12"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
             ],
             "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
+               "2a01:5b0:5:0:0:0:0:c"
             ]
          },
+         "ldhName" : "ANYCAST24.IRONDNS.NET"
+      },
+      {
          "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
+            ]
+         }
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "scot",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/scot.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://dot.scot/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SCOT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://dot.scot/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-06-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "a99fb1213fc07299a57251f57238bc0f796d7aa311624cf49ddcacac08c1dc3d",
+            "algorithm" : "10",
+            "digestType" : "2",
+            "keyTag" : "28873"
+         }
+      ]
+   },
+   "ldhName" : "scot",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -94,11 +172,18 @@
                ]
             ]
          ],
-         "handle" : "scot-registrant"
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "scot-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "handle" : "scot-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -157,14 +242,9 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "scot-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -226,91 +306,11 @@
          ],
          "roles" : [
             "administrative"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ],
-         "title" : "Comments"
+         "objectClassName" : "entity",
+         "handle" : "scot-administrative"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-06-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-01-07"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:42",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/scot.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://dot.scot/",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "28873",
-            "algorithm" : "10",
-            "digestType" : "2",
-            "digest" : "a99fb1213fc07299a57251f57238bc0f796d7aa311624cf49ddcacac08c1dc3d"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SCOT."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://dot.scot/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "scot"
+   "handle" : "scot",
+   "objectClassName" : "domain"
 }

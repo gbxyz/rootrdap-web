@@ -1,17 +1,22 @@
 {
-   "handle" : "bf",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information:"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Remark",
@@ -26,33 +31,62 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "212.52.146.50"
+            ]
+         },
+         "ldhName" : "A.REGISTRE.BF"
+      },
+      {
+         "ldhName" : "DNS-TLD.IRD.FR",
+         "ipAddresses" : {
+            "v4" : [
+               "13.39.116.127"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS-BF.NIC.FR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.9.1"
+            ]
+         }
+      },
+      {
+         "ldhName" : "PCH.NS.REGISTRE.BF",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.141"
+            ],
+            "v6" : [
+               "2001:500:14:6141:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
    ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/bf.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
          "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bf.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1993-03-29"
-      },
-      {
-         "eventDate" : "2023-03-23",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:14"
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       }
    ],
    "notices" : [
@@ -73,113 +107,9 @@
          ]
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "bf",
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "bf-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ARCE-AutoritÈ de RÈgulation des Communications Electroniques"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "01 BP 6437\nOuagadougou 01\nBurkina Faso"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Chef de Service FASONET"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ONATEL SA - Office National des TÈlÈcommunications"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "01 BP 10000\nOuagadougou 01\nBurkina Faso"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+22670201338"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+22625375364"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "e.guigma@moov-africa.bf"
-               ]
-            ]
-         ],
-         "handle" : "bf-technical",
-         "objectClassName" : "entity"
-      },
       {
          "roles" : [
             "administrative"
@@ -243,60 +173,130 @@
                ]
             ]
          ],
-         "handle" : "bf-administrative",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "bf-administrative"
+      },
+      {
+         "handle" : "bf-technical",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Chef de Service FASONET"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ONATEL SA - Office National des TÈlÈcommunications"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "01 BP 10000\nOuagadougou 01\nBurkina Faso"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+22670201338"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+22625375364"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "e.guigma@moov-africa.bf"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ARCE-AutoritÈ de RÈgulation des Communications Electroniques"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "01 BP 6437\nOuagadougou 01\nBurkina Faso"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "bf-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
    "ldhName" : "bf",
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.REGISTRE.BF",
-         "ipAddresses" : {
-            "v4" : [
-               "212.52.146.50"
-            ],
-            "v6" : []
-         }
+         "eventDate" : "1993-03-29",
+         "eventAction" : "registration"
       },
       {
-         "ldhName" : "DNS-TLD.IRD.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "13.39.116.127"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-03-23"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-BF.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
-            ],
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.141"
-            ],
-            "v6" : [
-               "2001:500:14:6141:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "PCH.NS.REGISTRE.BF"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ],
-   "status" : [
-      "active"
-   ]
+   "port43" : "whois.iana.org"
 }

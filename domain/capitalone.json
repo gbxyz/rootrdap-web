@@ -1,58 +1,4 @@
 {
-   "nameservers" : [
-      {
-         "ldhName" : "AC1.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
          "eventAction" : "registration",
@@ -63,41 +9,65 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:28:39",
+         "eventDate" : "2023-07-26T13:16:47",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/capitalone.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.capitalone.com"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "algorithm" : "8",
             "keyTag" : "16365",
+            "digestType" : "2",
             "digest" : "017564f7c0204b23e19605e08e5dcf57c286d6d5097b53440de91d4f04d3abac"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "ldhName" : "capitalone",
    "entities" : [
       {
-         "handle" : "capitalone-technical",
+         "handle" : "capitalone-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Capital One Financial Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1680 Capital One Drive\nMcLean VA 22102\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -160,51 +130,13 @@
          "roles" : [
             "technical"
          ],
+         "handle" : "capitalone-technical",
          "objectClassName" : "entity"
       },
       {
-         "handle" : "capitalone-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Capital One Financial Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1680 Capital One Drive\nMcLean VA 22102\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "capitalone-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -256,12 +188,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "capitalone-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "capitalone",
    "notices" : [
       {
          "title" : "About This Service",
@@ -280,7 +212,73 @@
          ]
       }
    ],
-   "ldhName" : "capitalone",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/capitalone.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.capitalone.com",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM"
+      }
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -289,10 +287,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.capitalone.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -304,5 +302,7 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "capitalone"
+   "status" : [
+      "active"
+   ]
 }

@@ -1,35 +1,35 @@
 {
-   "handle" : "orange",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ORANGE."
-         ]
+         "eventDate" : "2015-06-18",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
       }
    ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "44385",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "54957bdf3921ca2d50bb340e042605f8d39ee91ca2a08a37424ce88882c4fe1a"
+         }
+      ]
+   },
    "ldhName" : "orange",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "orange-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -63,10 +63,16 @@
                ]
             ]
          ],
-         "handle" : "orange-registrant"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
+         "handle" : "orange-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -125,17 +131,9 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "handle" : "orange-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "orange-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -187,10 +185,15 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "orange-administrative",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "orange",
    "notices" : [
       {
          "description" : [
@@ -209,48 +212,21 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-06-18"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:14",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/orange.html",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/orange.html"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "54957bdf3921ca2d50bb340e042605f8d39ee91ca2a08a37424ce88882c4fe1a",
-            "keyTag" : "44385",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
+         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:500:120:0:0:0:0:30"
@@ -259,11 +235,9 @@
                "192.42.173.30"
             ]
          },
-         "ldhName" : "AC1.NSTLD.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -272,9 +246,12 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM"
       },
       {
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.175.30"
@@ -282,11 +259,10 @@
             "v6" : [
                "2001:500:122:0:0:0:0:30"
             ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "AC4.NSTLD.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -295,9 +271,33 @@
             "v4" : [
                "192.42.176.30"
             ]
-         },
-         "ldhName" : "AC4.NSTLD.COM"
+         }
       }
    ],
-   "objectClassName" : "domain"
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ORANGE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: "
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

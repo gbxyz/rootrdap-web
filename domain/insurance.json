@@ -1,28 +1,75 @@
 {
-   "notices" : [
+   "handle" : "insurance",
+   "objectClassName" : "domain",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "2015-11-06",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "13792",
+            "digest" : "ea492e4cf1888e2861f9fffaa38a66509c854db6aa41c4db1dfa611ae358b23f"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
+         "handle" : "insurance-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "fTLD Registry Services LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1300 Eye Street, NW\nSuite 1100 West\nWashington DC 20005\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "insurance-administrative",
          "vcardArray" : [
             "vcard",
@@ -75,51 +122,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "fTLD Registry Services LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1300 Eye Street, NW\nSuite 1100 West\nWashington DC 20005\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "insurance-registrant"
+            "administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
          "handle" : "insurance-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -178,71 +190,66 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
+      }
+   ],
+   "ldhName" : "insurance",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/insurance.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
          "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/insurance.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "https://www.ftld.com/",
-         "title" : "URL for registration services",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "ea492e4cf1888e2861f9fffaa38a66509c854db6aa41c4db1dfa611ae358b23f",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "13792"
-         }
-      ]
-   },
-   "events" : [
-      {
-         "eventDate" : "2015-11-06",
-         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:26",
-         "eventAction" : "last update of RDAP database"
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.ftld.com/"
       }
    ],
-   "ldhName" : "insurance",
-   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ldhName" : "D.NIC.INSURANCE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.103.22"
-            ],
             "v6" : [
                "2610:a1:1010:0:0:0:0:22"
+            ],
+            "v4" : [
+               "156.154.103.22"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "E.NIC.INSURANCE",
          "ipAddresses" : {
             "v4" : [
                "156.154.104.22"
@@ -251,21 +258,22 @@
                "2610:a1:1011:0:0:0:0:22"
             ]
          },
-         "ldhName" : "E.NIC.INSURANCE"
-      },
-      {
-         "ldhName" : "F.NIC.INSURANCE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.105.22"
-            ],
-            "v6" : [
-               "2610:a1:1012:0:0:0:0:22"
-            ]
-         },
          "objectClassName" : "nameserver"
       },
       {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1012:0:0:0:0:22"
+            ],
+            "v4" : [
+               "156.154.105.22"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.NIC.INSURANCE"
+      },
+      {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
@@ -274,44 +282,39 @@
                "37.209.192.10"
             ]
          },
-         "ldhName" : "W.NIC.INSURANCE",
-         "objectClassName" : "nameserver"
+         "ldhName" : "W.NIC.INSURANCE"
       },
       {
-         "ldhName" : "X.NIC.INSURANCE",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
             "v6" : [
                "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.INSURANCE",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
             ],
             "v4" : [
+               "37.209.194.10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "X.NIC.INSURANCE"
+      },
+      {
+         "ldhName" : "Y.NIC.INSURANCE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
                "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
             ]
          }
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "insurance",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.INSURANCE."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -325,8 +328,5 @@
          ],
          "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

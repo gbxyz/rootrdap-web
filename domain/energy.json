@@ -1,78 +1,23 @@
 {
-   "handle" : "energy",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ENERGY."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-10-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-03",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:30",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/energy.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "59f95fa7794aa6a855adf22154cee74e7ae44fb25142dbf999174b599df16771",
+            "digestType" : "2",
             "keyTag" : "26965",
             "algorithm" : "8",
-            "digestType" : "2"
+            "digest" : "59f95fa7794aa6a855adf22154cee74e7ae44fb25142dbf999174b599df16771"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "energy",
    "entities" : [
       {
+         "handle" : "energy-registrant",
          "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "energy-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -83,21 +28,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -109,32 +48,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
          ]
       },
       {
          "handle" : "energy-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -196,12 +116,14 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
-         "handle" : "energy-registrant",
+         "handle" : "energy-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -212,15 +134,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -232,22 +160,76 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-10-16",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-03"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:49",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "energy",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ENERGY."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -258,10 +240,8 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "energy",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N0.NIC.ENERGY",
          "ipAddresses" : {
             "v6" : [
@@ -270,22 +250,23 @@
             "v4" : [
                "65.22.24.45"
             ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:45"
-            ],
-            "v4" : [
-               "65.22.25.45"
-            ]
          },
-         "ldhName" : "V0N1.NIC.ENERGY",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.25.45"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:45"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.ENERGY"
+      },
+      {
+         "ldhName" : "V0N2.NIC.ENERGY",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1c:0:0:0:0:45"
@@ -294,10 +275,10 @@
                "65.22.26.45"
             ]
          },
-         "ldhName" : "V0N2.NIC.ENERGY"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N3.NIC.ENERGY",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:f6:0:0:0:0:45"
@@ -306,34 +287,53 @@
                "161.232.12.45"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N3.NIC.ENERGY"
       },
       {
+         "ldhName" : "V2N0.NIC.ENERGY",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:45"
-            ],
             "v4" : [
                "65.22.27.45"
+            ],
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:45"
             ]
-         },
-         "ldhName" : "V2N0.NIC.ENERGY"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V2N1.NIC.ENERGY",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:45"
-            ],
             "v4" : [
                "161.232.13.45"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:45"
             ]
          }
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/energy.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ]

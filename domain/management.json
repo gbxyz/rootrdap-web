@@ -1,9 +1,8 @@
 {
-   "ldhName" : "management",
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "management",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -40,13 +39,10 @@
                ]
             ]
          ],
-         "handle" : "management-registrant"
+         "handle" : "management-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -106,14 +102,13 @@
                ]
             ]
          ],
-         "handle" : "management-technical"
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "management-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "management-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -172,43 +167,16 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "management-administrative"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-27"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:50",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "ldhName" : "management",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "3212da6705ed0149ee2e13781d2708a6add9073dd6e680edb3d76d9e45427590",
@@ -216,104 +184,27 @@
             "digestType" : "2",
             "keyTag" : "2944"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/management.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-12"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "eventDate" : "2021-10-27",
+         "eventAction" : "last changed"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
       }
    ],
    "status" : [
       "active"
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.MANAGEMENT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:14"
-            ],
-            "v4" : [
-               "65.22.20.14"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N1.NIC.MANAGEMENT",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.21.14"
-            ],
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:14"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N2.NIC.MANAGEMENT",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.14"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:14"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.MANAGEMENT",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.10.14"
-            ],
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:14"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.23.14"
-            ],
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:14"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.MANAGEMENT"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.11.14"
-            ],
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:14"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.MANAGEMENT"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "management",
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -331,10 +222,119 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/management.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.MANAGEMENT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:14"
+            ],
+            "v4" : [
+               "65.22.20.14"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V0N1.NIC.MANAGEMENT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:14"
+            ],
+            "v4" : [
+               "65.22.21.14"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:14"
+            ],
+            "v4" : [
+               "65.22.22.14"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.MANAGEMENT"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.14"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:14"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.MANAGEMENT"
+      },
+      {
+         "ldhName" : "V2N0.NIC.MANAGEMENT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.14"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:14"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N1.NIC.MANAGEMENT",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.14"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:14"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "Source"
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ]
 }

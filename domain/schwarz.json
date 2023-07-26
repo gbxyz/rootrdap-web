@@ -1,83 +1,53 @@
 {
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "ldhName" : "A.NIC.SCHWARZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:99"
-            ],
-            "v4" : [
-               "194.169.218.99"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2014-12-04",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:99"
-            ],
-            "v4" : [
-               "185.24.64.99"
-            ]
-         },
-         "ldhName" : "B.NIC.SCHWARZ"
+         "eventDate" : "2021-10-12",
+         "eventAction" : "last changed"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.99"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:99"
-            ]
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "47349",
+            "digestType" : "1",
+            "algorithm" : "7",
+            "digest" : "96d2ae596e2d9525c309c0e69714ae8ed377d5ee"
          },
-         "ldhName" : "C.NIC.SCHWARZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.SCHWARZ",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.99"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:99"
-            ]
+         {
+            "digest" : "39d5a41f51dc9478526a8eceb14c11095d7eee368191936ef8519b15d2f0aab7",
+            "keyTag" : "51361",
+            "digestType" : "2",
+            "algorithm" : "7"
+         },
+         {
+            "digest" : "cc70f9ee2a2e0ae7c59e1dba91cc81265e8861ce",
+            "digestType" : "1",
+            "keyTag" : "51361",
+            "algorithm" : "7"
+         },
+         {
+            "algorithm" : "7",
+            "digestType" : "2",
+            "keyTag" : "47349",
+            "digest" : "cbc33d32a5ff8943aa5736e68e234c7e73829d2942dc5d26a6bb278aa579ef57"
          }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "schwarz",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "schwarz-administrative",
+         "handle" : "schwarz-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -88,16 +58,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Tim Wessäly"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Schwarz IT GmbH & Co. KG"
+                  "Schwarz Domains und Services GmbH & Co. KG"
                ],
                [
                   "adr",
@@ -114,32 +78,17 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49 7132 / 304459"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+49 7132 / 302248"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gtld@mail.schwarz"
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -200,13 +149,12 @@
             ]
          ],
          "handle" : "schwarz-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "schwarz-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -217,10 +165,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Tim Wessäly"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Schwarz Domains und Services GmbH & Co. KG"
+                  "Schwarz IT GmbH & Co. KG"
                ],
                [
                   "adr",
@@ -237,82 +191,126 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49 7132 / 304459"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+49 7132 / 302248"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gtld@mail.schwarz"
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "schwarz-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "1",
-            "algorithm" : "7",
-            "keyTag" : "47349",
-            "digest" : "96d2ae596e2d9525c309c0e69714ae8ed377d5ee"
-         },
-         {
-            "digest" : "39d5a41f51dc9478526a8eceb14c11095d7eee368191936ef8519b15d2f0aab7",
-            "keyTag" : "51361",
-            "algorithm" : "7",
-            "digestType" : "2"
-         },
-         {
-            "keyTag" : "51361",
-            "digestType" : "1",
-            "algorithm" : "7",
-            "digest" : "cc70f9ee2a2e0ae7c59e1dba91cc81265e8861ce"
-         },
-         {
-            "digestType" : "2",
-            "algorithm" : "7",
-            "keyTag" : "47349",
-            "digest" : "cbc33d32a5ff8943aa5736e68e234c7e73829d2942dc5d26a6bb278aa579ef57"
+   "handle" : "schwarz",
+   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.SCHWARZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.99"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:99"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
+      },
+      {
+         "ldhName" : "B.NIC.SCHWARZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:99"
+            ],
+            "v4" : [
+               "185.24.64.99"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.SCHWARZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:99"
+            ],
+            "v4" : [
+               "212.18.248.99"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:99"
+            ],
+            "v4" : [
+               "212.18.249.99"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.SCHWARZ"
+      }
+   ],
    "links" : [
       {
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/schwarz.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
+         "rel" : "related",
          "href" : "https://www.nic.schwarz",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-12-04"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-12"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:42"
-      }
-   ],
-   "ldhName" : "schwarz",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.SCHWARZ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -330,5 +328,7 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "schwarz"
+   "status" : [
+      "active"
+   ]
 }

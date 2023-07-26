@@ -1,111 +1,36 @@
 {
-   "remarks" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AW."
-         ],
-         "title" : "Whois Service"
+         "eventDate" : "1996-02-20",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
+         "eventDate" : "2023-07-18",
+         "eventAction" : "last changed"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "aw",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "201.229.0.26"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "AW01.SETARNET.AW",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "201.229.0.27"
-            ]
-         },
-         "ldhName" : "AW02.SETARNET.AW"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.28.2"
-            ],
-            "v6" : [
-               "2001:678:2c:0:194:0:28:2"
-            ]
-         },
-         "ldhName" : "NS1.DNS.AW",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:20:0:0:0:0:25"
-            ],
-            "v4" : [
-               "194.0.25.25"
-            ]
-         },
-         "ldhName" : "NS3.DNS.AW",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ac:0:0:0:0:201"
-            ],
-            "v4" : [
-               "185.159.199.201"
-            ]
-         },
-         "ldhName" : "NS4.DNS.AW",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "keyTag" : "47978",
+            "digestType" : "2",
+            "digest" : "8704b1c84a372ec2938559c5fd677384cd8c2de72c1da0f56c0162101013bc17"
+         }
+      ]
+   },
+   "ldhName" : "aw",
    "entities" : [
       {
-         "handle" : "aw-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -139,12 +64,15 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "aw-registrant"
       },
       {
+         "handle" : "aw-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -203,18 +131,11 @@
                   "hostmaster@setarnet.aw"
                ]
             ]
-         ],
-         "handle" : "aw-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "aw-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -274,46 +195,125 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "handle" : "aw",
+   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "201.229.0.26"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "AW01.SETARNET.AW"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "201.229.0.27"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "AW02.SETARNET.AW"
+      },
+      {
+         "ldhName" : "NS1.DNS.AW",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:2c:0:194:0:28:2"
+            ],
+            "v4" : [
+               "194.0.28.2"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS3.DNS.AW",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.25"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS4.DNS.AW",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80ac:0:0:0:0:201"
+            ],
+            "v4" : [
+               "185.159.199.201"
+            ]
+         }
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/aw.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
          "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/aw.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "8704b1c84a372ec2938559c5fd677384cd8c2de72c1da0f56c0162101013bc17",
-            "digestType" : "2",
-            "algorithm" : "13",
-            "keyTag" : "47978"
-         }
-      ]
-   },
-   "events" : [
+   "remarks" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1996-02-20"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AW."
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-07-18"
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:03"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "ldhName" : "aw"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

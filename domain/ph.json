@@ -1,58 +1,46 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
+         "ldhName" : "NS2.CUHK.EDU.HK",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2405:3000:3:6:0:0:0:15"
-            ],
             "v4" : [
                "137.189.6.21"
-            ]
-         },
-         "ldhName" : "NS2.CUHK.EDU.HK"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.APNIC.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dd8:12:0:0:0:0:53"
             ],
-            "v4" : [
-               "202.12.31.53"
+            "v6" : [
+               "2405:3000:3:6:0:0:0:15"
             ]
          }
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:4:0:0:0:0:17"
-            ],
             "v4" : [
-               "194.0.1.23"
+               "202.12.31.53"
+            ],
+            "v6" : [
+               "2001:dd8:12:0:0:0:0:53"
             ]
          },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS4.APNIC.NET"
+      },
+      {
          "ldhName" : "PH.COMMUNITYDNS.NET",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "1990-09-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-07-10"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:18",
-         "eventAction" : "last update of RDAP database"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.1.23"
+            ],
+            "v6" : [
+               "2001:678:4:0:0:0:0:17"
+            ]
+         }
       }
    ],
    "links" : [
@@ -62,9 +50,9 @@
          "rel" : "related"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
          "title" : "URL for registration services",
@@ -72,65 +60,62 @@
          "rel" : "related"
       }
    ],
-   "entities" : [
+   "notices" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "DOTPH Administrative Contact"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DotPH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Room 1101, 11/F, Tai Yau Building\n181 Johnston Road\nWanchai\nHong Kong"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+85258033011"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "admin@dot.ph"
-               ]
-            ]
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "handle" : "ph-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         "title" : "About This Service"
       },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://dot.ph"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "ph",
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "1990-09-14",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-07-10",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "entities" : [
       {
          "roles" : [
             "technical"
@@ -186,11 +171,68 @@
                ]
             ]
          ],
-         "handle" : "ph-technical",
+         "objectClassName" : "entity",
+         "handle" : "ph-technical"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "DOTPH Administrative Contact"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DotPH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Room 1101, 11/F, Tai Yau Building\n181 Johnston Road\nWanchai\nHong Kong"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+85258033011"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "admin@dot.ph"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "ph-administrative",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -227,51 +269,9 @@
                ]
             ]
          ],
-         "handle" : "ph-registrant"
+         "handle" : "ph-registrant",
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "ldhName" : "ph",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://dot.ph"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "ph"
+   "ldhName" : "ph"
 }

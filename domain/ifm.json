@@ -1,51 +1,23 @@
 {
-   "handle" : "ifm",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.IFM."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.ifm.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-01-15",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
+      }
+   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "ifm-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -85,6 +57,7 @@
       },
       {
          "handle" : "ifm-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -146,10 +119,10 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "ifm-administrative",
          "objectClassName" : "entity",
          "roles" : [
             "administrative"
@@ -212,21 +185,73 @@
                   "nameservice@ifm.com"
                ]
             ]
-         ],
-         "handle" : "ifm-administrative"
+         ]
       }
    ],
+   "ldhName" : "ifm",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "1062",
-            "digestType" : "2",
+            "digest" : "9f27e38962fe2e8fea42e4ad88f1f90a5a23f6bdb4c8949af772c1430e073745",
             "algorithm" : "10",
-            "digest" : "9f27e38962fe2e8fea42e4ad88f1f90a5a23f6bdb4c8949af772c1430e073745"
+            "keyTag" : "1062",
+            "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "objectClassName" : "domain",
+   "handle" : "ifm",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET"
+      },
+      {
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST24.IRONDNS.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
@@ -234,83 +259,58 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.ifm.com",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
-   "events" : [
+   "notices" : [
       {
-         "eventDate" : "2015-01-15",
-         "eventAction" : "registration"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "eventDate" : "2022-01-07",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:23",
-         "eventAction" : "last update of RDAP database"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
-   "ldhName" : "ifm",
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "remarks" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         },
-         "ldhName" : "ANYCAST10.IRONDNS.NET"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.IFM."
+         ]
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.65.11"
-            ]
-         }
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.ifm.com"
+         ]
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.65.12"
-            ]
-         },
-         "ldhName" : "ANYCAST24.IRONDNS.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         }
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

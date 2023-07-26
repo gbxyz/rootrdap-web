@@ -1,8 +1,29 @@
 {
-   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/vu.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.hello.vu"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:6"
@@ -11,23 +32,23 @@
                "37.209.192.6"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS1.TLDNS.VU"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:6"
-            ],
             "v4" : [
                "37.209.194.6"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:6"
             ]
          },
          "ldhName" : "NS2.TLDNS.VU"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS3.TLDNS.VU",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.6"
@@ -35,7 +56,8 @@
             "v6" : [
                "2001:dcd:3:0:0:0:0:6"
             ]
-         }
+         },
+         "ldhName" : "NS3.TLDNS.VU"
       },
       {
          "ipAddresses" : {
@@ -46,63 +68,18 @@
                "2001:dcd:4:0:0:0:0:6"
             ]
          },
-         "ldhName" : "NS4.TLDNS.VU",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "10",
-            "keyTag" : "50412",
-            "digest" : "49257111e03ad5f8c450f8330f101b87b84f82251fa54ce67c832b7eefa45232"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/vu.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.hello.vu",
-         "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1995-04-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:19"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS4.TLDNS.VU"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -113,48 +90,49 @@
          ]
       }
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DNRS.VU."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.hello.vu"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "vu",
+   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventDate" : "1995-04-10",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "vu",
    "entities" : [
       {
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Kumul Highway\nPort Vila 3547\nVanuatu"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "vu-registrant",
-         "objectClassName" : "entity"
-      },
-      {
          "vcardArray" : [
             "vcard",
             [
@@ -215,9 +193,6 @@
             ]
          ],
          "handle" : "vu-technical",
-         "roles" : [
-            "technical"
-         ],
          "objectClassName" : "entity"
       },
       {
@@ -280,37 +255,62 @@
                ]
             ]
          ],
-         "handle" : "vu-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "vu",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DNRS.VU."
-         ],
-         "title" : "Whois Service"
+         "objectClassName" : "entity",
+         "handle" : "vu-administrative"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.hello.vu"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Kumul Highway\nPort Vila 3547\nVanuatu"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "title" : "Source"
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "vu-registrant"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "vu"
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "keyTag" : "50412",
+            "digestType" : "2",
+            "digest" : "49257111e03ad5f8c450f8330f101b87b84f82251fa54ce67c832b7eefa45232"
+         }
+      ]
+   }
 }

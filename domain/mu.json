@@ -1,72 +1,26 @@
 {
-   "handle" : "mu",
-   "remarks" : [
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MU."
-         ],
-         "title" : "Whois Service"
+         "eventDate" : "1995-10-06",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "Registration information: http://www.nic.mu/"
-         ],
-         "title" : "Remark"
+         "eventAction" : "last changed",
+         "eventDate" : "2017-09-14"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Internet Direct Ltd"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "48 Remy Ollier Street\nPort Louis\nMauritius"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "mu-registrant",
-         "objectClassName" : "entity"
-      },
-      {
          "handle" : "mu-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -125,15 +79,14 @@
                   "tech@nic.mu"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "mu-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -192,20 +145,60 @@
                   "admin@nic.mu"
                ]
             ]
+         ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Internet Direct Ltd"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "48 Remy Ollier Street\nPort Louis\nMauritius"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "handle" : "mu-registrant",
+         "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "mu",
+   "objectClassName" : "domain",
+   "handle" : "mu",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -216,50 +209,18 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "1995-10-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2017-09-14",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:02",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mu.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.mu/",
-         "rel" : "related"
-      }
-   ],
-   "ldhName" : "mu",
    "nameservers" : [
       {
+         "ldhName" : "ANYCAST1.IRONDNS.NET",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "195.253.64.5"
-            ],
             "v6" : [
                "2a01:5b0:4:0:0:0:0:5"
+            ],
+            "v4" : [
+               "195.253.64.5"
             ]
-         },
-         "ldhName" : "ANYCAST1.IRONDNS.NET"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -274,7 +235,7 @@
          "ldhName" : "FORK.STH.DNSNODE.NET"
       },
       {
-         "ldhName" : "UDNS1.TLD.MU",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6010:ad:0:0:1"
@@ -283,11 +244,9 @@
                "204.61.216.10"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "UDNS1.TLD.MU"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "UDNS2.TLD.MU",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:e0:0:0:0:0:98"
@@ -295,10 +254,51 @@
             "v4" : [
                "193.0.9.98"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "UDNS2.TLD.MU"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/mu.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.nic.mu/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MU."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.mu/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ]

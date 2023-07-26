@@ -1,36 +1,99 @@
 {
-   "handle" : "lacaixa",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.LACAIXA."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.lacaixa.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lacaixa.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.lacaixa.com",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         }
+      },
+      {
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.65.12"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
+      }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -41,13 +104,17 @@
          "title" : "Comments"
       }
    ],
-   "port43" : "whois.iana.org",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "ldhName" : "lacaixa",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "lacaixa-administrative",
+         "handle" : "lacaixa-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -58,21 +125,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  ".lacaixa Admin Contact"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "CORE Association"
+                  "CAIXA D'ESTALVIS I PENSIONS DE BARCELONA"
                ],
                [
                   "adr",
                   {
-                     "label" : "Cours de Rive 2\nGeneva CH-1204\nSwitzerland"
+                     "label" : "Av. Diagonal 621-629\nBarcelona 08028\nSpain"
                   },
                   "text",
                   [
@@ -84,34 +145,17 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 22 312 5610"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 22 312 5612"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "secretariat@corenic.org"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "lacaixa-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -171,11 +215,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "lacaixa-technical"
       },
       {
+         "handle" : "lacaixa-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -186,15 +231,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  ".lacaixa Admin Contact"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "CAIXA D'ESTALVIS I PENSIONS DE BARCELONA"
+                  "CORE Association"
                ],
                [
                   "adr",
                   {
-                     "label" : "Av. Diagonal 621-629\nBarcelona 08028\nSpain"
+                     "label" : "Cours de Rive 2\nGeneva CH-1204\nSwitzerland"
                   },
                   "text",
                   [
@@ -206,111 +257,60 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 22 312 5610"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 22 312 5612"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "secretariat@corenic.org"
                ]
             ]
          ],
-         "handle" : "lacaixa-registrant",
          "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/lacaixa.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.lacaixa.com"
+            "administrative"
+         ]
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "1472bab3ddf6ca893b478bb871e9c9a21c0e01d468c9a9117771e29bcc93d1b9",
             "algorithm" : "10",
+            "keyTag" : "36309",
             "digestType" : "2",
-            "keyTag" : "36309"
+            "digest" : "1472bab3ddf6ca893b478bb871e9c9a21c0e01d468c9a9117771e29bcc93d1b9"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
    "events" : [
       {
-         "eventDate" : "2014-07-10",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-10"
       },
       {
          "eventDate" : "2022-01-07",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:38",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
    ],
-   "ldhName" : "lacaixa",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.65.11"
-            ]
-         },
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.12"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ]
-         },
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ]
-         },
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "port43" : "whois.iana.org",
+   "handle" : "lacaixa",
+   "objectClassName" : "domain"
 }

@@ -1,35 +1,30 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PARIS."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://mondomaine.paris.fr/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "paris",
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/paris.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://mondomaine.paris.fr/"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.FR",
          "ipAddresses" : {
             "v6" : [
                "2001:678:c:0:0:0:0:1"
@@ -38,86 +33,43 @@
                "194.0.9.1"
             ]
          },
-         "ldhName" : "D.NIC.FR"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "F.EXT.NIC.FR",
          "ipAddresses" : {
-            "v4" : [
-               "194.146.106.46"
-            ],
             "v6" : [
                "2001:67c:1010:11:0:0:0:53"
+            ],
+            "v4" : [
+               "194.146.106.46"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.EXT.NIC.FR"
       },
       {
          "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "H.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:6:0:0:0:0:2"
-            ],
             "v4" : [
                "195.253.66.2"
+            ],
+            "v6" : [
+               "2a01:5b0:6:0:0:0:0:2"
             ]
          },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "paris",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "13",
-            "keyTag" : "36157",
-            "digest" : "e9aa567b3ffad9aa9f2c6a0bc0b7fed6d338c5150bd5627812a5f9957969c37d"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/paris.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://mondomaine.paris.fr/"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-27"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:16"
+         "ldhName" : "H.EXT.NIC.FR"
       }
    ],
    "notices" : [
@@ -138,13 +90,90 @@
          "title" : "Comments"
       }
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PARIS."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://mondomaine.paris.fr/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "paris",
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-03-27",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
+      }
+   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "paris-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "City of Paris"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ville de Paris\n5 rue Lobau\nParis 75004\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "handle" : "paris-technical",
          "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "paris-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -206,47 +235,8 @@
          ]
       },
       {
-         "handle" : "paris-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "City of Paris"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ville de Paris\n5 rue Lobau\nParis 75004\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
+         "handle" : "paris-administrative",
          "roles" : [
             "administrative"
          ],
@@ -308,9 +298,19 @@
                   "gtld-admin@nic.fr"
                ]
             ]
-         ],
-         "handle" : "paris-administrative"
+         ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "ldhName" : "paris",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e9aa567b3ffad9aa9f2c6a0bc0b7fed6d338c5150bd5627812a5f9957969c37d",
+            "digestType" : "2",
+            "keyTag" : "36157",
+            "algorithm" : "13"
+         }
+      ],
+      "delegationSigned" : true
+   }
 }

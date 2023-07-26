@@ -1,75 +1,9 @@
 {
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/reit.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.reit.com"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "44512",
-            "digestType" : "1",
-            "algorithm" : "8",
-            "digest" : "3451296e8f2ffe68eb14b400a686fe1da12e3941"
-         },
-         {
-            "digest" : "661fbde636973834f5d417d3897ddf8590461da6f020cfaa4274718dd926c523",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "44512"
-         }
-      ]
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-10-23"
-      },
-      {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:31"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "reit",
+   "objectClassName" : "domain",
+   "ldhName" : "reit",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -129,14 +63,18 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "handle" : "reit-administrative",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "reit-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "reit-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -195,8 +133,7 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "vcardArray" : [
@@ -232,16 +169,71 @@
                ]
             ]
          ],
-         "handle" : "reit-registrant",
          "roles" : [
             "registrant"
          ],
+         "handle" : "reit-registrant",
          "objectClassName" : "entity"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "1",
+            "keyTag" : "44512",
+            "algorithm" : "8",
+            "digest" : "3451296e8f2ffe68eb14b400a686fe1da12e3941"
+         },
+         {
+            "digest" : "661fbde636973834f5d417d3897ddf8590461da6f020cfaa4274718dd926c523",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "44512"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-10-23"
+      },
+      {
+         "eventDate" : "2021-10-12",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "port43" : "whois.iana.org",
-   "ldhName" : "reit",
-   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.REIT."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.reit.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -252,23 +244,23 @@
                "194.169.218.38"
             ]
          },
-         "ldhName" : "A.NIC.REIT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.NIC.REIT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:38"
-            ],
-            "v4" : [
-               "185.24.64.38"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.REIT"
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.38"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:38"
+            ]
+         },
+         "ldhName" : "B.NIC.REIT"
+      },
+      {
+         "ldhName" : "C.NIC.REIT",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.38"
@@ -277,9 +269,10 @@
                "2a04:2b00:13ee:0:0:0:0:38"
             ]
          },
-         "ldhName" : "C.NIC.REIT"
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.249.38"
@@ -288,35 +281,42 @@
                "2a04:2b00:13ff:0:0:0:0:38"
             ]
          },
-         "ldhName" : "D.NIC.REIT",
-         "objectClassName" : "nameserver"
+         "ldhName" : "D.NIC.REIT"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "reit",
-   "remarks" : [
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.REIT."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/reit.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.reit.com",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
          "description" : [
-            "Registration information: http://www.reit.com"
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

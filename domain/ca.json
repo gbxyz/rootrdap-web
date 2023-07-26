@@ -1,55 +1,38 @@
 {
-   "ldhName" : "ca",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "2af70b49c542b7dacec2d4754651598b740ef1d79e7a839b32bc7f7e96039a2c",
-            "keyTag" : "43787",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/ca.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.cira.ca/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1987-05-14"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.CIRA.CA."
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-11-09"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.cira.ca/"
+         ]
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:36"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -60,10 +43,134 @@
          "title" : "Comments"
       }
    ],
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ca.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.cira.ca/",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "ANY.CA-SERVERS.CA",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:a7:0:0:0:0:2"
+            ],
+            "v4" : [
+               "199.4.144.2"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:8053:0:0:0:0:2"
+            ],
+            "v4" : [
+               "185.159.196.2"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.CA-SERVERS.CA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:83:0:0:0:0:1"
+            ],
+            "v4" : [
+               "198.182.167.1"
+            ]
+         },
+         "ldhName" : "J.CA-SERVERS.CA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "199.253.250.68"
+            ],
+            "v6" : [
+               "2620:10a:80ba:0:0:0:0:68"
+            ]
+         },
+         "ldhName" : "X.CA-SERVERS.CA"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "ca",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "43787",
+            "digestType" : "2",
+            "digest" : "2af70b49c542b7dacec2d4754651598b740ef1d79e7a839b32bc7f7e96039a2c"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "ca",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Canadian Internet Registration Authority (CIRA) Autorité Canadienne pour les enregistrements Internet (ACEI)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "979 Bank Street, Suite 400\nOttawa ON K1S 5K5\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "ca-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "ca-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -122,54 +229,12 @@
                   "admin-dns@cira.ca"
                ]
             ]
-         ],
-         "handle" : "ca-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Canadian Internet Registration Authority (CIRA) Autorité Canadienne pour les enregistrements Internet (ACEI)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "979 Bank Street, Suite 400\nOttawa ON K1S 5K5\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "ca-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "ca-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -229,88 +294,23 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "ca-administrative"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "events" : [
       {
-         "ldhName" : "ANY.CA-SERVERS.CA",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:a7:0:0:0:0:2"
-            ],
-            "v4" : [
-               "199.4.144.2"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "1987-05-14",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:8053:0:0:0:0:2"
-            ],
-            "v4" : [
-               "185.159.196.2"
-            ]
-         },
-         "ldhName" : "C.CA-SERVERS.CA"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-09"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "J.CA-SERVERS.CA",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:83:0:0:0:0:1"
-            ],
-            "v4" : [
-               "198.182.167.1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ba:0:0:0:0:68"
-            ],
-            "v4" : [
-               "199.253.250.68"
-            ]
-         },
-         "ldhName" : "X.CA-SERVERS.CA",
-         "objectClassName" : "nameserver"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ],
-   "handle" : "ca",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.CIRA.CA."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.cira.ca/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ]
+   "port43" : "whois.iana.org"
 }

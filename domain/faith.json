@@ -1,112 +1,20 @@
 {
-   "handle" : "faith",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FAITH."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.faith"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-02-05"
       },
       {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
-         "eventDate" : "2023-07-26T12:29:37",
+         "eventDate" : "2023-07-26T13:16:49",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/faith.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.faith"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "24400",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "272e92a109875aebba7ca98ac8b593c6a27059f58ea75d4b741a3452a63c97f4"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "dot Faith Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "faith-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
       {
          "vcardArray" : [
             "vcard",
@@ -167,14 +75,16 @@
                ]
             ]
          ],
-         "handle" : "faith-technical",
          "roles" : [
             "technical"
          ],
+         "handle" : "faith-technical",
          "objectClassName" : "entity"
       },
       {
-         "handle" : "faith-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -226,45 +136,79 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
+         "handle" : "faith-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "dot Faith Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "faith-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "ldhName" : "faith",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "24400",
+            "algorithm" : "8",
+            "digest" : "272e92a109875aebba7ca98ac8b593c6a27059f58ea75d4b741a3452a63c97f4"
+         }
+      ]
+   },
+   "handle" : "faith",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "A.NIC.FAITH",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
             ]
-         },
-         "ldhName" : "A.NIC.FAITH",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "B.NIC.FAITH",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:2:0:0:0:0:10"
@@ -273,11 +217,9 @@
                "37.209.194.10"
             ]
          },
-         "ldhName" : "B.NIC.FAITH",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.FAITH",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:3:0:0:0:0:10"
@@ -286,10 +228,10 @@
                "37.209.196.10"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.FAITH"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS1.DNS.NIC.FAITH",
          "ipAddresses" : {
             "v4" : [
@@ -298,10 +240,10 @@
             "v6" : [
                "2610:a1:1071:0:0:0:0:36"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.FAITH",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1072:0:0:0:0:36"
@@ -310,23 +252,81 @@
                "156.154.145.54"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.FAITH"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.FAITH",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:36"
-            ],
             "v4" : [
                "156.154.159.54"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:36"
             ]
          },
-         "ldhName" : "NS3.DNS.NIC.FAITH"
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/faith.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://nic.faith",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FAITH."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.faith"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

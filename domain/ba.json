@@ -1,10 +1,85 @@
 {
-   "remarks" : [
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ba.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.nic.ba"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.130.35.5"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS.BA"
+      },
+      {
+         "ldhName" : "SAVA.UTIC.NET.BA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.130.35.3"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "UNA.UTIC.NET.BA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6117:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.117"
+            ]
+         }
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
       {
          "description" : [
-            "The port-43 whois service for this TLD is ."
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "title" : "Whois Service"
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
       },
       {
          "description" : [
@@ -19,71 +94,31 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "ba",
    "objectClassName" : "domain",
-   "nameservers" : [
+   "handle" : "ba",
+   "events" : [
       {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "195.130.35.5"
-            ]
-         },
-         "ldhName" : "NS.BA",
-         "objectClassName" : "nameserver"
+         "eventDate" : "1996-08-14",
+         "eventAction" : "registration"
       },
       {
-         "ldhName" : "SAVA.UTIC.NET.BA",
-         "ipAddresses" : {
-            "v4" : [
-               "195.130.35.3"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2020-02-01",
+         "eventAction" : "last changed"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6117:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.117"
-            ]
-         },
-         "ldhName" : "UNA.UTIC.NET.BA",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
+   "ldhName" : "ba",
    "entities" : [
       {
+         "handle" : "ba-registrant",
          "objectClassName" : "entity",
-         "handle" : "ba-administrative",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -94,16 +129,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Aida Radielovic"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "University Teleinformatic Centre (UTIC)"
+                  "Universtiy Telinformatic Centre (UTIC)"
                ],
                [
                   "adr",
@@ -120,36 +149,11 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+387 33 560 240"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+387 33 213 773"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dnsadmin@utic.net.ba"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "ba-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -211,11 +215,11 @@
          ],
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "ba-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "ba-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -226,10 +230,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Aida Radielovic"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Universtiy Telinformatic Centre (UTIC)"
+                  "University Teleinformatic Centre (UTIC)"
                ],
                [
                   "adr",
@@ -246,44 +256,34 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+387 33 560 240"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+387 33 213 773"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dnsadmin@utic.net.ba"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
-         ]
+            "administrative"
+         ],
+         "handle" : "ba-administrative",
+         "objectClassName" : "entity"
       }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ba.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.ba"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1996-08-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-02-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:05",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "ba"
+   ]
 }

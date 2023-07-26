@@ -1,18 +1,39 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.LIFEINSURANCE"
       },
       {
@@ -28,19 +49,18 @@
          "ldhName" : "B.NIC.LIFEINSURANCE"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.LIFEINSURANCE",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
             ]
          },
-         "ldhName" : "C.NIC.LIFEINSURANCE"
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS1.DNS.NIC.LIFEINSURANCE",
          "ipAddresses" : {
             "v6" : [
@@ -49,42 +69,104 @@
             "v4" : [
                "156.154.144.102"
             ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.LIFEINSURANCE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.102"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:66"
+            ]
          }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:66"
-            ],
-            "v4" : [
-               "156.154.145.102"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.LIFEINSURANCE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.102"
-            ],
             "v6" : [
                "2610:a1:1073:0:0:0:0:66"
+            ],
+            "v4" : [
+               "156.154.159.102"
             ]
          },
-         "ldhName" : "NS3.DNS.NIC.LIFEINSURANCE",
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS3.DNS.NIC.LIFEINSURANCE"
       }
    ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/lifeinsurance.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://acli.com",
+         "rel" : "related"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://acli.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "lifeinsurance",
    "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-07-09",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e0fb583d29dfe85b4d42ca9b0fc5eb8dacba63a801af5b8515921702d2c3fa29",
+            "keyTag" : "38941",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "lifeinsurance",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "handle" : "lifeinsurance-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -143,50 +225,17 @@
                   "iana@registry.godaddy"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "lifeinsurance-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "American Council of Life Insurers"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "101 Constitution Avenue NW\nWashington DC 20001\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
          "handle" : "lifeinsurance-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -245,96 +294,47 @@
                   "webadmin@acli.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-07-09",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:43"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/lifeinsurance.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://acli.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "38941",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "e0fb583d29dfe85b4d42ca9b0fc5eb8dacba63a801af5b8515921702d2c3fa29"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
          ]
       },
       {
-         "description" : [
-            "Registration information: http://acli.com"
+         "objectClassName" : "entity",
+         "handle" : "lifeinsurance-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "American Council of Life Insurers"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "101 Constitution Avenue NW\nWashington DC 20001\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "roles" : [
+            "registrant"
+         ]
       }
-   ],
-   "handle" : "lifeinsurance"
+   ]
 }

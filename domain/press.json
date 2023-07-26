@@ -1,14 +1,10 @@
 {
-   "handle" : "press",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.PRESS."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -23,53 +19,71 @@
          "title" : "Source"
       }
    ],
-   "ldhName" : "press",
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.PRESS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.34"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:34"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.PRESS",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.34"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:34"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:34"
+            ],
+            "v4" : [
+               "212.18.248.34"
+            ]
+         },
+         "ldhName" : "E.NIC.PRESS"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:34"
+            ],
+            "v4" : [
+               "212.18.249.34"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.NIC.PRESS"
+      }
+   ],
    "links" : [
       {
+         "title" : "Entry for this TLD in the Root Zone Database",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/press.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "href" : "https://www.iana.org/domains/root/db/press.html"
       },
       {
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "href" : "http://radix.website",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "1",
-            "algorithm" : "8",
-            "keyTag" : "4289",
-            "digest" : "2efc540d13139b56fc1041247b275bc5cc6de009"
-         },
-         {
-            "digest" : "03a4602f454dd05e3ef2b7a9507f7e4eeb78ba9259e35da7c3b20fd8da43341a",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "4289"
-         }
-      ]
-   },
-   "events" : [
-      {
-         "eventDate" : "2014-05-22",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:24"
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -90,9 +104,82 @@
          "title" : "Comments"
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "CTO"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CentralNic"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Saddlers House, 4th Floor\n44 Gutter Lane\nLondon EC2V 6BR\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 20 33 88 0600"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+44 20 33 88 0601"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld.ops@centralnic.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity",
+         "handle" : "press-technical"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "press-administrative",
          "roles" : [
             "administrative"
          ],
@@ -154,12 +241,14 @@
                   "admin@radixregistry.com"
                ]
             ]
-         ],
-         "handle" : "press-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "press-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -192,131 +281,42 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
+      }
+   ],
+   "ldhName" : "press",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "1",
+            "keyTag" : "4289",
+            "algorithm" : "8",
+            "digest" : "2efc540d13139b56fc1041247b275bc5cc6de009"
+         },
+         {
+            "algorithm" : "8",
+            "keyTag" : "4289",
+            "digestType" : "2",
+            "digest" : "03a4602f454dd05e3ef2b7a9507f7e4eeb78ba9259e35da7c3b20fd8da43341a"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2014-05-22",
+         "eventAction" : "registration"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "CTO"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CentralNic"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Saddlers House, 4th Floor\n44 Gutter Lane\nLondon EC2V 6BR\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 20 33 88 0600"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+44 20 33 88 0601"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld.ops@centralnic.com"
-               ]
-            ]
-         ],
-         "handle" : "press-technical",
-         "objectClassName" : "entity"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.34"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:34"
-            ]
-         },
-         "ldhName" : "A.NIC.PRESS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:34"
-            ],
-            "v4" : [
-               "185.24.64.34"
-            ]
-         },
-         "ldhName" : "B.NIC.PRESS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.34"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:34"
-            ]
-         },
-         "ldhName" : "E.NIC.PRESS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.NIC.PRESS",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.34"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:34"
-            ]
-         }
-      }
-   ]
+   "handle" : "press"
 }

@@ -1,131 +1,20 @@
 {
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.KW",
-         "ipAddresses" : {
-            "v4" : [
-               "54.228.209.46"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "ldhName" : "B.NIC.KW",
-         "ipAddresses" : {
-            "v4" : [
-               "168.187.100.84"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:3f1:3032:8001:0:0:0:135"
-            ],
-            "v4" : [
-               "194.58.198.135"
-            ]
-         },
-         "ldhName" : "C.NIC.KW"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.KW",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:3f0:400:8001:0:0:0:135"
-            ],
-            "v4" : [
-               "185.42.137.135"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6118:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.118"
-            ]
-         },
-         "ldhName" : "PCH.NIC.KW"
-      }
-   ],
-   "ldhName" : "kw",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "c5646a4e1bee8c2699d3cc3c4f597f8767b85a134fe5ee5dfe8b3d25b1534d3a",
             "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "53599"
+            "keyTag" : "53599",
+            "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/kw.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.kw"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1992-10-26"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:38",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "kw",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "kw-administrative",
          "roles" : [
             "administrative"
          ],
@@ -187,54 +76,11 @@
                   "nic.admin@citra.gov.kw"
                ]
             ]
-         ],
-         "handle" : "kw-administrative"
+         ]
       },
       {
-         "handle" : "kw-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Communications and Information Technology Regulatory Authority"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Khaled Ibn Alwaleed street, block 6, plot 1, aldhow tower, 12th floor\nAl Asima Sharq 15300\nKuwait"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
          "handle" : "kw-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -294,12 +140,68 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Communications and Information Technology Regulatory Authority"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Khaled Ibn Alwaleed street, block 6, plot 1, aldhow tower, 12th floor\nAl Asima Sharq 15300\nKuwait"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "kw-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1992-10-26"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
+      }
    ],
+   "handle" : "kw",
+   "objectClassName" : "domain",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -320,5 +222,103 @@
          ]
       }
    ],
-   "handle" : "kw"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "54.228.209.46"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.KW"
+      },
+      {
+         "ldhName" : "B.NIC.KW",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "168.187.100.84"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.58.198.135"
+            ],
+            "v6" : [
+               "2a01:3f1:3032:8001:0:0:0:135"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.KW"
+      },
+      {
+         "ldhName" : "D.NIC.KW",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:3f0:400:8001:0:0:0:135"
+            ],
+            "v4" : [
+               "185.42.137.135"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "PCH.NIC.KW",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.118"
+            ],
+            "v6" : [
+               "2001:500:14:6118:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/kw.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.nic.kw",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

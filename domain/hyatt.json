@@ -1,128 +1,8 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A.NIC.HYATT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "ldhName" : "B.NIC.HYATT"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "ldhName" : "C.NIC.HYATT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:4e"
-            ],
-            "v4" : [
-               "156.154.144.78"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.HYATT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.HYATT",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.78"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:4e"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:4e"
-            ],
-            "v4" : [
-               "156.154.159.78"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.HYATT",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "hyatt",
-   "events" : [
-      {
-         "eventDate" : "2016-07-22",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:21",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "34852",
-            "digest" : "b21957ebb857e894b0fc407ac189cbab466804f560ad5815e9d1af829a566424"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/hyatt.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.hyatt.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "hyatt-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -174,58 +54,11 @@
                ]
             ]
          ],
-         "handle" : "hyatt-administrative",
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Hyatt GTLD, L.L.C."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "71 S. Wacker Drive\nChicago IL 60606\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "hyatt-registrant",
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "hyatt-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -284,17 +117,202 @@
                   "iana@registry.godaddy"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "hyatt-technical"
+      },
+      {
+         "handle" : "hyatt-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Hyatt GTLD, L.L.C."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "71 S. Wacker Drive\nChicago IL 60606\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
+      }
+   ],
+   "ldhName" : "hyatt",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "34852",
+            "digest" : "b21957ebb857e894b0fc407ac189cbab466804f560ad5815e9d1af829a566424"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "2016-07-22",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:50",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "handle" : "hyatt",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.hyatt.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.HYATT"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.HYATT"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.HYATT"
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.HYATT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.78"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:4e"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.HYATT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:4e"
+            ],
+            "v4" : [
+               "156.154.145.78"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.HYATT",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:4e"
+            ],
+            "v4" : [
+               "156.154.159.78"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/hyatt.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.hyatt.com",
+         "rel" : "related"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -305,28 +323,10 @@
          "title" : "Comments"
       }
    ],
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.hyatt.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "hyatt"
+   ]
 }

@@ -2,32 +2,48 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PUB."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "pub",
    "status" : [
       "active"
    ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/pub.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "V0N0.NIC.PUB",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1e:0:0:0:0:7"
@@ -35,18 +51,16 @@
             "v4" : [
                "65.22.28.7"
             ]
-         },
-         "ldhName" : "V0N0.NIC.PUB",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.29.7"
-            ],
             "v6" : [
                "2a01:8840:1f:0:0:0:0:7"
+            ],
+            "v4" : [
+               "65.22.29.7"
             ]
          },
          "ldhName" : "V0N1.NIC.PUB"
@@ -65,17 +79,18 @@
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.PUB",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.14.7"
-            ],
             "v6" : [
                "2a01:8840:f8:0:0:0:0:7"
+            ],
+            "v4" : [
+               "161.232.14.7"
             ]
-         }
+         },
+         "ldhName" : "V0N3.NIC.PUB"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:21:0:0:0:0:7"
@@ -84,27 +99,73 @@
                "65.22.31.7"
             ]
          },
-         "ldhName" : "V2N0.NIC.PUB",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V2N0.NIC.PUB"
       },
       {
-         "ldhName" : "V2N1.NIC.PUB",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.15.7"
-            ],
             "v6" : [
                "2a01:8840:f9:0:0:0:0:7"
+            ],
+            "v4" : [
+               "161.232.15.7"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.PUB"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PUB."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "objectClassName" : "domain",
-   "ldhName" : "pub",
+   "handle" : "pub",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-20"
+      },
+      {
+         "eventDate" : "2021-11-10",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "3766469c89af5eca8e8c5852e359396294057677c5ae8ca9c641422d7237bb4f",
+            "keyTag" : "53776",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "pub",
    "entities" : [
       {
+         "handle" : "pub-administrative",
          "objectClassName" : "entity",
          "roles" : [
             "administrative"
@@ -167,12 +228,12 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "handle" : "pub-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "pub-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -232,9 +293,8 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
+         "handle" : "pub-technical",
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
@@ -276,65 +336,5 @@
          "handle" : "pub-registrant",
          "objectClassName" : "entity"
       }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-02-20",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:27"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pub.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "3766469c89af5eca8e8c5852e359396294057677c5ae8ca9c641422d7237bb4f",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "53776"
-         }
-      ]
-   }
+   ]
 }

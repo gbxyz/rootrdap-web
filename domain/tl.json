@@ -1,23 +1,65 @@
 {
-   "events" : [
+   "remarks" : [
       {
-         "eventDate" : "2005-03-23",
-         "eventAction" : "registration"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TL."
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-11-21"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.tl"
+         ]
       },
       {
-         "eventDate" : "2023-07-26T12:32:05",
-         "eventAction" : "last update of RDAP database"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NS.ANYCAST.NIC.TL",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6019:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.19"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
+            ],
+            "v4" : [
+               "185.38.108.108"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.ANYCASTDNS.CZ"
+      },
+      {
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.28.194.194"
+            ],
+            "v6" : []
+         }
       }
    ],
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/tl.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
          "rel" : "related",
@@ -25,26 +67,80 @@
          "title" : "About RDAP"
       },
       {
-         "href" : "http://www.nic.tl",
          "title" : "URL for registration services",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://www.nic.tl"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "bc0412d59817424a34040676f1ae1205b1f33fc9510e7e30114711851ffcede4",
-            "keyTag" : "25307",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "ldhName" : "tl",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "tl-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Autoridade Nacional de Comunicações"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Avenida Bispo de Medeiros 8\nDili 10000\nTimor-Leste"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "tl-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -96,53 +192,16 @@
                ]
             ]
          ],
-         "handle" : "tl-technical",
          "roles" : [
             "technical"
          ]
       },
       {
          "objectClassName" : "entity",
-         "handle" : "tl-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Autoridade Nacional de Comunicações"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Avenida Bispo de Medeiros 8\nDili 10000\nTimor-Leste"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
+         "handle" : "tl-administrative",
          "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,94 +252,35 @@
                   "cctld@anc.tl"
                ]
             ]
-         ],
-         "handle" : "tl-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "notices" : [
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "25307",
+            "digestType" : "2",
+            "digest" : "bc0412d59817424a34040676f1ae1205b1f33fc9510e7e30114711851ffcede4"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "2005-03-23",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventDate" : "2022-11-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
       }
    ],
-   "ldhName" : "tl",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS.ANYCAST.NIC.TL",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6019:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.19"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
-            "v4" : [
-               "185.38.108.108"
-            ]
-         },
-         "ldhName" : "NS1.ANYCASTDNS.CZ"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v4" : [
-               "185.28.194.194"
-            ],
-            "v6" : []
-         }
-      }
-   ],
+   "port43" : "whois.iana.org",
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "handle" : "tl",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TL."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nic.tl"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "handle" : "tl"
 }

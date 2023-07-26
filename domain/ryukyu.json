@@ -1,93 +1,49 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RYUKYU."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.gmo-registry.com/en/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "ryukyu",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.4"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.196.4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
+   "handle" : "ryukyu",
    "ldhName" : "ryukyu",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
-            "technical"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "BRregistry, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "ryukyu-registrant"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -147,50 +103,15 @@
                ]
             ]
          ],
-         "handle" : "ryukyu-technical",
-         "objectClassName" : "entity"
-      },
-      {
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "handle" : "ryukyu-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "BRregistry, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "ryukyu-technical"
       },
       {
+         "handle" : "ryukyu-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -252,9 +173,125 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
+         ]
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "52505",
+            "digest" : "a19f9645f1832c3a1550f695dba8f68e26daa32be47967f71b29a4a865d834b8"
+         }
+      ]
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-03-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2019-08-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RYUKYU."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information:"
          ],
-         "handle" : "ryukyu-administrative",
-         "objectClassName" : "entity"
+         "title" : "Remark"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://www.gmo-registry.com/en/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.194.4"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.GMOREGISTRY.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "37.209.196.4"
+            ]
+         },
+         "ldhName" : "K.GMOREGISTRY.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ryukyu.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       }
    ],
    "notices" : [
@@ -267,49 +304,12 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-13"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:37"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "52505",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "a19f9645f1832c3a1550f695dba8f68e26daa32be47967f71b29a4a865d834b8"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ryukyu.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         ]
       }
    ]
 }

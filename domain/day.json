@@ -1,4 +1,10 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -19,13 +25,27 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "handle" : "day",
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:32:0:0:0:69"
@@ -34,22 +54,21 @@
                "216.239.32.105"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
       },
       {
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
             "v4" : [
                "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
             ]
-         },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v6" : [
@@ -58,19 +77,20 @@
             "v4" : [
                "216.239.36.105"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "216.239.38.105"
-            ],
             "v6" : [
                "2001:4860:4802:38:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.38.105"
             ]
-         },
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
@@ -85,33 +105,15 @@
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-06-12"
-      },
-      {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:12",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/day.html"
+         "href" : "https://www.iana.org/domains/root/db/day.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org"
       },
       {
@@ -120,129 +122,22 @@
          "title" : "URL for registration services"
       }
    ],
+   "handle" : "day",
+   "objectClassName" : "domain",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "bcd63da0f1195997a0ea25780e7b0675ec7877052cd6fe837e8f112c1fad3886",
+            "digestType" : "2",
             "keyTag" : "41746",
             "algorithm" : "8",
-            "digestType" : "2"
+            "digest" : "bcd63da0f1195997a0ea25780e7b0675ec7877052cd6fe837e8f112c1fad3886"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
+   "ldhName" : "day",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "day-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Google Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 404 978 8419"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 650 492 5631"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-contact@google.com"
-               ]
-            ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "day-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -302,27 +197,132 @@
                ]
             ]
          ],
-         "handle" : "day-technical"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+         "roles" : [
+            "technical"
          ],
-         "title" : "About This Service"
+         "handle" : "day-technical",
+         "objectClassName" : "entity"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "day-administrative",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Google Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 404 978 8419"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 650 492 5631"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-contact@google.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "day-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
-   "ldhName" : "day"
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-06-12",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:48"
+      }
+   ]
 }

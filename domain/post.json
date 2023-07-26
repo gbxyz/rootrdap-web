@@ -1,54 +1,11 @@
 {
-   "ldhName" : "post",
-   "events" : [
-      {
-         "eventDate" : "2012-08-07",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-12-09"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:24"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "35725",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "5b8265dc3f1952980ab5369253c4a4ed9d674d91b8c39360b22a7deaef168fe0"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/post.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.upu.int",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "post-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "post-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -111,6 +68,7 @@
       },
       {
          "handle" : "post-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -172,8 +130,7 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "roles" : [
@@ -216,37 +173,81 @@
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
+   "ldhName" : "post",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "35725",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "5b8265dc3f1952980ab5369253c4a4ed9d674d91b8c39360b22a7deaef168fe0"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2012-08-07"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-09"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
+   "port43" : "whois.iana.org",
+   "handle" : "post",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DOTPOSTREGISTRY.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.upu.int"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/post.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.upu.int",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
          "ldhName" : "A0.POST.AFILIAS-NST.INFO",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:0:0:0:0:0:1"
-            ],
             "v4" : [
                "65.22.0.1"
+            ],
+            "v6" : [
+               "2a01:8840:0:0:0:0:0:1"
             ]
          },
          "objectClassName" : "nameserver"
@@ -260,11 +261,10 @@
                "65.22.4.1"
             ]
          },
-         "ldhName" : "A2.POST.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.POST.AFILIAS-NST.INFO"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.1.1"
@@ -273,10 +273,12 @@
                "2a01:8840:1:0:0:0:0:1"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "B0.POST.AFILIAS-NST.ORG"
       },
       {
          "ldhName" : "B2.POST.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.5.1"
@@ -284,57 +286,55 @@
             "v6" : [
                "2a01:8840:5:0:0:0:0:1"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "C0.POST.AFILIAS-NST.INFO",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.2.1"
-            ],
             "v6" : [
                "2a01:8840:2:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.2.1"
             ]
          },
-         "ldhName" : "C0.POST.AFILIAS-NST.INFO"
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "D0.POST.AFILIAS-NST.ORG",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.3.1"
-            ],
             "v6" : [
                "2a01:8840:3:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.3.1"
             ]
          },
-         "ldhName" : "D0.POST.AFILIAS-NST.ORG",
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "post",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "notices" : [
       {
-         "title" : "Whois Service",
          "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DOTPOSTREGISTRY.NET."
-         ]
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Remark",
+         "title" : "Comments",
          "description" : [
-            "Registration information: http://www.upu.int"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

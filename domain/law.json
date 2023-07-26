@@ -1,111 +1,62 @@
 {
-   "remarks" : [
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LAW."
-         ],
-         "title" : "Whois Service"
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-18"
       },
       {
-         "description" : [
-            "Registration information: http://nic.law/"
-         ],
-         "title" : "Remark"
+         "eventDate" : "2022-12-01",
+         "eventAction" : "last changed"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "law",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         },
-         "ldhName" : "A.NIC.LAW"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.LAW",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C.NIC.LAW",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
-         },
-         "ldhName" : "X.NIC.LAW"
-      },
-      {
-         "ldhName" : "Y.NIC.LAW",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "Z.NIC.LAW",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "law",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "law-registrant",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Registry Services, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -165,51 +116,13 @@
                ]
             ]
          ],
-         "handle" : "law-administrative",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "law-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Registry Services, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
+         "objectClassName" : "entity",
+         "handle" : "law-administrative"
       },
       {
-         "handle" : "law-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -272,53 +185,23 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-06-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-12-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:40"
+         "objectClassName" : "entity",
+         "handle" : "law-technical"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "ae36939d5f3629784f63c7cc2e5f7643efd9ef7533a5049420bd067f4eeab51c",
             "digestType" : "2",
-            "algorithm" : "8",
             "keyTag" : "16534",
-            "digest" : "ae36939d5f3629784f63c7cc2e5f7643efd9ef7533a5049420bd067f4eeab51c"
+            "algorithm" : "8"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
+   "handle" : "law",
+   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
@@ -326,15 +209,132 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
+         "title" : "URL for registration services",
          "href" : "http://nic.law/",
-         "title" : "URL for registration services"
+         "rel" : "related"
       }
    ],
-   "ldhName" : "law"
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.LAW",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.LAW"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         },
+         "ldhName" : "C.NIC.LAW"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "X.NIC.LAW"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.173.82"
+            ]
+         },
+         "ldhName" : "Y.NIC.LAW"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "Z.NIC.LAW"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LAW."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.law/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

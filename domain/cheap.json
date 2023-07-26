@@ -1,131 +1,26 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CHEAP."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "cheap",
-   "status" : [
-      "active"
-   ],
    "objectClassName" : "domain",
-   "nameservers" : [
+   "handle" : "cheap",
+   "events" : [
       {
-         "ldhName" : "V0N0.NIC.CHEAP",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:26"
-            ],
-            "v4" : [
-               "65.22.20.26"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2014-01-09",
+         "eventAction" : "registration"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.21.26"
-            ],
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:26"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.CHEAP"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-27"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:26"
-            ],
-            "v4" : [
-               "65.22.22.26"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.CHEAP"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.10.26"
-            ],
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:26"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.CHEAP",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N0.NIC.CHEAP",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.23.26"
-            ],
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:26"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N1.NIC.CHEAP",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.11.26"
-            ],
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:26"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:48"
       }
    ],
+   "port43" : "whois.iana.org",
    "ldhName" : "cheap",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "cheap-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -159,9 +54,16 @@
                ]
             ]
          ],
-         "handle" : "cheap-registrant"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "cheap-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -220,18 +122,9 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "cheap-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -291,10 +184,30 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
          "handle" : "cheap-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "48844",
+            "algorithm" : "8",
+            "digest" : "6956c9cfad73cd2bc1f638fe272fbab440593accee4cc6f9bcc60c3c172218ab"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "links" : [
       {
          "rel" : "related",
@@ -302,9 +215,9 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
@@ -312,29 +225,116 @@
          "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "48844",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "6956c9cfad73cd2bc1f638fe272fbab440593accee4cc6f9bcc60c3c172218ab"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.20.26"
+            ],
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:26"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.CHEAP"
+      },
+      {
+         "ldhName" : "V0N1.NIC.CHEAP",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.21.26"
+            ],
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:26"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-01-09"
       },
       {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:26"
+            ],
+            "v4" : [
+               "65.22.22.26"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.CHEAP"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:49"
+         "ldhName" : "V0N3.NIC.CHEAP",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:26"
+            ],
+            "v4" : [
+               "161.232.10.26"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V2N0.NIC.CHEAP",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.26"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:26"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.26"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:26"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.CHEAP"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CHEAP."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ]
 }

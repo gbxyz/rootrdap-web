@@ -1,79 +1,29 @@
 {
    "objectClassName" : "domain",
-   "nameservers" : [
+   "handle" : "star",
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:36:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.56.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.STAR"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.59.9"
-            ],
-            "v6" : [
-               "2a01:8840:39:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A2.NIC.STAR",
-         "objectClassName" : "nameserver"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-04-29"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:37:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.57.9"
-            ]
-         },
-         "ldhName" : "B0.NIC.STAR"
-      },
-      {
-         "ldhName" : "C0.NIC.STAR",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:38:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.58.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "star",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "star-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -132,14 +82,9 @@
                   "gtl.admin@startv.com"
                ]
             ]
-         ],
-         "handle" : "star-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -202,13 +147,13 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
          "handle" : "star-technical"
       },
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "star-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -242,31 +187,87 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "star-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "306c152bc34676bf135928882fc21c5702bf37c893f71d4df51e3a84ad6b62e1",
+            "digestType" : "2",
             "keyTag" : "59872",
-            "algorithm" : "8",
-            "digestType" : "2"
+            "algorithm" : "8"
          }
       ]
    },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.STAR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.56.9"
+            ],
+            "v6" : [
+               "2a01:8840:36:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "A2.NIC.STAR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:39:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.59.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B0.NIC.STAR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:37:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.57.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C0.NIC.STAR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:38:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.58.9"
+            ]
+         }
+      }
+   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/star.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
@@ -274,21 +275,24 @@
          "title" : "URL for registration services"
       }
    ],
-   "events" : [
+   "notices" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-12-10"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-04-29"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:54",
-         "eventAction" : "last update of RDAP database"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
-   "ldhName" : "star",
    "remarks" : [
       {
          "description" : [
@@ -297,20 +301,16 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.startv.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "star"
+   ]
 }

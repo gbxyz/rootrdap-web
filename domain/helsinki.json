@@ -1,107 +1,8 @@
 {
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d6:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.220.33"
-            ]
-         },
-         "ldhName" : "A0.NIC.HELSINKI",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "A2.NIC.HELSINKI",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d9:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.223.33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.HELSINKI",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.221.33"
-            ],
-            "v6" : [
-               "2a01:8840:d7:0:0:0:0:33"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C0.NIC.HELSINKI",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d8:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.222.33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-12-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-06-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:16"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "069a71ef4b12265a44802fcf51b4531dc3835f8fbb68874fbf3565144a12770d",
-            "keyTag" : "31639",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/helsinki.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.hel.fi",
-         "rel" : "related"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "helsinki-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -161,9 +62,13 @@
                ]
             ]
          ],
-         "handle" : "helsinki-administrative"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "helsinki-technical",
          "roles" : [
             "technical"
          ],
@@ -225,11 +130,12 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "handle" : "helsinki-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -264,10 +170,123 @@
             ]
          ],
          "handle" : "helsinki-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity"
+      }
+   ],
+   "ldhName" : "helsinki",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "069a71ef4b12265a44802fcf51b4531dc3835f8fbb68874fbf3565144a12770d",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "31639"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
+      },
+      {
+         "eventDate" : "2021-06-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "handle" : "helsinki",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.HELSINKI."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.hel.fi"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.HELSINKI",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:d6:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.220.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.223.33"
+            ],
+            "v6" : [
+               "2a01:8840:d9:0:0:0:0:33"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.HELSINKI"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.221.33"
+            ],
+            "v6" : [
+               "2a01:8840:d7:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "B0.NIC.HELSINKI"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.222.33"
+            ],
+            "v6" : [
+               "2a01:8840:d8:0:0:0:0:33"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.HELSINKI"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/helsinki.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.hel.fi",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -280,37 +299,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "ldhName" : "helsinki",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.HELSINKI."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.hel.fi"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
+   "status" : [
+      "active"
    ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "handle" : "helsinki"
+   ]
 }

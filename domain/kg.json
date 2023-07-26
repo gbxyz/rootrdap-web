@@ -1,16 +1,22 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.KG."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: https://www.cctld.kg/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -19,13 +25,26 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/kg.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.cctld.kg/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
-   "handle" : "kg",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "KG.CCTLD.AUTHDNS.RIPE.NET",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:e0:0:0:0:0:84"
@@ -34,10 +53,11 @@
                "193.0.9.84"
             ]
          },
-         "ldhName" : "KG.CCTLD.AUTHDNS.RIPE.NET"
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "NS.KG",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.38.160.36"
@@ -45,10 +65,10 @@
             "v6" : [
                "2a11:a380:0:0:195:38:160:36"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "NS2.KG",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -57,62 +77,32 @@
             "v4" : [
                "195.38.160.38"
             ]
-         },
-         "ldhName" : "NS2.KG"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "1995-07-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-11-14"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:34"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/kg.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.cctld.kg/",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "45982",
-            "digest" : "d642af8c9bb761e035ce77a48750bbaa64b41cfa0799d8d94498cfa335fa1380"
          }
-      ],
-      "delegationSigned" : true
-   },
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "handle" : "kg",
+   "objectClassName" : "domain",
+   "ldhName" : "kg",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "kg-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -121,6 +111,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Glotov Evgenii V."
                ],
                [
                   "org",
@@ -143,9 +139,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+996 312 964488"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+996 312 963434"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "support@cctld.kg"
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "kg-administrative",
          "objectClassName" : "entity"
       },
       {
@@ -215,10 +235,6 @@
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "kg-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -227,12 +243,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Glotov Evgenii V."
                ],
                [
                   "org",
@@ -255,50 +265,40 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+996 312 964488"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+996 312 963434"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "support@cctld.kg"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "kg-registrant"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "45982",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "d642af8c9bb761e035ce77a48750bbaa64b41cfa0799d8d94498cfa335fa1380"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "port43" : "whois.iana.org",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventDate" : "1995-07-12",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-14"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
-   ],
-   "ldhName" : "kg"
+   ]
 }

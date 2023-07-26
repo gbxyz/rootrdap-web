@@ -1,4 +1,7 @@
 {
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -16,19 +19,33 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "xn--80ao21a",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/xn--80ao21a.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.kz/",
+         "rel" : "related"
+      }
    ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "NS.NIC.KZ",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.21.5"
@@ -36,24 +53,23 @@
             "v6" : [
                "2001:678:98:1:0:0:0:5"
             ]
-         },
-         "ldhName" : "NS.NIC.KZ",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "NS1.NIC.KZ",
          "ipAddresses" : {
-            "v4" : [
-               "185.79.212.7"
-            ],
             "v6" : [
                "2a01:7640:9000:0:0:0:0:7"
+            ],
+            "v4" : [
+               "185.79.212.7"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.NIC.KZ"
       },
       {
          "ldhName" : "NS2.NIC.KZ",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6143:ad:0:0:1"
@@ -61,19 +77,17 @@
             "v4" : [
                "204.61.216.143"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "ldhName" : "xn--80ao21a",
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -84,11 +98,13 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "xn--80ao21a",
+   "ldhName" : "xn--80ao21a",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "xn--80ao21a-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -97,6 +113,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Nurlan Issin"
                ],
                [
                   "org",
@@ -119,11 +141,32 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+7 7172 92 55 52"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+7 7172 92 54 11"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "info@itk.kz"
                ]
             ]
          ],
-         "handle" : "xn--80ao21a-registrant",
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
@@ -193,9 +236,8 @@
       },
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "xn--80ao21a-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -204,12 +246,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Nurlan Issin"
                ],
                [
                   "org",
@@ -232,73 +268,37 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+7 7172 92 55 52"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+7 7172 92 54 11"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "info@itk.kz"
                ]
             ]
          ],
+         "handle" : "xn--80ao21a-registrant",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/xn--80ao21a.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.kz/",
-         "title" : "URL for registration services"
-      }
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "1e67e661e644f9c2cc122cf6307ce2ba434a1d3aebec08769bf5a28ec697f8db",
             "keyTag" : "12941",
+            "digestType" : "2",
             "algorithm" : "13",
-            "digestType" : "2"
+            "digest" : "1e67e661e644f9c2cc122cf6307ce2ba434a1d3aebec08769bf5a28ec697f8db"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2011-09-15",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2011-09-15"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2023-03-07"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:31"
+         "eventDate" : "2023-07-26T13:16:57",
+         "eventAction" : "last update of RDAP database"
       }
    ]
 }

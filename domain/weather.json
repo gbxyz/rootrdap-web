@@ -1,96 +1,34 @@
 {
    "handle" : "weather",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.weather.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "ldhName" : "weather",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/weather.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.weather.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "f994e24ad5e878714e771fa57227ea081f681b270d9faa5ba4cade422ee1aa3f",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "6439"
-         }
-      ]
-   },
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-12-23",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-23"
       },
       {
          "eventDate" : "2022-07-21",
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:20"
+         "eventDate" : "2023-07-26T13:16:56",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "6439",
+            "digestType" : "2",
+            "digest" : "f994e24ad5e878714e771fa57227ea081f681b270d9faa5ba4cade422ee1aa3f"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "weather-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -149,53 +87,14 @@
                   "ngtld-ibm@cscinfo.com"
                ]
             ]
-         ]
-      },
-      {
-         "handle" : "weather-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "International Business Machines Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "New Orchard Road\nArmonk NY 10504\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "weather-administrative"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -249,54 +148,134 @@
                ]
             ]
          ],
-         "handle" : "weather-technical"
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "weather-technical",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "weather-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "International Business Machines Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "New Orchard Road\nArmonk NY 10504\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "weather",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/weather.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.weather.com",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.144.178"
-            ],
             "v6" : [
                "2610:a1:1071:0:0:0:0:b2"
+            ],
+            "v4" : [
+               "156.154.144.178"
             ]
          },
          "ldhName" : "NS1.DNS.NIC.WEATHER"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "156.154.145.178"
-            ],
             "v6" : [
                "2610:a1:1072:0:0:0:0:b2"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.WEATHER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:b2"
             ],
             "v4" : [
-               "156.154.159.178"
+               "156.154.145.178"
             ]
          },
-         "ldhName" : "NS3.DNS.NIC.WEATHER",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.WEATHER"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS4.DNS.NIC.WEATHER",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.178"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:b2"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.WEATHER"
+      },
+      {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1074:0:0:0:0:b2"
@@ -304,10 +283,11 @@
             "v4" : [
                "156.154.156.178"
             ]
-         }
+         },
+         "ldhName" : "NS4.DNS.NIC.WEATHER"
       },
       {
-         "ldhName" : "NS5.DNS.NIC.WEATHER",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1075:0:0:0:0:b2"
@@ -316,9 +296,11 @@
                "156.154.157.178"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS5.DNS.NIC.WEATHER"
       },
       {
+         "ldhName" : "NS6.DNS.NIC.WEATHER",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1076:0:0:0:0:b2"
@@ -326,9 +308,27 @@
             "v4" : [
                "156.154.158.178"
             ]
-         },
-         "ldhName" : "NS6.DNS.NIC.WEATHER",
-         "objectClassName" : "nameserver"
+         }
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.weather.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

@@ -1,4 +1,10 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -7,10 +13,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.seven/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -19,60 +25,93 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "handle" : "seven",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/seven.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://nic.seven/"
+      }
+   ],
    "nameservers" : [
       {
          "ldhName" : "A.NIC.SEVEN",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
             ]
          },
          "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "B.NIC.SEVEN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "C.NIC.SEVEN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
             ],
             "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "X.NIC.SEVEN",
+         "ipAddresses" : {
+            "v6" : [
                "2610:a1:1074:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.172.82"
             ]
          },
-         "ldhName" : "X.NIC.SEVEN",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "Y.NIC.SEVEN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.173.82"
@@ -80,12 +119,10 @@
             "v6" : [
                "2610:a1:1075:0:0:0:1:82"
             ]
-         },
-         "ldhName" : "Y.NIC.SEVEN",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "Z.NIC.SEVEN",
          "ipAddresses" : {
             "v4" : [
                "156.154.174.82"
@@ -94,77 +131,29 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "ldhName" : "Z.NIC.SEVEN"
+         "objectClassName" : "nameserver"
       }
    ],
+   "handle" : "seven",
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "65404",
+            "digestType" : "2",
+            "digest" : "4c4105485919cc132cea83e201b0678f71cc7db260e8be86de560a8a1864951d"
+         }
+      ]
+   },
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "seven-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Project & Process Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Implementation Manager"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2711 Centerville Rd.\nSuite 400\nWilmington DE 19808\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+442070151717"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-seven@cscinfo.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "seven-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "seven-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -197,11 +186,11 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "seven-administrative",
          "roles" : [
             "administrative"
          ],
@@ -263,29 +252,68 @@
                   "ngtld-seven@cscinfo.com"
                ]
             ]
-         ],
-         "handle" : "seven-administrative"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "seven-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Project & Process Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Implementation Manager"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2711 Centerville Rd.\nSuite 400\nWilmington DE 19808\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+442070151717"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-seven@cscinfo.com"
+               ]
+            ]
          ]
       }
    ],
+   "ldhName" : "seven",
    "events" : [
       {
          "eventAction" : "registration",
@@ -297,36 +325,8 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:44"
+         "eventDate" : "2023-07-26T13:16:55"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/seven.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.seven/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "4c4105485919cc132cea83e201b0678f71cc7db260e8be86de560a8a1864951d",
-            "keyTag" : "65404",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "ldhName" : "seven"
+   "port43" : "whois.iana.org"
 }

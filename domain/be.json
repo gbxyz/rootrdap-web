@@ -1,32 +1,12 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DNS.BE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.dnsbelgium.be"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
+   "status" : [
+      "active"
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "be",
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.NSSET.BE",
          "ipAddresses" : {
             "v4" : [
@@ -35,23 +15,23 @@
             "v6" : [
                "2001:678:9:0:0:0:0:1"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "B.NSSET.BE",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:64:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.37.1"
+            ],
+            "v6" : [
+               "2001:678:64:0:0:0:0:1"
             ]
          },
-         "ldhName" : "B.NSSET.BE",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "C.NSSET.BE",
          "ipAddresses" : {
             "v6" : [
                "2001:678:68:0:0:0:0:1"
@@ -59,10 +39,10 @@
             "v4" : [
                "194.0.43.1"
             ]
-         }
+         },
+         "ldhName" : "C.NSSET.BE"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:678:6c:0:0:0:0:1"
@@ -71,35 +51,50 @@
                "194.0.44.1"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "D.NSSET.BE"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "Y.NSSET.BE",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:7:0:0:0:0:8"
-            ],
             "v4" : [
                "120.29.253.8"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:20:0:0:0:0:36"
             ],
-            "v4" : [
-               "194.0.25.36"
+            "v6" : [
+               "2001:dcd:7:0:0:0:0:8"
             ]
          },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.36"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:36"
+            ]
+         },
+         "objectClassName" : "nameserver",
          "ldhName" : "Z.NSSET.BE"
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/be.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.dnsbelgium.be"
+      }
    ],
    "notices" : [
       {
@@ -119,79 +114,46 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "remarks" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "be-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "CEO"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DNS Belgium vzw/asbl"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ubicenter, Philipssite 5, bus 13\nLeuven 3001\nBelgium"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+32 16 28 49 70"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+32 16 28 49 71"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-admin@dnsbelgium.be"
-               ]
-            ]
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DNS.BE."
          ]
       },
       {
-         "roles" : [
-            "registrant"
+         "description" : [
+            "Registration information: https://www.dnsbelgium.be"
          ],
-         "handle" : "be-registrant",
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "be",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1988-08-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-22"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "be",
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -225,9 +187,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "be-registrant"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "be-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -287,60 +255,92 @@
                ]
             ]
          ],
-         "handle" : "be-technical",
          "roles" : [
             "technical"
+         ]
+      },
+      {
+         "handle" : "be-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
          ],
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "CEO"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DNS Belgium vzw/asbl"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ubicenter, Philipssite 5, bus 13\nLeuven 3001\nBelgium"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+32 16 28 49 70"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+32 16 28 49 71"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-admin@dnsbelgium.be"
+               ]
+            ]
+         ]
       }
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digestType" : "2",
+            "digest" : "75141e9b1188a95a7a855bf47e278a742a5e3f2ddeed8e995d749d48f2f0e72d",
             "algorithm" : "8",
-            "keyTag" : "12664",
-            "digest" : "75141e9b1188a95a7a855bf47e278a742a5e3f2ddeed8e995d749d48f2f0e72d"
+            "digestType" : "2",
+            "keyTag" : "12664"
          },
          {
-            "keyTag" : "52756",
             "digestType" : "2",
+            "keyTag" : "52756",
             "algorithm" : "8",
             "digest" : "5485ac33dd7c7ed237ea2a4bd269731c816960fe181042024484b5ceca6ecc9f"
          }
       ],
       "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/be.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.dnsbelgium.be",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1988-08-05"
-      },
-      {
-         "eventDate" : "2021-03-22",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:12",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "be"
+   }
 }

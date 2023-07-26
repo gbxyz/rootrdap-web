@@ -1,85 +1,57 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SCA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.sca"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "sca",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "2433227153341429fd6dc9cc654844e9614c0bf4d408c39bbe0149e1716438de",
+            "keyTag" : "11691",
+            "digestType" : "2",
+            "algorithm" : "8"
          }
-      },
-      {
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         }
-      },
-      {
-         "ldhName" : "AC4.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
-         "handle" : "sca-administrative",
+         "handle" : "sca-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "SVENSKA CELLULOSA AKTIEBOLAGET SCA (publ)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Klarabergsviadukten 63\nStockholm SE-111 64\nSweden"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -142,13 +114,10 @@
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "sca-administrative"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "sca-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -208,58 +177,59 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "SVENSKA CELLULOSA AKTIEBOLAGET SCA (publ)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Klarabergsviadukten 63\nStockholm SE-111 64\nSweden"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "sca-registrant",
+         "handle" : "sca-technical",
          "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "sca",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-17"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "handle" : "sca",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SCA."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.sca"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -270,25 +240,11 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2014-07-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:40",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/sca.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -297,20 +253,64 @@
       },
       {
          "title" : "URL for registration services",
-         "href" : "http://nic.sca",
-         "rel" : "related"
+         "rel" : "related",
+         "href" : "http://nic.sca"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "11691",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "2433227153341429fd6dc9cc654844e9614c0bf4d408c39bbe0149e1716438de"
+   "nameservers" : [
+      {
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "sca"
+      },
+      {
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

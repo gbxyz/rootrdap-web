@@ -1,55 +1,24 @@
 {
-   "handle" : "om",
-   "remarks" : [
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.REGISTRY.OM."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1996-04-11"
       },
       {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
+         "eventDate" : "2017-11-21",
+         "eventAction" : "last changed"
       },
       {
-         "description" : [
-            "http://www.registry.om/om/en/?page_id=197"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -110,48 +79,6 @@
             ]
          ],
          "handle" : "om-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "handle" : "om-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Telecommunications Regulatory Authority (TRA)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "P.O. Box 3555, P.C 111, Seeb\nMuscat\nOman"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity"
       },
       {
@@ -219,40 +146,83 @@
          ],
          "handle" : "om-administrative",
          "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/om.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1996-04-11"
-      },
-      {
-         "eventDate" : "2017-11-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:13"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Telecommunications Regulatory Authority (TRA)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "P.O. Box 3555, P.C 111, Seeb\nMuscat\nOman"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "om-registrant"
       }
    ],
    "ldhName" : "om",
+   "handle" : "om",
    "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/om.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:6"
@@ -261,45 +231,47 @@
                "37.209.192.6"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "CCTLD.ALPHA.ARIDNS.NET.AU"
       },
       {
+         "ldhName" : "CCTLD.BETA.ARIDNS.NET.AU",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.194.6"
-            ],
             "v6" : [
                "2001:dcd:2:0:0:0:0:6"
+            ],
+            "v4" : [
+               "37.209.194.6"
             ]
          },
-         "ldhName" : "CCTLD.BETA.ARIDNS.NET.AU",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "CCTLD.DELTA.ARIDNS.NET.AU",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.198.6"
-            ],
             "v6" : [
                "2001:dcd:4:0:0:0:0:6"
+            ],
+            "v4" : [
+               "37.209.198.6"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "CCTLD.DELTA.ARIDNS.NET.AU"
+      },
+      {
+         "ldhName" : "CCTLD.GAMMA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.6"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:6"
             ]
          }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "CCTLD.GAMMA.ARIDNS.NET.AU",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:6"
-            ],
-            "v4" : [
-               "37.209.196.6"
-            ]
-         }
-      },
-      {
          "ipAddresses" : {
             "v6" : [
                "2a00:9120:1:0:0:0:0:50"
@@ -308,12 +280,11 @@
                "185.27.88.50"
             ]
          },
-         "ldhName" : "NS1.REGISTRY.OM",
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS1.REGISTRY.OM"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS2.REGISTRY.OM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a00:9120:2:0:0:0:0:50"
@@ -323,6 +294,35 @@
             ]
          }
       }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.REGISTRY.OM."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://www.registry.om/om/en/?page_id=197"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"

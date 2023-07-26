@@ -1,19 +1,39 @@
 {
-   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.prudential.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "nameservers" : [
       {
          "ldhName" : "A.NIC.PRUDENTIAL",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
             ]
          },
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "B.NIC.PRUDENTIAL",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -22,22 +42,22 @@
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
             ]
-         },
-         "ldhName" : "B.NIC.PRUDENTIAL"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.PRUDENTIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
          }
       },
       {
+         "ldhName" : "C.NIC.PRUDENTIAL",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.PRUDENTIAL",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -46,24 +66,22 @@
             "v4" : [
                "156.154.144.142"
             ]
-         },
-         "ldhName" : "NS1.DNS.NIC.PRUDENTIAL"
+         }
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "156.154.145.142"
-            ],
             "v6" : [
                "2610:a1:1072:0:0:0:0:8e"
+            ],
+            "v4" : [
+               "156.154.145.142"
             ]
          },
-         "ldhName" : "NS2.DNS.NIC.PRUDENTIAL",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.PRUDENTIAL"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.PRUDENTIAL",
          "ipAddresses" : {
             "v4" : [
                "156.154.159.142"
@@ -71,35 +89,95 @@
             "v6" : [
                "2610:a1:1073:0:0:0:0:8e"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.PRUDENTIAL"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/prudential.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.prudential.com"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
    "status" : [
       "active"
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
+   "ldhName" : "prudential",
    "entities" : [
       {
          "roles" : [
-            "technical"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Prudential Financial, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "751 Broad Street\nNewark NJ 07102\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "prudential-registrant"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "prudential-technical",
          "vcardArray" : [
             "vcard",
@@ -160,49 +238,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "prudential-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Prudential Financial, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "751 Broad Street\nNewark NJ 07102\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+            "technical"
          ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "prudential-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -254,42 +296,23 @@
                ]
             ]
          ],
-         "handle" : "prudential-administrative",
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/prudential.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.prudential.com",
-         "rel" : "related"
+         ]
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "c69dabd2cf3d79d968533bfc2cdb13a20ed9792260f42de04bdaa6925ae9a4a1",
             "digestType" : "2",
-            "algorithm" : "8",
             "keyTag" : "60835",
-            "digest" : "c69dabd2cf3d79d968533bfc2cdb13a20ed9792260f42de04bdaa6925ae9a4a1"
+            "algorithm" : "8"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -300,33 +323,10 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:26"
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "prudential",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.prudential.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "prudential"
+   "handle" : "prudential",
+   "objectClassName" : "domain"
 }

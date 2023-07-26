@@ -1,50 +1,23 @@
 {
-   "ldhName" : "equipment",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-10-31"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:31"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/equipment.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
+   "handle" : "equipment",
+   "objectClassName" : "domain",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "51544",
             "digestType" : "2",
+            "keyTag" : "51544",
             "algorithm" : "8",
             "digest" : "602442f2e32f4a351c89c118cf22cd5f34c324d57ec1df0616a7ded19bccd5ca"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "ldhName" : "equipment",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -78,12 +51,15 @@
                ]
             ]
          ],
-         "handle" : "equipment-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "equipment-registrant"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "equipment-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -142,18 +118,11 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "equipment-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "equipment-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -213,10 +182,52 @@
                ]
             ]
          ],
-         "handle" : "equipment-administrative"
+         "roles" : [
+            "administrative"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2013-10-31",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:49"
       }
    ],
    "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.EQUIPMENT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -235,106 +246,95 @@
          ]
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/equipment.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
+      }
    ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:21"
-            ],
             "v4" : [
                "65.22.32.21"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:21"
             ]
          },
-         "ldhName" : "V0N0.NIC.EQUIPMENT",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N0.NIC.EQUIPMENT"
       },
       {
          "ldhName" : "V0N1.NIC.EQUIPMENT",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.33.21"
-            ],
             "v6" : [
                "2a01:8840:23:0:0:0:0:21"
+            ],
+            "v4" : [
+               "65.22.33.21"
             ]
          },
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:21"
-            ],
             "v4" : [
                "65.22.34.21"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:21"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "V0N2.NIC.EQUIPMENT"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "161.232.16.21"
-            ],
             "v6" : [
                "2a01:8840:fa:0:0:0:0:21"
+            ],
+            "v4" : [
+               "161.232.16.21"
             ]
          },
-         "ldhName" : "V0N3.NIC.EQUIPMENT",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.EQUIPMENT"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.35.21"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:21"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N0.NIC.EQUIPMENT"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:21"
-            ],
-            "v4" : [
-               "65.22.35.21"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.EQUIPMENT"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:21"
-            ],
             "v4" : [
                "161.232.17.21"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:21"
             ]
          },
-         "ldhName" : "V2N1.NIC.EQUIPMENT",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "equipment",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.EQUIPMENT."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "ldhName" : "V2N1.NIC.EQUIPMENT"
       }
    ]
 }

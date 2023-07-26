@@ -1,103 +1,7 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:72:0:0:0:0:41"
-            ],
-            "v4" : [
-               "65.22.116.41"
-            ]
-         },
-         "ldhName" : "A0.NIC.PCCW",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.119.41"
-            ],
-            "v6" : [
-               "2a01:8840:75:0:0:0:0:41"
-            ]
-         },
-         "ldhName" : "A2.NIC.PCCW",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.117.41"
-            ],
-            "v6" : [
-               "2a01:8840:73:0:0:0:0:41"
-            ]
-         },
-         "ldhName" : "B0.NIC.PCCW",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C0.NIC.PCCW",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.118.41"
-            ],
-            "v6" : [
-               "2a01:8840:74:0:0:0:0:41"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
    "ldhName" : "pccw",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-04-15"
-      },
-      {
-         "eventDate" : "2020-11-05",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:17"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "43702",
-            "digest" : "59e6008039a16f566f18227380a702f8168707059629da13cbfb9d1203e5ef93"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/pccw.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "pccw-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -130,13 +34,16 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "pccw-registrant",
+         "objectClassName" : "entity"
       },
       {
+         "handle" : "pccw-technical",
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -196,10 +103,16 @@
                ]
             ]
          ],
-         "handle" : "pccw-technical"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "handle" : "pccw-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -258,14 +171,125 @@
                   "info@tld.asia"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "43702",
+            "algorithm" : "8",
+            "digest" : "59e6008039a16f566f18227380a702f8168707059629da13cbfb9d1203e5ef93"
+         }
+      ]
+   },
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-15"
+      },
+      {
+         "eventDate" : "2020-11-05",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "pccw",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PCCW."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information:"
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://www.dot.asia/namesphere/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.116.41"
+            ],
+            "v6" : [
+               "2a01:8840:72:0:0:0:0:41"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.PCCW"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:75:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.119.41"
+            ]
+         },
+         "ldhName" : "A2.NIC.PCCW"
+      },
+      {
+         "ldhName" : "B0.NIC.PCCW",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:73:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.117.41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C0.NIC.PCCW",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:74:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.118.41"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/pccw.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -276,42 +300,18 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
+   ],
+   "status" : [
+      "active"
    ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PCCW."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "http://www.dot.asia/namesphere/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "pccw"
+   ]
 }

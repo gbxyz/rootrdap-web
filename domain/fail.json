@@ -1,77 +1,61 @@
 {
-   "handle" : "fail",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FAIL."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2014-04-17",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-27"
       },
       {
-         "eventDate" : "2023-07-26T12:29:36",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:49"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "55696",
-            "digest" : "23599facbcf180ca8a276a70e5e407236cbfcc5c9b27ce00972cb83f99803577"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/fail.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "fail-administrative",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "fail-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -131,9 +115,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "fail-administrative"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "fail-technical",
          "roles" : [
             "technical"
          ],
@@ -195,74 +185,42 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "fail-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "fail-registrant",
-         "roles" : [
-            "registrant"
          ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ],
    "ldhName" : "fail",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "55696",
+            "digest" : "23599facbcf180ca8a276a70e5e407236cbfcc5c9b27ce00972cb83f99803577"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "handle" : "fail",
+   "objectClassName" : "domain",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/fail.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.FAIL",
          "ipAddresses" : {
             "v4" : [
                "65.22.20.56"
@@ -270,22 +228,25 @@
             "v6" : [
                "2a01:8840:16:0:0:0:0:56"
             ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.FAIL"
+      },
+      {
+         "ldhName" : "V0N1.NIC.FAIL",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:56"
+            ],
+            "v4" : [
+               "65.22.21.56"
+            ]
          }
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.21.56"
-            ],
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:56"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.FAIL",
-         "objectClassName" : "nameserver"
-      },
-      {
          "ldhName" : "V0N2.NIC.FAIL",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:18:0:0:0:0:56"
@@ -293,48 +254,87 @@
             "v4" : [
                "65.22.22.56"
             ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.56"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:56"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.FAIL"
+      },
+      {
+         "ldhName" : "V2N0.NIC.FAIL",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.56"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:56"
+            ]
          },
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.FAIL",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:56"
-            ],
-            "v4" : [
-               "161.232.10.56"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.FAIL",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:56"
-            ],
-            "v4" : [
-               "65.22.23.56"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.FAIL",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.11.56"
-            ],
             "v6" : [
                "2a01:8840:f5:0:0:0:0:56"
+            ],
+            "v4" : [
+               "161.232.11.56"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.FAIL"
       }
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FAIL."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

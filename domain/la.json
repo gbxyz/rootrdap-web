@@ -1,7 +1,26 @@
 {
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
          "ldhName" : "NS1.NIC.LA",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:15"
@@ -9,20 +28,19 @@
             "v4" : [
                "185.24.64.15"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:14"
-            ],
             "v4" : [
                "194.169.218.14"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:14"
             ]
          },
-         "ldhName" : "NS2.NIC.LA",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.NIC.LA"
       },
       {
          "ldhName" : "NS3.NIC.LA",
@@ -49,61 +67,87 @@
          "ldhName" : "NS4.NIC.LA"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/la.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.la"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LA."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.la"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
    "events" : [
       {
-         "eventDate" : "1996-05-14",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1996-05-14"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-17"
+         "eventDate" : "2023-03-17",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:38",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/la.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.la"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "e7d0c3bcdf60e8d842e882d90b4ec263c8889b760098492c798841c13b4ea13f",
             "algorithm" : "7",
-            "digestType" : "2",
-            "keyTag" : "42973"
+            "keyTag" : "42973",
+            "digestType" : "2"
          },
          {
-            "algorithm" : "7",
-            "digestType" : "1",
+            "digest" : "1f0cefa420e9101bb5791f3ab93e85917a72978b",
             "keyTag" : "42973",
-            "digest" : "1f0cefa420e9101bb5791f3ab93e85917a72978b"
+            "digestType" : "1",
+            "algorithm" : "7"
          }
       ],
       "delegationSigned" : true
    },
+   "ldhName" : "la",
    "entities" : [
       {
-         "handle" : "la-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,13 +187,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "la-registrant",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "la-technical",
          "roles" : [
             "technical"
          ],
@@ -211,11 +254,9 @@
                   "technicalcontact@lanic.gov.la"
                ]
             ]
-         ],
-         "handle" : "la-technical"
+         ]
       },
       {
-         "handle" : "la-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -278,51 +319,10 @@
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "la-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "ldhName" : "la",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.la"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
    "handle" : "la"
 }

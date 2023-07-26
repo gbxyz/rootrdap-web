@@ -1,11 +1,8 @@
 {
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ldhName" : "V0N0.NIC.SALON",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.28.58"
@@ -13,11 +10,10 @@
             "v6" : [
                "2a01:8840:1e:0:0:0:0:58"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "V0N1.NIC.SALON",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.29.58"
@@ -26,45 +22,46 @@
                "2a01:8840:1f:0:0:0:0:58"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N1.NIC.SALON"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.SALON",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.30.58"
-            ],
             "v6" : [
                "2a01:8840:20:0:0:0:0:58"
+            ],
+            "v4" : [
+               "65.22.30.58"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.SALON"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:58"
+            ],
+            "v4" : [
+               "161.232.14.58"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.SALON"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.SALON",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.14.58"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:58"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:58"
-            ],
             "v4" : [
                "65.22.31.58"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:58"
             ]
          },
-         "ldhName" : "V2N0.NIC.SALON",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V2N0.NIC.SALON"
       },
       {
+         "ldhName" : "V2N1.NIC.SALON",
          "ipAddresses" : {
             "v4" : [
                "161.232.15.58"
@@ -73,51 +70,24 @@
                "2a01:8840:f9:0:0:0:0:58"
             ]
          },
-         "ldhName" : "V2N1.NIC.SALON",
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "salon",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/salon.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/salon.html",
          "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
          "href" : "http://www.donuts.domains/",
          "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "20629",
-            "digest" : "15beee88cb2059844adc8b06944fc2424a7618726b390a08fc21fde2ef6daa07"
-         }
-      ]
-   },
-   "events" : [
-      {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-10"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:38",
-         "eventAction" : "last update of RDAP database"
       }
    ],
    "notices" : [
@@ -138,48 +108,55 @@
          ]
       }
    ],
-   "entities" : [
+   "remarks" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "salon-registrant",
-         "objectClassName" : "entity"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SALON."
+         ]
       },
       {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventDate" : "2021-11-10",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:54",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "salon",
+   "entities" : [
+      {
+         "handle" : "salon-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -238,19 +215,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "salon-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "salon-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "salon-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -310,31 +282,59 @@
                ]
             ]
          ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SALON."
-         ]
       },
       {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
+         "roles" : [
+            "registrant"
          ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "title" : "Source"
+         "objectClassName" : "entity",
+         "handle" : "salon-registrant"
       }
    ],
-   "handle" : "salon"
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "20629",
+            "algorithm" : "8",
+            "digest" : "15beee88cb2059844adc8b06944fc2424a7618726b390a08fc21fde2ef6daa07"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "handle" : "salon",
+   "objectClassName" : "domain"
 }

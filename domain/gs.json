@@ -1,70 +1,75 @@
 {
-   "status" : [
-      "active"
-   ],
+   "handle" : "gs",
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "NS.ANYCAST.NIC.GS",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6021:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.21"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
-            "v4" : [
-               "185.38.108.108"
-            ]
-         },
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "185.28.194.194"
-            ]
-         },
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "gs",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-07-31"
+      },
+      {
+         "eventDate" : "2022-11-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "2cbc82da27fdb16662bf359f59df1b63fa0ab720bfc2120f17ba369a3249fc5e",
+            "digestType" : "2",
+            "keyTag" : "23990",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Government of South Georgia and South Sandwich Islands (GSGSSI)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Government House\nStanley\nFalkland Islands F1QQ 1ZZ\nSouth Georgia and the South Sandwich Islands"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "gs-registrant"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "gs-administrative",
          "vcardArray" : [
             "vcard",
@@ -124,51 +129,17 @@
                   "helpdesk@nic.gs"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Government of South Georgia and South Sandwich Islands (GSGSSI)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Government House\nStanley\nFalkland Islands F1QQ 1ZZ\nSouth Georgia and the South Sandwich Islands"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "gs-registrant"
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "gs-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -227,22 +198,44 @@
                   "paul.shafi@sgisland.org"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
+      }
+   ],
+   "ldhName" : "gs",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/gs.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
@@ -250,33 +243,41 @@
          "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "2cbc82da27fdb16662bf359f59df1b63fa0ab720bfc2120f17ba369a3249fc5e",
-            "keyTag" : "23990",
-            "digestType" : "2",
-            "algorithm" : "8"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6021:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.21"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS.ANYCAST.NIC.GS"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.38.108.108"
+            ],
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.ANYCASTDNS.CZ"
+      },
+      {
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.28.194.194"
+            ],
+            "v6" : []
          }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventDate" : "1997-07-31",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-11-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:12",
-         "eventAction" : "last update of RDAP database"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -286,17 +287,16 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://secure.nic.gs"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "handle" : "gs"
+   ]
 }

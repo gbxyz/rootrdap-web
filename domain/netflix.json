@@ -1,132 +1,66 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.NETFLIX",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:79"
-            ],
-            "v4" : [
-               "156.154.144.121"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.NETFLIX",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.121"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:79"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.NETFLIX",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.121"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:79"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS4.DNS.NIC.NETFLIX",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:0:79"
-            ],
-            "v4" : [
-               "156.154.156.121"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.157.121"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:79"
-            ]
-         },
-         "ldhName" : "NS5.DNS.NIC.NETFLIX",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.158.121"
-            ],
-            "v6" : [
-               "2610:a1:1076:0:0:0:0:79"
-            ]
-         },
-         "ldhName" : "NS6.DNS.NIC.NETFLIX"
-      }
-   ],
+   "handle" : "netflix",
    "objectClassName" : "domain",
-   "ldhName" : "netflix",
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-05-05",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-05-05"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-07-21"
       },
       {
-         "eventDate" : "2023-07-26T12:31:05",
+         "eventDate" : "2023-07-26T13:16:53",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/netflix.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.netflix.com"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "27637",
-            "digest" : "7aba17bd5b87aa5d31cb611e0dfd4c67d926b6cfc68b8aeca58c468b104cc2e6"
-         }
-      ]
-   },
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Netflix, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Winchester Circle\nLos Gatos CA 95032\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "objectClassName" : "entity",
+         "handle" : "netflix-registrant"
+      },
+      {
          "roles" : [
             "administrative"
          ],
-         "handle" : "netflix-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -185,10 +119,14 @@
                   "nicadmin@netflix.com"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "netflix-administrative"
       },
       {
-         "handle" : "netflix-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -248,61 +186,127 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Netflix, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Winchester Circle\nLos Gatos CA 95032\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "netflix-registrant",
+         "handle" : "netflix-technical",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "netflix",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "7aba17bd5b87aa5d31cb611e0dfd4c67d926b6cfc68b8aeca58c468b104cc2e6",
+            "algorithm" : "8",
+            "keyTag" : "27637",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/netflix.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.netflix.com"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NS1.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.121"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:79"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:79"
+            ],
+            "v4" : [
+               "156.154.145.121"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.121"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:79"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.NETFLIX"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.156.121"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:0:79"
+            ]
+         },
+         "ldhName" : "NS4.DNS.NIC.NETFLIX"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:79"
+            ],
+            "v4" : [
+               "156.154.157.121"
+            ]
+         },
+         "ldhName" : "NS5.DNS.NIC.NETFLIX"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1076:0:0:0:0:79"
+            ],
+            "v4" : [
+               "156.154.158.121"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS6.DNS.NIC.NETFLIX"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -312,9 +316,6 @@
          ],
          "title" : "Comments"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -330,11 +331,10 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "handle" : "netflix"
+   ]
 }

@@ -1,33 +1,28 @@
 {
    "handle" : "dot",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DOT."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-21"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.dish.com"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:49"
       }
    ],
-   "ldhName" : "dot",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "dot-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -36,12 +31,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Director Advanced Video Products"
                ],
                [
                   "org",
@@ -64,36 +53,14 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 303 723 1000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 303 723 1699"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-dot@cscglobal.com"
                ]
             ]
-         ],
-         "handle" : "dot-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -153,15 +120,12 @@
                ]
             ]
          ],
-         "handle" : "dot-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "dot-technical"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -171,6 +135,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Director Advanced Video Products"
                ],
                [
                   "org",
@@ -193,62 +163,36 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 303 723 1000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 303 723 1699"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-dot@cscglobal.com"
                ]
             ]
          ],
-         "handle" : "dot-registrant"
+         "objectClassName" : "entity",
+         "handle" : "dot-administrative"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-04-21"
-      },
-      {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:23",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/dot.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.dish.com",
-         "title" : "URL for registration services"
-      }
-   ],
+   "ldhName" : "dot",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "keyTag" : "52639",
@@ -256,27 +200,28 @@
             "algorithm" : "8",
             "digest" : "e2bc058f7515c31dfdd8aded00ba870071ab84e0f32db3003c533c9a6d4f6f84"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
    "status" : [
       "active"
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.DOT",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:5a:0:0:0:0:1"
-            ],
             "v4" : [
                "65.22.92.1"
+            ],
+            "v6" : [
+               "2a01:8840:5a:0:0:0:0:1"
             ]
-         }
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.DOT"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A2.NIC.DOT",
          "ipAddresses" : {
             "v6" : [
@@ -285,22 +230,22 @@
             "v4" : [
                "65.22.95.1"
             ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:5b:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.93.1"
-            ]
          },
-         "ldhName" : "B0.NIC.DOT",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.DOT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.93.1"
+            ],
+            "v6" : [
+               "2a01:8840:5b:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
          "ldhName" : "C0.NIC.DOT",
          "ipAddresses" : {
             "v6" : [
@@ -309,8 +254,63 @@
             "v4" : [
                "65.22.94.1"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/dot.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.dish.com",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DOT."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.dish.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ]
 }

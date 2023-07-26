@@ -1,67 +1,25 @@
 {
+   "handle" : "bible",
+   "objectClassName" : "domain",
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "c09ed93543e2a43516c5379a9ebd54364d4226015112cdfb24199a7f91936ddc",
             "keyTag" : "634",
             "digestType" : "2",
-            "algorithm" : "8"
+            "algorithm" : "8",
+            "digest" : "c09ed93543e2a43516c5379a9ebd54364d4226015112cdfb24199a7f91936ddc"
          }
       ],
       "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bible.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://get.bible",
-         "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-05-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:16",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "bible",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "bible-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -120,54 +78,9 @@
                   "operations@nic.bible"
                ]
             ]
-         ],
-         "handle" : "bible-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "American Bible Society"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "101 North Independence Mall East FL8\nPhiladelphia PA 19106-2112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "bible-registrant"
-      },
-      {
-         "handle" : "bible-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -230,90 +143,71 @@
          "roles" : [
             "technical"
          ],
+         "handle" : "bible-technical",
          "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "American Bible Society"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "101 North Independence Mall East FL8\nPhiladelphia PA 19106-2112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "bible-registrant"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-05-14"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:47",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
-   "ldhName" : "bible",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.BIBLE",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.NIC.BIBLE",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "C.NIC.BIBLE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.BIBLE",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:1:64"
-            ],
-            "v4" : [
-               "156.154.169.100"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.BIBLE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.170.100"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:1:64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:1:64"
-            ],
-            "v4" : [
-               "156.154.171.100"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.BIBLE"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"
    ],
-   "handle" : "bible",
    "remarks" : [
       {
          "description" : [
@@ -328,13 +222,119 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bible.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://get.bible"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.BIBLE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.BIBLE"
+      },
+      {
+         "ldhName" : "C.NIC.BIBLE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.BIBLE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.169.100"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:64"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.BIBLE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:1:64"
+            ],
+            "v4" : [
+               "156.154.170.100"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:1:64"
+            ],
+            "v4" : [
+               "156.154.171.100"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.BIBLE"
+      }
    ]
 }

@@ -1,191 +1,18 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.VANA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "vana",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "ldhName" : "AC1.NSTLD.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "ldhName" : "AC3.NSTLD.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-09-24",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-06-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:14"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/vana.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      }
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "51813",
+            "digest" : "93baec1bc806c42034f1ba91345d8aa439242ea114157951bf6b7e9f79fc9e0c",
             "algorithm" : "8",
             "digestType" : "2",
-            "digest" : "93baec1bc806c42034f1ba91345d8aa439242ea114157951bf6b7e9f79fc9e0c"
+            "keyTag" : "51813"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "ldhName" : "vana",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "vana-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Bonnie Bryant"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "VeriSign, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "12061 Bluemont Way\nReston VA 20190\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "703.925.6999"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "703.948.3978"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "info@verisign-grs.com"
-               ]
-            ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -219,10 +46,15 @@
                ]
             ]
          ],
-         "handle" : "vana-registrant"
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "vana-registrant",
+         "objectClassName" : "entity"
       },
       {
          "handle" : "vana-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -284,11 +116,112 @@
          ],
          "roles" : [
             "administrative"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "vana-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Bonnie Bryant"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "VeriSign, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "12061 Bluemont Way\nReston VA 20190\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "703.925.6999"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "703.948.3978"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "info@verisign-grs.com"
+               ]
+            ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-09-24",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-02"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:56",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
+   "handle" : "vana",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.VANA."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: "
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -307,5 +240,72 @@
          ]
       }
    ],
-   "ldhName" : "vana"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/vana.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM"
+      },
+      {
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

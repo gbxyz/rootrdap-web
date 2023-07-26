@@ -1,97 +1,74 @@
 {
    "handle" : "kddi",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.KDDI."
-         ]
+         "eventDate" : "2014-12-18",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "Registration information: http://nic.kddi"
-         ],
-         "title" : "Remark"
+         "eventDate" : "2019-08-20",
+         "eventAction" : "last changed"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "ldhName" : "kddi",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/kddi.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.kddi"
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "871a87191b82d082df95647615db803c3cf6e7b80578b018118c2dd27d7fa00b",
-            "keyTag" : "2134",
             "digestType" : "2",
-            "algorithm" : "8"
+            "keyTag" : "2134",
+            "algorithm" : "8",
+            "digest" : "871a87191b82d082df95647615db803c3cf6e7b80578b018118c2dd27d7fa00b"
          }
       ]
    },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-12-18"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:33"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "kddi-registrant",
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "KDDI CORPORATION"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Garden Air Tower, 3-10-10, Iidabashi\nChiyoda-ku Tokyo 1028460\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "kddi-administrative",
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -150,50 +127,14 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
+         ],
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "KDDI CORPORATION"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Garden Air Tower, 3-10-10, Iidabashi\nChiyoda-ku Tokyo 1028460\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "kddi-registrant"
+         "handle" : "kddi-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -256,17 +197,38 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
          "handle" : "kddi-technical"
       }
+   ],
+   "ldhName" : "kddi",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
@@ -274,9 +236,11 @@
             "v4" : [
                "37.209.192.4"
             ]
-         }
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
       },
       {
+         "ldhName" : "B.GMOREGISTRY.NET",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -285,30 +249,66 @@
             "v6" : [
                "2001:dcd:2:0:0:0:0:4"
             ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET"
+         }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "37.209.196.4"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         "ldhName" : "K.GMOREGISTRY.NET"
       },
       {
          "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
             "v6" : [
                "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/kddi.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://nic.kddi",
+         "title" : "URL for registration services"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.KDDI."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.kddi"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

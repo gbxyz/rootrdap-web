@@ -1,82 +1,6 @@
 {
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.PLACE",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.22"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:22"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.22"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:22"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.PLACE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N2.NIC.PLACE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:22"
-            ],
-            "v4" : [
-               "65.22.30.22"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.PLACE",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.22"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:22"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N0.NIC.PLACE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:22"
-            ],
-            "v4" : [
-               "65.22.31.22"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:22"
-            ],
-            "v4" : [
-               "161.232.15.22"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.PLACE"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "handle" : "place",
    "events" : [
       {
          "eventDate" : "2014-06-05",
@@ -87,45 +11,68 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:31:22",
+         "eventDate" : "2023-07-26T13:16:53",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/place.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
             "digestType" : "2",
-            "algorithm" : "8",
             "keyTag" : "436",
+            "algorithm" : "8",
             "digest" : "2ee9ef69fb398b0d80a926994666cc9405231a042f31752d00295ccfc2ddbaf4"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "place",
    "entities" : [
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "place-registrant"
+      },
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "place-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -185,54 +132,13 @@
                ]
             ]
          ],
+         "handle" : "place-administrative",
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "place-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "place-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -291,17 +197,25 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "handle" : "place-technical",
+         "objectClassName" : "entity"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -312,13 +226,103 @@
          ]
       }
    ],
-   "ldhName" : "place",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/place.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.28.22"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:22"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.PLACE"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.22"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:22"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.PLACE"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:22"
+            ],
+            "v4" : [
+               "65.22.30.22"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.PLACE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.22"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:22"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.PLACE"
+      },
+      {
+         "ldhName" : "V2N0.NIC.PLACE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:22"
+            ],
+            "v4" : [
+               "65.22.31.22"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.22"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:22"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.PLACE"
+      }
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.PLACE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -332,9 +336,5 @@
             "IANA"
          ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "place"
+   ]
 }

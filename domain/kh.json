@@ -1,64 +1,60 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.tc.com.kh"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "kh",
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/kh.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.tc.com.kh",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "203.189.128.1"
             ]
          },
-         "ldhName" : "DNS1.ONLINE.COM.KH",
-         "objectClassName" : "nameserver"
+         "ldhName" : "DNS1.ONLINE.COM.KH"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "203.223.32.3"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS.CAMNET.COM.KH"
       },
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "203.223.32.21"
-            ]
+            ],
+            "v6" : []
          },
          "ldhName" : "NS1.DNS.NET.KH"
       },
       {
+         "ldhName" : "NS4.APNIC.NET",
          "ipAddresses" : {
             "v4" : [
                "202.12.31.53"
@@ -67,19 +63,17 @@
                "2001:dd8:12:0:0:0:0:53"
             ]
          },
-         "ldhName" : "NS4.APNIC.NET",
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "kh",
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -90,11 +84,48 @@
          "title" : "Comments"
       }
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.tc.com.kh"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "kh",
+   "events" : [
+      {
+         "eventDate" : "1996-02-20",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2019-05-28",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
+      }
+   ],
    "port43" : "whois.iana.org",
+   "ldhName" : "kh",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "kh-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -199,8 +230,9 @@
          ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "kh-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -260,40 +292,8 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/kh.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.tc.com.kh",
-         "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1996-02-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-05-28"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:34"
+         "objectClassName" : "entity",
+         "handle" : "kh-administrative"
       }
    ]
 }

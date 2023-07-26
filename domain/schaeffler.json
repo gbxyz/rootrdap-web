@@ -1,13 +1,83 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:20:0:0:0:0:34"
+            ],
+            "v4" : [
+               "194.0.25.34"
+            ]
+         },
+         "ldhName" : "A.DNS.NIC.SCHAEFFLER"
+      },
+      {
+         "ldhName" : "M.DNS.NIC.SCHAEFFLER",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.26.14"
+            ],
+            "v6" : [
+               "2001:67c:10e0:0:0:0:0:14"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:24:0:0:0:0:14"
+            ],
+            "v4" : [
+               "194.0.24.14"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "N.DNS.NIC.SCHAEFFLER"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/schaeffler.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.schaeffler.com",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -22,52 +92,31 @@
          "title" : "Source"
       }
    ],
-   "handle" : "schaeffler",
    "status" : [
       "active"
    ],
-   "nameservers" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
       {
-         "ldhName" : "A.DNS.NIC.SCHAEFFLER",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.25.34"
-            ],
-            "v6" : [
-               "2001:678:20:0:0:0:0:34"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-17"
       },
       {
-         "ldhName" : "M.DNS.NIC.SCHAEFFLER",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:10e0:0:0:0:0:14"
-            ],
-            "v4" : [
-               "194.0.26.14"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2023-05-04",
+         "eventAction" : "last changed"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "N.DNS.NIC.SCHAEFFLER",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.24.14"
-            ],
-            "v6" : [
-               "2001:678:24:0:0:0:0:14"
-            ]
-         }
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:54"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "ldhName" : "schaeffler",
    "entities" : [
       {
+         "handle" : "schaeffler-administrative",
          "objectClassName" : "entity",
          "roles" : [
             "administrative"
@@ -122,10 +171,10 @@
                   "schaefflerregistry@lemarit.com"
                ]
             ]
-         ],
-         "handle" : "schaeffler-administrative"
+         ]
       },
       {
+         "handle" : "schaeffler-technical",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -186,16 +235,16 @@
                ]
             ]
          ],
-         "handle" : "schaeffler-technical",
          "roles" : [
             "technical"
          ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "schaeffler-registrant",
          "roles" : [
             "registrant"
          ],
-         "handle" : "schaeffler-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -228,69 +277,20 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-12-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-05-04"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:41",
-         "eventAction" : "last update of RDAP database"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "7cb20720c71b7de03c050c85d6a41ec795f90912f8918c4fa5f2ab37c45cdbb7",
-            "keyTag" : "5269",
+            "algorithm" : "8",
             "digestType" : "2",
-            "algorithm" : "8"
+            "keyTag" : "5269",
+            "digest" : "7cb20720c71b7de03c050c85d6a41ec795f90912f8918c4fa5f2ab37c45cdbb7"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/schaeffler.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.schaeffler.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ]
+   "objectClassName" : "domain",
+   "handle" : "schaeffler"
 }

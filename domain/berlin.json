@@ -1,13 +1,10 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.BERLIN."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -22,14 +19,26 @@
          ]
       }
    ],
-   "handle" : "berlin",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/berlin.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://nic.berlin/",
+         "title" : "URL for registration services"
+      }
    ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "A.DNS.NIC.BERLIN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:678:20:0:0:0:0:16"
@@ -38,7 +47,7 @@
                "194.0.25.16"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "A.DNS.NIC.BERLIN"
       },
       {
          "ipAddresses" : {
@@ -49,31 +58,30 @@
                "194.0.26.5"
             ]
          },
-         "ldhName" : "M.DNS.NIC.BERLIN",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "M.DNS.NIC.BERLIN"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "N.DNS.NIC.BERLIN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:24:0:0:0:0:5"
-            ],
             "v4" : [
                "194.0.24.5"
+            ],
+            "v6" : [
+               "2001:678:24:0:0:0:0:5"
             ]
          }
       }
    ],
-   "ldhName" : "berlin",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -84,10 +92,57 @@
          "title" : "Comments"
       }
    ],
-   "port43" : "whois.iana.org",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "berlin-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "dotBERLIN GmbH & Co. KG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Gustav-Mueller-Strasse 1\nBerlin 10829\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -148,12 +203,11 @@
             ]
          ],
          "handle" : "berlin-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
          "handle" : "berlin-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -215,96 +269,42 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "berlin-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "dotBERLIN GmbH & Co. KG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Gustav-Mueller-Strasse 1\nBerlin 10829\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
+   "ldhName" : "berlin",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "b1ddc962a9293cda1c2ae8f951c86a8f391248c50751ad61f642d46d0f644b41",
-            "digestType" : "2",
             "algorithm" : "8",
-            "keyTag" : "47974"
+            "keyTag" : "47974",
+            "digestType" : "2"
          },
          {
-            "digest" : "479dd34641c6386048518f9a39aafba26172060ee36a91f478ebe521aa1cffd5",
-            "algorithm" : "8",
+            "keyTag" : "25424",
             "digestType" : "2",
-            "keyTag" : "25424"
+            "algorithm" : "8",
+            "digest" : "479dd34641c6386048518f9a39aafba26172060ee36a91f478ebe521aa1cffd5"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/berlin.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://nic.berlin/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-19"
+         "eventDate" : "2013-12-19",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2022-05-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-05-18"
       },
       {
-         "eventDate" : "2023-07-26T12:28:13",
+         "eventDate" : "2023-07-26T13:16:47",
          "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "handle" : "berlin",
+   "objectClassName" : "domain"
 }

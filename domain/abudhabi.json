@@ -1,5 +1,7 @@
 {
-   "handle" : "abudhabi",
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -23,11 +25,92 @@
          "title" : "Source"
       }
    ],
-   "ldhName" : "abudhabi",
-   "port43" : "whois.iana.org",
+   "nameservers" : [
+      {
+         "ldhName" : "GTLD.ALPHA.ARIDNS.NET.AU",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.BETA.ARIDNS.NET.AU"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.10"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.DELTA.ARIDNS.NET.AU"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.GAMMA.ARIDNS.NET.AU"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/abudhabi.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "abudhabi",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "abudhabi-administrative",
          "roles" : [
             "administrative"
          ],
@@ -89,52 +172,12 @@
                   "adtld@adsic.abudhabi.ae"
                ]
             ]
-         ],
-         "handle" : "abudhabi-administrative"
+         ]
       },
       {
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Abu Dhabi Systems and Information Centre"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Abu Dhabi Systems & Information Centre\nInternational Tower Al Karama Street\nAbu Dhabi\nUnited Arab Emirates (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "abudhabi-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "abudhabi-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -194,29 +237,68 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "handle" : "abudhabi-technical",
+         "objectClassName" : "entity"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Abu Dhabi Systems and Information Centre"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Abu Dhabi Systems & Information Centre\nInternational Tower Al Karama Street\nAbu Dhabi\nUnited Arab Emirates (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "title" : "Comments"
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "abudhabi-registrant",
+         "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "abudhabi",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "15247",
+            "digestType" : "1",
+            "digest" : "d2c05ad2312ebe77f6149f8b962dd9012d6d2cca"
+         },
+         {
+            "algorithm" : "8",
+            "keyTag" : "15247",
+            "digestType" : "2",
+            "digest" : "4146c35f5ee96a341ee8c8f0aca17a2cbb52fcd1d6d1c95c9aab70061a7ac692"
+         }
+      ]
+   },
    "events" : [
       {
          "eventDate" : "2016-02-26",
@@ -227,91 +309,9 @@
          "eventDate" : "2019-11-26"
       },
       {
-         "eventDate" : "2023-07-26T12:27:40",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "d2c05ad2312ebe77f6149f8b962dd9012d6d2cca",
-            "keyTag" : "15247",
-            "digestType" : "1",
-            "algorithm" : "8"
-         },
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "15247",
-            "digest" : "4146c35f5ee96a341ee8c8f0aca17a2cbb52fcd1d6d1c95c9aab70061a7ac692"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/abudhabi.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "GTLD.ALPHA.ARIDNS.NET.AU"
-      },
-      {
-         "ldhName" : "GTLD.BETA.ARIDNS.NET.AU",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.198.10"
-            ]
-         },
-         "ldhName" : "GTLD.DELTA.ARIDNS.NET.AU"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "GTLD.GAMMA.ARIDNS.NET.AU"
-      }
-   ],
-   "objectClassName" : "domain"
+   "port43" : "whois.iana.org"
 }

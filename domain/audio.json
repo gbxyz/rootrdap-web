@@ -1,9 +1,8 @@
 {
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
+         "ldhName" : "A.NIC.AUDIO",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.169.218.150"
@@ -11,12 +10,9 @@
             "v6" : [
                "2001:67c:13cc:0:0:0:1:150"
             ]
-         },
-         "ldhName" : "A.NIC.AUDIO",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "B.NIC.AUDIO",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:150"
@@ -25,47 +21,32 @@
                "185.24.64.150"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.AUDIO"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.248.150"
-            ],
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:150"
+            ],
+            "v4" : [
+               "212.18.248.150"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "C.NIC.AUDIO"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.AUDIO",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.249.150"
-            ],
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:150"
+            ],
+            "v4" : [
+               "212.18.249.150"
             ]
          },
-         "ldhName" : "D.NIC.AUDIO"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "audio",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-05-08"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-16"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:01",
-         "eventAction" : "last update of RDAP database"
+         "objectClassName" : "nameserver"
       }
    ],
    "links" : [
@@ -75,57 +56,75 @@
          "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
+         "title" : "URL for registration services",
          "href" : "https://nic.audio",
-         "title" : "URL for registration services"
+         "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "5",
-            "digestType" : "1",
-            "keyTag" : "49027",
-            "digest" : "f2611084038a67137a2a8ef584402bad64ee365d"
-         },
-         {
-            "algorithm" : "5",
-            "digestType" : "2",
-            "keyTag" : "20191",
-            "digest" : "775c07f584233b85606ac3874441c97ad1af7f144d3e9f0fd779f1e064e49316"
-         },
-         {
-            "digest" : "bb72622c591c9f739af49c13eedb7f2796cbc8fb",
-            "keyTag" : "20191",
-            "digestType" : "1",
-            "algorithm" : "5"
-         },
-         {
-            "algorithm" : "5",
-            "digestType" : "2",
-            "keyTag" : "49027",
-            "digest" : "5679b4abdcc3a065fe7fdddcf8ad1d7ebe22323d758abc315ab4d4d8b49cf684"
-         },
-         {
-            "digest" : "859c5604b1a595b5e139d2904314e6e5eee152ace825a74eca32a3e1290f178c",
-            "algorithm" : "5",
-            "digestType" : "2",
-            "keyTag" : "10807"
-         },
-         {
-            "digest" : "a8743f3c50bf77807ef5713d614f4cf1c0567f95",
-            "digestType" : "1",
-            "algorithm" : "5",
-            "keyTag" : "10807"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AUDIO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://nic.audio"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-05-08",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "vcardArray" : [
@@ -179,18 +178,15 @@
                ]
             ]
          ],
-         "handle" : "audio-administrative",
          "roles" : [
             "administrative"
          ],
+         "handle" : "audio-administrative",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "handle" : "audio-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -249,10 +245,12 @@
                   "tld.ops@centralnic.com"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
-         "handle" : "audio-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -289,50 +287,52 @@
          "roles" : [
             "registrant"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "audio-registrant"
       }
    ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AUDIO."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://nic.audio"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "audio"
+   "ldhName" : "audio",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "f2611084038a67137a2a8ef584402bad64ee365d",
+            "algorithm" : "5",
+            "digestType" : "1",
+            "keyTag" : "49027"
+         },
+         {
+            "digest" : "775c07f584233b85606ac3874441c97ad1af7f144d3e9f0fd779f1e064e49316",
+            "digestType" : "2",
+            "keyTag" : "20191",
+            "algorithm" : "5"
+         },
+         {
+            "algorithm" : "5",
+            "keyTag" : "20191",
+            "digestType" : "1",
+            "digest" : "bb72622c591c9f739af49c13eedb7f2796cbc8fb"
+         },
+         {
+            "digest" : "5679b4abdcc3a065fe7fdddcf8ad1d7ebe22323d758abc315ab4d4d8b49cf684",
+            "algorithm" : "5",
+            "keyTag" : "49027",
+            "digestType" : "2"
+         },
+         {
+            "digest" : "859c5604b1a595b5e139d2904314e6e5eee152ace825a74eca32a3e1290f178c",
+            "keyTag" : "10807",
+            "digestType" : "2",
+            "algorithm" : "5"
+         },
+         {
+            "keyTag" : "10807",
+            "digestType" : "1",
+            "algorithm" : "5",
+            "digest" : "a8743f3c50bf77807ef5713d614f4cf1c0567f95"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "handle" : "audio",
+   "objectClassName" : "domain"
 }

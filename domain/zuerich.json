@@ -1,83 +1,74 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.ZUERICH."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://nic.zuerich"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "handle" : "zuerich",
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:107"
-            ],
             "v4" : [
                "194.169.218.107"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:107"
             ]
          },
-         "ldhName" : "A.NIC.ZUERICH",
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.ZUERICH"
+      },
+      {
+         "ldhName" : "B.NIC.ZUERICH",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.107"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:107"
+            ]
+         },
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.ZUERICH",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:107"
-            ],
-            "v4" : [
-               "185.24.64.107"
-            ]
-         },
-         "ldhName" : "B.NIC.ZUERICH"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.107"
-            ],
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:107"
+            ],
+            "v4" : [
+               "212.18.248.107"
             ]
          },
-         "ldhName" : "C.NIC.ZUERICH"
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "D.NIC.ZUERICH",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:107"
-            ],
             "v4" : [
                "212.18.249.107"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:107"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "ldhName" : "zuerich",
    "links" : [
       {
          "rel" : "related",
@@ -86,54 +77,23 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "href" : "https://nic.zuerich",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "52375",
-            "digest" : "e3ebd91bbf29be88d075c43ac313a9db174267e858061316ec4c942728a3829e"
-         },
-         {
-            "digest" : "69407fe45988e2c569855c70330a24520db734481082c668317e8bbb764551d3",
-            "keyTag" : "7399",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventDate" : "2014-12-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-11-14"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:33:02"
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -144,12 +104,14 @@
          "title" : "Comments"
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -209,10 +171,13 @@
                ]
             ]
          ],
-         "handle" : "zuerich-administrative"
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "zuerich-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -272,13 +237,13 @@
                ]
             ]
          ],
-         "handle" : "zuerich-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "handle" : "zuerich-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -312,11 +277,46 @@
                ]
             ]
          ],
-         "handle" : "zuerich-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "handle" : "zuerich-registrant",
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org"
+   "ldhName" : "zuerich",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "52375",
+            "algorithm" : "8",
+            "digest" : "e3ebd91bbf29be88d075c43ac313a9db174267e858061316ec4c942728a3829e"
+         },
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "7399",
+            "digest" : "69407fe45988e2c569855c70330a24520db734481082c668317e8bbb764551d3"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "2014-12-18",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-14"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:58"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "handle" : "zuerich",
+   "objectClassName" : "domain"
 }

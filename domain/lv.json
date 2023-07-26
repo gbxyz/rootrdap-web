@@ -1,149 +1,37 @@
 {
+   "objectClassName" : "domain",
    "handle" : "lv",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LV."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.lv/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "1993-04-29",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2021-12-23",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-12-23"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:49"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lv.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.lv/",
-         "title" : "URL for registration services"
+         "eventDate" : "2023-07-26T13:16:52",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "7e932a4f9cf9b1cd047c277e3cd323a53d42347d47c7bf1dd6018ff4b344fc1c",
             "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "42018"
+            "keyTag" : "42018",
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "port43" : "whois.iana.org",
+   "ldhName" : "lv",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Guntis Barzdins"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Institute of Mathematics and Computer Science"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Department of Network Solutions (DNS)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Rainis Boulevard 29\nRiga LV-1459\nLatvia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+371 6721 1241"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+371 6782 0153"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "guntis@latnet.lv"
-               ]
-            ]
-         ],
-         "handle" : "lv-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "lv-technical",
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -209,14 +97,83 @@
                ]
             ]
          ],
-         "handle" : "lv-technical"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "lv-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Guntis Barzdins"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Institute of Mathematics and Computer Science"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Department of Network Solutions (DNS)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Rainis Boulevard 29\nRiga LV-1459\nLatvia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+371 6721 1241"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+371 6782 0153"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "guntis@latnet.lv"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "lv-administrative"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -261,17 +218,28 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "lv-registrant"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -282,44 +250,61 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "lv",
-   "nameservers" : [
+   "links" : [
       {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.48.1"
-            ],
-            "v6" : [
-               "2001:678:7c:0:0:0:0:7c"
-            ]
-         },
-         "ldhName" : "A.NIC.LV",
-         "objectClassName" : "nameserver"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lv.html",
+         "rel" : "related"
       },
       {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.lv/",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.LV",
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:7c:0:0:0:0:7c"
+            ],
+            "v4" : [
+               "194.0.48.1"
+            ]
+         }
+      },
+      {
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "92.240.70.1"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "B.NIC.LV"
       },
       {
+         "ldhName" : "D.NIC.LV",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:b:1:0:0:0:1"
-            ],
             "v4" : [
                "194.0.8.1"
+            ],
+            "v6" : [
+               "2001:678:b:1:0:0:0:1"
             ]
-         },
-         "ldhName" : "D.NIC.LV"
+         }
       },
       {
          "ldhName" : "N.NIC.LV",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.146.106.150"
@@ -327,10 +312,11 @@
             "v6" : [
                "2001:67c:1010:38:0:0:0:53"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "NU.NIC.LV",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:3f0:0:312:0:0:0:53"
@@ -338,9 +324,7 @@
             "v4" : [
                "77.72.229.249"
             ]
-         },
-         "ldhName" : "NU.NIC.LV",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
@@ -351,12 +335,28 @@
                "192.36.125.2"
             ]
          },
-         "ldhName" : "SUNIC.SUNET.SE",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "SUNIC.SUNET.SE"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LV."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.lv/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
    ]
 }

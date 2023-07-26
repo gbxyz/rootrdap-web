@@ -1,4 +1,10 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -7,10 +13,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.travelers.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -19,14 +25,27 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/travelersinsurance.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.travelers.com"
+      }
    ],
-   "handle" : "travelersinsurance",
-   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ldhName" : "A0.NIC.TRAVELERSINSURANCE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:c2:0:0:0:0:17"
@@ -34,140 +53,70 @@
             "v4" : [
                "65.22.200.17"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ldhName" : "A2.NIC.TRAVELERSINSURANCE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.203.17"
-            ],
             "v6" : [
                "2a01:8840:c5:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.203.17"
             ]
          },
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.TRAVELERSINSURANCE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.201.17"
-            ],
             "v6" : [
                "2a01:8840:c3:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.201.17"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.TRAVELERSINSURANCE"
       },
       {
          "ldhName" : "C0.NIC.TRAVELERSINSURANCE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.202.17"
-            ],
             "v6" : [
                "2a01:8840:c4:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.202.17"
             ]
          },
          "objectClassName" : "nameserver"
       }
    ],
-   "status" : [
-      "active"
-   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "travelersinsurance",
    "entities" : [
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215 706 5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 215 706 5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
-               ]
-            ]
-         ],
-         "handle" : "travelersinsurance-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
-      },
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "travelersinsurance-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -201,9 +150,12 @@
                ]
             ]
          ],
+         "handle" : "travelersinsurance-registrant",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "travelersinsurance-administrative",
          "roles" : [
             "administrative"
          ],
@@ -265,39 +217,88 @@
                   "ngtld-travelers@cscglobal.com"
                ]
             ]
+         ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215 706 5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 215 706 5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
+               ]
+            ]
          ],
-         "handle" : "travelersinsurance-administrative",
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "travelersinsurance-technical"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/travelersinsurance.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.travelers.com",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "travelersinsurance",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "1a8f262ddbe7316233e999f81ae452c17b3435c57bab9ceec4bae518f121e1f1",
             "algorithm" : "8",
             "digestType" : "2",
-            "keyTag" : "11389"
+            "keyTag" : "11389",
+            "digest" : "1a8f262ddbe7316233e999f81ae452c17b3435c57bab9ceec4bae518f121e1f1"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2015-11-25",
@@ -308,9 +309,8 @@
          "eventDate" : "2020-11-17"
       },
       {
-         "eventDate" : "2023-07-26T12:32:09",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
       }
-   ],
-   "ldhName" : "travelersinsurance"
+   ]
 }

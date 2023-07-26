@@ -1,86 +1,20 @@
 {
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.PLUMBING",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.24.28"
-            ],
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:28"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:28"
-            ],
-            "v4" : [
-               "65.22.25.28"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.PLUMBING"
-      },
-      {
-         "ldhName" : "V0N2.NIC.PLUMBING",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.26.28"
-            ],
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:28"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.PLUMBING",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.12.28"
-            ],
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:28"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.PLUMBING",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:28"
-            ],
-            "v4" : [
-               "65.22.27.28"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.PLUMBING",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.13.28"
-            ],
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:28"
-            ]
-         }
-      }
-   ],
+   "handle" : "plumbing",
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "d0024bf8bc37e85179a92e3b16f602aa566e63df0eb315324be040ff2d35bdb4",
+            "digestType" : "2",
+            "keyTag" : "48722",
+            "algorithm" : "8"
+         }
+      ]
+   },
+   "ldhName" : "plumbing",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -114,16 +48,16 @@
                ]
             ]
          ],
-         "handle" : "plumbing-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "plumbing-registrant"
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "plumbing-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -183,13 +117,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "plumbing-technical"
       },
       {
+         "handle" : "plumbing-administrative",
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -249,27 +182,12 @@
                ]
             ]
          ],
-         "handle" : "plumbing-administrative"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventDate" : "2013-11-08",
@@ -280,45 +198,22 @@
          "eventDate" : "2021-11-02"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:22"
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/plumbing.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "48722",
-            "digest" : "d0024bf8bc37e85179a92e3b16f602aa566e63df0eb315324be040ff2d35bdb4"
-         }
-      ]
-   },
-   "ldhName" : "plumbing",
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.PLUMBING."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -333,8 +228,113 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "handle" : "plumbing"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.24.28"
+            ],
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:28"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.PLUMBING"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.25.28"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.PLUMBING"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.26.28"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.PLUMBING"
+      },
+      {
+         "ldhName" : "V0N3.NIC.PLUMBING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:28"
+            ],
+            "v4" : [
+               "161.232.12.28"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V2N0.NIC.PLUMBING",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:28"
+            ],
+            "v4" : [
+               "65.22.27.28"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N1.NIC.PLUMBING",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.13.28"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:28"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/plumbing.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ]
 }

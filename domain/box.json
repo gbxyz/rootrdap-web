@@ -1,27 +1,119 @@
 {
-   "ldhName" : "box",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BOX."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://intercap.inc"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.139"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:139"
+            ]
+         },
+         "ldhName" : "A.NIC.BOX"
+      },
+      {
+         "ldhName" : "B.NIC.BOX",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.139"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:139"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:139"
+            ],
+            "v4" : [
+               "212.18.248.139"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.BOX"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:139"
+            ],
+            "v4" : [
+               "212.18.249.139"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.BOX"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/box.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://intercap.inc",
+         "rel" : "related"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "box",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "box-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -75,52 +167,13 @@
          ],
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "box-administrative"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "box-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Intercap Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "103 South Church Street, 4th Floor, Harbour Place, PO Box 10240\nGeorge Town Grand Cayman KY1-1002\nCayman Islands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "box-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -180,48 +233,72 @@
                ]
             ]
          ],
-         "handle" : "box-technical",
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/box.html",
-         "rel" : "related"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://intercap.inc",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "objectClassName" : "entity",
+         "handle" : "box-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Intercap Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "103 South Church Street, 4th Floor, Harbour Place, PO Box 10240\nGeorge Town Grand Cayman KY1-1002\nCayman Islands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
+   "ldhName" : "box",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "31cc9f53054303443fa06f368c54971d8e12c89655cb768a951d908701e82800",
+            "digestType" : "2",
             "keyTag" : "47542",
-            "algorithm" : "8",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "f59d467614d996277c9ea8e52eb920623b9fa4fe",
-            "keyTag" : "47542",
-            "digestType" : "1",
             "algorithm" : "8"
          },
          {
-            "digestType" : "2",
+            "digest" : "f59d467614d996277c9ea8e52eb920623b9fa4fe",
             "algorithm" : "8",
-            "keyTag" : "63242",
-            "digest" : "f63250257503cce60195e71c2e346a2d8bde06dcbd666b9ee4f860d75988702d"
+            "keyTag" : "47542",
+            "digestType" : "1"
+         },
+         {
+            "digest" : "f63250257503cce60195e71c2e346a2d8bde06dcbd666b9ee4f860d75988702d",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "63242"
          }
       ]
    },
@@ -231,90 +308,13 @@
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2022-10-28",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-28"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:25"
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.139"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:139"
-            ]
-         },
-         "ldhName" : "A.NIC.BOX",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.BOX",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:139"
-            ],
-            "v4" : [
-               "185.24.64.139"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C.NIC.BOX",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.139"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:139"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.139"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:139"
-            ]
-         },
-         "ldhName" : "D.NIC.BOX"
-      }
-   ],
-   "handle" : "box",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BOX."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://intercap.inc"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ]
+   "port43" : "whois.iana.org"
 }

@@ -1,8 +1,30 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/komatsu.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.komatsu.com/",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
@@ -10,7 +32,8 @@
             "v4" : [
                "37.209.192.4"
             ]
-         }
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
       },
       {
          "ipAddresses" : {
@@ -21,20 +44,21 @@
                "2001:dcd:2:0:0:0:0:4"
             ]
          },
-         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.GMOREGISTRY.NET"
+      },
+      {
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "37.209.196.4"
+            ]
+         },
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "K.GMOREGISTRY.NET"
-      },
-      {
+         "ldhName" : "L.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:4:0:0:0:0:4"
@@ -43,126 +67,66 @@
                "37.209.198.4"
             ]
          },
-         "ldhName" : "L.GMOREGISTRY.NET",
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "entities" : [
+   "notices" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "handle" : "komatsu-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Komatsu Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2-3-6 Akasaka\nMinato-ku Tokyo 107-8414\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.KOMATSU."
          ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
+         "description" : [
+            "Registration information: http://www.komatsu.com/"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Yoshitake Tamura"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "GMO Registry, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81.354561601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81.337805239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
-               ]
-            ]
-         ],
-         "handle" : "komatsu-technical"
+         "title" : "Remark"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
+         "description" : [
+            "IANA"
          ],
+         "title" : "Source"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "komatsu",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-03-06",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-06-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -222,59 +186,120 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
          "handle" : "komatsu-administrative"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
+      },
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Yoshitake Tamura"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "GMO Registry, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81.354561601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81.337805239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
+               ]
+            ]
          ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "roles" : [
+            "technical"
          ],
-         "title" : "Comments"
+         "objectClassName" : "entity",
+         "handle" : "komatsu-technical"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Komatsu Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2-3-6 Akasaka\nMinato-ku Tokyo 107-8414\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "komatsu-registrant"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-06"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:36"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/komatsu.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.komatsu.com/"
-      }
-   ],
+   "ldhName" : "komatsu",
    "secureDNS" : {
       "dsData" : [
          {
@@ -285,30 +310,5 @@
          }
       ],
       "delegationSigned" : true
-   },
-   "ldhName" : "komatsu",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.KOMATSU."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.komatsu.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "komatsu"
+   }
 }

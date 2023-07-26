@@ -1,12 +1,64 @@
 {
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "gn",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "38486",
+            "algorithm" : "8",
+            "digest" : "4d9b33859b77bab1986ceaacc6e4a0534cdee69ac5e406c6d082c9314e0fce66"
+         }
+      ]
+   },
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Centre National des Sciences Halieutiques de Boussoura"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "BP 1984\nConakry\nGuinea"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "objectClassName" : "entity",
+         "handle" : "gn-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "gn-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "gn-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -68,47 +120,11 @@
          ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Centre National des Sciences Halieutiques de Boussoura"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "BP 1984\nConakry\nGuinea"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "gn-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
+         "handle" : "gn-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -153,11 +169,49 @@
                   "randy@psg.com"
                ]
             ]
-         ],
-         "handle" : "gn-technical",
-         "roles" : [
-            "technical"
          ]
+      }
+   ],
+   "ldhName" : "gn",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1994-08-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-02-03"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://psg.com/dns/gn"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "notices" : [
@@ -178,51 +232,26 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "1994-08-09",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-02-03"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:05",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/gn.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org"
       },
       {
+         "href" : "http://psg.com/dns/gn",
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://psg.com/dns/gn"
+         "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "4d9b33859b77bab1986ceaacc6e4a0534cdee69ac5e406c6d082c9314e0fce66",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "38486"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "gn",
    "nameservers" : [
       {
+         "ldhName" : "FORK.STH.DNSNODE.NET",
          "ipAddresses" : {
             "v4" : [
                "77.72.229.254"
@@ -231,12 +260,11 @@
                "2a01:3f0:0:306:0:0:0:53"
             ]
          },
-         "ldhName" : "FORK.STH.DNSNODE.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS-GN.AFRINIC.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "196.216.168.49"
@@ -247,6 +275,7 @@
          }
       },
       {
+         "ldhName" : "RIP.PSG.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -255,36 +284,7 @@
             "v4" : [
                "147.28.0.39"
             ]
-         },
-         "ldhName" : "RIP.PSG.COM"
+         }
       }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "handle" : "gn",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://psg.com/dns/gn"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

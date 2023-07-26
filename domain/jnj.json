@@ -1,5 +1,4 @@
 {
-   "handle" : "jnj",
    "remarks" : [
       {
          "description" : [
@@ -8,20 +7,108 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.jnj.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         },
+         "ldhName" : "A.NIC.JNJ"
+      },
+      {
+         "ldhName" : "B.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.JNJ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:59"
+            ],
+            "v4" : [
+               "156.154.144.89"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:59"
+            ],
+            "v4" : [
+               "156.154.145.89"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.JNJ"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:59"
+            ],
+            "v4" : [
+               "156.154.159.89"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/jnj.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.jnj.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "notices" : [
       {
@@ -33,56 +120,23 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
+   ],
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "jnj-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Johnson & Johnson Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "One Johnson & Johnson Plaza\nNew Brunswick NJ 08933\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
+         "handle" : "jnj-technical",
          "objectClassName" : "entity",
          "roles" : [
             "technical"
@@ -145,10 +199,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "handle" : "jnj-technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "jnj-administrative",
          "roles" : [
             "administrative"
          ],
@@ -210,131 +265,76 @@
                   "jnjregistry@fairwindspartners.com"
                ]
             ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "jnj-registrant",
+         "roles" : [
+            "registrant"
          ],
-         "handle" : "jnj-administrative",
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "8e9740b903122d7dfed99cf66764bbb9b24eabe8b5a3c37bd0d876f47d69956f",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "16897"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/jnj.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.jnj.com/"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-14"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:31"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Johnson & Johnson Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "One Johnson & Johnson Plaza\nNew Brunswick NJ 08933\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
    "ldhName" : "jnj",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "16897",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "8e9740b903122d7dfed99cf66764bbb9b24eabe8b5a3c37bd0d876f47d69956f"
          }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "2016-01-14",
+         "eventAction" : "registration"
       },
       {
-         "ldhName" : "B.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
-         "ldhName" : "C.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:59"
-            ],
-            "v4" : [
-               "156.154.144.89"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.JNJ",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.89"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:59"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:59"
-            ],
-            "v4" : [
-               "156.154.159.89"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
    ],
-   "status" : [
-      "active"
-   ]
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "jnj"
 }

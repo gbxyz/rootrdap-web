@@ -1,7 +1,4 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "remarks" : [
       {
          "description" : [
@@ -16,42 +13,74 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "handle" : "bike",
-   "status" : [
-      "active"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bike.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
+      }
    ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.BIKE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.24.44"
-            ],
             "v6" : [
                "2a01:8840:1a:0:0:0:0:44"
+            ],
+            "v4" : [
+               "65.22.24.44"
             ]
-         }
+         },
+         "ldhName" : "V0N0.NIC.BIKE"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N1.NIC.BIKE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.25.44"
-            ],
             "v6" : [
                "2a01:8840:1b:0:0:0:0:44"
+            ],
+            "v4" : [
+               "65.22.25.44"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V0N2.NIC.BIKE",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -60,24 +89,23 @@
             "v6" : [
                "2a01:8840:1c:0:0:0:0:44"
             ]
-         },
-         "ldhName" : "V0N2.NIC.BIKE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.BIKE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:44"
-            ],
-            "v4" : [
-               "161.232.12.44"
-            ]
          }
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.12.44"
+            ],
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.BIKE"
+      },
+      {
          "ldhName" : "V2N0.NIC.BIKE",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.27.44"
@@ -90,21 +118,81 @@
       {
          "ldhName" : "V2N1.NIC.BIKE",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.13.44"
-            ],
             "v6" : [
                "2a01:8840:f7:0:0:0:0:44"
+            ],
+            "v4" : [
+               "161.232.13.44"
             ]
          },
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "keyTag" : "32614",
+            "digestType" : "2",
+            "digest" : "65ffd9ef34ae62688731d986023b138529964729aa847bf3b3fd0730202e7eb4"
+         }
+      ]
+   },
    "ldhName" : "bike",
    "entities" : [
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "bike-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "handle" : "bike-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -163,54 +251,12 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "bike-registrant"
-      },
-      {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -271,28 +317,7 @@
             ]
          ],
          "handle" : "bike-technical",
-         "roles" : [
-            "technical"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "objectClassName" : "entity"
       }
    ],
    "events" : [
@@ -306,35 +331,10 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:16"
+         "eventDate" : "2023-07-26T13:16:47"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "32614",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "65ffd9ef34ae62688731d986023b138529964729aa847bf3b3fd0730202e7eb4"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bike.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services"
-      }
-   ]
+   "port43" : "whois.iana.org",
+   "handle" : "bike",
+   "objectClassName" : "domain"
 }

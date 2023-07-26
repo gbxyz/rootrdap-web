@@ -1,121 +1,9 @@
 {
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:42:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.68.33"
-            ]
-         },
-         "ldhName" : "A0.NIC.BLACK",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.71.33"
-            ],
-            "v6" : [
-               "2a01:8840:45:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "A2.NIC.BLACK"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:43:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.69.33"
-            ]
-         },
-         "ldhName" : "B0.NIC.BLACK"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.70.33"
-            ],
-            "v6" : [
-               "2a01:8840:44:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "C0.NIC.BLACK",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "28819",
-            "digest" : "fa6792252a660261b2c191a71bcedbe4cdd7bf61c33aa5f04e558abeb8f96bd9"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/black.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://donuts.domains/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-12-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:18",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "entities" : [
       {
-         "handle" : "black-administrative",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -124,12 +12,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
                ],
                [
                   "org",
@@ -152,39 +34,15 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "black-registrant",
          "objectClassName" : "entity"
       },
       {
+         "handle" : "black-technical",
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -244,10 +102,14 @@
                ]
             ]
          ],
-         "handle" : "black-technical"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "handle" : "black-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -256,6 +118,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
                ],
                [
                   "org",
@@ -278,17 +146,62 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "black-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
    "ldhName" : "black",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "28819",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "fa6792252a660261b2c191a71bcedbe4cdd7bf61c33aa5f04e558abeb8f96bd9"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-20"
+      },
+      {
+         "eventDate" : "2021-12-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:47"
+      }
+   ],
+   "handle" : "black",
+   "objectClassName" : "domain",
    "remarks" : [
       {
          "description" : [
@@ -303,14 +216,101 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/black.html"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "https://donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.BLACK",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:42:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.68.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.BLACK",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:45:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.71.33"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B0.NIC.BLACK",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.69.33"
+            ],
+            "v6" : [
+               "2a01:8840:43:0:0:0:0:33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:44:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.70.33"
+            ]
+         },
+         "ldhName" : "C0.NIC.BLACK"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
    ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "handle" : "black"
+   ]
 }

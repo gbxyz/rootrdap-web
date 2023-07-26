@@ -1,77 +1,9 @@
 {
-   "handle" : "pid",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PID."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.topspectrum.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-12-10"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-29"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:20",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pid.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.topspectrum.com/",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "e8653b5c02c27cc66fd56d529656c23da9dc0231f060d527e231659f9ef27964",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "35396"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
+   "ldhName" : "pid",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "pid-administrative",
+         "handle" : "pid-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -80,12 +12,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Jay Westerdal"
                ],
                [
                   "org",
@@ -108,34 +34,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.206-397-8825"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.206-238-1232"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "contact@topspectrum.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "pid-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -210,6 +118,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Jay Westerdal"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -230,14 +144,149 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.206-397-8825"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.206-238-1232"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "contact@topspectrum.com"
                ]
             ]
          ],
-         "handle" : "pid-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
+         "handle" : "pid-administrative",
          "objectClassName" : "entity"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e8653b5c02c27cc66fd56d529656c23da9dc0231f060d527e231659f9ef27964",
+            "algorithm" : "8",
+            "keyTag" : "35396",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
+      },
+      {
+         "eventDate" : "2021-11-29",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "pid",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PID."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.topspectrum.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.PID",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.47"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:47"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.PID",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:47"
+            ],
+            "v4" : [
+               "185.24.64.47"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.PID",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.47"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:47"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:47"
+            ],
+            "v4" : [
+               "212.18.249.47"
+            ]
+         },
+         "ldhName" : "D.NIC.PID"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/pid.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://www.topspectrum.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -258,59 +307,10 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "pid",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.PID",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.47"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:47"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.47"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:47"
-            ]
-         },
-         "ldhName" : "B.NIC.PID",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.47"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:47"
-            ]
-         },
-         "ldhName" : "C.NIC.PID",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.PID",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.47"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:47"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

@@ -1,110 +1,6 @@
 {
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:24"
-            ],
-            "v4" : [
-               "65.22.20.24"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.GRATIS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.GRATIS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:24"
-            ],
-            "v4" : [
-               "65.22.21.24"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:24"
-            ],
-            "v4" : [
-               "65.22.22.24"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.GRATIS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.GRATIS",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.10.24"
-            ],
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:24"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.23.24"
-            ],
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:24"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.GRATIS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.GRATIS",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.11.24"
-            ],
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:24"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "32626",
-            "digest" : "c0e0491f4fcebe153703e4abeb895cd8706902717053b2bc2dd1e421e5508bfb"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gratis.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
+   "handle" : "gratis",
    "events" : [
       {
          "eventAction" : "registration",
@@ -115,73 +11,16 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:30:10",
+         "eventDate" : "2023-07-26T13:16:50",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "gratis",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "gratis-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "gratis-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -241,10 +80,13 @@
                ]
             ]
          ],
-         "handle" : "gratis-technical",
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "handle" : "gratis-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -306,13 +148,175 @@
                   "tldadmin@donuts.email"
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "gratis-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
          ],
-         "handle" : "gratis-administrative",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "gratis",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "c0e0491f4fcebe153703e4abeb895cd8706902717053b2bc2dd1e421e5508bfb",
+            "algorithm" : "8",
+            "keyTag" : "32626",
+            "digestType" : "2"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:24"
+            ],
+            "v4" : [
+               "65.22.20.24"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.GRATIS"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.21.24"
+            ],
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:24"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.GRATIS"
+      },
+      {
+         "ldhName" : "V0N2.NIC.GRATIS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.22.24"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:24"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N3.NIC.GRATIS",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.24"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:24"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N0.NIC.GRATIS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:24"
+            ],
+            "v4" : [
+               "65.22.23.24"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V2N1.NIC.GRATIS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.24"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:24"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/gratis.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -327,14 +331,10 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "gratis"
+   ]
 }

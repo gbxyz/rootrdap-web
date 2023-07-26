@@ -1,5 +1,119 @@
 {
-   "handle" : "investments",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/investments.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.INVESTMENTS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.28.53"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.29.53"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.INVESTMENTS"
+      },
+      {
+         "ldhName" : "V0N2.NIC.INVESTMENTS",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.30.53"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.53"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:53"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.INVESTMENTS"
+      },
+      {
+         "ldhName" : "V2N0.NIC.INVESTMENTS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.31.53"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.53"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:53"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.INVESTMENTS"
+      }
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -20,17 +134,39 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
+   "handle" : "investments",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-04-17",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "9a6df7804a869eeccb7d1c03f4acc62fee9c130250cf3479be1e9f3904a9e0dc",
+            "keyTag" : "56107",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "investments-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -41,15 +177,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -61,12 +203,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
-         ]
+         ],
+         "handle" : "investments-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "investments-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -129,10 +292,13 @@
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "investments-technical"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,21 +309,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -169,172 +329,12 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "handle" : "investments-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "handle" : "investments-registrant",
+         "objectClassName" : "entity"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-17"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:27"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "56107",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "9a6df7804a869eeccb7d1c03f4acc62fee9c130250cf3479be1e9f3904a9e0dc"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/investments.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "ldhName" : "investments",
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.INVESTMENTS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.53"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.53"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:53"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.INVESTMENTS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:53"
-            ],
-            "v4" : [
-               "65.22.30.53"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.INVESTMENTS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N3.NIC.INVESTMENTS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:53"
-            ],
-            "v4" : [
-               "161.232.14.53"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N0.NIC.INVESTMENTS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:53"
-            ],
-            "v4" : [
-               "65.22.31.53"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.53"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:53"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.INVESTMENTS",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ]
+   "ldhName" : "investments"
 }

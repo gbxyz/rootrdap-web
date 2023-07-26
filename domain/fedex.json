@@ -1,7 +1,9 @@
 {
-   "handle" : "fedex",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ],
    "remarks" : [
       {
@@ -23,10 +25,108 @@
          "title" : "Source"
       }
    ],
-   "ldhName" : "fedex",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.FEDEX",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:de:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.228.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.FEDEX",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:e1:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.231.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B0.NIC.FEDEX",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:df:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.229.33"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C0.NIC.FEDEX",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:e0:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.230.33"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/fedex.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.fedex.com/",
+         "rel" : "related"
+      }
+   ],
+   "handle" : "fedex",
+   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "13b91145d3199c419b0b4bafb3938f08388b7b52bf8983c24e068bf63075b68b",
+            "algorithm" : "8",
+            "keyTag" : "57511",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "fedex-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -60,82 +160,11 @@
                ]
             ]
          ],
-         "handle" : "fedex-registrant",
          "roles" : [
             "registrant"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "fedex-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215.706.5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 215.706.5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "fedex-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -195,122 +224,93 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "fedex-administrative"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215.706.5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 215.706.5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
+               ]
+            ]
+         ],
+         "handle" : "fedex-technical",
          "objectClassName" : "entity"
       }
    ],
+   "ldhName" : "fedex",
    "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "events" : [
       {
-         "eventDate" : "2016-06-09",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-09"
       },
       {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
       },
       {
-         "eventDate" : "2023-07-26T12:29:39",
+         "eventDate" : "2023-07-26T13:16:49",
          "eventAction" : "last update of RDAP database"
       }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/fedex.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.fedex.com/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "57511",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "13b91145d3199c419b0b4bafb3938f08388b7b52bf8983c24e068bf63075b68b"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.228.33"
-            ],
-            "v6" : [
-               "2a01:8840:de:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "A0.NIC.FEDEX"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.231.33"
-            ],
-            "v6" : [
-               "2a01:8840:e1:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "A2.NIC.FEDEX",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.229.33"
-            ],
-            "v6" : [
-               "2a01:8840:df:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "B0.NIC.FEDEX"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.230.33"
-            ],
-            "v6" : [
-               "2a01:8840:e0:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "C0.NIC.FEDEX",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

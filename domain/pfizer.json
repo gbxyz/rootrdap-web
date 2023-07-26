@@ -1,7 +1,118 @@
 {
-   "handle" : "pfizer",
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/pfizer.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.pfizer.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.PFIZER",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.PFIZER",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C.NIC.PFIZER",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.134"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:86"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.PFIZER"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.134"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:86"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.PFIZER"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.134"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:86"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.PFIZER"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
@@ -17,35 +128,33 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "ldhName" : "pfizer",
-   "notices" : [
+   "objectClassName" : "domain",
+   "handle" : "pfizer",
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "2016-06-16",
+         "eventAction" : "registration"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-04-12"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "handle" : "pfizer-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -81,14 +190,72 @@
          ],
          "roles" : [
             "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "pfizer-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Domain Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Com Laude"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "28-30 Little Russell Street\nLondon WC1A 2HN\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 2074218250"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registry@comlaude.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "handle" : "pfizer-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "pfizer-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -147,186 +314,19 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Domain Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Com Laude"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "28-30 Little Russell Street\nLondon WC1A 2HN\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 2074218250"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registry@comlaude.com"
-               ]
-            ]
-         ],
-         "handle" : "pfizer-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/pfizer.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://www.pfizer.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "pfizer",
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "9166664240f37692a3886b0566e05220d43a364b2fef2581a905ef5833414bcb",
-            "digestType" : "2",
             "algorithm" : "8",
-            "keyTag" : "46210"
+            "digestType" : "2",
+            "keyTag" : "46210",
+            "digest" : "9166664240f37692a3886b0566e05220d43a364b2fef2581a905ef5833414bcb"
          }
       ],
       "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-06-16"
-      },
-      {
-         "eventDate" : "2023-04-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:18",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.PFIZER"
-      },
-      {
-         "ldhName" : "B.NIC.PFIZER",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.PFIZER",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:86"
-            ],
-            "v4" : [
-               "156.154.144.134"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.PFIZER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.134"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:86"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.PFIZER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.PFIZER",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.134"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:86"
-            ]
-         }
-      }
-   ]
+   }
 }

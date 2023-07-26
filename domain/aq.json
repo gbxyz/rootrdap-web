@@ -1,47 +1,30 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "remarks" : [
       {
-         "ldhName" : "FORK.STH.DNSNODE.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "77.72.229.254"
-            ],
-            "v6" : [
-               "2a01:3f0:0:306:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.132"
-            ],
-            "v6" : [
-               "2001:500:14:6132:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "NS1.ANYCAST.DNS.AQ"
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
       },
       {
-         "ldhName" : "NS99.DNS.NET.NZ",
-         "ipAddresses" : {
-            "v4" : [
-               "202.46.190.131"
-            ],
-            "v6" : [
-               "2001:dce:2000:2:0:0:0:131"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "ldhName" : "aq",
    "notices" : [
       {
          "description" : [
@@ -60,10 +43,65 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "77.72.229.254"
+            ],
+            "v6" : [
+               "2a01:3f0:0:306:0:0:0:53"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "FORK.STH.DNSNODE.NET"
+      },
+      {
+         "ldhName" : "NS1.ANYCAST.DNS.AQ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.132"
+            ],
+            "v6" : [
+               "2001:500:14:6132:ad:0:0:1"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS99.DNS.NET.NZ",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "202.46.190.131"
+            ],
+            "v6" : [
+               "2001:dce:2000:2:0:0:0:131"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/aq.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "aq",
    "entities" : [
       {
-         "handle" : "aq-registrant",
+         "handle" : "aq-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -72,6 +110,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Peter Mott"
                ],
                [
                   "org",
@@ -94,15 +138,25 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+64 21 279 4995"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "info@icenic.aq"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "aq-technical",
          "roles" : [
             "technical"
          ],
@@ -156,13 +210,14 @@
                   "ianatech@internetnz.net.nz"
                ]
             ]
-         ],
-         "handle" : "aq-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "aq-registrant",
          "objectClassName" : "entity",
-         "handle" : "aq-administrative",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -171,12 +226,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Peter Mott"
                ],
                [
                   "org",
@@ -199,38 +248,12 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+64 21 279 4995"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "info@icenic.aq"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/aq.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      }
-   ],
+   "ldhName" : "aq",
    "events" : [
       {
          "eventDate" : "1992-02-26",
@@ -241,32 +264,9 @@
          "eventDate" : "2021-02-16"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:55"
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "aq"
+   "port43" : "whois.iana.org"
 }

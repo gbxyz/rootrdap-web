@@ -1,14 +1,16 @@
 {
-   "handle" : "koeln",
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -17,25 +19,48 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "ldhName" : "koeln",
-   "events" : [
+   "nameservers" : [
       {
-         "eventDate" : "2014-02-20",
-         "eventAction" : "registration"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.114"
+            ],
+            "v6" : [
+               "2001:678:e:114:0:0:0:53"
+            ]
+         },
+         "ldhName" : "DNS.RYCE-RSP.COM"
       },
       {
-         "eventDate" : "2021-03-11",
-         "eventAction" : "last changed"
+         "ldhName" : "NS1.DNS.BUSINESS",
+         "ipAddresses" : {
+            "v4" : [
+               "157.90.205.138"
+            ],
+            "v6" : [
+               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:36"
+         "ipAddresses" : {
+            "v6" : [
+               "2a0c:8f40:0:701:0:0:0:153"
+            ],
+            "v4" : [
+               "193.56.204.153"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.RYCE-RSP.COM"
       }
    ],
    "links" : [
@@ -45,98 +70,39 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "https://www.nic.koeln",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "48568",
-            "algorithm" : "10",
-            "digestType" : "2",
-            "digest" : "0d64b2d9b1a06897bb24383f1200bca0e4f4307aa18a9dfaac28163111f95b44"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "notices" : [
       {
-         "handle" : "koeln-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Ronald Schwaerzler"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "dotKoeln GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+43 1 198116-700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+43 1 98116-111"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ronald.schwaerzler@domainworx.consulting"
-               ]
-            ]
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+         "title" : "About This Service"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "koeln-technical",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "koeln",
+   "ldhName" : "koeln",
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -198,10 +164,77 @@
          ],
          "roles" : [
             "technical"
-         ]
+         ],
+         "handle" : "koeln-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Ronald Schwaerzler"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "dotKoeln GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+43 1 198116-700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+43 1 98116-111"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ronald.schwaerzler@domainworx.consulting"
+               ]
+            ]
+         ],
+         "handle" : "koeln-administrative",
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
             "registrant"
          ],
@@ -238,67 +271,34 @@
                ]
             ]
          ],
+         "objectClassName" : "entity",
          "handle" : "koeln-registrant"
       }
    ],
-   "notices" : [
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "keyTag" : "48568",
+            "digestType" : "2",
+            "digest" : "0d64b2d9b1a06897bb24383f1200bca0e4f4307aa18a9dfaac28163111f95b44"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-20"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-11"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:51"
       }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "DNS.RYCE-RSP.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.11.114"
-            ],
-            "v6" : [
-               "2001:678:e:114:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "157.90.205.138"
-            ],
-            "v6" : [
-               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
-            ]
-         },
-         "ldhName" : "NS1.DNS.BUSINESS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "193.56.204.153"
-            ],
-            "v6" : [
-               "2a0c:8f40:0:701:0:0:0:153"
-            ]
-         },
-         "ldhName" : "NS1.RYCE-RSP.COM"
-      }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

@@ -1,106 +1,24 @@
 {
-   "status" : [
-      "active"
-   ],
+   "handle" : "film",
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "A.NIC.FILM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "ldhName" : "B.NIC.FILM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.NIC.FILM",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.FILM",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "713e96c6a83bf8e26d80db818d4061793b4c10405c13e7d9cf7d471ceefb6009",
+            "algorithm" : "8",
+            "keyTag" : "37210",
+            "digestType" : "2"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.FILM",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.173.82"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Z.NIC.FILM",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "film",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "film-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -112,6 +30,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Adrian Kinderis"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -120,7 +44,7 @@
                [
                   "adr",
                   {
-                     "label" : "169 Domain Rd\nSouth Yarra VIC 3141\nAustralia"
+                     "label" : "P.O. Box 82\nSouth Yarra VIC 3141\nAustralia"
                   },
                   "text",
                   [
@@ -132,17 +56,26 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+61416163791"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "info@go.film"
                ]
             ]
-         ],
-         "handle" : "film-registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "film-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -193,10 +126,16 @@
                   "info@go.film"
                ]
             ]
-         ]
+         ],
+         "handle" : "film-technical",
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "film-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -207,12 +146,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Adrian Kinderis"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -221,7 +154,7 @@
                [
                   "adr",
                   {
-                     "label" : "P.O. Box 82\nSouth Yarra VIC 3141\nAustralia"
+                     "label" : "169 Domain Rd\nSouth Yarra VIC 3141\nAustralia"
                   },
                   "text",
                   [
@@ -233,85 +166,44 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+61416163791"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "info@go.film"
                ]
             ]
-         ],
-         "handle" : "film-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "37210",
-            "digest" : "713e96c6a83bf8e26d80db818d4061793b4c10405c13e7d9cf7d471ceefb6009"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/film.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://nic.film",
-         "rel" : "related"
-      }
-   ],
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-02-27"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-01"
+         "eventDate" : "2022-12-01",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:41"
+         "eventDate" : "2023-07-26T13:16:49"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.FILM."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.film"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -320,5 +212,113 @@
          ]
       }
    ],
-   "handle" : "film"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/film.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://nic.film"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.FILM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.FILM"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.FILM"
+      },
+      {
+         "ldhName" : "X.NIC.FILM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         }
+      },
+      {
+         "ldhName" : "Y.NIC.FILM",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "Z.NIC.FILM"
+      }
+   ]
 }

@@ -1,36 +1,27 @@
 {
    "handle" : "youtube",
-   "remarks" : [
+   "objectClassName" : "domain",
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ],
-         "title" : "Whois Service"
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-23"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:58"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "port43" : "whois.iana.org",
+   "ldhName" : "youtube",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "youtube-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -63,10 +54,14 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "handle" : "youtube-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -127,13 +122,12 @@
             ]
          ],
          "handle" : "youtube-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "youtube-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,74 +187,31 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-08-23"
-      },
-      {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:33:00"
+         "objectClassName" : "entity",
+         "handle" : "youtube-administrative"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "704005247382f846eac39d9654488f071934fdf3e96c05be3266009593f60617",
-            "digestType" : "2",
             "algorithm" : "8",
+            "digestType" : "2",
             "keyTag" : "63811"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/youtube.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.registry.google"
-      }
+   "status" : [
+      "active"
    ],
-   "ldhName" : "youtube",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:32:0:0:0:69"
@@ -268,11 +219,10 @@
             "v4" : [
                "216.239.32.105"
             ]
-         },
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.34.105"
@@ -281,7 +231,6 @@
                "2001:4860:4802:34:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
@@ -297,18 +246,20 @@
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
             "v4" : [
                "216.239.38.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
             ]
-         },
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.60.105"
@@ -316,13 +267,62 @@
             "v6" : [
                "2001:4860:4805:0:0:0:0:69"
             ]
-         },
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/youtube.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "https://www.registry.google"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
    ]
 }

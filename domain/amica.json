@@ -1,114 +1,34 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.amica.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
    "handle" : "amica",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.AMICA",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         }
+         "eventAction" : "registration",
+         "eventDate" : "2015-08-06"
       },
       {
-         "ldhName" : "B.NIC.AMICA",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C.NIC.AMICA"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.AMICA",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.11"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:b"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.11"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:b"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.AMICA",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.11"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:b"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.AMICA"
+         "eventDate" : "2023-07-26T13:16:46",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "amica",
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "14902",
+            "algorithm" : "8",
+            "digest" : "a464df4fd3a7b27eb3177a1813bc95d25d3f50e5ae5192619a272dce8587cea8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "amica-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -141,9 +61,82 @@
                   ]
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "amica-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "amica-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Craig Phelps"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amica Mutual Insurance Company"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Amica Way\nLincoln RI 02865-1167\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 800 624-6422 ext 24488"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 401 333-5349"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotamica_questions@amica.com"
+               ]
+            ]
          ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "amica-technical",
          "roles" : [
             "technical"
          ],
@@ -205,86 +198,24 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "handle" : "amica-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "amica-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Craig Phelps"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amica Mutual Insurance Company"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Amica Way\nLincoln RI 02865-1167\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 800 624-6422 ext 24488"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 401 333-5349"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotamica_questions@amica.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "amica",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -295,46 +226,115 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-08-06"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:52"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "a464df4fd3a7b27eb3177a1813bc95d25d3f50e5ae5192619a272dce8587cea8",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "14902"
-         }
-      ]
-   },
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/amica.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.amica.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.AMICA",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.AMICA"
+      },
+      {
+         "ldhName" : "C.NIC.AMICA",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:b"
+            ],
+            "v4" : [
+               "156.154.144.11"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.AMICA"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.AMICA",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:b"
+            ],
+            "v4" : [
+               "156.154.145.11"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.11"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.AMICA"
+      }
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.amica.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

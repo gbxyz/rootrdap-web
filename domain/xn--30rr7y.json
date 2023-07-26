@@ -1,95 +1,20 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.ZDNSCLOUD.COM",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "203.99.24.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "203.99.25.1"
-            ]
-         },
-         "ldhName" : "B.ZDNSCLOUD.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.ZDNSCLOUD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "203.99.26.1"
-            ],
-            "v6" : []
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "339254f4939c992790a50b1d257ea5c50bf4fc30f9d7b55a0fe875885af8bb7a",
+            "algorithm" : "8",
+            "keyTag" : "42247",
+            "digestType" : "2"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "203.99.27.1"
-            ]
-         },
-         "ldhName" : "D.ZDNSCLOUD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "114.67.16.204"
-            ]
-         },
-         "ldhName" : "F.ZDNSCLOUD.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "42.62.2.16"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "G.ZDNSCLOUD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "I.ZDNSCLOUD.COM",
-         "ipAddresses" : {
-            "v4" : [],
-            "v6" : [
-               "2401:8d00:1:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "J.ZDNSCLOUD.COM",
-         "ipAddresses" : {
-            "v4" : [],
-            "v6" : [
-               "2401:8d00:2:0:0:0:0:1"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "xn--30rr7y",
-   "port43" : "whois.iana.org",
+      ]
+   },
    "entities" : [
       {
-         "handle" : "xn--30rr7y-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -123,13 +48,15 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "xn--30rr7y-registrant"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "xn--30rr7y-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -180,16 +107,11 @@
                   "technology@yu-wei.cn"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "xn--30rr7y-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -241,73 +163,29 @@
                ]
             ]
          ],
-         "handle" : "xn--30rr7y-administrative",
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "xn--30rr7y",
    "events" : [
       {
-         "eventDate" : "2015-03-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
       },
       {
          "eventDate" : "2022-12-08",
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:27"
+         "eventDate" : "2023-07-26T13:16:57",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "339254f4939c992790a50b1d257ea5c50bf4fc30f9d7b55a0fe875885af8bb7a",
-            "keyTag" : "42247",
-            "algorithm" : "8",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/xn--30rr7y.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.newgtld.cn",
-         "rel" : "related"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "handle" : "xn--30rr7y",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -322,11 +200,133 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "handle" : "xn--30rr7y"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/xn--30rr7y.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.newgtld.cn",
+         "rel" : "related"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.ZDNSCLOUD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "203.99.24.1"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.ZDNSCLOUD.COM",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "203.99.25.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "203.99.26.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "C.ZDNSCLOUD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "203.99.27.1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.ZDNSCLOUD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "114.67.16.204"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.ZDNSCLOUD.COM"
+      },
+      {
+         "ldhName" : "G.ZDNSCLOUD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "42.62.2.16"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "I.ZDNSCLOUD.COM",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:8d00:1:0:0:0:0:1"
+            ],
+            "v4" : []
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2401:8d00:2:0:0:0:0:1"
+            ],
+            "v4" : []
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "J.ZDNSCLOUD.COM"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ]
 }

@@ -1,81 +1,87 @@
 {
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
-            ],
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ]
-         }
+         "eventAction" : "registration",
+         "eventDate" : "1997-08-20"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "193.176.144.22"
-            ],
-            "v6" : [
-               "2a00:d78:0:102:193:176:144:22"
-            ]
-         }
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-04"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.46"
-            ],
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.36.1"
-            ]
-         },
-         "ldhName" : "G.EXT.NIC.FR"
-      }
-   ],
-   "ldhName" : "pm",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-07-26T13:16:53",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "pm-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin Contact"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Immeuble Le Stephenson\n1, rue Stephenson\nMontigny-Le-Bretonneux 78180\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33 1 39 30 83 05"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33 1 39 30 83 01"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-admin@nic.fr"
+               ]
+            ]
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -135,162 +141,151 @@
                ]
             ]
          ],
-         "handle" : "pm-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "pm-technical"
       },
       {
+         "handle" : "pm-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Immeuble Le Stephenson\n1, rue Stephenson\nMontigny-Le-Bretonneux 78180\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "roles" : [
             "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Immeuble Le Stephenson\n1, rue Stephenson\nMontigny-Le-Bretonneux 78180\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         ]
+      }
+   ],
+   "ldhName" : "pm",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "7d82ccd8dd0674ca01ccf836c21240a504c85597eed5e511131c3e17c323b503",
+            "algorithm" : "13",
+            "keyTag" : "17970",
+            "digestType" : "2"
+         }
+      ]
+   },
+   "objectClassName" : "domain",
+   "handle" : "pm",
+   "nameservers" : [
+      {
+         "ldhName" : "D.NIC.FR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.9.1"
             ]
-         ],
-         "handle" : "pm-registrant",
-         "objectClassName" : "entity"
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "pm-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin Contact"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Association Française pour le Nommage Internet en Coopération (A.F.N.I.C.)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Immeuble Le Stephenson\n1, rue Stephenson\nMontigny-Le-Bretonneux 78180\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33 1 39 30 83 05"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33 1 39 30 83 01"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-admin@nic.fr"
-               ]
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:d78:0:102:193:176:144:22"
+            ],
+            "v4" : [
+               "193.176.144.22"
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
+         },
+         "ldhName" : "E.EXT.NIC.FR"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ],
+            "v4" : [
+               "194.146.106.46"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.EXT.NIC.FR"
+      },
+      {
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.36.1"
+            ]
+         }
       }
    ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/pm.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/pm.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
          "href" : "http://www.nic.pm",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "13",
-            "digestType" : "2",
-            "keyTag" : "17970",
-            "digest" : "7d82ccd8dd0674ca01ccf836c21240a504c85597eed5e511131c3e17c323b503"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
+   "notices" : [
       {
-         "eventDate" : "1997-08-20",
-         "eventAction" : "registration"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-10-04"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:23",
-         "eventAction" : "last update of RDAP database"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -312,5 +307,10 @@
          "title" : "Source"
       }
    ],
-   "handle" : "pm"
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

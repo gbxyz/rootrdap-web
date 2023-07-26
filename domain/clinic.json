@@ -1,113 +1,23 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CLINIC."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "handle" : "clinic",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.32.47"
-            ],
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:47"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.CLINIC"
-      },
-      {
-         "ldhName" : "V0N1.NIC.CLINIC",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:47"
-            ],
-            "v4" : [
-               "65.22.33.47"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:47"
-            ],
-            "v4" : [
-               "65.22.34.47"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.CLINIC",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.CLINIC",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:47"
-            ],
-            "v4" : [
-               "161.232.16.47"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.CLINIC",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.35.47"
-            ],
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:47"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V2N1.NIC.CLINIC",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.17.47"
-            ],
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:47"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "af3d84251dfb43f15442b1b300ac65252bd0c3ff91bf6711412cb3d6efe49c43",
+            "digestType" : "2",
+            "keyTag" : "44914",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "clinic",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "clinic-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -140,11 +50,16 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "clinic-registrant"
       },
       {
-         "objectClassName" : "entity",
          "handle" : "clinic-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -203,13 +118,12 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -269,13 +183,51 @@
                ]
             ]
          ],
-         "handle" : "clinic-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "clinic-administrative"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-04-11",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:48",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CLINIC."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -294,47 +246,95 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2014-04-11",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:28:54"
-      }
-   ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/clinic.html"
+         "href" : "https://www.iana.org/domains/root/db/clinic.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "44914",
-            "digest" : "af3d84251dfb43f15442b1b300ac65252bd0c3ff91bf6711412cb3d6efe49c43"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.32.47"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:47"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.CLINIC"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:47"
+            ],
+            "v4" : [
+               "65.22.33.47"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.CLINIC"
+      },
+      {
+         "ldhName" : "V0N2.NIC.CLINIC",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.34.47"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:47"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.16.47"
+            ],
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:47"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.CLINIC"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.35.47"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:47"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.CLINIC"
+      },
+      {
+         "ldhName" : "V2N1.NIC.CLINIC",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:47"
+            ],
+            "v4" : [
+               "161.232.17.47"
+            ]
          }
-      ]
-   },
-   "ldhName" : "clinic"
+      }
+   ]
 }

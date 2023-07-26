@@ -1,155 +1,27 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.STUDIO."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "studio",
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.3"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.STUDIO"
-      },
-      {
-         "ldhName" : "V0N1.NIC.STUDIO",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:3"
-            ],
-            "v4" : [
-               "65.22.29.3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.30.3"
-            ],
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.STUDIO"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.STUDIO",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.3"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.31.3"
-            ],
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.STUDIO"
-      },
-      {
-         "ldhName" : "V2N1.NIC.STUDIO",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:3"
-            ],
-            "v4" : [
-               "161.232.15.3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "ldhName" : "studio",
+   "handle" : "studio",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-06-25"
       },
       {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:55"
+         "eventDate" : "2023-07-26T13:16:55"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/studio.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "1354",
-            "digest" : "d4289b105c9cb81d1ea631fe723a7dd3e9a52fb649b4a0a40c4890a9faa62846"
-         }
-      ]
-   },
+   "port43" : "whois.iana.org",
+   "ldhName" : "studio",
    "entities" : [
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "studio-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -160,21 +32,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Dog Beach, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -186,33 +52,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
          ],
+         "handle" : "studio-registrant",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -273,14 +122,9 @@
             ]
          ],
          "handle" : "studio-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -291,15 +135,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Dog Beach, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -311,14 +161,144 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "handle" : "studio-registrant",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "studio-administrative",
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "d4289b105c9cb81d1ea631fe723a7dd3e9a52fb649b4a0a40c4890a9faa62846",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "1354"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/studio.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.STUDIO",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:3"
+            ],
+            "v4" : [
+               "65.22.28.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:3"
+            ],
+            "v4" : [
+               "65.22.29.3"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.STUDIO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.30.3"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.STUDIO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.3"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.STUDIO"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.31.3"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:3"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N0.NIC.STUDIO"
+      },
+      {
+         "ldhName" : "V2N1.NIC.STUDIO",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.3"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:3"
+            ]
+         }
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -329,12 +309,32 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.STUDIO."
          ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

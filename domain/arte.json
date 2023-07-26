@@ -1,44 +1,37 @@
 {
-   "ldhName" : "arte",
+   "handle" : "arte",
+   "objectClassName" : "domain",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-09-24"
+         "eventDate" : "2015-09-24",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
       },
       {
-         "eventDate" : "2023-07-26T12:27:58",
+         "eventDate" : "2023-07-26T13:16:46",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/arte.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "algorithm" : "8",
             "keyTag" : "46728",
+            "digestType" : "2",
             "digest" : "d197248e95610371f7624d79d397037ea5e200e6f338bccedf5e93bb68448152"
          }
       ]
    },
+   "ldhName" : "arte",
    "entities" : [
       {
+         "handle" : "arte-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -90,54 +83,14 @@
                ]
             ]
          ],
-         "handle" : "arte-administrative",
          "roles" : [
             "administrative"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "handle" : "arte-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Association Relative à la Télévision Européenne G.E.I.E."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "4, Quai du Chanoine Winterer\nStrasbourg 67000\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "arte-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -197,13 +150,56 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "arte-technical",
          "objectClassName" : "entity"
+      },
+      {
+         "handle" : "arte-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Association Relative à la Télévision Européenne G.E.I.E."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "4, Quai du Chanoine Winterer\nStrasbourg 67000\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "notices" : [
       {
          "description" : [
@@ -214,20 +210,18 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
-   ],
-   "status" : [
-      "active"
    ],
    "nameservers" : [
       {
          "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:120:0:0:0:0:30"
@@ -235,20 +229,19 @@
             "v4" : [
                "192.42.173.30"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
             "v6" : [
                "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
             ]
          },
-         "ldhName" : "AC2.NSTLD.COM"
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "AC3.NSTLD.COM",
@@ -265,33 +258,40 @@
       {
          "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
             "v6" : [
                "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
             ]
          },
          "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "arte",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/arte.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.ARTE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: "
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [

@@ -1,8 +1,32 @@
 {
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "nameservers" : [
       {
          "ldhName" : "A0.NIC.SRL",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:4e:0:0:0:0:33"
@@ -10,10 +34,10 @@
             "v4" : [
                "65.22.80.33"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "A2.NIC.SRL",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -22,10 +46,10 @@
             "v4" : [
                "65.22.83.33"
             ]
-         },
-         "ldhName" : "A2.NIC.SRL"
+         }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.81.33"
@@ -34,46 +58,91 @@
                "2a01:8840:4f:0:0:0:0:33"
             ]
          },
-         "ldhName" : "B0.NIC.SRL",
-         "objectClassName" : "nameserver"
+         "ldhName" : "B0.NIC.SRL"
       },
       {
+         "ldhName" : "C0.NIC.SRL",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:50:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.82.33"
+            ],
+            "v6" : [
+               "2a01:8840:50:0:0:0:0:33"
             ]
-         },
-         "ldhName" : "C0.NIC.SRL"
+         }
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "links" : [
       {
-         "title" : "About This Service",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/srl.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.internetx.info",
+         "title" : "URL for registration services"
+      }
+   ],
+   "remarks" : [
+      {
          "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+            "Registration information: http://www.internetx.info"
          ],
-         "title" : "Comments"
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
+   "handle" : "srl",
+   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-07-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:55",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "8414f09570e69f8ff6099ef53136aa4304a85fe21bcb1f65e937af7c5e5133cd",
+            "digestType" : "2",
+            "keyTag" : "33382",
+            "algorithm" : "8"
+         }
+      ]
+   },
+   "ldhName" : "srl",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "srl-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -84,21 +153,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "CEO"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "InterNetX"
+                  "InterNetX Corp."
                ],
                [
                   "adr",
                   {
-                     "label" : "Johanna-Dachs-Str. 55\nRegensburg 93055\nGermany"
+                     "label" : "1001 Brickell Bay Drive, Suite 2700 Q-2\nMiami FL 33131\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -110,35 +173,15 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49 941 595590"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+49 941 5955959"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "srl@internetx.com"
                ]
             ]
          ],
-         "handle" : "srl-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       },
       {
+         "handle" : "srl-technical",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -199,16 +242,11 @@
                ]
             ]
          ],
-         "handle" : "srl-technical",
          "roles" : [
             "technical"
          ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "srl-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -219,15 +257,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "CEO"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "InterNetX Corp."
+                  "InterNetX"
                ],
                [
                   "adr",
                   {
-                     "label" : "1001 Brickell Bay Drive, Suite 2700 Q-2\nMiami FL 33131\nUnited States of America (the)"
+                     "label" : "Johanna-Dachs-Str. 55\nRegensburg 93055\nGermany"
                   },
                   "text",
                   [
@@ -239,78 +283,34 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49 941 595590"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+49 941 5955959"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "srl@internetx.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "33382",
-            "digest" : "8414f09570e69f8ff6099ef53136aa4304a85fe21bcb1f65e937af7c5e5133cd"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/srl.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.internetx.info",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-07-09",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:31:53"
-      }
-   ],
-   "ldhName" : "srl",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         "roles" : [
+            "administrative"
          ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.internetx.info"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "srl-administrative"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "srl"
+   ]
 }

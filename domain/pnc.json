@@ -1,105 +1,19 @@
 {
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:3e:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.64.25"
-            ]
-         },
-         "ldhName" : "A0.NIC.PNC"
-      },
-      {
-         "ldhName" : "A2.NIC.PNC",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:41:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.67.25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.65.25"
-            ],
-            "v6" : [
-               "2a01:8840:3f:0:0:0:0:25"
-            ]
-         },
-         "ldhName" : "B0.NIC.PNC",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:40:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.66.25"
-            ]
-         },
-         "ldhName" : "C0.NIC.PNC"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-10-29",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-30"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:23",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "handle" : "pnc",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "137c7b7b6be3d79ff1c7f5ddb9525cd8bf14b821dcec08ff5a3a7b128e58660b",
-            "algorithm" : "8",
+            "keyTag" : "40264",
             "digestType" : "2",
-            "keyTag" : "40264"
+            "algorithm" : "8"
          }
       ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/pnc.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.pnc.com",
-         "title" : "URL for registration services"
-      }
-   ],
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -159,52 +73,16 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ],
          "handle" : "pnc-technical",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "PNC Domain Co., LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "249 Fifth Avenue\nPittsburgh PA 15222-2707\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "pnc-registrant",
          "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "pnc-administrative",
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -264,37 +142,78 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "pnc-administrative"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "objectClassName" : "entity",
+         "handle" : "pnc-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "PNC Domain Co., LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "249 Fifth Avenue\nPittsburgh PA 15222-2707\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
    "ldhName" : "pnc",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-10-29"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:53"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.PNC."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -309,8 +228,89 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "handle" : "pnc"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/pnc.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.pnc.com"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.64.25"
+            ],
+            "v6" : [
+               "2a01:8840:3e:0:0:0:0:25"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.PNC"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.67.25"
+            ],
+            "v6" : [
+               "2a01:8840:41:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "A2.NIC.PNC"
+      },
+      {
+         "ldhName" : "B0.NIC.PNC",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.65.25"
+            ],
+            "v6" : [
+               "2a01:8840:3f:0:0:0:0:25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.66.25"
+            ],
+            "v6" : [
+               "2a01:8840:40:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "C0.NIC.PNC"
+      }
+   ]
 }

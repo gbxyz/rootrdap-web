@@ -1,105 +1,29 @@
 {
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2405:5400:3:1:203:143:29:3"
-            ],
-            "v4" : [
-               "203.143.29.3"
-            ]
-         },
-         "ldhName" : "C.NIC.LK"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "123.231.6.18"
-            ]
-         },
-         "ldhName" : "D.NIC.LK",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.NIC.LK",
-         "ipAddresses" : {
-            "v4" : [
-               "192.248.8.17"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "ldhName" : "M.NIC.LK",
-         "ipAddresses" : {
-            "v4" : [
-               "202.129.235.229"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS1.AC.LK",
-         "ipAddresses" : {
-            "v4" : [
-               "192.248.1.162"
-            ],
-            "v6" : [
-               "2401:dd00:1:0:0:0:0:162"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "P.NIC.LK",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6027:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.27"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "128.10.2.5"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "PENDRAGON.CS.PURDUE.EDU"
-      },
-      {
-         "ldhName" : "T.NIC.LK",
-         "ipAddresses" : {
-            "v6" : [
-               "2402:d000:100c:0:0:0:0:129"
-            ],
-            "v4" : [
-               "203.94.66.129"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
+   "handle" : "lk",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "a1907f85d49081239389c216912b8937d0eceb3d",
+            "digestType" : "1",
+            "keyTag" : "181",
+            "algorithm" : "5"
+         },
+         {
+            "digest" : "87516d56b697cb3f7a7c3eb594ee0e16ae509d16a503089f4fbd4f347b336f93",
+            "algorithm" : "5",
+            "keyTag" : "181",
+            "digestType" : "2"
+         }
+      ]
+   },
    "ldhName" : "lk",
    "entities" : [
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "lk-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -159,10 +83,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "lk-administrative"
       },
       {
          "handle" : "lk-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -224,12 +150,12 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "lk-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -269,42 +195,67 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ]
+         "handle" : "lk-registrant",
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1990-06-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-04"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.lk/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1990-06-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-11-04",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:45",
-         "eventAction" : "last update of RDAP database"
+         ]
       }
    ],
    "links" : [
@@ -320,49 +271,98 @@
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.lk/"
+         "href" : "http://www.nic.lk/",
+         "title" : "URL for registration services"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "5",
-            "digestType" : "1",
-            "keyTag" : "181",
-            "digest" : "a1907f85d49081239389c216912b8937d0eceb3d"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2405:5400:3:1:203:143:29:3"
+            ],
+            "v4" : [
+               "203.143.29.3"
+            ]
          },
-         {
-            "digest" : "87516d56b697cb3f7a7c3eb594ee0e16ae509d16a503089f4fbd4f347b336f93",
-            "keyTag" : "181",
-            "algorithm" : "5",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.LK"
       },
       {
-         "description" : [
-            "Registration information: http://www.nic.lk/"
-         ],
-         "title" : "Remark"
+         "ldhName" : "D.NIC.LK",
+         "ipAddresses" : {
+            "v4" : [
+               "123.231.6.18"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "ldhName" : "L.NIC.LK",
+         "ipAddresses" : {
+            "v4" : [
+               "192.248.8.17"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "M.NIC.LK",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "202.129.235.229"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.AC.LK",
+         "ipAddresses" : {
+            "v4" : [
+               "192.248.1.162"
+            ],
+            "v6" : [
+               "2401:dd00:1:0:0:0:0:162"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "P.NIC.LK",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6027:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.27"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "128.10.2.5"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "PENDRAGON.CS.PURDUE.EDU"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2402:d000:100c:0:0:0:0:129"
+            ],
+            "v4" : [
+               "203.94.66.129"
+            ]
+         },
+         "ldhName" : "T.NIC.LK"
       }
-   ],
-   "handle" : "lk"
+   ]
 }

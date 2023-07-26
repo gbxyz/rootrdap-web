@@ -1,4 +1,7 @@
 {
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -10,34 +13,30 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.aol.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "handle" : "aol",
-   "status" : [
-      "active"
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A0.NIC.AOL",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6e:0:0:0:0:42"
-            ],
             "v4" : [
                "65.22.112.42"
+            ],
+            "v6" : [
+               "2a01:8840:6e:0:0:0:0:42"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -48,23 +47,22 @@
                "2a01:8840:71:0:0:0:0:42"
             ]
          },
-         "ldhName" : "A2.NIC.AOL",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.AOL"
       },
       {
          "ldhName" : "B0.NIC.AOL",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.113.42"
-            ],
             "v6" : [
                "2a01:8840:6f:0:0:0:0:42"
+            ],
+            "v4" : [
+               "65.22.113.42"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "C0.NIC.AOL",
          "ipAddresses" : {
             "v6" : [
@@ -73,75 +71,52 @@
             "v4" : [
                "65.22.114.42"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/aol.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.aol.com",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "objectClassName" : "domain",
-   "ldhName" : "aol",
-   "port43" : "whois.iana.org",
+   "handle" : "aol",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "aol-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "General Counsel"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "770 Broadway\nNew York NY 10003\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 212 206 4400"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "n/a"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-aol@cscinfo.com"
-               ]
-            ]
-         ],
          "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "handle" : "aol-registrant",
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,14 +150,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "aol-registrant"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "aol-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -242,75 +216,101 @@
                ]
             ]
          ],
+         "handle" : "aol-technical",
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
-            "technical"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
+            "administrative"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "General Counsel"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "770 Broadway\nNew York NY 10003\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 212 206 4400"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "n/a"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-aol@cscinfo.com"
+               ]
+            ]
          ],
-         "title" : "Comments"
+         "handle" : "aol-administrative",
+         "objectClassName" : "entity"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-10-27"
-      },
-      {
-         "eventDate" : "2023-06-29",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:54"
-      }
-   ],
+   "ldhName" : "aol",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "3f32085e98a3e5bea4e1cd9ea6db43f4e7eaf8aec7bfbeabfd748b4245fd6c57",
-            "digestType" : "2",
             "algorithm" : "8",
-            "keyTag" : "40743"
+            "keyTag" : "40743",
+            "digestType" : "2"
          },
          {
-            "digestType" : "2",
+            "digest" : "05de3346df593b9db78a40efa9a8eb847347296974924fd837900db7054c13b3",
             "algorithm" : "8",
             "keyTag" : "26461",
-            "digest" : "05de3346df593b9db78a40efa9a8eb847347296974924fd837900db7054c13b3"
+            "digestType" : "2"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "links" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/aol.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "eventDate" : "2016-10-27",
+         "eventAction" : "registration"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-29"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.aol.com",
-         "rel" : "related"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ]
 }

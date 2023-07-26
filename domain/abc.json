@@ -1,18 +1,69 @@
 {
-   "status" : [
-      "active"
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ABC."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://abc.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/abc.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://abc.com",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
          }
       },
@@ -29,20 +80,19 @@
          "ldhName" : "AC2.NSTLD.COM"
       },
       {
-         "ldhName" : "AC3.NSTLD.COM",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
             "v6" : [
                "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:500:123:0:0:0:0:30"
@@ -50,31 +100,33 @@
             "v4" : [
                "192.42.176.30"
             ]
+         },
+         "ldhName" : "AC4.NSTLD.COM"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "39900",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "7abc5a1f64fbbfad550cfe06953aa56a030be7212a77a60813ff633de705dec8"
          }
-      }
-   ],
+      ]
+   },
    "ldhName" : "abc",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "entities" : [
       {
-         "handle" : "abc-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -108,16 +160,10 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "abc-registrant"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -177,14 +223,13 @@
                ]
             ]
          ],
-         "handle" : "abc-technical"
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "abc-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "abc-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -243,74 +288,29 @@
                   "ngtld-abc@cscglobal.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "abc-administrative"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "39900",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "7abc5a1f64fbbfad550cfe06953aa56a030be7212a77a60813ff633de705dec8"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/abc.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://abc.com",
-         "title" : "URL for registration services"
-      }
-   ],
    "events" : [
       {
          "eventDate" : "2016-07-21",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
       },
       {
-         "eventDate" : "2023-07-26T12:27:39",
+         "eventDate" : "2023-07-26T13:16:46",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ABC."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://abc.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "abc"
+   "handle" : "abc",
+   "objectClassName" : "domain"
 }

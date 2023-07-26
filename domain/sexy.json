@@ -1,7 +1,86 @@
 {
-   "handle" : "sexy",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.1.1"
+            ],
+            "v6" : [
+               "2620:57:4000:1:0:0:0:1"
+            ]
+         },
+         "ldhName" : "NS1.UNIREGISTRY.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.2.1"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.UNIREGISTRY.INFO"
+      },
+      {
+         "ldhName" : "NS3.UNIREGISTRY.NET",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.197.3"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:3"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:3"
+            ],
+            "v4" : [
+               "185.159.198.3"
+            ]
+         },
+         "ldhName" : "NS4.UNIREGISTRY.INFO"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/sexy.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://internetnaming.co",
+         "rel" : "related"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "remarks" : [
       {
@@ -17,20 +96,75 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "ldhName" : "sexy",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2013-11-08",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:55"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Internet Naming Co."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "23 Lime Tree Bay\nWest Bay Grand Cayman KY1-1505\nCayman Islands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "sexy-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -82,12 +216,13 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity",
          "handle" : "sexy-administrative"
       },
       {
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -139,160 +274,25 @@
                ]
             ]
          ],
-         "handle" : "sexy-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Internet Naming Co."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "23 Lime Tree Bay\nWest Bay Grand Cayman KY1-1505\nCayman Islands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "sexy-registrant",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "sexy-technical"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-11-08"
-      },
-      {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:31:44",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/sexy.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://internetnaming.co"
-      }
-   ],
+   "ldhName" : "sexy",
    "secureDNS" : {
       "dsData" : [
          {
+            "digest" : "a0e135ac7e6ffb2cad1574c08c837bb5d5a4e34c60356498389e69b55943d58c",
             "keyTag" : "42010",
             "digestType" : "2",
-            "algorithm" : "13",
-            "digest" : "a0e135ac7e6ffb2cad1574c08c837bb5d5a4e34c60356498389e69b55943d58c"
+            "algorithm" : "13"
          }
       ],
       "delegationSigned" : true
    },
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:57:4000:1:0:0:0:1"
-            ],
-            "v4" : [
-               "64.96.1.1"
-            ]
-         },
-         "ldhName" : "NS1.UNIREGISTRY.NET"
-      },
-      {
-         "ldhName" : "NS2.UNIREGISTRY.INFO",
-         "ipAddresses" : {
-            "v4" : [
-               "64.96.2.1"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS3.UNIREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:3"
-            ],
-            "v4" : [
-               "185.159.197.3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.UNIREGISTRY.INFO",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.198.3"
-            ],
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:3"
-            ]
-         }
-      }
-   ],
+   "handle" : "sexy",
    "objectClassName" : "domain"
 }

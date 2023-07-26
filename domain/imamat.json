@@ -1,16 +1,22 @@
 {
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.IMAMAT",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.44.9"
-            ],
             "v6" : [
                "2a01:8840:2a:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.44.9"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.IMAMAT"
       },
       {
          "ldhName" : "A2.NIC.IMAMAT",
@@ -25,7 +31,7 @@
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.IMAMAT",
          "ipAddresses" : {
             "v4" : [
                "65.22.45.9"
@@ -34,11 +40,11 @@
                "2a01:8840:2b:0:0:0:0:9"
             ]
          },
-         "ldhName" : "B0.NIC.IMAMAT"
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "C0.NIC.IMAMAT",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.46.9"
@@ -49,10 +55,63 @@
          }
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/imamat.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.akdn.org",
+         "rel" : "related"
+      }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.akdn.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "imamat",
    "events" : [
       {
          "eventAction" : "registration",
@@ -63,40 +122,52 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:24"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a76c5431030fbef036b5008bc289a1614207d3447e7d8d565065f50ed9543e6a",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "50965"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/imamat.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.akdn.org",
-         "title" : "URL for registration services"
+         "eventDate" : "2023-07-26T13:16:51",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
+      {
+         "handle" : "imamat-registrant",
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Fondation Aga Khan (Aga Khan Foundation)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1 - 3 avenue de la Paix\nGeneva Geneva CH-1202\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
       {
          "roles" : [
             "administrative"
@@ -160,50 +231,11 @@
                ]
             ]
          ],
-         "handle" : "imamat-administrative",
-         "objectClassName" : "entity"
+         "objectClassName" : "entity",
+         "handle" : "imamat-administrative"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Fondation Aga Khan (Aga Khan Foundation)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1 - 3 avenue de la Paix\nGeneva Geneva CH-1202\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "imamat-registrant",
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "imamat-technical",
          "objectClassName" : "entity",
          "roles" : [
             "technical"
@@ -266,51 +298,19 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "handle" : "imamat-technical"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
    "ldhName" : "imamat",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.akdn.org"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "imamat"
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "50965",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "a76c5431030fbef036b5008bc289a1614207d3447e7d8d565065f50ed9543e6a"
+         }
+      ],
+      "delegationSigned" : true
+   }
 }

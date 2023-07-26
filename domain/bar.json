@@ -1,21 +1,25 @@
 {
-   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.BAR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:56"
-            ],
             "v4" : [
                "194.169.218.56"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:56"
             ]
          }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.BAR",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.56"
@@ -23,9 +27,11 @@
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:56"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.BAR"
       },
       {
+         "ldhName" : "C.NIC.BAR",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -34,24 +40,37 @@
             "v4" : [
                "212.18.248.56"
             ]
-         },
-         "ldhName" : "C.NIC.BAR"
+         }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:56"
-            ],
             "v4" : [
                "212.18.249.56"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:56"
             ]
          },
-         "ldhName" : "D.NIC.BAR",
-         "objectClassName" : "nameserver"
+         "ldhName" : "D.NIC.BAR"
       }
    ],
-   "status" : [
-      "active"
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/bar.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://nic.bar"
+      }
    ],
    "notices" : [
       {
@@ -71,9 +90,155 @@
          ]
       }
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BAR."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.bar"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "bar",
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2014-02-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2021-09-23",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
+      }
+   ],
+   "ldhName" : "bar",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Juan Escutia 29 Col. Condesa\nMexico D.F. 06140\nMexico"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "bar-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "CEO"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Juan Escutia 29 Col. Condesa\nMexico D.F. 06140\nMexico"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+52.5585895544"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+52.5552505187"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "info@punto2012.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "bar-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -134,189 +299,24 @@
             ]
          ],
          "handle" : "bar-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "bar-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Juan Escutia 29 Col. Condesa\nMexico D.F. 06140\nMexico"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "bar-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "CEO"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Punto 2012 Sociedad Anonima Promotora de Inversion de Capital Variable"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Juan Escutia 29 Col. Condesa\nMexico D.F. 06140\nMexico"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+52.5585895544"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+52.5552505187"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "info@punto2012.com"
-               ]
-            ]
-         ],
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "1",
             "algorithm" : "8",
             "keyTag" : "55406",
+            "digestType" : "1",
             "digest" : "eecf54c6dab2cf3fa76effce97b78f432050da9e"
          },
          {
             "digest" : "8e8e102e6751da62e354bd322c9bdd42c29bf6a413b29da5bdc579e2ed3c8da1",
-            "digestType" : "2",
             "algorithm" : "8",
+            "digestType" : "2",
             "keyTag" : "55406"
          }
       ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bar.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://nic.bar",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-13"
-      },
-      {
-         "eventDate" : "2021-09-23",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:07",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "bar",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BAR."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.bar"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "bar"
+   }
 }

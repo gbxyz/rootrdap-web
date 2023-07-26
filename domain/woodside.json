@@ -1,87 +1,63 @@
 {
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "A.NIC.WOODSIDE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "B.NIC.WOODSIDE"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "ldhName" : "C.NIC.WOODSIDE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.WOODSIDE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Y.NIC.WOODSIDE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "ldhName" : "Z.NIC.WOODSIDE",
-         "objectClassName" : "nameserver"
-      }
-   ],
    "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
+   "handle" : "woodside",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e4254780378e282920ae5d44e210da28bf5d7fadb0afca33e400b74c5086ddc0",
+            "digestType" : "2",
+            "keyTag" : "38707",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "woodside",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "woodside-administrative",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Woodside Petroleum Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Woodside Plaza\n240 St Georges Terrace\nPerth WA 6000\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "woodside-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -141,15 +117,10 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity",
+         "handle" : "woodside-administrative"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "woodside-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -201,47 +172,52 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "woodside-technical"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-08"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "woodside-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Woodside Petroleum Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Woodside Plaza\n240 St Georges Terrace\nPerth WA 6000\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "eventDate" : "2022-11-30",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:56"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.WOODSIDE."
          ],
-         "roles" : [
-            "registrant"
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.woodside.com.au/"
          ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "notices" : [
@@ -262,71 +238,95 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2016-01-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-11-30"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:24"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "e4254780378e282920ae5d44e210da28bf5d7fadb0afca33e400b74c5086ddc0",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "38707"
-         }
-      ]
-   },
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/woodside.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/woodside.html",
          "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
          "href" : "http://www.woodside.com.au/",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
-   "ldhName" : "woodside",
-   "remarks" : [
+   "nameservers" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.WOODSIDE."
-         ]
+         "ldhName" : "A.NIC.WOODSIDE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         }
       },
       {
-         "description" : [
-            "Registration information: http://www.woodside.com.au/"
-         ],
-         "title" : "Remark"
+         "ldhName" : "B.NIC.WOODSIDE",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "ldhName" : "C.NIC.WOODSIDE"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "X.NIC.WOODSIDE"
+      },
+      {
+         "ldhName" : "Y.NIC.WOODSIDE",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.173.82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "Z.NIC.WOODSIDE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
+            ]
+         }
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "woodside"
+   ]
 }

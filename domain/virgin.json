@@ -1,5 +1,7 @@
 {
-   "handle" : "virgin",
+   "status" : [
+      "active"
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -11,19 +13,133 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.virgin.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "ldhName" : "virgin",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/virgin.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://www.virgin.com"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "DNS1.NIC.VIRGIN",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:618:403:0:0:0:0:40"
+            ],
+            "v4" : [
+               "213.248.219.40"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "103.49.83.40"
+            ],
+            "v6" : [
+               "2401:fd80:403:0:0:0:0:40"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS2.NIC.VIRGIN"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.223.40"
+            ],
+            "v6" : [
+               "2a01:618:407:0:0:0:0:40"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.VIRGIN"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "43.230.51.40"
+            ],
+            "v6" : [
+               "2401:fd80:407:0:0:0:0:40"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS4.NIC.VIRGIN"
+      },
+      {
+         "ldhName" : "DNSA.NIC.VIRGIN",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.100.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSB.NIC.VIRGIN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.101.3"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSC.NIC.VIRGIN"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.103.3"
+            ]
+         },
+         "ldhName" : "DNSD.NIC.VIRGIN"
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -42,13 +158,13 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "handle" : "virgin",
+   "ldhName" : "virgin",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "virgin-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -99,52 +215,12 @@
                   "registrymanagement@nominet.uk"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Virgin Enterprises Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "The Battleship Building\nLondon England W2 6NB\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "virgin-registrant"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -196,153 +272,77 @@
                ]
             ]
          ],
-         "handle" : "virgin-technical",
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity",
+         "handle" : "virgin-technical"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "virgin-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Virgin Enterprises Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "The Battleship Building\nLondon England W2 6NB\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digestType" : "2",
+            "digest" : "64e74557cc76dd3bb05f8eb86ebf531b186d95e91bfdaa09f35fd620d960603a",
             "keyTag" : "41930",
-            "digest" : "64e74557cc76dd3bb05f8eb86ebf531b186d95e91bfdaa09f35fd620d960603a"
+            "digestType" : "2",
+            "algorithm" : "8"
          }
       ]
    },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/virgin.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.virgin.com",
-         "title" : "URL for registration services"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-09-10"
       },
       {
-         "eventDate" : "2021-10-19",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-19"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:32:17"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS1.NIC.VIRGIN",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:403:0:0:0:0:40"
-            ],
-            "v4" : [
-               "213.248.219.40"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "103.49.83.40"
-            ],
-            "v6" : [
-               "2401:fd80:403:0:0:0:0:40"
-            ]
-         },
-         "ldhName" : "DNS2.NIC.VIRGIN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:407:0:0:0:0:40"
-            ],
-            "v4" : [
-               "213.248.223.40"
-            ]
-         },
-         "ldhName" : "DNS3.NIC.VIRGIN"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:407:0:0:0:0:40"
-            ],
-            "v4" : [
-               "43.230.51.40"
-            ]
-         },
-         "ldhName" : "DNS4.NIC.VIRGIN"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         },
-         "ldhName" : "DNSA.NIC.VIRGIN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNSB.NIC.VIRGIN",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.102.3"
-            ]
-         },
-         "ldhName" : "DNSC.NIC.VIRGIN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.103.3"
-            ],
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "DNSD.NIC.VIRGIN"
+         "eventDate" : "2023-07-26T13:16:56"
       }
    ]
 }

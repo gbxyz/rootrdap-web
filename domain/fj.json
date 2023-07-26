@@ -1,32 +1,32 @@
 {
-   "handle" : "fj",
-   "remarks" : [
+   "port43" : "whois.iana.org",
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WWW.WHOIS.FJ."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1992-06-03"
       },
       {
-         "description" : [
-            "Registration information: http://domains.fj/"
-         ],
-         "title" : "Remark"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-04-24"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T13:16:49",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "27739",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "d7fe923eed1e1194597cc5ebcb37d10f3bfa2e927159f5018cddb86d30665abb"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -69,10 +69,15 @@
                ]
             ]
          ],
-         "handle" : "fj-registrant"
+         "handle" : "fj-registrant",
+         "objectClassName" : "entity"
       },
       {
+         "handle" : "fj-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -123,17 +128,11 @@
                   "sysadmin@usp.ac.fj"
                ]
             ]
-         ],
-         "handle" : "fj-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "fj-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -185,9 +184,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
+   "ldhName" : "fj",
+   "handle" : "fj",
+   "objectClassName" : "domain",
    "notices" : [
       {
          "description" : [
@@ -206,52 +210,9 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "1992-06-03",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-04-24"
-      },
-      {
-         "eventDate" : "2023-07-26T12:29:45",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "27739",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "d7fe923eed1e1194597cc5ebcb37d10f3bfa2e927159f5018cddb86d30665abb"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/fj.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://domains.fj/"
-      }
-   ],
-   "ldhName" : "fj",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.FJ",
          "ipAddresses" : {
             "v4" : [
                "144.120.146.1"
@@ -260,10 +221,9 @@
                "2402:2940:100:100c:0:0:0:1"
             ]
          },
-         "ldhName" : "NS1.FJ"
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "144.120.146.65"
@@ -272,42 +232,82 @@
                "2402:2940:100:100d:0:0:0:1"
             ]
          },
+         "objectClassName" : "nameserver",
          "ldhName" : "NS2.FJ"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.FJ",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "185.38.108.108"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.28.194.194"
             ],
             "v6" : []
          },
-         "ldhName" : "NS4.FJ"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.FJ"
       },
       {
+         "ldhName" : "NS4.FJ",
          "objectClassName" : "nameserver",
-         "ldhName" : "NS5.FJ",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6138:ad:0:0:1"
-            ],
+            "v6" : [],
             "v4" : [
-               "204.61.216.138"
+               "185.28.194.194"
             ]
          }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.138"
+            ],
+            "v6" : [
+               "2001:500:14:6138:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS5.FJ"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/fj.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "rel" : "related",
+         "href" : "http://domains.fj/"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WWW.WHOIS.FJ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://domains.fj/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "status" : [
       "active"
    ]

@@ -1,80 +1,81 @@
 {
-   "handle" : "gdn",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GDN."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.gdn"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "events" : [
       {
          "eventDate" : "2014-12-04",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2023-05-09",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-09"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:29:58"
+         "eventDate" : "2023-07-26T13:16:50"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gdn.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.nic.gdn",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "7a16bf5938b9fe7cf2ac5be9c472e81443944686",
-            "keyTag" : "30307",
-            "algorithm" : "8",
-            "digestType" : "1"
-         },
-         {
-            "keyTag" : "28906",
-            "algorithm" : "8",
-            "digestType" : "1",
-            "digest" : "157427e9d56b06de066a0bee607c2f3314b85fea"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "gdn-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Muhammad Kausar Saleem"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "GDN Registry FZ LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Building 14th, Office # 107\nDubai Internet City\nP.O. Box 111230\nDubai\nUnited Arab Emirates (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+14169980932"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "kausar@gdnregistry.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
          "handle" : "gdn-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -131,10 +132,8 @@
          ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "gdn-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -168,76 +167,94 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Muhammad Kausar Saleem"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "GDN Registry FZ LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Building 14th, Office # 107\nDubai Internet City\nP.O. Box 111230\nDubai\nUnited Arab Emirates (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+14169980932"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "kausar@gdnregistry.com"
-               ]
-            ]
-         ],
-         "handle" : "gdn-administrative",
          "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity"
+            "registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "gdn",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "7a16bf5938b9fe7cf2ac5be9c472e81443944686",
+            "keyTag" : "30307",
+            "digestType" : "1",
+            "algorithm" : "8"
+         },
+         {
+            "digest" : "157427e9d56b06de066a0bee607c2f3314b85fea",
+            "digestType" : "1",
+            "keyTag" : "28906",
+            "algorithm" : "8"
+         }
+      ]
+   },
+   "handle" : "gdn",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "NS1.NIC.GDN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.18"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:18"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:10e0:0:0:0:0:11"
+            ],
+            "v4" : [
+               "194.0.26.11"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.NIC.GDN"
+      },
+      {
+         "ldhName" : "NS4.NIC.GDN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.24.11"
+            ],
+            "v6" : [
+               "2001:678:24:0:0:0:0:11"
+            ]
+         }
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gdn.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.gdn",
+         "rel" : "related"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -248,47 +265,30 @@
          ]
       }
    ],
-   "ldhName" : "gdn",
-   "nameservers" : [
+   "remarks" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:20:0:0:0:0:18"
-            ],
-            "v4" : [
-               "194.0.25.18"
-            ]
-         },
-         "ldhName" : "NS1.NIC.GDN",
-         "objectClassName" : "nameserver"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GDN."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "ldhName" : "NS3.NIC.GDN",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.26.11"
-            ],
-            "v6" : [
-               "2001:67c:10e0:0:0:0:0:11"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.gdn"
+         ]
       },
       {
-         "ldhName" : "NS4.NIC.GDN",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:24:0:0:0:0:11"
-            ],
-            "v4" : [
-               "194.0.24.11"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "objectClassName" : "domain",
    "status" : [
       "active"
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

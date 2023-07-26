@@ -1,51 +1,25 @@
 {
    "handle" : "gmx",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GMX."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://cp.nic.gmx"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "ldhName" : "gmx",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "objectClassName" : "domain",
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-07"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-09-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:50"
+      }
+   ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "gmx-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -54,12 +28,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Partner Manager"
                ],
                [
                   "org",
@@ -82,70 +50,15 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49 721 91374 3405"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gmxregistry@1und1.de"
                ]
             ]
          ],
-         "handle" : "gmx-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "1&1 Mail & Media GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Brauerstrasse 48\nKarlsruhe Baden-Württemberg 76135\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "gmx-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "gmx-technical",
          "vcardArray" : [
             "vcard",
@@ -206,57 +119,90 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "gmx-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Partner Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "1&1 Mail & Media GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Brauerstrasse 48\nKarlsruhe Baden-Württemberg 76135\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49 721 91374 3405"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gmxregistry@1und1.de"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
+   "ldhName" : "gmx",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "ee15cf33c2e02f308291960df44a5a87e16c0535e34178528780a9a4f28a736f",
+            "keyTag" : "49537",
             "digestType" : "2",
             "algorithm" : "10",
-            "keyTag" : "49537"
+            "digest" : "ee15cf33c2e02f308291960df44a5a87e16c0535e34178528780a9a4f28a736f"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gmx.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://cp.nic.gmx"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-08-07",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-09-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:05",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "nameservers" : [
       {
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:4:0:0:0:0:c"
@@ -265,11 +211,10 @@
                "195.253.64.12"
             ]
          },
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.11"
@@ -278,11 +223,10 @@
                "2a01:5b0:5:0:0:0:0:b"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
             "v6" : [
                "2a01:5b0:5:0:0:0:0:c"
@@ -290,11 +234,11 @@
             "v4" : [
                "195.253.65.12"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.64.11"
@@ -302,7 +246,63 @@
             "v6" : [
                "2a01:5b0:4:0:0:0:0:b"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/gmx.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://cp.nic.gmx",
+         "title" : "URL for registration services"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GMX."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://cp.nic.gmx"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

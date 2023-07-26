@@ -1,167 +1,17 @@
 {
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.20.1"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.LIVE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.21.1"
-            ]
-         },
-         "ldhName" : "V0N1.NIC.LIVE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.LIVE",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.1"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.LIVE",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.10.1"
-            ],
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.23.1"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.LIVE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.11.1"
-            ],
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.LIVE"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-06-25"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-27"
-      },
-      {
-         "eventDate" : "2023-07-26T12:30:45",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "algorithm" : "8",
             "keyTag" : "36322",
+            "digestType" : "2",
             "digest" : "201df9a9af6766d9cdbc8355756728f2db40ba93f9724f93aeeb1bddd7d564a0"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/live.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
    "entities" : [
       {
-         "handle" : "live-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dog Beach, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -221,14 +71,13 @@
                ]
             ]
          ],
-         "handle" : "live-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "live-technical"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "live-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -290,10 +139,89 @@
          ],
          "roles" : [
             "administrative"
+         ],
+         "handle" : "live-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dog Beach, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "live-registrant"
+      }
+   ],
+   "ldhName" : "live",
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventDate" : "2015-06-25",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2021-10-27",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T13:16:52",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "handle" : "live",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LIVE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "notices" : [
       {
          "description" : [
@@ -312,29 +240,101 @@
          "title" : "Comments"
       }
    ],
-   "ldhName" : "live",
-   "remarks" : [
+   "nameservers" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LIVE."
-         ]
+         "ldhName" : "V0N0.NIC.LIVE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.20.1"
+            ]
+         }
       },
       {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
+         "ldhName" : "V0N1.NIC.LIVE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.21.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.22.1"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.LIVE"
+      },
+      {
+         "ldhName" : "V0N3.NIC.LIVE",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.1"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:1"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.23.1"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.LIVE"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.1"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.LIVE"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/live.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "live"
+   "status" : [
+      "active"
+   ]
 }

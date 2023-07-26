@@ -1,107 +1,37 @@
 {
+   "handle" : "men",
    "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "A.NIC.MEN"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.MEN",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "ldhName" : "C.NIC.MEN"
-      },
-      {
-         "ldhName" : "X.NIC.MEN",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.MEN",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.173.82"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Z.NIC.MEN",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.174.82"
-            ],
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-05-08"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "21250",
+            "algorithm" : "8",
+            "digest" : "6c3f496f5f6ada95799145c17fb84c995554114a8e2a77d27c58d7f383c9407f"
+         }
+      ]
+   },
+   "ldhName" : "men",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "men-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -112,15 +42,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Edgar Charles Andrew Lavarello"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Exclusive Registry Limited"
+                  "Pricewaterhousecoopers Ltd."
                ],
                [
                   "adr",
                   {
-                     "label" : "Famous Four Media/Exclusive Registry Limited\n2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
+                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
                   },
                   "text",
                   [
@@ -132,14 +68,31 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+350 200 73520"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
          ],
-         "handle" : "men-registrant"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
          "handle" : "men-technical",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -198,14 +151,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
          "objectClassName" : "entity",
-         "handle" : "men-administrative",
+         "handle" : "men-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -216,21 +166,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Edgar Charles Andrew Lavarello"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Pricewaterhousecoopers Ltd."
+                  "Exclusive Registry Limited"
                ],
                [
                   "adr",
                   {
-                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
+                     "label" : "Famous Four Media/Exclusive Registry Limited\n2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
                   },
                   "text",
                   [
@@ -242,36 +186,122 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+350 200 73520"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
          ],
          "roles" : [
-            "administrative"
+            "registrant"
          ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.MEN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.MEN",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         },
+         "ldhName" : "C.NIC.MEN"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "X.NIC.MEN"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.173.82"
+            ]
+         },
+         "objectClassName" : "nameserver",
+         "ldhName" : "Y.NIC.MEN"
+      },
+      {
+         "ldhName" : "Z.NIC.MEN",
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         }
       }
    ],
    "links" : [
       {
+         "title" : "Entry for this TLD in the Root Zone Database",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/men.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "href" : "https://www.iana.org/domains/root/db/men.html"
       },
       {
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
@@ -279,32 +309,6 @@
          "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "6c3f496f5f6ada95799145c17fb84c995554114a8e2a77d27c58d7f383c9407f",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "21250"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "events" : [
-      {
-         "eventDate" : "2015-05-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-12-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:54"
-      }
-   ],
-   "ldhName" : "men",
    "remarks" : [
       {
          "description" : [
@@ -313,10 +317,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.men"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -324,9 +328,5 @@
             "IANA"
          ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "men"
+   ]
 }

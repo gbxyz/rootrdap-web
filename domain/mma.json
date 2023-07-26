@@ -1,9 +1,18 @@
 {
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "59534",
+            "algorithm" : "13",
+            "digest" : "25455417c20c22d815e00232defb2fc78e7b728600c91aadb21f8703ea1c314b"
+         }
+      ]
+   },
    "ldhName" : "mma",
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -63,16 +72,15 @@
                ]
             ]
          ],
-         "handle" : "mma-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "handle" : "mma-administrative",
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
+         "handle" : "mma-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -132,10 +140,16 @@
                ]
             ]
          ],
-         "handle" : "mma-technical"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "handle" : "mma-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,11 +182,44 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-02-27",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:52"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "handle" : "mma",
+   "objectClassName" : "domain",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MMA."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.mma.fr"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "notices" : [
@@ -193,53 +240,9 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2015-02-27",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:30:57"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/mma.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.mma.fr",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "59534",
-            "digestType" : "2",
-            "algorithm" : "13",
-            "digest" : "25455417c20c22d815e00232defb2fc78e7b728600c91aadb21f8703ea1c314b"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
    "nameservers" : [
       {
+         "ldhName" : "D.NIC.FR",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -248,11 +251,9 @@
             "v4" : [
                "194.0.9.1"
             ]
-         },
-         "ldhName" : "D.NIC.FR"
+         }
       },
       {
-         "ldhName" : "F.EXT.NIC.FR",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:1010:11:0:0:0:53"
@@ -261,44 +262,43 @@
                "194.146.106.46"
             ]
          },
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.EXT.NIC.FR"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
             ]
          }
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "mma",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/mma.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.mma.fr",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MMA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.mma.fr"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
+   "status" : [
+      "active"
    ]
 }

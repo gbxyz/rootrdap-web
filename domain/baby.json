@@ -1,94 +1,36 @@
 {
-   "handle" : "baby",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BABY."
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-14"
       },
       {
-         "description" : [
-            "Registration information: https://nic.baby/"
-         ],
-         "title" : "Remark"
+         "eventDate" : "2022-08-16",
+         "eventAction" : "last changed"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
       }
    ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "6b39ccc9ba6c73c818d68522547e5d56db46e13607dc0e83047d6e111067dcb2",
+            "digestType" : "2",
+            "keyTag" : "11182",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "ldhName" : "baby",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "entities" : [
       {
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "baby-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "XYZ.COM LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "roles" : [
             "technical"
          ],
-         "handle" : "baby-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -147,12 +89,13 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity",
+         "handle" : "baby-technical"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
+         "handle" : "baby-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -204,72 +147,86 @@
                ]
             ]
          ],
-         "handle" : "baby-administrative",
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "baby-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "XYZ.COM LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/baby.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://nic.baby/"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "11182",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "digest" : "6b39ccc9ba6c73c818d68522547e5d56db46e13607dc0e83047d6e111067dcb2"
-         }
-      ]
-   },
-   "events" : [
-      {
-         "eventDate" : "2016-01-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:28:05",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "handle" : "baby",
    "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "194.169.218.101"
-            ],
             "v6" : [
                "2001:67c:13cc:0:0:0:1:101"
+            ],
+            "v4" : [
+               "194.169.218.101"
             ]
          },
          "ldhName" : "A.NIC.BABY"
       },
       {
-         "ldhName" : "B.NIC.BABY",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.101"
@@ -278,10 +235,11 @@
                "2a04:2b00:13cc:0:0:0:1:101"
             ]
          },
-         "objectClassName" : "nameserver"
+         "ldhName" : "B.NIC.BABY"
       },
       {
          "ldhName" : "C.NIC.BABY",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:101"
@@ -289,20 +247,62 @@
             "v4" : [
                "212.18.248.101"
             ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "212.18.249.101"
-            ],
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:101"
+            ],
+            "v4" : [
+               "212.18.249.101"
             ]
          },
-         "ldhName" : "D.NIC.BABY",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.BABY"
       }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/baby.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://nic.baby/",
+         "rel" : "related"
+      }
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BABY."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://nic.baby/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ]
 }

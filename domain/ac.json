@@ -1,54 +1,25 @@
 {
-   "ldhName" : "ac",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-12-19"
-      },
-      {
-         "eventDate" : "2023-03-07",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:27:41"
-      }
-   ],
+   "objectClassName" : "domain",
+   "handle" : "ac",
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "4b15f405c98f4bc3a370b19e54dbe75df201edcd38577c51d277dc6559865d95",
+            "keyTag" : "42665",
             "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "42665"
+            "algorithm" : "8"
          }
       ],
       "delegationSigned" : true
    },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ac.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.ac/"
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "ac",
    "entities" : [
       {
+         "handle" : "ac-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "ac-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -81,11 +52,9 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -148,10 +117,13 @@
                ]
             ]
          ],
-         "handle" : "ac-technical"
+         "handle" : "ac-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -197,49 +169,85 @@
                ]
             ]
          ],
-         "handle" : "ac-administrative",
-         "roles" : [
-            "administrative"
+         "objectClassName" : "entity",
+         "handle" : "ac-administrative"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-12-19"
+      },
+      {
+         "eventDate" : "2023-03-07",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:16:46"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "status" : [
+      "active"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AC."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.ac/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
-   ],
-   "status" : [
-      "active"
    ],
    "nameservers" : [
       {
+         "ldhName" : "A0.NIC.AC",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.160.1"
-            ],
             "v6" : [
                "2a01:8840:9e:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.160.1"
             ]
-         },
-         "ldhName" : "A0.NIC.AC"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A2.NIC.AC",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.163.1"
@@ -250,6 +258,7 @@
          }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:9f:0:0:0:0:1"
@@ -258,45 +267,36 @@
                "65.22.161.1"
             ]
          },
-         "ldhName" : "B0.NIC.AC",
-         "objectClassName" : "nameserver"
+         "ldhName" : "B0.NIC.AC"
       },
       {
+         "ldhName" : "C0.NIC.AC",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:a0:0:0:0:0:1"
-            ],
             "v4" : [
                "65.22.162.1"
+            ],
+            "v6" : [
+               "2a01:8840:a0:0:0:0:0:1"
             ]
-         },
-         "ldhName" : "C0.NIC.AC",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "ac",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AC."
-         ],
-         "title" : "Whois Service"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ac.html"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.ac/"
-         ]
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "rel" : "related",
+         "href" : "http://www.nic.ac/",
+         "title" : "URL for registration services"
       }
    ]
 }

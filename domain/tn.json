@@ -1,72 +1,35 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "05c891303fdee4fdae258e2a7d48370ce21f98058c0ee0a50c438c2878a8e2d6",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "keyTag" : "8629"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tn.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://whois.ati.tn",
-         "rel" : "related"
-      }
-   ],
    "events" : [
       {
          "eventDate" : "1991-05-17",
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2017-08-05"
+         "eventDate" : "2017-08-05",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:32:06",
+         "eventDate" : "2023-07-26T13:16:56",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "keyTag" : "8629",
+            "algorithm" : "8",
+            "digest" : "05c891303fdee4fdae258e2a7d48370ce21f98058c0ee0a50c438c2878a8e2d6"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "tn-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -75,6 +38,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Mrs WAFA DAHMANI"
                ],
                [
                   "org",
@@ -97,12 +66,35 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+216 71 846 100"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+216 71 846 600"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "nicadmin@ati.tn"
                ]
             ]
-         ]
+         ],
+         "handle" : "tn-administrative",
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "tn-technical",
          "roles" : [
             "technical"
          ],
@@ -164,15 +156,12 @@
                   "nic@ati.tn"
                ]
             ]
-         ],
-         "handle" : "tn-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "tn-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -181,12 +170,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Mrs WAFA DAHMANI"
                ],
                [
                   "org",
@@ -209,35 +192,54 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+216 71 846 100"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+216 71 846 600"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "nicadmin@ati.tn"
                ]
             ]
-         ]
+         ],
+         "handle" : "tn-registrant",
+         "objectClassName" : "entity"
       }
    ],
    "ldhName" : "tn",
    "objectClassName" : "domain",
+   "handle" : "tn",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/tn.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "rel" : "related",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://whois.ati.tn",
+         "rel" : "related"
+      }
+   ],
    "nameservers" : [
       {
+         "ldhName" : "NS-TN.AFRINIC.NET",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -246,11 +248,9 @@
             "v6" : [
                "2001:43f8:120:0:0:0:0:25"
             ]
-         },
-         "ldhName" : "NS-TN.AFRINIC.NET"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS1.ATI.TN",
          "ipAddresses" : {
             "v6" : [
@@ -259,10 +259,12 @@
             "v4" : [
                "41.228.62.63"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "NS2.ATI.TN",
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2c0f:fab0:ffff:5:41:228:63:62"
@@ -270,32 +272,31 @@
             "v4" : [
                "41.228.63.62"
             ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "192.93.0.4"
-            ],
-            "v6" : [
-               "2001:660:3005:1:0:0:1:2"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "PCH.ATI.TN",
          "ipAddresses" : {
-            "v4" : [
-               "204.61.216.94"
+            "v6" : [
+               "2001:660:3005:1:0:0:1:2"
             ],
+            "v4" : [
+               "192.93.0.4"
+            ]
+         },
+         "ldhName" : "NS2.NIC.FR"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
             "v6" : [
                "2001:500:14:6004:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.94"
             ]
-         }
+         },
+         "ldhName" : "PCH.ATI.TN"
       },
       {
          "ipAddresses" : {
@@ -306,14 +307,10 @@
                "147.28.0.39"
             ]
          },
-         "ldhName" : "RIP.PSG.COM",
-         "objectClassName" : "nameserver"
+         "objectClassName" : "nameserver",
+         "ldhName" : "RIP.PSG.COM"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "handle" : "tn",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -322,10 +319,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://whois.ati.tn"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -336,5 +333,8 @@
    ],
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "status" : [
+      "active"
    ]
 }
