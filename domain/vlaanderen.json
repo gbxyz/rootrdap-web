@@ -1,24 +1,48 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "vlaanderen",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-06-05"
-      },
-      {
-         "eventDate" : "2021-02-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "vlaanderen",
    "entities" : [
       {
+         "handle" : "vlaanderen-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DNS.be vzw"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ubicenter, Philipssite 5, bus 13\nLeuven 3001\nBelgium"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "vlaanderen-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -80,11 +104,11 @@
                   "iana-admin@dnsbelgium.be"
                ]
             ]
-         ],
-         "handle" : "vlaanderen-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "vlaanderen-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -146,74 +170,25 @@
                   "iana-tech@dnsbelgium.be"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "vlaanderen-technical"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DNS.be vzw"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ubicenter, Philipssite 5, bus 13\nLeuven 3001\nBelgium"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "vlaanderen-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "9286",
-            "digestType" : "2",
-            "digest" : "f04e1190a18d3e63b8fd5261768ef06f8fa5f27f80f39c54aa81753b203e05e7"
-         },
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "54397",
-            "digest" : "2d655a3f1a0c26ad210018757ffbb754b2c4b167673283ddc1496c614ae7a9f5"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-06-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-02-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:29"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "vlaanderen",
+   "ldhName" : "vlaanderen",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/vlaanderen.html",
@@ -221,32 +196,30 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.nic.vlaanderen",
          "rel" : "related",
-         "href" : "http://www.nic.vlaanderen"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NSSET.VLAANDEREN",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:9:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.6.1"
+            ],
+            "v6" : [
+               "2001:678:9:0:0:0:0:1"
             ]
          },
+         "ldhName" : "A.NSSET.VLAANDEREN",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NSSET.VLAANDEREN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.37.1"
@@ -254,10 +227,11 @@
             "v6" : [
                "2001:678:64:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "B.NSSET.VLAANDEREN",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.43.1"
@@ -266,62 +240,68 @@
                "2001:678:68:0:0:0:0:1"
             ]
          },
-         "ldhName" : "C.NSSET.VLAANDEREN"
+         "ldhName" : "C.NSSET.VLAANDEREN",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NSSET.VLAANDEREN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:6c:0:0:0:0:1"
-            ],
             "v4" : [
                "194.0.44.1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Y.NSSET.VLAANDEREN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:7:0:0:0:0:8"
             ],
-            "v4" : [
-               "120.29.253.8"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Z.NSSET.VLAANDEREN",
-         "ipAddresses" : {
             "v6" : [
-               "2001:678:20:0:0:0:0:19"
-            ],
-            "v4" : [
-               "194.0.25.19"
+               "2001:678:6c:0:0:0:0:1"
             ]
          },
+         "ldhName" : "D.NSSET.VLAANDEREN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "120.29.253.8"
+            ],
+            "v6" : [
+               "2001:dcd:7:0:0:0:0:8"
+            ]
+         },
+         "ldhName" : "Y.NSSET.VLAANDEREN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.19"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "Z.NSSET.VLAANDEREN",
          "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -342,5 +322,25 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "f04e1190a18d3e63b8fd5261768ef06f8fa5f27f80f39c54aa81753b203e05e7",
+            "digestType" : "2",
+            "keyTag" : "9286"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "2d655a3f1a0c26ad210018757ffbb754b2c4b167673283ddc1496c614ae7a9f5",
+            "digestType" : "2",
+            "keyTag" : "54397"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

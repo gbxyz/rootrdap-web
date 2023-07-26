@@ -1,35 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1990-11-07"
-      },
-      {
-         "eventDate" : "2020-01-15",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:58",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "3e2b0b7e6063ca11400fa4b54d8a530888234cd0eb3b5fbf820c0750784da84e",
-            "keyTag" : "45749",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "za",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "za-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -62,12 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "za-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -129,11 +104,14 @@
                   "chair@zadna.org.za"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "za-administrative"
+         ]
       },
       {
+         "handle" : "za-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -192,70 +170,25 @@
                   "dnsadmin@zadna.org.za"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "za-technical"
-      }
-   ],
-   "handle" : "za",
-   "objectClassName" : "domain",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
-   "nameservers" : [
+   "events" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "196.4.160.27"
-            ]
-         },
-         "ldhName" : "NSZA.IS.CO.ZA"
+         "eventAction" : "registration",
+         "eventDate" : "1990-11-07"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.55"
-            ],
-            "v6" : [
-               "2001:500:14:6055:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "ZA-NS.ANYCAST.PCH.NET"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-01-15"
       },
       {
-         "ldhName" : "ZA1.DNSNODE.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.78"
-            ],
-            "v6" : [
-               "2001:67c:1010:19:0:0:0:53"
-            ]
-         }
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:30:07"
       }
    ],
+   "handle" : "za",
+   "ldhName" : "za",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/za.html",
@@ -273,18 +206,77 @@
          "title" : "URL for registration services"
       }
    ],
-   "remarks" : [
+   "nameservers" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "ipAddresses" : {
+            "v4" : [
+               "196.4.160.27"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NSZA.IS.CO.ZA",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Remark",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.55"
+            ],
+            "v6" : [
+               "2001:500:14:6055:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "ZA-NS.ANYCAST.PCH.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.78"
+            ],
+            "v6" : [
+               "2001:67c:1010:19:0:0:0:53"
+            ]
+         },
+         "ldhName" : "ZA1.DNSNODE.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
          "description" : [
             "Registration information: http://www.zadna.org.za/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -293,9 +285,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "3e2b0b7e6063ca11400fa4b54d8a530888234cd0eb3b5fbf820c0750784da84e",
+            "digestType" : "2",
+            "keyTag" : "45749"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

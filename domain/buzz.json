@@ -1,22 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "buzz",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "eea009d624a40b9afaa8f0fa040a3d0fc900ab565e27aa90cebb67b481c9816c",
-            "keyTag" : "21817",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "ldhName" : "buzz",
    "entities" : [
       {
+         "handle" : "buzz-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DOTSTRATEGY CO."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1920 Centennial Club Dr.\nConway AR 72034\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "buzz-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -75,12 +104,14 @@
                   "bill@nameshops.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "buzz-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -139,52 +170,7 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "buzz-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DOTSTRATEGY CO."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1920 Centennial Club Dr.\nConway AR 72034\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "buzz-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
    "events" : [
@@ -198,15 +184,124 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:28"
       }
    ],
+   "handle" : "buzz",
+   "ldhName" : "buzz",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/buzz.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.buzznames.biz",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.NIC.BUZZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "B.NIC.BUZZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.BUZZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.29"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:1d"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.BUZZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.29"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:1d"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.BUZZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.29"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:1d"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.BUZZ",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
    "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "status" : [
-      "active"
    ],
    "remarks" : [
       {
@@ -228,113 +323,18 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/buzz.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.buzznames.biz",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.BUZZ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "eea009d624a40b9afaa8f0fa040a3d0fc900ab565e27aa90cebb67b481c9816c",
+            "digestType" : "2",
+            "keyTag" : "21817"
          }
-      },
-      {
-         "ldhName" : "B.NIC.BUZZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.NIC.BUZZ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.BUZZ",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.29"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:1d"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.BUZZ",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.29"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:1d"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.BUZZ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:1d"
-            ],
-            "v4" : [
-               "156.154.159.29"
-            ]
-         }
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

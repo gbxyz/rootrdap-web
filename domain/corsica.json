@@ -1,51 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "corsica",
-   "ldhName" : "corsica",
    "entities" : [
-      {
-         "handle" : "corsica-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Collectivité de Corse"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "22, cours Grandval\nCedex\nAjaccio Corse 20187\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
       {
          "handle" : "corsica-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -104,12 +64,14 @@
                   "pdtcorsica@afnic.fr"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "corsica-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,29 +130,53 @@
                   "support@puntu.corsica"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
+         ]
+      },
+      {
+         "handle" : "corsica-registrant",
          "objectClassName" : "entity",
-         "handle" : "corsica-administrative"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Collectivité de Corse"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "22, cours Grandval\nCedex\nAjaccio Corse 20187\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "fb25f2d69835bf52cd5389473cd4b0c58d581385ee40b1d1a357135a8ce26997",
-            "keyTag" : "16766",
-            "digestType" : "2",
-            "algorithm" : "13"
-         }
-      ]
-   },
    "events" : [
       {
-         "eventDate" : "2015-04-23",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-23"
       },
       {
          "eventAction" : "last changed",
@@ -198,13 +184,86 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
+         "eventDate" : "2023-07-26T13:25:57"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
+   "handle" : "corsica",
+   "ldhName" : "corsica",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/corsica.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.puntu.corsica",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -222,83 +281,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/corsica.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.puntu.corsica",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.9.1"
-            ]
-         },
-         "ldhName" : "D.NIC.FR"
-      },
-      {
-         "ldhName" : "F.EXT.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ],
-            "v4" : [
-               "194.146.106.46"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.36.1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "G.EXT.NIC.FR"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "fb25f2d69835bf52cd5389473cd4b0c58d581385ee40b1d1a357135a8ce26997",
+            "digestType" : "2",
+            "keyTag" : "16766"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,20 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "olayan",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "930e37d43f6f58965863b8906adadfdf0091edee90b6c8c0dd3a88ed5112d2c8",
-            "keyTag" : "60061",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "ldhName" : "olayan",
    "entities" : [
       {
+         "handle" : "olayan-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -73,14 +64,14 @@
                   "a.kade@olayangroup.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "olayan-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "olayan-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -139,14 +130,11 @@
                   "john.wilks@dlapiper.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "olayan-administrative"
+         ]
       },
       {
+         "handle" : "olayan-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -182,16 +170,13 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "olayan-registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-04-21",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-21"
       },
       {
          "eventAction" : "last changed",
@@ -199,53 +184,11 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
+         "eventDate" : "2023-07-26T13:27:55"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.OLAYAN."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.olayan.com/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "olayan",
+   "ldhName" : "olayan",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/olayan.html",
@@ -253,14 +196,14 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.olayan.com/",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -273,48 +216,46 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.OLAYAN"
-      },
-      {
-         "ldhName" : "B.NIC.OLAYAN",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
+         "ldhName" : "A.NIC.OLAYAN",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
+            "v4" : [
+               "37.209.194.9"
             ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.OLAYAN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C.NIC.OLAYAN"
+         "ldhName" : "C.NIC.OLAYAN",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.OLAYAN"
+         "ldhName" : "X.NIC.OLAYAN",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Y.NIC.OLAYAN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.173.82"
@@ -322,7 +263,9 @@
             "v6" : [
                "2610:a1:1075:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "Y.NIC.OLAYAN",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -333,8 +276,65 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Z.NIC.OLAYAN"
+         "ldhName" : "Z.NIC.OLAYAN",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.OLAYAN."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.olayan.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "930e37d43f6f58965863b8906adadfdf0091edee90b6c8c0dd3a88ed5112d2c8",
+            "digestType" : "2",
+            "keyTag" : "60061"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

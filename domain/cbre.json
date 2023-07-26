@@ -1,22 +1,48 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2016-06-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "cbre",
    "entities" : [
       {
+         "handle" : "cbre-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CBRE, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "400 S. Hope Street, 25th Floor\nLos Angeles CA 90071\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "cbre-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -78,11 +104,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cbre-technical"
+         ]
       },
       {
+         "handle" : "cbre-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -141,77 +170,35 @@
                   "ngtld-cbre@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "cbre-administrative",
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CBRE, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "400 S. Hope Street, 25th Floor\nLos Angeles CA 90071\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cbre-registrant"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "46225",
-            "algorithm" : "8",
-            "digest" : "f737a4fd2c347f5f1d4e4df8f4977ba169f28829557fbc8c477051c041268fcc"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "handle" : "cbre",
-   "objectClassName" : "domain",
-   "links" : [
+   "events" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cbre.html",
-         "rel" : "related"
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-16"
       },
       {
-         "title" : "About RDAP",
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:38"
+      }
+   ],
+   "handle" : "cbre",
+   "ldhName" : "cbre",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cbre.html",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://cbre.com",
@@ -221,20 +208,18 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.CBRE",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A.NIC.CBRE",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.CBRE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.194.9"
@@ -242,23 +227,23 @@
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.CBRE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.CBRE"
+         "ldhName" : "C.NIC.CBRE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.CBRE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.144.36"
@@ -266,23 +251,23 @@
             "v6" : [
                "2610:a1:1071:0:0:0:0:24"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.NIC.CBRE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.CBRE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:24"
-            ],
             "v4" : [
                "156.154.145.36"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:24"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.CBRE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.CBRE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.159.36"
@@ -290,17 +275,19 @@
             "v6" : [
                "2610:a1:1073:0:0:0:0:24"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.CBRE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -310,6 +297,11 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -325,16 +317,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "f737a4fd2c347f5f1d4e4df8f4977ba169f28829557fbc8c477051c041268fcc",
+            "digestType" : "2",
+            "keyTag" : "46225"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

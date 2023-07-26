@@ -1,9 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "anz",
-   "ldhName" : "anz",
    "entities" : [
       {
+         "handle" : "anz-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -39,11 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "anz-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "anz-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -94,14 +96,14 @@
                   "ngtld-anz@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "anz-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "anz-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -160,69 +162,44 @@
                   "ngtld-anz@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "anz-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "6a107b65405bfe98c0cc040fbd91a29d9fc927fea447ca0ae4f5538ecf9fcba5",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "25084"
-         }
-      ]
-   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2016-06-09"
       },
       {
-         "eventDate" : "2022-11-30",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-30"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
+         "eventDate" : "2023-07-26T13:24:51"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "anz",
+   "ldhName" : "anz",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ANZ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/anz.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.anz.com/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.anz.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -231,19 +208,20 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "ldhName" : "A.NIC.ANZ"
+         "ldhName" : "A.NIC.ANZ",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "ldhName" : "B.NIC.ANZ"
+         "ldhName" : "B.NIC.ANZ",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -254,23 +232,22 @@
                "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.ANZ"
-      },
-      {
-         "ldhName" : "X.NIC.ANZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
-         },
+         "ldhName" : "C.NIC.ANZ",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Y.NIC.ANZ",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "X.NIC.ANZ",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.173.82"
@@ -279,36 +256,20 @@
                "2610:a1:1075:0:0:0:1:82"
             ]
          },
+         "ldhName" : "Y.NIC.ANZ",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Z.NIC.ANZ"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/anz.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.anz.com/"
+         "ldhName" : "Z.NIC.ANZ",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -328,5 +289,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ANZ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.anz.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "6a107b65405bfe98c0cc040fbd91a29d9fc927fea447ca0ae4f5538ecf9fcba5",
+            "digestType" : "2",
+            "keyTag" : "25084"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

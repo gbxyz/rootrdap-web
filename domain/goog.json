@@ -1,19 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "goog",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "01509dc8d2d79e32f9a9c7f9845fdf26e4c4b7b2d6040e0d9381ebabe5331801",
-            "algorithm" : "8",
-            "keyTag" : "8029",
-            "digestType" : "2"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "goog-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "goog-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -72,14 +104,11 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "goog-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "goog-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -141,91 +170,102 @@
                   "crr-tech@google.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "goog-technical"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "goog-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "goog",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-01-08"
       },
       {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
+         "eventDate" : "2023-07-26T13:26:49"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "goog",
+   "ldhName" : "goog",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/goog.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "https://www.registry.google",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.38.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -246,83 +286,43 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/goog.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "https://www.registry.google",
-         "rel" : "related"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.32.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "01509dc8d2d79e32f9a9c7f9845fdf26e4c4b7b2d6040e0d9381ebabe5331801",
+            "digestType" : "2",
+            "keyTag" : "8029"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.34.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ]
-         },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.36.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         },
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.60.105"
-            ],
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ]
-         }
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

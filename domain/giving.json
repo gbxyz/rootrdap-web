@@ -1,8 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "giving",
    "entities" : [
       {
+         "handle" : "giving-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -13,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Public Interest Registry (PIR)"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "11911 Freedom Drive 10th Floor, Suite 1000\nReston VA 20190\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -39,36 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "giving-technical"
+         ]
       },
       {
+         "handle" : "giving-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -130,11 +104,14 @@
                   "ops@pir.org"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "giving-administrative"
+         ]
       },
       {
+         "handle" : "giving-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -145,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Public Interest Registry (PIR)"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "11911 Freedom Drive 10th Floor, Suite 1000\nReston VA 20190\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -165,73 +148,66 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "giving-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "giving",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "42049",
-            "digest" : "51655c1edba06b3c2329578ade539d446169f70f06adfd536c0ef7b315506a1f"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "2015-06-11",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-11"
       },
       {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
+         "eventDate" : "2023-07-26T13:26:46"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "giving",
+   "ldhName" : "giving",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GIVING."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/giving.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.giving"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://nic.giving",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.GIVING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.19.56.1"
@@ -239,10 +215,11 @@
             "v6" : [
                "2001:500:e:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "A0.NIC.GIVING",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.249.112.1"
@@ -251,11 +228,10 @@
                "2001:500:40:0:0:0:0:1"
             ]
          },
-         "ldhName" : "A2.NIC.GIVING"
+         "ldhName" : "A2.NIC.GIVING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.GIVING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.19.54.1"
@@ -263,7 +239,9 @@
             "v6" : [
                "2001:500:c:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.GIVING",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -274,20 +252,20 @@
                "2001:500:48:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B2.NIC.GIVING"
+         "ldhName" : "B2.NIC.GIVING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.GIVING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:b:0:0:0:0:1"
-            ],
             "v4" : [
                "199.19.53.1"
+            ],
+            "v6" : [
+               "2001:500:b:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "C0.NIC.GIVING",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -298,25 +276,8 @@
                "2001:500:f:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D0.NIC.GIVING"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/giving.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://nic.giving",
-         "rel" : "related"
+         "ldhName" : "D0.NIC.GIVING",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -329,12 +290,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GIVING."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.giving"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "51655c1edba06b3c2329578ade539d446169f70f06adfd536c0ef7b315506a1f",
+            "digestType" : "2",
+            "keyTag" : "42049"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

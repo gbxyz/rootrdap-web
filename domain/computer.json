@@ -1,33 +1,11 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-10"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "29629",
-            "digestType" : "2",
-            "digest" : "49c52c30c178f8cf305cfe47ed6b6faec79e6200ab71b74dd1bfe4b2a9253438"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "computer",
    "entities" : [
       {
+         "handle" : "computer-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -38,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -64,36 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "computer-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "computer-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -155,11 +104,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "computer-technical"
+         ]
       },
       {
+         "handle" : "computer-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -170,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -190,18 +148,138 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "computer-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:54"
+      }
+   ],
    "handle" : "computer",
+   "ldhName" : "computer",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/computer.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.28.19"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.COMPUTER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.19"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.COMPUTER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.30.19"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.COMPUTER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.19"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.COMPUTER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.31.19"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.COMPUTER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.19"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.COMPUTER",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -220,96 +298,10 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.COMPUTER",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.19"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:19"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:19"
-            ],
-            "v4" : [
-               "65.22.29.19"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.COMPUTER"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:19"
-            ],
-            "v4" : [
-               "65.22.30.19"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.COMPUTER"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.19"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:19"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.COMPUTER"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:19"
-            ],
-            "v4" : [
-               "65.22.31.19"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.COMPUTER"
-      },
-      {
-         "ldhName" : "V2N1.NIC.COMPUTER",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.19"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:19"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/computer.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -325,15 +317,23 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "49c52c30c178f8cf305cfe47ed6b6faec79e6200ab71b74dd1bfe4b2a9253438",
+            "digestType" : "2",
+            "keyTag" : "29629"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

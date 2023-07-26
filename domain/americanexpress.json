@@ -1,21 +1,4 @@
 {
-   "handle" : "americanexpress",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-07-22"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:46",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "handle" : "americanexpress-registrant",
@@ -58,6 +41,11 @@
          ]
       },
       {
+         "handle" : "americanexpress-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -116,16 +104,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "americanexpress-technical"
+         ]
       },
       {
          "handle" : "americanexpress-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -184,30 +170,25 @@
                   "ngtld-amex@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-22"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:24:48"
+      }
+   ],
+   "handle" : "americanexpress",
    "ldhName" : "americanexpress",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "87098c48f0e74920da2d916e8aea9fc1e92919ee033ee569569942a5dcb02c02",
-            "algorithm" : "8",
-            "keyTag" : "31510",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/americanexpress.html",
@@ -215,14 +196,13 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -231,23 +211,22 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "ldhName" : "A.NIC.AMERICANEXPRESS"
+         "ldhName" : "A.NIC.AMERICANEXPRESS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.AMERICANEXPRESS"
+         "ldhName" : "B.NIC.AMERICANEXPRESS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.AMERICANEXPRESS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
@@ -255,11 +234,11 @@
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.AMERICANEXPRESS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.AMERICANEXPRESS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.144.9"
@@ -267,31 +246,33 @@
             "v6" : [
                "2610:a1:1071:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.NIC.AMERICANEXPRESS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.AMERICANEXPRESS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:9"
-            ],
             "v4" : [
                "156.154.145.9"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.AMERICANEXPRESS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:9"
-            ],
             "v4" : [
                "156.154.159.9"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.AMERICANEXPRESS"
+         "ldhName" : "NS3.DNS.NIC.AMERICANEXPRESS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -304,13 +285,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -320,10 +306,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information:"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -337,5 +323,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "87098c48f0e74920da2d916e8aea9fc1e92919ee033ee569569942a5dcb02c02",
+            "digestType" : "2",
+            "keyTag" : "31510"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

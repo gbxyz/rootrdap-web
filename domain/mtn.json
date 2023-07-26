@@ -1,194 +1,11 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:403:0:0:0:0:42"
-            ],
-            "v4" : [
-               "213.248.219.42"
-            ]
-         },
-         "ldhName" : "DNS1.NIC.MTN"
-      },
-      {
-         "ldhName" : "DNS2.NIC.MTN",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:403:0:0:0:0:42"
-            ],
-            "v4" : [
-               "103.49.83.42"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS3.NIC.MTN",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:407:0:0:0:0:42"
-            ],
-            "v4" : [
-               "213.248.223.42"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS4.NIC.MTN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "43.230.51.42"
-            ],
-            "v6" : [
-               "2401:fd80:407:0:0:0:0:42"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSA.NIC.MTN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSB.NIC.MTN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSC.NIC.MTN"
-      },
-      {
-         "ldhName" : "DNSD.NIC.MTN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.103.3"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/mtn.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.mtn.com",
-         "rel" : "related"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MTN."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.mtn.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-19"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "18374",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "58114b80a64f8617af3ec29668c55519d8ccb44a203562d746e7f2cc8850a1eb"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "mtn",
    "entities" : [
       {
          "handle" : "mtn-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -239,12 +56,14 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "mtn-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -295,16 +114,14 @@
                   "registrymanagement@nominet.uk"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mtn-administrative"
+         ]
       },
       {
          "handle" : "mtn-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -337,12 +154,195 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-19"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:41"
+      }
+   ],
    "handle" : "mtn",
-   "objectClassName" : "domain"
+   "ldhName" : "mtn",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/mtn.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.mtn.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.219.42"
+            ],
+            "v6" : [
+               "2a01:618:403:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "DNS1.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "103.49.83.42"
+            ],
+            "v6" : [
+               "2401:fd80:403:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "DNS2.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.223.42"
+            ],
+            "v6" : [
+               "2a01:618:407:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "43.230.51.42"
+            ],
+            "v6" : [
+               "2401:fd80:407:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "DNS4.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSA.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSB.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSC.NIC.MTN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSD.NIC.MTN",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MTN."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.mtn.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "58114b80a64f8617af3ec29668c55519d8ccb44a203562d746e7f2cc8850a1eb",
+            "digestType" : "2",
+            "keyTag" : "18374"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

@@ -1,19 +1,11 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "20392",
-            "digestType" : "2",
-            "digest" : "1f1ebacd947952ce4df8a80045ec37d088a49b72618feb92b91229de4d31b7b4"
-         }
-      ]
-   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "club-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -46,12 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "club-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -110,16 +104,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "club-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "club-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -178,48 +170,114 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       }
    ],
-   "ldhName" : "club",
    "events" : [
       {
-         "eventDate" : "2014-01-09",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-09"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-07-18"
       },
       {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:50"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "club",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "club",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CLUB."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/club.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.club/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://nic.club/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.NIC.CLUB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "B.NIC.CLUB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.CLUB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.215"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:d7"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.CLUB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.215"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:d7"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.CLUB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.215"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:d7"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.CLUB",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -240,100 +298,42 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "A.NIC.CLUB"
-      },
-      {
-         "ldhName" : "B.NIC.CLUB",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.CLUB"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.215"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:d7"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.CLUB"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.CLUB",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:d7"
-            ],
-            "v4" : [
-               "156.154.145.215"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.CLUB",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:d7"
-            ],
-            "v4" : [
-               "156.154.159.215"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/club.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://nic.club/"
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CLUB."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.club/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "1f1ebacd947952ce4df8a80045ec37d088a49b72618feb92b91229de4d31b7b4",
+            "digestType" : "2",
+            "keyTag" : "20392"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

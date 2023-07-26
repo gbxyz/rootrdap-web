@@ -1,24 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "studio",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-06-25"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-10"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "studio",
    "entities" : [
       {
+         "handle" : "studio-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -54,11 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "studio-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "studio-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -120,11 +104,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "studio-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "studio-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -183,41 +170,35 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "studio-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "d4289b105c9cb81d1ea631fe723a7dd3e9a52fb649b4a0a40c4890a9faa62846",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "1354"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "links" : [
+   "events" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/studio.html"
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-25"
       },
       {
-         "title" : "About RDAP",
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:07"
+      }
+   ],
+   "handle" : "studio",
+   "ldhName" : "studio",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/studio.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.donuts.domains/",
@@ -227,31 +208,30 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.STUDIO",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:3"
-            ],
             "v4" : [
                "65.22.28.3"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:3"
             ]
          },
+         "ldhName" : "V0N0.NIC.STUDIO",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:3"
-            ],
             "v4" : [
                "65.22.29.3"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:3"
             ]
          },
-         "ldhName" : "V0N1.NIC.STUDIO"
+         "ldhName" : "V0N1.NIC.STUDIO",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.30.3"
@@ -260,10 +240,10 @@
                "2a01:8840:20:0:0:0:0:3"
             ]
          },
-         "ldhName" : "V0N2.NIC.STUDIO"
+         "ldhName" : "V0N2.NIC.STUDIO",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.14.3"
@@ -272,7 +252,8 @@
                "2a01:8840:f8:0:0:0:0:3"
             ]
          },
-         "ldhName" : "V0N3.NIC.STUDIO"
+         "ldhName" : "V0N3.NIC.STUDIO",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -283,12 +264,10 @@
                "2a01:8840:21:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.STUDIO"
+         "ldhName" : "V2N0.NIC.STUDIO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N1.NIC.STUDIO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.15.3"
@@ -296,17 +275,19 @@
             "v6" : [
                "2a01:8840:f9:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "V2N1.NIC.STUDIO",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -317,18 +298,23 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.STUDIO."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -336,5 +322,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "d4289b105c9cb81d1ea631fe723a7dd3e9a52fb649b4a0a40c4890a9faa62846",
+            "digestType" : "2",
+            "keyTag" : "1354"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

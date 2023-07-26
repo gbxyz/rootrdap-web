@@ -1,35 +1,48 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2014-10-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "98a66be30959371e15eaf5d4a65ada3393050610a2e5b7ae321b694c876258c9",
-            "keyTag" : "46338",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "bloomberg",
    "entities" : [
       {
+         "handle" : "bloomberg-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Bloomberg IP Holdings LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "25 E. 78th Street\nNew York NY 10075\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "bloomberg-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -94,6 +107,11 @@
          ]
       },
       {
+         "handle" : "bloomberg-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -152,64 +170,95 @@
                   "ngtld-bloomberg@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bloomberg-administrative"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Bloomberg IP Holdings LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "25 E. 78th Street\nNew York NY 10075\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bloomberg-registrant"
+         ]
       }
    ],
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-10-16"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:18"
+      }
+   ],
    "handle" : "bloomberg",
+   "ldhName" : "bloomberg",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bloomberg.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -220,67 +269,10 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM"
-      },
-      {
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bloomberg.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -302,9 +294,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "98a66be30959371e15eaf5d4a65ada3393050610a2e5b7ae321b694c876258c9",
+            "digestType" : "2",
+            "keyTag" : "46338"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

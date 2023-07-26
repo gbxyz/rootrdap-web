@@ -1,33 +1,8 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-05-14"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-17"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:55",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "a2b1e70ec2a5831a069b94ccf9b39e547cd9a351055ea87f4b74dd99f7b061e1",
-            "digestType" : "2",
-            "keyTag" : "16237",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "ldhName" : "thd",
    "entities" : [
       {
+         "handle" : "thd-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -63,11 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "thd-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "thd-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -129,13 +104,14 @@
                   "ngtld-thd@cscglobal.com"
                ]
             ]
-         ],
-         "handle" : "thd-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "thd-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -194,14 +170,92 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-05-14"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:14"
+      }
+   ],
    "handle" : "thd",
-   "objectClassName" : "domain",
+   "ldhName" : "thd",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/thd.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.homedepot.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.192.9"
+            ],
+            "v6" : [
+               "2a01:8840:ba:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A0.NIC.THD",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.195.9"
+            ],
+            "v6" : [
+               "2a01:8840:bd:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A2.NIC.THD",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.193.9"
+            ],
+            "v6" : [
+               "2a01:8840:bb:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B0.NIC.THD",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.194.9"
+            ],
+            "v6" : [
+               "2a01:8840:bc:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C0.NIC.THD",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -220,72 +274,10 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.THD",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.192.9"
-            ],
-            "v6" : [
-               "2a01:8840:ba:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bd:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.195.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.THD"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bb:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.193.9"
-            ]
-         },
-         "ldhName" : "B0.NIC.THD"
-      },
-      {
-         "ldhName" : "C0.NIC.THD",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bc:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.194.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/thd.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.homedepot.com",
-         "rel" : "related"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -301,15 +293,23 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "a2b1e70ec2a5831a069b94ccf9b39e547cd9a351055ea87f4b74dd99f7b061e1",
+            "digestType" : "2",
+            "keyTag" : "16237"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

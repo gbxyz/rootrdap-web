@@ -1,32 +1,8 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2015-12-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "6e98e0865f6a8cd3e69f0a03cb0d9d80333a31d113ad85bba7571f87262c5d32",
-            "algorithm" : "8",
-            "keyTag" : "1501",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "bestbuy-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -62,11 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bestbuy-registrant"
+         ]
       },
       {
+         "handle" : "bestbuy-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -125,12 +104,7 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "bestbuy-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "bestbuy-administrative",
@@ -191,25 +165,37 @@
          ]
       }
    ],
-   "ldhName" : "bestbuy",
-   "objectClassName" : "domain",
-   "handle" : "bestbuy",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:12"
+      }
+   ],
+   "handle" : "bestbuy",
+   "ldhName" : "bestbuy",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bestbuy.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.bestbuy",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -222,11 +208,10 @@
                "2a01:8840:d2:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.BESTBUY"
+         "ldhName" : "A0.NIC.BESTBUY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.BESTBUY",
          "ipAddresses" : {
             "v4" : [
                "65.22.219.9"
@@ -235,11 +220,10 @@
                "2a01:8840:d5:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A2.NIC.BESTBUY",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.BESTBUY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.217.9"
@@ -247,37 +231,45 @@
             "v6" : [
                "2a01:8840:d3:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.BESTBUY",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d4:0:0:0:0:9"
-            ],
             "v4" : [
                "65.22.218.9"
+            ],
+            "v6" : [
+               "2a01:8840:d4:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C0.NIC.BESTBUY"
+         "ldhName" : "C0.NIC.BESTBUY",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bestbuy.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.bestbuy",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -287,21 +279,29 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.bestbuy"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "6e98e0865f6a8cd3e69f0a03cb0d9d80333a31d113ad85bba7571f87262c5d32",
+            "digestType" : "2",
+            "keyTag" : "1501"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

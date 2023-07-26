@@ -1,20 +1,4 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-06-18"
-      },
-      {
-         "eventDate" : "2023-07-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "cloud",
    "entities" : [
       {
          "handle" : "cloud-administrative",
@@ -83,6 +67,8 @@
          ]
       },
       {
+         "handle" : "cloud-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -136,13 +122,14 @@
                   "trs-ops@tucows.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cloud-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "cloud-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,34 +162,44 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "0503a8fb36bc97cf3fba3b0186be04364e5743b345a89288fd5dfb9672d73619",
-            "algorithm" : "8",
-            "keyTag" : "23374",
-            "digestType" : "2"
-         },
-         {
-            "keyTag" : "48499",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "655c17351152d0b6a959b7ac2c674ca37bb3513f612cf803eae16f572c648ab4"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:49"
+      }
+   ],
    "handle" : "cloud",
-   "objectClassName" : "domain",
+   "ldhName" : "cloud",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cloud.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.get.cloud",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.CLOUD",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.10"
@@ -211,10 +208,10 @@
                "2001:dcd:1:0:0:0:0:10"
             ]
          },
+         "ldhName" : "A.NIC.CLOUD",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.194.10"
@@ -223,10 +220,10 @@
                "2001:dcd:2:0:0:0:0:10"
             ]
          },
-         "ldhName" : "B.NIC.CLOUD"
+         "ldhName" : "B.NIC.CLOUD",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.10"
@@ -235,7 +232,8 @@
                "2001:dcd:3:0:0:0:0:10"
             ]
          },
-         "ldhName" : "C.NIC.CLOUD"
+         "ldhName" : "C.NIC.CLOUD",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -246,49 +244,32 @@
                "2610:a1:1074:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.CLOUD"
+         "ldhName" : "X.NIC.CLOUD",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.CLOUD"
+         "ldhName" : "Y.NIC.CLOUD",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Z.NIC.CLOUD",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
             ]
          },
+         "ldhName" : "Z.NIC.CLOUD",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cloud.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.get.cloud",
-         "rel" : "related",
-         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -301,13 +282,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -317,22 +303,36 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.get.cloud"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "0503a8fb36bc97cf3fba3b0186be04364e5743b345a89288fd5dfb9672d73619",
+            "digestType" : "2",
+            "keyTag" : "23374"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "655c17351152d0b6a959b7ac2c674ca37bb3513f612cf803eae16f572c648ab4",
+            "digestType" : "2",
+            "keyTag" : "48499"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

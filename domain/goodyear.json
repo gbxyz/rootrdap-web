@@ -1,19 +1,11 @@
 {
-   "handle" : "goodyear",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "43276",
-            "digestType" : "2",
-            "digest" : "31677e86241af9fac9000ae3681f1054bb94fade26d91a92109547d4231a64bc"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "goodyear-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -46,80 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "goodyear-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "goodyear-technical",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215.706.5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 215.706.5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "goodyear-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -181,61 +104,166 @@
                   "ngtld-goodyear@cscglobal.com"
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "goodyear-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
          ],
-         "handle" : "goodyear-administrative",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215.706.5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 215.706.5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "goodyear",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-12-17"
       },
       {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
+         "eventDate" : "2023-07-26T13:26:49"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "goodyear",
+   "ldhName" : "goodyear",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOODYEAR."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/goodyear.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.goodyear.com/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "https://www.goodyear.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.120.41"
+            ],
+            "v6" : [
+               "2a01:8840:76:0:0:0:0:41"
+            ]
+         },
+         "ldhName" : "A0.NIC.GOODYEAR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.123.41"
+            ],
+            "v6" : [
+               "2a01:8840:79:0:0:0:0:41"
+            ]
+         },
+         "ldhName" : "A2.NIC.GOODYEAR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.121.41"
+            ],
+            "v6" : [
+               "2a01:8840:77:0:0:0:0:41"
+            ]
+         },
+         "ldhName" : "B0.NIC.GOODYEAR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.122.41"
+            ],
+            "v6" : [
+               "2a01:8840:78:0:0:0:0:41"
+            ]
+         },
+         "ldhName" : "C0.NIC.GOODYEAR",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -246,71 +274,43 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/goodyear.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOODYEAR."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: https://www.goodyear.com/"
+         ],
+         "title" : "Remark"
       },
       {
-         "rel" : "related",
-         "href" : "https://www.goodyear.com/",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.GOODYEAR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.120.41"
-            ],
-            "v6" : [
-               "2a01:8840:76:0:0:0:0:41"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "31677e86241af9fac9000ae3681f1054bb94fade26d91a92109547d4231a64bc",
+            "digestType" : "2",
+            "keyTag" : "43276"
          }
-      },
-      {
-         "ldhName" : "A2.NIC.GOODYEAR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:79:0:0:0:0:41"
-            ],
-            "v4" : [
-               "65.22.123.41"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B0.NIC.GOODYEAR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.121.41"
-            ],
-            "v6" : [
-               "2a01:8840:77:0:0:0:0:41"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C0.NIC.GOODYEAR",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.122.41"
-            ],
-            "v6" : [
-               "2a01:8840:78:0:0:0:0:41"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

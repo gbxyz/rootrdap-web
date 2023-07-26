@@ -1,63 +1,8 @@
 {
-   "handle" : "pwc",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-15"
-      },
-      {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "pwc-technical",
          "objectClassName" : "entity",
-         "handle" : "pwc-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "PricewaterhouseCoopers LLP"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1 Embankment Place\nLondon WC2N 6RH\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
          "roles" : [
             "technical"
          ],
@@ -119,11 +64,14 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pwc-technical"
+         ]
       },
       {
+         "handle" : "pwc-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,47 +130,80 @@
                   "ngtld-pwc@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pwc-administrative"
-      }
-   ],
-   "ldhName" : "pwc",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "53a702c1bc2e7246d8027839bc8c43ecb48a28139d2ecbc0350e4c6ca3bc623a",
-            "algorithm" : "8",
-            "keyTag" : "50191",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pwc.html",
-         "rel" : "related"
+         ]
       },
       {
+         "handle" : "pwc-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "PricewaterhouseCoopers LLP"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1 Embankment Place\nLondon WC2N 6RH\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:21"
+      }
+   ],
+   "handle" : "pwc",
+   "ldhName" : "pwc",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/pwc.html",
          "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://pwc.com",
          "rel" : "related",
-         "href" : "http://pwc.com"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -235,24 +216,22 @@
                "2a01:8840:4e:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.PWC"
+         "ldhName" : "A0.NIC.PWC",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.PWC",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:51:0:0:0:0:9"
-            ],
             "v4" : [
                "65.22.83.9"
+            ],
+            "v6" : [
+               "2a01:8840:51:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "A2.NIC.PWC",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.PWC",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.81.9"
@@ -260,18 +239,20 @@
             "v6" : [
                "2a01:8840:4f:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.PWC",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.PWC",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:50:0:0:0:0:9"
-            ],
             "v4" : [
                "65.22.82.9"
+            ],
+            "v6" : [
+               "2a01:8840:50:0:0:0:0:9"
             ]
          },
+         "ldhName" : "C0.NIC.PWC",
          "objectClassName" : "nameserver"
       }
    ],
@@ -285,13 +266,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -307,10 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "53a702c1bc2e7246d8027839bc8c43ecb48a28139d2ecbc0350e4c6ca3bc623a",
+            "digestType" : "2",
+            "keyTag" : "50191"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

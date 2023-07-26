@@ -1,24 +1,11 @@
 {
-   "handle" : "microsoft",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2015-04-30",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "microsoft",
    "entities" : [
       {
+         "handle" : "microsoft-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -51,16 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "microsoft-registrant"
+         ]
       },
       {
          "handle" : "microsoft-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -119,12 +104,14 @@
                   "tlddom@microsoft.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "microsoft-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -183,31 +170,25 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "microsoft-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "35775",
-            "algorithm" : "8",
-            "digest" : "75b42b6862ac3b32fc471d044de968df0d3e9a2b6d4ead5addba4ed42fef185a"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-30"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:34"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "microsoft",
+   "ldhName" : "microsoft",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/microsoft.html",
@@ -220,27 +201,25 @@
          "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "http://www.microsoft.com",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -248,41 +227,43 @@
             "v6" : [
                "2001:500:121:0:0:0:0:30"
             ]
-         }
-      },
-      {
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
          },
+         "ldhName" : "AC2.NSTLD.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
             "v4" : [
-               "192.42.176.30"
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
             ]
          },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM",
          "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -293,12 +274,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -307,10 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "75b42b6862ac3b32fc471d044de968df0d3e9a2b6d4ead5addba4ed42fef185a",
+            "digestType" : "2",
+            "keyTag" : "35775"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

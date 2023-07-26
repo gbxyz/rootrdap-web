@@ -1,9 +1,8 @@
 {
-   "ldhName" : "netbank",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "netbank-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -37,6 +36,72 @@
                      "",
                      ""
                   ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "netbank-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Domain Admin"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "COMMONWEALTH BANK OF AUSTRALIA"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ground Floor\nTower 1 201 Sussex Street\nSydney NSW 1155\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+61477387865"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+61291181601"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domains@cba.com.au"
                ]
             ]
          ]
@@ -106,120 +171,39 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "netbank-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Domain Admin"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "COMMONWEALTH BANK OF AUSTRALIA"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ground Floor\nTower 1 201 Sussex Street\nSydney NSW 1155\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+61477387865"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+61291181601"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domains@cba.com.au"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "61447",
-            "digest" : "2e300d5e09bdd071679488d325666af89182213d8af2bd2d026c57f3fab5895e"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "2015-03-26",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-26"
       },
       {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
+         "eventDate" : "2023-07-26T13:27:45"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "netbank",
-   "remarks" : [
+   "ldhName" : "netbank",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.NETBANK."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/netbank.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.commbank.com.au"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.commbank.com.au",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -232,61 +216,44 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.NETBANK"
-      },
-      {
-         "ldhName" : "B.NIC.NETBANK",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
+         "ldhName" : "A.NIC.NETBANK",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
+            "v4" : [
+               "37.209.194.9"
             ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.NETBANK",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C.NIC.NETBANK"
+         "ldhName" : "C.NIC.NETBANK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.198.9"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.NETBANK"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/netbank.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.commbank.com.au"
+         "ldhName" : "D.NIC.NETBANK",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -307,10 +274,43 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.NETBANK."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.commbank.com.au"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2e300d5e09bdd071679488d325666af89182213d8af2bd2d026c57f3fab5895e",
+            "digestType" : "2",
+            "keyTag" : "61447"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

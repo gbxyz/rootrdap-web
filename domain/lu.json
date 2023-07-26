@@ -1,47 +1,11 @@
 {
-   "ldhName" : "lu",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "RESTENA"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2, Avenue de l'Université\nEsch-sur-Alzette L-4365\nLuxembourg"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "lu-technical",
          "objectClassName" : "entity",
-         "handle" : "lu-registrant"
-      },
-      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -100,16 +64,14 @@
                   "noc@restena.lu"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "lu-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "lu-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,84 +130,106 @@
                   "gilles.massen@restena.lu"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "lu-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "RESTENA"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2, Avenue de l'Université\nEsch-sur-Alzette L-4365\nLuxembourg"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "20752",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "2bbe0b0c438f336ca96f655dccb9a72d7359064225d9e38a0a09804f9be20415"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "1995-01-27",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1995-01-27"
       },
       {
-         "eventDate" : "2023-07-24",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-24"
       },
       {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:28"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "lu",
-   "remarks" : [
+   "ldhName" : "lu",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DNS.LU."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/lu.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.dns.lu"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.dns.lu",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:1b:5:0:0:0:5"
-            ],
             "v4" : [
                "194.0.23.5"
+            ],
+            "v6" : [
+               "2001:678:1b:5:0:0:0:5"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "G.DNS.LU"
+         "ldhName" : "G.DNS.LU",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:16:0:0:0:53"
-            ],
             "v4" : [
                "194.146.106.66"
+            ],
+            "v6" : [
+               "2001:67c:1010:16:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "I.DNS.LU"
+         "ldhName" : "I.DNS.LU",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -256,49 +240,32 @@
                "2a01:3f0:0:307:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "J.DNS.LU"
-      },
-      {
-         "ldhName" : "K.DNS.LU",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4:0:0:0:0:d"
-            ],
-            "v4" : [
-               "194.0.1.13"
-            ]
-         },
+         "ldhName" : "J.DNS.LU",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:60:0:0:0:42:42"
-            ],
             "v4" : [
-               "194.0.42.42"
+               "194.0.1.13"
+            ],
+            "v6" : [
+               "2001:678:4:0:0:0:0:d"
             ]
          },
-         "ldhName" : "P.DNS.LU"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lu.html",
-         "rel" : "related"
+         "ldhName" : "K.DNS.LU",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://www.dns.lu",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.42.42"
+            ],
+            "v6" : [
+               "2001:678:60:0:0:0:42:42"
+            ]
+         },
+         "ldhName" : "P.DNS.LU",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -319,10 +286,43 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DNS.LU."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.dns.lu"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2bbe0b0c438f336ca96f655dccb9a72d7359064225d9e38a0a09804f9be20415",
+            "digestType" : "2",
+            "keyTag" : "20752"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

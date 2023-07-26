@@ -1,36 +1,11 @@
 {
-   "handle" : "redstone",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-06"
-      },
-      {
-         "eventDate" : "2020-12-03",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "55555",
-            "digestType" : "2",
-            "digest" : "425cc5bc7add435160d3c70cba9d545be2ff5466ecc27fb46e520be2ec1f9d0d"
-         }
-      ]
-   },
    "entities" : [
       {
          "handle" : "redstone-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -63,12 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "redstone-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -127,16 +104,11 @@
                   "icann.notices@redstone.com.cn"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "redstone-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "redstone-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -201,29 +173,37 @@
          ]
       }
    ],
-   "ldhName" : "redstone",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-06"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-03"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:25"
+      }
+   ],
+   "handle" : "redstone",
+   "ldhName" : "redstone",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/redstone.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www/redstone-cn.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -236,23 +216,22 @@
                "2a01:8840:82:0:0:0:0:17"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.REDSTONE"
-      },
-      {
-         "ldhName" : "A2.NIC.REDSTONE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:85:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.135.17"
-            ]
-         },
+         "ldhName" : "A0.NIC.REDSTONE",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.REDSTONE",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.135.17"
+            ],
+            "v6" : [
+               "2a01:8840:85:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A2.NIC.REDSTONE",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "65.22.133.17"
@@ -261,37 +240,44 @@
                "2a01:8840:83:0:0:0:0:17"
             ]
          },
+         "ldhName" : "B0.NIC.REDSTONE",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:84:0:0:0:0:17"
-            ],
             "v4" : [
                "65.22.134.17"
+            ],
+            "v6" : [
+               "2a01:8840:84:0:0:0:0:17"
             ]
          },
-         "ldhName" : "C0.NIC.REDSTONE"
+         "ldhName" : "C0.NIC.REDSTONE",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/redstone.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www/redstone-cn.com",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -307,10 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "425cc5bc7add435160d3c70cba9d545be2ff5466ecc27fb46e520be2ec1f9d0d",
+            "digestType" : "2",
+            "keyTag" : "55555"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

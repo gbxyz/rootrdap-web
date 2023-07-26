@@ -1,39 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2014-05-22",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "86b9716c2e5daadc785ada27d4e8bfb190947d14",
-            "algorithm" : "8",
-            "digestType" : "1",
-            "keyTag" : "61142"
-         },
-         {
-            "digest" : "d15742398f5291b0e2642bee5da6ed6ef3f4497c65bac0f5a6c9c8ff495cf286",
-            "digestType" : "2",
-            "keyTag" : "61142",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "host",
    "entities" : [
       {
+         "handle" : "host-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -66,12 +38,7 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "host-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "host-technical",
@@ -140,6 +107,11 @@
          ]
       },
       {
+         "handle" : "host-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -198,16 +170,92 @@
                   "admin@radixregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "host-administrative",
-         "objectClassName" : "entity"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-22"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:59"
       }
    ],
    "handle" : "host",
-   "objectClassName" : "domain",
+   "ldhName" : "host",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/host.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://radixregistry.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.53"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:53"
+            ]
+         },
+         "ldhName" : "A.NIC.HOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.53"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:53"
+            ]
+         },
+         "ldhName" : "B.NIC.HOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.53"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:53"
+            ]
+         },
+         "ldhName" : "E.NIC.HOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.53"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.NIC.HOST",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -226,72 +274,10 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/host.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://radixregistry.com/"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:53"
-            ],
-            "v4" : [
-               "194.169.218.53"
-            ]
-         },
-         "ldhName" : "A.NIC.HOST"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:53"
-            ],
-            "v4" : [
-               "185.24.64.53"
-            ]
-         },
-         "ldhName" : "B.NIC.HOST"
-      },
-      {
-         "ldhName" : "E.NIC.HOST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:53"
-            ],
-            "v4" : [
-               "212.18.248.53"
-            ]
-         }
-      },
-      {
-         "ldhName" : "F.NIC.HOST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.53"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:53"
-            ]
-         }
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -301,21 +287,35 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://radixregistry.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "86b9716c2e5daadc785ada27d4e8bfb190947d14",
+            "digestType" : "1",
+            "keyTag" : "61142"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "d15742398f5291b0e2642bee5da6ed6ef3f4497c65bac0f5a6c9c8ff495cf286",
+            "digestType" : "2",
+            "keyTag" : "61142"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

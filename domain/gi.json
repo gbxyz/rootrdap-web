@@ -1,34 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1995-12-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-30"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:50",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "33934",
-            "digest" : "3db5809de2e1052b00e010f54b404bd59cb5cba0c8306e1799623bda45a1cfb7"
-         }
-      ]
-   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "gi-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -87,12 +64,14 @@
                   "nic@sapphire.gi"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "gi-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -151,16 +130,14 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "gi-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gi-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,36 +170,44 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "gi",
-   "handle" : "gi",
-   "objectClassName" : "domain",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1995-12-05"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:45"
+      }
+   ],
+   "handle" : "gi",
+   "ldhName" : "gi",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gi.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.gi",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.254.59.1"
@@ -231,11 +216,10 @@
                "2001:500:25:0:0:0:0:1"
             ]
          },
-         "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO"
+         "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.249.116.1"
@@ -243,10 +227,11 @@
             "v6" : [
                "2001:500:44:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.254.60.1"
@@ -255,74 +240,81 @@
                "2001:500:26:0:0:0:0:1"
             ]
          },
-         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG"
+         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:4c:0:0:0:0:1"
-            ],
             "v4" : [
                "199.249.124.1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:27:0:0:0:0:1"
             ],
-            "v4" : [
-               "199.254.61.1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
             "v6" : [
-               "2001:500:28:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.254.62.1"
+               "2001:500:4c:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG"
+         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.61.1"
+            ],
+            "v6" : [
+               "2001:500:27:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.62.1"
+            ],
+            "v6" : [
+               "2001:500:28:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/gi.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.gi",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS2.AFILIAS-GRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.gi"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -331,9 +323,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "3db5809de2e1052b00e010f54b404bd59cb5cba0c8306e1799623bda45a1cfb7",
+            "digestType" : "2",
+            "keyTag" : "33934"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

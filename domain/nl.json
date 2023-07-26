@@ -1,123 +1,11 @@
 {
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "NS1.DNS.NL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:2c:0:194:0:28:53"
-            ],
-            "v4" : [
-               "194.0.28.53"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS3.DNS.NL",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.25.24"
-            ],
-            "v6" : [
-               "2001:678:20:0:0:0:0:24"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.199.200"
-            ],
-            "v6" : [
-               "2620:10a:80ac:0:0:0:0:200"
-            ]
-         },
-         "ldhName" : "NS4.DNS.NL"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/nl.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.sidn.nl/",
-         "rel" : "related"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DOMAIN-REGISTRY.NL."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.sidn.nl/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "nl",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "1986-04-25",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-07-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
-      }
-   ],
-   "ldhName" : "nl",
    "entities" : [
       {
+         "handle" : "nl-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -126,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Marc Groeneweg"
                ],
                [
                   "org",
@@ -148,16 +42,25 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+31 26 3525500"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tech@sidn.nl"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nl-registrant"
+         ]
       },
       {
+         "handle" : "nl-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -211,13 +114,14 @@
                   "admin@sidn.nl"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nl-administrative"
+         ]
       },
       {
+         "handle" : "nl-registrant",
          "objectClassName" : "entity",
-         "handle" : "nl-technical",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -226,12 +130,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Marc Groeneweg"
                ],
                [
                   "org",
@@ -254,35 +152,137 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+31 26 3525500"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tech@sidn.nl"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1986-04-25"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:49"
+      }
+   ],
+   "handle" : "nl",
+   "ldhName" : "nl",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/nl.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.sidn.nl/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.28.53"
+            ],
+            "v6" : [
+               "2001:678:2c:0:194:0:28:53"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NL",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.24"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:24"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NL",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.199.200"
+            ],
+            "v6" : [
+               "2620:10a:80ac:0:0:0:0:200"
+            ]
+         },
+         "ldhName" : "NS4.DNS.NL",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DOMAIN-REGISTRY.NL."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.sidn.nl/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "c5dfddc91e7532562a35f3c2cd30823894be08f20101f1abf45c8ab9739f3f49",
             "algorithm" : "13",
+            "digest" : "c5dfddc91e7532562a35f3c2cd30823894be08f20101f1abf45c8ab9739f3f49",
             "digestType" : "2",
             "keyTag" : "17153"
          }
       ]
-   }
+   },
+   "status" : [
+      "active"
+   ]
 }

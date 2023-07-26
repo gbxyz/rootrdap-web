@@ -1,18 +1,4 @@
 {
-   "handle" : "bond",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "35002",
-            "digest" : "fa12aa0eba1f60642345ceefbdd7a36ec310eb1602547beaad5a1793ecca9dd5"
-         }
-      ]
-   },
-   "ldhName" : "bond",
    "entities" : [
       {
          "handle" : "bond-registrant",
@@ -55,8 +41,11 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "bond-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -115,12 +104,11 @@
                   "sales@nic.icu"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "bond-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -182,9 +170,7 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bond-technical"
+         ]
       }
    ],
    "events" : [
@@ -198,64 +184,21 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:21"
       }
    ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BOND."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.bond"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "handle" : "bond",
+   "ldhName" : "bond",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/bond.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://nic.bond",
@@ -266,18 +209,17 @@
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:85"
-            ],
             "v4" : [
                "194.169.218.85"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:85"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.BOND"
+         "ldhName" : "A.NIC.BOND",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.BOND",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.85"
@@ -286,10 +228,10 @@
                "2a04:2b00:13cc:0:0:0:1:85"
             ]
          },
+         "ldhName" : "B.NIC.BOND",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.BOND",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.85"
@@ -298,19 +240,77 @@
                "2a04:2b00:13ee:0:0:0:0:85"
             ]
          },
+         "ldhName" : "C.NIC.BOND",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:85"
-            ],
             "v4" : [
                "212.18.249.85"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:85"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.BOND"
+         "ldhName" : "D.NIC.BOND",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BOND."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.bond"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "fa12aa0eba1f60642345ceefbdd7a36ec310eb1602547beaad5a1793ecca9dd5",
+            "digestType" : "2",
+            "keyTag" : "35002"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,8 +1,11 @@
 {
-   "handle" : "crs",
-   "objectClassName" : "domain",
    "entities" : [
       {
+         "handle" : "crs-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -53,16 +56,11 @@
                   "ngtld-fcl@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "crs-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "crs-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -127,6 +125,11 @@
          ]
       },
       {
+         "handle" : "crs-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -159,27 +162,9 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "crs-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "crs",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "d1647f1f8b7a8508b81f1d822c27581b628f7351ee8d99b8dc32a2bd802e0c37",
-            "keyTag" : "63622",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -190,63 +175,38 @@
          "eventDate" : "2023-02-18"
       },
       {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:01"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "handle" : "crs",
+   "ldhName" : "crs",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/crs.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/crs.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.CRS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6e:0:0:0:0:25"
-            ],
             "v4" : [
                "65.22.112.25"
+            ],
+            "v6" : [
+               "2a01:8840:6e:0:0:0:0:25"
             ]
-         }
+         },
+         "ldhName" : "A0.NIC.CRS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.115.25"
@@ -255,31 +215,32 @@
                "2a01:8840:71:0:0:0:0:25"
             ]
          },
-         "ldhName" : "A2.NIC.CRS"
+         "ldhName" : "A2.NIC.CRS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:25"
-            ],
             "v4" : [
                "65.22.113.25"
+            ],
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:25"
             ]
          },
-         "ldhName" : "B0.NIC.CRS"
+         "ldhName" : "B0.NIC.CRS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:70:0:0:0:0:25"
-            ],
             "v4" : [
                "65.22.114.25"
+            ],
+            "v6" : [
+               "2a01:8840:70:0:0:0:0:25"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.CRS"
+         "ldhName" : "C0.NIC.CRS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -292,12 +253,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "d1647f1f8b7a8508b81f1d822c27581b628f7351ee8d99b8dc32a2bd802e0c37",
+            "digestType" : "2",
+            "keyTag" : "63622"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

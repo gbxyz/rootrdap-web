@@ -1,35 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2015-06-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "44385",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "54957bdf3921ca2d50bb340e042605f8d39ee91ca2a08a37424ce88882c4fe1a"
-         }
-      ]
-   },
-   "ldhName" : "orange",
    "entities" : [
       {
+         "handle" : "orange-administrative",
          "objectClassName" : "entity",
-         "handle" : "orange-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -38,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Legal Director, Group Legal Brand Affairs"
                ],
                [
                   "org",
@@ -60,11 +42,20 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 (0) 207 535 4412"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-orange@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
@@ -134,6 +125,11 @@
          ]
       },
       {
+         "handle" : "orange-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -142,12 +138,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Legal Director, Group Legal Brand Affairs"
                ],
                [
                   "org",
@@ -170,71 +160,50 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 (0) 207 535 4412"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-orange@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "orange-administrative",
-         "objectClassName" : "entity"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "orange",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
-   "links" : [
+   "events" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/orange.html"
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-18"
       },
       {
-         "title" : "About RDAP",
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:58"
+      }
+   ],
+   "handle" : "orange",
+   "ldhName" : "orange",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/orange.html",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
          },
+         "ldhName" : "AC1.NSTLD.COM",
          "objectClassName" : "nameserver"
       },
       {
@@ -246,12 +215,10 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM"
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.175.30"
@@ -259,20 +226,45 @@
             "v6" : [
                "2001:500:122:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -282,10 +274,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: "
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -294,9 +286,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "54957bdf3921ca2d50bb340e042605f8d39ee91ca2a08a37424ce88882c4fe1a",
+            "digestType" : "2",
+            "keyTag" : "44385"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

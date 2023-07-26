@@ -1,8 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "bbva",
    "entities" : [
       {
+         "handle" : "bbva-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "BANCO BILBAO VIZCAYA ARGENTARIA, S.A."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "P. de la Castellana, 81\nPlanta 11\nMadrid 28046\nSpain"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "bbva-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -61,12 +104,7 @@
                   "dietmar.lenden@valideus.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "bbva-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "bbva-technical",
@@ -125,60 +163,8 @@
                ]
             ]
          ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "BANCO BILBAO VIZCAYA ARGENTARIA, S.A."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "P. de la Castellana, 81\nPlanta 11\nMadrid 28046\nSpain"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "bbva-registrant",
-         "objectClassName" : "entity"
       }
    ],
-   "ldhName" : "bbva",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "e800c51f8933f6eb2f234b542f1c83c8e703d9448bff8aac4356edc1eb6ad7c9",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "30962"
-         }
-      ]
-   },
    "events" : [
       {
          "eventAction" : "registration",
@@ -190,63 +176,37 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:09"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BBVA."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "handle" : "bbva",
+   "ldhName" : "bbva",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/bbva.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:403:0:0:0:0:44"
-            ],
             "v4" : [
                "213.248.219.44"
+            ],
+            "v6" : [
+               "2a01:618:403:0:0:0:0:44"
             ]
          },
-         "ldhName" : "DNS1.NIC.BBVA"
+         "ldhName" : "DNS1.NIC.BBVA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS2.NIC.BBVA",
          "ipAddresses" : {
             "v4" : [
                "103.49.83.44"
@@ -255,6 +215,7 @@
                "2401:fd80:403:0:0:0:0:44"
             ]
          },
+         "ldhName" : "DNS2.NIC.BBVA",
          "objectClassName" : "nameserver"
       },
       {
@@ -266,12 +227,10 @@
                "2a01:618:407:0:0:0:0:44"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.BBVA"
+         "ldhName" : "DNS3.NIC.BBVA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS4.NIC.BBVA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "43.230.51.44"
@@ -279,7 +238,9 @@
             "v6" : [
                "2401:fd80:407:0:0:0:0:44"
             ]
-         }
+         },
+         "ldhName" : "DNS4.NIC.BBVA",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -290,11 +251,10 @@
                "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSA.NIC.BBVA"
+         "ldhName" : "DNSA.NIC.BBVA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSB.NIC.BBVA",
          "ipAddresses" : {
             "v4" : [
                "156.154.101.3"
@@ -303,10 +263,10 @@
                "2001:502:2eda:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSB.NIC.BBVA",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.102.3"
@@ -315,7 +275,8 @@
                "2610:a1:1009:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSC.NIC.BBVA"
+         "ldhName" : "DNSC.NIC.BBVA",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -326,26 +287,65 @@
                "2610:a1:1010:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.BBVA"
+         "ldhName" : "DNSD.NIC.BBVA",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BBVA."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "e800c51f8933f6eb2f234b542f1c83c8e703d9448bff8aac4356edc1eb6ad7c9",
+            "digestType" : "2",
+            "keyTag" : "30962"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

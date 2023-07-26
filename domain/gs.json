@@ -1,34 +1,8 @@
 {
-   "handle" : "gs",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-07-31"
-      },
-      {
-         "eventDate" : "2022-11-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "2cbc82da27fdb16662bf359f59df1b63fa0ab720bfc2120f17ba369a3249fc5e",
-            "digestType" : "2",
-            "keyTag" : "23990",
-            "algorithm" : "8"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "gs-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -64,13 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gs-registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gs-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -129,14 +104,11 @@
                   "helpdesk@nic.gs"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gs-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -201,31 +173,22 @@
          ]
       }
    ],
-   "ldhName" : "gs",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1997-07-31"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:52"
       }
    ],
+   "handle" : "gs",
+   "ldhName" : "gs",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/gs.html",
@@ -233,28 +196,28 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://secure.nic.gs",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6021:ad:0:0:1"
-            ],
             "v4" : [
                "204.61.216.21"
+            ],
+            "v6" : [
+               "2001:500:14:6021:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS.ANYCAST.NIC.GS"
+         "ldhName" : "NS.ANYCAST.NIC.GS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -265,38 +228,75 @@
                "2a00:fea0:dead:0:0:0:0:beef"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.ANYCASTDNS.CZ"
+         "ldhName" : "NS1.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.28.194.194"
             ],
             "v6" : []
-         }
+         },
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GS."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://secure.nic.gs"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2cbc82da27fdb16662bf359f59df1b63fa0ab720bfc2120f17ba369a3249fc5e",
+            "digestType" : "2",
+            "keyTag" : "23990"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

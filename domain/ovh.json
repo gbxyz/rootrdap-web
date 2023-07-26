@@ -1,20 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "ovh",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "02a3f789b7d6c726513eebadf7f64741fed1acd57405339d9d50191c620cd914",
-            "keyTag" : "24939",
-            "digestType" : "2",
-            "algorithm" : "13"
-         }
-      ]
-   },
-   "ldhName" : "ovh",
    "entities" : [
       {
+         "handle" : "ovh-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "OVH SAS"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2, rue Kellermann\nRoubaix 59100\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "ovh-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -73,16 +104,11 @@
                   "pocovh@afnic.fr"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "ovh-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "ovh-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -145,75 +171,108 @@
                ]
             ]
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "OVH SAS"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2, rue Kellermann\nRoubaix 59100\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ovh-registrant",
-         "objectClassName" : "entity"
       }
    ],
    "events" : [
       {
-         "eventDate" : "2014-05-01",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-01"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-07-21"
       },
       {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:00"
       }
    ],
+   "handle" : "ovh",
+   "ldhName" : "ovh",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ovh.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.ovh.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
    "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "status" : [
-      "active"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.OVH."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -228,77 +287,18 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "D.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.9.1"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "02a3f789b7d6c726513eebadf7f64741fed1acd57405339d9d50191c620cd914",
+            "digestType" : "2",
+            "keyTag" : "24939"
          }
-      },
-      {
-         "ldhName" : "F.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ],
-            "v4" : [
-               "194.146.106.46"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.36.1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "G.EXT.NIC.FR"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ovh.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.ovh.com"
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

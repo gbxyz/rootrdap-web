@@ -1,48 +1,11 @@
 {
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "NIC (Malta)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "University Campus\nMsida MSD 2080\nMalta"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "mt-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "mt-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -93,12 +56,11 @@
                   "tech@nic.org.mt"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "mt-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -152,47 +114,126 @@
                   "admin@nic.org.mt"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "mt-registrant",
          "objectClassName" : "entity",
-         "handle" : "mt-administrative"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "NIC (Malta)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "University Campus\nMsida MSD 2080\nMalta"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "mt",
    "events" : [
       {
-         "eventDate" : "1992-12-02",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1992-12-02"
       },
       {
-         "eventDate" : "2020-01-23",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-01-23"
       },
       {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:41"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "mt",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "mt",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/mt.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: https://www.nic.org.mt/"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "https://www.nic.org.mt/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.188.47.252"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "A.NS.MT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.188.34.241"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "B.NS.MT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.93.0.4"
+            ],
+            "v6" : [
+               "2001:660:3005:1:0:0:1:2"
+            ]
+         },
+         "ldhName" : "F.NS.MT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.45"
+            ],
+            "v6" : [
+               "2001:500:14:6045:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "P.NS.MT",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -205,79 +246,38 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mt.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.nic.org.mt/",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NS.MT",
-         "ipAddresses" : {
-            "v4" : [
-               "193.188.47.252"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "193.188.34.241"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "B.NS.MT"
-      },
-      {
-         "ldhName" : "F.NS.MT",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:660:3005:1:0:0:1:2"
-            ],
-            "v4" : [
-               "192.93.0.4"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "P.NS.MT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6045:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.45"
-            ]
-         }
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.nic.org.mt/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
    ],
    "status" : [
       "active"

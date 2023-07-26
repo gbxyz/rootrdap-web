@@ -1,19 +1,51 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "12391",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "aa344ed8e0615ff242ec66edea4160269d0ec1d36437965a8d1d1aba6a4d97d8"
-         }
-      ]
-   },
    "entities" : [
+      {
+         "handle" : "rich-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "iRegistry GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Friedrichstr. 171\nBerlin 10117\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "handle" : "rich-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -72,12 +104,11 @@
                   "registry-rich@i-registry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "rich-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -139,87 +170,90 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "handle" : "rich-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "rich-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "iRegistry GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Friedrichstr. 171\nBerlin 10117\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "rich",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2014-01-16"
       },
       {
-         "eventDate" : "2022-01-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
+         "eventDate" : "2023-07-26T13:28:30"
       }
    ],
-   "objectClassName" : "domain",
    "handle" : "rich",
-   "remarks" : [
+   "ldhName" : "rich",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/rich.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.i-registry.com"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.i-registry.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.136.17"
+            ],
+            "v6" : [
+               "2a01:8840:86:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A0.NIC.RICH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.139.17"
+            ],
+            "v6" : [
+               "2a01:8840:89:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A2.NIC.RICH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.137.17"
+            ],
+            "v6" : [
+               "2a01:8840:87:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "B0.NIC.RICH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.138.17"
+            ],
+            "v6" : [
+               "2a01:8840:88:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "C0.NIC.RICH",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -240,76 +274,42 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.RICH",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:86:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.136.17"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:89:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.139.17"
-            ]
-         },
-         "ldhName" : "A2.NIC.RICH"
-      },
-      {
-         "ldhName" : "B0.NIC.RICH",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:87:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.137.17"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C0.NIC.RICH",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:88:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.138.17"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/rich.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.i-registry.com",
-         "title" : "URL for registration services"
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.i-registry.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "aa344ed8e0615ff242ec66edea4160269d0ec1d36437965a8d1d1aba6a4d97d8",
+            "digestType" : "2",
+            "keyTag" : "12391"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

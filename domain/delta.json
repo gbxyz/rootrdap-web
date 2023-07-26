@@ -1,25 +1,51 @@
 {
-   "handle" : "delta",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2015-06-25",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-11"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
-      }
-   ],
    "entities" : [
+      {
+         "handle" : "delta-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Delta Air Lines, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1030 Delta Blvd\nAtlanta GA 30320\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "handle" : "delta-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -78,9 +104,6 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
@@ -140,70 +163,43 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "delta-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Delta Air Lines, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1030 Delta Blvd\nAtlanta GA 30320\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "ldhName" : "delta",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "88613e5643f713d61b4e642f2638bd959492c3e0d116fbe27af764dc6c0ed75b",
-            "digestType" : "2",
-            "keyTag" : "64069",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-25"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-11"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:10"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "delta",
+   "ldhName" : "delta",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/delta.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.delta.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.DELTA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.224.25"
@@ -211,10 +207,11 @@
             "v6" : [
                "2a01:8840:da:0:0:0:0:25"
             ]
-         }
+         },
+         "ldhName" : "A0.NIC.DELTA",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.227.25"
@@ -223,22 +220,22 @@
                "2a01:8840:dd:0:0:0:0:25"
             ]
          },
-         "ldhName" : "A2.NIC.DELTA"
+         "ldhName" : "A2.NIC.DELTA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.DELTA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:db:0:0:0:0:25"
-            ],
             "v4" : [
                "65.22.225.25"
+            ],
+            "v6" : [
+               "2a01:8840:db:0:0:0:0:25"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.DELTA",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.226.25"
@@ -247,24 +244,8 @@
                "2a01:8840:dc:0:0:0:0:25"
             ]
          },
-         "ldhName" : "C0.NIC.DELTA"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/delta.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.delta.com"
+         "ldhName" : "C0.NIC.DELTA",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -285,6 +266,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -299,10 +285,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "88613e5643f713d61b4e642f2638bd959492c3e0d116fbe27af764dc6c0ed75b",
+            "digestType" : "2",
+            "keyTag" : "64069"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

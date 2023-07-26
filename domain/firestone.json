@@ -1,18 +1,11 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "9944",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "4ffb2b67bad9d7c6d0def9ec1dc4ac201ef4137364729662e19f329c10801634"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "firestone",
    "entities" : [
       {
+         "handle" : "firestone-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -71,16 +64,14 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "firestone-technical"
+         ]
       },
       {
          "handle" : "firestone-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -139,12 +130,11 @@
                   "registry@brightsconsulting.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "firestone-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -180,15 +170,13 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "firestone-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
    "events" : [
       {
-         "eventDate" : "2015-10-29",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-10-29"
       },
       {
          "eventAction" : "last changed",
@@ -196,40 +184,84 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
+         "eventDate" : "2023-07-26T13:26:34"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "firestone",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "firestone",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FIRESTONE."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/firestone.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.firestone.com/"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.firestone.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -240,74 +272,42 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         },
-         "ldhName" : "L.GMOREGISTRY.NET"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/firestone.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.firestone.com/",
-         "rel" : "related"
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FIRESTONE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.firestone.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "4ffb2b67bad9d7c6d0def9ec1dc4ac201ef4137364729662e19f329c10801634",
+            "digestType" : "2",
+            "keyTag" : "9944"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

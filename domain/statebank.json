@@ -1,25 +1,8 @@
 {
-   "handle" : "statebank",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2016-03-24",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "statebank-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -86,6 +69,9 @@
       {
          "handle" : "statebank-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -144,14 +130,11 @@
                   "gtld@sbi.co.in"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "statebank-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -190,24 +173,22 @@
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-03-24"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:05"
+      }
+   ],
+   "handle" : "statebank",
    "ldhName" : "statebank",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "6556",
-            "algorithm" : "8",
-            "digest" : "cef021e759c80743ac2b871f39db1aac7bfb542244b74ebd5c98776f5d4d844a"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/statebank.html",
@@ -215,14 +196,14 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "https://www.sbi.co.in",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -235,11 +216,10 @@
                "2a01:8840:aa:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.STATEBANK"
+         "ldhName" : "A0.NIC.STATEBANK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.STATEBANK",
          "ipAddresses" : {
             "v4" : [
                "65.22.179.1"
@@ -248,22 +228,22 @@
                "2a01:8840:ad:0:0:0:0:1"
             ]
          },
+         "ldhName" : "A2.NIC.STATEBANK",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.STATEBANK",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ab:0:0:0:0:1"
-            ],
             "v4" : [
                "65.22.177.1"
+            ],
+            "v6" : [
+               "2a01:8840:ab:0:0:0:0:1"
             ]
          },
+         "ldhName" : "B0.NIC.STATEBANK",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.178.1"
@@ -272,26 +252,32 @@
                "2a01:8840:ac:0:0:0:0:1"
             ]
          },
-         "ldhName" : "C0.NIC.STATEBANK"
+         "ldhName" : "C0.NIC.STATEBANK",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -312,5 +298,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "cef021e759c80743ac2b871f39db1aac7bfb542244b74ebd5c98776f5d4d844a",
+            "digestType" : "2",
+            "keyTag" : "6556"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

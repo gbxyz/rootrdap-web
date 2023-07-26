@@ -1,167 +1,11 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.WIKI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.WIKI"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "C.NIC.WIKI"
-      },
-      {
-         "ldhName" : "X.NIC.WIKI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Y.NIC.WIKI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.173.82"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Z.NIC.WIKI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/wiki.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.wiki",
-         "title" : "URL for registration services"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.WIKI."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.wiki"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-06"
-      },
-      {
-         "eventDate" : "2023-06-26",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:56"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "10870",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "3c2ca6a68be31fd1222eb66aaa693c6c4991e6f8737ca62b1427b3c9e3e67539"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "wiki-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -172,10 +16,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "IANA Contact"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Registry Services, LLC"
+                  "GoDaddy Registry"
                ],
                [
                   "adr",
@@ -192,16 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 480-505-8800"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 480-624-2546"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "wiki-registrant"
+         ]
       },
       {
+         "handle" : "wiki-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -263,11 +130,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "wiki-technical"
+         ]
       },
       {
+         "handle" : "wiki-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -278,16 +148,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "IANA Contact"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "GoDaddy Registry"
+                  "Registry Services, LLC"
                ],
                [
                   "adr",
@@ -304,37 +168,173 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 480-505-8800"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 480-624-2546"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "wiki-administrative"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-06"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-26"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:34"
+      }
+   ],
+   "handle" : "wiki",
    "ldhName" : "wiki",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/wiki.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.wiki",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.NIC.WIKI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "B.NIC.WIKI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.WIKI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "X.NIC.WIKI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Y.NIC.WIKI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Z.NIC.WIKI",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "objectClassName" : "domain",
-   "handle" : "wiki"
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.WIKI."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.wiki"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "3c2ca6a68be31fd1222eb66aaa693c6c4991e6f8737ca62b1427b3c9e3e67539",
+            "digestType" : "2",
+            "keyTag" : "10870"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

@@ -1,34 +1,10 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1992-06-03"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-04-24"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "27739",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "d7fe923eed1e1194597cc5ebcb37d10f3bfa2e927159f5018cddb86d30665abb"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "fj-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -40,21 +16,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Director IT Services"
+               ],
+               [
                   "org",
                   {},
                   "text",
                   "The University of the South Pacific"
                ],
                [
-                  "org",
-                  {},
-                  "text",
-                  "IT Services"
-               ],
-               [
                   "adr",
                   {
-                     "label" : "Laucala Bay Campus,\nICT Building A\nSuva\nFiji"
+                     "label" : "IT Services\nLaucala Bay Campus,\nICT Building A\nSuva\nFiji"
                   },
                   "text",
                   [
@@ -66,11 +42,21 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+679 3232117"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domreg@usp.ac.fj"
                ]
             ]
-         ],
-         "handle" : "fj-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "fj-technical",
@@ -131,8 +117,11 @@
          ]
       },
       {
-         "handle" : "fj-administrative",
+         "handle" : "fj-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,21 +132,21 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Director IT Services"
-               ],
-               [
                   "org",
                   {},
                   "text",
                   "The University of the South Pacific"
                ],
                [
+                  "org",
+                  {},
+                  "text",
+                  "IT Services"
+               ],
+               [
                   "adr",
                   {
-                     "label" : "IT Services\nLaucala Bay Campus,\nICT Building A\nSuva\nFiji"
+                     "label" : "Laucala Bay Campus,\nICT Building A\nSuva\nFiji"
                   },
                   "text",
                   [
@@ -169,50 +158,46 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+679 3232117"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domreg@usp.ac.fj"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "ldhName" : "fj",
-   "handle" : "fj",
-   "objectClassName" : "domain",
-   "notices" : [
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventAction" : "registration",
+         "eventDate" : "1992-06-03"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2023-04-24"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:35"
+      }
+   ],
+   "handle" : "fj",
+   "ldhName" : "fj",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/fj.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://domains.fj/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS1.FJ",
          "ipAddresses" : {
             "v4" : [
                "144.120.146.1"
@@ -221,6 +206,7 @@
                "2402:2940:100:100c:0:0:0:1"
             ]
          },
+         "ldhName" : "NS1.FJ",
          "objectClassName" : "nameserver"
       },
       {
@@ -232,8 +218,8 @@
                "2402:2940:100:100d:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.FJ"
+         "ldhName" : "NS2.FJ",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -242,18 +228,18 @@
             ],
             "v6" : []
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.FJ"
+         "ldhName" : "NS3.FJ",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS4.FJ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "185.28.194.194"
-            ]
-         }
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS4.FJ",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -264,39 +250,45 @@
                "2001:500:14:6138:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS5.FJ"
+         "ldhName" : "NS5.FJ",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/fj.html",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://domains.fj/"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WWW.WHOIS.FJ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://domains.fj/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -305,9 +297,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "d7fe923eed1e1194597cc5ebcb37d10f3bfa2e927159f5018cddb86d30665abb",
+            "digestType" : "2",
+            "keyTag" : "27739"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

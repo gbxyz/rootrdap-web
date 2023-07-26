@@ -1,8 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "gle",
    "entities" : [
       {
+         "handle" : "gle-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -13,15 +16,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Charleston Road Registry Inc."
+                  "Google Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                     "label" : "76 Ninth Avenue, 4th Floor\nNew York NY 10011\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -33,16 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 404 978 8419"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 650 492 5631"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "crr-tech@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gle-registrant"
+         ]
       },
       {
+         "handle" : "gle-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -104,11 +130,14 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gle-administrative"
+         ]
       },
       {
+         "handle" : "gle-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -119,21 +148,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Google Inc."
+                  "Charleston Road Registry Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "76 Ninth Avenue, 4th Floor\nNew York NY 10011\nUnited States of America (the)"
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -145,94 +168,32 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 404 978 8419"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 650 492 5631"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "crr-tech@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gle-technical"
+         ]
       }
    ],
-   "ldhName" : "gle",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "254367c4fa9fae6e0675ee721943c4cd97371553c9669e4bc424b00cff86e6aa",
-            "algorithm" : "8",
-            "keyTag" : "35609",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2014-09-04"
       },
       {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
       },
       {
-         "eventDate" : "2023-07-26T13:16:50",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:46"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "handle" : "gle",
+   "ldhName" : "gle",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gle.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gle.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -240,14 +201,13 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "https://www.registry.google",
          "rel" : "related",
-         "href" : "https://www.registry.google"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.32.105"
@@ -256,73 +216,113 @@
                "2001:4860:4802:32:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
             "v4" : [
                "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ],
             "v4" : [
                "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
             "v4" : [
                "216.239.38.105"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
             ],
-            "v4" : [
-               "216.239.60.105"
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "254367c4fa9fae6e0675ee721943c4cd97371553c9669e4bc424b00cff86e6aa",
+            "digestType" : "2",
+            "keyTag" : "35609"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

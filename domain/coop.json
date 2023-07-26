@@ -1,143 +1,11 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "NS1.UNIREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:57:4000:1:0:0:0:1"
-            ],
-            "v4" : [
-               "64.96.1.1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS2.UNIREGISTRY.INFO",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "64.96.2.1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS3.UNIREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.197.3"
-            ],
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.198.3"
-            ],
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "NS4.UNIREGISTRY.INFO"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/coop.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.nic.coop",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.COOP."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.coop"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "coop",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2001-12-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-04-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "39183",
-            "algorithm" : "13",
-            "digest" : "fd71e26868bf7f277dfa0800aa6f51e12e00c8b61841b35daae12cd86a34606f"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "coop-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -148,15 +16,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "DotCooperation LLC"
+                  "Tucows Inc"
                ],
                [
                   "adr",
                   {
-                     "label" : "1775 I Street NW, 8th Floor\nWashington DC 20006\nUnited States of America (the)"
+                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
                   },
                   "text",
                   [
@@ -168,18 +42,28 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.949.903.3449"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "trs-ops@tucows.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "coop-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "coop-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -238,16 +122,13 @@
                   "violetta@identity.coop"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "handle" : "coop-technical",
+         "handle" : "coop-registrant",
          "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -259,21 +140,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Tucows Inc"
+                  "DotCooperation LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
+                     "label" : "1775 I Street NW, 8th Floor\nWashington DC 20006\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -285,22 +160,147 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.949.903.3449"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "trs-ops@tucows.com"
                ]
             ]
          ]
       }
    ],
-   "ldhName" : "coop"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2001-12-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-04-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:57"
+      }
+   ],
+   "handle" : "coop",
+   "ldhName" : "coop",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/coop.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.coop",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.1.1"
+            ],
+            "v6" : [
+               "2620:57:4000:1:0:0:0:1"
+            ]
+         },
+         "ldhName" : "NS1.UNIREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "64.96.2.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS2.UNIREGISTRY.INFO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.197.3"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "NS3.UNIREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.198.3"
+            ],
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "NS4.UNIREGISTRY.INFO",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.COOP."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.coop"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "fd71e26868bf7f277dfa0800aa6f51e12e00c8b61841b35daae12cd86a34606f",
+            "digestType" : "2",
+            "keyTag" : "39183"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

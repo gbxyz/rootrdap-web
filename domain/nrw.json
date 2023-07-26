@@ -1,6 +1,4 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "nrw",
    "entities" : [
       {
          "handle" : "nrw-technical",
@@ -69,6 +67,8 @@
          ]
       },
       {
+         "handle" : "nrw-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -130,11 +130,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "handle" : "nrw-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "nrw-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -167,72 +170,30 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "nrw-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "nrw",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "10",
-            "keyTag" : "61012",
-            "digestType" : "2",
-            "digest" : "03b1a9b2f537eeb6e16872fef7971d7fc55a71b270952bd1e7be44301f1cc245"
-         }
-      ]
-   },
    "events" : [
       {
-         "eventDate" : "2014-05-29",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-29"
       },
       {
-         "eventDate" : "2023-06-13",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-13"
       },
       {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:52"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.NRW."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://mindsandmachines.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "handle" : "nrw",
+   "ldhName" : "nrw",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/nrw.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -240,63 +201,61 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://mindsandmachines.com",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
          },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
             "v4" : [
                "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.65.12"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
             ],
-            "v4" : [
-               "195.253.64.11"
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
             ]
          },
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ARI.ALPHA.TLDNS.GODADDY",
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "37.209.192.2"
@@ -304,23 +263,23 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:2"
             ]
-         }
+         },
+         "ldhName" : "ARI.ALPHA.TLDNS.GODADDY",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:2"
-            ],
             "v4" : [
                "37.209.194.2"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:2"
             ]
          },
-         "ldhName" : "ARI.BETA.TLDNS.GODADDY"
+         "ldhName" : "ARI.BETA.TLDNS.GODADDY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ARI.DELTA.TLDNS.GODADDY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.198.2"
@@ -328,10 +287,11 @@
             "v6" : [
                "2001:dcd:4:0:0:0:0:2"
             ]
-         }
+         },
+         "ldhName" : "ARI.DELTA.TLDNS.GODADDY",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.2"
@@ -340,7 +300,8 @@
                "2001:dcd:3:0:0:0:0:2"
             ]
          },
-         "ldhName" : "ARI.GAMMA.TLDNS.GODADDY"
+         "ldhName" : "ARI.GAMMA.TLDNS.GODADDY",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -360,5 +321,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.NRW."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://mindsandmachines.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "03b1a9b2f537eeb6e16872fef7971d7fc55a71b270952bd1e7be44301f1cc245",
+            "digestType" : "2",
+            "keyTag" : "61012"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

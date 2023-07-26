@@ -1,7 +1,11 @@
 {
-   "ldhName" : "cars",
    "entities" : [
       {
+         "handle" : "cars-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -34,12 +38,65 @@
                   ]
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "cars-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "cars-registrant",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "General Counsel"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "XYZ.COM LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 702 757 6555"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "hello@xyz.com"
+               ]
+            ]
+         ]
       },
       {
          "handle" : "cars-technical",
@@ -106,94 +163,114 @@
                ]
             ]
          ]
-      },
-      {
-         "handle" : "cars-administrative",
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "General Counsel"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "XYZ.COM LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 702 757 6555"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "hello@xyz.com"
-               ]
-            ]
-         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "8253077194f36991396ac49542ed2be77d88e972d5abdb0d832f2d5cd2c7f71a",
-            "algorithm" : "5",
-            "digestType" : "2",
-            "keyTag" : "26272"
-         }
-      ]
-   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-03-12"
       },
       {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:35"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "cars",
+   "ldhName" : "cars",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cars.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.cars",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.129"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:129"
+            ]
+         },
+         "ldhName" : "A.NIC.CARS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.129"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:129"
+            ]
+         },
+         "ldhName" : "B.NIC.CARS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.129"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:129"
+            ]
+         },
+         "ldhName" : "C.NIC.CARS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.129"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:129"
+            ]
+         },
+         "ldhName" : "D.NIC.CARS",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -208,101 +285,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:129"
-            ],
-            "v4" : [
-               "194.169.218.129"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.CARS"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.129"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:129"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.CARS"
-      },
-      {
-         "ldhName" : "C.NIC.CARS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.129"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:129"
-            ]
-         }
-      },
-      {
-         "ldhName" : "D.NIC.CARS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:129"
-            ],
-            "v4" : [
-               "212.18.249.129"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cars.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://nic.cars"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ],
-         "title" : "Comments"
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "5",
+            "digest" : "8253077194f36991396ac49542ed2be77d88e972d5abdb0d832f2d5cd2c7f71a",
+            "digestType" : "2",
+            "keyTag" : "26272"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

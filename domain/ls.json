@@ -1,117 +1,11 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nic.ls"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "LS-NS.ANYCAST.PCH.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.28"
-            ],
-            "v6" : [
-               "2001:500:14:6028:ad:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS-LS.AFRINIC.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "196.216.168.70"
-            ],
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:70"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS1.NIC.LS",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "196.43.249.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "196.11.175.1"
-            ]
-         },
-         "ldhName" : "NS2.NIC.LS"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/ls.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.ls",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "ls",
    "entities" : [
       {
-         "handle" : "ls-technical",
+         "handle" : "ls-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -122,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "System Engineer-LsNIC"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Lesotho Communications Authority"
+                  "Lesotho Network Information Centre Proprietary (LSNIC)"
                ],
                [
                   "adr",
                   {
-                     "label" : "30 Princess Margaret Road\nOld Europa\nMaseru\nLesotho"
+                     "label" : "Lesotho Communications Authority Building\n30 Princess Margaret Road\nOld Europa\nMaseru\nLesotho"
                   },
                   "text",
                   [
@@ -148,36 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+266 22224300"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+266 2231 0984"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "mmaphoi@nic.ls"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "ls-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -236,16 +104,13 @@
                   "lsadmin@lca.org.ls"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "ls-technical",
          "objectClassName" : "entity",
-         "handle" : "ls-registrant",
          "roles" : [
-            "registrant"
+            "technical"
          ],
          "vcardArray" : [
             "vcard",
@@ -257,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "System Engineer-LsNIC"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Lesotho Network Information Centre Proprietary (LSNIC)"
+                  "Lesotho Communications Authority"
                ],
                [
                   "adr",
                   {
-                     "label" : "Lesotho Communications Authority Building\n30 Princess Margaret Road\nOld Europa\nMaseru\nLesotho"
+                     "label" : "30 Princess Margaret Road\nOld Europa\nMaseru\nLesotho"
                   },
                   "text",
                   [
@@ -277,25 +148,154 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+266 22224300"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+266 2231 0984"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "mmaphoi@nic.ls"
                ]
             ]
          ]
       }
    ],
-   "ldhName" : "ls",
    "events" : [
       {
-         "eventDate" : "1993-01-13",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1993-01-13"
       },
       {
-         "eventDate" : "2019-10-28",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2019-10-28"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
+         "eventDate" : "2023-07-26T13:27:27"
       }
    ],
-   "port43" : "whois.iana.org"
+   "handle" : "ls",
+   "ldhName" : "ls",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ls.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.ls",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.28"
+            ],
+            "v6" : [
+               "2001:500:14:6028:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "LS-NS.ANYCAST.PCH.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.70"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:70"
+            ]
+         },
+         "ldhName" : "NS-LS.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.43.249.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.NIC.LS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.11.175.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS2.NIC.LS",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.ls"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
+   ]
 }

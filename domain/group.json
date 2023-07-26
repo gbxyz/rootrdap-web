@@ -1,25 +1,8 @@
 {
-   "handle" : "group",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-07-30"
-      },
-      {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "group-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -84,6 +67,8 @@
          ]
       },
       {
+         "handle" : "group-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -145,11 +130,11 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "handle" : "group-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "group-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -185,103 +170,25 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "group-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-07-30"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-27"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:52"
+      }
+   ],
+   "handle" : "group",
    "ldhName" : "group",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "efc04b30999b34c97394a6e337333b2c273a5cd765c6c83be8858fef57a5cca8",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "63685"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.GROUP",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.20.2"
-            ],
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:2"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:2"
-            ],
-            "v4" : [
-               "65.22.21.2"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.GROUP"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.2"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:2"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.GROUP"
-      },
-      {
-         "ldhName" : "V0N3.NIC.GROUP",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:2"
-            ],
-            "v4" : [
-               "161.232.10.2"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V2N0.NIC.GROUP",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:2"
-            ],
-            "v4" : [
-               "65.22.23.2"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V2N1.NIC.GROUP",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.11.2"
-            ],
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:2"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/group.html",
@@ -294,19 +201,93 @@
          "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "http://www.donuts.domains/",
+         "rel" : "related",
          "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.20.2"
+            ],
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.GROUP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.21.2"
+            ],
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.GROUP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.22.2"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.GROUP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.2"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.GROUP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.2"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.GROUP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.2"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.GROUP",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -317,24 +298,43 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GROUP."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "efc04b30999b34c97394a6e337333b2c273a5cd765c6c83be8858fef57a5cca8",
+            "digestType" : "2",
+            "keyTag" : "63685"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,59 +1,8 @@
 {
-   "handle" : "silk",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "23695",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "04017ec2e893a546bd7d73575404015a5c904b9c4dbb33b2995ae37b4df0903b"
-         }
-      ]
-   },
    "entities" : [
       {
-         "handle" : "silk-registrant",
+         "handle" : "silk-technical",
          "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amazon Registry Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
          "roles" : [
             "technical"
          ],
@@ -107,11 +56,14 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "silk-technical"
+         ]
       },
       {
+         "handle" : "silk-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -170,15 +122,49 @@
                   "silk-rzm@amazon.com"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "silk-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "silk-administrative",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amazon Registry Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "silk",
    "events" : [
       {
          "eventAction" : "registration",
@@ -190,96 +176,47 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
+         "eventDate" : "2023-07-26T13:28:54"
       }
    ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SILK."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "https://www.amazonregistry.com/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "handle" : "silk",
+   "ldhName" : "silk",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/silk.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/silk.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:402:0:0:0:0:59"
-            ],
             "v4" : [
                "213.248.218.59"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:59"
             ]
          },
-         "ldhName" : "DNS1.NIC.SILK"
+         "ldhName" : "DNS1.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:59"
-            ],
             "v4" : [
                "103.49.82.59"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:59"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS2.NIC.SILK"
+         "ldhName" : "DNS2.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -290,20 +227,20 @@
                "2a01:618:406:0:0:0:0:59"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.SILK"
+         "ldhName" : "DNS3.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS4.NIC.SILK",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:59"
-            ],
             "v4" : [
                "43.230.50.59"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:59"
             ]
-         }
+         },
+         "ldhName" : "DNS4.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -314,44 +251,107 @@
                "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSA.NIC.SILK"
+         "ldhName" : "DNSA.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.SILK"
+         "ldhName" : "DNSB.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSC.NIC.SILK"
+         "ldhName" : "DNSC.NIC.SILK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSD.NIC.SILK",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSD.NIC.SILK",
          "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SILK."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "https://www.amazonregistry.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "04017ec2e893a546bd7d73575404015a5c904b9c4dbb33b2995ae37b4df0903b",
+            "digestType" : "2",
+            "keyTag" : "23695"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,38 +1,8 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2014-05-22",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-12"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "1",
-            "keyTag" : "44251",
-            "digest" : "36acb68b734dfe465cc1112f9dac08b8b66627cc"
-         },
-         {
-            "digest" : "a82d8ed2b07d66d6e7af375e0e44b22a82f4479ad45f5d8e1859df6fc170e67c",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "44251"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "space-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -94,13 +64,14 @@
                   "admin@radixregistry.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "space-administrative"
+         ]
       },
       {
          "handle" : "space-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -159,9 +130,6 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
@@ -205,25 +173,37 @@
          ]
       }
    ],
-   "ldhName" : "space",
-   "handle" : "space",
-   "objectClassName" : "domain",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-22"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:02"
+      }
+   ],
+   "handle" : "space",
+   "ldhName" : "space",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/space.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://radix.website",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -236,11 +216,10 @@
                "2001:67c:13cc:0:0:0:1:51"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.SPACE"
+         "ldhName" : "A.NIC.SPACE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.51"
@@ -249,10 +228,10 @@
                "2a04:2b00:13cc:0:0:0:1:51"
             ]
          },
-         "ldhName" : "B.NIC.SPACE"
+         "ldhName" : "B.NIC.SPACE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.51"
@@ -261,37 +240,44 @@
                "2a04:2b00:13ee:0:0:0:0:51"
             ]
          },
-         "ldhName" : "E.NIC.SPACE"
+         "ldhName" : "E.NIC.SPACE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "F.NIC.SPACE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:51"
-            ],
             "v4" : [
                "212.18.249.51"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:51"
             ]
-         }
+         },
+         "ldhName" : "F.NIC.SPACE",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/space.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://radix.website",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -301,21 +287,35 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://radix.website"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "36acb68b734dfe465cc1112f9dac08b8b66627cc",
+            "digestType" : "1",
+            "keyTag" : "44251"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "a82d8ed2b07d66d6e7af375e0e44b22a82f4479ad45f5d8e1859df6fc170e67c",
+            "digestType" : "2",
+            "keyTag" : "44251"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

@@ -1,10 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "tg",
    "entities" : [
       {
          "handle" : "tg-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -63,12 +64,11 @@
                   "cafe@cafe.tg"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "tg-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -130,13 +130,14 @@
                   "arcep@arcep.tg"
                ]
             ]
-         ],
-         "handle" : "tg-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "tg-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -169,31 +170,152 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "tg",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "1996-09-05"
       },
       {
-         "eventDate" : "2021-03-08",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-08"
       },
       {
-         "eventDate" : "2023-07-26T13:16:55",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:14"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
+   "handle" : "tg",
+   "ldhName" : "tg",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tg.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.tg",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "198.73.186.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.ADMIN.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "41.207.188.36"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.NIC.TG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "108.61.25.122"
+            ],
+            "v6" : [
+               "2001:19f0:300:1007:0:0:0:cafe"
+            ]
+         },
+         "ldhName" : "NS2.ADMIN.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "80.248.68.12"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS2.NIC.TG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "87.98.180.44"
+            ],
+            "v6" : [
+               "2001:41d0:2:8adf:0:0:0:2"
+            ]
+         },
+         "ldhName" : "NS3.ADMIN.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "103.25.58.26"
+            ],
+            "v6" : [
+               "2406:d501:0:0:0:0:47e3:2a7c"
+            ]
+         },
+         "ldhName" : "NS4.ADMIN.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "188.165.33.42"
+            ],
+            "v6" : [
+               "2001:41d0:8:5c79:0:0:0:3"
+            ]
+         },
+         "ldhName" : "NS5.ADMIN.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "80.248.64.20"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "TLD.CAFE.TG",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -205,10 +327,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.tg"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -217,129 +339,7 @@
          "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "198.73.186.1"
-            ]
-         },
-         "ldhName" : "NS1.ADMIN.NET"
-      },
-      {
-         "ldhName" : "NS1.NIC.TG",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "41.207.188.36"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:19f0:300:1007:0:0:0:cafe"
-            ],
-            "v4" : [
-               "108.61.25.122"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ADMIN.NET"
-      },
-      {
-         "ldhName" : "NS2.NIC.TG",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "80.248.68.12"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:41d0:2:8adf:0:0:0:2"
-            ],
-            "v4" : [
-               "87.98.180.44"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.ADMIN.NET"
-      },
-      {
-         "ldhName" : "NS4.ADMIN.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2406:d501:0:0:0:0:47e3:2a7c"
-            ],
-            "v4" : [
-               "103.25.58.26"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS5.ADMIN.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:41d0:8:5c79:0:0:0:3"
-            ],
-            "v4" : [
-               "188.165.33.42"
-            ]
-         }
-      },
-      {
-         "ldhName" : "TLD.CAFE.TG",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "80.248.64.20"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/tg.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.tg",
-         "rel" : "related"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "status" : [
+      "active"
    ]
 }

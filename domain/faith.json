@@ -1,21 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-02-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "faith-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -74,14 +64,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "faith-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "faith-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -135,11 +122,14 @@
                   "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
-         ],
-         "handle" : "faith-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "faith-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -172,102 +162,25 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "faith-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "faith",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "24400",
-            "algorithm" : "8",
-            "digest" : "272e92a109875aebba7ca98ac8b593c6a27059f58ea75d4b741a3452a63c97f4"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-02-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:31"
+      }
+   ],
    "handle" : "faith",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.FAITH",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.FAITH",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.FAITH"
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.FAITH",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.54"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:36"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:36"
-            ],
-            "v4" : [
-               "156.154.145.54"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.FAITH"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.FAITH",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.54"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:36"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
+   "ldhName" : "faith",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/faith.html",
@@ -280,35 +193,114 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://nic.faith",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.NIC.FAITH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "B.NIC.FAITH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.FAITH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.54"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:36"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.FAITH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.54"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:36"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.FAITH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.54"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:36"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.FAITH",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.FAITH."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -317,16 +309,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "272e92a109875aebba7ca98ac8b593c6a27059f58ea75d4b741a3452a63c97f4",
+            "digestType" : "2",
+            "keyTag" : "24400"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

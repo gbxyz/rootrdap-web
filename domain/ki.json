@@ -1,24 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "ki",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1995-04-19"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-07-08"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:51",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "ki",
    "entities" : [
       {
+         "handle" : "ki-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -51,16 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ki-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "ki-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -119,12 +104,14 @@
                   "ictadvisor@mcttd.gov.ki"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "ki-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,30 +162,41 @@
                   "kaboterenga.romatoa@cck.ki"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "ki-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "59540",
-            "digest" : "fd3b27e5c171b883fe2815dde7fbbe7f2e5af826bff47c33b5970f53e2a855de"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1995-04-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-07-08"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:14"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "ki",
+   "ldhName" : "ki",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ki.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.ki",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
@@ -210,56 +208,44 @@
                "2a03:dd40:3:0:0:0:0:93"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS.COCCA.FR"
+         "ldhName" : "NS.COCCA.FR",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6026:ad:0:0:1"
-            ],
             "v4" : [
                "204.61.216.26"
+            ],
+            "v6" : [
+               "2001:500:14:6026:ad:0:0:1"
             ]
          },
-         "ldhName" : "PCH.NIC.KI"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/ki.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.ki",
-         "rel" : "related"
+         "ldhName" : "PCH.NIC.KI",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -269,10 +255,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.ki"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -280,5 +266,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "fd3b27e5c171b883fe2815dde7fbbe7f2e5af826bff47c33b5970f53e2a855de",
+            "digestType" : "2",
+            "keyTag" : "59540"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

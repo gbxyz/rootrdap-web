@@ -1,23 +1,8 @@
 {
-   "handle" : "netflix",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-05-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "netflix-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -53,11 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "netflix-registrant"
+         ]
       },
       {
+         "handle" : "netflix-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -119,11 +104,11 @@
                   "nicadmin@netflix.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "netflix-administrative"
+         ]
       },
       {
+         "handle" : "netflix-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -185,33 +170,29 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "handle" : "netflix-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-05-05"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:45"
+      }
+   ],
+   "handle" : "netflix",
    "ldhName" : "netflix",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "7aba17bd5b87aa5d31cb611e0dfd4c67d926b6cfc68b8aeca58c468b104cc2e6",
-            "algorithm" : "8",
-            "keyTag" : "27637",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/netflix.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
@@ -220,15 +201,13 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.netflix.com",
          "rel" : "related",
-         "href" : "http://www.netflix.com"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS1.DNS.NIC.NETFLIX",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.144.121"
@@ -236,19 +215,21 @@
             "v6" : [
                "2610:a1:1071:0:0:0:0:79"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.NETFLIX",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:79"
-            ],
             "v4" : [
                "156.154.145.121"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:79"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -259,11 +240,10 @@
                "2610:a1:1073:0:0:0:0:79"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.NETFLIX"
+         "ldhName" : "NS3.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.156.121"
@@ -272,31 +252,32 @@
                "2610:a1:1074:0:0:0:0:79"
             ]
          },
-         "ldhName" : "NS4.DNS.NIC.NETFLIX"
+         "ldhName" : "NS4.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:79"
-            ],
             "v4" : [
                "156.154.157.121"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:79"
             ]
          },
-         "ldhName" : "NS5.DNS.NIC.NETFLIX"
+         "ldhName" : "NS5.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:0:79"
-            ],
             "v4" : [
                "156.154.158.121"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:0:79"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS6.DNS.NIC.NETFLIX"
+         "ldhName" : "NS6.DNS.NIC.NETFLIX",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -317,6 +298,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -325,16 +311,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.netflix.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "7aba17bd5b87aa5d31cb611e0dfd4c67d926b6cfc68b8aeca58c468b104cc2e6",
+            "digestType" : "2",
+            "keyTag" : "27637"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

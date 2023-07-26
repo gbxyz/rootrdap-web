@@ -1,35 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2005-12-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-01-15"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "4dce567c12f637d51a755b9585c0c3c4036aba446261ac994f7f5e91eed4c365",
-            "keyTag" : "58737",
-            "digestType" : "2",
-            "algorithm" : "10"
-         }
-      ]
-   },
-   "ldhName" : "cat",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "cat-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -88,12 +64,11 @@
                   "info@domini.cat"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "cat-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -155,9 +130,7 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
-         "handle" : "cat-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "cat-registrant",
@@ -200,8 +173,113 @@
          ]
       }
    ],
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2005-12-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-01-15"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:36"
+      }
+   ],
    "handle" : "cat",
+   "ldhName" : "cat",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cat.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.domini.cat",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.4"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "ANYC1.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.20"
+            ],
+            "v6" : [
+               "2001:500:14:6020:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "CAT.PCH.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "84.88.0.162"
+            ],
+            "v6" : [
+               "2001:40b0:1:3:0:0:0:2"
+            ]
+         },
+         "ldhName" : "NS.NIC.CAT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.69.254.1"
+            ],
+            "v6" : [
+               "2001:67c:21cc:2000:0:0:64:41"
+            ]
+         },
+         "ldhName" : "NS1.NIC.ES",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.110"
+            ],
+            "v6" : [
+               "2001:678:e:110:0:0:0:53"
+            ]
+         },
+         "ldhName" : "NSC.NIC.DE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "130.59.31.29"
+            ],
+            "v6" : [
+               "2001:620:0:ff:0:0:0:2f"
+            ]
+         },
+         "ldhName" : "SWITCH.NIC.CAT",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -212,104 +290,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "ANYC1.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.4"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "CAT.PCH.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.20"
-            ],
-            "v6" : [
-               "2001:500:14:6020:ad:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS.NIC.CAT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "84.88.0.162"
-            ],
-            "v6" : [
-               "2001:40b0:1:3:0:0:0:2"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.69.254.1"
-            ],
-            "v6" : [
-               "2001:67c:21cc:2000:0:0:64:41"
-            ]
-         },
-         "ldhName" : "NS1.NIC.ES"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.11.110"
-            ],
-            "v6" : [
-               "2001:678:e:110:0:0:0:53"
-            ]
-         },
-         "ldhName" : "NSC.NIC.DE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:620:0:ff:0:0:0:2f"
-            ],
-            "v4" : [
-               "130.59.31.29"
-            ]
-         },
-         "ldhName" : "SWITCH.NIC.CAT"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cat.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.domini.cat",
-         "title" : "URL for registration services"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -319,21 +311,29 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.domini.cat"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "4dce567c12f637d51a755b9585c0c3c4036aba446261ac994f7f5e91eed4c365",
+            "digestType" : "2",
+            "keyTag" : "58737"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

@@ -1,49 +1,8 @@
 {
-   "ldhName" : "whoswho",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "whoswho-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Who's Who Registry"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Box 300\nNew York NY 10024\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "whoswho-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -164,20 +123,48 @@
                ]
             ]
          ]
+      },
+      {
+         "handle" : "whoswho-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Who's Who Registry"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Box 300\nNew York NY 10024\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "1094",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "b35d9bcf8c51a71118e63f2d38a06e25418db690dbabfb35f0cf9635959b5e5b"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -188,60 +175,55 @@
          "eventDate" : "2023-06-16"
       },
       {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:34"
       }
    ],
    "handle" : "whoswho",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "whoswho",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.WHOSWHO."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/whoswho.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://nic.whoswho"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://nic.whoswho",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
          },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
             "v4" : [
                "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
             ]
          },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.12"
@@ -249,36 +231,21 @@
             "v6" : [
                "2a01:5b0:5:0:0:0:0:c"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
             "v4" : [
                "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
             ]
          },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/whoswho.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.whoswho",
-         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -299,10 +266,43 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.WHOSWHO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.whoswho"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b35d9bcf8c51a71118e63f2d38a06e25418db690dbabfb35f0cf9635959b5e5b",
+            "digestType" : "2",
+            "keyTag" : "1094"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

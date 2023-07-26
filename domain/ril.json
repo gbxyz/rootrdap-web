@@ -1,25 +1,10 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2016-08-11",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-12-02"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "ril-registrant",
+         "handle" : "ril-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -29,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Saket Gadkari"
                ],
                [
                   "org",
@@ -51,13 +42,28 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+91.9967009933"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "saket.gadkari@ril.com"
                ]
             ]
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "ril-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -116,16 +122,13 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "ril-registrant",
          "objectClassName" : "entity",
-         "handle" : "ril-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -135,12 +138,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Saket Gadkari"
                ],
                [
                   "org",
@@ -163,40 +160,46 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+91.9967009933"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "saket.gadkari@ril.com"
                ]
             ]
          ]
       }
    ],
-   "ldhName" : "ril",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "19549",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "aebd50284035552652975d96493c1394e8c652c43ac366f019b0fed4ce3b5abf"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-08-11"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-12-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:31"
+      }
+   ],
    "handle" : "ril",
-   "objectClassName" : "domain",
+   "ldhName" : "ril",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ril.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.ril.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.180.17"
@@ -205,35 +208,34 @@
                "2a01:8840:ae:0:0:0:0:17"
             ]
          },
-         "ldhName" : "A0.NIC.RIL"
+         "ldhName" : "A0.NIC.RIL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.RIL",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b1:0:0:0:0:17"
-            ],
             "v4" : [
                "65.22.183.17"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:af:0:0:0:0:17"
             ],
-            "v4" : [
-               "65.22.181.17"
+            "v6" : [
+               "2a01:8840:b1:0:0:0:0:17"
             ]
          },
-         "ldhName" : "B0.NIC.RIL"
+         "ldhName" : "A2.NIC.RIL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.RIL",
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.181.17"
+            ],
+            "v6" : [
+               "2a01:8840:af:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "B0.NIC.RIL",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "65.22.182.17"
@@ -241,34 +243,19 @@
             "v6" : [
                "2a01:8840:b0:0:0:0:0:17"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ril.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.ril.com",
-         "title" : "URL for registration services"
+         },
+         "ldhName" : "C0.NIC.RIL",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -278,6 +265,11 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -293,16 +285,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "aebd50284035552652975d96493c1394e8c652c43ac366f019b0fed4ce3b5abf",
+            "digestType" : "2",
+            "keyTag" : "19549"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

@@ -1,24 +1,11 @@
 {
-   "handle" : "citadel",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2016-06-30",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "citadel",
    "entities" : [
       {
+         "handle" : "citadel-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -77,14 +64,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "citadel-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "citadel-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -138,11 +122,14 @@
                   "registry@citadelgroup.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "citadel-administrative"
+         ]
       },
       {
+         "handle" : "citadel-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,31 +162,25 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "citadel-registrant"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "cc98bfd74d46f2274b9a966f9d522161c6d2ea0d8621df3a6ac4f1d3b229dc7c",
-            "digestType" : "2",
-            "keyTag" : "62107",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-30"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:45"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "citadel",
+   "ldhName" : "citadel",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/citadel.html",
@@ -207,14 +188,14 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.citadel.com",
          "rel" : "related",
-         "href" : "http://www.citadel.com"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -227,12 +208,10 @@
                "2610:a1:1071:0:0:0:0:2d"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.CITADEL"
+         "ldhName" : "NS1.DNS.NIC.CITADEL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.CITADEL",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.145.45"
@@ -240,22 +219,23 @@
             "v6" : [
                "2610:a1:1072:0:0:0:0:2d"
             ]
-         }
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.CITADEL",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:2d"
-            ],
-            "v4" : [
-               "156.154.159.45"
-            ]
          },
+         "ldhName" : "NS2.DNS.NIC.CITADEL",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.45"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:2d"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.CITADEL",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.156.45"
@@ -264,22 +244,22 @@
                "2610:a1:1074:0:0:0:0:2d"
             ]
          },
-         "ldhName" : "NS4.DNS.NIC.CITADEL"
+         "ldhName" : "NS4.DNS.NIC.CITADEL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:2d"
-            ],
             "v4" : [
                "156.154.157.45"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:2d"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS5.DNS.NIC.CITADEL"
+         "ldhName" : "NS5.DNS.NIC.CITADEL",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.158.45"
@@ -288,26 +268,32 @@
                "2610:a1:1076:0:0:0:0:2d"
             ]
          },
-         "ldhName" : "NS6.DNS.NIC.CITADEL"
+         "ldhName" : "NS6.DNS.NIC.CITADEL",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -317,10 +303,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.citadel.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -328,5 +314,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "cc98bfd74d46f2274b9a966f9d522161c6d2ea0d8621df3a6ac4f1d3b229dc7c",
+            "digestType" : "2",
+            "keyTag" : "62107"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,6 +1,8 @@
 {
    "entities" : [
       {
+         "handle" : "alstom-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -62,11 +64,11 @@
                   "alstom-tld@nameshield.net"
                ]
             ]
-         ],
-         "handle" : "alstom-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "alstom-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -128,11 +130,11 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "alstom-technical"
+         ]
       },
       {
+         "handle" : "alstom-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -168,40 +170,115 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "alstom-registrant"
+         ]
       }
    ],
-   "ldhName" : "alstom",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "54e1da73874bc3c3291775181de3f4b6a7b2828fa67a0b519c380c3c1f3b35a4",
-            "digestType" : "2",
-            "keyTag" : "65377",
-            "algorithm" : "10"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-12-04",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-04"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-01-07"
       },
       {
-         "eventDate" : "2023-07-26T13:16:46",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:24:48"
+      }
+   ],
+   "handle" : "alstom",
+   "ldhName" : "alstom",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/alstom.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.alstom.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "objectClassName" : "domain",
-   "handle" : "alstom",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -222,95 +299,18 @@
          "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         },
-         "ldhName" : "ANYCAST10.IRONDNS.NET"
-      },
-      {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.65.11"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "54e1da73874bc3c3291775181de3f4b6a7b2828fa67a0b519c380c3c1f3b35a4",
+            "digestType" : "2",
+            "keyTag" : "65377"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.65.12"
-            ]
-         },
-         "ldhName" : "ANYCAST24.IRONDNS.NET"
-      },
-      {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/alstom.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.alstom.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

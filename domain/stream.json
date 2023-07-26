@@ -1,37 +1,10 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2016-02-26",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "5689",
-            "digestType" : "2",
-            "digest" : "6b26a93e218e96c47e1e3984823bde21105bfeb4ea6d0cd82e144e24d5d2a0e0"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "stream",
    "entities" : [
       {
-         "handle" : "stream-registrant",
+         "handle" : "stream-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -43,15 +16,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Edgar Charles Andrew Lavarello"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "dot Stream Limited"
+                  "Pricewaterhousecoopers Ltd."
                ],
                [
                   "adr",
                   {
-                     "label" : "2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
+                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
                   },
                   "text",
                   [
@@ -63,11 +42,28 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+350 200 73520"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
          ]
       },
       {
+         "handle" : "stream-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -126,16 +122,13 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "stream-technical"
+         ]
       },
       {
+         "handle" : "stream-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -147,21 +140,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Edgar Charles Andrew Lavarello"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Pricewaterhousecoopers Ltd."
+                  "dot Stream Limited"
                ],
                [
                   "adr",
                   {
-                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
+                     "label" : "2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
                   },
                   "text",
                   [
@@ -173,57 +160,56 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+350 200 73520"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "stream-administrative"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-02-26"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:06"
       }
    ],
    "handle" : "stream",
-   "objectClassName" : "domain",
-   "notices" : [
+   "ldhName" : "stream",
+   "links" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "href" : "https://www.iana.org/domains/root/db/stream.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.stream",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
             "v4" : [
                "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
             ]
          },
-         "ldhName" : "A.NIC.STREAM"
+         "ldhName" : "A.NIC.STREAM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -234,12 +220,10 @@
                "2001:dcd:2:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.STREAM"
+         "ldhName" : "B.NIC.STREAM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.STREAM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.10"
@@ -247,34 +231,35 @@
             "v6" : [
                "2001:dcd:3:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.STREAM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:1:32"
-            ],
             "v4" : [
                "156.154.169.50"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:32"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.STREAM"
+         "ldhName" : "NS1.DNS.NIC.STREAM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.STREAM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:1:32"
-            ],
             "v4" : [
                "156.154.170.50"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:1:32"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.STREAM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.STREAM",
          "ipAddresses" : {
             "v4" : [
                "156.154.171.50"
@@ -283,38 +268,45 @@
                "2610:a1:1073:0:0:0:1:32"
             ]
          },
+         "ldhName" : "NS3.DNS.NIC.STREAM",
          "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/stream.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://nic.stream",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.STREAM."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.stream"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -323,9 +315,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "6b26a93e218e96c47e1e3984823bde21105bfeb4ea6d0cd82e144e24d5d2a0e0",
+            "digestType" : "2",
+            "keyTag" : "5689"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

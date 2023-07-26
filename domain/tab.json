@@ -1,23 +1,11 @@
 {
-   "handle" : "tab",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-09-04"
-      },
-      {
-         "eventDate" : "2022-11-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "tab-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -76,16 +64,11 @@
                   "ngtld-tab@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "tab-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "tab-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -142,8 +125,11 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "tab-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -176,70 +162,80 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "tab",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "bf58e40ea4764e2e24254dcb7a365d90aca26773209827ee0a41be128ca1f977",
-            "algorithm" : "8",
-            "keyTag" : "12205",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-09-04"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:10"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "tab",
+   "ldhName" : "tab",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tab.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.tab",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.TAB"
-      },
-      {
-         "ldhName" : "B.NIC.TAB",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
             ],
-            "v4" : [
-               "37.209.194.9"
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A.NIC.TAB",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
-               "37.209.196.9"
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C.NIC.TAB"
+         "ldhName" : "B.NIC.TAB",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "X.NIC.TAB",
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.TAB",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -247,11 +243,11 @@
             "v6" : [
                "2610:a1:1074:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "X.NIC.TAB",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Y.NIC.TAB",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.173.82"
@@ -259,46 +255,31 @@
             "v6" : [
                "2610:a1:1075:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "Y.NIC.TAB",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Z.NIC.TAB",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
             ]
          },
+         "ldhName" : "Z.NIC.TAB",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/tab.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://nic.tab",
-         "rel" : "related"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -309,12 +290,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TAB."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -328,5 +314,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "bf58e40ea4764e2e24254dcb7a365d90aca26773209827ee0a41be128ca1f977",
+            "digestType" : "2",
+            "keyTag" : "12205"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,53 +1,8 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2015-12-23",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-16"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a0927d13ff8d54a355b158d01af184962b0d9684",
-            "algorithm" : "7",
-            "digestType" : "1",
-            "keyTag" : "65523"
-         },
-         {
-            "digest" : "5a5b5575f92a04519f4c492d13f0f5039df17597db256444cda0ba6ca203a105",
-            "keyTag" : "65523",
-            "digestType" : "2",
-            "algorithm" : "7"
-         },
-         {
-            "digest" : "7de5a740d6e45c95c348209c877cb97736350694e595608da72a0645960937ce",
-            "algorithm" : "7",
-            "keyTag" : "56230",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "9dd1cfcf93b8d7f4cbcaffb882c6dd820c345b3e",
-            "algorithm" : "7",
-            "keyTag" : "56230",
-            "digestType" : "1"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "monster",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "monster-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -104,6 +59,8 @@
          ]
       },
       {
+         "handle" : "monster-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -165,13 +122,11 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "monster-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "monster-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -210,31 +165,27 @@
          ]
       }
    ],
-   "objectClassName" : "domain",
-   "handle" : "monster",
-   "notices" : [
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-23"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:38"
       }
    ],
+   "handle" : "monster",
+   "ldhName" : "monster",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/monster.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -249,8 +200,6 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.MONSTER",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.169.218.83"
@@ -258,18 +207,20 @@
             "v6" : [
                "2001:67c:13cc:0:0:0:1:83"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.MONSTER",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.MONSTER",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:83"
-            ],
             "v4" : [
                "185.24.64.83"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:83"
             ]
          },
+         "ldhName" : "B.NIC.MONSTER",
          "objectClassName" : "nameserver"
       },
       {
@@ -281,28 +232,51 @@
                "2a04:2b00:13ee:0:0:0:0:83"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.MONSTER"
+         "ldhName" : "C.NIC.MONSTER",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NIC.MONSTER",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:83"
-            ],
             "v4" : [
                "212.18.249.83"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:83"
             ]
          },
+         "ldhName" : "D.NIC.MONSTER",
          "objectClassName" : "nameserver"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.MONSTER."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -311,15 +285,41 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "7",
+            "digest" : "a0927d13ff8d54a355b158d01af184962b0d9684",
+            "digestType" : "1",
+            "keyTag" : "65523"
+         },
+         {
+            "algorithm" : "7",
+            "digest" : "5a5b5575f92a04519f4c492d13f0f5039df17597db256444cda0ba6ca203a105",
+            "digestType" : "2",
+            "keyTag" : "65523"
+         },
+         {
+            "algorithm" : "7",
+            "digest" : "7de5a740d6e45c95c348209c877cb97736350694e595608da72a0645960937ce",
+            "digestType" : "2",
+            "keyTag" : "56230"
+         },
+         {
+            "algorithm" : "7",
+            "digest" : "9dd1cfcf93b8d7f4cbcaffb882c6dd820c345b3e",
+            "digestType" : "1",
+            "keyTag" : "56230"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

@@ -1,6 +1,48 @@
 {
    "entities" : [
       {
+         "handle" : "rogers-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Rogers Communications Canada Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "333 Bloor Street East\nToronto ON M4W1G9\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "rogers-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -62,11 +104,11 @@
                   "ngtld-rogers@cscinfo.com"
                ]
             ]
-         ],
-         "handle" : "rogers-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "rogers-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -128,133 +170,51 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "rogers-technical"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "rogers-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Rogers Communications Canada Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "333 Bloor Street East\nToronto ON M4W1G9\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "ldhName" : "rogers",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "46654",
-            "algorithm" : "8",
-            "digest" : "36dcb391639dbef1612bffc2103e2ce37d3167bba29aa713fae7ceb540f6eb71"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-08-18",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-08-18"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2020-10-30"
       },
       {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:33"
       }
    ],
    "handle" : "rogers",
-   "objectClassName" : "domain",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.rogers.com/consumer/home"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "ldhName" : "rogers",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/rogers.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/rogers.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.ROGERS",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6a:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.108.33"
+            ],
+            "v6" : [
+               "2a01:8840:6a:0:0:0:0:33"
             ]
          },
+         "ldhName" : "A0.NIC.ROGERS",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.ROGERS",
          "ipAddresses" : {
             "v4" : [
                "65.22.111.33"
@@ -263,11 +223,10 @@
                "2a01:8840:6d:0:0:0:0:33"
             ]
          },
+         "ldhName" : "A2.NIC.ROGERS",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.ROGERS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.109.33"
@@ -275,43 +234,84 @@
             "v6" : [
                "2a01:8840:6b:0:0:0:0:33"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.ROGERS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.ROGERS",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6c:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.110.33"
+            ],
+            "v6" : [
+               "2a01:8840:6c:0:0:0:0:33"
             ]
          },
+         "ldhName" : "C0.NIC.ROGERS",
          "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "http://www.rogers.com/consumer/home"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "36dcb391639dbef1612bffc2103e2ce37d3167bba29aa713fae7ceb540f6eb71",
+            "digestType" : "2",
+            "keyTag" : "46654"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

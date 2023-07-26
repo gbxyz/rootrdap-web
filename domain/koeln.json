@@ -1,108 +1,11 @@
 {
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.nic.koeln"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.11.114"
-            ],
-            "v6" : [
-               "2001:678:e:114:0:0:0:53"
-            ]
-         },
-         "ldhName" : "DNS.RYCE-RSP.COM"
-      },
-      {
-         "ldhName" : "NS1.DNS.BUSINESS",
-         "ipAddresses" : {
-            "v4" : [
-               "157.90.205.138"
-            ],
-            "v6" : [
-               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a0c:8f40:0:701:0:0:0:153"
-            ],
-            "v4" : [
-               "193.56.204.153"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.RYCE-RSP.COM"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/koeln.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.nic.koeln",
-         "title" : "URL for registration services"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "koeln",
-   "ldhName" : "koeln",
    "entities" : [
       {
+         "handle" : "koeln-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -113,16 +16,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Technical Operations"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "RyCE GmbH"
+                  "dotKoeln GmbH"
                ],
                [
                   "adr",
@@ -139,36 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+431981160"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+43198116111"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tech@dns.business"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "koeln-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "koeln-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -230,13 +104,13 @@
                   "ronald.schwaerzler@domainworx.consulting"
                ]
             ]
-         ],
-         "handle" : "koeln-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "koeln-technical",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
          "vcardArray" : [
             "vcard",
@@ -248,10 +122,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Technical Operations"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "dotKoeln GmbH"
+                  "RyCE GmbH"
                ],
                [
                   "adr",
@@ -268,25 +148,31 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+431981160"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+43198116111"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tech@dns.business"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "koeln-registrant"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "10",
-            "keyTag" : "48568",
-            "digestType" : "2",
-            "digest" : "0d64b2d9b1a06897bb24383f1200bca0e4f4307aa18a9dfaac28163111f95b44"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -298,7 +184,121 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:51"
+         "eventDate" : "2023-07-26T13:27:16"
       }
+   ],
+   "handle" : "koeln",
+   "ldhName" : "koeln",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/koeln.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.nic.koeln",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.114"
+            ],
+            "v6" : [
+               "2001:678:e:114:0:0:0:53"
+            ]
+         },
+         "ldhName" : "DNS.RYCE-RSP.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "157.90.205.138"
+            ],
+            "v6" : [
+               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
+            ]
+         },
+         "ldhName" : "NS1.DNS.BUSINESS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.56.204.153"
+            ],
+            "v6" : [
+               "2a0c:8f40:0:701:0:0:0:153"
+            ]
+         },
+         "ldhName" : "NS1.RYCE-RSP.COM",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.nic.koeln"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "0d64b2d9b1a06897bb24383f1200bca0e4f4307aa18a9dfaac28163111f95b44",
+            "digestType" : "2",
+            "keyTag" : "48568"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

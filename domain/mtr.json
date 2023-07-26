@@ -1,21 +1,11 @@
 {
-   "handle" : "mtr",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "ce2ae4bc0908188f044ce4b2ac931119311272d0fb3842a36f2abbfa059e093a",
-            "keyTag" : "7114",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
    "entities" : [
       {
          "handle" : "mtr-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -74,12 +64,11 @@
                   "cherry.lam@hkirc.hk"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "mtr-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -141,11 +130,11 @@
                   "hk.tech@hkirc.hk"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mtr-technical"
+         ]
       },
       {
+         "handle" : "mtr-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -181,16 +170,13 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "mtr-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "mtr",
    "events" : [
       {
-         "eventDate" : "2015-07-31",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-07-31"
       },
       {
          "eventAction" : "last changed",
@@ -198,15 +184,100 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
+         "eventDate" : "2023-07-26T13:27:41"
       }
    ],
+   "handle" : "mtr",
+   "ldhName" : "mtr",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/mtr.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.mtr",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "203.119.2.164"
+            ],
+            "v6" : [
+               "2001:dca:4000:0:0:0:cb77:2a4"
+            ]
+         },
+         "ldhName" : "NS1.NIC.MTR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "203.119.87.164"
+            ],
+            "v6" : [
+               "2001:dca:2000:0:0:0:cb77:57a4"
+            ]
+         },
+         "ldhName" : "NS2.NIC.MTR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "169.54.247.173"
+            ],
+            "v6" : [
+               "2607:f0d0:1b02:b9:0:0:0:4"
+            ]
+         },
+         "ldhName" : "NS3.NIC.MTR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "135.90.90.24"
+            ],
+            "v6" : [
+               "2401:c900:2101:2a:0:0:0:b"
+            ]
+         },
+         "ldhName" : "NS4.NIC.MTR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
    "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "status" : [
-      "active"
    ],
    "remarks" : [
       {
@@ -216,10 +287,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.mtr"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -228,89 +299,18 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "203.119.2.164"
-            ],
-            "v6" : [
-               "2001:dca:4000:0:0:0:cb77:2a4"
-            ]
-         },
-         "ldhName" : "NS1.NIC.MTR"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "203.119.87.164"
-            ],
-            "v6" : [
-               "2001:dca:2000:0:0:0:cb77:57a4"
-            ]
-         },
-         "ldhName" : "NS2.NIC.MTR"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2607:f0d0:1b02:b9:0:0:0:4"
-            ],
-            "v4" : [
-               "169.54.247.173"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.NIC.MTR"
-      },
-      {
-         "ldhName" : "NS4.NIC.MTR",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:c900:2101:2a:0:0:0:b"
-            ],
-            "v4" : [
-               "135.90.90.24"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mtr.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://nic.mtr",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "ce2ae4bc0908188f044ce4b2ac931119311272d0fb3842a36f2abbfa059e093a",
+            "digestType" : "2",
+            "keyTag" : "7114"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

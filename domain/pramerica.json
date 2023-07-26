@@ -1,18 +1,8 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "42634",
-            "algorithm" : "8",
-            "digest" : "34c29e72afde2f27194a21e6d5c9e91ac44b5c04328d7fade36c026c18c118ea"
-         }
-      ]
-   },
-   "ldhName" : "pramerica",
    "entities" : [
       {
+         "handle" : "pramerica-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -48,9 +38,65 @@
                   ]
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "pramerica-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
          ],
-         "handle" : "pramerica-registrant",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Adam Kaye"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Prudential Financial"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "213 Washington St\nNewark NJ 07102\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 973 716 6632"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "inet-admin@prudential.com"
+               ]
+            ]
+         ]
       },
       {
          "handle" : "pramerica-technical",
@@ -117,67 +163,8 @@
                ]
             ]
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Adam Kaye"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Prudential Financial"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "213 Washington St\nNewark NJ 07102\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 973 716 6632"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "inet-admin@prudential.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pramerica-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -189,52 +176,30 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
+         "eventDate" : "2023-07-26T13:28:15"
       }
    ],
    "handle" : "pramerica",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "pramerica",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/pramerica.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.prudential.com"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "https://www.prudential.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.PRAMERICA",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -243,34 +208,34 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A.NIC.PRAMERICA",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
-            ]
-         },
-         "ldhName" : "B.NIC.PRAMERICA"
-      },
-      {
-         "ldhName" : "C.NIC.PRAMERICA",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
             ],
-            "v4" : [
-               "37.209.196.9"
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
+         "ldhName" : "B.NIC.PRAMERICA",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.PRAMERICA",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.PRAMERICA",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.144.138"
@@ -279,10 +244,10 @@
                "2610:a1:1071:0:0:0:0:8a"
             ]
          },
+         "ldhName" : "NS1.DNS.NIC.PRAMERICA",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.145.138"
@@ -291,11 +256,10 @@
                "2610:a1:1072:0:0:0:0:8a"
             ]
          },
-         "ldhName" : "NS2.DNS.NIC.PRAMERICA"
+         "ldhName" : "NS2.DNS.NIC.PRAMERICA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.PRAMERICA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.159.138"
@@ -303,29 +267,65 @@
             "v6" : [
                "2610:a1:1073:0:0:0:0:8a"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.PRAMERICA",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/pramerica.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.prudential.com",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.prudential.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "34c29e72afde2f27194a21e6d5c9e91ac44b5c04328d7fade36c026c18c118ea",
+            "digestType" : "2",
+            "keyTag" : "42634"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

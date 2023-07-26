@@ -1,28 +1,10 @@
 {
-   "handle" : "beauty",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-04-07"
-      },
-      {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
-      }
-   ],
-   "ldhName" : "beauty",
    "entities" : [
       {
+         "handle" : "beauty-administrative",
          "objectClassName" : "entity",
-         "handle" : "beauty-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -32,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "General Counsel"
                ],
                [
                   "org",
@@ -54,6 +42,18 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 702 757 6555"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "hello@xyz.com"
                ]
             ]
          ]
@@ -125,10 +125,10 @@
          ]
       },
       {
+         "handle" : "beauty-registrant",
          "objectClassName" : "entity",
-         "handle" : "beauty-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -138,12 +138,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "General Counsel"
                ],
                [
                   "org",
@@ -166,61 +160,58 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 702 757 6555"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "hello@xyz.com"
                ]
             ]
          ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "2489479f7a6e57341c7c5508c55113491c519dd846258a6593c4d1aba57d463e",
-            "digestType" : "2",
-            "keyTag" : "35340",
-            "algorithm" : "8"
-         },
-         {
-            "digest" : "c5c45b79dbe67a132237b020f4966fe32fbe61553487e38d47918561568e9957",
-            "digestType" : "2",
-            "keyTag" : "52406",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-07"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:10"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "beauty",
+   "ldhName" : "beauty",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/beauty.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://nic.beauty/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:119"
-            ],
             "v4" : [
                "194.169.218.119"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:119"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.BEAUTY"
+         "ldhName" : "A.NIC.BEAUTY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.BEAUTY",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.119"
@@ -229,18 +220,19 @@
                "2a04:2b00:13cc:0:0:0:1:119"
             ]
          },
+         "ldhName" : "B.NIC.BEAUTY",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.BEAUTY",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:119"
-            ],
             "v4" : [
                "212.18.248.119"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:119"
             ]
          },
+         "ldhName" : "C.NIC.BEAUTY",
          "objectClassName" : "nameserver"
       },
       {
@@ -252,25 +244,8 @@
                "2a04:2b00:13ff:0:0:0:0:119"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.BEAUTY"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/beauty.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "https://nic.beauty/"
+         "ldhName" : "D.NIC.BEAUTY",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -283,32 +258,57 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.BEAUTY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://nic.beauty/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2489479f7a6e57341c7c5508c55113491c519dd846258a6593c4d1aba57d463e",
+            "digestType" : "2",
+            "keyTag" : "35340"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "c5c45b79dbe67a132237b020f4966fe32fbe61553487e38d47918561568e9957",
+            "digestType" : "2",
+            "keyTag" : "52406"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

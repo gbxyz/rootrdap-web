@@ -1,11 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "su",
-   "ldhName" : "su",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "su-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -70,6 +67,8 @@
          ]
       },
       {
+         "handle" : "su-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -131,11 +130,14 @@
                   "su-adm@ripn.su"
                ]
             ]
-         ],
-         "handle" : "su-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "su-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -174,29 +176,13 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "su-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "aa41ed8b657359b5fd0e2756aadb10871cc9010509a6c86e5df744a7914f9e4e",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "23042"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "1990-09-19",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1990-09-19"
       },
       {
          "eventAction" : "last changed",
@@ -204,51 +190,25 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
+         "eventDate" : "2023-07-26T13:29:07"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.TCINET.RU."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "handle" : "su",
+   "ldhName" : "su",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/su.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "193.232.128.6"
@@ -257,10 +217,10 @@
                "2001:678:17:0:193:232:128:6"
             ]
          },
-         "ldhName" : "A.DNS.RIPN.NET"
+         "ldhName" : "A.DNS.RIPN.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.DNS.RIPN.NET",
          "ipAddresses" : {
             "v4" : [
                "194.85.252.62"
@@ -269,10 +229,10 @@
                "2001:678:16:0:194:85:252:62"
             ]
          },
+         "ldhName" : "B.DNS.RIPN.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.190.124.17"
@@ -281,10 +241,10 @@
                "2001:678:18:0:194:190:124:17"
             ]
          },
-         "ldhName" : "D.DNS.RIPN.NET"
+         "ldhName" : "D.DNS.RIPN.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "E.DNS.RIPN.NET",
          "ipAddresses" : {
             "v4" : [
                "193.232.142.17"
@@ -293,11 +253,10 @@
                "2001:678:15:0:193:232:142:17"
             ]
          },
+         "ldhName" : "E.DNS.RIPN.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "F.DNS.RIPN.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "193.232.156.17"
@@ -305,7 +264,9 @@
             "v6" : [
                "2001:678:14:0:193:232:156:17"
             ]
-         }
+         },
+         "ldhName" : "F.DNS.RIPN.NET",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -325,5 +286,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.TCINET.RU."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "aa41ed8b657359b5fd0e2756aadb10871cc9010509a6c86e5df744a7914f9e4e",
+            "digestType" : "2",
+            "keyTag" : "23042"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

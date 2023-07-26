@@ -1,62 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2015-06-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-26"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "chanel",
    "entities" : [
       {
+         "handle" : "chanel-technical",
          "objectClassName" : "entity",
-         "handle" : "chanel-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Chanel International B.V."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Gustav Mahlerlaan 1001\nAmsterdam 1082 MK\nNetherlands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
-         ]
-      },
-      {
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -115,14 +64,11 @@
                   "tldtech@identity.digital"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "chanel-technical"
+         ]
       },
       {
+         "handle" : "chanel-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -184,33 +130,84 @@
                   "ngtld-chanel@cscinfo.com"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "chanel-registrant",
          "objectClassName" : "entity",
-         "handle" : "chanel-administrative"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Chanel International B.V."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Gustav Mahlerlaan 1001\nAmsterdam 1082 MK\nNetherlands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "3135",
-            "digestType" : "2",
-            "digest" : "5e960dd214fb4cafd6929b8a5577b1571258065d148731ef8c1959510aefd59d"
-         },
-         {
-            "keyTag" : "23974",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "de196611e08d7b8a34a9248763c03ef9aecc8c617fef0b60662964711cd5e24b"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-26"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:41"
+      }
+   ],
    "handle" : "chanel",
+   "ldhName" : "chanel",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/chanel.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.chanel.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.112.47"
@@ -219,23 +216,22 @@
                "2a01:8840:6e:0:0:0:0:47"
             ]
          },
-         "ldhName" : "A0.NIC.CHANEL"
+         "ldhName" : "A0.NIC.CHANEL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.CHANEL",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:71:0:0:0:0:47"
-            ],
             "v4" : [
                "65.22.115.47"
+            ],
+            "v6" : [
+               "2a01:8840:71:0:0:0:0:47"
             ]
-         }
+         },
+         "ldhName" : "A2.NIC.CHANEL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.CHANEL",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.113.47"
@@ -243,7 +239,9 @@
             "v6" : [
                "2a01:8840:6f:0:0:0:0:47"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.CHANEL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -254,35 +252,18 @@
                "2a01:8840:70:0:0:0:0:47"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.CHANEL"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/chanel.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.chanel.com"
+         "ldhName" : "C0.NIC.CHANEL",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -293,6 +274,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -301,22 +287,36 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.chanel.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "5e960dd214fb4cafd6929b8a5577b1571258065d148731ef8c1959510aefd59d",
+            "digestType" : "2",
+            "keyTag" : "3135"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "de196611e08d7b8a34a9248763c03ef9aecc8c617fef0b60662964711cd5e24b",
+            "digestType" : "2",
+            "keyTag" : "23974"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

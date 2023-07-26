@@ -1,18 +1,8 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "10",
-            "digestType" : "2",
-            "keyTag" : "37627",
-            "digest" : "04415714a6df5f737093919d47fda7fe0745d4a0ae9dfd4e8652d51d49bac4db"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "eus",
    "entities" : [
       {
+         "handle" : "eus-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -48,79 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "eus-registrant"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Administrative Contact"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CORE Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 223 125 610"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 223 125 612"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "secretariat@corenic.org"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "eus-administrative"
+         ]
       },
       {
          "handle" : "eus-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -179,9 +104,72 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "eus-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Administrative Contact"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CORE Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 223 125 610"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 223 125 612"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "secretariat@corenic.org"
+               ]
+            ]
          ]
       }
    ],
@@ -191,35 +179,81 @@
          "eventDate" : "2014-03-06"
       },
       {
-         "eventDate" : "2022-01-07",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
       },
       {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:28"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "eus",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "eus",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.EUS."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/eus.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.domeinuak.eus"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "https://www.domeinuak.eus",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -240,76 +274,42 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/eus.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.domeinuak.eus",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.12"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.65.11"
-            ]
-         },
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.65.12"
-            ]
-         },
-         "ldhName" : "ANYCAST24.IRONDNS.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         },
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.EUS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.domeinuak.eus"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "04415714a6df5f737093919d47fda7fe0745d4a0ae9dfd4e8652d51d49bac4db",
+            "digestType" : "2",
+            "keyTag" : "37627"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

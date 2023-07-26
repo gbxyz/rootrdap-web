@@ -1,118 +1,11 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.WIEN."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.nic.wien"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:e:114:0:0:0:53"
-            ],
-            "v4" : [
-               "194.0.11.114"
-            ]
-         },
-         "ldhName" : "DNS.RYCE-RSP.COM"
-      },
-      {
-         "ldhName" : "NS1.DNS.BUSINESS",
-         "ipAddresses" : {
-            "v4" : [
-               "157.90.205.138"
-            ],
-            "v6" : [
-               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a0c:8f40:0:701:0:0:0:153"
-            ],
-            "v4" : [
-               "193.56.204.153"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.RYCE-RSP.COM"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/wien.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.nic.wien",
-         "title" : "URL for registration services"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "e2aa9ba196c7d4f10a8320a710fc24ad4bc86ce362239c307af3b875d5cf44c7",
-            "keyTag" : "57889",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
    "entities" : [
       {
-         "handle" : "wien-administrative",
+         "handle" : "wien-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -121,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Ronald Schwaerzler"
                ],
                [
                   "org",
@@ -149,34 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+431981160"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+43198116111"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ronald.schwaerzler@nic.wien"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "wien-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -235,14 +104,14 @@
                   "tech@dns.business"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "wien-technical"
+         ]
       },
       {
+         "handle" : "wien-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -251,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Ronald Schwaerzler"
                ],
                [
                   "org",
@@ -273,32 +148,157 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+431981160"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+43198116111"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ronald.schwaerzler@nic.wien"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "wien-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "wien",
    "events" : [
       {
-         "eventDate" : "2013-12-19",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-19"
       },
       {
-         "eventDate" : "2021-03-11",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-11"
       },
       {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:34"
       }
    ],
-   "port43" : "whois.iana.org",
+   "handle" : "wien",
+   "ldhName" : "wien",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/wien.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.nic.wien",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.114"
+            ],
+            "v6" : [
+               "2001:678:e:114:0:0:0:53"
+            ]
+         },
+         "ldhName" : "DNS.RYCE-RSP.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "157.90.205.138"
+            ],
+            "v6" : [
+               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
+            ]
+         },
+         "ldhName" : "NS1.DNS.BUSINESS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.56.204.153"
+            ],
+            "v6" : [
+               "2a0c:8f40:0:701:0:0:0:153"
+            ]
+         },
+         "ldhName" : "NS1.RYCE-RSP.COM",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "objectClassName" : "domain",
-   "handle" : "wien"
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.WIEN."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.nic.wien"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "e2aa9ba196c7d4f10a8320a710fc24ad4bc86ce362239c307af3b875d5cf44c7",
+            "digestType" : "2",
+            "keyTag" : "57889"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

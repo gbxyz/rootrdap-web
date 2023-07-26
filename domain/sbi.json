@@ -1,132 +1,48 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SBI."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.sbi.co.in"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/sbi.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.sbi.co.in",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:aa:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.176.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.SBI"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ad:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.179.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.SBI"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ab:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.177.9"
-            ]
-         },
-         "ldhName" : "B0.NIC.SBI"
-      },
-      {
-         "ldhName" : "C0.NIC.SBI",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ac:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.178.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "sbi",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "31606",
-            "digest" : "70193b642aefe13270d7ff55a3fd26bcb1c6cdf4d43b04f694509de430381f4b"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "sbi-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "STATE BANK OF INDIA"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "State Bank Bhavan, Madame Cama Road, Nariman Point\nMumbai Maharashtra 400021\nIndia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "sbi-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -191,6 +107,11 @@
          ]
       },
       {
+         "handle" : "sbi-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -249,68 +170,147 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "sbi-technical"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "STATE BANK OF INDIA"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "State Bank Bhavan, Madame Cama Road, Nariman Point\nMumbai Maharashtra 400021\nIndia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "sbi-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "sbi",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2016-03-24"
       },
       {
-         "eventDate" : "2020-11-05",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-05"
       },
       {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:41"
       }
+   ],
+   "handle" : "sbi",
+   "ldhName" : "sbi",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/sbi.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.sbi.co.in",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.176.9"
+            ],
+            "v6" : [
+               "2a01:8840:aa:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A0.NIC.SBI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.179.9"
+            ],
+            "v6" : [
+               "2a01:8840:ad:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A2.NIC.SBI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.177.9"
+            ],
+            "v6" : [
+               "2a01:8840:ab:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B0.NIC.SBI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.178.9"
+            ],
+            "v6" : [
+               "2a01:8840:ac:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C0.NIC.SBI",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SBI."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.sbi.co.in"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "70193b642aefe13270d7ff55a3fd26bcb1c6cdf4d43b04f694509de430381f4b",
+            "digestType" : "2",
+            "keyTag" : "31606"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,143 +1,11 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gmo.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.gmoregistry.com/en/"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.4"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ]
-         },
-         "ldhName" : "A.GMOREGISTRY.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET"
-      },
-      {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ]
-         }
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.gmoregistry.com/en/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "gmo",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-27"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a4cd5d4fc4b18dc7162e94a9f9ac801ad4e67a5db3048691bee28e4f2cc7666b",
-            "keyTag" : "44245",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "gmo-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -148,10 +16,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Representative Director and CEO"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "GMO Internet, Inc."
+                  "GMO Registry, Inc."
                ],
                [
                   "adr",
@@ -168,16 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81 354561601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81 337805239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "gmo-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "gmo-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -239,11 +130,14 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gmo-technical"
+         ]
       },
       {
+         "handle" : "gmo-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -254,16 +148,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Representative Director and CEO"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "GMO Registry, Inc."
+                  "GMO Internet, Inc."
                ],
                [
                   "adr",
@@ -280,35 +168,147 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81 354561601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81 337805239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "gmo-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "gmo"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-27"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2019-08-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:47"
+      }
+   ],
+   "handle" : "gmo",
+   "ldhName" : "gmo",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gmo.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.gmoregistry.com/en/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.gmoregistry.com/en/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "a4cd5d4fc4b18dc7162e94a9f9ac801ad4e67a5db3048691bee28e4f2cc7666b",
+            "digestType" : "2",
+            "keyTag" : "44245"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

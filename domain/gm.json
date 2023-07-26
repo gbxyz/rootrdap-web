@@ -1,26 +1,10 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-03-28"
-      },
-      {
-         "eventDate" : "2015-08-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "ldhName" : "gm",
    "entities" : [
       {
+         "handle" : "gm-registrant",
          "objectClassName" : "entity",
-         "handle" : "gm-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -32,12 +16,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Jorn Grotnes"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -46,7 +24,7 @@
                [
                   "adr",
                   {
-                     "label" : "P.O. Box 2647\nSerrekunda\nGambia (the)"
+                     "label" : "NIC Gambia (GM-NIC) c/o Studio 361\nP.O. Box 4080\nBakau\nGambia (the)"
                   },
                   "text",
                   [
@@ -58,33 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+220 392728"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+220 391020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "admin@nic.gm"
                ]
             ]
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gm-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -149,8 +107,11 @@
          ]
       },
       {
+         "handle" : "gm-administrative",
          "objectClassName" : "entity",
-         "handle" : "gm-registrant",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -161,6 +122,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Jorn Grotnes"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -169,7 +136,7 @@
                [
                   "adr",
                   {
-                     "label" : "NIC Gambia (GM-NIC) c/o Studio 361\nP.O. Box 4080\nBakau\nGambia (the)"
+                     "label" : "P.O. Box 2647\nSerrekunda\nGambia (the)"
                   },
                   "text",
                   [
@@ -181,24 +148,106 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+220 392728"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+220 391020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "admin@nic.gm"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-03-28"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2015-08-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:47"
+      }
+   ],
    "handle" : "gm",
-   "objectClassName" : "domain",
+   "ldhName" : "gm",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gm.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.gm",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.29"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:29"
+            ]
+         },
+         "ldhName" : "NS-GM.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.63.250.217"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.NIC.GM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.49.1.87"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS2.NIC.GM",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -209,63 +258,17 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gm.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.gm",
-         "rel" : "related"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "NS-GM.AFRINIC.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:29"
-            ],
-            "v4" : [
-               "196.216.168.29"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS1.NIC.GM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.63.250.217"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "ldhName" : "NS2.NIC.GM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "196.49.1.87"
-            ]
-         }
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -274,14 +277,11 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "status" : [
       "active"

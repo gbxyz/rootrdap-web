@@ -1,36 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "cafe",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2015-03-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "8c701b4ba51b9cd153830f6fa9a50eeee63a98032728aa974d9466d7ee0e1fc4",
-            "algorithm" : "8",
-            "keyTag" : "20284",
-            "digestType" : "2"
-         }
-      ]
-   },
    "entities" : [
       {
-         "handle" : "cafe-administrative",
+         "handle" : "cafe-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -41,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -67,36 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "cafe-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -155,12 +104,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "cafe-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -171,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -191,22 +148,137 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cafe-registrant"
+         ]
       }
    ],
-   "ldhName" : "cafe",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-27"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:30"
+      }
    ],
-   "status" : [
-      "active"
+   "handle" : "cafe",
+   "ldhName" : "cafe",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cafe.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.20.44"
+            ],
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.CAFE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.21.44"
+            ],
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.CAFE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.22.44"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.CAFE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.44"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.CAFE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.44"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.CAFE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.44"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.CAFE",
+         "objectClassName" : "nameserver"
+      }
    ],
    "notices" : [
       {
@@ -218,123 +290,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:44"
-            ],
-            "v4" : [
-               "65.22.20.44"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.CAFE"
-      },
-      {
-         "ldhName" : "V0N1.NIC.CAFE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:44"
-            ],
-            "v4" : [
-               "65.22.21.44"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N2.NIC.CAFE",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.44"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:44"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.10.44"
-            ],
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:44"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.CAFE"
-      },
-      {
-         "ldhName" : "V2N0.NIC.CAFE",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.23.44"
-            ],
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:44"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:44"
-            ],
-            "v4" : [
-               "161.232.11.44"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.CAFE"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cafe.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.donuts.domains/"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.CAFE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "8c701b4ba51b9cd153830f6fa9a50eeee63a98032728aa974d9466d7ee0e1fc4",
+            "digestType" : "2",
+            "keyTag" : "20284"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

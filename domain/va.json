@@ -1,24 +1,11 @@
 {
-   "handle" : "va",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "1995-09-11",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2016-10-14",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:56"
-      }
-   ],
-   "ldhName" : "va",
    "entities" : [
       {
+         "handle" : "va-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -29,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Director"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Department of Telecommunications"
+                  "Holy See - Vatican City State"
                ],
                [
                   "adr",
                   {
-                     "label" : "Palazzo del Belvedere\nVatican City Vatican City State V-00120\nHoly See (the)"
+                     "label" : "Governatorato S.C.V.\nVatican City Vatican City State V-00120\nHoly See (the)"
                   },
                   "text",
                   [
@@ -55,36 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+39 (06) 69890153"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+39 (06) 69885299"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "direzione.tlc@scv.va"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "va-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "va-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,18 +104,13 @@
                   "supporto.siv@net.va"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "va-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "handle" : "va-registrant",
+         "handle" : "va-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -166,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Director"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Holy See - Vatican City State"
+                  "Department of Telecommunications"
                ],
                [
                   "adr",
                   {
-                     "label" : "Governatorato S.C.V.\nVatican City Vatican City State V-00120\nHoly See (the)"
+                     "label" : "Palazzo del Belvedere\nVatican City Vatican City State V-00120\nHoly See (the)"
                   },
                   "text",
                   [
@@ -186,38 +148,61 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+39 (06) 69890153"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+39 (06) 69885299"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "direzione.tlc@scv.va"
                ]
             ]
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1995-09-11"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2016-10-14"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:25"
+      }
+   ],
+   "handle" : "va",
+   "ldhName" : "va",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/va.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS.NIC.IT",
          "ipAddresses" : {
             "v4" : [
                "192.12.192.5"
@@ -226,6 +211,7 @@
                "2a00:d40:1:1:0:0:0:5"
             ]
          },
+         "ldhName" : "DNS.NIC.IT",
          "objectClassName" : "nameserver"
       },
       {
@@ -237,11 +223,10 @@
                "2a01:b8:0:1:212:77:0:110"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "JOHN.VATICAN.VA"
+         "ldhName" : "JOHN.VATICAN.VA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "MICHAEL.VATICAN.VA",
          "ipAddresses" : {
             "v4" : [
                "212.77.0.2"
@@ -250,10 +235,10 @@
                "2a01:b8:0:1:212:77:0:2"
             ]
          },
+         "ldhName" : "MICHAEL.VATICAN.VA",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "193.201.40.6"
@@ -262,44 +247,56 @@
                "2001:7f8:10:f00a:0:0:0:6"
             ]
          },
-         "ldhName" : "OSIRIS.NAMEX.IT"
+         "ldhName" : "OSIRIS.NAMEX.IT",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:7f8:10:f00a:0:0:0:7"
-            ],
             "v4" : [
                "193.201.40.7"
+            ],
+            "v6" : [
+               "2001:7f8:10:f00a:0:0:0:7"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "SETH.NAMEX.IT"
+         "ldhName" : "SETH.NAMEX.IT",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:123"
-            ],
             "v4" : [
                "193.0.9.123"
+            ],
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:123"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "VA.CCTLD.AUTHDNS.RIPE.NET"
+         "ldhName" : "VA.CCTLD.AUTHDNS.RIPE.NET",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/va.html",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -315,10 +312,13 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "status" : [
+      "active"
    ]
 }

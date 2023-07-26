@@ -1,8 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "emerck",
    "entities" : [
       {
+         "handle" : "emerck-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -61,14 +64,14 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "emerck-technical"
+         ]
       },
       {
+         "handle" : "emerck-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -127,14 +130,11 @@
                   "registry@emerck.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "emerck-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "emerck-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -170,28 +170,13 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "emerck-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "emerck",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "58186",
-            "digestType" : "2",
-            "digest" : "b19e38544f1c313575b683c8533acf792a0373c18f270ed0a1ebd2c3f77a291b"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-09-11",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-09-11"
       },
       {
          "eventAction" : "last changed",
@@ -199,33 +184,26 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
+         "eventDate" : "2023-07-26T13:26:23"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "emerck",
+   "ldhName" : "emerck",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/emerck.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.emerck"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.nic.emerck",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -238,20 +216,20 @@
                "2a01:8840:9a:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.EMERCK"
+         "ldhName" : "A0.NIC.EMERCK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.EMERCK",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:9d:0:0:0:0:1"
-            ],
             "v4" : [
                "65.22.159.1"
+            ],
+            "v6" : [
+               "2a01:8840:9d:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "A2.NIC.EMERCK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -262,12 +240,10 @@
                "2a01:8840:9b:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.EMERCK"
+         "ldhName" : "B0.NIC.EMERCK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.EMERCK",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.158.1"
@@ -275,24 +251,9 @@
             "v6" : [
                "2a01:8840:9c:0:0:0:0:1"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/emerck.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.emerck",
-         "title" : "URL for registration services"
+         },
+         "ldhName" : "C0.NIC.EMERCK",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -312,5 +273,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.emerck"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b19e38544f1c313575b683c8533acf792a0373c18f270ed0a1ebd2c3f77a291b",
+            "digestType" : "2",
+            "keyTag" : "58186"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

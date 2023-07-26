@@ -1,9 +1,11 @@
 {
-   "ldhName" : "hosting",
    "entities" : [
       {
+         "handle" : "hosting-registrant",
          "objectClassName" : "entity",
-         "handle" : "hosting-administrative",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -12,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "General Counsel"
                ],
                [
                   "org",
@@ -40,28 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 702 763 2191"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "hello@xyz.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
          "handle" : "hosting-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -120,12 +104,14 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "hosting-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -134,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "General Counsel"
                ],
                [
                   "org",
@@ -156,80 +148,135 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 702 763 2191"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "hello@xyz.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "hosting-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "5",
-            "keyTag" : "51544",
-            "digestType" : "1",
-            "digest" : "eb0e1f6128e4b7ed6c0c0560f9a3ebc8e5100c33"
-         },
-         {
-            "digestType" : "1",
-            "keyTag" : "27751",
-            "algorithm" : "5",
-            "digest" : "9a72cab4a4cd51469dfc9e1dac8b1476d4b5c66c"
-         },
-         {
-            "algorithm" : "5",
-            "digestType" : "2",
-            "keyTag" : "27751",
-            "digest" : "cf9f7fa35f5dce998a5757081f6e790df501f8b8fb58d0f9d8c4c645761a39db"
-         },
-         {
-            "algorithm" : "5",
-            "keyTag" : "51544",
-            "digestType" : "2",
-            "digest" : "8fe6bf96895d8504f0989c4dbc3741df17b7672d5aa64107bd624089b5d3d403"
-         },
-         {
-            "digest" : "017305d89ee86615e38b0ed31f5eed0a797e8156",
-            "algorithm" : "5",
-            "keyTag" : "46927",
-            "digestType" : "1"
-         },
-         {
-            "digest" : "74803c2bbeebc8d188832c4054b3fd230f31f593e3f5432f7fbcd860e3cb7ed5",
-            "keyTag" : "46927",
-            "digestType" : "2",
-            "algorithm" : "5"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2014-08-15"
       },
       {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
       },
       {
-         "eventDate" : "2023-07-26T13:16:50",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:59"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "hosting",
+   "ldhName" : "hosting",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/hosting.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://nic.hosting",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.152"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:152"
+            ]
+         },
+         "ldhName" : "A.NIC.HOSTING",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.152"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:152"
+            ]
+         },
+         "ldhName" : "B.NIC.HOSTING",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.152"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:152"
+            ]
+         },
+         "ldhName" : "C.NIC.HOSTING",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.152"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:152"
+            ]
+         },
+         "ldhName" : "D.NIC.HOSTING",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.HOSTING."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -244,95 +291,48 @@
          "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.152"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:152"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "5",
+            "digest" : "eb0e1f6128e4b7ed6c0c0560f9a3ebc8e5100c33",
+            "digestType" : "1",
+            "keyTag" : "51544"
          },
-         "ldhName" : "A.NIC.HOSTING"
-      },
-      {
-         "ldhName" : "B.NIC.HOSTING",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:152"
-            ],
-            "v4" : [
-               "185.24.64.152"
-            ]
+         {
+            "algorithm" : "5",
+            "digest" : "9a72cab4a4cd51469dfc9e1dac8b1476d4b5c66c",
+            "digestType" : "1",
+            "keyTag" : "27751"
          },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:152"
-            ],
-            "v4" : [
-               "212.18.248.152"
-            ]
+         {
+            "algorithm" : "5",
+            "digest" : "cf9f7fa35f5dce998a5757081f6e790df501f8b8fb58d0f9d8c4c645761a39db",
+            "digestType" : "2",
+            "keyTag" : "27751"
          },
-         "ldhName" : "C.NIC.HOSTING"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:152"
-            ],
-            "v4" : [
-               "212.18.249.152"
-            ]
+         {
+            "algorithm" : "5",
+            "digest" : "8fe6bf96895d8504f0989c4dbc3741df17b7672d5aa64107bd624089b5d3d403",
+            "digestType" : "2",
+            "keyTag" : "51544"
          },
-         "ldhName" : "D.NIC.HOSTING"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/hosting.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://nic.hosting",
-         "title" : "URL for registration services"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+         {
+            "algorithm" : "5",
+            "digest" : "017305d89ee86615e38b0ed31f5eed0a797e8156",
+            "digestType" : "1",
+            "keyTag" : "46927"
+         },
+         {
+            "algorithm" : "5",
+            "digest" : "74803c2bbeebc8d188832c4054b3fd230f31f593e3f5432f7fbcd860e3cb7ed5",
+            "digestType" : "2",
+            "keyTag" : "46927"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

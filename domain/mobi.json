@@ -1,23 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "mobi",
-   "events" : [
-      {
-         "eventDate" : "2005-10-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-12-02"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "mobi-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -79,13 +64,11 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mobi-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "mobi-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -150,6 +133,8 @@
          ]
       },
       {
+         "handle" : "mobi-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -185,44 +170,56 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "mobi-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "mobi",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "56191",
-            "digestType" : "2",
-            "digest" : "016c0d8022bef2cabb827ce75dabd8fd24cd0160ac277a95ecd5e79b1a95592c"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2005-10-17"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-12-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:37"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "mobi",
+   "ldhName" : "mobi",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/mobi.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.MOBI.AFILIAS-NST.INFO",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:21:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.55.1"
+            ],
+            "v6" : [
+               "2001:500:21:0:0:0:0:1"
             ]
          },
+         "ldhName" : "A0.MOBI.AFILIAS-NST.INFO",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.249.118.1"
@@ -231,22 +228,22 @@
                "2001:500:46:0:0:0:0:1"
             ]
          },
-         "ldhName" : "A2.MOBI.AFILIAS-NST.INFO"
+         "ldhName" : "A2.MOBI.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.MOBI.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:22:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.56.1"
+            ],
+            "v6" : [
+               "2001:500:22:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "B0.MOBI.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.249.126.1"
@@ -255,23 +252,22 @@
                "2001:500:4e:0:0:0:0:1"
             ]
          },
-         "ldhName" : "B2.MOBI.AFILIAS-NST.ORG"
+         "ldhName" : "B2.MOBI.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.MOBI.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:23:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.57.1"
+            ],
+            "v6" : [
+               "2001:500:23:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "C0.MOBI.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D0.MOBI.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.254.58.1"
@@ -279,34 +275,19 @@
             "v6" : [
                "2001:500:24:0:0:0:0:1"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mobi.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://donuts.domains/",
-         "title" : "URL for registration services"
+         },
+         "ldhName" : "D0.MOBI.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -317,6 +298,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -325,10 +311,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -336,5 +322,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "016c0d8022bef2cabb827ce75dabd8fd24cd0160ac277a95ecd5e79b1a95592c",
+            "digestType" : "2",
+            "keyTag" : "56191"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

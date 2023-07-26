@@ -1,23 +1,8 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "90ddbeeeb973b0f8719ed763fb6eede97c73abf5",
-            "keyTag" : "51676",
-            "digestType" : "1",
-            "algorithm" : "8"
-         },
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "51676",
-            "digest" : "883175f6f5c68ea81563b62d1b2b79b6a997d60dc6e20cc70afd0cd6b7e82f62"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "site-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -79,11 +64,14 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "site-technical"
+         ]
       },
       {
+         "handle" : "site-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -142,14 +130,14 @@
                   "admin@radixregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "site-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "site-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,97 +170,68 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "site-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "site",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-03-06",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-06"
       },
       {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
       },
       {
-         "eventDate" : "2023-07-26T13:16:55",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:55"
       }
    ],
-   "objectClassName" : "domain",
    "handle" : "site",
-   "remarks" : [
+   "ldhName" : "site",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SITE."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/site.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.radix.website"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "http://www.radix.website",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:61"
-            ],
             "v4" : [
                "194.169.218.61"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.SITE"
-      },
-      {
-         "ldhName" : "B.NIC.SITE",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:61"
             ],
-            "v4" : [
-               "185.24.64.61"
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:61"
             ]
          },
+         "ldhName" : "A.NIC.SITE",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.61"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:61"
+            ]
+         },
+         "ldhName" : "B.NIC.SITE",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "212.18.248.61"
@@ -281,41 +240,82 @@
                "2a04:2b00:13ee:0:0:0:0:61"
             ]
          },
-         "ldhName" : "E.NIC.SITE"
+         "ldhName" : "E.NIC.SITE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:61"
-            ],
             "v4" : [
                "212.18.249.61"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:61"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.NIC.SITE"
+         "ldhName" : "F.NIC.SITE",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/site.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.radix.website",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SITE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.radix.website"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "90ddbeeeb973b0f8719ed763fb6eede97c73abf5",
+            "digestType" : "1",
+            "keyTag" : "51676"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "883175f6f5c68ea81563b62d1b2b79b6a997d60dc6e20cc70afd0cd6b7e82f62",
+            "digestType" : "2",
+            "keyTag" : "51676"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

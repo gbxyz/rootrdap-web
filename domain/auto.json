@@ -1,152 +1,11 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:131"
-            ],
-            "v4" : [
-               "194.169.218.131"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.AUTO"
-      },
-      {
-         "ldhName" : "B.NIC.AUTO",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.131"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:131"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.NIC.AUTO",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:131"
-            ],
-            "v4" : [
-               "212.18.248.131"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:131"
-            ],
-            "v4" : [
-               "212.18.249.131"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.AUTO"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/auto.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "https://www.nic.auto",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AUTO."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.nic.auto"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-16"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "41492",
-            "digestType" : "1",
-            "algorithm" : "5",
-            "digest" : "4ef1eddd59daee765cd1ed0205081d46d25bbe7c"
-         },
-         {
-            "algorithm" : "5",
-            "keyTag" : "41492",
-            "digestType" : "2",
-            "digest" : "01b3b92918b955d84a70f1bc254513d6fd90a33e8ababc0aafcf8830ac259c2c"
-         }
-      ]
-   },
-   "ldhName" : "auto",
    "entities" : [
       {
-         "handle" : "auto-registrant",
+         "handle" : "auto-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -155,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Grant Carpenter"
                ],
                [
                   "org",
@@ -177,16 +42,28 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 702 757 6555"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "hello@xyz.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "auto-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -245,12 +122,14 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "auto-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -259,12 +138,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Grant Carpenter"
                ],
                [
                   "org",
@@ -287,28 +160,155 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 702 757 6555"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "hello@xyz.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "auto-administrative"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:00"
       }
    ],
    "handle" : "auto",
-   "objectClassName" : "domain"
+   "ldhName" : "auto",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/auto.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.nic.auto",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.131"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:131"
+            ]
+         },
+         "ldhName" : "A.NIC.AUTO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.131"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:131"
+            ]
+         },
+         "ldhName" : "B.NIC.AUTO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.131"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:131"
+            ]
+         },
+         "ldhName" : "C.NIC.AUTO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.131"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:131"
+            ]
+         },
+         "ldhName" : "D.NIC.AUTO",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AUTO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.nic.auto"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "5",
+            "digest" : "4ef1eddd59daee765cd1ed0205081d46d25bbe7c",
+            "digestType" : "1",
+            "keyTag" : "41492"
+         },
+         {
+            "algorithm" : "5",
+            "digest" : "01b3b92918b955d84a70f1bc254513d6fd90a33e8ababc0aafcf8830ac259c2c",
+            "digestType" : "2",
+            "keyTag" : "41492"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

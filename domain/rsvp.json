@@ -1,34 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "rsvp",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2014-08-23",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "7067",
-            "algorithm" : "8",
-            "digest" : "a34484076595033b18742005866b79f5c56fecec5a667494e3b179621b44ee4a"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "rsvp-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "rsvp-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -87,16 +104,14 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "rsvp-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "rsvp-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -155,77 +170,25 @@
                   "crr-tech@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "rsvp-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-23"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:34"
+      }
+   ],
+   "handle" : "rsvp",
    "ldhName" : "rsvp",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/rsvp.html",
@@ -238,14 +201,13 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "https://www.registry.google",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.32.105"
@@ -254,46 +216,46 @@
                "2001:4860:4802:32:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.34.105"
-            ]
-         },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.36.105"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.38.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "216.239.60.105"
@@ -302,8 +264,32 @@
                "2001:4860:4805:0:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -313,16 +299,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.registry.google"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "a34484076595033b18742005866b79f5c56fecec5a667494e3b179621b44ee4a",
+            "digestType" : "2",
+            "keyTag" : "7067"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

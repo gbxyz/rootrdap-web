@@ -1,23 +1,11 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-06"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-01-07"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "seat-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -50,12 +38,77 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "seat-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  ".seat TLD Technical Contact"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CORE Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cours de Rive 2\nGeneva CH-1204\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 22 312 5610"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 22 312 5612"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dnsmaster@corenic.org"
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "seat-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -117,141 +170,25 @@
                   "secretariat@corenic.org"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "seat-administrative"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  ".seat TLD Technical Contact"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CORE Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cours de Rive 2\nGeneva CH-1204\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 22 312 5610"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 22 312 5612"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dnsmaster@corenic.org"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "seat-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "seat",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "10",
-            "keyTag" : "40138",
-            "digestType" : "2",
-            "digest" : "8531b10a28c981d28f0f412dbe6a7985effe40bf0efc8f2f80d45f85770c1a8a"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-06"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:46"
+      }
+   ],
    "handle" : "seat",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.65.11"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.12"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ]
-         },
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
-      }
-   ],
+   "ldhName" : "seat",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/seat.html",
@@ -264,6 +201,56 @@
          "title" : "About RDAP"
       }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -274,20 +261,25 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.SEAT."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -296,22 +288,30 @@
          "title" : "Remark"
       },
       {
-         "title" : "Remark",
          "description" : [
             "http://www.seat.com/content/com/com/en/contact/abuse.html"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "8531b10a28c981d28f0f412dbe6a7985effe40bf0efc8f2f80d45f85770c1a8a",
+            "digestType" : "2",
+            "keyTag" : "40138"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

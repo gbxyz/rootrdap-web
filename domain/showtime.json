@@ -1,19 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "showtime",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "18211",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "127adbfe87ea3d320525990c4783db7eafb3fc10de688eb7b593836b6ce02cca"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "showtime-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -46,82 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "showtime-registrant"
-      },
-      {
-         "handle" : "showtime-technical",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.215.706.5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.215.706.5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
          "handle" : "showtime-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -180,40 +104,187 @@
                   "dotshowtime@markmonitor.com"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "showtime-technical",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.215.706.5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.215.706.5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
+               ]
+            ]
          ]
       }
    ],
-   "ldhName" : "showtime",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-21"
       },
       {
-         "eventDate" : "2020-10-15",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-15"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
+         "eventDate" : "2023-07-26T13:28:53"
       }
    ],
+   "handle" : "showtime",
+   "ldhName" : "showtime",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/showtime.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.showtime.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.68.1"
+            ],
+            "v6" : [
+               "2a01:8840:42:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A0.NIC.SHOWTIME",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.71.1"
+            ],
+            "v6" : [
+               "2a01:8840:45:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A2.NIC.SHOWTIME",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.69.1"
+            ],
+            "v6" : [
+               "2a01:8840:43:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B0.NIC.SHOWTIME",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.70.1"
+            ],
+            "v6" : [
+               "2a01:8840:44:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "C0.NIC.SHOWTIME",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "status" : [
-      "active"
-   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -228,89 +299,18 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.68.1"
-            ],
-            "v6" : [
-               "2a01:8840:42:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.SHOWTIME"
-      },
-      {
-         "ldhName" : "A2.NIC.SHOWTIME",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.71.1"
-            ],
-            "v6" : [
-               "2a01:8840:45:0:0:0:0:1"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "127adbfe87ea3d320525990c4783db7eafb3fc10de688eb7b593836b6ce02cca",
+            "digestType" : "2",
+            "keyTag" : "18211"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.69.1"
-            ],
-            "v6" : [
-               "2a01:8840:43:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.SHOWTIME"
-      },
-      {
-         "ldhName" : "C0.NIC.SHOWTIME",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:44:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.70.1"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/showtime.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.showtime.com",
-         "rel" : "related"
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

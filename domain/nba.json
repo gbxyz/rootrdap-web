@@ -1,19 +1,48 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "59911",
-            "digestType" : "2",
-            "digest" : "734021820d7b1fdeb0567389bcb05a0f47df5f2a0f156d6e9177a9edcb6a8716"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "nba-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "NBA REGISTRY, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "645 Fifth Ave\nNew York NY 10022\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "nba-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -78,8 +107,8 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "nba-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -142,119 +171,39 @@
                ]
             ]
          ]
-      },
-      {
-         "handle" : "nba-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "NBA REGISTRY, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "645 Fifth Ave\nNew York NY 10022\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "ldhName" : "nba",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-07-14",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-14"
       },
       {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
+         "eventDate" : "2023-07-26T13:27:44"
       }
    ],
    "handle" : "nba",
-   "objectClassName" : "domain",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nba.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "nba",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/nba.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.nba.com",
          "rel" : "related",
-         "href" : "http://www.nba.com"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -267,23 +216,22 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.NBA"
+         "ldhName" : "A.NIC.NBA",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "ldhName" : "B.NIC.NBA"
+         "ldhName" : "B.NIC.NBA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.NBA",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
@@ -292,6 +240,7 @@
                "2001:dcd:3:0:0:0:0:9"
             ]
          },
+         "ldhName" : "C.NIC.NBA",
          "objectClassName" : "nameserver"
       },
       {
@@ -303,37 +252,88 @@
                "2610:a1:1071:0:0:0:0:77"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.NBA"
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.NBA",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:77"
-            ],
-            "v4" : [
-               "156.154.145.119"
-            ]
-         },
+         "ldhName" : "NS1.DNS.NIC.NBA",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.NBA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:77"
+            "v4" : [
+               "156.154.145.119"
             ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:77"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.NBA",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
             "v4" : [
                "156.154.159.119"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:77"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.NBA",
+         "objectClassName" : "nameserver"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nba.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "734021820d7b1fdeb0567389bcb05a0f47df5f2a0f156d6e9177a9edcb6a8716",
+            "digestType" : "2",
+            "keyTag" : "59911"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

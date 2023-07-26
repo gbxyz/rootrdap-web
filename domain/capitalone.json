@@ -1,35 +1,11 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-08-04"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "16365",
-            "digestType" : "2",
-            "digest" : "017564f7c0204b23e19605e08e5dcf57c286d6d5097b53440de91d4f04d3abac"
-         }
-      ]
-   },
-   "ldhName" : "capitalone",
    "entities" : [
       {
          "handle" : "capitalone-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -62,12 +38,72 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "capitalone-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Brand Governance"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Capital One Financial Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1680 Capital One Drive\nMcLean VA 22102\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 302 636 5400"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-capitalone@cscglobal.com"
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "capitalone-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -126,92 +162,25 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "capitalone-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Brand Governance"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Capital One Financial Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1680 Capital One Drive\nMcLean VA 22102\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 302 636 5400"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-capitalone@cscglobal.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "capitalone-administrative"
+         ]
       }
    ],
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-08-04"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:33"
+      }
+   ],
    "handle" : "capitalone",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "ldhName" : "capitalone",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/capitalone.html",
@@ -224,14 +193,13 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.capitalone.com",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.173.30"
@@ -240,7 +208,8 @@
                "2001:500:120:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC1.NSTLD.COM"
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -251,57 +220,88 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM"
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC4.NSTLD.COM"
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
    ],
-   "remarks" : [
+   "notices" : [
       {
-         "title" : "Whois Service",
          "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CAPITALONE."
-         ]
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Remark",
          "description" : [
-            "Registration information: http://www.capitalone.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CAPITALONE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.capitalone.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "017564f7c0204b23e19605e08e5dcf57c286d6d5097b53440de91d4f04d3abac",
+            "digestType" : "2",
+            "keyTag" : "16365"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

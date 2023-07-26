@@ -1,20 +1,51 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "48775",
-            "digest" : "3fdfbf7d66854164bd6f7ee44ca6e92f8e7d23e577bdc213d34dfb62a0093e85"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "florist",
    "entities" : [
       {
+         "handle" : "florist-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "florist-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -73,12 +104,14 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "florist-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -137,89 +170,114 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "florist-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "florist-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2013-12-19"
       },
       {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
+         "eventDate" : "2023-07-26T13:26:36"
       }
    ],
    "handle" : "florist",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "florist",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FLORIST."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/florist.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.32.30"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.FLORIST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.33.30"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.FLORIST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.34.30"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.FLORIST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.16.30"
+            ],
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.FLORIST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.35.30"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.FLORIST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.17.30"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.FLORIST",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -240,100 +298,42 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/florist.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.32.30"
-            ],
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.FLORIST"
-      },
-      {
-         "ldhName" : "V0N1.NIC.FLORIST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.33.30"
-            ],
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:30"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N2.NIC.FLORIST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:30"
-            ],
-            "v4" : [
-               "65.22.34.30"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.16.30"
-            ],
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.FLORIST"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.35.30"
-            ],
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.FLORIST"
-      },
-      {
-         "ldhName" : "V2N1.NIC.FLORIST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.17.30"
-            ],
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:30"
-            ]
-         }
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FLORIST."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "3fdfbf7d66854164bd6f7ee44ca6e92f8e7d23e577bdc213d34dfb62a0093e85",
+            "digestType" : "2",
+            "keyTag" : "48775"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

@@ -1,9 +1,8 @@
 {
-   "handle" : "mq",
-   "objectClassName" : "domain",
-   "ldhName" : "mq",
    "entities" : [
       {
+         "handle" : "mq-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -39,11 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mq-registrant"
+         ]
       },
       {
+         "handle" : "mq-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -94,16 +96,11 @@
                   "cplustelecom.exploit-sys@canal-plus.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mq-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "mq-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -160,45 +157,69 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "1997-03-28",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1997-03-28"
       },
       {
-         "eventDate" : "2021-10-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
+         "eventDate" : "2023-07-26T13:27:40"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "mq",
+   "ldhName" : "mq",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.MEDIASERV.NET."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/mq.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: https://www.dom-enic.com"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "https://www.dom-enic.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.56.51.194"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1-FR.MEDIASERV.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.188.172.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1-GP.MEDIASERV.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.16.20.3"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1-MQ.MEDIASERV.NET",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -219,53 +240,32 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/mq.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.MEDIASERV.NET."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "description" : [
+            "Registration information: https://www.dom-enic.com"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "https://www.dom-enic.com"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.56.51.194"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1-FR.MEDIASERV.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "213.188.172.1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1-GP.MEDIASERV.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "213.16.20.3"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1-MQ.MEDIASERV.NET"
-      }
+   "status" : [
+      "active"
    ]
 }

@@ -1,36 +1,74 @@
 {
-   "handle" : "training",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2013-12-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:56"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "44281",
-            "digestType" : "2",
-            "digest" : "80dd6f1aad9c85fed280bc232c0dd8426c09dd7bdd6f6e6bc16232e252cba059"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "training-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldtech@donuts.email"
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "training-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -95,74 +133,8 @@
          ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldtech@donuts.email"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "training-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "training-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -201,31 +173,22 @@
          ]
       }
    ],
-   "ldhName" : "training",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-19"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:20"
       }
    ],
+   "handle" : "training",
+   "ldhName" : "training",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/training.html",
@@ -233,9 +196,9 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.donuts.domains/",
@@ -245,8 +208,6 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.TRAINING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.24.41"
@@ -254,34 +215,35 @@
             "v6" : [
                "2a01:8840:1a:0:0:0:0:41"
             ]
-         }
+         },
+         "ldhName" : "V0N0.NIC.TRAINING",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:41"
-            ],
             "v4" : [
                "65.22.25.41"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:41"
             ]
          },
-         "ldhName" : "V0N1.NIC.TRAINING"
+         "ldhName" : "V0N1.NIC.TRAINING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.TRAINING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:41"
-            ],
             "v4" : [
                "65.22.26.41"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:41"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.TRAINING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N3.NIC.TRAINING",
          "ipAddresses" : {
             "v4" : [
                "161.232.12.41"
@@ -290,6 +252,7 @@
                "2a01:8840:f6:0:0:0:0:41"
             ]
          },
+         "ldhName" : "V0N3.NIC.TRAINING",
          "objectClassName" : "nameserver"
       },
       {
@@ -301,28 +264,51 @@
                "2a01:8840:1d:0:0:0:0:41"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.TRAINING"
+         "ldhName" : "V2N0.NIC.TRAINING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N1.NIC.TRAINING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:41"
-            ],
             "v4" : [
                "161.232.13.41"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:41"
             ]
-         }
+         },
+         "ldhName" : "V2N1.NIC.TRAINING",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TRAINING."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -331,10 +317,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "80dd6f1aad9c85fed280bc232c0dd8426c09dd7bdd6f6e6bc16232e252cba059",
+            "digestType" : "2",
+            "keyTag" : "44281"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

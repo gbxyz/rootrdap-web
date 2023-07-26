@@ -1,24 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "1994-03-24",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "ldhName" : "md",
    "entities" : [
       {
-         "handle" : "md-administrative",
+         "handle" : "md-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -27,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Alexandru Coretchi"
                ],
                [
                   "org",
@@ -55,28 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+37322820905"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domains@stisc.gov.md"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
          "handle" : "md-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -127,16 +96,13 @@
                   "specctld@stisc.gov.md"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "handle" : "md-registrant",
+         "handle" : "md-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -146,6 +112,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Alexandru Coretchi"
                ],
                [
                   "org",
@@ -168,97 +140,112 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+37322820905"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domains@stisc.gov.md"
                ]
             ]
          ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "127",
-            "algorithm" : "14",
-            "digest" : "ca674f4a54be4629950ecdfd492b82c5dfc833006924d5f06f40749a543dd1d4"
-         }
-      ]
-   },
-   "handle" : "md",
-   "objectClassName" : "domain",
-   "links" : [
+   "events" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/md.html"
+         "eventAction" : "registration",
+         "eventDate" : "1994-03-24"
       },
       {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:32"
+      }
+   ],
+   "handle" : "md",
+   "ldhName" : "md",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/md.html",
          "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.nic.md",
          "rel" : "related",
-         "href" : "http://www.nic.md"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NSA.TLD.MD",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "185.108.181.191"
-            ]
+            ],
+            "v6" : []
          },
+         "ldhName" : "NSA.TLD.MD",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "185.108.181.192"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NSB.TLD.MD"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2607:5300:201:3100:0:0:0:2f69"
             ],
-            "v4" : [
-               "144.217.93.2"
-            ]
+            "v6" : []
          },
-         "ldhName" : "NSC.DNS.MD"
-      },
-      {
-         "ldhName" : "NSF.DNS.MD",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:41d0:401:3100:0:0:0:7162"
-            ],
-            "v4" : [
-               "92.222.76.179"
-            ]
-         },
+         "ldhName" : "NSB.TLD.MD",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a00:c5a0:0:aaaa:89:32:236:165"
-            ],
             "v4" : [
-               "89.32.236.165"
+               "144.217.93.2"
+            ],
+            "v6" : [
+               "2607:5300:201:3100:0:0:0:2f69"
             ]
          },
-         "ldhName" : "NSR.DNS.MD"
+         "ldhName" : "NSC.DNS.MD",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "92.222.76.179"
+            ],
+            "v6" : [
+               "2001:41d0:401:3100:0:0:0:7162"
+            ]
+         },
+         "ldhName" : "NSF.DNS.MD",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "89.32.236.165"
+            ],
+            "v6" : [
+               "2a00:c5a0:0:aaaa:89:32:236:165"
+            ]
+         },
+         "ldhName" : "NSR.DNS.MD",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -279,6 +266,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -287,10 +279,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.md"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -299,10 +291,18 @@
          "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "14",
+            "digest" : "ca674f4a54be4629950ecdfd492b82c5dfc833006924d5f06f40749a543dd1d4",
+            "digestType" : "2",
+            "keyTag" : "127"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

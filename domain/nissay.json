@@ -1,24 +1,51 @@
 {
-   "handle" : "nissay",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-08"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
-      }
-   ],
-   "ldhName" : "nissay",
    "entities" : [
       {
+         "handle" : "nissay-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Nippon Life Insurance Company"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3-5-12, Imabashi, Chuo-ku\nOsaka 541-8501\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "nissay-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -77,12 +104,7 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nissay-technical"
+         ]
       },
       {
          "handle" : "nissay-administrative",
@@ -141,70 +163,29 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "nissay-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Nippon Life Insurance Company"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3-5-12, Imabashi, Chuo-ku\nOsaka 541-8501\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b59d6bda2c131f954a260174aae128a43ba29580997fc822e4006148960acfd4",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "62124"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-08"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:48"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "nissay",
+   "ldhName" : "nissay",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/nissay.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/nissay.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -214,19 +195,18 @@
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC1.NSTLD.COM"
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -235,22 +215,22 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC2.NSTLD.COM"
-      },
-      {
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
+         "ldhName" : "AC2.NSTLD.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "192.42.176.30"
@@ -259,7 +239,8 @@
                "2001:500:123:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC4.NSTLD.COM"
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -272,20 +253,25 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.NISSAY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -294,16 +280,30 @@
          "title" : "Remark"
       },
       {
-         "title" : "Remark",
          "description" : [
             "http://www.nissay.co.jp/english/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b59d6bda2c131f954a260174aae128a43ba29580997fc822e4006148960acfd4",
+            "digestType" : "2",
+            "keyTag" : "62124"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

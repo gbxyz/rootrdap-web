@@ -1,76 +1,11 @@
 {
-   "handle" : "mitsubishi",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-06-24"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "45959",
-            "digestType" : "2",
-            "digest" : "1e5bc196fd959fbefb2cbd681475be0ff1de7fbd074b2ce338894ec2b011c0dc"
-         }
-      ]
-   },
    "entities" : [
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Mitsubishi Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3-1, Marunouchi 2-Chome\nChiyoda-ku Tokyo 100-8086\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mitsubishi-registrant"
-      },
       {
          "handle" : "mitsubishi-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -129,12 +64,14 @@
                   "registry@brightsconsulting.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "mitsubishi-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,60 +130,84 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "mitsubishi-technical",
-         "objectClassName" : "entity"
-      }
-   ],
-   "ldhName" : "mitsubishi",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "mitsubishi-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Mitsubishi Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3-1, Marunouchi 2-Chome\nChiyoda-ku Tokyo 100-8086\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-24"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:35"
+      }
+   ],
+   "handle" : "mitsubishi",
+   "ldhName" : "mitsubishi",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/mitsubishi.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/mitsubishi.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.gmoregistry.com/en/",
          "rel" : "related",
-         "href" : "http://www.gmoregistry.com/en/"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.4"
@@ -254,7 +215,9 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
             ]
-         }
+         },
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -265,18 +228,18 @@
                "2001:dcd:2:0:0:0:0:4"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.GMOREGISTRY.NET"
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "37.209.196.4"
-            ]
-         }
+            ],
+            "v6" : []
+         },
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -287,16 +250,39 @@
                "2001:dcd:4:0:0:0:0:4"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET"
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -310,5 +296,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "1e5bc196fd959fbefb2cbd681475be0ff1de7fbd074b2ce338894ec2b011c0dc",
+            "digestType" : "2",
+            "keyTag" : "45959"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

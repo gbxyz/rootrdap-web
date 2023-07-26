@@ -1,9 +1,48 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "qpon",
-   "ldhName" : "qpon",
    "entities" : [
       {
+         "handle" : "qpon-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DOTQPON LLC."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1112 Montana Ave. Suite C-920\nSanta Monica CA 90403\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "qpon-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -65,13 +104,11 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "qpon-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "qpon-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -126,163 +163,67 @@
                ]
             ]
          ]
-      },
-      {
-         "handle" : "qpon-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DOTQPON LLC."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1112 Montana Ave. Suite C-920\nSanta Monica CA 90403\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "29890",
-            "digest" : "7467925ea4afc0a3a7e0e36a640721385ffc85b26b7002b492ea8cf45f4c9a90"
-         },
-         {
-            "keyTag" : "29890",
-            "digestType" : "1",
-            "algorithm" : "8",
-            "digest" : "44c89222bc6f471572a2d95af068d70d82d99d65"
-         },
-         {
-            "digest" : "3862ebe8922407508c2915d29ada122bfdc2385e90e14f0b98145665d794e347",
-            "algorithm" : "8",
-            "keyTag" : "2327",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "c3a7db5bb487a23ba948a762681a1899980dedc0",
-            "algorithm" : "8",
-            "keyTag" : "2327",
-            "digestType" : "1"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-01-09",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-09"
       },
       {
-         "eventDate" : "2023-02-24",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-02-24"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
+         "eventDate" : "2023-07-26T13:28:21"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.QPON."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.dotqpon.com/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "handle" : "qpon",
+   "ldhName" : "qpon",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/qpon.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
          "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
          "href" : "http://www.dotqpon.com/",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:128"
-            ],
             "v4" : [
                "194.169.218.128"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.QPON"
-      },
-      {
-         "ldhName" : "B.NIC.QPON",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:128"
             ],
-            "v4" : [
-               "185.24.64.128"
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:128"
             ]
          },
+         "ldhName" : "A.NIC.QPON",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.QPON",
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.128"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:128"
+            ]
+         },
+         "ldhName" : "B.NIC.QPON",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "212.18.248.128"
@@ -290,7 +231,9 @@
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:128"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.QPON",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -301,8 +244,8 @@
                "2a04:2b00:13ff:0:0:0:0:128"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.QPON"
+         "ldhName" : "D.NIC.QPON",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -315,12 +258,69 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.QPON."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.dotqpon.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "7467925ea4afc0a3a7e0e36a640721385ffc85b26b7002b492ea8cf45f4c9a90",
+            "digestType" : "2",
+            "keyTag" : "29890"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "44c89222bc6f471572a2d95af068d70d82d99d65",
+            "digestType" : "1",
+            "keyTag" : "29890"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "3862ebe8922407508c2915d29ada122bfdc2385e90e14f0b98145665d794e347",
+            "digestType" : "2",
+            "keyTag" : "2327"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "c3a7db5bb487a23ba948a762681a1899980dedc0",
+            "digestType" : "1",
+            "keyTag" : "2327"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

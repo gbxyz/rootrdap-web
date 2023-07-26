@@ -59,6 +59,11 @@
          ]
       },
       {
+         "handle" : "amsterdam-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -109,16 +114,14 @@
                   "admin@sidn.nl"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "amsterdam-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "amsterdam-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -151,24 +154,9 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "amsterdam",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "29930",
-            "digestType" : "2",
-            "algorithm" : "13",
-            "digest" : "66e790789a927fe0510dffbc2309654d9cc1b4d32fb3797b6ea6f31cad59d7f3"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
          "eventAction" : "registration",
@@ -180,44 +168,40 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
+         "eventDate" : "2023-07-26T13:24:50"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "amsterdam",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "amsterdam",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AMSTERDAM."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/amsterdam.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.nic.amsterdam"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.nic.amsterdam",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:678:2c:0:194:0:28:4"
-            ],
             "v4" : [
                "194.0.28.4"
+            ],
+            "v6" : [
+               "2001:678:2c:0:194:0:28:4"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.AMSTERDAM"
+         "ldhName" : "NS1.DNS.AMSTERDAM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -228,61 +212,77 @@
                "2001:678:20:0:0:0:0:26"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.AMSTERDAM"
+         "ldhName" : "NS3.DNS.AMSTERDAM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ac:0:0:0:0:202"
-            ],
             "v4" : [
                "185.159.199.202"
+            ],
+            "v6" : [
+               "2620:10a:80ac:0:0:0:0:202"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.DNS.AMSTERDAM"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/amsterdam.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.amsterdam",
-         "title" : "URL for registration services"
+         "ldhName" : "NS4.DNS.AMSTERDAM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AMSTERDAM."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.amsterdam"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "66e790789a927fe0510dffbc2309654d9cc1b4d32fb3797b6ea6f31cad59d7f3",
+            "digestType" : "2",
+            "keyTag" : "29930"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

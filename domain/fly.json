@@ -1,37 +1,8 @@
 {
-   "handle" : "fly",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-08-23"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "78e00a911e48a9109506338e1fb131c462333aa1e35c00e2f24971d28a97cbd0",
-            "digestType" : "2",
-            "keyTag" : "65399",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "fly",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "fly-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -98,6 +69,9 @@
       {
          "handle" : "fly-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -156,12 +130,14 @@
                   "crr-tech@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "fly-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -194,28 +170,112 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "fly-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-23"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:37"
+      }
    ],
-   "status" : [
-      "active"
+   "handle" : "fly",
+   "ldhName" : "fly",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/fly.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.registry.google",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.38.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -226,84 +286,10 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.32.105"
-            ]
-         },
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.34.105"
-            ]
-         },
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.36.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.60.105"
-            ],
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/fly.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "https://www.registry.google",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -324,5 +310,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "78e00a911e48a9109506338e1fb131c462333aa1e35c00e2f24971d28a97cbd0",
+            "digestType" : "2",
+            "keyTag" : "65399"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

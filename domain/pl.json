@@ -1,8 +1,45 @@
 {
-   "handle" : "pl",
-   "objectClassName" : "domain",
-   "ldhName" : "pl",
    "entities" : [
+      {
+         "handle" : "pl-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Research and Academic Computer Network"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Kolska 12\nWarsaw 01-045\nPoland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "handle" : "pl-technical",
          "objectClassName" : "entity",
@@ -70,8 +107,11 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "pl-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -130,215 +170,136 @@
                   "pl-admin@dns.pl"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "handle" : "pl-registrant",
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Research and Academic Computer Network"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Kolska 12\nWarsaw 01-045\nPoland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "59899",
-            "algorithm" : "8",
-            "digest" : "914b8a9bdae8efa6b0323ff7f7eb90da985fe63eae0e1cb614cf6d5b116f9c80"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "1990-07-30",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1990-07-30"
       },
       {
-         "eventDate" : "2023-06-17",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-17"
       },
       {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:11"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "pl",
+   "ldhName" : "pl",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DNS.PL."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/pl.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.dns.pl/english/"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.dns.pl/english/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A-DNS.PL",
          "ipAddresses" : {
-            "v6" : [
-               "2001:7f9:0:0:0:0:0:53"
-            ],
             "v4" : [
                "192.102.225.53"
+            ],
+            "v6" : [
+               "2001:7f9:0:0:0:0:0:53"
             ]
          },
+         "ldhName" : "A-DNS.PL",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:7f9:c:0:0:0:0:53"
-            ],
             "v4" : [
                "192.195.72.53"
+            ],
+            "v6" : [
+               "2001:7f9:c:0:0:0:0:53"
             ]
          },
-         "ldhName" : "B-DNS.PL"
+         "ldhName" : "B-DNS.PL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D-DNS.PL",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:48"
-            ],
             "v4" : [
                "185.159.197.48"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:48"
             ]
-         }
+         },
+         "ldhName" : "D-DNS.PL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "E-DNS.PL",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "46.28.245.82"
             ],
             "v6" : []
-         }
-      },
-      {
-         "ldhName" : "F-DNS.PL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:20:0:0:0:0:29"
-            ],
-            "v4" : [
-               "194.0.25.29"
-            ]
-         }
-      },
-      {
-         "ldhName" : "G-DNS.PL",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:6d8:1001:1:0:0:0:252"
-            ],
-            "v4" : [
-               "149.156.1.252"
-            ]
          },
+         "ldhName" : "E-DNS.PL",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:48"
+            "v4" : [
+               "194.0.25.29"
             ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:29"
+            ]
+         },
+         "ldhName" : "F-DNS.PL",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "149.156.1.252"
+            ],
+            "v6" : [
+               "2001:6d8:1001:1:0:0:0:252"
+            ]
+         },
+         "ldhName" : "G-DNS.PL",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
             "v4" : [
                "185.159.198.48"
+            ],
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:48"
             ]
          },
-         "ldhName" : "H-DNS.PL"
+         "ldhName" : "H-DNS.PL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:7004:ad:0:0:1"
-            ],
             "v4" : [
                "204.61.217.4"
+            ],
+            "v6" : [
+               "2001:500:14:7004:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "J-DNS.PL"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/pl.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.dns.pl/english/",
-         "rel" : "related"
+         "ldhName" : "J-DNS.PL",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -358,5 +319,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DNS.PL."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.dns.pl/english/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "914b8a9bdae8efa6b0323ff7f7eb90da985fe63eae0e1cb614cf6d5b116f9c80",
+            "digestType" : "2",
+            "keyTag" : "59899"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

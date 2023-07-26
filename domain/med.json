@@ -1,61 +1,8 @@
 {
-   "handle" : "med",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "36455",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "4b9cbec710c3fb2eddc07ae31e75fa59855fb5abcb9ce68a61cb7e490b5831c4"
-         }
-      ]
-   },
    "entities" : [
       {
-         "handle" : "med-registrant",
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Medistry LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3029 Prospect Ave\nCleveland OH 44115\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "med-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -176,80 +123,88 @@
                ]
             ]
          ]
+      },
+      {
+         "handle" : "med-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Medistry LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3029 Prospect Ave\nCleveland OH 44115\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "med",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-11-09"
       },
       {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:32"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "med",
+   "ldhName" : "med",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MED."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/med.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.MED",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:403:0:0:0:0:124"
-            ],
             "v4" : [
                "213.248.219.124"
+            ],
+            "v6" : [
+               "2a01:618:403:0:0:0:0:124"
             ]
-         }
+         },
+         "ldhName" : "DNS1.NIC.MED",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -260,11 +215,10 @@
                "2401:fd80:403:0:0:0:0:124"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS2.NIC.MED"
+         "ldhName" : "DNS2.NIC.MED",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS3.NIC.MED",
          "ipAddresses" : {
             "v4" : [
                "213.248.223.124"
@@ -273,11 +227,10 @@
                "2a01:618:407:0:0:0:0:124"
             ]
          },
+         "ldhName" : "DNS3.NIC.MED",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS4.NIC.MED",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "43.230.51.124"
@@ -285,23 +238,23 @@
             "v6" : [
                "2401:fd80:407:0:0:0:0:124"
             ]
-         }
+         },
+         "ldhName" : "DNS4.NIC.MED",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSA.NIC.MED"
+         "ldhName" : "DNSA.NIC.MED",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSB.NIC.MED",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.101.3"
@@ -309,22 +262,23 @@
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSB.NIC.MED",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSC.NIC.MED"
+         "ldhName" : "DNSC.NIC.MED",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.103.3"
@@ -333,19 +287,65 @@
                "2610:a1:1010:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSD.NIC.MED"
+         "ldhName" : "DNSD.NIC.MED",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/med.html",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MED."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "4b9cbec710c3fb2eddc07ae31e75fa59855fb5abcb9ce68a61cb7e490b5831c4",
+            "digestType" : "2",
+            "keyTag" : "36455"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

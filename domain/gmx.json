@@ -1,25 +1,11 @@
 {
-   "handle" : "gmx",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-08-07"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-09-02"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "gmx-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -52,14 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gmx-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -118,14 +104,14 @@
                   "dnsmaster@irondns.net"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gmx-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -176,45 +162,56 @@
                   "gmxregistry@1und1.de"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "ldhName" : "gmx",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "49537",
-            "digestType" : "2",
-            "algorithm" : "10",
-            "digest" : "ee15cf33c2e02f308291960df44a5a87e16c0535e34178528780a9a4f28a736f"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-07"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-09-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:47"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "gmx",
+   "ldhName" : "gmx",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gmx.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://cp.nic.gmx",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
          },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.11"
@@ -223,22 +220,22 @@
                "2a01:5b0:5:0:0:0:0:b"
             ]
          },
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
             ]
          },
-         "ldhName" : "ANYCAST24.IRONDNS.NET"
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.64.11"
@@ -247,24 +244,8 @@
                "2a01:5b0:4:0:0:0:0:b"
             ]
          },
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gmx.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://cp.nic.gmx",
-         "title" : "URL for registration services"
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -285,18 +266,23 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GMX."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://cp.nic.gmx"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -304,5 +290,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "ee15cf33c2e02f308291960df44a5a87e16c0535e34178528780a9a4f28a736f",
+            "digestType" : "2",
+            "keyTag" : "49537"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

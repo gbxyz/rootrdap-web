@@ -1,8 +1,11 @@
 {
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "photos-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -35,12 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "photos-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -99,16 +104,11 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "photos-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "photos-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -173,67 +173,51 @@
          ]
       }
    ],
-   "ldhName" : "photos",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "41914",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "b6a00eeeb4864e5152cf32cb1dc5ae4528ab2cf82c46a4de0a2d77921b51c979"
-         }
-      ]
-   },
    "events" : [
       {
-         "eventDate" : "2013-12-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-12"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-11-10"
       },
       {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:07"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "photos",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "photos",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PHOTOS."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/photos.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.PHOTOS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:40"
-            ],
             "v4" : [
                "65.22.28.40"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:40"
             ]
-         }
+         },
+         "ldhName" : "V0N0.NIC.PHOTOS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -244,23 +228,22 @@
                "2a01:8840:1f:0:0:0:0:40"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.PHOTOS"
-      },
-      {
-         "ldhName" : "V0N2.NIC.PHOTOS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:40"
-            ],
-            "v4" : [
-               "65.22.30.40"
-            ]
-         },
+         "ldhName" : "V0N1.NIC.PHOTOS",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.30.40"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:40"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.PHOTOS",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "161.232.14.40"
@@ -269,7 +252,8 @@
                "2a01:8840:f8:0:0:0:0:40"
             ]
          },
-         "ldhName" : "V0N3.NIC.PHOTOS"
+         "ldhName" : "V0N3.NIC.PHOTOS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -280,37 +264,20 @@
                "2a01:8840:21:0:0:0:0:40"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.PHOTOS"
+         "ldhName" : "V2N0.NIC.PHOTOS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N1.NIC.PHOTOS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:40"
-            ],
             "v4" : [
                "161.232.15.40"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:40"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/photos.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
+         },
+         "ldhName" : "V2N1.NIC.PHOTOS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -331,10 +298,43 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PHOTOS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b6a00eeeb4864e5152cf32cb1dc5ae4528ab2cf82c46a4de0a2d77921b51c979",
+            "digestType" : "2",
+            "keyTag" : "41914"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

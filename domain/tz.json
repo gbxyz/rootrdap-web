@@ -1,171 +1,11 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tz.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "https://karibu.tz/",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "FORK.STH.DNSNODE.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:3f0:0:306:0:0:0:53"
-            ],
-            "v4" : [
-               "77.72.229.254"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:20"
-            ],
-            "v4" : [
-               "196.216.168.20"
-            ]
-         },
-         "ldhName" : "NS-TZ.AFRINIC.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6015:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.15"
-            ]
-         },
-         "ldhName" : "NS.ANYCAST.CO.TZ"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "196.216.162.67"
-            ],
-            "v6" : [
-               "2001:43f8:e0:1:0:0:0:67"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.TZNIC.OR.TZ"
-      },
-      {
-         "ldhName" : "RIP.PSG.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:418:1:0:0:0:0:39"
-            ],
-            "v4" : [
-               "147.28.0.39"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:148f:fffd:0:0:0:0:11"
-            ],
-            "v4" : [
-               "185.43.134.11"
-            ]
-         },
-         "ldhName" : "TZ-E.NS.NIC.CZ"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.TZNIC.OR.TZ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://karibu.tz/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "tz",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1995-07-14"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "13",
-            "keyTag" : "30234",
-            "digestType" : "2",
-            "digest" : "3d83825b9f7d66f9b28b5566ba5371798e8d3b88ef079bb88f52617811c1b9a0"
-         }
-      ]
-   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "tz-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -224,14 +64,14 @@
                   "mwesigwa.felician@tcra.go.tz"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "tz-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -290,12 +130,14 @@
                   "simon.balthazar@tcra.go.tz"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "tz-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -328,13 +170,171 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "tz-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "tz"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1995-07-14"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-03-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:22"
+      }
+   ],
+   "handle" : "tz",
+   "ldhName" : "tz",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tz.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://karibu.tz/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "77.72.229.254"
+            ],
+            "v6" : [
+               "2a01:3f0:0:306:0:0:0:53"
+            ]
+         },
+         "ldhName" : "FORK.STH.DNSNODE.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.20"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:20"
+            ]
+         },
+         "ldhName" : "NS-TZ.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.15"
+            ],
+            "v6" : [
+               "2001:500:14:6015:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "NS.ANYCAST.CO.TZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.162.67"
+            ],
+            "v6" : [
+               "2001:43f8:e0:1:0:0:0:67"
+            ]
+         },
+         "ldhName" : "NS2.TZNIC.OR.TZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "147.28.0.39"
+            ],
+            "v6" : [
+               "2001:418:1:0:0:0:0:39"
+            ]
+         },
+         "ldhName" : "RIP.PSG.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.43.134.11"
+            ],
+            "v6" : [
+               "2001:148f:fffd:0:0:0:0:11"
+            ]
+         },
+         "ldhName" : "TZ-E.NS.NIC.CZ",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.TZNIC.OR.TZ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://karibu.tz/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "3d83825b9f7d66f9b28b5566ba5371798e8d3b88ef079bb88f52617811c1b9a0",
+            "digestType" : "2",
+            "keyTag" : "30234"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

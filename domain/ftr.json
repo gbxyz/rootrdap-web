@@ -1,23 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "ftr",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2016-01-29",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "ftr-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Frontier Communications Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "401 Merritt 7\nNorwalk CT 06851\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "ftr-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -76,16 +104,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "ftr-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "ftr-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -140,105 +163,79 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "ftr-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Frontier Communications Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "401 Merritt 7\nNorwalk CT 06851\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "ldhName" : "ftr",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "44104",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "42ecbfdd47bc85333fb13850757d18493116ecabdc33eb40ca70d7cb952d9d52"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-29"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:40"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "ftr",
+   "ldhName" : "ftr",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ftr.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://frontier.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.FTR"
-      },
-      {
-         "ldhName" : "B.NIC.FTR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
             ],
-            "v4" : [
-               "37.209.194.9"
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A.NIC.FTR",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
-               "37.209.196.9"
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C.NIC.FTR"
+         "ldhName" : "B.NIC.FTR",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.FTR",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.FTR",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.144.65"
@@ -247,6 +244,7 @@
                "2610:a1:1071:0:0:0:0:41"
             ]
          },
+         "ldhName" : "NS1.DNS.NIC.FTR",
          "objectClassName" : "nameserver"
       },
       {
@@ -258,11 +256,10 @@
                "2610:a1:1072:0:0:0:0:41"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.FTR"
+         "ldhName" : "NS2.DNS.NIC.FTR",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.FTR",
          "ipAddresses" : {
             "v4" : [
                "156.154.159.65"
@@ -271,24 +268,8 @@
                "2610:a1:1073:0:0:0:0:41"
             ]
          },
+         "ldhName" : "NS3.DNS.NIC.FTR",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/ftr.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://frontier.com",
-         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -301,13 +282,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -317,16 +303,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://frontier.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "42ecbfdd47bc85333fb13850757d18493116ecabdc33eb40ca70d7cb952d9d52",
+            "digestType" : "2",
+            "keyTag" : "44104"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

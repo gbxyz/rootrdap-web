@@ -1,10 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "bg",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "bg-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -37,14 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
          "handle" : "bg-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -103,12 +104,14 @@
                   "daniel@digsys.bg"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "bg-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -167,82 +170,56 @@
                   "dhs@digsys.bg"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "bg-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "bg",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "305151ebb808cfa54a262403982d4c27e081b1c4accdad4b4d83ce091188b1a0",
-            "keyTag" : "58606",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "1995-01-03",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1995-01-03"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-02-24"
       },
       {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:13"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "bg",
+   "ldhName" : "bg",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.REGISTER.BG."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/bg.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.register.bg"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.register.bg",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a02:6a80:0:0:192:92:129:99"
-            ],
             "v4" : [
                "192.92.129.99"
+            ],
+            "v6" : [
+               "2a02:6a80:0:0:192:92:129:99"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.BG"
+         "ldhName" : "A.NIC.BG",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.BG",
          "ipAddresses" : {
             "v4" : [
                "193.68.3.232"
@@ -251,10 +228,10 @@
                "2a02:6a80:0:0:193:68:3:232"
             ]
          },
+         "ldhName" : "B.NIC.BG",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "193.68.99.99"
@@ -263,7 +240,8 @@
                "2a02:6a80:0:0:193:68:99:99"
             ]
          },
-         "ldhName" : "C.NIC.BG"
+         "ldhName" : "C.NIC.BG",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -274,23 +252,22 @@
                "2001:678:3c:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.BG"
-      },
-      {
-         "ldhName" : "E.NIC.BG",
-         "ipAddresses" : {
-            "v6" : [
-               "2a02:6a80:530e:0:0:0:0:1"
-            ],
-            "v4" : [
-               "185.143.80.1"
-            ]
-         },
+         "ldhName" : "D.NIC.BG",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.143.80.1"
+            ],
+            "v6" : [
+               "2a02:6a80:530e:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "E.NIC.BG",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "204.61.216.110"
@@ -299,42 +276,65 @@
                "2001:500:14:6110:ad:0:0:1"
             ]
          },
-         "ldhName" : "P.NIC.BG"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bg.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.register.bg",
-         "title" : "URL for registration services"
+         "ldhName" : "P.NIC.BG",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.REGISTER.BG."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.register.bg"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "305151ebb808cfa54a262403982d4c27e081b1c4accdad4b4d83ce091188b1a0",
+            "digestType" : "2",
+            "keyTag" : "58606"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

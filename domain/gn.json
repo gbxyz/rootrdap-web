@@ -1,19 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "gn",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "38486",
-            "algorithm" : "8",
-            "digest" : "4d9b33859b77bab1986ceaacc6e4a0534cdee69ac5e406c6d082c9314e0fce66"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "gn-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -49,13 +38,63 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gn-registrant"
+         ]
       },
       {
+         "handle" : "gn-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Randy Bush"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "5147 Crystal Springs Drive NE\nBainbridge Island WA 98110\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 206 356 8341"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "randy@psg.com"
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "gn-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -118,62 +157,8 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "gn-technical",
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Randy Bush"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "5147 Crystal Springs Drive NE\nBainbridge Island WA 98110\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 206 356 8341"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "randy@psg.com"
-               ]
-            ]
-         ]
       }
    ],
-   "ldhName" : "gn",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -185,33 +170,64 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
+         "eventDate" : "2023-07-26T13:26:48"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "gn",
+   "ldhName" : "gn",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/gn.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://psg.com/dns/gn"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://psg.com/dns/gn",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "77.72.229.254"
+            ],
+            "v6" : [
+               "2a01:3f0:0:306:0:0:0:53"
+            ]
+         },
+         "ldhName" : "FORK.STH.DNSNODE.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.49"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "NS-GN.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "147.28.0.39"
+            ],
+            "v6" : [
+               "2001:418:1:0:0:0:0:39"
+            ]
+         },
+         "ldhName" : "RIP.PSG.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -232,59 +248,43 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/gn.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "description" : [
+            "Registration information: http://psg.com/dns/gn"
+         ],
+         "title" : "Remark"
       },
       {
-         "href" : "http://psg.com/dns/gn",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "FORK.STH.DNSNODE.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "77.72.229.254"
-            ],
-            "v6" : [
-               "2a01:3f0:0:306:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS-GN.AFRINIC.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "196.216.168.49"
-            ],
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:49"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "4d9b33859b77bab1986ceaacc6e4a0534cdee69ac5e406c6d082c9314e0fce66",
+            "digestType" : "2",
+            "keyTag" : "38486"
          }
-      },
-      {
-         "ldhName" : "RIP.PSG.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:418:1:0:0:0:0:39"
-            ],
-            "v4" : [
-               "147.28.0.39"
-            ]
-         }
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

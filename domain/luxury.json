@@ -1,25 +1,11 @@
 {
-   "handle" : "luxury",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-01-09"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-12"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "luxury-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -52,12 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "luxury-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -119,11 +104,14 @@
                   "jennifer.molina@join.luxury"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "luxury-administrative"
+         ]
       },
       {
+         "handle" : "luxury-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,93 +170,30 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "luxury-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:28"
+      }
+   ],
+   "handle" : "luxury",
    "ldhName" : "luxury",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "d602e8f4fd9729146d1fb1d249544dceece615e528eb2e4997fb1760b004d67e",
-            "algorithm" : "8",
-            "keyTag" : "3664",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "deb7fe904a2e04500acc98f3f5b9d6db275139fbc92ebb2938bcf9e842812935",
-            "digestType" : "2",
-            "keyTag" : "32039",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:98"
-            ],
-            "v4" : [
-               "194.169.218.98"
-            ]
-         },
-         "ldhName" : "A.NIC.LUXURY"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:98"
-            ],
-            "v4" : [
-               "185.24.64.98"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.LUXURY"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:85"
-            ],
-            "v4" : [
-               "212.18.248.98"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.LUXURY"
-      },
-      {
-         "ldhName" : "D.NIC.LUXURY",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:98"
-            ],
-            "v4" : [
-               "212.18.249.98"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/luxury.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/luxury.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -276,9 +201,59 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "https://join.luxury/",
          "rel" : "related",
-         "href" : "https://join.luxury/"
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.98"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:98"
+            ]
+         },
+         "ldhName" : "A.NIC.LUXURY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.98"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:98"
+            ]
+         },
+         "ldhName" : "B.NIC.LUXURY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.98"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:85"
+            ]
+         },
+         "ldhName" : "C.NIC.LUXURY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.98"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:98"
+            ]
+         },
+         "ldhName" : "D.NIC.LUXURY",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -291,26 +266,31 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.LUXURY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://join.luxury/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -318,5 +298,25 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "d602e8f4fd9729146d1fb1d249544dceece615e528eb2e4997fb1760b004d67e",
+            "digestType" : "2",
+            "keyTag" : "3664"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "deb7fe904a2e04500acc98f3f5b9d6db275139fbc92ebb2938bcf9e842812935",
+            "digestType" : "2",
+            "keyTag" : "32039"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

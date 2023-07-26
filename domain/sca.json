@@ -1,57 +1,11 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "2433227153341429fd6dc9cc654844e9614c0bf4d408c39bbe0149e1716438de",
-            "keyTag" : "11691",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
-         "handle" : "sca-registrant",
+         "handle" : "sca-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "SVENSKA CELLULOSA AKTIEBOLAGET SCA (publ)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Klarabergsviadukten 63\nStockholm SE-111 64\nSweden"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
          "vcardArray" : [
             "vcard",
             [
@@ -110,14 +64,14 @@
                   "lorna.gradden.sca@valideus.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "sca-administrative"
+         ]
       },
       {
+         "handle" : "sca-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -176,16 +130,49 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "sca-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
-         "handle" : "sca-technical",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "SVENSKA CELLULOSA AKTIEBOLAGET SCA (publ)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Klarabergsviadukten 63\nStockholm SE-111 64\nSweden"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "sca",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -196,50 +183,12 @@
          "eventDate" : "2020-10-01"
       },
       {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:42"
       }
    ],
    "handle" : "sca",
-   "objectClassName" : "domain",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SCA."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.sca"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "sca",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/sca.html",
@@ -247,20 +196,18 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://nic.sca",
          "rel" : "related",
-         "href" : "http://nic.sca"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.173.30"
@@ -268,11 +215,11 @@
             "v6" : [
                "2001:500:120:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -280,7 +227,9 @@
             "v6" : [
                "2001:500:121:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -291,11 +240,10 @@
                "2001:500:122:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.176.30"
@@ -304,12 +252,64 @@
                "2001:500:123:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC4.NSTLD.COM"
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SCA."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.sca"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2433227153341429fd6dc9cc654844e9614c0bf4d408c39bbe0149e1716438de",
+            "digestType" : "2",
+            "keyTag" : "11691"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

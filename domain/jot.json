@@ -1,36 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "jot",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-12"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:51",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "e6238d8e60f3d9967690f2d435f35503ca777fc828b7deba61a1e4cc7e97bfcc",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "60425"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
          "handle" : "jot-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -63,72 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Registry Services Technical"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Nominet"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44.1865332211"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registrytechnical@nominet.uk"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "jot-technical"
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "jot-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -187,41 +104,87 @@
                   "jot-rzm@amazon.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
-      }
-   ],
-   "ldhName" : "jot",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "handle" : "jot-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
          ],
-         "title" : "Comments"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Registry Services Technical"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Nominet"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44.1865332211"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registrytechnical@nominet.uk"
+               ]
+            ]
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:11"
+      }
+   ],
+   "handle" : "jot",
+   "ldhName" : "jot",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/jot.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
@@ -237,7 +200,6 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.JOT",
          "ipAddresses" : {
             "v4" : [
                "213.248.218.70"
@@ -246,18 +208,19 @@
                "2a01:618:402:0:0:0:0:70"
             ]
          },
+         "ldhName" : "DNS1.NIC.JOT",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS2.NIC.JOT",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:70"
-            ],
             "v4" : [
                "103.49.82.70"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:70"
             ]
          },
+         "ldhName" : "DNS2.NIC.JOT",
          "objectClassName" : "nameserver"
       },
       {
@@ -269,11 +232,10 @@
                "2a01:618:406:0:0:0:0:70"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.JOT"
+         "ldhName" : "DNS3.NIC.JOT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS4.NIC.JOT",
          "ipAddresses" : {
             "v4" : [
                "43.230.50.70"
@@ -282,11 +244,10 @@
                "2401:fd80:406:0:0:0:0:70"
             ]
          },
+         "ldhName" : "DNS4.NIC.JOT",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSA.NIC.JOT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.100.3"
@@ -294,44 +255,69 @@
             "v6" : [
                "2001:502:ad09:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSA.NIC.JOT",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.JOT"
+         "ldhName" : "DNSB.NIC.JOT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSC.NIC.JOT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSC.NIC.JOT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSD.NIC.JOT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSD.NIC.JOT",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -341,10 +327,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.amazonregistry.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -352,5 +338,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "e6238d8e60f3d9967690f2d435f35503ca777fc828b7deba61a1e4cc7e97bfcc",
+            "digestType" : "2",
+            "keyTag" : "60425"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

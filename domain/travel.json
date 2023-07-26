@@ -1,26 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "travel",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2005-07-27",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-10"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:56"
-      }
-   ],
-   "ldhName" : "travel",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "travel-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -85,6 +67,11 @@
          ]
       },
       {
+         "handle" : "travel-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,14 +130,11 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "travel-administrative"
+         ]
       },
       {
+         "handle" : "travel-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -186,28 +170,25 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "travel-registrant"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "60277",
-            "digest" : "df8590752dcf2cc075f91d5a6178c38a7ba1dbbc0c2327b88ca37be4797be126"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2005-07-27"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:20"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "travel",
+   "ldhName" : "travel",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/travel.html",
@@ -227,31 +208,30 @@
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:8"
-            ],
             "v4" : [
                "65.22.28.8"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:8"
             ]
          },
-         "ldhName" : "V0N0.NIC.TRAVEL"
+         "ldhName" : "V0N0.NIC.TRAVEL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:8"
-            ],
             "v4" : [
                "65.22.29.8"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.TRAVEL"
+         "ldhName" : "V0N1.NIC.TRAVEL",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.30.8"
@@ -260,7 +240,8 @@
                "2a01:8840:20:0:0:0:0:8"
             ]
          },
-         "ldhName" : "V0N2.NIC.TRAVEL"
+         "ldhName" : "V0N2.NIC.TRAVEL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -271,11 +252,10 @@
                "2a01:8840:f8:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.TRAVEL"
+         "ldhName" : "V0N3.NIC.TRAVEL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N0.NIC.TRAVEL",
          "ipAddresses" : {
             "v4" : [
                "65.22.31.8"
@@ -284,6 +264,7 @@
                "2a01:8840:21:0:0:0:0:8"
             ]
          },
+         "ldhName" : "V2N0.NIC.TRAVEL",
          "objectClassName" : "nameserver"
       },
       {
@@ -295,18 +276,18 @@
                "2a01:8840:f9:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.TRAVEL"
+         "ldhName" : "V2N1.NIC.TRAVEL",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -316,6 +297,11 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -331,10 +317,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "df8590752dcf2cc075f91d5a6178c38a7ba1dbbc0c2327b88ca37be4797be126",
+            "digestType" : "2",
+            "keyTag" : "60277"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

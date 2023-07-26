@@ -1,34 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2014-02-20",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-05-04"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "d0c266b147e9fa7122215ccca36b23d43407bd2f03b2e3b6e917d350b31aa5fd",
-            "algorithm" : "8",
-            "keyTag" : "41279",
-            "digestType" : "2"
-         }
-      ]
-   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "best-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,12 +56,14 @@
                   "contact@the.best"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "best-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,14 +122,11 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "best-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "best-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -186,37 +162,30 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "best-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "best",
-   "handle" : "best",
-   "objectClassName" : "domain",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-20"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2022-05-04"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:12"
       }
    ],
+   "handle" : "best",
+   "ldhName" : "best",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/best.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/best.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -224,9 +193,9 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "https://www.go.best",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -239,11 +208,10 @@
                "2001:67c:13cc:0:0:0:1:109"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.BEST"
+         "ldhName" : "A.NIC.BEST",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.109"
@@ -252,11 +220,10 @@
                "2a04:2b00:13cc:0:0:0:1:109"
             ]
          },
-         "ldhName" : "B.NIC.BEST"
+         "ldhName" : "B.NIC.BEST",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.BEST",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.109"
@@ -264,10 +231,11 @@
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:109"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.BEST",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NIC.BEST",
          "ipAddresses" : {
             "v4" : [
                "212.18.249.109"
@@ -276,15 +244,39 @@
                "2a04:2b00:13ff:0:0:0:0:109"
             ]
          },
+         "ldhName" : "D.NIC.BEST",
          "objectClassName" : "nameserver"
       }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.BEST."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -293,15 +285,23 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "d0c266b147e9fa7122215ccca36b23d43407bd2f03b2e3b6e917d350b31aa5fd",
+            "digestType" : "2",
+            "keyTag" : "41279"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

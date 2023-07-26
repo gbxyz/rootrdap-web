@@ -1,22 +1,4 @@
 {
-   "handle" : "you",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-03-18"
-      },
-      {
-         "eventDate" : "2021-11-19",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:58"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "you",
    "entities" : [
       {
          "handle" : "you-technical",
@@ -77,6 +59,11 @@
          ]
       },
       {
+         "handle" : "you-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -135,14 +122,14 @@
                   "you-rzm@amazon.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "you-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "you-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,34 +162,44 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "you-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "4d7022047e13ae416d1e12ac44c5eb5ab58c4bf1e4e86dd47c9dd62106a0e348",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "41656"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-03-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-19"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:30:06"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "you",
+   "ldhName" : "you",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/you.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.amazonregistry.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "213.248.218.89"
@@ -211,11 +208,10 @@
                "2a01:618:402:0:0:0:0:89"
             ]
          },
-         "ldhName" : "DNS1.NIC.YOU"
+         "ldhName" : "DNS1.NIC.YOU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS2.NIC.YOU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "103.49.82.89"
@@ -223,11 +219,11 @@
             "v6" : [
                "2401:fd80:402:0:0:0:0:89"
             ]
-         }
+         },
+         "ldhName" : "DNS2.NIC.YOU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS3.NIC.YOU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "213.248.222.89"
@@ -235,11 +231,11 @@
             "v6" : [
                "2a01:618:406:0:0:0:0:89"
             ]
-         }
+         },
+         "ldhName" : "DNS3.NIC.YOU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS4.NIC.YOU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "43.230.50.89"
@@ -247,22 +243,23 @@
             "v6" : [
                "2401:fd80:406:0:0:0:0:89"
             ]
-         }
+         },
+         "ldhName" : "DNS4.NIC.YOU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSA.NIC.YOU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSA.NIC.YOU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSB.NIC.YOU",
          "ipAddresses" : {
             "v4" : [
                "156.154.101.3"
@@ -271,10 +268,10 @@
                "2001:502:2eda:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSB.NIC.YOU",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSC.NIC.YOU",
          "ipAddresses" : {
             "v4" : [
                "156.154.102.3"
@@ -283,10 +280,10 @@
                "2610:a1:1009:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSC.NIC.YOU",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSD.NIC.YOU",
          "ipAddresses" : {
             "v4" : [
                "156.154.103.3"
@@ -295,24 +292,8 @@
                "2610:a1:1010:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSD.NIC.YOU",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/you.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.amazonregistry.com",
-         "rel" : "related"
       }
    ],
    "notices" : [
@@ -333,6 +314,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -341,10 +327,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.amazonregistry.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -352,5 +338,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "4d7022047e13ae416d1e12ac44c5eb5ab58c4bf1e4e86dd47c9dd62106a0e348",
+            "digestType" : "2",
+            "keyTag" : "41656"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

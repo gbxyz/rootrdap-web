@@ -1,23 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "dubai",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2015-12-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-05-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "dubai-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -50,16 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "dubai-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "dubai-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -118,12 +104,14 @@
                   "gtldsupport@aeda.ae"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "dubai-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,88 +170,25 @@
                   "dubaitld@dsg.gov.ae"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "dubai-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-17"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-05-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:18"
+      }
+   ],
+   "handle" : "dubai",
    "ldhName" : "dubai",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "3b001ea7fb42657ce51e6d30dbf91a71b10ec5264c2a01b14082c5e3bd9a6f9d",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "32134"
-         },
-         {
-            "algorithm" : "8",
-            "keyTag" : "32134",
-            "digestType" : "1",
-            "digest" : "096078e36e111a0773bf2546212b8bad920528ef"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         },
-         "ldhName" : "GTLD.ALPHA.ARIDNS.NET.AU"
-      },
-      {
-         "ldhName" : "GTLD.BETA.ARIDNS.NET.AU",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "GTLD.DELTA.ARIDNS.NET.AU",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.198.10"
-            ]
-         }
-      },
-      {
-         "ldhName" : "GTLD.GAMMA.ARIDNS.NET.AU",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         }
-      }
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/dubai.html",
@@ -271,19 +196,69 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.ALPHA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.BETA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.10"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.DELTA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "GTLD.GAMMA.ARIDNS.NET.AU",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -294,18 +269,23 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.DUBAI."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: "
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -313,5 +293,25 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "3b001ea7fb42657ce51e6d30dbf91a71b10ec5264c2a01b14082c5e3bd9a6f9d",
+            "digestType" : "2",
+            "keyTag" : "32134"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "096078e36e111a0773bf2546212b8bad920528ef",
+            "digestType" : "1",
+            "keyTag" : "32134"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

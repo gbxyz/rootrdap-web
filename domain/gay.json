@@ -1,23 +1,45 @@
 {
-   "handle" : "gay",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2019-07-19"
-      },
-      {
-         "eventDate" : "2023-06-26",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "ldhName" : "gay",
    "entities" : [
+      {
+         "handle" : "gay-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Registry Services, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "handle" : "gay-administrative",
          "objectClassName" : "entity",
@@ -85,6 +107,11 @@
          ]
       },
       {
+         "handle" : "gay-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,75 +170,44 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "gay-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "gay-registrant",
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Registry Services, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "c725b3cbd9d404307d49d0969b57b8885fd69663aca51662b05716c9abd1361e",
-            "digestType" : "2",
-            "keyTag" : "32074",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2019-07-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-26"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:43"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "gay",
+   "ldhName" : "gay",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gay.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.gay",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.GAY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.10"
@@ -219,34 +215,35 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.GAY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.GAY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
             "v4" : [
                "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.GAY",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
             "v4" : [
                "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.GAY"
+         "ldhName" : "C.NIC.GAY",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -255,22 +252,22 @@
                "2610:a1:1074:0:0:0:1:82"
             ]
          },
-         "ldhName" : "X.NIC.GAY"
+         "ldhName" : "X.NIC.GAY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Y.NIC.GAY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "Y.NIC.GAY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Z.NIC.GAY",
          "ipAddresses" : {
             "v4" : [
                "156.154.174.82"
@@ -279,24 +276,8 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
+         "ldhName" : "Z.NIC.GAY",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gay.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.gay",
-         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -317,6 +298,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -331,10 +317,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "c725b3cbd9d404307d49d0969b57b8885fd69663aca51662b05716c9abd1361e",
+            "digestType" : "2",
+            "keyTag" : "32074"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

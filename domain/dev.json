@@ -1,35 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "dev",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-11-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b942e2ce5aebf62fca59d05707e6dbb795211d540d8adba02e9e89e833424785",
-            "keyTag" : "60074",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "dev",
    "entities" : [
       {
+         "handle" : "dev-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -65,13 +38,77 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "dev-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "dev-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Google Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 404 978 8419"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 650 492 5631"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-contact@google.com"
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "dev-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -134,101 +171,43 @@
                ]
             ]
          ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Google Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 404 978 8419"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 650 492 5631"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-contact@google.com"
-               ]
-            ]
-         ],
-         "handle" : "dev-administrative",
-         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2014-11-20"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:11"
+      }
+   ],
+   "handle" : "dev",
+   "ldhName" : "dev",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/dev.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.registry.google",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.32.105"
@@ -237,22 +216,22 @@
                "2001:4860:4802:32:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
             "v4" : [
                "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.36.105"
@@ -261,10 +240,10 @@
                "2001:4860:4802:36:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.38.105"
@@ -273,6 +252,7 @@
                "2001:4860:4802:38:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
@@ -284,26 +264,32 @@
                "2001:4860:4805:0:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/dev.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "https://www.registry.google"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -313,10 +299,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.registry.google"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -324,5 +310,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b942e2ce5aebf62fca59d05707e6dbb795211d540d8adba02e9e89e833424785",
+            "digestType" : "2",
+            "keyTag" : "60074"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

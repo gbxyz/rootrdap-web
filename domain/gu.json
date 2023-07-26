@@ -1,26 +1,11 @@
 {
-   "handle" : "gu",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "1994-04-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-08-04",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "gu",
    "entities" : [
       {
-         "handle" : "gu-technical",
+         "handle" : "gu-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -29,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "UOG NOC"
                ],
                [
                   "org",
@@ -57,36 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+16719692205"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+16717349422"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "uognoc@triton.uog.edu"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gu-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -145,14 +104,14 @@
                   "iso@triton.uog.edu"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "gu-technical",
          "objectClassName" : "entity",
-         "handle" : "gu-registrant",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -161,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "UOG NOC"
                ],
                [
                   "org",
@@ -183,20 +148,47 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+16719692205"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+16717349422"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "uognoc@triton.uog.edu"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1994-04-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-04"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:52"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "gu",
+   "ldhName" : "gu",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/gu.html",
@@ -209,34 +201,33 @@
          "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "https://give.uog.edu/shop/",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "GOLD.UOG.EDU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "168.123.250.66"
             ],
             "v6" : []
-         }
+         },
+         "ldhName" : "GOLD.UOG.EDU",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "168.123.250.56"
             ],
             "v6" : []
          },
-         "ldhName" : "GREEN.UOG.EDU"
+         "ldhName" : "GREEN.UOG.EDU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "GU.CCTLD.AUTHDNS.RIPE.NET",
          "ipAddresses" : {
             "v4" : [
                "193.0.9.78"
@@ -245,10 +236,10 @@
                "2001:67c:e0:0:0:0:0:78"
             ]
          },
+         "ldhName" : "GU.CCTLD.AUTHDNS.RIPE.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "PHLOEM.UOREGON.EDU",
          "ipAddresses" : {
             "v4" : [
                "128.223.32.35"
@@ -257,6 +248,7 @@
                "2001:468:d01:20:0:0:80df:2023"
             ]
          },
+         "ldhName" : "PHLOEM.UOREGON.EDU",
          "objectClassName" : "nameserver"
       }
    ],
@@ -270,13 +262,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -297,5 +294,8 @@
          ],
          "title" : "Source"
       }
+   ],
+   "status" : [
+      "active"
    ]
 }

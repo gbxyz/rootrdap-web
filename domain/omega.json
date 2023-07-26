@@ -1,34 +1,8 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-23"
-      },
-      {
-         "eventDate" : "2022-08-15",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "439d91ed221de512cb04f3a7218db1b019340b8d6228ab73dead0df30ab5cf7b",
-            "keyTag" : "4269",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "omega-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -67,6 +41,11 @@
          ]
       },
       {
+         "handle" : "omega-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -125,16 +104,14 @@
                   "omegagtld@swatchgroup.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "omega-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "omega-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -193,43 +170,35 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       }
    ],
-   "ldhName" : "omega",
-   "objectClassName" : "domain",
-   "handle" : "omega",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-23"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-15"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:56"
       }
    ],
+   "handle" : "omega",
+   "ldhName" : "omega",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/omega.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/omega.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.swatchgroup.com/",
@@ -247,11 +216,10 @@
                "2001:500:120:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM"
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -260,10 +228,10 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
+         "ldhName" : "AC2.NSTLD.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.175.30"
@@ -272,11 +240,10 @@
                "2001:500:122:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC3.NSTLD.COM"
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.42.176.30"
@@ -284,8 +251,33 @@
             "v6" : [
                "2001:500:123:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -295,21 +287,29 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.swatchgroup.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "439d91ed221de512cb04f3a7218db1b019340b8d6228ab73dead0df30ab5cf7b",
+            "digestType" : "2",
+            "keyTag" : "4269"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

@@ -1,21 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "rehab",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "5731",
-            "digest" : "d3ba72f70047888faae7f22dead5112c540fa6aac533dcc55d9ee4920de4cca9"
-         }
-      ]
-   },
    "entities" : [
       {
-         "handle" : "rehab-administrative",
+         "handle" : "rehab-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -26,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Dog Beach, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -52,36 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "rehab-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -146,8 +107,10 @@
          ]
       },
       {
+         "handle" : "rehab-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -159,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Dog Beach, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -179,19 +148,35 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "handle" : "rehab-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "rehab",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-05-29",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-29"
       },
       {
          "eventAction" : "last changed",
@@ -199,14 +184,124 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
+         "eventDate" : "2023-07-26T13:28:25"
       }
    ],
+   "handle" : "rehab",
+   "ldhName" : "rehab",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/rehab.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.28.61"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:61"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.REHAB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.61"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:61"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.REHAB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.30.61"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:61"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.REHAB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.61"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:61"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.REHAB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.31.61"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:61"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.REHAB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.61"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:61"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.REHAB",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "status" : [
-      "active"
    ],
    "remarks" : [
       {
@@ -228,113 +323,18 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.REHAB",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.61"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:61"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "d3ba72f70047888faae7f22dead5112c540fa6aac533dcc55d9ee4920de4cca9",
+            "digestType" : "2",
+            "keyTag" : "5731"
          }
-      },
-      {
-         "ldhName" : "V0N1.NIC.REHAB",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:61"
-            ],
-            "v4" : [
-               "65.22.29.61"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:61"
-            ],
-            "v4" : [
-               "65.22.30.61"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.REHAB"
-      },
-      {
-         "ldhName" : "V0N3.NIC.REHAB",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:61"
-            ],
-            "v4" : [
-               "161.232.14.61"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N0.NIC.REHAB",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:61"
-            ],
-            "v4" : [
-               "65.22.31.61"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N1.NIC.REHAB",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.61"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:61"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/rehab.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,8 +1,10 @@
 {
    "entities" : [
       {
+         "handle" : "zm-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -12,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Manager - Standards and Networks"
                ],
                [
                   "org",
@@ -40,25 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+260 211 378200"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "zmadmin@zicta.zm"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "zm-administrative"
+         ]
       },
       {
+         "handle" : "zm-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -112,15 +96,13 @@
                   "zmtech@zicta.zm"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "zm-technical"
+         ]
       },
       {
-         "handle" : "zm-registrant",
+         "handle" : "zm-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -130,6 +112,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Manager - Standards and Networks"
                ],
                [
                   "org",
@@ -152,27 +140,27 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+260 211 378200"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "zmadmin@zicta.zm"
                ]
             ]
          ]
       }
    ],
-   "ldhName" : "zm",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "35075",
-            "algorithm" : "8",
-            "digest" : "eb06f34b2b9f1729366bda17411cd4cc2193644368905dfb0cfb1868bd590581"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "1994-03-25",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1994-03-25"
       },
       {
          "eventAction" : "last changed",
@@ -180,18 +168,94 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:58"
+         "eventDate" : "2023-07-26T13:30:07"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "zm",
+   "ldhName" : "zm",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/zm.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://registry.zicta.zm",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.28.194.194",
+               "185.38.108.108"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "GRANSY.NIC.ZM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.44"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "NS-ZM.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.73"
+            ],
+            "v6" : [
+               "2001:500:14:6073:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "PCH.NIC.ZM",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.ZICTA.ZM."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -206,82 +270,18 @@
          "title" : "Source"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/zm.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://registry.zicta.zm",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "GRANSY.NIC.ZM",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "185.28.194.194",
-               "185.38.108.108"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NS-ZM.AFRINIC.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "196.216.168.44"
-            ],
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:44"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "eb06f34b2b9f1729366bda17411cd4cc2193644368905dfb0cfb1868bd590581",
+            "digestType" : "2",
+            "keyTag" : "35075"
          }
-      },
-      {
-         "ldhName" : "PCH.NIC.ZM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6073:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.73"
-            ]
-         }
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

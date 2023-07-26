@@ -1,23 +1,8 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-08-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-10-04"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "pm-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -82,6 +67,11 @@
          ]
       },
       {
+         "handle" : "pm-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -140,16 +130,14 @@
                   "tld-tech@nic.fr"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pm-technical"
+         ]
       },
       {
          "handle" : "pm-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,86 +170,35 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "pm",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "7d82ccd8dd0674ca01ccf836c21240a504c85597eed5e511131c3e17c323b503",
-            "algorithm" : "13",
-            "keyTag" : "17970",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
-   "handle" : "pm",
-   "nameservers" : [
+   "events" : [
       {
-         "ldhName" : "D.NIC.FR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.9.1"
-            ]
-         },
-         "objectClassName" : "nameserver"
+         "eventAction" : "registration",
+         "eventDate" : "1997-08-20"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:d78:0:102:193:176:144:22"
-            ],
-            "v4" : [
-               "193.176.144.22"
-            ]
-         },
-         "ldhName" : "E.EXT.NIC.FR"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-04"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ],
-            "v4" : [
-               "194.146.106.46"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.EXT.NIC.FR"
-      },
-      {
-         "ldhName" : "G.EXT.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.36.1"
-            ]
-         }
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:12"
       }
    ],
+   "handle" : "pm",
+   "ldhName" : "pm",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/pm.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/pm.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.nic.pm",
@@ -269,36 +206,91 @@
          "title" : "URL for registration services"
       }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.176.144.22"
+            ],
+            "v6" : [
+               "2a00:d78:0:102:193:176:144:22"
+            ]
+         },
+         "ldhName" : "E.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.PM."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.pm"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -307,10 +299,18 @@
          "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "7d82ccd8dd0674ca01ccf836c21240a504c85597eed5e511131c3e17c323b503",
+            "digestType" : "2",
+            "keyTag" : "17970"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

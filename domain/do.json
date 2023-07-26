@@ -1,10 +1,11 @@
 {
-   "handle" : "do",
-   "objectClassName" : "domain",
    "entities" : [
       {
          "handle" : "do-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -43,9 +44,72 @@
                   ]
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "do-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "VICERRECTORIA DE ADMINISTRACION Y FINANZAS"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Pontificia Universidad Catolica Madre y Maestra Campus Santo Tomas de Aquino"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Ave. Abraham Lincoln Esq. Romulo Betancourt\nSanto Domingo 2748\nDominican Republic (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 809 535-0111 # 2141"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 809 534-7060"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "adm-iana@nic.do"
+               ]
+            ]
          ]
       },
       {
@@ -113,119 +177,43 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "do-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "VICERRECTORIA DE ADMINISTRACION Y FINANZAS"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Pontificia Universidad Catolica Madre y Maestra Campus Santo Tomas de Aquino"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Ave. Abraham Lincoln Esq. Romulo Betancourt\nSanto Domingo 2748\nDominican Republic (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 809 535-0111 # 2141"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 809 534-7060"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "adm-iana@nic.do"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
       }
    ],
-   "ldhName" : "do",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "1991-08-25"
       },
       {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
+         "eventDate" : "2023-07-26T13:26:16"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "do",
+   "ldhName" : "do",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DO."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/do.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.nic.do"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.nic.do",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.LACTLD.ORG",
          "ipAddresses" : {
             "v4" : [
                "200.0.68.10"
@@ -234,10 +222,10 @@
                "2801:14:a000:0:0:0:0:10"
             ]
          },
+         "ldhName" : "A.LACTLD.ORG",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS.NIC.DO",
          "ipAddresses" : {
             "v4" : [
                "190.113.72.177"
@@ -246,6 +234,7 @@
                "2001:13e0:85d0:106:0:0:0:177"
             ]
          },
+         "ldhName" : "NS.NIC.DO",
          "objectClassName" : "nameserver"
       },
       {
@@ -257,11 +246,10 @@
                "2001:13e0:85d0:106:0:0:0:178"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.NIC.DO"
+         "ldhName" : "NS1.NIC.DO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.NIC.DO",
          "ipAddresses" : {
             "v4" : [
                "190.113.65.12"
@@ -270,22 +258,22 @@
                "2001:13e0:0:1:0:0:0:12"
             ]
          },
+         "ldhName" : "NS2.NIC.DO",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6124:ad:0:0:1"
-            ],
             "v4" : [
                "204.61.216.124"
+            ],
+            "v6" : [
+               "2001:500:14:6124:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.NIC.DO"
+         "ldhName" : "NS4.NIC.DO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS5.NIC.DO",
          "ipAddresses" : {
             "v4" : [
                "190.113.65.13"
@@ -294,6 +282,7 @@
                "2001:13e0:0:1:0:0:0:13"
             ]
          },
+         "ldhName" : "NS5.NIC.DO",
          "objectClassName" : "nameserver"
       },
       {
@@ -305,35 +294,18 @@
                "2001:468:d01:20:0:0:80df:2023"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "PHLOEM.UOREGON.EDU"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/do.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.do",
-         "title" : "URL for registration services"
+         "ldhName" : "PHLOEM.UOREGON.EDU",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -343,5 +315,33 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.do"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
    ]
 }

@@ -1,21 +1,51 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-19"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "secure-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amazon Registry Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "secure-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -66,14 +96,14 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "secure-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "secure-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -132,71 +162,39 @@
                   "secure-rzm@amazon.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "secure-administrative",
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "secure-registrant",
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amazon Registry Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "ldhName" : "secure",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "30610",
-            "algorithm" : "8",
-            "digest" : "e15c59f280c66d3582c2a0b218728143e1c6db5acf0a4a17dc8858dbcb0c1cd7"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-21"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-19"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:46"
+      }
+   ],
    "handle" : "secure",
+   "ldhName" : "secure",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/secure.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.SECURE",
          "ipAddresses" : {
             "v4" : [
                "213.248.218.80"
@@ -205,11 +203,10 @@
                "2a01:618:402:0:0:0:0:80"
             ]
          },
+         "ldhName" : "DNS1.NIC.SECURE",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS2.NIC.SECURE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "103.49.82.80"
@@ -217,10 +214,11 @@
             "v6" : [
                "2401:fd80:402:0:0:0:0:80"
             ]
-         }
+         },
+         "ldhName" : "DNS2.NIC.SECURE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "213.248.222.80"
@@ -229,7 +227,8 @@
                "2a01:618:406:0:0:0:0:80"
             ]
          },
-         "ldhName" : "DNS3.NIC.SECURE"
+         "ldhName" : "DNS3.NIC.SECURE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -240,24 +239,22 @@
                "2401:fd80:406:0:0:0:0:80"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS4.NIC.SECURE"
+         "ldhName" : "DNS4.NIC.SECURE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSA.NIC.SECURE"
+         "ldhName" : "DNSA.NIC.SECURE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSB.NIC.SECURE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.101.3"
@@ -265,7 +262,9 @@
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSB.NIC.SECURE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -276,32 +275,20 @@
                "2610:a1:1009:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSC.NIC.SECURE"
+         "ldhName" : "DNSC.NIC.SECURE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.SECURE"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/secure.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "ldhName" : "DNSD.NIC.SECURE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -322,12 +309,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.SECURE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -342,16 +334,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "e15c59f280c66d3582c2a0b218728143e1c6db5acf0a4a17dc8858dbcb0c1cd7",
+            "digestType" : "2",
+            "keyTag" : "30610"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

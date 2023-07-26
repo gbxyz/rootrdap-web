@@ -1,26 +1,11 @@
 {
-   "handle" : "fage",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2015-06-25",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-17"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "fage",
    "entities" : [
       {
          "handle" : "fage-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,9 +64,6 @@
                   "ngtld-fage@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
@@ -191,26 +173,41 @@
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "73f0339f6d64be40a263e66bf730b0ef53a4372978561e0cc8f3cb754df443fe",
-            "algorithm" : "8",
-            "keyTag" : "17296",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-25"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:30"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "fage",
+   "ldhName" : "fage",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/fage.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://home.fage/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.156.33"
@@ -219,10 +216,10 @@
                "2a01:8840:9a:0:0:0:0:33"
             ]
          },
-         "ldhName" : "A0.NIC.FAGE"
+         "ldhName" : "A0.NIC.FAGE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.FAGE",
          "ipAddresses" : {
             "v4" : [
                "65.22.159.33"
@@ -231,18 +228,19 @@
                "2a01:8840:9d:0:0:0:0:33"
             ]
          },
+         "ldhName" : "A2.NIC.FAGE",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.FAGE",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:9b:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.157.33"
+            ],
+            "v6" : [
+               "2a01:8840:9b:0:0:0:0:33"
             ]
          },
+         "ldhName" : "B0.NIC.FAGE",
          "objectClassName" : "nameserver"
       },
       {
@@ -254,25 +252,8 @@
                "2a01:8840:9c:0:0:0:0:33"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.FAGE"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/fage.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://home.fage/",
-         "title" : "URL for registration services"
+         "ldhName" : "C0.NIC.FAGE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -285,20 +266,25 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -307,10 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "73f0339f6d64be40a263e66bf730b0ef53a4372978561e0cc8f3cb754df443fe",
+            "digestType" : "2",
+            "keyTag" : "17296"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

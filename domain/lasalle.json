@@ -1,26 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "lasalle",
-   "events" : [
-      {
-         "eventDate" : "2015-06-04",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-17"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:51"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "lasalle",
    "entities" : [
+      {
+         "handle" : "lasalle-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Jones Lang LaSalle Incorporated"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "200 E. Randolph Drive\nChicago IL 60601\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
       {
          "handle" : "lasalle-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,9 +104,6 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
@@ -149,80 +171,39 @@
                ]
             ]
          ]
-      },
-      {
-         "handle" : "lasalle-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Jones Lang LaSalle Incorporated"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "200 E. Randolph Drive\nChicago IL 60601\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "b7ceb81d5279786be446c8d6981f911d3cb31dfc7e192de510c6d489ca3ba370",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "6184"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-04"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:19"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "handle" : "lasalle",
+   "ldhName" : "lasalle",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lasalle.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/lasalle.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.jll.com",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -235,24 +216,22 @@
                "2a01:8840:92:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.LASALLE"
+         "ldhName" : "A0.NIC.LASALLE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:95:0:0:0:0:1"
-            ],
             "v4" : [
                "65.22.151.1"
+            ],
+            "v6" : [
+               "2a01:8840:95:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.LASALLE"
+         "ldhName" : "A2.NIC.LASALLE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.LASALLE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.149.1"
@@ -260,7 +239,9 @@
             "v6" : [
                "2a01:8840:93:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.LASALLE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -271,18 +252,18 @@
                "2a01:8840:94:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.LASALLE"
+         "ldhName" : "C0.NIC.LASALLE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -293,6 +274,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -301,16 +287,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.jll.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b7ceb81d5279786be446c8d6981f911d3cb31dfc7e192de510c6d489ca3ba370",
+            "digestType" : "2",
+            "keyTag" : "6184"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

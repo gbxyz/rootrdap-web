@@ -1,57 +1,5 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "25888a431bfa4251bf4e4d8340b9ec411ac57f6c20dab0feeb9ca68a34b13ac7",
-            "algorithm" : "10",
-            "keyTag" : "51829",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "ldhName" : "erni",
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "handle" : "erni-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ERNI Group Holding AG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "ERNI Consulting AG\nBahnhofstrasse 4\nBaar CH-6340\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
       {
          "handle" : "erni-administrative",
          "objectClassName" : "entity",
@@ -119,6 +67,8 @@
          ]
       },
       {
+         "handle" : "erni-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -180,9 +130,47 @@
                   "dnsmaster@corenic.org"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "erni-registrant",
          "objectClassName" : "entity",
-         "handle" : "erni-technical"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ERNI Group Holding AG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "ERNI Consulting AG\nBahnhofstrasse 4\nBaar CH-6340\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
    "events" : [
@@ -191,58 +179,35 @@
          "eventDate" : "2015-02-05"
       },
       {
-         "eventDate" : "2022-01-07",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
       },
       {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:26"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "erni",
-   "remarks" : [
+   "ldhName" : "erni",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ERNI."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/erni.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.erni.ch"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "http://www.erni.ch",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.64.12"
@@ -251,7 +216,8 @@
                "2a01:5b0:4:0:0:0:0:c"
             ]
          },
-         "ldhName" : "ANYCAST10.IRONDNS.NET"
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -262,11 +228,10 @@
                "2a01:5b0:5:0:0:0:0:b"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.12"
@@ -275,41 +240,76 @@
                "2a01:5b0:5:0:0:0:0:c"
             ]
          },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
             "v4" : [
                "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/erni.html",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://www.erni.ch",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ERNI."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.erni.ch"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "25888a431bfa4251bf4e4d8340b9ec411ac57f6c20dab0feeb9ca68a34b13ac7",
+            "digestType" : "2",
+            "keyTag" : "51829"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

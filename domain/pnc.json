@@ -1,19 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "pnc",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "137c7b7b6be3d79ff1c7f5ddb9525cd8bf14b821dcec08ff5a3a7b128e58660b",
-            "keyTag" : "40264",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "pnc-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -72,14 +64,11 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "pnc-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "pnc-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -141,13 +130,11 @@
                   "ngtld-pnc@cscglobal.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pnc-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "pnc-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -186,8 +173,6 @@
          ]
       }
    ],
-   "ldhName" : "pnc",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -199,14 +184,100 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
+         "eventDate" : "2023-07-26T13:28:13"
       }
    ],
+   "handle" : "pnc",
+   "ldhName" : "pnc",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/pnc.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.pnc.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.64.25"
+            ],
+            "v6" : [
+               "2a01:8840:3e:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "A0.NIC.PNC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.67.25"
+            ],
+            "v6" : [
+               "2a01:8840:41:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "A2.NIC.PNC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.65.25"
+            ],
+            "v6" : [
+               "2a01:8840:3f:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "B0.NIC.PNC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.66.25"
+            ],
+            "v6" : [
+               "2a01:8840:40:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "C0.NIC.PNC",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "status" : [
-      "active"
    ],
    "remarks" : [
       {
@@ -222,95 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "title" : "Source"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/pnc.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.pnc.com"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.64.25"
-            ],
-            "v6" : [
-               "2a01:8840:3e:0:0:0:0:25"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.PNC"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.67.25"
-            ],
-            "v6" : [
-               "2a01:8840:41:0:0:0:0:25"
-            ]
-         },
-         "ldhName" : "A2.NIC.PNC"
-      },
-      {
-         "ldhName" : "B0.NIC.PNC",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.65.25"
-            ],
-            "v6" : [
-               "2a01:8840:3f:0:0:0:0:25"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.66.25"
-            ],
-            "v6" : [
-               "2a01:8840:40:0:0:0:0:25"
-            ]
-         },
-         "ldhName" : "C0.NIC.PNC"
-      }
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "137c7b7b6be3d79ff1c7f5ddb9525cd8bf14b821dcec08ff5a3a7b128e58660b",
+            "digestType" : "2",
+            "keyTag" : "40264"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

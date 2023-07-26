@@ -1,21 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "jpmorgan",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "ee3004dfa6162785f6c80c697e79d43f8fe436189a5cd880c971d4cc2870b139",
-            "algorithm" : "8",
-            "keyTag" : "3652",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
          "handle" : "jpmorgan-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -48,80 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Chris Niemi"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "MarkMonitor Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "391 N. Ancestor Place, Suite 150\nBoise ID 83704\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1-208-389-5740"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1-208-389-5771"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotchase@markmonitor.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "jpmorgan-administrative"
       },
       {
          "handle" : "jpmorgan-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -180,18 +104,79 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "jpmorgan-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Chris Niemi"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "MarkMonitor Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "391 N. Ancestor Place, Suite 150\nBoise ID 83704\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1-208-389-5740"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1-208-389-5771"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotchase@markmonitor.com"
+               ]
+            ]
          ]
       }
    ],
-   "ldhName" : "jpmorgan",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2016-01-14",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-14"
       },
       {
          "eventAction" : "last changed",
@@ -199,68 +184,42 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:51"
+         "eventDate" : "2023-07-26T13:27:12"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "jpmorgan",
+   "ldhName" : "jpmorgan",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/jpmorgan.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.jpmorganchase.com"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "href" : "http://www.jpmorganchase.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:5c"
-            ],
             "v4" : [
                "156.154.144.92"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:5c"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.JPMORGAN"
+         "ldhName" : "NS1.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.145.92"
@@ -269,10 +228,10 @@
                "2610:a1:1072:0:0:0:0:5c"
             ]
          },
-         "ldhName" : "NS2.DNS.NIC.JPMORGAN"
+         "ldhName" : "NS2.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.JPMORGAN",
          "ipAddresses" : {
             "v4" : [
                "156.154.159.92"
@@ -281,19 +240,20 @@
                "2610:a1:1073:0:0:0:0:5c"
             ]
          },
+         "ldhName" : "NS3.DNS.NIC.JPMORGAN",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS4.DNS.NIC.JPMORGAN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:0:5c"
-            ],
             "v4" : [
                "156.154.156.92"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:0:5c"
             ]
-         }
+         },
+         "ldhName" : "NS4.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -304,8 +264,8 @@
                "2610:a1:1075:0:0:0:0:5c"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS5.DNS.NIC.JPMORGAN"
+         "ldhName" : "NS5.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -316,25 +276,65 @@
                "2610:a1:1076:0:0:0:0:5c"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS6.DNS.NIC.JPMORGAN"
+         "ldhName" : "NS6.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/jpmorgan.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.jpmorganchase.com",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.jpmorganchase.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "ee3004dfa6162785f6c80c697e79d43f8fe436189a5cd880c971d4cc2870b139",
+            "digestType" : "2",
+            "keyTag" : "3652"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

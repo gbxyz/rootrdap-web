@@ -1,19 +1,11 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "29044",
-            "algorithm" : "8",
-            "digest" : "dd72f7eec3b8ce0e6a278a6d560abacabcdff4a4a9062eb8dbd96eddc910b140"
-         }
-      ]
-   },
    "entities" : [
       {
          "handle" : "direct-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -72,14 +64,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "direct-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -138,14 +130,11 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "direct-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -184,7 +173,6 @@
          ]
       }
    ],
-   "ldhName" : "direct",
    "events" : [
       {
          "eventAction" : "registration",
@@ -195,54 +183,31 @@
          "eventDate" : "2021-11-04"
       },
       {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:13"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "direct",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "direct",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DIRECT."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/direct.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.DIRECT",
          "ipAddresses" : {
             "v4" : [
                "65.22.24.46"
@@ -251,34 +216,34 @@
                "2a01:8840:1a:0:0:0:0:46"
             ]
          },
+         "ldhName" : "V0N0.NIC.DIRECT",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:46"
-            ],
             "v4" : [
                "65.22.25.46"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:46"
             ]
          },
-         "ldhName" : "V0N1.NIC.DIRECT"
+         "ldhName" : "V0N1.NIC.DIRECT",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:46"
-            ],
             "v4" : [
                "65.22.26.46"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:46"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.DIRECT"
+         "ldhName" : "V0N2.NIC.DIRECT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N3.NIC.DIRECT",
          "ipAddresses" : {
             "v4" : [
                "161.232.12.46"
@@ -287,10 +252,10 @@
                "2a01:8840:f6:0:0:0:0:46"
             ]
          },
+         "ldhName" : "V0N3.NIC.DIRECT",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.27.46"
@@ -299,10 +264,10 @@
                "2a01:8840:1d:0:0:0:0:46"
             ]
          },
-         "ldhName" : "V2N0.NIC.DIRECT"
+         "ldhName" : "V2N0.NIC.DIRECT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N1.NIC.DIRECT",
          "ipAddresses" : {
             "v4" : [
                "161.232.13.46"
@@ -311,29 +276,64 @@
                "2a01:8840:f7:0:0:0:0:46"
             ]
          },
+         "ldhName" : "V2N1.NIC.DIRECT",
          "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/direct.html",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DIRECT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "dd72f7eec3b8ce0e6a278a6d560abacabcdff4a4a9062eb8dbd96eddc910b140",
+            "digestType" : "2",
+            "keyTag" : "29044"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

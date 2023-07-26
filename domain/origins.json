@@ -1,20 +1,11 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "5290155e291fba766eb200f5e95ac883babfbbfda64f5ad243068c7c8dc6019b",
-            "digestType" : "2",
-            "keyTag" : "25234",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "ldhName" : "origins",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "origins-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -47,12 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "origins-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -114,13 +104,14 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "origins-technical"
+         ]
       },
       {
          "handle" : "origins-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -179,9 +170,6 @@
                   "ngtld-estee@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       }
    ],
@@ -195,37 +183,72 @@
          "eventDate" : "2020-11-17"
       },
       {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:59"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "origins",
-   "remarks" : [
+   "ldhName" : "origins",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ORIGINS."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/origins.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.52.33"
+            ],
+            "v6" : [
+               "2a01:8840:32:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "A0.NIC.ORIGINS",
+         "objectClassName" : "nameserver"
       },
       {
-         "description" : [
-            "http://elcompanies.com/Pages/Homepage.aspx"
-         ],
-         "title" : "Remark"
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.55.33"
+            ],
+            "v6" : [
+               "2a01:8840:35:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "A2.NIC.ORIGINS",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.53.33"
+            ],
+            "v6" : [
+               "2a01:8840:33:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "B0.NIC.ORIGINS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.54.33"
+            ],
+            "v6" : [
+               "2a01:8840:34:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "C0.NIC.ORIGINS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -246,71 +269,48 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.ORIGINS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:32:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.52.33"
-            ]
-         }
-      },
-      {
-         "ldhName" : "A2.NIC.ORIGINS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:35:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.55.33"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.53.33"
-            ],
-            "v6" : [
-               "2a01:8840:33:0:0:0:0:33"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.ORIGINS"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.54.33"
-            ],
-            "v6" : [
-               "2a01:8840:34:0:0:0:0:33"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.ORIGINS"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/origins.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ORIGINS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "http://elcompanies.com/Pages/Homepage.aspx"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "5290155e291fba766eb200f5e95ac883babfbbfda64f5ad243068c7c8dc6019b",
+            "digestType" : "2",
+            "keyTag" : "25234"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

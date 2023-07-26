@@ -1,26 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "xfinity",
-   "events" : [
-      {
-         "eventDate" : "2016-06-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-19"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "xfinity",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "xfinity-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -53,12 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "xfinity-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -109,12 +96,7 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "xfinity-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "xfinity-administrative",
@@ -175,74 +157,89 @@
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "42454",
-            "digest" : "c4d6cfeb973503edaa89943505206bf8c406fc92c80abad132318165aa1cb445"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-16"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-19"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:37"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "xfinity",
+   "ldhName" : "xfinity",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/xfinity.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.xfinity/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.XFINITY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:403:0:0:0:0:7"
-            ],
             "v4" : [
                "213.248.219.7"
+            ],
+            "v6" : [
+               "2a01:618:403:0:0:0:0:7"
             ]
-         }
+         },
+         "ldhName" : "DNS1.NIC.XFINITY",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:403:0:0:0:0:7"
-            ],
             "v4" : [
                "103.49.83.7"
+            ],
+            "v6" : [
+               "2401:fd80:403:0:0:0:0:7"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS2.NIC.XFINITY"
+         "ldhName" : "DNS2.NIC.XFINITY",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:407:0:0:0:0:7"
-            ],
             "v4" : [
                "213.248.223.7"
+            ],
+            "v6" : [
+               "2a01:618:407:0:0:0:0:7"
             ]
          },
-         "ldhName" : "DNS3.NIC.XFINITY"
+         "ldhName" : "DNS3.NIC.XFINITY",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:407:0:0:0:0:7"
-            ],
             "v4" : [
                "43.230.51.7"
+            ],
+            "v6" : [
+               "2401:fd80:407:0:0:0:0:7"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS4.NIC.XFINITY"
+         "ldhName" : "DNS4.NIC.XFINITY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSA.NIC.XFINITY",
          "ipAddresses" : {
             "v4" : [
                "156.154.100.3"
@@ -251,34 +248,34 @@
                "2001:502:ad09:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSA.NIC.XFINITY",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSB.NIC.XFINITY",
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSB.NIC.XFINITY",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSC.NIC.XFINITY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSC.NIC.XFINITY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSD.NIC.XFINITY",
          "ipAddresses" : {
             "v4" : [
                "156.154.103.3"
@@ -287,24 +284,8 @@
                "2610:a1:1010:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSD.NIC.XFINITY",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/xfinity.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://nic.xfinity/",
-         "rel" : "related",
-         "title" : "URL for registration services"
       }
    ],
    "notices" : [
@@ -317,13 +298,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -333,16 +319,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.xfinity/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "c4d6cfeb973503edaa89943505206bf8c406fc92c80abad132318165aa1cb445",
+            "digestType" : "2",
+            "keyTag" : "42454"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

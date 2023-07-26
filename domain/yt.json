@@ -1,11 +1,11 @@
 {
-   "handle" : "yt",
-   "objectClassName" : "domain",
-   "ldhName" : "yt",
    "entities" : [
       {
+         "handle" : "yt-registrant",
          "objectClassName" : "entity",
-         "handle" : "yt-administrative",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -14,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin Contact"
                ],
                [
                   "org",
@@ -42,34 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33 1 39 30 83 05"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33 1 39 30 83 01"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-admin@nic.fr"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "yt-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -128,18 +104,13 @@
                   "tld-tech@nic.fr"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "yt-technical"
+         ]
       },
       {
-         "handle" : "yt-registrant",
+         "handle" : "yt-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -149,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin Contact"
                ],
                [
                   "org",
@@ -171,40 +148,134 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33 1 39 30 83 05"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33 1 39 30 83 01"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-admin@nic.fr"
                ]
             ]
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "712dd1bbc29e719caf3b34e9a0bee2d443df1ed9d2d6e09b97baa828d5ff3dc7",
-            "algorithm" : "13",
-            "digestType" : "2",
-            "keyTag" : "58156"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "1997-11-17"
       },
       {
-         "eventDate" : "2022-10-04",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-04"
       },
       {
-         "eventDate" : "2023-07-26T13:16:58",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:30:06"
       }
    ],
-   "status" : [
-      "active"
+   "handle" : "yt",
+   "ldhName" : "yt",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/yt.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.yt",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.176.144.22"
+            ],
+            "v6" : [
+               "2a00:d78:0:102:193:176:144:22"
+            ]
+         },
+         "ldhName" : "E.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.36.1"
+            ],
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "G.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
@@ -222,95 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
-            ],
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "D.NIC.FR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "193.176.144.22"
-            ],
-            "v6" : [
-               "2a00:d78:0:102:193:176:144:22"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.EXT.NIC.FR"
-      },
-      {
-         "ldhName" : "F.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ],
-            "v4" : [
-               "194.146.106.46"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "G.EXT.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.36.1"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/yt.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.nic.yt",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "712dd1bbc29e719caf3b34e9a0bee2d443df1ed9d2d6e09b97baa828d5ff3dc7",
+            "digestType" : "2",
+            "keyTag" : "58156"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

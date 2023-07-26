@@ -1,34 +1,11 @@
 {
-   "handle" : "man",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2015-02-27",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-01-07",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "8e4b8fef8f9e2d51c3b5b4189cfa8cd13d23d6b700516fc4ac632fc47ef7e7de",
-            "algorithm" : "10",
-            "digestType" : "2",
-            "keyTag" : "1872"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "man-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -61,12 +38,7 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "man-registrant"
+         ]
       },
       {
          "handle" : "man-technical",
@@ -135,6 +107,11 @@
          ]
       },
       {
+         "handle" : "man-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -185,29 +162,100 @@
                   "sacha.klingner@man.eu"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "man-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "man",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-02-27"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:30"
+      }
    ],
-   "status" : [
-      "active"
+   "handle" : "man",
+   "ldhName" : "man",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/man.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.man.eu",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -218,72 +266,10 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.12"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ]
-         },
-         "ldhName" : "ANYCAST10.IRONDNS.NET"
-      },
-      {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.11"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.12"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/man.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.man.eu",
-         "title" : "URL for registration services"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -293,10 +279,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.man.eu"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -304,5 +290,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "8e4b8fef8f9e2d51c3b5b4189cfa8cd13d23d6b700516fc4ac632fc47ef7e7de",
+            "digestType" : "2",
+            "keyTag" : "1872"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

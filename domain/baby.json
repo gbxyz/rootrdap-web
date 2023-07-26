@@ -1,33 +1,8 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-14"
-      },
-      {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "6b39ccc9ba6c73c818d68522547e5d56db46e13607dc0e83047d6e111067dcb2",
-            "digestType" : "2",
-            "keyTag" : "11182",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "baby",
    "entities" : [
       {
+         "handle" : "baby-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -89,13 +64,14 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "baby-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "baby-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -146,14 +122,14 @@
                   "hello@xyz.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "baby-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -186,14 +162,92 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-14"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:03"
+      }
+   ],
    "handle" : "baby",
-   "objectClassName" : "domain",
+   "ldhName" : "baby",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/baby.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://nic.baby/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.101"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:101"
+            ]
+         },
+         "ldhName" : "A.NIC.BABY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.101"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:101"
+            ]
+         },
+         "ldhName" : "B.NIC.BABY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.101"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:101"
+            ]
+         },
+         "ldhName" : "C.NIC.BABY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.101"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:101"
+            ]
+         },
+         "ldhName" : "D.NIC.BABY",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -212,79 +266,17 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:101"
-            ],
-            "v4" : [
-               "194.169.218.101"
-            ]
-         },
-         "ldhName" : "A.NIC.BABY"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.101"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:101"
-            ]
-         },
-         "ldhName" : "B.NIC.BABY"
-      },
-      {
-         "ldhName" : "C.NIC.BABY",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:101"
-            ],
-            "v4" : [
-               "212.18.248.101"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:101"
-            ],
-            "v4" : [
-               "212.18.249.101"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.BABY"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/baby.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://nic.baby/",
-         "rel" : "related"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.BABY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -299,9 +291,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "6b39ccc9ba6c73c818d68522547e5d56db46e13607dc0e83047d6e111067dcb2",
+            "digestType" : "2",
+            "keyTag" : "11182"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

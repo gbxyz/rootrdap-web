@@ -1,19 +1,11 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "8560961fd5e191d49b2461180f7edc509e10689f85ed595ad111956bc81ff9a2",
-            "algorithm" : "8",
-            "keyTag" : "30849",
-            "digestType" : "2"
-         }
-      ]
-   },
    "entities" : [
       {
          "handle" : "msd-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -46,70 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Merck Sharpe & Dohme Corp"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3070 Route 22 West\nBranchburg NJ 08876\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "908-243-2545"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "merckdomains@merck.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "msd-administrative",
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "msd-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -171,47 +104,143 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "msd-technical"
-      }
-   ],
-   "ldhName" : "msd",
-   "events" : [
-      {
-         "eventDate" : "2016-06-24",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "handle" : "msd",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
          ]
       },
       {
-         "description" : [
-            "IANA"
+         "handle" : "msd-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
          ],
-         "title" : "Source"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Merck Sharpe & Dohme Corp"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3070 Route 22 West\nBranchburg NJ 08876\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "908-243-2545"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "merckdomains@merck.com"
+               ]
+            ]
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-24"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:40"
+      }
+   ],
+   "handle" : "msd",
+   "ldhName" : "msd",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/msd.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -232,71 +261,42 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/msd.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM"
-      },
-      {
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         }
-      },
-      {
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         }
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "8560961fd5e191d49b2461180f7edc509e10689f85ed595ad111956bc81ff9a2",
+            "digestType" : "2",
+            "keyTag" : "30849"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

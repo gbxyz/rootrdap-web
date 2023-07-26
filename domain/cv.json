@@ -1,23 +1,48 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "cv",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1996-10-21"
-      },
-      {
-         "eventDate" : "2023-06-07",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "cv-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Agência Reguladora Multissectorial da Economia (ARME)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Avenida da China\nChã d' Areia\nPraia Santiago 892\nCabo Verde"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "cv-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -79,11 +104,11 @@
                   "assis.guerreiro@dns.pt"
                ]
             ]
-         ],
-         "handle" : "cv-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "cv-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -145,57 +170,89 @@
                   "suzete.centeio@arme.cv"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cv-administrative"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Agência Reguladora Multissectorial da Economia (ARME)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Avenida da China\nChã d' Areia\nPraia Santiago 892\nCabo Verde"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "cv-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "cv",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1996-10-21"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:02"
+      }
    ],
-   "status" : [
-      "active"
+   "handle" : "cv",
+   "ldhName" : "cv",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cv.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.dns.cv/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.58.198.135"
+            ],
+            "v6" : [
+               "2a01:3f1:3032:8001:0:0:0:135"
+            ]
+         },
+         "ldhName" : "ANYC.DNSNODE.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.105"
+            ],
+            "v6" : [
+               "2001:500:14:6105:ad:0:0:1"
+            ]
+         },
+         "ldhName" : "C.DNS.PT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.39.208.18"
+            ],
+            "v6" : [
+               "2a04:6d80:0:0:0:0:0:18"
+            ]
+         },
+         "ldhName" : "CV01.DNS.PT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "41.221.192.220"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS.DNS.CV",
+         "objectClassName" : "nameserver"
+      }
    ],
    "notices" : [
       {
@@ -215,77 +272,17 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.58.198.135"
-            ],
-            "v6" : [
-               "2a01:3f1:3032:8001:0:0:0:135"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYC.DNSNODE.NET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.105"
-            ],
-            "v6" : [
-               "2001:500:14:6105:ad:0:0:1"
-            ]
-         },
-         "ldhName" : "C.DNS.PT"
-      },
-      {
-         "ldhName" : "CV01.DNS.PT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:6d80:0:0:0:0:0:18"
-            ],
-            "v4" : [
-               "185.39.208.18"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS.DNS.CV",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "41.221.192.220"
-            ],
-            "v6" : []
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/cv.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.dns.cv/",
-         "rel" : "related"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -299,5 +296,8 @@
          ],
          "title" : "Source"
       }
+   ],
+   "status" : [
+      "active"
    ]
 }

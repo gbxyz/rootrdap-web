@@ -1,121 +1,10 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SCB."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "https://www.scb.co.th/en/personal-banking/top-level-domain.html"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/scb.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:c38:2000:183:0:0:0:17"
-            ],
-            "v4" : [
-               "122.155.23.51"
-            ]
-         },
-         "ldhName" : "A.NIC.SCB"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4:0:0:0:0:23"
-            ],
-            "v4" : [
-               "194.0.1.35"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.SCB"
-      },
-      {
-         "ldhName" : "RZ.NIC.SCB",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.25.42"
-            ],
-            "v6" : [
-               "2001:678:20:0:0:0:0:42"
-            ]
-         }
-      }
-   ],
-   "handle" : "scb",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "20801",
-            "algorithm" : "8",
-            "digest" : "16bff89dd2faf9ac06221f6de0e206ed57fec2e29316779e30789d7e00a5bd2f"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "scb-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -127,12 +16,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "VP, Advance IT Network and Architect"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -141,7 +24,7 @@
                [
                   "adr",
                   {
-                     "label" : "Siam Commercial Bank, 21st Floor Zone C, 9 Ratchadapisek Road, Jatujak\nBangkok 10900\nThailand"
+                     "label" : "9 Ratchadapisek Rd., Jatujak\nBangkok 10900\nThailand"
                   },
                   "text",
                   [
@@ -153,31 +36,9 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+66 2 544 6035"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+66 2 544 4948"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldregistry@scb.co.th"
                ]
             ]
-         ],
-         "handle" : "scb-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "scb-technical",
@@ -246,10 +107,10 @@
          ]
       },
       {
-         "handle" : "scb-registrant",
+         "handle" : "scb-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -261,6 +122,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "VP, Advance IT Network and Architect"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -269,7 +136,7 @@
                [
                   "adr",
                   {
-                     "label" : "9 Ratchadapisek Rd., Jatujak\nBangkok 10900\nThailand"
+                     "label" : "Siam Commercial Bank, 21st Floor Zone C, 9 Ratchadapisek Road, Jatujak\nBangkok 10900\nThailand"
                   },
                   "text",
                   [
@@ -281,25 +148,158 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+66 2 544 6035"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+66 2 544 4948"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldregistry@scb.co.th"
                ]
             ]
          ]
       }
    ],
-   "ldhName" : "scb",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2014-06-26"
       },
       {
-         "eventDate" : "2023-04-27",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-04-27"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
+         "eventDate" : "2023-07-26T13:28:43"
       }
    ],
-   "port43" : "whois.iana.org"
+   "handle" : "scb",
+   "ldhName" : "scb",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/scb.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "122.155.23.51"
+            ],
+            "v6" : [
+               "2001:c38:2000:183:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A.NIC.SCB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.1.35"
+            ],
+            "v6" : [
+               "2001:678:4:0:0:0:0:23"
+            ]
+         },
+         "ldhName" : "C.NIC.SCB",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.42"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "RZ.NIC.SCB",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SCB."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "https://www.scb.co.th/en/personal-banking/top-level-domain.html"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "16bff89dd2faf9ac06221f6de0e206ed57fec2e29316779e30789d7e00a5bd2f",
+            "digestType" : "2",
+            "keyTag" : "20801"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

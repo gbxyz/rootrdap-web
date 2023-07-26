@@ -1,23 +1,48 @@
 {
-   "handle" : "bbt",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2016-05-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-06-26",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "bbt-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "BB&T Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "200 West Second Street\nWinston Salem NC 27101\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "bbt-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -79,9 +104,7 @@
                   "tldtech@identity.digital"
                ]
             ]
-         ],
-         "handle" : "bbt-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "bbt-administrative",
@@ -148,76 +171,43 @@
                ]
             ]
          ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "bbt-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "BB&T Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "200 West Second Street\nWinston Salem NC 27101\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
       }
    ],
-   "ldhName" : "bbt",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "15390",
-            "algorithm" : "8",
-            "digest" : "e7872a1449946ba400b2472a61f369fe8ecf57ebada1fae28bf0bac242aac4f7"
-         },
-         {
-            "digest" : "06a56f660dff926af3c13ea685e7322ebcae343d10a15aa9815f27e959b24ee5",
-            "keyTag" : "41827",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-05-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-26"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:08"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "bbt",
+   "ldhName" : "bbt",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bbt.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://bbt.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.BBT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.112.44"
@@ -225,10 +215,11 @@
             "v6" : [
                "2a01:8840:6e:0:0:0:0:44"
             ]
-         }
+         },
+         "ldhName" : "A0.NIC.BBT",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.115.44"
@@ -237,48 +228,32 @@
                "2a01:8840:71:0:0:0:0:44"
             ]
          },
-         "ldhName" : "A2.NIC.BBT"
+         "ldhName" : "A2.NIC.BBT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.BBT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:44"
-            ],
             "v4" : [
                "65.22.113.44"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C0.NIC.BBT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:70:0:0:0:0:44"
             ],
-            "v4" : [
-               "65.22.114.44"
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:44"
             ]
          },
+         "ldhName" : "B0.NIC.BBT",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bbt.html",
-         "rel" : "related"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://bbt.com",
-         "rel" : "related"
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.114.44"
+            ],
+            "v6" : [
+               "2a01:8840:70:0:0:0:0:44"
+            ]
+         },
+         "ldhName" : "C0.NIC.BBT",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -299,6 +274,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -318,5 +298,25 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "e7872a1449946ba400b2472a61f369fe8ecf57ebada1fae28bf0bac242aac4f7",
+            "digestType" : "2",
+            "keyTag" : "15390"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "06a56f660dff926af3c13ea685e7322ebcae343d10a15aa9815f27e959b24ee5",
+            "digestType" : "2",
+            "keyTag" : "41827"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,11 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "ss",
-   "ldhName" : "ss",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "ss-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -62,6 +59,11 @@
          ]
       },
       {
+         "handle" : "ss-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -112,14 +114,14 @@
                   "admin@nic.ss"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "ss-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "ss-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -152,31 +154,9 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ss-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "65fb691da6eb488ed99195e7609837f787eafc4a",
-            "keyTag" : "43817",
-            "digestType" : "1",
-            "algorithm" : "8"
-         },
-         {
-            "keyTag" : "43817",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "f85d36a2e056ff8cbb8dc79c748e4ec1e862c4f739891f9595669aa3384a252d"
-         }
-      ]
-   },
    "events" : [
       {
          "eventAction" : "registration",
@@ -187,58 +167,31 @@
          "eventDate" : "2022-06-13"
       },
       {
-         "eventDate" : "2023-07-26T13:16:55",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:04"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SS."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://nic.ss/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "handle" : "ss",
+   "ldhName" : "ss",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/ss.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "https://nic.ss/",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "B.NS.TZNIC.OR.TZ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "196.216.162.70"
@@ -246,7 +199,9 @@
             "v6" : [
                "2001:43f8:e0:1:0:0:0:70"
             ]
-         }
+         },
+         "ldhName" : "B.NS.TZNIC.OR.TZ",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -257,8 +212,8 @@
                "2001:43f8:120:0:0:0:0:27"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-SS.AFRINIC.NET"
+         "ldhName" : "NS-SS.AFRINIC.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -269,37 +224,82 @@
                "2001:500:14:6130:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "PCH.NIC.SS"
+         "ldhName" : "PCH.NIC.SS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "185.28.194.194",
                "185.38.108.108"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "SSNIC.ANYCASTDNS.CZ"
+         "ldhName" : "SSNIC.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://nic.ss/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "65fb691da6eb488ed99195e7609837f787eafc4a",
+            "digestType" : "1",
+            "keyTag" : "43817"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "f85d36a2e056ff8cbb8dc79c748e4ec1e862c4f739891f9595669aa3384a252d",
+            "digestType" : "2",
+            "keyTag" : "43817"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

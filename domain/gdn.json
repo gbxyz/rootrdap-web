@@ -1,23 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2014-12-04",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-05-09"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "gdn-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -68,14 +56,14 @@
                   "kausar@gdnregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
          "handle" : "gdn-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -126,14 +114,14 @@
                   "kausar@gdnregistry.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
          "handle" : "gdn-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -166,36 +154,44 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "gdn",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "7a16bf5938b9fe7cf2ac5be9c472e81443944686",
-            "keyTag" : "30307",
-            "digestType" : "1",
-            "algorithm" : "8"
-         },
-         {
-            "digest" : "157427e9d56b06de066a0bee607c2f3314b85fea",
-            "digestType" : "1",
-            "keyTag" : "28906",
-            "algorithm" : "8"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-12-04"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-09"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:43"
+      }
+   ],
    "handle" : "gdn",
-   "objectClassName" : "domain",
+   "ldhName" : "gdn",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gdn.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.gdn",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "NS1.NIC.GDN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.25.18"
@@ -203,23 +199,23 @@
             "v6" : [
                "2001:678:20:0:0:0:0:18"
             ]
-         }
+         },
+         "ldhName" : "NS1.NIC.GDN",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:10e0:0:0:0:0:11"
-            ],
             "v4" : [
                "194.0.26.11"
+            ],
+            "v6" : [
+               "2001:67c:10e0:0:0:0:0:11"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.NIC.GDN"
+         "ldhName" : "NS3.NIC.GDN",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS4.NIC.GDN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.0.24.11"
@@ -227,43 +223,33 @@
             "v6" : [
                "2001:678:24:0:0:0:0:11"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gdn.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.gdn",
-         "rel" : "related"
+         },
+         "ldhName" : "NS4.NIC.GDN",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -273,10 +259,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.gdn"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -285,10 +271,24 @@
          "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "7a16bf5938b9fe7cf2ac5be9c472e81443944686",
+            "digestType" : "1",
+            "keyTag" : "30307"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "157427e9d56b06de066a0bee607c2f3314b85fea",
+            "digestType" : "1",
+            "keyTag" : "28906"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

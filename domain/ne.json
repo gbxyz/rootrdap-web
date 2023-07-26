@@ -1,11 +1,51 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "ne",
-   "ldhName" : "ne",
    "entities" : [
       {
+         "handle" : "ne-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "SONITEL"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Rue de l'Uranium\nNiamey 208\nNiger (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "ne-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -64,12 +104,11 @@
                   "kimba.yaye@sonitel.ne"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "ne-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -131,52 +170,9 @@
                   "sadou.soloke@sonitel.ne"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "ne-technical"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "ne-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "SONITEL"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Rue de l'Uranium\nNiamey 208\nNiger (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -188,33 +184,72 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
+         "eventDate" : "2023-07-26T13:27:44"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "ne",
+   "ldhName" : "ne",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/ne.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.intnet.ne"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.intnet.ne",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.51.3.49"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "BOW.RAIN.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.0.9.101"
+            ],
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:101"
+            ]
+         },
+         "ldhName" : "NE.CCTLD.AUTHDNS.RIPE.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.45"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:45"
+            ]
+         },
+         "ldhName" : "NS-NE.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "41.138.54.10"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS.INTNET.NE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -227,75 +262,40 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "194.51.3.49"
-            ]
-         },
-         "ldhName" : "BOW.RAIN.FR"
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "ldhName" : "NE.CCTLD.AUTHDNS.RIPE.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "193.0.9.101"
-            ],
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:101"
-            ]
-         }
+         "description" : [
+            "Registration information: http://www.intnet.ne"
+         ],
+         "title" : "Remark"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:45"
-            ],
-            "v4" : [
-               "196.216.168.45"
-            ]
-         },
-         "ldhName" : "NS-NE.AFRINIC.NET"
-      },
-      {
-         "ldhName" : "NS.INTNET.NE",
-         "ipAddresses" : {
-            "v4" : [
-               "41.138.54.10"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/ne.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.intnet.ne"
-      }
+   "status" : [
+      "active"
    ]
 }

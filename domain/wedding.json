@@ -1,63 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "wedding",
-   "events" : [
-      {
-         "eventDate" : "2014-07-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-12-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Registry Services, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
+         "handle" : "wedding-administrative",
          "objectClassName" : "entity",
-         "handle" : "wedding-registrant"
-      },
-      {
          "roles" : [
             "administrative"
          ],
@@ -119,11 +64,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "wedding-administrative"
+         ]
       },
       {
+         "handle" : "wedding-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -185,32 +130,84 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "wedding-registrant",
          "objectClassName" : "entity",
-         "handle" : "wedding-technical"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Registry Services, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2155 E. GoDaddy Way\nTempe AZ 85284\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "wedding",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "7942",
-            "digest" : "6bcbb57873bad3ef4bfc74da093b04a5232bbc92c68579dd6776f326467510fd"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-10"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:33"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "wedding",
+   "ldhName" : "wedding",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/wedding.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.wedding/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.10"
@@ -219,7 +216,8 @@
                "2001:dcd:1:0:0:0:0:10"
             ]
          },
-         "ldhName" : "A.NIC.WEDDING"
+         "ldhName" : "A.NIC.WEDDING",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -230,11 +228,10 @@
                "2001:dcd:2:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.WEDDING"
+         "ldhName" : "B.NIC.WEDDING",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.10"
@@ -243,10 +240,10 @@
                "2001:dcd:3:0:0:0:0:10"
             ]
          },
-         "ldhName" : "C.NIC.WEDDING"
+         "ldhName" : "C.NIC.WEDDING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "X.NIC.WEDDING",
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -255,22 +252,22 @@
                "2610:a1:1074:0:0:0:1:82"
             ]
          },
+         "ldhName" : "X.NIC.WEDDING",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.WEDDING"
+         "ldhName" : "Y.NIC.WEDDING",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.174.82"
@@ -279,34 +276,18 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "ldhName" : "Z.NIC.WEDDING"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/wedding.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.wedding/",
-         "title" : "URL for registration services"
+         "ldhName" : "Z.NIC.WEDDING",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -316,6 +297,11 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -331,10 +317,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "6bcbb57873bad3ef4bfc74da093b04a5232bbc92c68579dd6776f326467510fd",
+            "digestType" : "2",
+            "keyTag" : "7942"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

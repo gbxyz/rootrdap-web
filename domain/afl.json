@@ -1,23 +1,48 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "afl",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-02-19"
-      },
-      {
-         "eventDate" : "2022-11-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "afl-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Australian Football League"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "140 Harbour Esplanade\nDocklands VIC 3008\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "afl-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -71,13 +96,14 @@
                   "ngtld-afl@cscinfo.com"
                ]
             ]
-         ],
-         "handle" : "afl-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "afl-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -136,94 +162,66 @@
                   "ngtld-afl@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Australian Football League"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "140 Harbour Esplanade\nDocklands VIC 3008\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "afl-registrant",
-         "objectClassName" : "entity"
       }
    ],
-   "ldhName" : "afl",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "10006",
-            "digestType" : "2",
-            "digest" : "de6443d2666e4f9e6066e1b7f1c42e3ce849246f4e1ea06ec86951a002a2efa6"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-02-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:24:42"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "afl",
+   "ldhName" : "afl",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/afl.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.afl",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "ldhName" : "A.NIC.AFL"
+         "ldhName" : "A.NIC.AFL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.AFL"
+         "ldhName" : "B.NIC.AFL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -234,8 +232,8 @@
                "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.AFL"
+         "ldhName" : "C.NIC.AFL",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -246,11 +244,10 @@
                "2610:a1:1074:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.AFL"
+         "ldhName" : "X.NIC.AFL",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Y.NIC.AFL",
          "ipAddresses" : {
             "v4" : [
                "156.154.173.82"
@@ -259,6 +256,7 @@
                "2610:a1:1075:0:0:0:1:82"
             ]
          },
+         "ldhName" : "Y.NIC.AFL",
          "objectClassName" : "nameserver"
       },
       {
@@ -270,51 +268,39 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Z.NIC.AFL"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/afl.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.afl",
-         "title" : "URL for registration services"
+         "ldhName" : "Z.NIC.AFL",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.AFL."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -328,5 +314,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "de6443d2666e4f9e6066e1b7f1c42e3ce849246f4e1ea06ec86951a002a2efa6",
+            "digestType" : "2",
+            "keyTag" : "10006"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,27 +1,11 @@
 {
-   "handle" : "yachts",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "50071",
-            "algorithm" : "8",
-            "digest" : "bf1b2d1657ad8be12fbedad8af0999d1e9185c100937ac023d01c9a6cca78dae"
-         },
-         {
-            "keyTag" : "14477",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "0180abc62cf090f5df1ef074f1958c237261e14633f4ad949298514bda155257"
-         }
-      ]
-   },
    "entities" : [
       {
          "handle" : "yachts-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -80,12 +64,14 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "yachts-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -136,14 +122,14 @@
                   "hello@xyz.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "yachts-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "yachts-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -176,19 +162,13 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "yachts-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "yachts",
    "events" : [
       {
-         "eventDate" : "2014-05-01",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-01"
       },
       {
          "eventAction" : "last changed",
@@ -196,34 +176,76 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:58"
+         "eventDate" : "2023-07-26T13:30:04"
       }
    ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "yachts",
+   "ldhName" : "yachts",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.YACHTS."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/yachts.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.yachts"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://nic.yachts",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.133"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:133"
+            ]
+         },
+         "ldhName" : "A.NIC.YACHTS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.133"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:133"
+            ]
+         },
+         "ldhName" : "B.NIC.YACHTS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.133"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:133"
+            ]
+         },
+         "ldhName" : "C.NIC.YACHTS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.133"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:133"
+            ]
+         },
+         "ldhName" : "D.NIC.YACHTS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -236,79 +258,57 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/yachts.html"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.YACHTS."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: http://nic.yachts"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://nic.yachts"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:133"
-            ],
-            "v4" : [
-               "194.169.218.133"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "bf1b2d1657ad8be12fbedad8af0999d1e9185c100937ac023d01c9a6cca78dae",
+            "digestType" : "2",
+            "keyTag" : "50071"
          },
-         "ldhName" : "A.NIC.YACHTS"
-      },
-      {
-         "ldhName" : "B.NIC.YACHTS",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.133"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:133"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.NIC.YACHTS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:133"
-            ],
-            "v4" : [
-               "212.18.248.133"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "D.NIC.YACHTS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:133"
-            ],
-            "v4" : [
-               "212.18.249.133"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
+         {
+            "algorithm" : "8",
+            "digest" : "0180abc62cf090f5df1ef074f1958c237261e14633f4ad949298514bda155257",
+            "digestType" : "2",
+            "keyTag" : "14477"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

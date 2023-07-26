@@ -1,23 +1,11 @@
 {
-   "handle" : "map",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2017-06-08"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "map-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -76,14 +64,11 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "map-administrative"
+         ]
       },
       {
+         "handle" : "map-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -145,11 +130,14 @@
                   "crr-tech@google.com"
                ]
             ]
-         ],
-         "handle" : "map-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "map-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,48 +170,56 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "map-registrant"
+         ]
       }
    ],
-   "ldhName" : "map",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "2b0dbafc4eafa98fbed02adb2ff33c9af7666f2f9910a141573f511397393a4b",
-            "algorithm" : "8",
-            "keyTag" : "16600",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2017-06-08"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:30"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "map",
+   "ldhName" : "map",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/map.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.registry.google",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
             "v4" : [
                "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.34.105"
@@ -231,7 +227,9 @@
             "v6" : [
                "2001:4860:4802:34:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -242,8 +240,8 @@
                "2001:4860:4802:36:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -254,11 +252,10 @@
                "2001:4860:4802:38:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.60.105"
@@ -267,24 +264,8 @@
                "2001:4860:4805:0:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/map.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.registry.google",
-         "title" : "URL for registration services"
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -297,26 +278,31 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.registry.google"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -324,5 +310,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2b0dbafc4eafa98fbed02adb2ff33c9af7666f2f9910a141573f511397393a4b",
+            "digestType" : "2",
+            "keyTag" : "16600"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

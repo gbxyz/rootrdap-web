@@ -1,10 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "dvr",
    "entities" : [
       {
-         "handle" : "dvr-administrative",
+         "handle" : "dvr-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -13,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Patent Counsel & Director"
                ],
                [
                   "org",
@@ -41,36 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.303.706.4000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.301.428.2818"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-dvr@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "dvr-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -129,14 +104,13 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "dvr-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -146,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Patent Counsel & Director"
                ],
                [
                   "org",
@@ -168,71 +148,52 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.303.706.4000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.301.428.2818"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-dvr@cscglobal.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "dvr-registrant"
+         ]
       }
    ],
-   "ldhName" : "dvr",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "fe84d723dc95eeee237ed7452871da942fc883f0154cdead6bcfa3a36ef52dc9",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "28879"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "2016-09-22",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-09-22"
       },
       {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
       },
       {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:20"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DVR."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.echostar.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "handle" : "dvr",
+   "ldhName" : "dvr",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/dvr.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "href" : "https://about.rdap.org",
@@ -247,15 +208,15 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.DVR",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6a:0:0:0:0:17"
-            ],
             "v4" : [
                "65.22.108.17"
+            ],
+            "v6" : [
+               "2a01:8840:6a:0:0:0:0:17"
             ]
          },
+         "ldhName" : "A0.NIC.DVR",
          "objectClassName" : "nameserver"
       },
       {
@@ -267,8 +228,8 @@
                "2a01:8840:6d:0:0:0:0:17"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.DVR"
+         "ldhName" : "A2.NIC.DVR",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -279,11 +240,10 @@
                "2a01:8840:6b:0:0:0:0:17"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.DVR"
+         "ldhName" : "B0.NIC.DVR",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.DVR",
          "ipAddresses" : {
             "v4" : [
                "65.22.110.17"
@@ -292,25 +252,65 @@
                "2a01:8840:6c:0:0:0:0:17"
             ]
          },
+         "ldhName" : "C0.NIC.DVR",
          "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DVR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.echostar.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "fe84d723dc95eeee237ed7452871da942fc883f0154cdead6bcfa3a36ef52dc9",
+            "digestType" : "2",
+            "keyTag" : "28879"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

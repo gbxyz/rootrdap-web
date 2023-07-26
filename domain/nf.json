@@ -1,65 +1,8 @@
 {
-   "handle" : "nf",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "1996-03-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-11-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
-      }
-   ],
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Norfolk Island Data Services"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "617 Fletcher Christian Rd.\nSouth Pacific 2899\nNorfolk Island"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "nf-registrant",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "nf-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -116,6 +59,11 @@
          ]
       },
       {
+         "handle" : "nf-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -166,31 +114,81 @@
                   "iana@nic.nf"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
+         ]
+      },
+      {
+         "handle" : "nf-registrant",
          "objectClassName" : "entity",
-         "handle" : "nf-administrative"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Norfolk Island Data Services"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "617 Fletcher Christian Rd.\nSouth Pacific 2899\nNorfolk Island"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "nf",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "dd87dd324e8360dec8daaf2db771b8c52024d6cefeb76f2b855e0fc3b8fdb7d7",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "54236"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1996-03-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:46"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "nf",
+   "ldhName" : "nf",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/nf.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.nf",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
@@ -202,57 +200,40 @@
                "2001:500:14:6051:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS.ANYCAST.NIC.NF"
+         "ldhName" : "NS.ANYCAST.NIC.NF",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
             "v4" : [
                "185.38.108.108"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "185.28.194.194"
+            ],
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
             ]
          },
+         "ldhName" : "NS1.ANYCASTDNS.CZ",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/nf.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://nic.nf",
-         "rel" : "related"
+         "ipAddresses" : {
+            "v4" : [
+               "185.28.194.194"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -263,12 +244,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.NF."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -277,10 +263,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "dd87dd324e8360dec8daaf2db771b8c52024d6cefeb76f2b855e0fc3b8fdb7d7",
+            "digestType" : "2",
+            "keyTag" : "54236"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

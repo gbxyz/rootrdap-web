@@ -1,58 +1,8 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "cdce581a5b4b9280a865fc7bd798572016629e0b4c56cac1a3fccefb0d4329a2",
-            "keyTag" : "23341",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "ldhName" : "auspost",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Australian Postal Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "111 Bourke Street\nMelbourne VIC 3000\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "auspost-registrant",
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "auspost-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -114,13 +64,14 @@
                   "ngtld-auspost@cscinfo.com"
                ]
             ]
-         ],
-         "handle" : "auspost-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "auspost-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -171,47 +122,154 @@
                   "ngtld-auspost@cscinfo.com"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "auspost-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Australian Postal Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "111 Bourke Street\nMelbourne VIC 3000\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2016-08-11"
       },
       {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
+         "eventDate" : "2023-07-26T13:24:59"
       }
    ],
    "handle" : "auspost",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "auspost",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AUSPOST."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/auspost.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: https://auspost.com.au"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "https://auspost.com.au",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.AUSPOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.AUSPOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.AUSPOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "X.NIC.AUSPOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Y.NIC.AUSPOST",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Z.NIC.AUSPOST",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -232,100 +290,42 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/auspost.html"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "https://auspost.com.au",
-         "rel" : "related",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.AUSPOST"
-      },
-      {
-         "ldhName" : "B.NIC.AUSPOST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.AUSPOST"
-      },
-      {
-         "ldhName" : "X.NIC.AUSPOST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Y.NIC.AUSPOST",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "Z.NIC.AUSPOST",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         }
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AUSPOST."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://auspost.com.au"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "cdce581a5b4b9280a865fc7bd798572016629e0b4c56cac1a3fccefb0d4329a2",
+            "digestType" : "2",
+            "keyTag" : "23341"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

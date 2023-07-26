@@ -1,23 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "nyc",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-13"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "nyc-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -53,11 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nyc-registrant"
+         ]
       },
       {
+         "handle" : "nyc-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -116,14 +104,11 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "nyc-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "nyc-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -185,41 +170,54 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nyc-technical"
+         ]
       }
    ],
-   "ldhName" : "nyc",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "12811",
-            "digest" : "a5f2ec128186e5ba7f44ae789ed94f96e32811a68407d40e7073e2a58e8a1341"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-13"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:53"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "nyc",
+   "ldhName" : "nyc",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/nyc.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.mydotnyc.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
             "v4" : [
                "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
             ]
          },
-         "ldhName" : "A.NIC.NYC"
+         "ldhName" : "A.NIC.NYC",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -230,11 +228,10 @@
                "2001:dcd:2:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.NYC"
+         "ldhName" : "B.NIC.NYC",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.NYC",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.10"
@@ -243,79 +240,68 @@
                "2001:dcd:3:0:0:0:0:10"
             ]
          },
+         "ldhName" : "C.NIC.NYC",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.NYC",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:7d"
-            ],
             "v4" : [
                "156.154.144.125"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS2.DNS.NIC.NYC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:7d"
             ],
-            "v4" : [
-               "156.154.145.125"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.NYC",
-         "ipAddresses" : {
             "v6" : [
-               "2610:a1:1073:0:0:0:0:7d"
-            ],
-            "v4" : [
-               "156.154.159.125"
+               "2610:a1:1071:0:0:0:0:7d"
             ]
          },
+         "ldhName" : "NS1.DNS.NIC.NYC",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/nyc.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.125"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:7d"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.NYC",
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "href" : "http://www.mydotnyc.com",
-         "title" : "URL for registration services"
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.125"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:7d"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.NYC",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -325,16 +311,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.mydotnyc.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "a5f2ec128186e5ba7f44ae789ed94f96e32811a68407d40e7073e2a58e8a1341",
+            "digestType" : "2",
+            "keyTag" : "12811"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

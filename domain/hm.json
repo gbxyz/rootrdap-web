@@ -1,24 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-07-24"
-      },
-      {
-         "eventDate" : "2021-12-15",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
-      }
-   ],
-   "ldhName" : "hm",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "hm-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -51,9 +38,72 @@
                   ]
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "hm-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Edward Sweeney"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "HM Domain Registry"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "PO Box 383\nDickson ACT 2602\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+612 6189 5260"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+612 6189 5261"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ed@capital.net.au"
+               ]
+            ]
          ]
       },
       {
@@ -121,84 +171,81 @@
                ]
             ]
          ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-07-24"
       },
       {
-         "objectClassName" : "entity",
-         "handle" : "hm-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Edward Sweeney"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "HM Domain Registry"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "PO Box 383\nDickson ACT 2602\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+612 6189 5260"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+612 6189 5261"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ed@capital.net.au"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2021-12-15"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:57"
       }
    ],
    "handle" : "hm",
-   "objectClassName" : "domain",
+   "ldhName" : "hm",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/hm.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.registry.hm",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "208.70.79.25"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.REGISTRY.HM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "208.70.79.24"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS2.REGISTRY.HM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "128.199.180.188"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS3.REGISTRY.HM",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -209,54 +256,10 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "208.70.79.25"
-            ]
-         },
-         "ldhName" : "NS1.REGISTRY.HM"
-      },
-      {
-         "ldhName" : "NS2.REGISTRY.HM",
-         "ipAddresses" : {
-            "v4" : [
-               "208.70.79.24"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "128.199.180.188"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.REGISTRY.HM"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/hm.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.registry.hm",
-         "rel" : "related"
-      }
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -266,20 +269,17 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.registry.hm"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "status" : [
       "active"

@@ -1,124 +1,10 @@
 {
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/eco.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "https://www.bigroom.eco"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.197.4"
-            ],
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NS.NIC.ECO"
-      },
-      {
-         "ldhName" : "B.NS.NIC.ECO",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.198.4"
-            ],
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:4"
-            ]
-         }
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ECO."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.bigroom.eco"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2016-08-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-10-12"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a2500ae83c687fd270d0660a27527c3c96c6a136a86d9f2bdc714e9280bb5e32",
-            "algorithm" : "8",
-            "keyTag" : "38446",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "eco",
    "entities" : [
       {
+         "handle" : "eco-administrative",
          "objectClassName" : "entity",
-         "handle" : "eco-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -128,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Registry Policy and Compliance"
                ],
                [
                   "org",
@@ -150,13 +42,25 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "16046826673"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-contact@bigroom.eco"
                ]
             ]
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "eco-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -221,6 +125,11 @@
          ]
       },
       {
+         "handle" : "eco-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -229,12 +138,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Registry Policy and Compliance"
                ],
                [
                   "org",
@@ -257,28 +160,125 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "16046826673"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-contact@bigroom.eco"
                ]
             ]
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-08-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-12"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:21"
+      }
+   ],
+   "handle" : "eco",
+   "ldhName" : "eco",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/eco.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.bigroom.eco",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.197.4"
+            ],
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "A.NS.NIC.ECO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.159.198.4"
+            ],
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.NS.NIC.ECO",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "roles" : [
-            "administrative"
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "objectClassName" : "entity",
-         "handle" : "eco-administrative"
+         "title" : "Comments"
       }
    ],
    "objectClassName" : "domain",
-   "handle" : "eco"
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ECO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.bigroom.eco"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "a2500ae83c687fd270d0660a27527c3c96c6a136a86d9f2bdc714e9280bb5e32",
+            "digestType" : "2",
+            "keyTag" : "38446"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

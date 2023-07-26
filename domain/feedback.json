@@ -1,22 +1,8 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2014-03-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-29"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "feedback",
    "entities" : [
       {
+         "handle" : "feedback-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -78,13 +64,14 @@
                   "contact@topspectrum.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "feedback-administrative"
+         ]
       },
       {
          "handle" : "feedback-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,14 +130,14 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "feedback-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -183,25 +170,25 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "00f7f4b6df67dc7b828c14829884908ee92e57fe312ed483c43da299fa5ddae5",
-            "digestType" : "2",
-            "keyTag" : "16786",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-06"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-29"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:32"
+      }
+   ],
    "handle" : "feedback",
-   "objectClassName" : "domain",
+   "ldhName" : "feedback",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/feedback.html",
@@ -209,19 +196,18 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "http://centralnic.com",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.169.218.50"
@@ -230,11 +216,10 @@
                "2001:67c:13cc:0:0:0:1:50"
             ]
          },
-         "ldhName" : "A.NIC.FEEDBACK"
+         "ldhName" : "A.NIC.FEEDBACK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.FEEDBACK",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.50"
@@ -242,7 +227,9 @@
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:50"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.FEEDBACK",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -253,11 +240,10 @@
                "2a04:2b00:13ee:0:0:0:0:50"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.FEEDBACK"
+         "ldhName" : "C.NIC.FEEDBACK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NIC.FEEDBACK",
          "ipAddresses" : {
             "v4" : [
                "212.18.249.50"
@@ -266,6 +252,7 @@
                "2a04:2b00:13ff:0:0:0:0:50"
             ]
          },
+         "ldhName" : "D.NIC.FEEDBACK",
          "objectClassName" : "nameserver"
       }
    ],
@@ -287,12 +274,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.FEEDBACK."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -301,16 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "00f7f4b6df67dc7b828c14829884908ee92e57fe312ed483c43da299fa5ddae5",
+            "digestType" : "2",
+            "keyTag" : "16786"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

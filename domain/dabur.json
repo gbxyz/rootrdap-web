@@ -1,23 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "dabur",
-   "events" : [
-      {
-         "eventDate" : "2015-01-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-05"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "dabur-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -26,6 +14,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Head, IT"
                ],
                [
                   "org",
@@ -48,18 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+91.1203982000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+91.1204374935"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domain.owner@dabur.com"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "dabur-registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "dabur-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -124,10 +133,10 @@
          ]
       },
       {
+         "handle" : "dabur-registrant",
          "objectClassName" : "entity",
-         "handle" : "dabur-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -137,12 +146,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Head, IT"
                ],
                [
                   "org",
@@ -165,69 +168,46 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+91.1203982000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+91.1204374935"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domain.owner@dabur.com"
                ]
             ]
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-01-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-05"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:04"
+      }
+   ],
+   "handle" : "dabur",
    "ldhName" : "dabur",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "bc18991e60b16ed8791d94ea935d83e9d40e2cba9ac8b824a40191e5f5f50ae4",
-            "keyTag" : "12355",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/dabur.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.dabur.com",
          "rel" : "related",
-         "href" : "http://www.dabur.com"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.180.25"
@@ -236,75 +216,81 @@
                "2a01:8840:ae:0:0:0:0:25"
             ]
          },
-         "ldhName" : "A0.NIC.DABUR"
-      },
-      {
-         "ldhName" : "A2.NIC.DABUR",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b1:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.183.25"
-            ]
-         },
+         "ldhName" : "A0.NIC.DABUR",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.DABUR",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:af:0:0:0:0:25"
-            ],
             "v4" : [
-               "65.22.181.25"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b0:0:0:0:0:25"
+               "65.22.183.25"
             ],
-            "v4" : [
-               "65.22.182.25"
+            "v6" : [
+               "2a01:8840:b1:0:0:0:0:25"
             ]
          },
-         "ldhName" : "C0.NIC.DABUR"
+         "ldhName" : "A2.NIC.DABUR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.181.25"
+            ],
+            "v6" : [
+               "2a01:8840:af:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "B0.NIC.DABUR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.182.25"
+            ],
+            "v6" : [
+               "2a01:8840:b0:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "C0.NIC.DABUR",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.dabur.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -312,5 +298,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "bc18991e60b16ed8791d94ea935d83e9d40e2cba9ac8b824a40191e5f5f50ae4",
+            "digestType" : "2",
+            "keyTag" : "12355"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

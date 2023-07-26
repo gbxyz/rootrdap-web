@@ -1,22 +1,11 @@
 {
-   "handle" : "mm",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "0a66403da2ceb4c3960750739074d5ca799334b45c85e3fedd7838e01a2435d8",
-            "digestType" : "2",
-            "keyTag" : "18589",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "mm",
    "entities" : [
       {
          "handle" : "mm-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -49,12 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "mm-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -113,14 +104,11 @@
                   "ipresource.ptd@gmail.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "mm-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "mm-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -182,16 +170,13 @@
                   "mswe67@gmail.com"
                ]
             ]
-         ],
-         "handle" : "mm-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "1997-02-04",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1997-02-04"
       },
       {
          "eventAction" : "last changed",
@@ -199,33 +184,78 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
+         "eventDate" : "2023-07-26T13:27:36"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "mm",
+   "ldhName" : "mm",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.REGISTRY.GOV.MM."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/mm.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.ptd.gov.mm/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.ptd.gov.mm/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "A.NIC.NET.MM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "B.NIC.NET.MM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "C.NIC.NET.MM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "D.NIC.NET.MM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "103.103.173.9"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "PTD.NET.MM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -246,73 +276,43 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.NET.MM"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.REGISTRY.GOV.MM."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.NET.MM"
+         "description" : [
+            "Registration information: http://www.ptd.gov.mm/"
+         ],
+         "title" : "Remark"
       },
       {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.196.4"
-            ]
-         },
-         "ldhName" : "C.NIC.NET.MM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.NET.MM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "103.103.173.9"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "PTD.NET.MM"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mm.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.ptd.gov.mm/",
-         "rel" : "related"
-      }
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "0a66403da2ceb4c3960750739074d5ca799334b45c85e3fedd7838e01a2435d8",
+            "digestType" : "2",
+            "keyTag" : "18589"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

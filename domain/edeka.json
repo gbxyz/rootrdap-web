@@ -1,34 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-08"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-12-08"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "5236",
-            "digestType" : "2",
-            "digest" : "1423f0e6f60e7ba10535b7b7b88dea2b02a8ce3309e68ed2e9698687cdb95065"
-         }
-      ]
-   },
    "entities" : [
       {
          "handle" : "edeka-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -61,12 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "edeka-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -128,9 +104,7 @@
                   "edeka@dotzon.com"
                ]
             ]
-         ],
-         "handle" : "edeka-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "edeka-technical",
@@ -199,47 +173,41 @@
          ]
       }
    ],
-   "ldhName" : "edeka",
-   "handle" : "edeka",
-   "objectClassName" : "domain",
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-08"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-08"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:22"
       }
    ],
+   "handle" : "edeka",
+   "ldhName" : "edeka",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/edeka.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
          "href" : "http://edeka.de",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.16.25"
@@ -248,7 +216,8 @@
                "2a01:8840:12:0:0:0:0:25"
             ]
          },
-         "ldhName" : "A0.NIC.EDEKA"
+         "ldhName" : "A0.NIC.EDEKA",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -259,24 +228,22 @@
                "2a01:8840:15:0:0:0:0:25"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.EDEKA"
-      },
-      {
-         "ldhName" : "B0.NIC.EDEKA",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:13:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.17.25"
-            ]
-         },
+         "ldhName" : "A2.NIC.EDEKA",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.EDEKA",
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.17.25"
+            ],
+            "v6" : [
+               "2a01:8840:13:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "B0.NIC.EDEKA",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "65.22.18.25"
@@ -284,21 +251,46 @@
             "v6" : [
                "2a01:8840:14:0:0:0:0:25"
             ]
-         }
+         },
+         "ldhName" : "C0.NIC.EDEKA",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://edeka.de"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -307,9 +299,17 @@
          "title" : "Source"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "1423f0e6f60e7ba10535b7b7b88dea2b02a8ce3309e68ed2e9698687cdb95065",
+            "digestType" : "2",
+            "keyTag" : "5236"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

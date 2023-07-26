@@ -1,46 +1,6 @@
 {
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "handle" : "gucci-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Guccio Gucci S.p.a."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Via Tornabuoni, 73r\nFlorence 50123\nItaly"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
          "handle" : "gucci-technical",
          "objectClassName" : "entity",
          "roles" : [
@@ -99,8 +59,8 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "gucci-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -163,21 +123,48 @@
                ]
             ]
          ]
+      },
+      {
+         "handle" : "gucci-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Guccio Gucci S.p.a."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Via Tornabuoni, 73r\nFlorence 50123\nItaly"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "gucci",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "54892",
-            "digest" : "e13f3a9ada4c86b25c68f8258d9922e8201fae2845d6300298555856a2e1c938"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -188,35 +175,31 @@
          "eventDate" : "2021-11-09"
       },
       {
-         "eventDate" : "2023-07-26T13:16:50",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:53"
       }
    ],
    "handle" : "gucci",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "gucci",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GUCCI."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/gucci.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.gucci.com"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.gucci.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.GUCCI",
          "ipAddresses" : {
             "v4" : [
                "213.248.219.43"
@@ -225,46 +208,46 @@
                "2a01:618:403:0:0:0:0:43"
             ]
          },
+         "ldhName" : "DNS1.NIC.GUCCI",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:403:0:0:0:0:43"
-            ],
             "v4" : [
                "103.49.83.43"
+            ],
+            "v6" : [
+               "2401:fd80:403:0:0:0:0:43"
             ]
          },
-         "ldhName" : "DNS2.NIC.GUCCI"
+         "ldhName" : "DNS2.NIC.GUCCI",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS3.NIC.GUCCI",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:407:0:0:0:0:43"
-            ],
             "v4" : [
                "213.248.223.43"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:407:0:0:0:0:43"
             ],
-            "v4" : [
-               "43.230.51.43"
+            "v6" : [
+               "2a01:618:407:0:0:0:0:43"
             ]
          },
-         "ldhName" : "DNS4.NIC.GUCCI"
+         "ldhName" : "DNS3.NIC.GUCCI",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "43.230.51.43"
+            ],
+            "v6" : [
+               "2401:fd80:407:0:0:0:0:43"
+            ]
+         },
+         "ldhName" : "DNS4.NIC.GUCCI",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.100.3"
@@ -273,22 +256,22 @@
                "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSA.NIC.GUCCI"
-      },
-      {
-         "ldhName" : "DNSB.NIC.GUCCI",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         },
+         "ldhName" : "DNSA.NIC.GUCCI",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSB.NIC.GUCCI",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "156.154.102.3"
@@ -297,46 +280,30 @@
                "2610:a1:1009:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSC.NIC.GUCCI"
+         "ldhName" : "DNSC.NIC.GUCCI",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSD.NIC.GUCCI",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gucci.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.gucci.com"
+         },
+         "ldhName" : "DNSD.NIC.GUCCI",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -347,10 +314,43 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GUCCI."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.gucci.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "e13f3a9ada4c86b25c68f8258d9922e8201fae2845d6300298555856a2e1c938",
+            "digestType" : "2",
+            "keyTag" : "54892"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

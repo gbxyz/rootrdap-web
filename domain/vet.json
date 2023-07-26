@@ -1,156 +1,10 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.VET."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/vet.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:49"
-            ],
-            "v4" : [
-               "65.22.32.49"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.VET"
-      },
-      {
-         "ldhName" : "V0N1.NIC.VET",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.33.49"
-            ],
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:49"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V0N2.NIC.VET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.34.49"
-            ],
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:49"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N3.NIC.VET",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.16.49"
-            ],
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:49"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:49"
-            ],
-            "v4" : [
-               "65.22.35.49"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.VET"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.17.49"
-            ],
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:49"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.VET"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "19864",
-            "algorithm" : "8",
-            "digest" : "2b1b3ab9f4fdd837fc9f9c7875fa916b6a22c3ef5c0c04d5d3235e42828cf6a8"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "vet-registrant",
          "objectClassName" : "entity",
-         "handle" : "vet-technical",
          "roles" : [
-            "technical"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -162,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Dog Beach, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -188,26 +36,6 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldtech@donuts.email"
                ]
             ]
          ]
@@ -279,6 +107,11 @@
          ]
       },
       {
+         "handle" : "vet-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -289,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Dog Beach, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -309,32 +148,193 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldtech@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "vet-registrant"
+         ]
       }
    ],
-   "ldhName" : "vet",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-05-22",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-22"
       },
       {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:56"
+         "eventDate" : "2023-07-26T13:29:26"
       }
    ],
    "handle" : "vet",
-   "objectClassName" : "domain"
+   "ldhName" : "vet",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/vet.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.32.49"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.VET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.33.49"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.VET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.34.49"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.VET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.16.49"
+            ],
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.VET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.35.49"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.VET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.17.49"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:49"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.VET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.VET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "2b1b3ab9f4fdd837fc9f9c7875fa916b6a22c3ef5c0c04d5d3235e42828cf6a8",
+            "digestType" : "2",
+            "keyTag" : "19864"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

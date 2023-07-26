@@ -1,22 +1,10 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "gr",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "13987",
-            "digest" : "ff87e9205f88e1d32c67a65bd61c68c56689c607d7684d12c867dc933d546ec8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "gr",
    "entities" : [
       {
+         "handle" : "gr-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -26,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Panagiotis Sikas"
                ],
                [
                   "org",
@@ -54,33 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+30 281 0391647"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+30 281 0391451"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gr-noc@ics.forth.gr"
                ]
             ]
-         ],
-         "handle" : "gr-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "gr-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -142,13 +104,14 @@
                   "gr-noc@ics.forth.gr"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gr-administrative"
+         ]
       },
       {
-         "handle" : "gr-registrant",
+         "handle" : "gr-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -157,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Panagiotis Sikas"
                ],
                [
                   "org",
@@ -179,53 +148,132 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+30 281 0391647"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+30 281 0391451"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gr-noc@ics.forth.gr"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "1989-02-19",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1989-02-19"
       },
       {
-         "eventDate" : "2022-06-16",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-06-16"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:50"
+         "eventDate" : "2023-07-26T13:26:50"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "gr",
+   "ldhName" : "gr",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/gr.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.gr"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.gr",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "139.91.191.3"
+            ],
+            "v6" : [
+               "2001:648:2c30:0:0:0:191:3"
+            ]
+         },
+         "ldhName" : "ESTIA.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "78.104.145.227"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "GR-AT.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.1.25"
+            ],
+            "v6" : [
+               "2001:678:4:0:0:0:0:19"
+            ]
+         },
+         "ldhName" : "GR-C.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.102"
+            ],
+            "v6" : [
+               "2001:678:e:102:0:0:0:53"
+            ]
+         },
+         "ldhName" : "GR-D.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.4.10"
+            ],
+            "v6" : [
+               "2001:678:7:0:0:0:4:10"
+            ]
+         },
+         "ldhName" : "GR-M.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "139.91.1.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "GRDNS.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -246,91 +294,43 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gr.html",
-         "rel" : "related"
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: http://www.gr"
+         ],
+         "title" : "Remark"
       },
       {
-         "href" : "http://www.gr",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "ESTIA.ICS.FORTH.GR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:648:2c30:0:0:0:191:3"
-            ],
-            "v4" : [
-               "139.91.191.3"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "ff87e9205f88e1d32c67a65bd61c68c56689c607d7684d12c867dc933d546ec8",
+            "digestType" : "2",
+            "keyTag" : "13987"
          }
-      },
-      {
-         "ldhName" : "GR-AT.ICS.FORTH.GR",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "78.104.145.227"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.1.25"
-            ],
-            "v6" : [
-               "2001:678:4:0:0:0:0:19"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "GR-C.ICS.FORTH.GR"
-      },
-      {
-         "ldhName" : "GR-D.ICS.FORTH.GR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:e:102:0:0:0:53"
-            ],
-            "v4" : [
-               "194.0.11.102"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.4.10"
-            ],
-            "v6" : [
-               "2001:678:7:0:0:0:4:10"
-            ]
-         },
-         "ldhName" : "GR-M.ICS.FORTH.GR"
-      },
-      {
-         "ldhName" : "GRDNS.ICS.FORTH.GR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "139.91.1.1"
-            ],
-            "v6" : []
-         }
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

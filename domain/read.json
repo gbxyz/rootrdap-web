@@ -1,69 +1,11 @@
 {
-   "handle" : "read",
-   "objectClassName" : "domain",
-   "ldhName" : "read",
    "entities" : [
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Registry Services Technical"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Nominet"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44.1865332211"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registrytechnical@nominet.uk"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "read-technical",
-         "objectClassName" : "entity"
-      },
       {
          "handle" : "read-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -122,14 +64,72 @@
                   "read-rzm@amazon.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "read-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Registry Services Technical"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Nominet"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44.1865332211"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registrytechnical@nominet.uk"
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "read-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -162,28 +162,13 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "688ba91ca7dc1405423b597ef47becde3188530011815fbb5c55b484eecd9f31",
-            "algorithm" : "8",
-            "keyTag" : "15481",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
       },
       {
          "eventAction" : "last changed",
@@ -191,56 +176,30 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
+         "eventDate" : "2023-07-26T13:28:23"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.READ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "handle" : "read",
+   "ldhName" : "read",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/read.html",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "https://www.amazonregistry.com",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.READ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "213.248.218.76"
@@ -248,43 +207,45 @@
             "v6" : [
                "2a01:618:402:0:0:0:0:76"
             ]
-         }
+         },
+         "ldhName" : "DNS1.NIC.READ",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:76"
-            ],
             "v4" : [
                "103.49.82.76"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:76"
             ]
          },
-         "ldhName" : "DNS2.NIC.READ"
+         "ldhName" : "DNS2.NIC.READ",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:76"
-            ],
             "v4" : [
                "213.248.222.76"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:76"
             ]
          },
-         "ldhName" : "DNS3.NIC.READ"
+         "ldhName" : "DNS3.NIC.READ",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS4.NIC.READ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:76"
-            ],
             "v4" : [
                "43.230.50.76"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:76"
             ]
-         }
+         },
+         "ldhName" : "DNS4.NIC.READ",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -295,11 +256,10 @@
                "2001:502:ad09:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSA.NIC.READ"
+         "ldhName" : "DNSA.NIC.READ",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.101.3"
@@ -308,10 +268,10 @@
                "2001:502:2eda:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSB.NIC.READ"
+         "ldhName" : "DNSB.NIC.READ",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSC.NIC.READ",
          "ipAddresses" : {
             "v4" : [
                "156.154.102.3"
@@ -320,19 +280,20 @@
                "2610:a1:1009:0:0:0:0:3"
             ]
          },
+         "ldhName" : "DNSC.NIC.READ",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.READ"
+         "ldhName" : "DNSD.NIC.READ",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -345,12 +306,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.READ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "688ba91ca7dc1405423b597ef47becde3188530011815fbb5c55b484eecd9f31",
+            "digestType" : "2",
+            "keyTag" : "15481"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

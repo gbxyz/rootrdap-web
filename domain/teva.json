@@ -1,22 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2016-02-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "teva",
    "entities" : [
       {
+         "handle" : "teva-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -49,16 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "teva-registrant"
+         ]
       },
       {
          "handle" : "teva-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -109,14 +96,14 @@
                   "domainadmincorp@teva.co.il"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "teva-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -175,25 +162,25 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "7e670079255665759e954def033d30aaa2dabb07cf77eca7f27975fd03e0cfc8",
-            "digestType" : "2",
-            "keyTag" : "46417",
-            "algorithm" : "8"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-02-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:13"
+      }
+   ],
    "handle" : "teva",
-   "objectClassName" : "domain",
+   "ldhName" : "teva",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/teva.html",
@@ -206,14 +193,13 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://nic.teva",
          "rel" : "related",
-         "href" : "http://nic.teva"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.TEVA",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -222,6 +208,7 @@
                "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A.NIC.TEVA",
          "objectClassName" : "nameserver"
       },
       {
@@ -233,11 +220,10 @@
                "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.TEVA"
+         "ldhName" : "B.NIC.TEVA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.TEVA",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
@@ -246,31 +232,32 @@
                "2001:dcd:3:0:0:0:0:9"
             ]
          },
+         "ldhName" : "C.NIC.TEVA",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:a0"
-            ],
             "v4" : [
                "156.154.144.160"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:a0"
             ]
          },
-         "ldhName" : "NS1.DNS.NIC.TEVA"
+         "ldhName" : "NS1.DNS.NIC.TEVA",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.TEVA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:a0"
-            ],
             "v4" : [
                "156.154.145.160"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:a0"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.TEVA",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -281,8 +268,8 @@
                "2610:a1:1073:0:0:0:0:a0"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.TEVA"
+         "ldhName" : "NS3.DNS.NIC.TEVA",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -295,20 +282,25 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TEVA."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -323,10 +315,18 @@
          "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "7e670079255665759e954def033d30aaa2dabb07cf77eca7f27975fd03e0cfc8",
+            "digestType" : "2",
+            "keyTag" : "46417"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

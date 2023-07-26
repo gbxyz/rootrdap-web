@@ -1,11 +1,11 @@
 {
-   "handle" : "mp",
-   "objectClassName" : "domain",
-   "ldhName" : "mp",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "mp-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -38,78 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "mp-administrative",
          "objectClassName" : "entity",
-         "handle" : "mp-technical",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Daniel Camacho"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Saipan Datacom, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "P.O. Box 504177\nSaipan MP 96950\nNorthern Mariana Islands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 670 483 3264"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 670 235 0965"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dcamacho@saipan.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
          "roles" : [
             "administrative"
          ],
@@ -171,68 +104,106 @@
                   "dcamacho@saipan.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mp-administrative"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "1996-10-22",
-         "eventAction" : "registration"
+         ]
       },
       {
-         "eventDate" : "2022-05-06",
-         "eventAction" : "last changed"
+         "handle" : "mp-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Daniel Camacho"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Saipan Datacom, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "P.O. Box 504177\nSaipan MP 96950\nNorthern Mariana Islands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 670 483 3264"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 670 235 0965"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dcamacho@saipan.com"
+               ]
+            ]
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1996-10-22"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-05-06"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
+         "eventDate" : "2023-07-26T13:27:40"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "mp",
+   "ldhName" : "mp",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/mp.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://get.mp/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "https://get.mp/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -243,55 +214,84 @@
             ],
             "v6" : []
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.NIC.MP"
+         "ldhName" : "NS1.NIC.MP",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.NIC.MP",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "16.163.54.122"
             ],
             "v6" : []
-         }
+         },
+         "ldhName" : "NS2.NIC.MP",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "75.101.129.89"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "NS3.NIC.MP"
+         "ldhName" : "NS3.NIC.MP",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "75.101.133.101"
-            ]
+            ],
+            "v6" : []
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.NIC.MP"
+         "ldhName" : "NS4.NIC.MP",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/mp.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://get.mp/",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://get.mp/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
    ]
 }

@@ -1,22 +1,10 @@
 {
-   "handle" : "flir",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "3dd6835d42b1d12266d8fcb2fc29b0aecd5783ceda9792a213f32fb67889c64d",
-            "algorithm" : "8",
-            "keyTag" : "24484",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "ldhName" : "flir",
    "entities" : [
       {
+         "handle" : "flir-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -28,10 +16,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Keith Phillips"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "FLIR Systems, Inc."
+                  "FLIR Systems Inc."
                ],
                [
                   "adr",
@@ -48,13 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "503-498-3114"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "503-498-3911"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "keith.phillips@flir.com"
                ]
             ]
-         ],
-         "handle" : "flir-registrant",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "flir-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -116,11 +130,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "flir-technical"
+         ]
       },
       {
+         "handle" : "flir-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -131,16 +148,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Keith Phillips"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "FLIR Systems Inc."
+                  "FLIR Systems, Inc."
                ],
                [
                   "adr",
@@ -157,37 +168,11 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "503-498-3114"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "503-498-3911"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "keith.phillips@flir.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "flir-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -199,57 +184,30 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
+         "eventDate" : "2023-07-26T13:26:36"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "flir",
+   "ldhName" : "flir",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/flir.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.flir.com"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "http://www.flir.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.FLIR",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -257,43 +215,45 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.FLIR",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "ldhName" : "B.NIC.FLIR"
+         "ldhName" : "B.NIC.FLIR",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C.NIC.FLIR"
+         "ldhName" : "C.NIC.FLIR",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:3d"
-            ],
             "v4" : [
                "156.154.144.61"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:3d"
             ]
          },
-         "ldhName" : "NS1.DNS.NIC.FLIR"
+         "ldhName" : "NS1.DNS.NIC.FLIR",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -304,37 +264,77 @@
                "2610:a1:1072:0:0:0:0:3d"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.FLIR"
+         "ldhName" : "NS2.DNS.NIC.FLIR",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:3d"
-            ],
             "v4" : [
                "156.154.159.61"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:3d"
             ]
          },
-         "ldhName" : "NS3.DNS.NIC.FLIR"
+         "ldhName" : "NS3.DNS.NIC.FLIR",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/flir.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.flir.com",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.flir.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "3dd6835d42b1d12266d8fcb2fc29b0aecd5783ceda9792a213f32fb67889c64d",
+            "digestType" : "2",
+            "keyTag" : "24484"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

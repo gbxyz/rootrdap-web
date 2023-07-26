@@ -1,157 +1,11 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.GTLDS.NIC.BR."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://nic.rio/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/rio.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://nic.rio/",
-         "rel" : "related"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:6:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.219.148.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.DNS.BR"
-      },
-      {
-         "ldhName" : "B.DNS.BR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:8:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.189.41.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.DNS.BR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:a:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.192.233.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:4:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.219.154.10"
-            ]
-         },
-         "ldhName" : "D.DNS.BR"
-      },
-      {
-         "ldhName" : "E.DNS.BR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.229.248.10"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "F.DNS.BR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:c:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.219.159.10"
-            ]
-         }
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "rio",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "452f6bd5cb271080aad2425fb762a32d0880d6c706f16ed4d0c8797342a91a80",
-            "keyTag" : "2471",
-            "digestType" : "2",
-            "algorithm" : "13"
-         }
-      ]
-   },
-   "ldhName" : "rio",
    "entities" : [
       {
-         "handle" : "rio-administrative",
+         "handle" : "rio-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -162,12 +16,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Diretor Presidente"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -176,7 +24,7 @@
                [
                   "adr",
                   {
-                     "label" : "Av. Presidente Vargas, 3131 - 13. andar\nRio de Janeiro RJ 20210-030\nBrazil"
+                     "label" : "Av. Presidente Vargas, 3131 Sala 1204\nRio de Janeiro RJ 20210-030\nBrazil"
                   },
                   "text",
                   [
@@ -188,26 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+55 21 39711818"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gtlds-rio@registro.br"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "rio-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -261,13 +96,13 @@
                   "gtlds-tech@registro.br"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "rio-technical"
+         ]
       },
       {
+         "handle" : "rio-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -279,6 +114,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Diretor Presidente"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -287,7 +128,7 @@
                [
                   "adr",
                   {
-                     "label" : "Av. Presidente Vargas, 3131 Sala 1204\nRio de Janeiro RJ 20210-030\nBrazil"
+                     "label" : "Av. Presidente Vargas, 3131 - 13. andar\nRio de Janeiro RJ 20210-030\nBrazil"
                   },
                   "text",
                   [
@@ -299,11 +140,21 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+55 21 39711818"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gtlds-rio@registro.br"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "rio-registrant"
+         ]
       }
    ],
    "events" : [
@@ -316,9 +167,158 @@
          "eventDate" : "2021-09-30"
       },
       {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:31"
       }
    ],
-   "port43" : "whois.iana.org"
+   "handle" : "rio",
+   "ldhName" : "rio",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/rio.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://nic.rio/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "200.219.148.10"
+            ],
+            "v6" : [
+               "2001:12f8:6:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.DNS.BR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "200.189.41.10"
+            ],
+            "v6" : [
+               "2001:12f8:8:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "B.DNS.BR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "200.192.233.10"
+            ],
+            "v6" : [
+               "2001:12f8:a:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.DNS.BR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "200.219.154.10"
+            ],
+            "v6" : [
+               "2001:12f8:4:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "D.DNS.BR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "200.229.248.10"
+            ],
+            "v6" : [
+               "2001:12f8:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "E.DNS.BR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "200.219.159.10"
+            ],
+            "v6" : [
+               "2001:12f8:c:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "F.DNS.BR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.GTLDS.NIC.BR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://nic.rio/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digest" : "452f6bd5cb271080aad2425fb762a32d0880d6c706f16ed4d0c8797342a91a80",
+            "digestType" : "2",
+            "keyTag" : "2471"
+         }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

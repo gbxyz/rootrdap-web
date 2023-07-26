@@ -1,22 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2016-07-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "pru",
    "entities" : [
       {
+         "handle" : "pru-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -75,14 +64,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "pru-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "pru-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -133,14 +122,14 @@
                   "inet-admin@prudential.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pru-administrative"
+         ]
       },
       {
+         "handle" : "pru-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -173,38 +162,53 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pru-registrant"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "97a2de7c9e4880f5f4528c07d2446e93ecf03289b85a8b79ac9355914b18e957",
-            "digestType" : "2",
-            "keyTag" : "60964",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-14"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:19"
+      }
+   ],
    "handle" : "pru",
-   "objectClassName" : "domain",
+   "ldhName" : "pru",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/pru.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.prudential.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.PRU",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A.NIC.PRU",
          "objectClassName" : "nameserver"
       },
       {
@@ -216,20 +220,20 @@
                "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.PRU"
+         "ldhName" : "B.NIC.PRU",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C.NIC.PRU"
+         "ldhName" : "C.NIC.PRU",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -240,12 +244,10 @@
                "2610:a1:1071:0:0:0:0:8d"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.PRU"
+         "ldhName" : "NS1.DNS.NIC.PRU",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.PRU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.145.141"
@@ -253,7 +255,9 @@
             "v6" : [
                "2610:a1:1072:0:0:0:0:8d"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.PRU",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -264,51 +268,39 @@
                "2610:a1:1073:0:0:0:0:8d"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.PRU"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pru.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "https://www.prudential.com",
-         "rel" : "related"
+         "ldhName" : "NS3.DNS.NIC.PRU",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -317,16 +309,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "97a2de7c9e4880f5f4528c07d2446e93ecf03289b85a8b79ac9355914b18e957",
+            "digestType" : "2",
+            "keyTag" : "60964"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

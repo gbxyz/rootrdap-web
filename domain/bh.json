@@ -1,10 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "bh",
    "entities" : [
       {
          "handle" : "bh-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -37,80 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "handle" : "bh-technical",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "CTO"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CentralNic"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Saddlers House, 4th Floor\n44 Gutter Lane\nLondon EC2V 6BR\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 20 33 88 0600"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+44 20 33 88 0601"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld.ops@centralnic.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
          "handle" : "bh-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -173,25 +105,78 @@
                ]
             ]
          ]
+      },
+      {
+         "handle" : "bh-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "CTO"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CentralNic"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Saddlers House, 4th Floor\n44 Gutter Lane\nLondon EC2V 6BR\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 20 33 88 0600"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+44 20 33 88 0601"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld.ops@centralnic.com"
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "bh",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "42035",
-            "digest" : "de6b7cef6b195f0aac140c56c68868105d8f05967342c96a8192efe7b433bd1e"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "1994-02-01",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1994-02-01"
       },
       {
          "eventAction" : "last changed",
@@ -199,39 +184,25 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:13"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "bh",
+   "ldhName" : "bh",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/bh.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.BH",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "194.169.218.115"
@@ -239,18 +210,20 @@
             "v6" : [
                "2001:67c:13cc:0:0:0:1:115"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.BH",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.BH",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:115"
-            ],
             "v4" : [
                "185.24.64.115"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:115"
             ]
          },
+         "ldhName" : "B.NIC.BH",
          "objectClassName" : "nameserver"
       },
       {
@@ -262,32 +235,20 @@
                "2a04:2b00:13ee:0:0:0:0:115"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.BH"
+         "ldhName" : "C.NIC.BH",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NIC.BH",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:115"
-            ],
             "v4" : [
                "212.18.249.115"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:115"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bh.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         },
+         "ldhName" : "D.NIC.BH",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -307,5 +268,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "de6b7cef6b195f0aac140c56c68868105d8f05967342c96a8192efe7b433bd1e",
+            "digestType" : "2",
+            "keyTag" : "42035"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

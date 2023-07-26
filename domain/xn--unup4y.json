@@ -1,23 +1,11 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2013-10-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:58",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
-         "handle" : "xn--unup4y-administrative",
+         "handle" : "xn--unup4y-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -28,21 +16,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -54,34 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "xn--unup4y-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -143,15 +104,13 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "xn--unup4y-technical"
+         ]
       },
       {
-         "handle" : "xn--unup4y-registrant",
+         "handle" : "xn--unup4y-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -163,15 +122,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -183,28 +148,66 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
          ]
       }
    ],
-   "ldhName" : "xn--unup4y",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "57331",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "98698bf6004dcfe48f3c5beb164f75d63fbac726ae652da39af2929a8f836f92"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-10-21"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-27"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:30:01"
+      }
+   ],
    "handle" : "xn--unup4y",
-   "objectClassName" : "domain",
+   "ldhName" : "xn--unup4y",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/xn--unup4y.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.20.34"
@@ -213,7 +216,8 @@
                "2a01:8840:16:0:0:0:0:34"
             ]
          },
-         "ldhName" : "V0N0.NIC.XN--UNUP4Y"
+         "ldhName" : "V0N0.NIC.XN--UNUP4Y",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -224,11 +228,10 @@
                "2a01:8840:17:0:0:0:0:34"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.XN--UNUP4Y"
+         "ldhName" : "V0N1.NIC.XN--UNUP4Y",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.22.34"
@@ -237,10 +240,10 @@
                "2a01:8840:18:0:0:0:0:34"
             ]
          },
-         "ldhName" : "V0N2.NIC.XN--UNUP4Y"
+         "ldhName" : "V0N2.NIC.XN--UNUP4Y",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.10.34"
@@ -249,10 +252,10 @@
                "2a01:8840:f4:0:0:0:0:34"
             ]
          },
-         "ldhName" : "V0N3.NIC.XN--UNUP4Y"
+         "ldhName" : "V0N3.NIC.XN--UNUP4Y",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.23.34"
@@ -261,7 +264,8 @@
                "2a01:8840:19:0:0:0:0:34"
             ]
          },
-         "ldhName" : "V2N0.NIC.XN--UNUP4Y"
+         "ldhName" : "V2N0.NIC.XN--UNUP4Y",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -272,25 +276,8 @@
                "2a01:8840:f5:0:0:0:0:34"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.XN--UNUP4Y"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/xn--unup4y.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
+         "ldhName" : "V2N1.NIC.XN--UNUP4Y",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -303,38 +290,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.XN--UNUP4Y."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "98698bf6004dcfe48f3c5beb164f75d63fbac726ae652da39af2929a8f836f92",
+            "digestType" : "2",
+            "keyTag" : "57331"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

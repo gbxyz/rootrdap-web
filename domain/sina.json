@@ -1,24 +1,10 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-02-29"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:55",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "sina",
    "entities" : [
       {
+         "handle" : "sina-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -28,12 +14,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Director, Legal Dept."
                ],
                [
                   "org",
@@ -56,33 +36,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+86-10-82628888"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+86-10-82607527"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "register@staff.sina.com.cn"
                ]
             ]
-         ],
-         "handle" : "sina-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "sina-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -144,13 +104,13 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "sina-technical"
+         ]
       },
       {
+         "handle" : "sina-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -160,6 +120,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Director, Legal Dept."
                ],
                [
                   "org",
@@ -182,76 +148,47 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+86-10-82628888"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+86-10-82607527"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "register@staff.sina.com.cn"
                ]
             ]
-         ],
-         "handle" : "sina-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "39217",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "b177daef81c0ebd0c85dba9092550eb8d14333806e1db4c2c44ac9ece76432a5"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-02-29"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:54"
+      }
+   ],
    "handle" : "sina",
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.140.33"
-            ],
-            "v6" : [
-               "2a01:8840:8a:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "A0.NIC.SINA"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:8d:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.143.33"
-            ]
-         },
-         "ldhName" : "A2.NIC.SINA"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.141.33"
-            ],
-            "v6" : [
-               "2a01:8840:8b:0:0:0:0:33"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.SINA"
-      },
-      {
-         "ldhName" : "C0.NIC.SINA",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.142.33"
-            ],
-            "v6" : [
-               "2a01:8840:8c:0:0:0:0:33"
-            ]
-         }
-      }
-   ],
+   "ldhName" : "sina",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/sina.html",
@@ -264,19 +201,69 @@
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.sina.com",
          "rel" : "related",
-         "href" : "http://www.sina.com"
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.140.33"
+            ],
+            "v6" : [
+               "2a01:8840:8a:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "A0.NIC.SINA",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.143.33"
+            ],
+            "v6" : [
+               "2a01:8840:8d:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "A2.NIC.SINA",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.141.33"
+            ],
+            "v6" : [
+               "2a01:8840:8b:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "B0.NIC.SINA",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.142.33"
+            ],
+            "v6" : [
+               "2a01:8840:8c:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "C0.NIC.SINA",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -287,12 +274,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.SINA."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -301,16 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "b177daef81c0ebd0c85dba9092550eb8d14333806e1db4c2c44ac9ece76432a5",
+            "digestType" : "2",
+            "keyTag" : "39217"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

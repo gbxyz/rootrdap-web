@@ -1,63 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "esq",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2014-08-23",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
+         "handle" : "esq-administrative",
          "objectClassName" : "entity",
-         "handle" : "esq-registrant"
-      },
-      {
          "roles" : [
             "administrative"
          ],
@@ -119,11 +64,14 @@
                   "iana-contact@google.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "esq-administrative"
+         ]
       },
       {
+         "handle" : "esq-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,52 +130,84 @@
                   "crr-tech@google.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
+         ]
+      },
+      {
+         "handle" : "esq-registrant",
          "objectClassName" : "entity",
-         "handle" : "esq-technical"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-08-23"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:27"
+      }
+   ],
+   "handle" : "esq",
    "ldhName" : "esq",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "40564",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "9a963ead34a5139ed1f5e24fb422202cb704038ae15b670287bb31a040055322"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/esq.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/esq.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "https://www.registry.google",
          "rel" : "related",
-         "href" : "https://www.registry.google"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.32.105"
@@ -236,22 +216,22 @@
                "2001:4860:4802:32:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
             "v4" : [
                "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "216.239.36.105"
@@ -260,31 +240,32 @@
                "2001:4860:4802:36:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
             "v4" : [
                "216.239.38.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
             "v4" : [
                "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -297,20 +278,25 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -324,5 +310,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "9a963ead34a5139ed1f5e24fb422202cb704038ae15b670287bb31a040055322",
+            "digestType" : "2",
+            "keyTag" : "40564"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

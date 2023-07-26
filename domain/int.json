@@ -1,25 +1,51 @@
 {
-   "handle" : "int",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1988-11-03"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-13"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:51"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "int-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Internet Assigned Numbers Authority"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "12025 Waterfront Drive\nSuite 300\nLos Angeles CA 90094\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "int-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -78,12 +104,11 @@
                   "tld-contact@iana.org"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "int-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -145,94 +170,49 @@
                   "tld-contact@iana.org"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "int-administrative"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "int-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Internet Assigned Numbers Authority"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "12025 Waterfront Drive\nSuite 300\nLos Angeles CA 90094\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1988-11-03"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-13"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:06"
+      }
+   ],
+   "handle" : "int",
    "ldhName" : "int",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "7",
-            "digestType" : "2",
-            "keyTag" : "27433",
-            "digest" : "5864812d4df2a4a455d905af311389f479afcd96fd369060941c7e170b40ca4f"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/int.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "NS.UU.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "137.39.1.3"
-            ]
-         }
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS.UU.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS0.JA.NET",
          "ipAddresses" : {
             "v4" : [
                "128.86.1.20",
@@ -243,22 +223,22 @@
                "2001:630:0:9:0:0:0:14"
             ]
          },
+         "ldhName" : "NS0.JA.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "SEC2.AUTHDNS.RIPE.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:4"
-            ],
             "v4" : [
                "193.0.9.4"
+            ],
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:4"
             ]
          },
+         "ldhName" : "SEC2.AUTHDNS.RIPE.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "X.IANA-SERVERS.NET",
          "ipAddresses" : {
             "v4" : [
                "199.43.135.53"
@@ -267,6 +247,7 @@
                "2001:500:8f:0:0:0:0:53"
             ]
          },
+         "ldhName" : "X.IANA-SERVERS.NET",
          "objectClassName" : "nameserver"
       },
       {
@@ -278,11 +259,10 @@
                "2001:500:8d:0:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.IANA-SERVERS.NET"
+         "ldhName" : "Y.IANA-SERVERS.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Z.IANA-SERVERS.NET",
          "ipAddresses" : {
             "v4" : [
                "199.43.134.53"
@@ -291,33 +271,39 @@
                "2001:500:8e:0:0:0:0:53"
             ]
          },
+         "ldhName" : "Z.IANA-SERVERS.NET",
          "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.IANA.ORG."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -332,10 +318,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "7",
+            "digest" : "5864812d4df2a4a455d905af311389f479afcd96fd369060941c7e170b40ca4f",
+            "digestType" : "2",
+            "keyTag" : "27433"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

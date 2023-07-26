@@ -1,50 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "dunlop",
    "entities" : [
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "The Goodyear Tire & Rubber Company"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1144 East Market Street\nAkron OH 44315\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "dunlop-registrant"
-      },
       {
          "handle" : "dunlop-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -103,12 +64,11 @@
                   "ngtld-dunlop@cscglobal.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "dunlop-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -170,28 +130,53 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "dunlop-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
          ],
-         "handle" : "dunlop-technical",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "The Goodyear Tire & Rubber Company"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1144 East Market Street\nAkron OH 44315\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "dunlop",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "03cd996f132ffd32bc1bb4f08122d4a4f6570bb9c2ab647be9b1af174e79afaa",
-            "algorithm" : "8",
-            "keyTag" : "22897",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-12-17",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-17"
       },
       {
          "eventAction" : "last changed",
@@ -199,33 +184,26 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:49"
+         "eventDate" : "2023-07-26T13:26:19"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "dunlop",
+   "ldhName" : "dunlop",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DUNLOP."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/dunlop.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.goodyear.com"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.goodyear.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -238,71 +216,54 @@
                "2a01:8840:76:0:0:0:0:33"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.DUNLOP"
+         "ldhName" : "A0.NIC.DUNLOP",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:79:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.123.33"
+            ],
+            "v6" : [
+               "2a01:8840:79:0:0:0:0:33"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.DUNLOP"
+         "ldhName" : "A2.NIC.DUNLOP",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.DUNLOP",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:77:0:0:0:0:33"
-            ],
             "v4" : [
                "65.22.121.33"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:78:0:0:0:0:33"
             ],
-            "v4" : [
-               "65.22.122.33"
+            "v6" : [
+               "2a01:8840:77:0:0:0:0:33"
             ]
          },
-         "ldhName" : "C0.NIC.DUNLOP"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/dunlop.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "ldhName" : "B0.NIC.DUNLOP",
+         "objectClassName" : "nameserver"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.goodyear.com"
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.122.33"
+            ],
+            "v6" : [
+               "2a01:8840:78:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "C0.NIC.DUNLOP",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -312,5 +273,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DUNLOP."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.goodyear.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "03cd996f132ffd32bc1bb4f08122d4a4f6570bb9c2ab647be9b1af174e79afaa",
+            "digestType" : "2",
+            "keyTag" : "22897"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

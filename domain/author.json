@@ -1,183 +1,8 @@
 {
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:402:0:0:0:0:60"
-            ],
-            "v4" : [
-               "213.248.218.60"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS1.NIC.AUTHOR"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "103.49.82.60"
-            ],
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:60"
-            ]
-         },
-         "ldhName" : "DNS2.NIC.AUTHOR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.222.60"
-            ],
-            "v6" : [
-               "2a01:618:406:0:0:0:0:60"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.AUTHOR"
-      },
-      {
-         "ldhName" : "DNS4.NIC.AUTHOR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "43.230.50.60"
-            ],
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:60"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         },
-         "ldhName" : "DNSA.NIC.AUTHOR"
-      },
-      {
-         "ldhName" : "DNSB.NIC.AUTHOR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSC.NIC.AUTHOR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSD.NIC.AUTHOR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.103.3"
-            ],
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/author.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "https://www.amazonregistry.com"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AUTHOR."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "objectClassName" : "domain",
-   "handle" : "author",
-   "events" : [
-      {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "ldhName" : "author",
    "entities" : [
       {
+         "handle" : "author-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -231,11 +56,14 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "author-technical"
+         ]
       },
       {
+         "handle" : "author-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -294,14 +122,11 @@
                   "author-rzm@amazon.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "author-administrative"
+         ]
       },
       {
+         "handle" : "author-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -337,20 +162,195 @@
                   ]
                ]
             ]
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:24:59"
+      }
+   ],
+   "handle" : "author",
+   "ldhName" : "author",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/author.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.amazonregistry.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.218.60"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:60"
+            ]
+         },
+         "ldhName" : "DNS1.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "103.49.82.60"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:60"
+            ]
+         },
+         "ldhName" : "DNS2.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.222.60"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:60"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "43.230.50.60"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:60"
+            ]
+         },
+         "ldhName" : "DNS4.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSA.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSB.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSC.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSD.NIC.AUTHOR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "objectClassName" : "entity",
-         "handle" : "author-registrant"
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AUTHOR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
+            "algorithm" : "8",
             "digest" : "fc1aaa00c7d9798c3bbeed82b37aafba04ae15e97016e9a8b646ac5c37572da3",
             "digestType" : "2",
-            "keyTag" : "4690",
-            "algorithm" : "8"
+            "keyTag" : "4690"
          }
-      ],
-      "delegationSigned" : true
-   }
+      ]
+   },
+   "status" : [
+      "active"
+   ]
 }

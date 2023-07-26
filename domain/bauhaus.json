@@ -1,131 +1,11 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BAUHAUS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.bauhaus.info"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/bauhaus.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.bauhaus.info",
-         "title" : "URL for registration services"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.12"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.11"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.12"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         },
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
-      }
-   ],
-   "handle" : "bauhaus",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "8e5c6c53e04001f14305794f1b28eb612b8d297cc190f8662b53e3710ce82456",
-            "algorithm" : "10",
-            "keyTag" : "3408",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "ldhName" : "bauhaus",
    "entities" : [
       {
+         "handle" : "bauhaus-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -136,15 +16,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "ironDNS Support"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Werkhaus GmbH"
+                  "Knipp Medien und Kommunikation GmbH"
                ],
                [
                   "adr",
                   {
-                     "label" : "Gutenbergstrasse 21\nMannheim 68167\nGermany"
+                     "label" : "Martin-Schmeisser-Weg 9\nDortmund North Rhine-Westphalia 44227\nGermany"
                   },
                   "text",
                   [
@@ -156,16 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49-231-9703-0"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+49-231-9703-200"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dnsmaster@irondns.net"
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bauhaus-registrant"
+         ]
       },
       {
+         "handle" : "bauhaus-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -227,11 +130,14 @@
                   "domains@bahag.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bauhaus-administrative"
+         ]
       },
       {
+         "handle" : "bauhaus-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -242,21 +148,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "ironDNS Support"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Knipp Medien und Kommunikation GmbH"
+                  "Werkhaus GmbH"
                ],
                [
                   "adr",
                   {
-                     "label" : "Martin-Schmeisser-Weg 9\nDortmund North Rhine-Westphalia 44227\nGermany"
+                     "label" : "Gutenbergstrasse 21\nMannheim 68167\nGermany"
                   },
                   "text",
                   [
@@ -268,37 +168,11 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49-231-9703-0"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+49-231-9703-200"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dnsmaster@irondns.net"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "bauhaus-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -310,7 +184,133 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:07"
       }
+   ],
+   "handle" : "bauhaus",
+   "ldhName" : "bauhaus",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bauhaus.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.bauhaus.info",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.11"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BAUHAUS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.bauhaus.info"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digest" : "8e5c6c53e04001f14305794f1b28eb612b8d297cc190f8662b53e3710ce82456",
+            "digestType" : "2",
+            "keyTag" : "3408"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

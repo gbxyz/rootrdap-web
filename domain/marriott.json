@@ -1,25 +1,11 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "marriott",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-12-18"
-      },
-      {
-         "eventDate" : "2020-12-25",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:52",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "marriott-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -52,12 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
+         "handle" : "marriott-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -116,14 +104,14 @@
                   "marriottregistry@fairwindspartners.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "marriott-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "marriott-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,82 +170,25 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "marriott-technical"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-12-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-25"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:31"
+      }
+   ],
+   "handle" : "marriott",
    "ldhName" : "marriott",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "8684c74574a7d00d562dcd780c7deb8554f2de761bc6bf4f59197d8d9b0656a6",
-            "algorithm" : "8",
-            "keyTag" : "24409",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.MARRIOTT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.236.9"
-            ],
-            "v6" : [
-               "2a01:8840:e6:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:e9:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.239.9"
-            ]
-         },
-         "ldhName" : "A2.NIC.MARRIOTT"
-      },
-      {
-         "ldhName" : "B0.NIC.MARRIOTT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:e7:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.237.9"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:e8:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.238.9"
-            ]
-         },
-         "ldhName" : "C0.NIC.MARRIOTT"
-      }
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/marriott.html",
@@ -265,14 +196,64 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.marriott.com",
          "rel" : "related",
-         "href" : "http://www.marriott.com"
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.236.9"
+            ],
+            "v6" : [
+               "2a01:8840:e6:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A0.NIC.MARRIOTT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.239.9"
+            ],
+            "v6" : [
+               "2a01:8840:e9:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A2.NIC.MARRIOTT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.237.9"
+            ],
+            "v6" : [
+               "2a01:8840:e7:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B0.NIC.MARRIOTT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.238.9"
+            ],
+            "v6" : [
+               "2a01:8840:e8:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C0.NIC.MARRIOTT",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -293,12 +274,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -307,10 +293,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "8684c74574a7d00d562dcd780c7deb8554f2de761bc6bf4f59197d8d9b0656a6",
+            "digestType" : "2",
+            "keyTag" : "24409"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

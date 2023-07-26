@@ -1,20 +1,8 @@
 {
-   "handle" : "farm",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "584397d0aabc1083c561c54dc4aca32aeec4b002c8a67fe09d4b1ea429da8dc1",
-            "algorithm" : "8",
-            "keyTag" : "63382",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "farm",
    "entities" : [
       {
+         "handle" : "farm-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -50,79 +38,14 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "farm-registrant"
-      },
-      {
-         "handle" : "farm-administrative",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "farm-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -181,94 +104,131 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "farm-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
+               ]
+            ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2013-12-19"
       },
       {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
       },
       {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:32"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "farm",
+   "ldhName" : "farm",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FARM."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/farm.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:8"
-            ],
             "v4" : [
                "65.22.32.8"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.FARM"
+         "ldhName" : "V0N0.NIC.FARM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N1.NIC.FARM",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:8"
-            ],
             "v4" : [
                "65.22.33.8"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:8"
             ]
          },
+         "ldhName" : "V0N1.NIC.FARM",
          "objectClassName" : "nameserver"
       },
       {
@@ -280,12 +240,10 @@
                "2a01:8840:24:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.FARM"
+         "ldhName" : "V0N2.NIC.FARM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N3.NIC.FARM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.16.8"
@@ -293,19 +251,21 @@
             "v6" : [
                "2a01:8840:fa:0:0:0:0:8"
             ]
-         }
+         },
+         "ldhName" : "V0N3.NIC.FARM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N0.NIC.FARM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:8"
-            ],
             "v4" : [
                "65.22.35.8"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:8"
             ]
-         }
+         },
+         "ldhName" : "V2N0.NIC.FARM",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -316,25 +276,65 @@
                "2a01:8840:fb:0:0:0:0:8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.FARM"
+         "ldhName" : "V2N1.NIC.FARM",
+         "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/farm.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.donuts.domains/"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FARM."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "584397d0aabc1083c561c54dc4aca32aeec4b002c8a67fe09d4b1ea429da8dc1",
+            "digestType" : "2",
+            "keyTag" : "63382"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

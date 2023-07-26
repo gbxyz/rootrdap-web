@@ -1,23 +1,11 @@
 {
-   "handle" : "sb",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1994-04-19"
-      },
-      {
-         "eventDate" : "2022-11-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:54"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "sb-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -50,12 +38,7 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "sb-registrant"
+         ]
       },
       {
          "handle" : "sb-administrative",
@@ -124,6 +107,11 @@
          ]
       },
       {
+         "handle" : "sb-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,31 +170,41 @@
                   "iana.tech@telekom.com.sb"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "sb-technical"
+         ]
       }
    ],
-   "ldhName" : "sb",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "27f59686a15b09dc8293fac9c31e5be51abf214e1e9cd5b21cbe50f0f311c780",
-            "keyTag" : "17635",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1994-04-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:41"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "sb",
+   "ldhName" : "sb",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/sb.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.nic.net.sb/",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
@@ -218,8 +216,8 @@
                "2a00:fea0:dead:0:0:0:0:beef"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.ANYCASTDNS.CZ"
+         "ldhName" : "NS1.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -228,11 +226,10 @@
             ],
             "v6" : []
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ"
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "204.61.216.31"
@@ -241,43 +238,32 @@
                "2001:500:14:6031:ad:0:0:1"
             ]
          },
-         "ldhName" : "PCH.NIC.SB"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/sb.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.nic.net.sb/",
-         "title" : "URL for registration services"
+         "ldhName" : "PCH.NIC.SB",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -287,16 +273,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.net.sb/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "27f59686a15b09dc8293fac9c31e5be51abf214e1e9cd5b21cbe50f0f311c780",
+            "digestType" : "2",
+            "keyTag" : "17635"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

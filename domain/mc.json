@@ -1,65 +1,11 @@
 {
-   "handle" : "mc",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1995-01-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-30"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:52"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "mc-registrant",
+         "handle" : "mc-administrative",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Direction des Plateformes et des Ressources Numériques"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "19 Avenue des Castelans\nEntrée C\n98000\nMonaco"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "mc-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -118,9 +64,6 @@
                   "nic@gouv.mc"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
@@ -188,82 +131,120 @@
                ]
             ]
          ]
+      },
+      {
+         "handle" : "mc-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Direction des Plateformes et des Ressources Numériques"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "19 Avenue des Castelans\nEntrée C\n98000\nMonaco"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1995-01-20"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:32"
+      }
+   ],
+   "handle" : "mc",
    "ldhName" : "mc",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "81e94624ea1edd7ac7a412f0e5311b7d4d9500ffdb005e98b2fc610239331a9b",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "20677"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/mc.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "https://www.nic.mc/",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "193.0.9.92"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "MC.CCTLD.AUTHDNS.RIPE.NET"
+         "ldhName" : "MC.CCTLD.AUTHDNS.RIPE.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.243.3.205"
             ],
             "v6" : []
          },
-         "ldhName" : "NS1.NIC.MC"
+         "ldhName" : "NS1.NIC.MC",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "13.36.89.111"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "NS2.NIC.MC"
+         "ldhName" : "NS2.NIC.MC",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.NIC.MC",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "15.237.153.29"
-            ]
+            ],
+            "v6" : []
          },
+         "ldhName" : "NS3.NIC.MC",
          "objectClassName" : "nameserver"
       }
    ],
@@ -285,6 +266,11 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -293,16 +279,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.nic.mc/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "81e94624ea1edd7ac7a412f0e5311b7d4d9500ffdb005e98b2fc610239331a9b",
+            "digestType" : "2",
+            "keyTag" : "20677"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

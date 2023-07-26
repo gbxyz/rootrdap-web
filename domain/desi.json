@@ -1,62 +1,5 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "desi",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-06"
-      },
-      {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
-      {
-         "handle" : "desi-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Desi Networks LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "6813 Marbury Road\nBethesda MD 20817\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
       {
          "handle" : "desi-administrative",
          "objectClassName" : "entity",
@@ -116,6 +59,8 @@
          ]
       },
       {
+         "handle" : "desi-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -177,91 +122,65 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "desi-registrant",
          "objectClassName" : "entity",
-         "handle" : "desi-technical"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Desi Networks LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "6813 Marbury Road\nBethesda MD 20817\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-06"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:11"
+      }
+   ],
+   "handle" : "desi",
    "ldhName" : "desi",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "1382964834be4f7bf4830a27955ec8f6a1557ec20479ae946f6910a131e54ab9",
-            "keyTag" : "39859",
-            "digestType" : "2",
-            "algorithm" : "8"
-         },
-         {
-            "digest" : "948f1b60d22606e7488f84c0ad2e0546376aeedfd15b6ded198127add5d8928f",
-            "digestType" : "2",
-            "keyTag" : "32296",
-            "algorithm" : "8"
-         },
-         {
-            "keyTag" : "11020",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "5017e17ac3f43d2dcca968723fddb1b641765a38f53afba0469e33c9ac75c582"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.DESI",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.81"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:81"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:81"
-            ],
-            "v4" : [
-               "185.24.64.81"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.DESI"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:81"
-            ],
-            "v4" : [
-               "212.18.248.81"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.DESI"
-      },
-      {
-         "ldhName" : "D.NIC.DESI",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.81"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:81"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      }
-   ],
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/desi.html",
@@ -279,30 +198,85 @@
          "title" : "URL for registration services"
       }
    ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.81"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:81"
+            ]
+         },
+         "ldhName" : "A.NIC.DESI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.81"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:81"
+            ]
+         },
+         "ldhName" : "B.NIC.DESI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.81"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:81"
+            ]
+         },
+         "ldhName" : "C.NIC.DESI",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.81"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:81"
+            ]
+         },
+         "ldhName" : "D.NIC.DESI",
+         "objectClassName" : "nameserver"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.DESI."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -311,10 +285,36 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "1382964834be4f7bf4830a27955ec8f6a1557ec20479ae946f6910a131e54ab9",
+            "digestType" : "2",
+            "keyTag" : "39859"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "948f1b60d22606e7488f84c0ad2e0546376aeedfd15b6ded198127add5d8928f",
+            "digestType" : "2",
+            "keyTag" : "32296"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "5017e17ac3f43d2dcca968723fddb1b641765a38f53afba0469e33c9ac75c582",
+            "digestType" : "2",
+            "keyTag" : "11020"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

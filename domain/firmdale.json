@@ -1,18 +1,4 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "firmdale",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "242c19944d9422f066f20d3686225c2370d150d0",
-            "keyTag" : "46150",
-            "digestType" : "1",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "ldhName" : "firmdale",
    "entities" : [
       {
          "handle" : "firmdale-registrant",
@@ -55,6 +41,11 @@
          ]
       },
       {
+         "handle" : "firmdale-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -113,16 +104,14 @@
                   "markread@firmdale.com"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "firmdale-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "firmdale-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -181,51 +170,61 @@
                   "dev@registryasp.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2014-09-04",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-09-04"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2020-01-10"
       },
       {
-         "eventDate" : "2023-07-26T13:16:49",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:26:35"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "firmdale",
+   "ldhName" : "firmdale",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FIRMDALE."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/firmdale.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "72.0.51.1"
+            ],
+            "v6" : [
+               "2620:171:a03:ad:0:0:0:1"
+            ]
+         },
+         "ldhName" : "NS1.NIC.FIRMDALE",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "ipAddresses" : {
+            "v4" : [
+               "72.42.115.1"
+            ],
+            "v6" : [
+               "2620:171:d03:dc:0:0:0:1"
+            ]
+         },
+         "ldhName" : "NS2.NIC.FIRMDALE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -238,50 +237,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "ldhName" : "NS1.NIC.FIRMDALE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "72.0.51.1"
-            ],
-            "v6" : [
-               "2620:171:a03:ad:0:0:0:1"
-            ]
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FIRMDALE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "242c19944d9422f066f20d3686225c2370d150d0",
+            "digestType" : "1",
+            "keyTag" : "46150"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:d03:dc:0:0:0:1"
-            ],
-            "v4" : [
-               "72.42.115.1"
-            ]
-         },
-         "ldhName" : "NS2.NIC.FIRMDALE"
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/firmdale.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "rel" : "related",
-         "href" : "https://about.rdap.org"
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

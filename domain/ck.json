@@ -1,23 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "1995-08-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-06-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "handle" : "ck-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -50,14 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "ck-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -114,6 +99,8 @@
          ]
       },
       {
+         "handle" : "ck-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -167,90 +154,106 @@
                   "apareanga@vodafone.co.ck"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "ck-administrative"
+         ]
       }
    ],
-   "ldhName" : "ck",
-   "handle" : "ck",
-   "objectClassName" : "domain",
-   "links" : [
+   "events" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ck.html",
-         "rel" : "related"
+         "eventAction" : "registration",
+         "eventDate" : "1995-08-08"
       },
       {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-06-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:47"
+      }
+   ],
+   "handle" : "ck",
+   "ldhName" : "ck",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ck.html",
          "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "http://www.vodafone.co.ck",
          "rel" : "related",
-         "href" : "http://www.vodafone.co.ck"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "CIRCA.MCS.VUW.AC.NZ",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "130.195.5.12"
-            ]
+            ],
+            "v6" : []
          },
+         "ldhName" : "CIRCA.MCS.VUW.AC.NZ",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DOWNSTAGE.MCS.VUW.AC.NZ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "130.195.6.10"
-            ]
-         }
+            ],
+            "v6" : []
+         },
+         "ldhName" : "DOWNSTAGE.MCS.VUW.AC.NZ",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "202.65.32.128"
             ],
             "v6" : []
          },
-         "ldhName" : "PARAU.OYSTER.NET.CK"
+         "ldhName" : "PARAU.OYSTER.NET.CK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "POIPARAU.OYSTER.NET.CK",
          "ipAddresses" : {
             "v4" : [
                "202.65.32.127"
             ],
             "v6" : []
          },
+         "ldhName" : "POIPARAU.OYSTER.NET.CK",
          "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -274,8 +277,5 @@
    ],
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

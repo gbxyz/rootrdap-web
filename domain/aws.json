@@ -1,23 +1,66 @@
 {
-   "handle" : "aws",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-03-18"
-      },
-      {
-         "eventDate" : "2021-11-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:46"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "aws-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Registry Services Technical"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Nominet"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44.1865332211"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registrytechnical@nominet.uk"
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "aws-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -79,71 +122,14 @@
                   "aws-registry@amazon.com"
                ]
             ]
-         ],
-         "handle" : "aws-administrative",
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Registry Services Technical"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Nominet"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44.1865332211"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registrytechnical@nominet.uk"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "aws-technical",
-         "objectClassName" : "entity"
+         ]
       },
       {
          "handle" : "aws-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -176,34 +162,44 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "ldhName" : "aws",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "54182",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "76f2c3fbb9f23ff5f59a4cd63b8d5d5174b3f2e0f034b7323c1543312f37301d"
-         }
-      ]
-   },
-   "status" : [
-      "active"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-03-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:01"
+      }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "handle" : "aws",
+   "ldhName" : "aws",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/aws.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://www.amazonregistry.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
    ],
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.AWS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "213.248.218.53"
@@ -211,11 +207,11 @@
             "v6" : [
                "2a01:618:402:0:0:0:0:53"
             ]
-         }
+         },
+         "ldhName" : "DNS1.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS2.NIC.AWS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "103.49.82.53"
@@ -223,19 +219,21 @@
             "v6" : [
                "2401:fd80:402:0:0:0:0:53"
             ]
-         }
+         },
+         "ldhName" : "DNS2.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:53"
-            ],
             "v4" : [
                "213.248.222.53"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.AWS"
+         "ldhName" : "DNS3.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -246,12 +244,10 @@
                "2401:fd80:406:0:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS4.NIC.AWS"
+         "ldhName" : "DNS4.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSA.NIC.AWS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.100.3"
@@ -259,31 +255,33 @@
             "v6" : [
                "2001:502:ad09:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSA.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSB.NIC.AWS"
+         "ldhName" : "DNSB.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSC.NIC.AWS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSC.NIC.AWS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -294,25 +292,8 @@
                "2610:a1:1010:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.AWS"
-      }
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/aws.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://www.amazonregistry.com",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         "ldhName" : "DNSD.NIC.AWS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -325,13 +306,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -341,16 +327,30 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://www.amazonregistry.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "76f2c3fbb9f23ff5f59a4cd63b8d5d5174b3f2e0f034b7323c1543312f37301d",
+            "digestType" : "2",
+            "keyTag" : "54182"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,20 +1,48 @@
 {
-   "handle" : "circle",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "37745",
-            "digest" : "89e27d8efd40f6e9a05d3a8a4ae933a41056e574008d30b20c8ad9a7d07785db"
-         }
-      ]
-   },
-   "ldhName" : "circle",
    "entities" : [
       {
+         "handle" : "circle-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amazon Registry Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "circle-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -76,11 +104,14 @@
                   "circle-rzm@amazon.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "circle-administrative"
+         ]
       },
       {
+         "handle" : "circle-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -131,103 +162,148 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "circle-technical",
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
-         "handle" : "circle-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amazon Registry Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       }
    ],
    "events" : [
       {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
       },
       {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:48"
+         "eventDate" : "2023-07-26T13:25:45"
       }
    ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "circle",
+   "ldhName" : "circle",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CIRCLE."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/circle.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "https://www.amazonregistry.com",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.218.64"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:64"
+            ]
+         },
+         "ldhName" : "DNS1.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "103.49.82.64"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:64"
+            ]
+         },
+         "ldhName" : "DNS2.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.222.64"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:64"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "43.230.50.64"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:64"
+            ]
+         },
+         "ldhName" : "DNS4.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.100.3"
+            ],
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSA.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSB.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSC.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSD.NIC.CIRCLE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -238,119 +314,43 @@
          "title" : "Comments"
       }
    ],
-   "links" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/circle.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CIRCLE."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "rel" : "related",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ],
+         "title" : "Remark"
       },
       {
-         "rel" : "related",
-         "href" : "https://www.amazonregistry.com",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "DNS1.NIC.CIRCLE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:402:0:0:0:0:64"
-            ],
-            "v4" : [
-               "213.248.218.64"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "89e27d8efd40f6e9a05d3a8a4ae933a41056e574008d30b20c8ad9a7d07785db",
+            "digestType" : "2",
+            "keyTag" : "37745"
          }
-      },
-      {
-         "ldhName" : "DNS2.NIC.CIRCLE",
-         "ipAddresses" : {
-            "v4" : [
-               "103.49.82.64"
-            ],
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNS3.NIC.CIRCLE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.222.64"
-            ],
-            "v6" : [
-               "2a01:618:406:0:0:0:0:64"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNS4.NIC.CIRCLE",
-         "ipAddresses" : {
-            "v4" : [
-               "43.230.50.64"
-            ],
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:64"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.100.3"
-            ],
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "DNSA.NIC.CIRCLE"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.CIRCLE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.102.3"
-            ]
-         },
-         "ldhName" : "DNSC.NIC.CIRCLE"
-      },
-      {
-         "ldhName" : "DNSD.NIC.CIRCLE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.103.3"
-            ]
-         }
-      }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

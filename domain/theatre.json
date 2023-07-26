@@ -1,23 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2015-08-13",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-16"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "handle" : "theatre-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -50,14 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "theatre-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -114,6 +99,8 @@
          ]
       },
       {
+         "handle" : "theatre-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -175,88 +162,80 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "theatre-technical",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "theatre",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "abed901a738d17abfa754e304b6e1c0c9021aac5",
-            "algorithm" : "8",
-            "keyTag" : "45196",
-            "digestType" : "1"
-         },
-         {
-            "algorithm" : "8",
-            "keyTag" : "45196",
-            "digestType" : "2",
-            "digest" : "530b10ce5cc67a1f4c6e5f59bf28e851426b9d6991233203e42a8970bd9a8011"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-08-13"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:14"
+      }
+   ],
    "handle" : "theatre",
+   "ldhName" : "theatre",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/theatre.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "href" : "https://nic.theatre/",
          "rel" : "related",
-         "href" : "https://nic.theatre/"
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.THEATRE",
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:69"
-            ],
             "v4" : [
                "194.169.218.69"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:69"
             ]
          },
+         "ldhName" : "A.NIC.THEATRE",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:69"
-            ],
             "v4" : [
                "185.24.64.69"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:69"
             ]
          },
-         "ldhName" : "B.NIC.THEATRE"
+         "ldhName" : "B.NIC.THEATRE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:69"
-            ],
             "v4" : [
                "212.18.248.69"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:69"
             ]
          },
-         "ldhName" : "C.NIC.THEATRE"
+         "ldhName" : "C.NIC.THEATRE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "D.NIC.THEATRE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.249.69"
@@ -264,7 +243,9 @@
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "D.NIC.THEATRE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -277,20 +258,25 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.THEATRE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -299,16 +285,30 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "abed901a738d17abfa754e304b6e1c0c9021aac5",
+            "digestType" : "1",
+            "keyTag" : "45196"
+         },
+         {
+            "algorithm" : "8",
+            "digest" : "530b10ce5cc67a1f4c6e5f59bf28e851426b9d6991233203e42a8970bd9a8011",
+            "digestType" : "2",
+            "keyTag" : "45196"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

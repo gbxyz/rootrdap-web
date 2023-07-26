@@ -1,48 +1,8 @@
 {
-   "objectClassName" : "domain",
-   "handle" : "nec",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "NEC Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "7-1, Shiba 5-chome\nMinato-ku Tokyo 108-8001\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "nec-registrant",
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "nec-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -104,13 +64,11 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nec-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "nec-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -173,59 +131,79 @@
                ]
             ]
          ]
+      },
+      {
+         "handle" : "nec-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "NEC Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "7-1, Shiba 5-chome\nMinato-ku Tokyo 108-8001\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "ldhName" : "nec",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "3352",
-            "algorithm" : "8",
-            "digest" : "077c18d635da43d7201764e89118f552f72428b12763f1bc258a5619b71458e7"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-04-02",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-02"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2023-06-20"
       },
       {
-         "eventDate" : "2023-07-26T13:16:53",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:44"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "nec",
+   "ldhName" : "nec",
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.NEC."
-         ],
-         "title" : "Whois Service"
+         "href" : "https://www.iana.org/domains/root/db/nec.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nec.com/"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.nec.com/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -238,11 +216,10 @@
                "2001:dcd:1:0:0:0:0:4"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET"
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.194.4"
@@ -251,20 +228,20 @@
                "2001:dcd:2:0:0:0:0:4"
             ]
          },
-         "ldhName" : "B.GMOREGISTRY.NET"
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "37.209.196.4"
-            ]
+            ],
+            "v6" : []
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET"
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "L.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "37.209.198.4"
@@ -273,24 +250,8 @@
                "2001:dcd:4:0:0:0:0:4"
             ]
          },
+         "ldhName" : "L.GMOREGISTRY.NET",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/nec.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.nec.com/"
       }
    ],
    "notices" : [
@@ -303,12 +264,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.NEC."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nec.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "077c18d635da43d7201764e89118f552f72428b12763f1bc258a5619b71458e7",
+            "digestType" : "2",
+            "keyTag" : "3352"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,38 +1,10 @@
 {
-   "handle" : "philips",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventDate" : "2015-02-05",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-10"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "fa65d969b695c8e73ddc89724cae9d83e352b23b57cf5571fd711e2627026638",
-            "digestType" : "2",
-            "keyTag" : "3100",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
-         "handle" : "philips-registrant",
+         "handle" : "philips-technical",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
          "vcardArray" : [
             "vcard",
@@ -44,10 +16,10 @@
                   "4.0"
                ],
                [
-                  "org",
+                  "fn",
                   {},
                   "text",
-                  "Koninklijke Philips N.V."
+                  "Project & Process Manager"
                ],
                [
                   "adr",
@@ -64,6 +36,18 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+442070151717"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-philips@cscinfo.com"
                ]
             ]
          ]
@@ -121,8 +105,10 @@
          ]
       },
       {
+         "handle" : "philips-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -134,10 +120,10 @@
                   "4.0"
                ],
                [
-                  "fn",
+                  "org",
                   {},
                   "text",
-                  "Project & Process Manager"
+                  "Koninklijke Philips N.V."
                ],
                [
                   "adr",
@@ -154,54 +140,46 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+442070151717"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-philips@cscinfo.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "philips-technical"
+         ]
       }
    ],
-   "ldhName" : "philips",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "notices" : [
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-02-05"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:06"
+      }
+   ],
+   "handle" : "philips",
+   "ldhName" : "philips",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/philips.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://nic.philips",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.PHILIPS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.9"
@@ -209,7 +187,9 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.PHILIPS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -220,24 +200,22 @@
                "2001:dcd:2:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.PHILIPS"
+         "ldhName" : "B.NIC.PHILIPS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.PHILIPS"
+         "ldhName" : "C.NIC.PHILIPS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "X.NIC.PHILIPS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -245,7 +223,9 @@
             "v6" : [
                "2610:a1:1074:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "X.NIC.PHILIPS",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -256,11 +236,10 @@
                "2610:a1:1075:0:0:0:1:82"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.PHILIPS"
+         "ldhName" : "Y.NIC.PHILIPS",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "Z.NIC.PHILIPS",
          "ipAddresses" : {
             "v4" : [
                "156.154.174.82"
@@ -269,25 +248,32 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
+         "ldhName" : "Z.NIC.PHILIPS",
          "objectClassName" : "nameserver"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/philips.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://nic.philips",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -303,10 +289,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "fa65d969b695c8e73ddc89724cae9d83e352b23b57cf5571fd711e2627026638",
+            "digestType" : "2",
+            "keyTag" : "3100"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

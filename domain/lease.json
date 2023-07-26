@@ -1,48 +1,5 @@
 {
-   "handle" : "lease",
-   "objectClassName" : "domain",
-   "ldhName" : "lease",
    "entities" : [
-      {
-         "handle" : "lease-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
       {
          "handle" : "lease-technical",
          "objectClassName" : "entity",
@@ -110,6 +67,11 @@
          ]
       },
       {
+         "handle" : "lease-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,64 +130,80 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
+         ]
+      },
+      {
+         "handle" : "lease-registrant",
          "objectClassName" : "entity",
-         "handle" : "lease-administrative"
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "1c84ba6cc51944ecebd6a197de418af987c88a6ee0bdac2d1120b47e1da6bc9b",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "49669"
-         }
-      ]
-   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2014-04-03"
       },
       {
-         "eventDate" : "2021-11-02",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-02"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:51"
+         "eventDate" : "2023-07-26T13:27:21"
       }
    ],
-   "port43" : "whois.iana.org",
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "remarks" : [
+   "handle" : "lease",
+   "ldhName" : "lease",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LEASE."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/lease.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
@@ -238,11 +216,10 @@
                "2a01:8840:1a:0:0:0:0:62"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.LEASE"
+         "ldhName" : "V0N0.NIC.LEASE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.25.62"
@@ -251,31 +228,32 @@
                "2a01:8840:1b:0:0:0:0:62"
             ]
          },
-         "ldhName" : "V0N1.NIC.LEASE"
+         "ldhName" : "V0N1.NIC.LEASE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:62"
-            ],
             "v4" : [
                "65.22.26.62"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:62"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.LEASE"
+         "ldhName" : "V0N2.NIC.LEASE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:62"
-            ],
             "v4" : [
                "161.232.12.62"
+            ],
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:62"
             ]
          },
-         "ldhName" : "V0N3.NIC.LEASE"
+         "ldhName" : "V0N3.NIC.LEASE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -286,37 +264,20 @@
                "2a01:8840:1d:0:0:0:0:62"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.LEASE"
+         "ldhName" : "V2N0.NIC.LEASE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N1.NIC.LEASE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:62"
-            ],
             "v4" : [
                "161.232.13.62"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:62"
             ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/lease.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related",
-         "title" : "URL for registration services"
+         },
+         "ldhName" : "V2N1.NIC.LEASE",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -336,5 +297,44 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LEASE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "1c84ba6cc51944ecebd6a197de418af987c88a6ee0bdac2d1120b47e1da6bc9b",
+            "digestType" : "2",
+            "keyTag" : "49669"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

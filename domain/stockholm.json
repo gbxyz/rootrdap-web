@@ -1,25 +1,11 @@
 {
-   "handle" : "stockholm",
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-09-17"
-      },
-      {
-         "eventDate" : "2022-04-08",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:55"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "stockholm-administrative",
+         "handle" : "stockholm-registrant",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -30,16 +16,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Project Manager"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "City of Stockholm"
+                  "Stockholms kommun"
                ],
                [
                   "adr",
@@ -56,26 +36,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+46850829327"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "contact@nic.stockholm"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "handle" : "stockholm-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -134,16 +104,13 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "stockholm-technical"
+         ]
       },
       {
+         "handle" : "stockholm-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
          "vcardArray" : [
             "vcard",
@@ -155,10 +122,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Project Manager"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Stockholms kommun"
+                  "City of Stockholm"
                ],
                [
                   "adr",
@@ -175,52 +148,58 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+46850829327"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "contact@nic.stockholm"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "stockholm-registrant"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-09-17"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-04-08"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:06"
+      }
+   ],
+   "handle" : "stockholm",
    "ldhName" : "stockholm",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "cd787970d0a7de33bc49589fb72d41bde6db32c4470c93c170eb8f2d25978128",
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "28681"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/stockholm.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/stockholm.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
          "href" : "http://www.stockholm.se/",
+         "rel" : "related",
          "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A0.NIC.STOCKHOLM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.220.41"
@@ -228,43 +207,45 @@
             "v6" : [
                "2a01:8840:d6:0:0:0:0:41"
             ]
-         }
+         },
+         "ldhName" : "A0.NIC.STOCKHOLM",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "A2.NIC.STOCKHOLM",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d9:0:0:0:0:41"
-            ],
             "v4" : [
                "65.22.223.41"
+            ],
+            "v6" : [
+               "2a01:8840:d9:0:0:0:0:41"
             ]
          },
+         "ldhName" : "A2.NIC.STOCKHOLM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B0.NIC.STOCKHOLM",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d7:0:0:0:0:41"
-            ],
             "v4" : [
                "65.22.221.41"
+            ],
+            "v6" : [
+               "2a01:8840:d7:0:0:0:0:41"
             ]
          },
+         "ldhName" : "B0.NIC.STOCKHOLM",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d8:0:0:0:0:41"
-            ],
             "v4" : [
                "65.22.222.41"
+            ],
+            "v6" : [
+               "2a01:8840:d8:0:0:0:0:41"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.STOCKHOLM"
+         "ldhName" : "C0.NIC.STOCKHOLM",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -285,12 +266,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -299,10 +285,24 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "cd787970d0a7de33bc49589fb72d41bde6db32c4470c93c170eb8f2d25978128",
+            "digestType" : "2",
+            "keyTag" : "28681"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

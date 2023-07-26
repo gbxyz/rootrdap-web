@@ -1,6 +1,8 @@
 {
    "entities" : [
       {
+         "handle" : "cd-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -36,9 +38,65 @@
                   ]
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "cd-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
          ],
-         "handle" : "cd-registrant",
-         "objectClassName" : "entity"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "David KINSAKA NDUENGA"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "SCPT"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "95, Boulevard du 30 Juin\nCommune de la Gombe\nKinshasa 7070 Kin 1\nCongo (the Democratic Republic of the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+243 81 063 8578"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "david.k@ocpt.cd"
+               ]
+            ]
+         ]
       },
       {
          "handle" : "cd-technical",
@@ -97,68 +155,8 @@
                ]
             ]
          ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "David KINSAKA NDUENGA"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "SCPT"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "95, Boulevard du 30 Juin\nCommune de la Gombe\nKinshasa 7070 Kin 1\nCongo (the Democratic Republic of the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+243 81 063 8578"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "david.k@ocpt.cd"
-               ]
-            ]
-         ],
-         "handle" : "cd-administrative",
-         "objectClassName" : "entity"
       }
    ],
-   "ldhName" : "cd",
-   "port43" : "whois.iana.org",
    "events" : [
       {
          "eventAction" : "registration",
@@ -169,32 +167,12 @@
          "eventDate" : "2021-02-10"
       },
       {
-         "eventDate" : "2023-07-26T13:16:47",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:39"
       }
    ],
    "handle" : "cd",
-   "objectClassName" : "domain",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.cd/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "ldhName" : "cd",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/cd.html",
@@ -214,33 +192,33 @@
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "102.68.62.15"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "NS-ROOT-21.SCPT-NETWORK.NET"
+         "ldhName" : "NS-ROOT-21.SCPT-NETWORK.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-ROOT-22.SCPT-NETWORK.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "102.68.60.15"
-            ]
-         }
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS-ROOT-22.SCPT-NETWORK.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-ROOT-23.SCPT-NETWORK.NET",
          "ipAddresses" : {
             "v4" : [
                "161.97.87.130"
             ],
             "v6" : []
          },
+         "ldhName" : "NS-ROOT-23.SCPT-NETWORK.NET",
          "objectClassName" : "nameserver"
       }
    ],
@@ -262,10 +240,32 @@
          "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.cd/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "status" : [
+      "active"
    ]
 }

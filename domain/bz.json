@@ -1,20 +1,11 @@
 {
-   "handle" : "bz",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "22882",
-            "digest" : "088ad52a5e8e9adf54345cb21753a54f71bfb8e2674f08b02b64ab53f45eab9f"
-         }
-      ]
-   },
-   "ldhName" : "bz",
    "entities" : [
       {
+         "handle" : "bz-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -47,12 +38,73 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
+         ]
+      },
+      {
+         "handle" : "bz-technical",
          "objectClassName" : "entity",
-         "handle" : "bz-registrant"
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Juan Carlos Namis"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "University Management Ltd"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "115 Barrack Road\nThird Floor\nBelize City\nBelize"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+501 610 5124"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+501 223 2242"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "jcnamis@belizenic.bz"
+               ]
+            ]
+         ]
       },
       {
          "handle" : "bz-administrative",
@@ -119,78 +171,12 @@
                ]
             ]
          ]
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Juan Carlos Namis"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "University Management Ltd"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "115 Barrack Road\nThird Floor\nBelize City\nBelize"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+501 610 5124"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+501 223 2242"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "jcnamis@belizenic.bz"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bz-technical"
       }
    ],
    "events" : [
       {
-         "eventDate" : "1991-09-03",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1991-09-03"
       },
       {
          "eventAction" : "last changed",
@@ -198,34 +184,100 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:47"
+         "eventDate" : "2023-07-26T13:25:29"
       }
    ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
+   "handle" : "bz",
+   "ldhName" : "bz",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/bz.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.belizenic.bz"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "href" : "http://www.belizenic.bz",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.59.1"
+            ],
+            "v6" : [
+               "2001:500:25:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.249.116.1"
+            ],
+            "v6" : [
+               "2001:500:44:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.60.1"
+            ],
+            "v6" : [
+               "2001:500:26:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.249.124.1"
+            ],
+            "v6" : [
+               "2001:500:4c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.61.1"
+            ],
+            "v6" : [
+               "2001:500:27:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.62.1"
+            ],
+            "v6" : [
+               "2001:500:28:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -238,103 +290,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "nameservers" : [
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:25:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.254.59.1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO"
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:44:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.249.116.1"
-            ]
-         }
+         "description" : [
+            "Registration information: http://www.belizenic.bz"
+         ],
+         "title" : "Remark"
       },
       {
-         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.60.1"
-            ],
-            "v6" : [
-               "2001:500:26:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:4c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.249.124.1"
-            ]
-         },
-         "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG"
-      },
-      {
-         "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:27:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.254.61.1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.62.1"
-            ],
-            "v6" : [
-               "2001:500:28:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/bz.html",
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.belizenic.bz",
-         "rel" : "related"
-      }
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "088ad52a5e8e9adf54345cb21753a54f71bfb8e2674f08b02b64ab53f45eab9f",
+            "digestType" : "2",
+            "keyTag" : "22882"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

@@ -1,21 +1,48 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1995-02-14"
-      },
-      {
-         "eventDate" : "2022-09-26",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:48",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "ci-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Autorité de Régulation des Télécommunications/TIC de Côte d’lvoire (ARTCI)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "18 BP 2203 18 Marcory Anoumanbo\nAbidjan\nCôte d'Ivoire"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "ci-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -77,11 +104,11 @@
                   "support@nic.ci"
                ]
             ]
-         ],
-         "handle" : "ci-administrative",
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "ci-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -143,81 +170,51 @@
                   "support@nic.ci"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "ci-technical"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Autorité de Régulation des Télécommunications/TIC de Côte d’lvoire (ARTCI)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "18 BP 2203 18 Marcory Anoumanbo\nAbidjan\nCôte d'Ivoire"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ci-registrant",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "ci",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "0fb751f1b2230b9ef643ddce8c30acd1e7cc20fa7d52346ca074a32b8f01c686",
-            "algorithm" : "8",
-            "keyTag" : "60224",
-            "digestType" : "2"
-         }
-      ]
-   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1995-02-14"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-09-26"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:25:44"
+      }
+   ],
    "handle" : "ci",
-   "objectClassName" : "domain",
+   "ldhName" : "ci",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ci.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
+      }
+   ],
    "nameservers" : [
       {
-         "ldhName" : "ANY.NIC.CI",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6120:ad:0:0:1"
-            ],
             "v4" : [
                "204.61.216.120"
+            ],
+            "v6" : [
+               "2001:500:14:6120:ad:0:0:1"
             ]
          },
+         "ldhName" : "ANY.NIC.CI",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "CI.HOSTING.NIC.FR",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "192.134.0.49"
@@ -225,7 +222,9 @@
             "v6" : [
                "2001:660:3006:1:0:0:1:1"
             ]
-         }
+         },
+         "ldhName" : "CI.HOSTING.NIC.FR",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -236,52 +235,40 @@
                "2001:43f8:120:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-CI.AFRINIC.NET"
+         "ldhName" : "NS-CI.AFRINIC.NET",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS.NIC.CI",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "196.49.0.84"
             ],
             "v6" : []
-         }
+         },
+         "ldhName" : "NS.NIC.CI",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "PHLOEM.UOREGON.EDU",
          "ipAddresses" : {
-            "v6" : [
-               "2001:468:d01:20:0:0:80df:2023"
-            ],
             "v4" : [
                "128.223.32.35"
+            ],
+            "v6" : [
+               "2001:468:d01:20:0:0:80df:2023"
             ]
          },
+         "ldhName" : "PHLOEM.UOREGON.EDU",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ci.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -292,12 +279,17 @@
          "title" : "Comments"
       }
    ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.CI."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -306,22 +298,30 @@
          "title" : "Remark"
       },
       {
-         "title" : "Remark",
          "description" : [
             "https://registry.nic.ci/login.jsp"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "0fb751f1b2230b9ef643ddce8c30acd1e7cc20fa7d52346ca074a32b8f01c686",
+            "digestType" : "2",
+            "keyTag" : "60224"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

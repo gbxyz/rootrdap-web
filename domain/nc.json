@@ -1,17 +1,8 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "keyTag" : "49057",
-            "digestType" : "2",
-            "digest" : "5957ab66cf4871c8c39edebc78dfab2b6dcbb3ea5e97278ea27190539410b753"
-         }
-      ]
-   },
    "entities" : [
       {
+         "handle" : "nc-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -47,9 +38,7 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "nc-registrant"
+         ]
       },
       {
          "handle" : "nc-technical",
@@ -118,6 +107,11 @@
          ]
       },
       {
+         "handle" : "nc-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -176,50 +170,90 @@
                   "contact@domaine.nc"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "nc-administrative",
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "ldhName" : "nc",
    "events" : [
       {
-         "eventDate" : "1993-10-13",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "1993-10-13"
       },
       {
-         "eventDate" : "2020-03-23",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-03-23"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T13:16:53"
+         "eventDate" : "2023-07-26T13:27:44"
       }
    ],
-   "port43" : "whois.iana.org",
    "handle" : "nc",
-   "objectClassName" : "domain",
-   "remarks" : [
+   "ldhName" : "nc",
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NC."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/nc.html",
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.domaine.nc"
-         ]
+         "href" : "https://about.rdap.org",
+         "rel" : "related",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "href" : "http://www.domaine.nc",
+         "rel" : "related",
+         "title" : "URL for registration services"
+      }
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "114.69.222.1"
+            ],
+            "v6" : [
+               "2001:500:14:8000:7245:de00:0:1"
+            ]
+         },
+         "ldhName" : "ANY-NS1.NC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "193.0.9.100"
+            ],
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:100"
+            ]
+         },
+         "ldhName" : "NC.CCTLD.AUTHDNS.RIPE.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "202.87.129.16"
+            ],
+            "v6" : [
+               "2404:2200:10:1000:0:0:53:1"
+            ]
+         },
+         "ldhName" : "NS1.NC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "202.87.129.17"
+            ],
+            "v6" : [
+               "2404:2200:10:1000:0:0:53:2"
+            ]
+         },
+         "ldhName" : "NS2.NC",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -240,76 +274,42 @@
          "title" : "Comments"
       }
    ],
-   "nameservers" : [
-      {
-         "ldhName" : "ANY-NS1.NC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "114.69.222.1"
-            ],
-            "v6" : [
-               "2001:500:14:8000:7245:de00:0:1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NC.CCTLD.AUTHDNS.RIPE.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:100"
-            ],
-            "v4" : [
-               "193.0.9.100"
-            ]
-         },
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2404:2200:10:1000:0:0:53:1"
-            ],
-            "v4" : [
-               "202.87.129.16"
-            ]
-         },
-         "ldhName" : "NS1.NC"
-      },
-      {
-         "ldhName" : "NS2.NC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2404:2200:10:1000:0:0:53:2"
-            ],
-            "v4" : [
-               "202.87.129.17"
-            ]
-         }
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/nc.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "rel" : "related",
-         "href" : "http://www.domaine.nc"
-      }
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NC."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.domaine.nc"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "5957ab66cf4871c8c39edebc78dfab2b6dcbb3ea5e97278ea27190539410b753",
+            "digestType" : "2",
+            "keyTag" : "49057"
+         }
+      ]
+   },
    "status" : [
       "active"
    ]

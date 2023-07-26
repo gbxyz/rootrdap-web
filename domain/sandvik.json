@@ -1,19 +1,51 @@
 {
-   "handle" : "sandvik",
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "23647",
-            "digestType" : "2",
-            "algorithm" : "8",
-            "digest" : "01ed10d00e4fdf8bb9bf3338bfe2ef3ad80bab54270ce9a42941b6e3dd87781d"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "entities" : [
       {
+         "handle" : "sandvik-registrant",
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Sandvik AB"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Klarabergsgatan 60\nStockholm 111 21\nSweden"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "handle" : "sandvik-technical",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -72,16 +104,11 @@
                   "ngtld-sandvik@cscinfo.com"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "handle" : "sandvik-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "sandvik-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -136,117 +163,33 @@
                ]
             ]
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Sandvik AB"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Klarabergsgatan 60\nStockholm 111 21\nSweden"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "sandvik-registrant",
-         "objectClassName" : "entity"
       }
    ],
-   "ldhName" : "sandvik",
-   "port43" : "whois.iana.org",
    "events" : [
       {
-         "eventDate" : "2015-05-14",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-05-14"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2022-11-30"
       },
       {
-         "eventDate" : "2023-07-26T13:16:54",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:39"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SANDVIK."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.sandvik"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "sandvik",
+   "ldhName" : "sandvik",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/sandvik.html",
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/sandvik.html"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
@@ -257,32 +200,30 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.SANDVIK",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
             ],
-            "v4" : [
-               "37.209.194.9"
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
          },
-         "ldhName" : "B.NIC.SANDVIK"
+         "ldhName" : "A.NIC.SANDVIK",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.SANDVIK",
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.SANDVIK",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "37.209.196.9"
@@ -290,34 +231,35 @@
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.SANDVIK",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
             ]
          },
-         "ldhName" : "X.NIC.SANDVIK"
+         "ldhName" : "X.NIC.SANDVIK",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
             ]
          },
-         "ldhName" : "Y.NIC.SANDVIK"
+         "ldhName" : "Y.NIC.SANDVIK",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.174.82"
@@ -326,7 +268,65 @@
                "2610:a1:1076:0:0:0:1:82"
             ]
          },
-         "ldhName" : "Z.NIC.SANDVIK"
+         "ldhName" : "Z.NIC.SANDVIK",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SANDVIK."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.sandvik"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "01ed10d00e4fdf8bb9bf3338bfe2ef3ad80bab54270ce9a42941b6e3dd87781d",
+            "digestType" : "2",
+            "keyTag" : "23647"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

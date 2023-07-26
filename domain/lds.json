@@ -1,27 +1,10 @@
 {
-   "handle" : "lds",
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-10-16"
-      },
-      {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:51",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
-         "handle" : "lds-registrant",
+         "handle" : "lds-technical",
          "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
          "vcardArray" : [
             "vcard",
@@ -33,15 +16,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "IRI Domain Management, LLC"
+                  "Afilias"
                ],
                [
                   "adr",
                   {
-                     "label" : "50 E. North Temple Street, Floor 13\nSalt Lake City UT 84150-0018\nUnited States of America (the)"
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -53,13 +42,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215.706.5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 215.706.5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
                ]
             ]
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "lds-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -124,8 +133,10 @@
          ]
       },
       {
+         "handle" : "lds-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -137,21 +148,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Afilias"
+                  "IRI Domain Management, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                     "label" : "50 E. North Temple Street, Floor 13\nSalt Lake City UT 84150-0018\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -163,107 +168,82 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215.706.5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 215.706.5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "lds-technical"
+         ]
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-10-16"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:27:21"
+      }
+   ],
+   "handle" : "lds",
    "ldhName" : "lds",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "36055",
-            "digest" : "cd5ac0cb52d71dc6d369cc4cca8aad970690bcf3bc33f2202890668e47d34a5a"
-         }
-      ]
-   },
-   "status" : [
-      "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/lds.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related",
-         "href" : "https://about.rdap.org"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "https://www.lds.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "URL for registration services"
       }
    ],
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:96:0:0:0:0:9"
-            ],
             "v4" : [
                "65.22.152.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.LDS"
-      },
-      {
-         "ldhName" : "A2.NIC.LDS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:99:0:0:0:0:9"
             ],
-            "v4" : [
-               "65.22.155.9"
+            "v6" : [
+               "2a01:8840:96:0:0:0:0:9"
             ]
          },
+         "ldhName" : "A0.NIC.LDS",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:97:0:0:0:0:9"
-            ],
             "v4" : [
-               "65.22.153.9"
+               "65.22.155.9"
+            ],
+            "v6" : [
+               "2a01:8840:99:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.LDS"
+         "ldhName" : "A2.NIC.LDS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.153.9"
+            ],
+            "v6" : [
+               "2a01:8840:97:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B0.NIC.LDS",
+         "objectClassName" : "nameserver"
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "65.22.154.9"
@@ -272,7 +252,8 @@
                "2a01:8840:98:0:0:0:0:9"
             ]
          },
-         "ldhName" : "C0.NIC.LDS"
+         "ldhName" : "C0.NIC.LDS",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -285,13 +266,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -312,5 +298,19 @@
          ],
          "title" : "Source"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "cd5ac0cb52d71dc6d369cc4cca8aad970690bcf3bc33f2202890668e47d34a5a",
+            "digestType" : "2",
+            "keyTag" : "36055"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

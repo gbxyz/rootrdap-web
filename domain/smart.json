@@ -1,46 +1,5 @@
 {
-   "ldhName" : "smart",
    "entities" : [
-      {
-         "handle" : "smart-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Smart Communications, Inc. (SMART)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Smart Tower, 6799 Ayala Ave.\nMakati City Metro Manila 1226\nPhilippines (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ]
-      },
       {
          "handle" : "smart-technical",
          "objectClassName" : "entity",
@@ -108,8 +67,11 @@
          ]
       },
       {
-         "objectClassName" : "entity",
          "handle" : "smart-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -160,75 +122,79 @@
                   "dotsmart@smart.com.ph"
                ]
             ]
-         ],
+         ]
+      },
+      {
+         "handle" : "smart-registrant",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Smart Communications, Inc. (SMART)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Smart Tower, 6799 Ayala Ave.\nMakati City Metro Manila 1226\nPhilippines (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "1fc272fd0bb0d9ae922348c5c63f401a9e1fba71c8cb452af5df5e4e005237cf",
-            "keyTag" : "10241",
-            "digestType" : "2",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "events" : [
       {
-         "eventDate" : "2016-04-21",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-21"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-10-12"
       },
       {
-         "eventDate" : "2023-07-26T13:16:55",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:28:58"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "handle" : "smart",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SMART."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "ldhName" : "smart",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/smart.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "rel" : "related",
+         "title" : "About RDAP"
       }
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.SMART",
          "ipAddresses" : {
             "v4" : [
                "194.169.218.70"
@@ -237,10 +203,10 @@
                "2001:67c:13cc:0:0:0:1:70"
             ]
          },
+         "ldhName" : "A.NIC.SMART",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.SMART",
          "ipAddresses" : {
             "v4" : [
                "185.24.64.70"
@@ -249,10 +215,10 @@
                "2a04:2b00:13cc:0:0:0:1:70"
             ]
          },
+         "ldhName" : "B.NIC.SMART",
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.70"
@@ -261,19 +227,20 @@
                "2a04:2b00:13ee:0:0:0:0:70"
             ]
          },
-         "ldhName" : "C.NIC.SMART"
+         "ldhName" : "C.NIC.SMART",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:70"
-            ],
             "v4" : [
                "212.18.249.70"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:70"
             ]
          },
-         "ldhName" : "D.NIC.SMART"
+         "ldhName" : "D.NIC.SMART",
+         "objectClassName" : "nameserver"
       }
    ],
    "notices" : [
@@ -286,18 +253,51 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "rdapConformance" : [
       "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SMART."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "1fc272fd0bb0d9ae922348c5c63f401a9e1fba71c8cb452af5df5e4e005237cf",
+            "digestType" : "2",
+            "keyTag" : "10241"
+         }
+      ]
+   },
+   "status" : [
+      "active"
    ]
 }

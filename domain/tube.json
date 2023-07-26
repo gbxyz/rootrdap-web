@@ -1,23 +1,74 @@
 {
-   "port43" : "whois.iana.org",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-12-23"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T13:16:56",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "entities" : [
       {
+         "handle" : "tube-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Jason Schaeffer"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Latin American Telecom, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "420 Fort Duquesne Boulevard, Suite 1900\nPittsburgh PA 15222\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1-267-368-7474"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1-267 907-8043"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "jason@tubegtld.com"
+               ]
+            ]
+         ]
+      },
+      {
          "handle" : "tube-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -82,72 +133,6 @@
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Jason Schaeffer"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Latin American Telecom, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "420 Fort Duquesne Boulevard, Suite 1900\nPittsburgh PA 15222\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1-267-368-7474"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1-267 907-8043"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "jason@tubegtld.com"
-               ]
-            ]
-         ],
-         "handle" : "tube-administrative",
-         "objectClassName" : "entity"
-      },
-      {
          "handle" : "tube-registrant",
          "objectClassName" : "entity",
          "roles" : [
@@ -188,20 +173,22 @@
          ]
       }
    ],
-   "ldhName" : "tube",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digestType" : "2",
-            "keyTag" : "45112",
-            "digest" : "a5918afdeeed73d4603adf2ec0ec6a2735b7ded61849c500deb6b68a5bd03610"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-23"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T13:29:21"
+      }
+   ],
    "handle" : "tube",
+   "ldhName" : "tube",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/tube.html",
@@ -209,8 +196,8 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP"
       },
       {
@@ -221,8 +208,6 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.TUBE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.10"
@@ -230,7 +215,9 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.TUBE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -241,11 +228,10 @@
                "2001:dcd:2:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.TUBE"
+         "ldhName" : "B.NIC.TUBE",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.196.10"
@@ -254,22 +240,22 @@
                "2001:dcd:3:0:0:0:0:10"
             ]
          },
-         "ldhName" : "C.NIC.TUBE"
+         "ldhName" : "C.NIC.TUBE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS1.DNS.NIC.TUBE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:1:50"
-            ],
             "v4" : [
                "156.154.169.80"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:50"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.NIC.TUBE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.TUBE",
          "ipAddresses" : {
             "v4" : [
                "156.154.170.80"
@@ -278,18 +264,19 @@
                "2610:a1:1072:0:0:0:1:50"
             ]
          },
+         "ldhName" : "NS2.DNS.NIC.TUBE",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.TUBE",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:1:50"
-            ],
             "v4" : [
                "156.154.171.80"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:1:50"
             ]
          },
+         "ldhName" : "NS3.DNS.NIC.TUBE",
          "objectClassName" : "nameserver"
       }
    ],
@@ -303,13 +290,18 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
+   ],
+   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -331,10 +323,18 @@
          "title" : "Source"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digest" : "a5918afdeeed73d4603adf2ec0ec6a2735b7ded61849c500deb6b68a5bd03610",
+            "digestType" : "2",
+            "keyTag" : "45112"
+         }
+      ]
+   },
    "status" : [
       "active"
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }
