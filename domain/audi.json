@@ -1,21 +1,120 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "47809",
-            "digestType" : "2",
-            "digest" : "aa1fa212d47d097669f357c0c70ed8be45edcd5ba04d951f4ed9f9a260476fca",
-            "algorithm" : "8"
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.208.17"
+            ],
+            "v6" : [
+               "2a01:8840:ca:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A0.NIC.AUDI"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.AUDI",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.211.17"
+            ],
+            "v6" : [
+               "2a01:8840:cd:0:0:0:0:17"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+      },
+      {
+         "ldhName" : "B0.NIC.AUDI",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.209.17"
+            ],
+            "v6" : [
+               "2a01:8840:cb:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:cc:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.210.17"
+            ]
+         },
+         "ldhName" : "C0.NIC.AUDI",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "audi-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "CEO"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "INDECA GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Etzelstrasse 1-25\nHeilbronn BW 74076\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49 7131 7999 0"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotaudi@domainexperten.de"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "audi-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -75,71 +174,11 @@
                ]
             ]
          ],
-         "handle" : "audi-technical",
          "roles" : [
             "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "CEO"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "INDECA GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Etzelstrasse 1-25\nHeilbronn BW 74076\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49 7131 7999 0"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotaudi@domainexperten.de"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "audi-administrative"
-      },
-      {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -173,13 +212,46 @@
                ]
             ]
          ],
+         "handle" : "audi-registrant",
          "roles" : [
             "registrant"
          ],
-         "handle" : "audi-registrant"
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-11-12",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-12-16",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:01",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
@@ -188,84 +260,27 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "href" : "http://www.audi.com",
+         "rel" : "related",
          "title" : "URL for registration services",
-         "rel" : "related"
+         "href" : "http://www.audi.com"
       }
    ],
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "47809",
+            "digest" : "aa1fa212d47d097669f357c0c70ed8be45edcd5ba04d951f4ed9f9a260476fca"
+         }
+      ]
+   },
    "ldhName" : "audi",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ca:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.208.17"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.AUDI"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:cd:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.211.17"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.AUDI"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.AUDI",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.209.17"
-            ],
-            "v6" : [
-               "2a01:8840:cb:0:0:0:0:17"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.AUDI",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:cc:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.210.17"
-            ]
-         }
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-12-16"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -286,23 +301,8 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "audi"
 }

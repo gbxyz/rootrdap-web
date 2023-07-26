@@ -1,5 +1,132 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MOE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://get.moe/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "moe",
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.NIC.MOE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.MOE",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.MOE",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.MOE",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:72"
+            ],
+            "v4" : [
+               "156.154.144.114"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:72"
+            ],
+            "v4" : [
+               "156.154.145.114"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.MOE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.MOE",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:72"
+            ],
+            "v4" : [
+               "156.154.159.114"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
    "objectClassName" : "domain",
+   "ldhName" : "moe",
+   "events" : [
+      {
+         "eventDate" : "2014-03-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:58",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "0107dd039f8bd0049a6803271a15d71793a5234eef881013701e481774a8ba19",
+            "keyTag" : "8980",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "links" : [
       {
          "rel" : "related",
@@ -19,75 +146,6 @@
    ],
    "entities" : [
       {
-         "handle" : "moe-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Jacob Williams"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Interlink Systems Innovation Institute K.K."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1-17-11 Higashi Ikebukuro\nToshima Tokyo 170-0013\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81 50-5525-7438"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81 3-5979-2337"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gtld@interlink.ad.jp"
-               ]
-            ]
-         ]
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
          "handle" : "moe-technical",
          "vcardArray" : [
             "vcard",
@@ -148,9 +206,13 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -184,57 +246,87 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "moe-registrant",
          "roles" : [
             "registrant"
          ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Jacob Williams"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Interlink Systems Innovation Institute K.K."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1-17-11 Higashi Ikebukuro\nToshima Tokyo 170-0013\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81 50-5525-7438"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81 3-5979-2337"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gtld@interlink.ad.jp"
+               ]
+            ]
+         ],
+         "handle" : "moe-administrative",
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "8980",
-            "algorithm" : "8",
-            "digest" : "0107dd039f8bd0049a6803271a15d71793a5234eef881013701e481774a8ba19"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "moe",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MOE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://get.moe/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -244,97 +336,5 @@
             "This query returned 1 object"
          ]
       }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-03-13",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.192.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.MOE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.MOE",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.194.10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.MOE"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:72"
-            ],
-            "v4" : [
-               "156.154.144.114"
-            ]
-         },
-         "ldhName" : "NS1.DNS.NIC.MOE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.114"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:72"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.MOE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.MOE",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:72"
-            ],
-            "v4" : [
-               "156.154.159.114"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "moe"
+   ]
 }

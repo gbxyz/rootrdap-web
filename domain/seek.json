@@ -1,95 +1,7 @@
 {
-   "ldhName" : "seek",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.SEEK",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.SEEK",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C.NIC.SEEK",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.SEEK",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.SEEK",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.173.82"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "ldhName" : "Z.NIC.SEEK",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-04-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-12-05",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
+   "handle" : "seek",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -99,54 +11,68 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: https://www.seek.com.au/about/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
+   "ldhName" : "seek",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-16"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-05"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:43",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "handle" : "seek",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/seek.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://www.seek.com.au/about/",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "e3c3a590cdfcc251b77cd4adf685fe3cce8706a0aaecd5421294b9ff2ddf8b48",
             "algorithm" : "8",
-            "keyTag" : "63859",
-            "digestType" : "2"
+            "digestType" : "2",
+            "keyTag" : "63859"
          }
       ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -198,17 +124,10 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "seek-administrative"
       },
       {
          "handle" : "seek-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -259,14 +178,17 @@
                   "ngtld-seek@cscinfo.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "seek-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -299,26 +221,104 @@
                   ]
                ]
             ]
+         ],
+         "handle" : "seek-registrant"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "links" : [
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/seek.html"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.SEEK"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.SEEK",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         }
       },
       {
-         "href" : "https://www.seek.com.au/about/",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "ldhName" : "C.NIC.SEEK",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "X.NIC.SEEK",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         }
+      },
+      {
+         "ldhName" : "Y.NIC.SEEK",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.173.82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "Z.NIC.SEEK",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
+            ]
+         }
       }
-   ]
+   ],
+   "objectClassName" : "domain"
 }

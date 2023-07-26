@@ -1,24 +1,152 @@
 {
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.65.11"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.65.12"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
+            ]
+         }
+      },
+      {
+         "ldhName" : "ARI.ALPHA.TLDNS.GODADDY",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.2"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:2"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ARI.BETA.TLDNS.GODADDY",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:2"
+            ],
+            "v4" : [
+               "37.209.194.2"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ARI.DELTA.TLDNS.GODADDY",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:2"
+            ],
+            "v4" : [
+               "37.209.198.2"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ARI.GAMMA.TLDNS.GODADDY",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:2"
+            ],
+            "v4" : [
+               "37.209.196.2"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-13"
+      },
+      {
+         "eventDate" : "2023-06-13",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:09"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digest" : "c8d5a25263ef9eaab175f1ca68623488aa7919e16814f516cc369e09f237623a",
+            "keyTag" : "27095",
             "digestType" : "2",
-            "keyTag" : "27095"
+            "algorithm" : "8",
+            "digest" : "c8d5a25263ef9eaab175f1ca68623488aa7919e16814f516cc369e09f237623a"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bayern.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://nic.bayern",
+         "title" : "URL for registration services"
+      }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "bayern-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -78,9 +206,57 @@
                ]
             ]
          ],
+         "handle" : "bayern-technical",
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "handle" : "bayern-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Bayern Connect GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Hansestr. 111\nKöln 51149\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "bayern-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -139,207 +315,7 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bayern-administrative",
-         "roles" : [
-            "administrative"
          ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "bayern-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Bayern Connect GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Hansestr. 111\nKöln 51149\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/bayern.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.bayern"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         },
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.11"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.12"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:2"
-            ],
-            "v4" : [
-               "37.209.192.2"
-            ]
-         },
-         "ldhName" : "ARI.ALPHA.TLDNS.GODADDY",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ARI.BETA.TLDNS.GODADDY",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:2"
-            ],
-            "v4" : [
-               "37.209.194.2"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:2"
-            ],
-            "v4" : [
-               "37.209.198.2"
-            ]
-         },
-         "ldhName" : "ARI.DELTA.TLDNS.GODADDY",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:2"
-            ],
-            "v4" : [
-               "37.209.196.2"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ARI.GAMMA.TLDNS.GODADDY"
-      }
-   ],
-   "ldhName" : "bayern",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-13"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-13"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BAYERN."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.bayern"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
    "notices" : [
@@ -359,6 +335,30 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "ldhName" : "bayern",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BAYERN."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.bayern"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "bayern"
 }

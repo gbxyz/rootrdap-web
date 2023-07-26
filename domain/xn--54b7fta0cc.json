@@ -1,18 +1,44 @@
 {
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://domainreg.btcl.com.bd/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "xn--54b7fta0cc",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2407:5000:88:2:0:0:0:3"
-            ],
             "v4" : [
                "180.211.212.213"
+            ],
+            "v6" : [
+               "2407:5000:88:2:0:0:0:3"
             ]
          },
          "ldhName" : "BAYANNO.BTCL.NET.BD",
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6108:ad:0:0:1"
@@ -21,12 +47,10 @@
                "204.61.216.108"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "BD-NS.ANYCAST.PCH.NET"
       },
       {
          "ldhName" : "EKUSHEY.BTCL.NET.BD",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2407:5000:88:1:0:0:0:2"
@@ -34,26 +58,12 @@
             "v4" : [
                "123.49.50.51"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "xn--54b7fta0cc",
    "status" : [
       "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2011-03-30"
-      },
-      {
-         "eventDate" : "2023-04-13",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:04:00",
-         "eventAction" : "last update of RDAP database"
-      }
    ],
    "notices" : [
       {
@@ -73,53 +83,9 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://domainreg.btcl.com.bd/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "xn--54b7fta0cc",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "63049",
-            "digestType" : "1",
-            "digest" : "91e8936dfe81e7350daf041bd12b77f29643a13d",
-            "algorithm" : "8"
-         },
-         {
-            "digest" : "dcdd04c4493e029dee060d18a91e87be930b9ce4c54fc7921f51f27455843dcb",
-            "algorithm" : "8",
-            "keyTag" : "63049",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
          "handle" : "xn--54b7fta0cc-registrant",
          "vcardArray" : [
             "vcard",
@@ -154,10 +120,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -209,13 +179,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "xn--54b7fta0cc-technical"
+         "handle" : "xn--54b7fta0cc-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -275,12 +245,28 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "xn--54b7fta0cc-administrative"
+         "handle" : "xn--54b7fta0cc-administrative",
+         "objectClassName" : "entity"
       }
    ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "63049",
+            "digestType" : "1",
+            "algorithm" : "8",
+            "digest" : "91e8936dfe81e7350daf041bd12b77f29643a13d"
+         },
+         {
+            "digest" : "dcdd04c4493e029dee060d18a91e87be930b9ce4c54fc7921f51f27455843dcb",
+            "keyTag" : "63049",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -288,9 +274,9 @@
          "rel" : "related"
       },
       {
-         "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
          "href" : "http://domainreg.btcl.com.bd/",
@@ -298,5 +284,19 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2011-03-30"
+      },
+      {
+         "eventDate" : "2023-04-13",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:29"
+      }
+   ],
+   "ldhName" : "xn--54b7fta0cc"
 }

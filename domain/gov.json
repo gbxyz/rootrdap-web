@@ -1,79 +1,125 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GOV-SERVERS.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:4431:0:0:0:2:30"
+            ],
+            "v4" : [
+               "69.36.157.30"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "209.112.123.30"
+            ],
+            "v6" : [
+               "2620:74:27:0:0:0:2:30"
+            ]
+         },
+         "ldhName" : "B.GOV-SERVERS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "69.36.153.30"
+            ],
+            "v6" : [
+               "2620:74:28:0:0:0:2:30"
+            ]
+         },
+         "ldhName" : "C.GOV-SERVERS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "D.GOV-SERVERS.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "81.19.194.30"
+            ],
+            "v6" : [
+               "2620:74:29:0:0:0:2:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digest" : "6bc949e638442ead0bdaf0935763c8d003760384ff15ebbd5ce86bb5559561f0",
+            "algorithm" : "8",
             "digestType" : "2",
             "keyTag" : "7698"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gov.html"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.dotgov.gov"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1985-01-01"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-05-06"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:08"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Program Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Cybersecurity and Infrastructure Security Agency"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "4200 Wilson Blvd.\nArlington VA 22201\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 888 282 0870"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotgov@cisa.dhs.gov"
-               ]
-            ]
-         ],
-         "handle" : "gov-administrative",
          "roles" : [
-            "administrative"
-         ]
-      },
-      {
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -133,14 +179,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "gov-technical",
-         "roles" : [
-            "technical"
-         ]
+         "handle" : "gov-technical"
       },
       {
-         "handle" : "gov-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -177,113 +219,68 @@
                ]
             ]
          ],
+         "handle" : "gov-registrant"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "gov-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Program Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Cybersecurity and Infrastructure Security Agency"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "4200 Wilson Blvd.\nArlington VA 22201\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 888 282 0870"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotgov@cisa.dhs.gov"
+               ]
+            ]
+         ],
          "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/gov.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.dotgov.gov",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:4431:0:0:0:2:30"
-            ],
-            "v4" : [
-               "69.36.157.30"
-            ]
-         },
-         "ldhName" : "A.GOV-SERVERS.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2620:74:27:0:0:0:2:30"
-            ],
-            "v4" : [
-               "209.112.123.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.GOV-SERVERS.NET"
-      },
-      {
-         "ldhName" : "C.GOV-SERVERS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:74:28:0:0:0:2:30"
-            ],
-            "v4" : [
-               "69.36.153.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "81.19.194.30"
-            ],
-            "v6" : [
-               "2620:74:29:0:0:0:2:30"
-            ]
-         },
-         "ldhName" : "D.GOV-SERVERS.NET",
-         "objectClassName" : "nameserver"
-      }
-   ],
    "ldhName" : "gov",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "1985-01-01",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-05-06",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -292,10 +289,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.dotgov.gov"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -303,6 +300,9 @@
          ],
          "title" : "Source"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "gov"
 }

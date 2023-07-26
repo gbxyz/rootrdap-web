@@ -1,97 +1,8 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2013-12-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-27"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:51"
-            ],
-            "v4" : [
-               "65.22.20.51"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.SOLAR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.21.51"
-            ],
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:51"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.SOLAR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.51"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:51"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.SOLAR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.10.51"
-            ],
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:51"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.SOLAR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:51"
-            ],
-            "v4" : [
-               "65.22.23.51"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.SOLAR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N1.NIC.SOLAR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:51"
-            ],
-            "v4" : [
-               "161.232.11.51"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "solar",
    "handle" : "solar",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -106,33 +17,18 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ],
-         "title" : "Comments"
+         "title" : "Source"
       }
    ],
+   "ldhName" : "solar",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -143,15 +39,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -163,19 +65,35 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "solar-registrant"
+         "handle" : "solar-administrative",
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "solar-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -235,14 +153,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "handle" : "solar-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "objectClassName" : "entity",
+         "handle" : "solar-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -253,21 +172,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -279,46 +192,56 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-19"
+      },
+      {
+         "eventDate" : "2021-10-27",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:51"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "55894",
-            "digestType" : "2",
             "digest" : "9fe65d323fa0cef5b7c9180df5e5eb8cb03d9e8253fe0089e85e4bb58a57aa5d",
-            "algorithm" : "8"
+            "keyTag" : "55894",
+            "algorithm" : "8",
+            "digestType" : "2"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "rel" : "related",
@@ -326,14 +249,91 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
+         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:51"
+            ],
+            "v4" : [
+               "65.22.20.51"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.SOLAR"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.SOLAR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:51"
+            ],
+            "v4" : [
+               "65.22.21.51"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.SOLAR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:51"
+            ],
+            "v4" : [
+               "65.22.22.51"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.10.51"
+            ],
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:51"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.SOLAR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.51"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:51"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.SOLAR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:51"
+            ],
+            "v4" : [
+               "161.232.11.51"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.SOLAR",
+         "objectClassName" : "nameserver"
       }
    ],
    "objectClassName" : "domain"

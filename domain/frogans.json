@@ -1,128 +1,53 @@
 {
    "ldhName" : "frogans",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.188.1"
-            ],
-            "v6" : [
-               "2a01:8840:b6:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.FROGANS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.FROGANS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b9:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.191.1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.FROGANS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.189.1"
-            ],
-            "v6" : [
-               "2a01:8840:b7:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:b8:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.190.1"
-            ]
-         },
-         "ldhName" : "C0.NIC.FROGANS",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
-         "eventDate" : "2014-04-03",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-04-03"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2019-08-21"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:29:51",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
+   "links" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/frogans.html"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "https://nic.frogans/"
       }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FROGANS."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://nic.frogans/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "frogans",
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digest" : "50f935219610318d526521f0e31c70705b462bde2c9fdba142969b27207b3b7f",
             "digestType" : "2",
+            "algorithm" : "8",
             "keyTag" : "44230"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "frogans-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -156,11 +81,73 @@
                ]
             ]
          ],
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
-         "handle" : "frogans-registrant",
          "roles" : [
-            "registrant"
-         ]
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215.706.5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 215.706.5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
+               ]
+            ]
+         ],
+         "handle" : "frogans-technical"
       },
       {
          "vcardArray" : [
@@ -222,95 +209,108 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "frogans-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "frogans-administrative"
+         "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215.706.5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 215.706.5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "frogans-technical",
-         "roles" : [
-            "technical"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b6:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.188.1"
+            ]
+         },
+         "ldhName" : "A0.NIC.FROGANS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b9:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.191.1"
+            ]
+         },
+         "ldhName" : "A2.NIC.FROGANS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b7:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.189.1"
+            ]
+         },
+         "ldhName" : "B0.NIC.FROGANS"
+      },
+      {
+         "ldhName" : "C0.NIC.FROGANS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.190.1"
+            ],
+            "v6" : [
+               "2a01:8840:b8:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
    "objectClassName" : "domain",
-   "links" : [
+   "handle" : "frogans",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/frogans.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FROGANS."
+         ]
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://nic.frogans/"
+         ]
       },
       {
-         "rel" : "related",
-         "href" : "https://nic.frogans/",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

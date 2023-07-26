@@ -1,24 +1,10 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/name.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.name"
-      }
-   ],
+   "ldhName" : "name",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -52,17 +38,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "name-registrant"
+         "handle" : "name-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "name-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -122,14 +101,17 @@
                ]
             ]
          ],
+         "handle" : "name-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "handle" : "name-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "name-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -188,25 +170,129 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2001-08-17"
+      },
+      {
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:04"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/name.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.nic.name",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
-            "keyTag" : "52563",
+            "digest" : "4e2671f0dbc3927d842053044c6a0cbf8b21e1e657de8bba99a4835031a85a41",
             "algorithm" : "8",
-            "digest" : "4e2671f0dbc3927d842053044c6a0cbf8b21e1e657de8bba99a4835031a85a41"
+            "digestType" : "2",
+            "keyTag" : "52563"
          }
       ]
    },
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         }
+      },
+      {
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "name",
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "handle" : "name",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -225,92 +311,6 @@
             "IANA"
          ],
          "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2001-08-17"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "name",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         }
       }
    ]
 }

@@ -1,5 +1,7 @@
 {
-   "handle" : "insure",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -8,55 +10,27 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-24"
-      },
-      {
-         "eventDate" : "2021-11-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
+   "handle" : "insure",
    "status" : [
       "active"
    ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.INSURE",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1a:0:0:0:0:53"
@@ -64,25 +38,21 @@
             "v4" : [
                "65.22.24.53"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.INSURE"
+         }
       },
       {
+         "ldhName" : "V0N1.NIC.INSURE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.25.53"
-            ],
             "v6" : [
                "2a01:8840:1b:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.25.53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.INSURE"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.INSURE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1c:0:0:0:0:53"
@@ -90,7 +60,9 @@
             "v4" : [
                "65.22.26.53"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.INSURE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -101,24 +73,24 @@
                "2a01:8840:f6:0:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.INSURE"
+         "ldhName" : "V0N3.NIC.INSURE",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "65.22.27.53"
-            ],
             "v6" : [
                "2a01:8840:1d:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.27.53"
             ]
          },
          "ldhName" : "V2N0.NIC.INSURE",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N1.NIC.INSURE",
          "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.INSURE",
          "ipAddresses" : {
             "v4" : [
                "161.232.13.53"
@@ -130,26 +102,27 @@
       }
    ],
    "ldhName" : "insure",
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/insure.html",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
-   "objectClassName" : "domain",
    "entities" : [
       {
+         "handle" : "insure-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -183,77 +156,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "insure-registrant"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
-               ]
-            ]
-         ],
-         "handle" : "insure-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
@@ -320,21 +226,115 @@
             ]
          ],
          "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
+               ]
+            ]
+         ],
+         "handle" : "insure-administrative",
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/insure.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
             "keyTag" : "54472",
+            "algorithm" : "8",
             "digestType" : "2",
-            "digest" : "fbe73379c21c9221115f502eae725983064c91d82af0c293a8c718ccbee36529",
-            "algorithm" : "8"
+            "digest" : "fbe73379c21c9221115f502eae725983064c91d82af0c293a8c718ccbee36529"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-04-24"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-02"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:26",
+         "eventAction" : "last update of RDAP database"
+      }
    ]
 }

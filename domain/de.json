@@ -1,6 +1,35 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.DENIC.DE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.denic.de/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "de",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:678:2:0:0:0:0:53"
@@ -9,34 +38,35 @@
                "194.0.0.53"
             ]
          },
-         "ldhName" : "A.NIC.DE",
+         "ldhName" : "A.NIC.DE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.NIC.DE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a02:568:0:2:0:0:0:53"
+            ],
+            "v4" : [
+               "81.91.164.5"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:668:1f:11:0:0:0:105"
+            ],
+            "v4" : [
+               "77.67.63.105"
+            ]
+         },
+         "ldhName" : "L.DE.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "81.91.164.5"
-            ],
-            "v6" : [
-               "2a02:568:0:2:0:0:0:53"
-            ]
-         },
          "objectClassName" : "nameserver",
-         "ldhName" : "F.NIC.DE"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "77.67.63.105"
-            ],
-            "v6" : [
-               "2001:668:1f:11:0:0:0:105"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.DE.NET"
-      },
-      {
+         "ldhName" : "N.DE.NET",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:1011:1:0:0:0:53"
@@ -44,53 +74,34 @@
             "v4" : [
                "194.146.107.6"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "N.DE.NET"
+         }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "195.243.137.26"
-            ],
             "v6" : [
                "2003:8:14:0:0:0:0:53"
+            ],
+            "v4" : [
+               "195.243.137.26"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "S.DE.NET"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Z.NIC.DE",
          "ipAddresses" : {
-            "v6" : [
-               "2a02:568:fe02:0:0:0:0:de"
-            ],
             "v4" : [
                "194.246.96.1"
+            ],
+            "v6" : [
+               "2a02:568:fe02:0:0:0:0:de"
             ]
-         }
+         },
+         "ldhName" : "Z.NIC.DE",
+         "objectClassName" : "nameserver"
       }
    ],
    "ldhName" : "de",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "1986-11-05",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-04-04",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -109,44 +120,12 @@
          ]
       }
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.DENIC.DE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.denic.de/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "de",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "f341357809a5954311ccb82ade114c6c1d724a75c0395137aa3978035425e78d",
-            "algorithm" : "8",
-            "keyTag" : "26755",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -206,14 +185,52 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "de-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "DENIC eG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Theodor-Stern-Kai 1\nFrankfurt am Main 60596\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "de-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "de-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -273,68 +290,51 @@
                ]
             ]
          ],
-         "handle" : "de-administrative",
          "roles" : [
             "administrative"
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "DENIC eG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Theodor-Stern-Kai 1\nFrankfurt am Main 60596\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "de-registrant"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "26755",
+            "digest" : "f341357809a5954311ccb82ade114c6c1d724a75c0395137aa3978035425e78d"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/de.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
          "href" : "http://www.denic.de/",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventDate" : "1986-11-05",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-04-04",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:13"
+      }
+   ]
 }

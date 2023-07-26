@@ -1,92 +1,101 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ldhName" : "AC1.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-03-24"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:42",
+         "eventAction" : "last update of RDAP database"
+      }
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "fdcdbd92d8a27f3a19ba30ef37e04ff21188973ee8648975e5b9a77db48478d6",
             "algorithm" : "8",
+            "digestType" : "2",
             "keyTag" : "28536",
-            "digestType" : "2"
+            "digest" : "fdcdbd92d8a27f3a19ba30ef37e04ff21188973ee8648975e5b9a77db48478d6"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "links" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Corporate Counsel"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "LEGO Juris A⁄S"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Koldingvej 2\nBillund DK-7190\nDenmark"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+45 79505370"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+45 75338853"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-lego@cscinfo.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "lego-administrative"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lego.html"
       },
       {
-         "handle" : "lego-technical",
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      }
+   ],
+   "entities" : [
+      {
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "lego-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -145,10 +154,14 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "lego-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -182,93 +195,76 @@
                ]
             ]
          ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "lego-registrant"
+         "handle" : "lego-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Corporate Counsel"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "LEGO Juris A⁄S"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Koldingvej 2\nBillund DK-7190\nDenmark"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+45 79505370"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+45 75338853"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-lego@cscinfo.com"
+               ]
+            ]
+         ]
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lego.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM"
-      }
-   ],
-   "ldhName" : "lego",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-03-24"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "notices" : [
       {
          "title" : "About This Service",
@@ -279,14 +275,15 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
+   "ldhName" : "lego",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -306,6 +303,9 @@
             "IANA"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "lego"
 }

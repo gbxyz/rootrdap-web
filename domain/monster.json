@@ -1,93 +1,4 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-12-23"
-      },
-      {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:83"
-            ],
-            "v4" : [
-               "194.169.218.83"
-            ]
-         },
-         "ldhName" : "A.NIC.MONSTER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.MONSTER",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.83"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:83"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.83"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:83"
-            ]
-         },
-         "ldhName" : "C.NIC.MONSTER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:83"
-            ],
-            "v4" : [
-               "212.18.249.83"
-            ]
-         },
-         "ldhName" : "D.NIC.MONSTER",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "monster",
-   "handle" : "monster",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MONSTER."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://nic.monster/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -106,9 +17,14 @@
          "title" : "Comments"
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "monster-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -159,17 +75,14 @@
                   "hello@xyz.com"
                ]
             ]
-         ],
-         "handle" : "monster-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "handle" : "monster-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
+         "handle" : "monster-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -228,8 +141,7 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
@@ -266,45 +178,41 @@
                ]
             ]
          ],
+         "handle" : "monster-registrant",
          "roles" : [
             "registrant"
-         ],
-         "handle" : "monster-registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
+            "digest" : "a0927d13ff8d54a355b158d01af184962b0d9684",
             "keyTag" : "65523",
             "digestType" : "1",
-            "digest" : "a0927d13ff8d54a355b158d01af184962b0d9684",
             "algorithm" : "7"
          },
          {
             "digest" : "5a5b5575f92a04519f4c492d13f0f5039df17597db256444cda0ba6ca203a105",
+            "digestType" : "2",
             "algorithm" : "7",
-            "keyTag" : "65523",
-            "digestType" : "2"
+            "keyTag" : "65523"
          },
          {
             "digest" : "7de5a740d6e45c95c348209c877cb97736350694e595608da72a0645960937ce",
-            "algorithm" : "7",
             "keyTag" : "56230",
+            "algorithm" : "7",
             "digestType" : "2"
          },
          {
-            "keyTag" : "56230",
+            "algorithm" : "7",
             "digestType" : "1",
-            "digest" : "9dd1cfcf93b8d7f4cbcaffb882c6dd820c345b3e",
-            "algorithm" : "7"
+            "keyTag" : "56230",
+            "digest" : "9dd1cfcf93b8d7f4cbcaffb882c6dd820c345b3e"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "rel" : "related",
@@ -317,10 +225,102 @@
          "title" : "About RDAP"
       },
       {
-         "rel" : "related",
+         "href" : "https://nic.monster/",
          "title" : "URL for registration services",
-         "href" : "https://nic.monster/"
+         "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventDate" : "2015-12-23",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:59",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "monster",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.MONSTER",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:83"
+            ],
+            "v4" : [
+               "194.169.218.83"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.83"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:83"
+            ]
+         },
+         "ldhName" : "B.NIC.MONSTER"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:83"
+            ],
+            "v4" : [
+               "212.18.248.83"
+            ]
+         },
+         "ldhName" : "C.NIC.MONSTER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:83"
+            ],
+            "v4" : [
+               "212.18.249.83"
+            ]
+         },
+         "ldhName" : "D.NIC.MONSTER",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "handle" : "monster",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MONSTER."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://nic.monster/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

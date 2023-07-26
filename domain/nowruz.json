@@ -1,23 +1,55 @@
 {
-   "remarks" : [
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.NOWRUZ."
-         ],
-         "title" : "Whois Service"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NS.NIC.NOWRUZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:171:a01:ad:0:0:0:10"
+            ],
+            "v4" : [
+               "72.0.49.10"
+            ]
+         }
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.nowruz"
-         ]
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:171:d01:dc:0:0:0:10"
+            ],
+            "v4" : [
+               "72.42.113.10"
+            ]
+         },
+         "ldhName" : "B.NS.NIC.NOWRUZ"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "ldhName" : "NS1.ANYCASTDNS.CZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:fea0:dead:0:0:0:0:beef"
+            ],
+            "v4" : [
+               "185.38.108.108"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "185.28.194.194"
+            ]
+         },
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       }
+   ],
+   "status" : [
+      "active"
    ],
    "notices" : [
       {
@@ -37,151 +69,9 @@
          ]
       }
    ],
-   "handle" : "nowruz",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:a01:ad:0:0:0:10"
-            ],
-            "v4" : [
-               "72.0.49.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NS.NIC.NOWRUZ"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2620:171:d01:dc:0:0:0:10"
-            ],
-            "v4" : [
-               "72.42.113.10"
-            ]
-         },
-         "ldhName" : "B.NS.NIC.NOWRUZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:fea0:dead:0:0:0:0:beef"
-            ],
-            "v4" : [
-               "185.38.108.108"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "185.28.194.194"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "nowruz",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-25"
-      },
-      {
-         "eventDate" : "2023-02-28",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/nowruz.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.nowruz"
-      }
-   ],
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "50845",
-            "algorithm" : "8",
-            "digest" : "f7691bfc344455bee7376fcf659fcf623ad2fd081900f4fb32db07c7bc6bdf57"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Asia Green IT System Bilgisayar San. ve Tic. Ltd. Sti."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cobancesme Mah. Semt Sanayi Cd.\nNish Istanbul\nNo 44 D 174\nBahcelievler / Istanbul\nTurkey"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "nowruz-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "handle" : "nowruz-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -241,9 +131,56 @@
                ]
             ]
          ],
+         "handle" : "nowruz-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Asia Green IT System Bilgisayar San. ve Tic. Ltd. Sti."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cobancesme Mah. Semt Sanayi Cd.\nNish Istanbul\nNo 44 D 174\nBahcelievler / Istanbul\nTurkey"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "nowruz-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -303,12 +240,75 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "nowruz-technical"
+         "handle" : "nowruz-technical",
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/nowruz.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://nic.nowruz",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "f7691bfc344455bee7376fcf659fcf623ad2fd081900f4fb32db07c7bc6bdf57",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "50845"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2015-11-25",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-02-28",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:10",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "nowruz",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.NOWRUZ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.nowruz"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "nowruz"
 }

@@ -1,97 +1,5 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-01-09",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "ldhName" : "marketing",
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.MARKETING",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:16:0:0:0:0:6"
-            ],
-            "v4" : [
-               "65.22.20.6"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N1.NIC.MARKETING",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.21.6"
-            ],
-            "v6" : [
-               "2a01:8840:17:0:0:0:0:6"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.22.6"
-            ],
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:6"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.MARKETING"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f4:0:0:0:0:6"
-            ],
-            "v4" : [
-               "161.232.10.6"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.MARKETING",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.MARKETING",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:6"
-            ],
-            "v4" : [
-               "65.22.23.6"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:6"
-            ],
-            "v4" : [
-               "161.232.11.6"
-            ]
-         },
-         "ldhName" : "V2N1.NIC.MARKETING",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "handle" : "marketing",
    "notices" : [
       {
          "title" : "About This Service",
@@ -102,38 +10,57 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MARKETING."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "handle" : "marketing-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "marketing-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -193,17 +120,16 @@
                ]
             ]
          ],
-         "handle" : "marketing-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
             "administrative"
          ],
          "handle" : "marketing-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -262,79 +188,153 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "handle" : "marketing-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
+            "keyTag" : "22285",
             "algorithm" : "8",
-            "digest" : "f2fd61f041544a7a8dd1bf440c72020d08581190d697f3944886ad1ff08588e1",
             "digestType" : "2",
-            "keyTag" : "22285"
+            "digest" : "f2fd61f041544a7a8dd1bf440c72020d08581190d697f3944886ad1ff08588e1"
          }
       ],
       "delegationSigned" : true
    },
    "links" : [
       {
-         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/marketing.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
+         "href" : "https://www.iana.org/domains/root/db/marketing.html",
          "rel" : "related"
       },
       {
-         "href" : "http://www.donuts.domains/",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
          "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-09"
+      },
+      {
+         "eventDate" : "2021-10-27",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.MARKETING",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.20.6"
+            ],
+            "v6" : [
+               "2a01:8840:16:0:0:0:0:6"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.21.6"
+            ],
+            "v6" : [
+               "2a01:8840:17:0:0:0:0:6"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.MARKETING",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N2.NIC.MARKETING",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.22.6"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:6"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f4:0:0:0:0:6"
+            ],
+            "v4" : [
+               "161.232.10.6"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.MARKETING",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.23.6"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:6"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.MARKETING"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.11.6"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:6"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.MARKETING",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "handle" : "marketing",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MARKETING."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

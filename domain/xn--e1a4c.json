@@ -1,65 +1,28 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "90045c6e0579687c19d9318132095adbc9532831f3d175004d8e4a05fb05d268",
-            "algorithm" : "8",
-            "keyTag" : "8731",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "entities" : [
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "EURid vzw"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Telecomlaan 9\nDiegem 1831\nBelgium"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "xn--e1a4c-registrant"
-      },
-      {
-         "handle" : "xn--e1a4c-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -118,6 +81,47 @@
                   "domain-admin@eurid.eu"
                ]
             ]
+         ],
+         "handle" : "xn--e1a4c-administrative"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "EURid vzw"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Telecomlaan 9\nDiegem 1831\nBelgium"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "xn--e1a4c-registrant",
+         "roles" : [
+            "registrant"
          ]
       },
       {
@@ -125,7 +129,6 @@
             "technical"
          ],
          "handle" : "xn--e1a4c-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -184,42 +187,70 @@
                   "domain-tech@eurid.eu"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/xn--e1a4c.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/xn--e1a4c.html"
       },
       {
          "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
          "href" : "http://www.registry.eu",
-         "title" : "URL for registration services"
+         "rel" : "related"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "90045c6e0579687c19d9318132095adbc9532831f3d175004d8e4a05fb05d268",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "8731"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-08"
+      },
+      {
+         "eventDate" : "2023-03-07",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:35"
+      }
+   ],
+   "ldhName" : "xn--e1a4c",
    "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "BE.DNS.EU",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:978:2:1:0:0:93:2"
-            ],
             "v4" : [
                "149.38.1.26"
+            ],
+            "v6" : [
+               "2001:978:2:1:0:0:93:2"
             ]
-         }
+         },
+         "ldhName" : "BE.DNS.EU"
       },
       {
+         "ldhName" : "SI.DNS.EU",
          "ipAddresses" : {
             "v4" : [
                "193.2.221.62"
@@ -228,64 +259,49 @@
                "2001:1470:8000:100:0:0:0:62"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "SI.DNS.EU"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "W.DNS.EU",
          "objectClassName" : "nameserver",
+         "ldhName" : "W.DNS.EU",
          "ipAddresses" : {
-            "v4" : [
-               "194.0.25.28"
-            ],
             "v6" : [
                "2001:678:20:0:0:0:0:28"
+            ],
+            "v4" : [
+               "194.0.25.28"
             ]
          }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.DNS.EU",
          "ipAddresses" : {
-            "v4" : [
-               "185.151.141.1"
-            ],
             "v6" : [
                "2a02:568:fe00:0:0:0:0:6575"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:23:0:0:0:53"
             ],
             "v4" : [
-               "194.146.106.90"
+               "185.151.141.1"
             ]
          },
+         "ldhName" : "X.DNS.EU",
+         "objectClassName" : "nameserver"
+      },
+      {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.90"
+            ],
+            "v6" : [
+               "2001:67c:1010:23:0:0:0:53"
+            ]
+         },
          "ldhName" : "Y.DNS.EU"
-      }
-   ],
-   "ldhName" : "xn--e1a4c",
-   "events" : [
-      {
-         "eventDate" : "2015-12-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-07"
-      },
-      {
-         "eventDate" : "2023-07-26T12:04:05",
-         "eventAction" : "last update of RDAP database"
       }
    ],
    "status" : [
       "active"
    ],
+   "handle" : "xn--e1a4c",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -294,35 +310,19 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.registry.eu"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ],
-         "title" : "Comments"
+         "title" : "Source"
       }
    ],
-   "handle" : "xn--e1a4c"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

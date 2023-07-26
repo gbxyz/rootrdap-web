@@ -1,28 +1,134 @@
 {
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ROOT1.ZONE.TC",
+         "ipAddresses" : {
+            "v4" : [
+               "31.169.81.225"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ROOT2.ZONE.TC",
+         "ipAddresses" : {
+            "v4" : [
+               "77.79.104.226"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "ROOT3.ZONE.TC",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "77.79.104.225"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "31.169.81.226"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "ROOT4.ZONE.TC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "95.173.188.6"
+            ],
+            "v6" : [
+               "2a03:2100:0:100:0:0:0:5"
+            ]
+         },
+         "ldhName" : "ROOT5.ZONE.TC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "166.78.254.145"
+            ],
+            "v6" : [
+               "2001:4801:7819:74:a322:3632:ff10:3e2f"
+            ]
+         },
+         "ldhName" : "ROOT6.ZONE.TC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ROOT7.ZONE.TC",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:1800:7800:102:ab3b:e6a7:859f:a6c7"
+            ],
+            "v4" : [
+               "119.9.93.69"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ROOT8.ZONE.TC",
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:1a48:7806:115:d994:9fe:9eb2:e68d"
+            ],
+            "v4" : [
+               "162.13.87.182"
+            ]
+         }
+      }
+   ],
    "objectClassName" : "domain",
+   "ldhName" : "tc",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-01-27"
+      },
+      {
+         "eventDate" : "2021-02-25",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:00"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/tc.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/tc.html"
       },
       {
-         "href" : "https://about.rdap.org",
+         "rel" : "related",
          "title" : "About RDAP",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
+         "rel" : "related",
          "href" : "HTTPS://WWW.NIC.TC",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "tc-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -56,12 +162,12 @@
                ]
             ]
          ],
-         "handle" : "tc-registrant",
          "roles" : [
             "registrant"
          ]
       },
       {
+         "handle" : "tc-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -121,13 +227,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "tc-technical"
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "tc-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -187,20 +294,39 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "tc-administrative",
          "roles" : [
             "administrative"
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "remarks" : [
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
       {
          "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TC."
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "title" : "Whois Service"
+         "title" : "Comments"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TC."
+         ]
       },
       {
          "title" : "Remark",
@@ -215,131 +341,5 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "tc",
-   "ldhName" : "tc",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "31.169.81.225"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ROOT1.ZONE.TC"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ROOT2.ZONE.TC",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "77.79.104.226"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ROOT3.ZONE.TC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "77.79.104.225"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "31.169.81.226"
-            ]
-         },
-         "ldhName" : "ROOT4.ZONE.TC",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "ROOT5.ZONE.TC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "95.173.188.6"
-            ],
-            "v6" : [
-               "2a03:2100:0:100:0:0:0:5"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ROOT6.ZONE.TC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4801:7819:74:a322:3632:ff10:3e2f"
-            ],
-            "v4" : [
-               "166.78.254.145"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ROOT7.ZONE.TC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "119.9.93.69"
-            ],
-            "v6" : [
-               "2401:1800:7800:102:ab3b:e6a7:859f:a6c7"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "162.13.87.182"
-            ],
-            "v6" : [
-               "2a00:1a48:7806:115:d994:9fe:9eb2:e68d"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ROOT8.ZONE.TC"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-01-27"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-02-25"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "handle" : "tc"
 }

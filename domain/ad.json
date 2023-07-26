@@ -1,15 +1,53 @@
 {
-   "objectClassName" : "domain",
+   "handle" : "ad",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.ad"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "ldhName" : "ad",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1996-01-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-02"
+      },
+      {
+         "eventDate" : "2023-07-26T12:27:43",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/ad.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/ad.html"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.nic.ad",
@@ -17,13 +55,19 @@
          "rel" : "related"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "732ac3921e40eac6c01b0c467beda420f42bf38b7c462e86d01d1d2c4eb9da37",
+            "keyTag" : "10624",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "entities" : [
       {
-         "handle" : "ad-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -82,13 +126,54 @@
                   "fabrici.rossell@andorratelecom.ad"
                ]
             ]
-         ]
+         ],
+         "handle" : "ad-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "ad-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Andorra Telecom"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Carrer Mossèn Lluís Pujol, 8-14\nSanta Coloma AD500\nAndorra"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "ad-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -148,93 +233,22 @@
                   "joan-marc.lauga@andorratelecom.ad"
                ]
             ]
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Andorra Telecom"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Carrer Mossèn Lluís Pujol, 8-14\nSanta Coloma AD500\nAndorra"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "ad-registrant",
+         "handle" : "ad-administrative",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "10624",
-            "digestType" : "2",
-            "digest" : "732ac3921e40eac6c01b0c467beda420f42bf38b7c462e86d01d1d2c4eb9da37",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "ad",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.ad"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -245,27 +259,11 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "1996-01-09",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-05-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "status" : [
       "active"
    ],
    "nameservers" : [
       {
-         "ldhName" : "AD.CCTLD.AUTHDNS.RIPE.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "193.0.9.53"
@@ -273,9 +271,12 @@
             "v6" : [
                "2001:67c:e0:0:0:0:0:53"
             ]
-         }
+         },
+         "ldhName" : "AD.CCTLD.AUTHDNS.RIPE.NET",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:21cc:2000:0:0:64:47"
@@ -284,28 +285,27 @@
                "194.69.254.15"
             ]
          },
-         "ldhName" : "AD.NS.NIC.ES",
-         "objectClassName" : "nameserver"
+         "ldhName" : "AD.NS.NIC.ES"
       },
       {
          "ldhName" : "DNSC.AD",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a02:8060:32fa:0:0:0:0:b"
-            ],
             "v4" : [
                "194.158.74.10"
+            ],
+            "v6" : [
+               "2a02:8060:32fa:0:0:0:0:b"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "194.158.74.9"
-            ],
             "v6" : [
                "2a02:8060:32fa:0:0:0:0:a"
+            ],
+            "v4" : [
+               "194.158.74.9"
             ]
          },
          "ldhName" : "DNSM.AD",
@@ -320,9 +320,9 @@
                "2001:660:3006:1:0:0:1:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.NIC.FR"
+         "ldhName" : "NS3.NIC.FR",
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "ad"
+   "objectClassName" : "domain"
 }

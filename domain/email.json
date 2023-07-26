@@ -1,10 +1,11 @@
 {
+   "handle" : "email",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.EMAIL."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -18,6 +19,9 @@
             "IANA"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "notices" : [
       {
@@ -37,178 +41,9 @@
          ]
       }
    ],
-   "handle" : "email",
-   "ldhName" : "email",
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.EMAIL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:35"
-            ],
-            "v4" : [
-               "65.22.24.35"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.EMAIL",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:35"
-            ],
-            "v4" : [
-               "65.22.25.35"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N2.NIC.EMAIL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:35"
-            ],
-            "v4" : [
-               "65.22.26.35"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.12.35"
-            ],
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:35"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.EMAIL",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.27.35"
-            ],
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:35"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.EMAIL",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N1.NIC.EMAIL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.13.35"
-            ],
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:35"
-            ]
-         }
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-19"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-04"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/email.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
-      }
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "92a9da686674b9bc30ee72224130a7c761d5b01902da9a5a62038c796a16bd33",
-            "algorithm" : "8",
-            "keyTag" : "62422",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "email-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "email-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -267,13 +102,59 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "handle" : "email-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "email-administrative",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "email-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
+         "handle" : "email-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -332,9 +213,128 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "62422",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "92a9da686674b9bc30ee72224130a7c761d5b01902da9a5a62038c796a16bd33"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/email.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-12-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-04"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:29",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "email",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.EMAIL",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.24.35"
+            ],
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:35"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.25.35"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:35"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.EMAIL"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:35"
+            ],
+            "v4" : [
+               "65.22.26.35"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.EMAIL"
+      },
+      {
+         "ldhName" : "V0N3.NIC.EMAIL",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.12.35"
+            ],
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:35"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N0.NIC.EMAIL",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.27.35"
+            ],
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:35"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N1.NIC.EMAIL",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:35"
+            ],
+            "v4" : [
+               "161.232.13.35"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ]
 }

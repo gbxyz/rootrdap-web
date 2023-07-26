@@ -1,5 +1,73 @@
 {
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.150"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:150"
+            ]
+         },
+         "ldhName" : "A.NIC.AUDIO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.AUDIO",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:150"
+            ],
+            "v4" : [
+               "185.24.64.150"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.150"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:150"
+            ]
+         },
+         "ldhName" : "C.NIC.AUDIO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.150"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:150"
+            ]
+         },
+         "ldhName" : "D.NIC.AUDIO"
+      }
+   ],
    "objectClassName" : "domain",
+   "ldhName" : "audio",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-08"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-16"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:01",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -7,8 +75,8 @@
          "rel" : "related"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
          "rel" : "related"
       },
       {
@@ -17,47 +85,48 @@
          "title" : "URL for registration services"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "5",
+            "digestType" : "1",
+            "keyTag" : "49027",
+            "digest" : "f2611084038a67137a2a8ef584402bad64ee365d"
+         },
+         {
+            "algorithm" : "5",
+            "digestType" : "2",
+            "keyTag" : "20191",
+            "digest" : "775c07f584233b85606ac3874441c97ad1af7f144d3e9f0fd779f1e064e49316"
+         },
+         {
+            "digest" : "bb72622c591c9f739af49c13eedb7f2796cbc8fb",
+            "keyTag" : "20191",
+            "digestType" : "1",
+            "algorithm" : "5"
+         },
+         {
+            "algorithm" : "5",
+            "digestType" : "2",
+            "keyTag" : "49027",
+            "digest" : "5679b4abdcc3a065fe7fdddcf8ad1d7ebe22323d758abc315ab4d4d8b49cf684"
+         },
+         {
+            "digest" : "859c5604b1a595b5e139d2904314e6e5eee152ace825a74eca32a3e1290f178c",
+            "algorithm" : "5",
+            "digestType" : "2",
+            "keyTag" : "10807"
+         },
+         {
+            "digest" : "a8743f3c50bf77807ef5713d614f4cf1c0567f95",
+            "digestType" : "1",
+            "algorithm" : "5",
+            "keyTag" : "10807"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "XYZ.COM LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "audio-registrant"
-      },
       {
          "vcardArray" : [
             "vcard",
@@ -110,13 +179,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "audio-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "audio-administrative"
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -179,84 +249,58 @@
                   "tld.ops@centralnic.com"
                ]
             ]
+         ]
+      },
+      {
+         "handle" : "audio-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "XYZ.COM LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
          ],
          "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "1",
-            "keyTag" : "49027",
-            "algorithm" : "5",
-            "digest" : "f2611084038a67137a2a8ef584402bad64ee365d"
-         },
-         {
-            "digestType" : "2",
-            "keyTag" : "20191",
-            "algorithm" : "5",
-            "digest" : "775c07f584233b85606ac3874441c97ad1af7f144d3e9f0fd779f1e064e49316"
-         },
-         {
-            "digestType" : "1",
-            "keyTag" : "20191",
-            "algorithm" : "5",
-            "digest" : "bb72622c591c9f739af49c13eedb7f2796cbc8fb"
-         },
-         {
-            "keyTag" : "49027",
-            "digestType" : "2",
-            "digest" : "5679b4abdcc3a065fe7fdddcf8ad1d7ebe22323d758abc315ab4d4d8b49cf684",
-            "algorithm" : "5"
-         },
-         {
-            "algorithm" : "5",
-            "digest" : "859c5604b1a595b5e139d2904314e6e5eee152ace825a74eca32a3e1290f178c",
-            "digestType" : "2",
-            "keyTag" : "10807"
-         },
-         {
-            "digest" : "a8743f3c50bf77807ef5713d614f4cf1c0567f95",
-            "algorithm" : "5",
-            "keyTag" : "10807",
-            "digestType" : "1"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "audio",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AUDIO."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://nic.audio"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -267,72 +311,28 @@
          ]
       }
    ],
-   "events" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "eventDate" : "2014-05-08",
-         "eventAction" : "registration"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AUDIO."
+         ]
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-16"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://nic.audio"
+         ]
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "audio",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.AUDIO",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.150"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:150"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.AUDIO",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.150"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:150"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.AUDIO",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:150"
-            ],
-            "v4" : [
-               "212.18.248.150"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.150"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:150"
-            ]
-         },
-         "ldhName" : "D.NIC.AUDIO",
-         "objectClassName" : "nameserver"
-      }
-   ]
+   "handle" : "audio"
 }

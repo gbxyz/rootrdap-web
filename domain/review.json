@@ -1,26 +1,51 @@
 {
+   "handle" : "review",
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "3a9d7b6cf7a12550c281a6ffc5b376b7c93972d8b7607d2c726bbd351d4803d5",
-            "digestType" : "2",
-            "keyTag" : "27040"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.REVIEW."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.review"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "ldhName" : "review",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "review-registrant",
-         "objectClassName" : "entity",
+         "handle" : "review-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -31,15 +56,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Edgar Charles Andrew Lavarello"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "dot Review Limited"
+                  "Pricewaterhousecoopers Ltd."
                ],
                [
                   "adr",
                   {
-                     "label" : "2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
+                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
                   },
                   "text",
                   [
@@ -51,9 +82,25 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+350 200 73520"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
@@ -122,9 +169,9 @@
          "objectClassName" : "entity"
       },
       {
-         "handle" : "review-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
          "vcardArray" : [
             "vcard",
@@ -136,21 +183,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Edgar Charles Andrew Lavarello"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Pricewaterhousecoopers Ltd."
+                  "dot Review Limited"
                ],
                [
                   "adr",
                   {
-                     "label" : "327 Main Street\nGibraltar  GX11 1AA\nGibraltar"
+                     "label" : "2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
                   },
                   "text",
                   [
@@ -162,29 +203,28 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+350 200 73520"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "edgar.c.lavarello@gi.pwc.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "review-registrant"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "27040",
+            "digest" : "3a9d7b6cf7a12550c281a6ffc5b376b7c93972d8b7607d2c726bbd351d4803d5"
+         }
+      ]
+   },
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/review.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
          "rel" : "related",
@@ -192,63 +232,80 @@
          "href" : "https://about.rdap.org"
       },
       {
-         "href" : "http://nic.review",
          "title" : "URL for registration services",
+         "href" : "http://nic.review",
          "rel" : "related"
       }
    ],
+   "events" : [
+      {
+         "eventDate" : "2015-02-05",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:33"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
    "objectClassName" : "domain",
-   "ldhName" : "review",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.REVIEW",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ],
             "v4" : [
                "37.209.192.10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.REVIEW",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
             ],
             "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
+               "2001:dcd:1:0:0:0:0:10"
             ]
          },
-         "ldhName" : "C.NIC.REVIEW",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.REVIEW",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.169.35"
-            ],
             "v6" : [
-               "2610:a1:1071:0:0:0:1:23"
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.REVIEW"
       },
       {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         },
+         "ldhName" : "C.NIC.REVIEW"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:23"
+            ],
+            "v4" : [
+               "156.154.169.35"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.REVIEW",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.REVIEW",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1072:0:0:0:1:23"
@@ -257,76 +314,19 @@
                "156.154.170.35"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.REVIEW"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.REVIEW",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.171.35"
-            ],
             "v6" : [
                "2610:a1:1073:0:0:0:1:23"
+            ],
+            "v4" : [
+               "156.154.171.35"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.REVIEW"
       }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-02-05"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.REVIEW."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.review"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "review"
+   ]
 }

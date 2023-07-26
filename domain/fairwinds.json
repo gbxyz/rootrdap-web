@@ -1,80 +1,22 @@
 {
-   "handle" : "fairwinds",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FAIRWINDS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.fairwindspartners.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-10-29"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "status" : [
       "active"
    ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver"
+         "ldhName" : "AC1.NSTLD.COM"
       },
       {
+         "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.174.30"
@@ -83,10 +25,11 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "ldhName" : "AC2.NSTLD.COM",
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM",
          "ipAddresses" : {
             "v4" : [
                "192.42.175.30"
@@ -94,9 +37,7 @@
             "v6" : [
                "2001:500:122:0:0:0:0:30"
             ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
@@ -111,63 +52,13 @@
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "fairwinds",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/fairwinds.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
    "objectClassName" : "domain",
+   "ldhName" : "fairwinds",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "fairwinds-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "FairWinds Partners, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1000 Potomac Street NW #350\nWashington DC 20007\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
          "objectClassName" : "entity",
+         "handle" : "fairwinds-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -229,15 +120,14 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "handle" : "fairwinds-administrative"
+         ]
       },
       {
-         "handle" : "fairwinds-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "fairwinds-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -297,21 +187,131 @@
                ]
             ]
          ]
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "FairWinds Partners, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1000 Potomac Street NW #350\nWashington DC 20007\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "fairwinds-registrant",
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-10-29"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:37"
+      }
+   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digest" : "4b1c638c7fc58d11bf54b976ce4fba1cdb935f993f6b50194093b2479bff8504",
+            "keyTag" : "8913",
             "digestType" : "2",
-            "keyTag" : "8913"
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/fairwinds.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
-   ]
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FAIRWINDS."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://www.fairwindspartners.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "fairwinds"
 }

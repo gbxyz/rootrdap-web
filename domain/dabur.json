@@ -1,29 +1,83 @@
 {
-   "links" : [
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/dabur.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.DABUR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:ae:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.180.25"
+            ]
+         }
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.DABUR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b1:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.183.25"
+            ]
+         }
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.dabur.com"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.DABUR",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.181.25"
+            ],
+            "v6" : [
+               "2a01:8840:af:0:0:0:0:25"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:b0:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.182.25"
+            ]
+         },
+         "ldhName" : "C0.NIC.DABUR"
       }
    ],
-   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
          "handle" : "dabur-registrant",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -60,10 +114,6 @@
       },
       {
          "handle" : "dabur-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -122,13 +172,13 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "dabur-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -188,25 +238,57 @@
                ]
             ]
          ],
+         "handle" : "dabur-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "12355",
-            "digestType" : "2",
             "digest" : "bc18991e60b16ed8791d94ea935d83e9d40e2cba9ac8b824a40191e5f5f50ae4",
-            "algorithm" : "8"
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "12355"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/dabur.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.dabur.com"
+      }
    ],
-   "handle" : "dabur",
+   "events" : [
+      {
+         "eventDate" : "2015-01-15",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-11-05",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:10",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "dabur",
    "remarks" : [
       {
          "description" : [
@@ -227,90 +309,8 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-01-15"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-05"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "dabur",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.DABUR",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.180.25"
-            ],
-            "v6" : [
-               "2a01:8840:ae:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.DABUR",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.183.25"
-            ],
-            "v6" : [
-               "2a01:8840:b1:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.DABUR",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.181.25"
-            ],
-            "v6" : [
-               "2a01:8840:af:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.182.25"
-            ],
-            "v6" : [
-               "2a01:8840:b0:0:0:0:0:25"
-            ]
-         },
-         "ldhName" : "C0.NIC.DABUR",
-         "objectClassName" : "nameserver"
-      }
-   ]
+   "handle" : "dabur"
 }

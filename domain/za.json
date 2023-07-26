@@ -1,59 +1,8 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1990-11-07"
-      },
-      {
-         "eventDate" : "2020-01-15",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:04:25"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "za",
-   "nameservers" : [
-      {
-         "ldhName" : "NSZA.IS.CO.ZA",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "196.4.160.27"
-            ]
-         }
-      },
-      {
-         "ldhName" : "ZA-NS.ANYCAST.PCH.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6055:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.55"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.78"
-            ],
-            "v6" : [
-               "2001:67c:1010:19:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ZA1.DNSNODE.NET"
-      }
-   ],
    "handle" : "za",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -68,12 +17,13 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "ldhName" : "za",
    "notices" : [
       {
          "title" : "About This Service",
@@ -84,14 +34,15 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
@@ -128,17 +79,16 @@
                ]
             ]
          ],
+         "handle" : "za-registrant",
          "roles" : [
             "registrant"
-         ],
-         "handle" : "za-registrant"
+         ]
       },
       {
-         "handle" : "za-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -197,14 +147,14 @@
                   "dnsadmin@zadna.org.za"
                ]
             ]
-         ]
+         ],
+         "handle" : "za-technical"
       },
       {
-         "handle" : "za-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "za-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -263,40 +213,90 @@
                   "chair@zadna.org.za"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "3e2b0b7e6063ca11400fa4b54d8a530888234cd0eb3b5fbf820c0750784da84e",
             "algorithm" : "8",
-            "keyTag" : "45749",
-            "digestType" : "2"
+            "digestType" : "2",
+            "keyTag" : "45749"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/za.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/za.html"
+         "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.zadna.org.za/",
-         "rel" : "related"
+         "href" : "http://www.zadna.org.za/"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1990-11-07"
+      },
+      {
+         "eventDate" : "2020-01-15",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:33:00"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NSZA.IS.CO.ZA",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "196.4.160.27"
+            ]
+         }
+      },
+      {
+         "ldhName" : "ZA-NS.ANYCAST.PCH.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.55"
+            ],
+            "v6" : [
+               "2001:500:14:6055:ad:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ZA1.DNSNODE.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.78"
+            ],
+            "v6" : [
+               "2001:67c:1010:19:0:0:0:53"
+            ]
+         }
       }
    ]
 }

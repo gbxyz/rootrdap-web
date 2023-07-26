@@ -1,184 +1,13 @@
 {
    "ldhName" : "play",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.32.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.34.105"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.36.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.60.105"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-06-04"
-      },
-      {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "play",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "0e823d1aa376c001a94c9efa4197f6e86c8088aa294aa26306093c3cf0908efa",
-            "algorithm" : "8",
-            "keyTag" : "25081",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "objectClassName" : "entity",
-         "handle" : "play-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "handle" : "play-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "play-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -240,11 +69,48 @@
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "play-technical",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "play-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "play-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -303,26 +169,160 @@
                   "crr-tech@google.com"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-04"
+      },
+      {
+         "eventDate" : "2020-04-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:22",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "25081",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "0e823d1aa376c001a94c9efa4197f6e86c8088aa294aa26306093c3cf0908efa"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/play.html"
+         "href" : "https://www.iana.org/domains/root/db/play.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
          "rel" : "related"
       },
       {
-         "href" : "https://www.registry.google",
          "title" : "URL for registration services",
+         "href" : "https://www.registry.google",
          "rel" : "related"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.34.105"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.38.105"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "play",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ]
 }

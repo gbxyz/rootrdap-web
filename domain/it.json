@@ -1,21 +1,129 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "nameservers" : [
+      {
+         "ldhName" : "A.DNS.IT",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.16.215"
+            ],
+            "v6" : [
+               "2001:678:12:0:194:0:16:215"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.DNS.IT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a0e:dbc0:0:0:0:0:0:39"
+            ],
+            "v4" : [
+               "45.142.220.39"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS.NIC.IT",
+         "ipAddresses" : {
+            "v4" : [
+               "192.12.192.5"
+            ],
+            "v6" : [
+               "2a00:d40:1:1:0:0:0:5"
+            ]
+         }
+      },
+      {
+         "ldhName" : "M.DNS.IT",
+         "ipAddresses" : {
+            "v4" : [
+               "217.29.76.4"
+            ],
+            "v6" : [
+               "2001:1ac0:0:200:0:a5d1:6004:2"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:1620:c0:220:194:119:192:34"
+            ],
+            "v4" : [
+               "194.119.192.34"
+            ]
+         },
+         "ldhName" : "NAMESERVER.CNR.IT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:760:ffff:ffff:0:0:0:ca"
+            ],
+            "v4" : [
+               "193.206.141.46"
+            ]
+         },
+         "ldhName" : "R.DNS.IT",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1987-12-23"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:28"
+      }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "47f7f7ba21e48591f6172eed13e35b66b93ad9f2880fc9bada64f68ce28ebb90",
+            "digestType" : "2",
             "algorithm" : "10",
             "keyTag" : "41901",
-            "digestType" : "2"
+            "digest" : "47f7f7ba21e48591f6172eed13e35b66b93ad9f2880fc9bada64f68ce28ebb90"
          }
       ]
    },
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/it.html"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.nic.it/",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -49,18 +157,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "it-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "it-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -119,9 +219,18 @@
                   "maurizio.martinelli@iit.cnr.it"
                ]
             ]
-         ]
+         ],
+         "handle" : "it-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "it-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -181,123 +290,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "it-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/it.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.it/",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.DNS.IT",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.16.215"
-            ],
-            "v6" : [
-               "2001:678:12:0:194:0:16:215"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a0e:dbc0:0:0:0:0:0:39"
-            ],
-            "v4" : [
-               "45.142.220.39"
-            ]
-         },
-         "ldhName" : "D.DNS.IT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS.NIC.IT",
-         "ipAddresses" : {
-            "v4" : [
-               "192.12.192.5"
-            ],
-            "v6" : [
-               "2a00:d40:1:1:0:0:0:5"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "217.29.76.4"
-            ],
-            "v6" : [
-               "2001:1ac0:0:200:0:a5d1:6004:2"
-            ]
-         },
-         "ldhName" : "M.DNS.IT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:1620:c0:220:194:119:192:34"
-            ],
-            "v4" : [
-               "194.119.192.34"
-            ]
-         },
-         "ldhName" : "NAMESERVER.CNR.IT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "R.DNS.IT",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:760:ffff:ffff:0:0:0:ca"
-            ],
-            "v4" : [
-               "193.206.141.46"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "it",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1987-12-23"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "notices" : [
       {
          "title" : "About This Service",
@@ -316,25 +312,29 @@
          "title" : "Comments"
       }
    ],
+   "ldhName" : "it",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.IT."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.it/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "it"
 }

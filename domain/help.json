@@ -1,65 +1,83 @@
 {
+   "status" : [
+      "active"
+   ],
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/help.html"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.HELP",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:158"
+            ],
+            "v4" : [
+               "194.169.218.158"
+            ]
+         }
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:158"
+            ],
+            "v4" : [
+               "185.24.64.158"
+            ]
+         },
+         "ldhName" : "B.NIC.HELP"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "https://nic.help",
-         "rel" : "related"
+         "ldhName" : "C.NIC.HELP",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.158"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:158"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.158"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:158"
+            ]
+         },
+         "ldhName" : "D.NIC.HELP",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "help",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "entities" : [
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "UNR Corp."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Third Floor, Monaco Towers\nGeorge Town Grand Cayman 30369SMB-KY11202\nCayman Islands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "handle" : "help-registrant"
-      },
-      {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -111,12 +129,54 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
          "handle" : "help-technical"
       },
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "UNR Corp."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Third Floor, Monaco Towers\nGeorge Town Grand Cayman 30369SMB-KY11202\nCayman Islands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "help-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "help-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -175,72 +235,42 @@
                   "m.cheng@innovationservice.help"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "help-administrative"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "keyTag" : "58220",
+            "digestType" : "2",
             "algorithm" : "13",
             "digest" : "631c51b43ba218603248e67a2c076c73acd16ad6eb0e4df9b3abd77d92643a9a"
          },
          {
-            "digestType" : "2",
+            "digest" : "9313a5ff28806d26514b86f9a83a67b79692ab1ff3a4401ce49fc0488b607bea",
             "keyTag" : "58472",
-            "algorithm" : "13",
-            "digest" : "9313a5ff28806d26514b86f9a83a67b79692ab1ff3a4401ce49fc0488b607bea"
+            "digestType" : "2",
+            "algorithm" : "13"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "help",
-   "remarks" : [
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.HELP."
-         ]
+         "href" : "https://www.iana.org/domains/root/db/help.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
       },
       {
-         "description" : [
-            "Registration information: https://nic.help"
-         ],
-         "title" : "Remark"
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "rel" : "related",
+         "href" : "https://nic.help",
+         "title" : "URL for registration services"
       }
    ],
    "events" : [
@@ -249,66 +279,36 @@
          "eventDate" : "2014-08-15"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-15"
+         "eventDate" : "2023-03-15",
+         "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:15",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "nameservers" : [
+   "remarks" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:158"
-            ],
-            "v4" : [
-               "194.169.218.158"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.HELP"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.HELP."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.HELP",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.158"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:158"
-            ]
-         }
+         "description" : [
+            "Registration information: https://nic.help"
+         ],
+         "title" : "Remark"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.HELP",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.158"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:158"
-            ]
-         }
-      },
-      {
-         "ldhName" : "D.NIC.HELP",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:158"
-            ],
-            "v4" : [
-               "212.18.249.158"
-            ]
-         }
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "ldhName" : "help"
+   "handle" : "help"
 }

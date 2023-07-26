@@ -1,5 +1,84 @@
 {
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:d2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.216.9"
+            ]
+         },
+         "ldhName" : "A0.NIC.BESTBUY"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:d5:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.219.9"
+            ]
+         },
+         "ldhName" : "A2.NIC.BESTBUY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.BESTBUY",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.217.9"
+            ],
+            "v6" : [
+               "2a01:8840:d3:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.218.9"
+            ],
+            "v6" : [
+               "2a01:8840:d4:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C0.NIC.BESTBUY"
+      }
+   ],
    "objectClassName" : "domain",
+   "ldhName" : "bestbuy",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:14",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "6e98e0865f6a8cd3e69f0a03cb0d9d80333a31d113ad85bba7571f87262c5d32",
+            "keyTag" : "1501",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -8,22 +87,79 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
-         "href" : "http://nic.bestbuy",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "href" : "http://nic.bestbuy"
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
+      {
+         "handle" : "bestbuy-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "MarkMonitor, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2150 S Bonito Way, Suite 150\nMeridian ID 83642\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 208 685 1857"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dotbestbuy@markmonitor.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
+      },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "bestbuy-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -82,68 +218,14 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "MarkMonitor, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2150 S Bonito Way, Suite 150\nMeridian ID 83642\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 208 685 1857"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dotbestbuy@markmonitor.com"
-               ]
-            ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "bestbuy-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "handle" : "bestbuy-technical",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -177,46 +259,8 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "bestbuy-registrant"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "6e98e0865f6a8cd3e69f0a03cb0d9d80333a31d113ad85bba7571f87262c5d32",
-            "algorithm" : "8",
-            "keyTag" : "1501",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "bestbuy",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BESTBUY."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.bestbuy"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "handle" : "bestbuy-registrant",
+         "objectClassName" : "entity"
       }
    ],
    "notices" : [
@@ -229,80 +273,36 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BESTBUY."
          ],
-         "title" : "Comments"
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.bestbuy"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2015-12-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.216.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.BESTBUY",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.BESTBUY",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.219.9"
-            ],
-            "v6" : [
-               "2a01:8840:d5:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.BESTBUY",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.217.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:d4:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.218.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.BESTBUY"
-      }
-   ],
-   "ldhName" : "bestbuy"
+   "handle" : "bestbuy"
 }

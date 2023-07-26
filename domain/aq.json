@@ -1,24 +1,10 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1992-02-26"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-02-16"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "status" : [
       "active"
    ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "FORK.STH.DNSNODE.NET",
          "ipAddresses" : {
             "v4" : [
@@ -27,9 +13,11 @@
             "v6" : [
                "2a01:3f0:0:306:0:0:0:53"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "204.61.216.132"
@@ -38,12 +26,10 @@
                "2001:500:14:6132:ad:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "NS1.ANYCAST.DNS.AQ"
       },
       {
          "ldhName" : "NS99.DNS.NET.NZ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "202.46.190.131"
@@ -51,39 +37,19 @@
             "v6" : [
                "2001:dce:2000:2:0:0:0:131"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "ldhName" : "aq",
-   "handle" : "aq",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -94,11 +60,9 @@
          ]
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "aq-registrant",
          "vcardArray" : [
             "vcard",
@@ -133,14 +97,15 @@
                ]
             ]
          ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "handle" : "aq-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -191,12 +156,12 @@
                   "ianatech@internetnz.net.nz"
                ]
             ]
-         ]
+         ],
+         "handle" : "aq-technical",
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
          "handle" : "aq-administrative",
          "vcardArray" : [
             "vcard",
@@ -249,14 +214,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -268,5 +230,43 @@
          "href" : "https://about.rdap.org",
          "title" : "About RDAP"
       }
-   ]
+   ],
+   "events" : [
+      {
+         "eventDate" : "1992-02-26",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-02-16"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:27:55"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "aq"
 }

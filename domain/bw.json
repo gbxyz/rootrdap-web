@@ -1,72 +1,7 @@
 {
-   "ldhName" : "bw",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS1.NIC.NET.BW",
-         "ipAddresses" : {
-            "v4" : [
-               "168.167.98.226"
-            ],
-            "v6" : [
-               "2c0f:ff00:1:3:0:0:0:226"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2c0f:ff00:0:6:0:0:0:3",
-               "2c0f:ff00:0:6:0:0:0:5"
-            ],
-            "v4" : [
-               "168.167.168.37"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "MASTER.BTC.NET.BW"
-      },
-      {
-         "ldhName" : "NS-BW.AFRINIC.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:72"
-            ],
-            "v4" : [
-               "196.216.168.72"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "PCH.NIC.NET.BW",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6070:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.70"
-            ]
-         }
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1993-03-19"
-      },
-      {
-         "eventDate" : "2022-07-27",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
+   "handle" : "bw",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -76,10 +11,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.net.bw"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -88,14 +23,15 @@
          "title" : "Source"
       }
    ],
+   "ldhName" : "bw",
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -106,16 +42,8 @@
          "title" : "Comments"
       }
    ],
-   "handle" : "bw",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "handle" : "bw-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -127,10 +55,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Engineer - ccTLD"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Botswana Communications Regulatory Authority (BOCRA)"
+                  "BOCRA - Botswana Communications Regulatory Authority"
                ],
                [
                   "adr",
@@ -147,16 +81,40 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+2673685419"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+267 395 7976"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ramotsababa@bocra.org.bw"
                ]
             ]
+         ],
+         "handle" : "bw-administrative",
+         "roles" : [
+            "administrative"
          ]
       },
       {
-         "handle" : "bw-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "bw-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -219,10 +177,9 @@
       },
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "bw-administrative",
-         "objectClassName" : "entity",
+         "handle" : "bw-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -233,16 +190,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Engineer - ccTLD"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "BOCRA - Botswana Communications Regulatory Authority"
+                  "Botswana Communications Regulatory Authority (BOCRA)"
                ],
                [
                   "adr",
@@ -259,37 +210,18 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+2673685419"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+267 395 7976"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ramotsababa@bocra.org.bw"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/bw.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/bw.html"
       },
       {
          "rel" : "related",
@@ -298,9 +230,77 @@
       },
       {
          "rel" : "related",
-         "href" : "http://nic.net.bw",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "href" : "http://nic.net.bw"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1993-03-19"
+      },
+      {
+         "eventDate" : "2022-07-27",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:34",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS1.NIC.NET.BW",
+         "ipAddresses" : {
+            "v4" : [
+               "168.167.98.226"
+            ],
+            "v6" : [
+               "2c0f:ff00:1:3:0:0:0:226"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2c0f:ff00:0:6:0:0:0:3",
+               "2c0f:ff00:0:6:0:0:0:5"
+            ],
+            "v4" : [
+               "168.167.168.37"
+            ]
+         },
+         "ldhName" : "MASTER.BTC.NET.BW"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.72"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:72"
+            ]
+         },
+         "ldhName" : "NS-BW.AFRINIC.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "PCH.NIC.NET.BW",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6070:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.70"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ]
 }

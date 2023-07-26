@@ -1,9 +1,34 @@
 {
-   "ldhName" : "zuerich",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ZUERICH."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://nic.zuerich"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "zuerich",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.ZUERICH",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:13cc:0:0:0:1:107"
@@ -11,9 +36,12 @@
             "v4" : [
                "194.169.218.107"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.ZUERICH",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:107"
@@ -22,10 +50,10 @@
                "185.24.64.107"
             ]
          },
-         "ldhName" : "B.NIC.ZUERICH",
-         "objectClassName" : "nameserver"
+         "ldhName" : "B.NIC.ZUERICH"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.107"
@@ -34,12 +62,10 @@
                "2a04:2b00:13ee:0:0:0:0:107"
             ]
          },
-         "ldhName" : "C.NIC.ZUERICH",
-         "objectClassName" : "nameserver"
+         "ldhName" : "C.NIC.ZUERICH"
       },
       {
          "ldhName" : "D.NIC.ZUERICH",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:107"
@@ -47,54 +73,67 @@
             "v4" : [
                "212.18.249.107"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
+   "ldhName" : "zuerich",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/zuerich.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "https://nic.zuerich",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "52375",
+            "digest" : "e3ebd91bbf29be88d075c43ac313a9db174267e858061316ec4c942728a3829e"
+         },
+         {
+            "digest" : "69407fe45988e2c569855c70330a24520db734481082c668317e8bbb764551d3",
+            "keyTag" : "7399",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventDate" : "2014-12-18",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2022-11-14",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-14"
       },
       {
-         "eventDate" : "2023-07-26T12:04:27",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ZUERICH."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://nic.zuerich"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:33:02"
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "description" : [
@@ -105,34 +144,12 @@
          "title" : "Comments"
       }
    ],
-   "handle" : "zuerich",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "52375",
-            "algorithm" : "8",
-            "digest" : "e3ebd91bbf29be88d075c43ac313a9db174267e858061316ec4c942728a3829e"
-         },
-         {
-            "digestType" : "2",
-            "keyTag" : "7399",
-            "algorithm" : "8",
-            "digest" : "69407fe45988e2c569855c70330a24520db734481082c668317e8bbb764551d3"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "handle" : "zuerich-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -191,13 +208,11 @@
                   "registry@dotzuerich.ch"
                ]
             ]
-         ]
+         ],
+         "handle" : "zuerich-administrative"
       },
       {
-         "handle" : "zuerich-technical",
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -257,13 +272,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "zuerich-technical",
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "handle" : "zuerich-registrant",
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -297,26 +312,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "zuerich-registrant",
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/zuerich.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://nic.zuerich",
-         "title" : "URL for registration services"
-      }
-   ]
+   "port43" : "whois.iana.org"
 }

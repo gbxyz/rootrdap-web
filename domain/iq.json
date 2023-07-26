@@ -1,65 +1,13 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1997-05-09"
-      },
-      {
-         "eventDate" : "2023-06-22",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "iq",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "193.0.9.81"
-            ],
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:81"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "IQ.CCTLD.AUTHDNS.RIPE.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.117.57.100"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.CMC.IQ"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NSP-ANYCAST.CMC.IQ",
-         "ipAddresses" : {
-            "v4" : [
-               "194.117.58.42"
-            ],
-            "v6" : [
-               "2001:500:14:8001:ad:0:0:42"
-            ]
-         }
-      }
-   ],
-   "handle" : "iq",
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.CMC.IQ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -74,132 +22,72 @@
          ]
       }
    ],
+   "handle" : "iq",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:81"
+            ],
+            "v4" : [
+               "193.0.9.81"
+            ]
+         },
+         "ldhName" : "IQ.CCTLD.AUTHDNS.RIPE.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "194.117.57.100"
+            ]
+         },
+         "ldhName" : "NS1.CMC.IQ"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:8001:ad:0:0:42"
+            ],
+            "v4" : [
+               "194.117.58.42"
+            ]
+         },
+         "ldhName" : "NSP-ANYCAST.CMC.IQ",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "iq",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
    "entities" : [
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Communications and Media Commission (CMC)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Al-Masbah Hay Babel\nDist. 929 St. 32 House 18\nBaghdad\nIraq"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "iq-registrant"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Technical Role Account"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Communications and Media Commission (CMC)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Al-Masbah Hay Babel\nDist. 929 St. 32 House 18\nBaghdad\nIraq"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+964 7904318957"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+964 17195839"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "it.iq@cmc.iq"
-               ]
-            ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "iq-technical"
-      },
-      {
          "vcardArray" : [
             "vcard",
             [
@@ -259,33 +147,145 @@
                ]
             ]
          ],
+         "handle" : "iq-administrative"
+      },
+      {
          "objectClassName" : "entity",
-         "handle" : "iq-administrative",
          "roles" : [
-            "administrative"
+            "technical"
+         ],
+         "handle" : "iq-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Technical Role Account"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Communications and Media Commission (CMC)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Al-Masbah Hay Babel\nDist. 929 St. 32 House 18\nBaghdad\nIraq"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+964 7904318957"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+964 17195839"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "it.iq@cmc.iq"
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "iq-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Communications and Media Commission (CMC)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Al-Masbah Hay Babel\nDist. 929 St. 32 House 18\nBaghdad\nIraq"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/iq.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/iq.html"
       },
       {
-         "rel" : "related",
+         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://registrar.cmc.iq"
+         "href" : "https://registrar.cmc.iq",
+         "title" : "URL for registration services"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1997-05-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-22"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:27",
+         "eventAction" : "last update of RDAP database"
+      }
+   ]
 }

@@ -1,47 +1,59 @@
 {
-   "events" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "eventDate" : "2014-03-13",
-         "eventAction" : "registration"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.QUEBEC."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "eventDate" : "2022-01-07",
-         "eventAction" : "last changed"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.registre.quebec"
+         ]
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
+   "handle" : "quebec",
    "status" : [
       "active"
    ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
          }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ],
             "v4" : [
                "195.253.65.11"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.12"
@@ -50,42 +62,62 @@
                "2a01:5b0:5:0:0:0:0:c"
             ]
          },
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
-            ],
             "v6" : [
                "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
       }
    ],
    "ldhName" : "quebec",
-   "handle" : "quebec",
-   "remarks" : [
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "10",
+            "digestType" : "2",
+            "keyTag" : "46012",
+            "digest" : "5916001fff3dc261a7f1b5d81bdc63312697f8b672ae1c8ac7677f6e68977f48"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.QUEBEC."
-         ]
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/quebec.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "description" : [
-            "Registration information: http://www.registre.quebec"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "title" : "URL for registration services",
+         "href" : "http://www.registre.quebec",
+         "rel" : "related"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-03-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:28",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "notices" : [
@@ -106,52 +138,9 @@
          "title" : "Comments"
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "quebec-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "PointQuébec Inc"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "330-55, rue de Louvain Ouest\nMontréal QC H2N 1A4\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "quebec-administrative",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -211,9 +200,16 @@
                   "normand@registre.quebec"
                ]
             ]
+         ],
+         "handle" : "quebec-administrative",
+         "roles" : [
+            "administrative"
          ]
       },
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -273,44 +269,48 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "quebec-technical",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "46012",
-            "digestType" : "2",
-            "digest" : "5916001fff3dc261a7f1b5d81bdc63312697f8b672ae1c8ac7677f6e68977f48",
-            "algorithm" : "10"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/quebec.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.registre.quebec",
-         "title" : "URL for registration services",
-         "rel" : "related"
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "PointQuébec Inc"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "330-55, rue de Louvain Ouest\nMontréal QC H2N 1A4\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "quebec-registrant"
       }
    ]
 }

@@ -1,34 +1,17 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-04-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-10-27",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "gratis",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.GRATIS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.20.24"
-            ],
             "v6" : [
                "2a01:8840:16:0:0:0:0:24"
+            ],
+            "v4" : [
+               "65.22.20.24"
             ]
-         }
+         },
+         "ldhName" : "V0N0.NIC.GRATIS",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
@@ -43,19 +26,18 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.GRATIS",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.22.24"
-            ],
             "v6" : [
                "2a01:8840:18:0:0:0:0:24"
+            ],
+            "v4" : [
+               "65.22.22.24"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.GRATIS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N3.NIC.GRATIS",
          "ipAddresses" : {
             "v4" : [
@@ -64,42 +46,87 @@
             "v6" : [
                "2a01:8840:f4:0:0:0:0:24"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N0.NIC.GRATIS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:19:0:0:0:0:24"
-            ],
             "v4" : [
                "65.22.23.24"
+            ],
+            "v6" : [
+               "2a01:8840:19:0:0:0:0:24"
             ]
-         }
+         },
+         "ldhName" : "V2N0.NIC.GRATIS",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "V2N1.NIC.GRATIS",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:24"
-            ],
             "v4" : [
                "161.232.11.24"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:24"
             ]
          }
       }
    ],
-   "handle" : "gratis",
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "32626",
+            "digest" : "c0e0491f4fcebe153703e4abeb895cd8706902717053b2bc2dd1e421e5508bfb"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gratis.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-04-17"
+      },
+      {
+         "eventDate" : "2021-10-27",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:10",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -110,30 +137,12 @@
          ]
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GRATIS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "gratis-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -167,13 +176,75 @@
                ]
             ]
          ],
-         "handle" : "gratis-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "gratis-administrative",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldtech@donuts.email"
+               ]
+            ]
+         ],
+         "handle" : "gratis-technical",
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
             "administrative"
          ],
@@ -236,105 +307,34 @@
                ]
             ]
          ],
+         "handle" : "gratis-administrative",
          "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "gratis",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GRATIS."
+         ]
       },
       {
-         "handle" : "gratis-technical",
-         "roles" : [
-            "technical"
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
          ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldtech@donuts.email"
-               ]
-            ]
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "32626",
-            "digestType" : "2",
-            "digest" : "c0e0491f4fcebe153703e4abeb895cd8706902717053b2bc2dd1e421e5508bfb",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gratis.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ]
+   "handle" : "gratis"
 }

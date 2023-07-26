@@ -1,12 +1,24 @@
 {
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "homes-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -65,9 +77,58 @@
                   "tld.ops@centralnic.com"
                ]
             ]
+         ],
+         "handle" : "homes-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "homes-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "XYZ.COM LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ]
       },
       {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "homes-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -119,122 +180,76 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "homes-administrative"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "XYZ.COM LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "homes-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "44875",
-            "digestType" : "2",
-            "digest" : "de0934d0c6c5221ba3533739b3147e327a87f8e97db379136a9343aa9d330079",
-            "algorithm" : "8"
-         },
-         {
-            "digest" : "d9f3c8d72738eba7ed5002404c5e2748e1aa47c83e36d33d2d4eb72360e49d80",
-            "algorithm" : "8",
-            "keyTag" : "33262",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/homes.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/homes.html"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "https://nic.homes/",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "href" : "https://nic.homes/"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "44875",
+            "digest" : "de0934d0c6c5221ba3533739b3147e327a87f8e97db379136a9343aa9d330079"
+         },
+         {
+            "keyTag" : "33262",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "d9f3c8d72738eba7ed5002404c5e2748e1aa47c83e36d33d2d4eb72360e49d80"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventDate" : "2014-05-01",
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-16"
+         "eventDate" : "2022-08-16",
+         "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:18",
+         "eventAction" : "last update of RDAP database"
       }
    ],
+   "ldhName" : "homes",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.HOMES",
          "ipAddresses" : {
-            "v4" : [
-               "194.169.218.132"
-            ],
             "v6" : [
                "2001:67c:13cc:0:0:0:1:132"
+            ],
+            "v4" : [
+               "194.169.218.132"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.HOMES",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.HOMES",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:132"
@@ -242,11 +257,11 @@
             "v4" : [
                "185.24.64.132"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.HOMES"
+         }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.HOMES",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.132"
@@ -254,12 +269,9 @@
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:132"
             ]
-         },
-         "ldhName" : "C.NIC.HOMES",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "ldhName" : "D.NIC.HOMES",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -268,29 +280,14 @@
             "v4" : [
                "212.18.249.132"
             ]
-         }
+         },
+         "ldhName" : "D.NIC.HOMES"
       }
    ],
-   "ldhName" : "homes",
+   "status" : [
+      "active"
+   ],
    "handle" : "homes",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -299,16 +296,19 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: https://nic.homes/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

@@ -1,59 +1,6 @@
 {
-   "ldhName" : "hamburg",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.25.21"
-            ],
-            "v6" : [
-               "2001:678:20:0:0:0:0:21"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.DNS.NIC.HAMBURG"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "M.DNS.NIC.HAMBURG",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:10e0:0:0:0:0:10"
-            ],
-            "v4" : [
-               "194.0.26.10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "N.DNS.NIC.HAMBURG",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.24.10"
-            ],
-            "v6" : [
-               "2001:678:24:0:0:0:0:10"
-            ]
-         }
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-05-22"
-      },
-      {
-         "eventDate" : "2022-05-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -63,10 +10,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.hamburg"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -75,51 +22,54 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
+   "handle" : "hamburg",
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.DNS.NIC.HAMBURG",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.21"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:21"
+            ]
+         }
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "objectClassName" : "nameserver",
+         "ldhName" : "M.DNS.NIC.HAMBURG",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.26.10"
+            ],
+            "v6" : [
+               "2001:67c:10e0:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "N.DNS.NIC.HAMBURG",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:24:0:0:0:0:10"
+            ],
+            "v4" : [
+               "194.0.24.10"
+            ]
+         }
       }
    ],
-   "handle" : "hamburg",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "8bdc8642f1c0275904aea61c126d9d5a5db25881a564348af218eb4165bef7c5",
-            "algorithm" : "8",
-            "keyTag" : "12136",
-            "digestType" : "2"
-         },
-         {
-            "digestType" : "2",
-            "keyTag" : "39857",
-            "algorithm" : "8",
-            "digest" : "acadfbad24320a82cfad9dc5de24b5ef710fc0a9503f102596019b85ed1c74fa"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
+   "ldhName" : "hamburg",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "hamburg-technical",
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -179,9 +129,57 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "hamburg-technical",
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "hamburg-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Hamburg Top-Level-Domain GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Neuer Wall 10\nHamburg 20354\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "hamburg-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -232,66 +230,68 @@
                   "registry@nic.hamburg"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "hamburg-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "hamburg-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Hamburg Top-Level-Domain GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Neuer Wall 10\nHamburg 20354\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-05-22",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-05-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:14"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "8bdc8642f1c0275904aea61c126d9d5a5db25881a564348af218eb4165bef7c5",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "12136"
+         },
+         {
+            "digest" : "acadfbad24320a82cfad9dc5de24b5ef710fc0a9503f102596019b85ed1c74fa",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "39857"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/hamburg.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/hamburg.html",
          "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
          "href" : "http://www.nic.hamburg",

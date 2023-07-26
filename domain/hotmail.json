@@ -1,65 +1,27 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "12876",
-            "digestType" : "2",
-            "digest" : "5d35f9e8561ce9835fbdbcd44fd9f80c93d5412827694bd7b17bc1477a8e70ab",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "ldhName" : "hotmail",
+   "notices" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "hotmail-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Microsoft Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "One Microsoft Way\nRedmond WA 98052\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "handle" : "hotmail-administrative",
-         "roles" : [
-            "administrative"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
+         "title" : "Comments"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "entities" : [
+      {
+         "handle" : "hotmail-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -68,12 +30,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Program Manager"
                ],
                [
                   "org",
@@ -96,33 +52,15 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "425-706-3546"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "425-457-2511"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tlddom@microsoft.com"
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -182,18 +120,84 @@
                ]
             ]
          ],
+         "handle" : "hotmail-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "hotmail-technical"
+         "objectClassName" : "entity"
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Program Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Microsoft Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "One Microsoft Way\nRedmond WA 98052\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "425-706-3546"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "425-457-2511"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tlddom@microsoft.com"
+               ]
+            ]
+         ],
+         "handle" : "hotmail-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
    "links" : [
       {
-         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/hotmail.html"
+         "href" : "https://www.iana.org/domains/root/db/hotmail.html",
+         "rel" : "related"
       },
       {
          "title" : "About RDAP",
@@ -206,22 +210,49 @@
          "title" : "URL for registration services"
       }
    ],
-   "ldhName" : "hotmail",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "12876",
+            "digest" : "5d35f9e8561ce9835fbdbcd44fd9f80c93d5412827694bd7b17bc1477a8e70ab"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2015-04-30",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:20",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
             "v6" : [
                "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "AC1.NSTLD.COM"
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -230,21 +261,23 @@
             "v6" : [
                "2001:500:121:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC2.NSTLD.COM"
       },
       {
          "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:123:0:0:0:0:30"
@@ -253,64 +286,31 @@
                "192.42.176.30"
             ]
          },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
+         "ldhName" : "AC4.NSTLD.COM"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-04-30",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "handle" : "hotmail",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.microsoft.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
-   ],
-   "handle" : "hotmail"
+   ]
 }

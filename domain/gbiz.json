@@ -1,70 +1,5 @@
 {
    "ldhName" : "gbiz",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.32.105"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.34.105"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.36.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.38.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.60.105"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
          "eventDate" : "2014-08-23",
@@ -75,70 +10,40 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:29:57",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "gbiz",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "ceddb0629de967eeceae6b9831ddcb0fd30ed800e46d6a69bf15759c2a239d90",
-            "algorithm" : "8",
             "keyTag" : "17434",
-            "digestType" : "2"
+            "digestType" : "2",
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/gbiz.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://www.registry.google",
+         "title" : "URL for registration services"
+      }
+   ],
    "entities" : [
       {
-         "handle" : "gbiz-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -198,14 +103,15 @@
                   "iana-contact@google.com"
                ]
             ]
+         ],
+         "handle" : "gbiz-administrative",
+         "roles" : [
+            "administrative"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "gbiz-technical",
          "objectClassName" : "entity",
+         "handle" : "gbiz-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -264,9 +170,16 @@
                   "crr-tech@google.com"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -300,29 +213,116 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "gbiz-registrant"
       }
    ],
-   "links" : [
+   "port43" : "whois.iana.org",
+   "notices" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/gbiz.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.registry.google",
-         "title" : "URL for registration services"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
-   "objectClassName" : "domain"
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.36.105"
+            ]
+         },
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.38.105"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.60.105"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "gbiz",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ]
 }

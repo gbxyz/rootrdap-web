@@ -1,24 +1,7 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2015-11-25",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-02-28",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "tci",
    "nameservers" : [
       {
+         "ldhName" : "A.NS.NIC.TCI",
          "ipAddresses" : {
             "v6" : [
                "2620:171:a01:ad:0:0:0:8"
@@ -27,86 +10,52 @@
                "72.0.49.8"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NS.NIC.TCI"
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "B.NS.NIC.TCI",
          "ipAddresses" : {
-            "v4" : [
-               "72.42.113.8"
-            ],
             "v6" : [
                "2620:171:d01:dc:0:0:0:8"
+            ],
+            "v4" : [
+               "72.42.113.8"
             ]
          }
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "185.38.108.108"
-            ],
             "v6" : [
                "2a00:fea0:dead:0:0:0:0:beef"
+            ],
+            "v4" : [
+               "185.38.108.108"
             ]
          },
          "ldhName" : "NS1.ANYCASTDNS.CZ",
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.ANYCASTDNS.CZ",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "185.28.194.194"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.ANYCASTDNS.CZ"
+         }
       }
    ],
-   "handle" : "tci",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TCI."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.tci"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "tci-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -115,12 +64,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "CEO"
                ],
                [
                   "org",
@@ -143,39 +86,17 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+90 530 460 52 31"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+90 212 603 62 04"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-admin@agitsys.com"
                ]
             ]
          ],
-         "handle" : "tci-administrative",
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "tci-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -235,9 +156,12 @@
                ]
             ]
          ],
+         "handle" : "tci-technical",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "tci-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -246,6 +170,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "CEO"
                ],
                [
                   "org",
@@ -268,47 +198,117 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+90 530 460 52 31"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+90 212 603 62 04"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-admin@agitsys.com"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "tci-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "12317",
-            "digestType" : "2",
-            "digest" : "1d37f5016c69d56f3a3732434a0471fff1fffd580e4a7ce26816bc525095de83",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-25"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-02-28"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:00"
+      }
    ],
    "links" : [
       {
-         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tci.html"
+         "href" : "https://www.iana.org/domains/root/db/tci.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://nic.tci",
          "title" : "URL for registration services",
-         "rel" : "related"
+         "href" : "http://nic.tci"
       }
    ],
-   "objectClassName" : "domain"
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "12317",
+            "digest" : "1d37f5016c69d56f3a3732434a0471fff1fffd580e4a7ce26816bc525095de83"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "ldhName" : "tci",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TCI."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.tci"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "tci"
 }

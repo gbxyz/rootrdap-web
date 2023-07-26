@@ -1,138 +1,53 @@
 {
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
-         "eventDate" : "2015-12-10",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-11-03"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:29:02",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "contact",
-   "nameservers" : [
+   "links" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:34"
-            ],
-            "v4" : [
-               "65.22.24.34"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.CONTACT"
+         "href" : "https://www.iana.org/domains/root/db/contact.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.CONTACT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:34"
-            ],
-            "v4" : [
-               "65.22.25.34"
-            ]
-         }
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:34"
-            ],
-            "v4" : [
-               "65.22.26.34"
-            ]
-         },
-         "ldhName" : "V0N2.NIC.CONTACT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:34"
-            ],
-            "v4" : [
-               "161.232.12.34"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.CONTACT"
-      },
-      {
-         "ldhName" : "V2N0.NIC.CONTACT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:34"
-            ],
-            "v4" : [
-               "65.22.27.34"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.CONTACT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:34"
-            ],
-            "v4" : [
-               "161.232.13.34"
-            ]
-         }
+         "rel" : "related",
+         "href" : "http://www.topspectrum.com/",
+         "title" : "URL for registration services"
       }
    ],
-   "handle" : "contact",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CONTACT."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.topspectrum.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "222b955db8b21ee60995cca8de45627d6e0156627453fec444ef6c57339e8375",
+            "keyTag" : "53062",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "contact-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -191,19 +106,13 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "contact-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "contact-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -262,13 +171,10 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "handle" : "contact-technical"
       },
       {
-         "handle" : "contact-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -302,39 +208,133 @@
                   ]
                ]
             ]
+         ],
+         "handle" : "contact-registrant",
+         "roles" : [
+            "registrant"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "ldhName" : "contact",
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.CONTACT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.24.34"
+            ],
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:34"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.CONTACT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.25.34"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:34"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V0N2.NIC.CONTACT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.26.34"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:34"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N3.NIC.CONTACT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:34"
+            ],
+            "v4" : [
+               "161.232.12.34"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N0.NIC.CONTACT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:34"
+            ],
+            "v4" : [
+               "65.22.27.34"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.13.34"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:34"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.CONTACT",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "contact",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CONTACT."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.topspectrum.com/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "53062",
-            "digestType" : "2",
-            "digest" : "222b955db8b21ee60995cca8de45627d6e0156627453fec444ef6c57339e8375",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/contact.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.topspectrum.com/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

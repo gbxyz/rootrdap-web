@@ -1,16 +1,17 @@
 {
+   "handle" : "energy",
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.ENERGY."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -19,99 +20,8 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "energy",
-   "ldhName" : "energy",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:45"
-            ],
-            "v4" : [
-               "65.22.24.45"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.ENERGY",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.ENERGY",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:45"
-            ],
-            "v4" : [
-               "65.22.25.45"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:45"
-            ],
-            "v4" : [
-               "65.22.26.45"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.ENERGY"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.ENERGY",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.12.45"
-            ],
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:45"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.27.45"
-            ],
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:45"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.ENERGY"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.13.45"
-            ],
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:45"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.ENERGY"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "events" : [
       {
@@ -119,16 +29,13 @@
          "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-03"
+         "eventDate" : "2021-11-03",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:29:30",
          "eventAction" : "last update of RDAP database"
       }
-   ],
-   "status" : [
-      "active"
    ],
    "links" : [
       {
@@ -137,9 +44,9 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
          "title" : "URL for registration services",
@@ -147,27 +54,25 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "26965",
-            "digestType" : "2",
             "digest" : "59f95fa7794aa6a855adf22154cee74e7ae44fb25142dbf999174b599df16771",
-            "algorithm" : "8"
+            "keyTag" : "26965",
+            "algorithm" : "8",
+            "digestType" : "2"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "energy-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
+         "handle" : "energy-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -226,10 +131,10 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "handle" : "energy-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -289,14 +194,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "energy-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "energy-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -330,11 +235,106 @@
                ]
             ]
          ],
-         "handle" : "energy-registrant",
          "roles" : [
             "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "energy",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.ENERGY",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:45"
+            ],
+            "v4" : [
+               "65.22.24.45"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:45"
+            ],
+            "v4" : [
+               "65.22.25.45"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.ENERGY",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:45"
+            ],
+            "v4" : [
+               "65.22.26.45"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.ENERGY"
+      },
+      {
+         "ldhName" : "V0N3.NIC.ENERGY",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:45"
+            ],
+            "v4" : [
+               "161.232.12.45"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:45"
+            ],
+            "v4" : [
+               "65.22.27.45"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.ENERGY"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.ENERGY",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:45"
+            ],
+            "v4" : [
+               "161.232.13.45"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ]
 }

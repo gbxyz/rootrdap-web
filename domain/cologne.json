@@ -1,8 +1,10 @@
 {
-   "ldhName" : "cologne",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "DNS.RYCE-RSP.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -11,7 +13,8 @@
             "v4" : [
                "194.0.11.114"
             ]
-         }
+         },
+         "ldhName" : "DNS.RYCE-RSP.COM"
       },
       {
          "ipAddresses" : {
@@ -22,11 +25,10 @@
                "157.90.205.138"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.BUSINESS"
+         "ldhName" : "NS1.DNS.BUSINESS",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS1.RYCE-RSP.COM",
          "ipAddresses" : {
             "v6" : [
@@ -35,46 +37,11 @@
             "v4" : [
                "193.56.204.153"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-13"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-03-11"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.nic.koeln"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "ldhName" : "cologne",
    "notices" : [
       {
          "title" : "About This Service",
@@ -85,36 +52,62 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
-   "handle" : "cologne",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "26533",
-            "digestType" : "2",
-            "digest" : "b3a50f0fe5e706e83b98eafe1ae7ac0dbb95219c8c6eafb94ce1de36b2a7f51f",
-            "algorithm" : "10"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "cologne-technical",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "dotKoeln GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "cologne-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "cologne-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -176,7 +169,9 @@
          ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -237,62 +232,29 @@
             ]
          ],
          "handle" : "cologne-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "dotKoeln GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Schoenbrunner Strasse 231\nVienna 1120\nAustria"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cologne-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "b3a50f0fe5e706e83b98eafe1ae7ac0dbb95219c8c6eafb94ce1de36b2a7f51f",
+            "keyTag" : "26533",
+            "algorithm" : "10",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cologne.html"
+         "href" : "https://www.iana.org/domains/root/db/cologne.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
@@ -300,5 +262,43 @@
          "href" : "https://www.nic.koeln",
          "rel" : "related"
       }
-   ]
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-13"
+      },
+      {
+         "eventDate" : "2021-03-11",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:58"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.RYCE-RSP.COM."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://www.nic.koeln"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "cologne"
 }

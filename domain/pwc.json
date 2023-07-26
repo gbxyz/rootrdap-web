@@ -1,7 +1,8 @@
 {
-   "ldhName" : "pwc",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "A0.NIC.PWC",
          "ipAddresses" : {
             "v4" : [
                "65.22.80.9"
@@ -10,10 +11,11 @@
                "2a01:8840:4e:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.PWC"
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.PWC",
          "ipAddresses" : {
             "v4" : [
                "65.22.83.9"
@@ -21,13 +23,11 @@
             "v6" : [
                "2a01:8840:51:0:0:0:0:9"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.PWC"
+         }
       },
       {
-         "ldhName" : "B0.NIC.PWC",
          "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.PWC",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:4f:0:0:0:0:9"
@@ -38,8 +38,6 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.PWC",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:50:0:0:0:0:9"
@@ -47,25 +45,13 @@
             "v4" : [
                "65.22.82.9"
             ]
-         }
+         },
+         "ldhName" : "C0.NIC.PWC",
+         "objectClassName" : "nameserver"
       }
    ],
    "status" : [
       "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-15"
-      },
-      {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
    ],
    "notices" : [
       {
@@ -77,118 +63,17 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://pwc.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
          ]
       }
    ],
-   "handle" : "pwc",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "53a702c1bc2e7246d8027839bc8c43ecb48a28139d2ecbc0350e4c6ca3bc623a",
-            "algorithm" : "8",
-            "keyTag" : "50191",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Senior Director, DNS Infrastructure Group"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Afilias"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215.706.5700"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 215.706.5701"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-tech-poc@afilias.info"
-               ]
-            ]
-         ],
          "objectClassName" : "entity",
-         "handle" : "pwc-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
          "vcardArray" : [
             "vcard",
             [
@@ -248,18 +133,82 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "pwc-administrative",
          "roles" : [
             "administrative"
          ]
       },
       {
-         "handle" : "pwc-registrant",
+         "handle" : "pwc-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Senior Director, DNS Infrastructure Group"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Afilias"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "300 Welsh Road\nBuilding 3, Suite 105\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215.706.5700"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 215.706.5701"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-tech-poc@afilias.info"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
             "registrant"
          ],
-         "objectClassName" : "entity",
+         "handle" : "pwc-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -292,10 +241,22 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "53a702c1bc2e7246d8027839bc8c43ecb48a28139d2ecbc0350e4c6ca3bc623a",
+            "keyTag" : "50191",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -312,5 +273,44 @@
          "title" : "URL for registration services",
          "rel" : "related"
       }
-   ]
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:27"
+      }
+   ],
+   "ldhName" : "pwc",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://pwc.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "pwc"
 }

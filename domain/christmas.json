@@ -1,49 +1,81 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "b14c7aa2999b35f27382961870cb8e480a1f5f0b",
-            "algorithm" : "5",
-            "keyTag" : "51184",
-            "digestType" : "1"
-         },
-         {
-            "digest" : "b359c6393c81c5c19e651290ce278f6d9e6b73b625e2809ea4fa7cee67df4a3e",
-            "algorithm" : "5",
-            "keyTag" : "2827",
-            "digestType" : "2"
-         },
-         {
-            "digest" : "45a7ab7ffc9aed55e130deebc6a12a007052c326",
-            "algorithm" : "5",
-            "keyTag" : "2827",
-            "digestType" : "1"
-         },
-         {
-            "digest" : "1a80057885de5c3e07689cd77e954733a4b21658c65bee06f69b8f8e5f47170d",
-            "algorithm" : "5",
-            "keyTag" : "51184",
-            "digestType" : "2"
-         },
-         {
-            "keyTag" : "23941",
-            "digestType" : "2",
-            "digest" : "31b3839a387cf1c59f5a9fd953e54c7d5852606c0b20e86281148b6d4aaac042",
-            "algorithm" : "5"
-         },
-         {
-            "digestType" : "1",
-            "keyTag" : "23941",
-            "algorithm" : "5",
-            "digest" : "bc0c1ccffabd83a031323c84e60b6b755356a8be"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "entities" : [
+      {
+         "objectClassName" : "entity",
+         "handle" : "christmas-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "General Counsel"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "XYZ.COM LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 702 763 2191"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "hello@xyz.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ]
+      },
       {
          "objectClassName" : "entity",
          "vcardArray" : [
@@ -105,71 +137,17 @@
                ]
             ]
          ],
+         "handle" : "christmas-technical",
          "roles" : [
             "technical"
-         ],
-         "handle" : "christmas-technical"
-      },
-      {
-         "handle" : "christmas-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "General Counsel"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "XYZ.COM LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2121 E Tropicana Ave, Suite 2\nLas Vegas NV 89119\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 702 763 2191"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "hello@xyz.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "christmas-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -202,10 +180,6 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "christmas-registrant",
-         "roles" : [
-            "registrant"
          ]
       }
    ],
@@ -218,19 +192,75 @@
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "https://nic.christmas",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "5",
+            "digestType" : "1",
+            "keyTag" : "51184",
+            "digest" : "b14c7aa2999b35f27382961870cb8e480a1f5f0b"
+         },
+         {
+            "digest" : "b359c6393c81c5c19e651290ce278f6d9e6b73b625e2809ea4fa7cee67df4a3e",
+            "keyTag" : "2827",
+            "algorithm" : "5",
+            "digestType" : "2"
+         },
+         {
+            "digest" : "45a7ab7ffc9aed55e130deebc6a12a007052c326",
+            "digestType" : "1",
+            "algorithm" : "5",
+            "keyTag" : "2827"
+         },
+         {
+            "digest" : "1a80057885de5c3e07689cd77e954733a4b21658c65bee06f69b8f8e5f47170d",
+            "keyTag" : "51184",
+            "algorithm" : "5",
+            "digestType" : "2"
+         },
+         {
+            "digest" : "31b3839a387cf1c59f5a9fd953e54c7d5852606c0b20e86281148b6d4aaac042",
+            "keyTag" : "23941",
+            "algorithm" : "5",
+            "digestType" : "2"
+         },
+         {
+            "digestType" : "1",
+            "algorithm" : "5",
+            "keyTag" : "23941",
+            "digest" : "bc0c1ccffabd83a031323c84e60b6b755356a8be"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-13"
+      },
+      {
+         "eventDate" : "2022-08-16",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:50"
+      }
+   ],
    "ldhName" : "christmas",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "A.NIC.CHRISTMAS",
          "ipAddresses" : {
             "v4" : [
                "194.169.218.153"
@@ -239,10 +269,10 @@
                "2001:67c:13cc:0:0:0:1:153"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.CHRISTMAS"
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:153"
@@ -251,51 +281,37 @@
                "185.24.64.153"
             ]
          },
-         "ldhName" : "B.NIC.CHRISTMAS",
-         "objectClassName" : "nameserver"
+         "ldhName" : "B.NIC.CHRISTMAS"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:153"
-            ],
             "v4" : [
                "212.18.248.153"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:153"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.CHRISTMAS"
+         "ldhName" : "C.NIC.CHRISTMAS",
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "D.NIC.CHRISTMAS",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:153"
-            ],
             "v4" : [
                "212.18.249.153"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:153"
             ]
          },
-         "ldhName" : "D.NIC.CHRISTMAS",
          "objectClassName" : "nameserver"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-02-13",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-08-16",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
       }
    ],
    "status" : [
       "active"
    ],
+   "handle" : "christmas",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -310,29 +326,13 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ],
-         "title" : "Comments"
+         "title" : "Source"
       }
    ],
-   "handle" : "christmas"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

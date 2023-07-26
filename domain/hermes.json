@@ -1,71 +1,7 @@
 {
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.HERMES",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.232.25"
-            ],
-            "v6" : [
-               "2a01:8840:e2:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "ldhName" : "A2.NIC.HERMES",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.235.25"
-            ],
-            "v6" : [
-               "2a01:8840:e5:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:e3:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.233.25"
-            ]
-         },
-         "ldhName" : "B0.NIC.HERMES",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.234.25"
-            ],
-            "v6" : [
-               "2a01:8840:e4:0:0:0:0:25"
-            ]
-         },
-         "ldhName" : "C0.NIC.HERMES",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "hermes",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-10-30"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-12-08"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
+   "handle" : "hermes",
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -75,10 +11,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://hermes.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -87,82 +23,52 @@
          ]
       }
    ],
-   "notices" : [
+   "ldhName" : "hermes",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "2014-10-30",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2020-12-08"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:16",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "handle" : "hermes",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/hermes.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://hermes.com",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "keyTag" : "17194",
+            "digestType" : "2",
             "algorithm" : "8",
             "digest" : "f38ae5e161d402739020cc92a88dfa905a59972426ef42044c37ea6240bb9614"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "handle" : "hermes-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Hermes International"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "24, rue du Faubourg Saint-Honore\nParis 75008\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "handle" : "hermes-technical",
          "roles" : [
             "technical"
          ],
@@ -225,14 +131,50 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "hermes-technical"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "hermes-administrative",
          "objectClassName" : "entity",
+         "handle" : "hermes-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Hermes International"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "24, rue du Faubourg Saint-Honore\nParis 75008\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "handle" : "hermes-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -291,25 +233,83 @@
                   "dns@hermes.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "links" : [
+   "notices" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/hermes.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:e2:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.232.25"
+            ]
+         },
+         "ldhName" : "A0.NIC.HERMES"
       },
       {
-         "href" : "http://hermes.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "ldhName" : "A2.NIC.HERMES",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:e5:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.235.25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.HERMES",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.233.25"
+            ],
+            "v6" : [
+               "2a01:8840:e3:0:0:0:0:25"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.HERMES",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.234.25"
+            ],
+            "v6" : [
+               "2a01:8840:e4:0:0:0:0:25"
+            ]
+         }
       }
    ],
    "objectClassName" : "domain"

@@ -1,38 +1,85 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/skype.html"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         },
+         "ldhName" : "A.NIC.SKYPE",
+         "objectClassName" : "nameserver"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.SKYPE",
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "href" : "http://www.skype.com",
-         "title" : "URL for registration services"
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.SKYPE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:97"
+            ],
+            "v4" : [
+               "156.154.144.151"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.SKYPE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:97"
+            ],
+            "v4" : [
+               "156.154.145.151"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.SKYPE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.SKYPE",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:97"
+            ],
+            "v4" : [
+               "156.154.159.151"
+            ]
+         }
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "fd50adcd586d68b58ad4081bfa7566e3e438f0cbe991ceed726ad4485b62d97b",
-            "digestType" : "2",
-            "keyTag" : "4519"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ],
    "entities" : [
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -92,17 +139,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "skype-administrative",
          "roles" : [
             "administrative"
-         ],
-         "handle" : "skype-administrative"
+         ]
       },
       {
-         "handle" : "skype-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -162,10 +204,14 @@
                ]
             ]
          ],
+         "handle" : "skype-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "skype-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -202,30 +248,10 @@
          "roles" : [
             "registrant"
          ],
-         "handle" : "skype-registrant"
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.skype.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -244,97 +270,71 @@
          ]
       }
    ],
-   "handle" : "skype",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.SKYPE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.SKYPE",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.SKYPE",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.SKYPE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.151"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:97"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.151"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:97"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.SKYPE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.SKYPE",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:97"
-            ],
-            "v4" : [
-               "156.154.159.151"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "skype",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-19"
+         "eventDate" : "2015-03-19",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:31:49",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "fd50adcd586d68b58ad4081bfa7566e3e438f0cbe991ceed726ad4485b62d97b",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "4519"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/skype.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.skype.com",
+         "rel" : "related"
+      }
+   ],
+   "ldhName" : "skype",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.skype.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "skype"
 }

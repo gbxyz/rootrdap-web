@@ -1,65 +1,102 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "8955e563809e8dfe8f6b18fb0b23ad043dc6957e2aac1a5f2c8b4ca3244270eb",
-            "digestType" : "2",
-            "keyTag" : "6875"
-         }
-      ]
-   },
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BROTHER."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.brother.com/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "entities" : [
+   "handle" : "brother",
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Brother Industries, Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "15-1 Naeshiro-cho, Mizuho-ku\nNagoya Aichi 467-8561\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.192.4"
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "brother-registrant"
+         }
       },
       {
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "entities" : [
+      {
          "handle" : "brother-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -118,13 +155,13 @@
                   "registry@brightsconsulting.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "brother-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -184,131 +221,94 @@
                ]
             ]
          ],
+         "handle" : "brother-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "brother-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Brother Industries, Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "15-1 Naeshiro-cho, Mizuho-ku\nNagoya Aichi 467-8561\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
    "links" : [
       {
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/brother.html",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/brother.html"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.brother.com/",
-         "rel" : "related"
+         "href" : "http://www.brother.com/"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "brother",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "8955e563809e8dfe8f6b18fb0b23ad043dc6957e2aac1a5f2c8b4ca3244270eb",
+            "keyTag" : "6875",
+            "digestType" : "2",
+            "algorithm" : "8"
          }
-      },
-      {
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         },
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      }
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
-         "eventDate" : "2015-04-09",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-09"
       },
       {
          "eventDate" : "2023-06-20",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:29"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BROTHER."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.brother.com/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "brother"
+   "ldhName" : "brother"
 }

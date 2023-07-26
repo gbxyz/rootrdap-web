@@ -1,5 +1,5 @@
 {
-   "ldhName" : "xn--fiq228c5hs",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
@@ -26,99 +26,52 @@
          }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.TELEINFO.CN",
          "ipAddresses" : {
             "v4" : [
                "103.61.62.1"
             ],
             "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.TELEINFO.CN"
+         }
       },
       {
-         "ldhName" : "NS4.TELEINFOO.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "103.61.63.1"
             ]
-         }
+         },
+         "ldhName" : "NS4.TELEINFOO.COM",
+         "objectClassName" : "nameserver"
       }
    ],
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-19"
-      },
-      {
-         "eventDate" : "2022-09-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:04:06",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.TELEINFO.CN."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://internetregistry.info/"
          ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
-   "handle" : "xn--fiq228c5hs",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "27565",
-            "digestType" : "2",
-            "digest" : "646412b3004632fd45544ebec09e1a2f27e3dda2489814a170dfb2052ba1787c",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -129,10 +82,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Arto Isokoski"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "TLD REGISTRY LIMITED"
+                  "TLD Registry Ltd."
                ],
                [
                   "adr",
@@ -149,17 +108,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+358 44 7301 607"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+358 20 155 8869"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "arto.isokoski@internetregistry.info"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "xn--fiq228c5hs-registrant"
+         "handle" : "xn--fiq228c5hs-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -219,16 +194,13 @@
                ]
             ]
          ],
+         "handle" : "xn--fiq228c5hs-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "xn--fiq228c5hs-technical"
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "xn--fiq228c5hs-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -240,16 +212,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Arto Isokoski"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "TLD Registry Ltd."
+                  "TLD REGISTRY LIMITED"
                ],
                [
                   "adr",
@@ -266,31 +232,27 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+358 44 7301 607"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+358 20 155 8869"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "arto.isokoski@internetregistry.info"
                ]
             ]
+         ],
+         "handle" : "xn--fiq228c5hs-registrant",
+         "roles" : [
+            "registrant"
          ]
       }
    ],
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "27565",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "646412b3004632fd45544ebec09e1a2f27e3dda2489814a170dfb2052ba1787c"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/xn--fiq228c5hs.html",
@@ -308,5 +270,43 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventDate" : "2013-12-19",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-09-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:32:36",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "xn--fiq228c5hs",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.TELEINFO.CN."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://internetregistry.info/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "xn--fiq228c5hs"
 }

@@ -1,16 +1,44 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.EUS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.domeinuak.eus"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "eus",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.64.12"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST10.IRONDNS.NET"
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -25,6 +53,7 @@
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.65.12"
@@ -33,58 +62,62 @@
                "2a01:5b0:5:0:0:0:0:c"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST24.IRONDNS.NET"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
-            ],
             "v6" : [
                "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET"
       }
    ],
    "ldhName" : "eus",
-   "events" : [
+   "links" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-03-06"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/eus.html"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-01-07"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://www.domeinuak.eus",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "04415714a6df5f737093919d47fda7fe0745d4a0ae9dfd4e8652d51d49bac4db",
+            "keyTag" : "37627",
+            "algorithm" : "10",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2014-03-06",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-01-07",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.EUS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.domeinuak.eus"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T12:29:34"
       }
    ],
    "notices" : [
@@ -105,27 +138,114 @@
          "title" : "Comments"
       }
    ],
-   "handle" : "eus",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "37627",
-            "digestType" : "2",
-            "digest" : "04415714a6df5f737093919d47fda7fe0745d4a0ae9dfd4e8652d51d49bac4db",
-            "algorithm" : "10"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "roles" : [
-            "administrative"
+         "objectClassName" : "entity",
+         "handle" : "eus-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD TechAdmin"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CORE Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 223 125 610"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 223 125 612"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dnsmaster@corenic.org"
+               ]
+            ]
          ],
-         "handle" : "eus-administrative",
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Puntueus Fundazioa"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Arriola 2, Donostia\nGizpuzkoa 20018\nSpain"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "eus-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -185,132 +305,12 @@
                ]
             ]
          ],
+         "handle" : "eus-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "eus-technical",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD TechAdmin"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CORE Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 223 125 610"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 223 125 612"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dnsmaster@corenic.org"
-               ]
-            ]
-         ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "eus-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Puntueus Fundazioa"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Arriola 2, Donostia\nGizpuzkoa 20018\nSpain"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/eus.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.domeinuak.eus"
-      }
-   ],
-   "objectClassName" : "domain"
+   "port43" : "whois.iana.org"
 }

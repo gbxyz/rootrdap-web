@@ -1,5 +1,72 @@
 {
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.SCHOLARSHIPS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:8a:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.140.17"
+            ]
+         }
+      },
+      {
+         "ldhName" : "A2.NIC.SCHOLARSHIPS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.143.17"
+            ],
+            "v6" : [
+               "2a01:8840:8d:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B0.NIC.SCHOLARSHIPS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.141.17"
+            ],
+            "v6" : [
+               "2a01:8840:8b:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C0.NIC.SCHOLARSHIPS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.142.17"
+            ],
+            "v6" : [
+               "2a01:8840:8c:0:0:0:0:17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
    "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-07-10",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:41",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -7,25 +74,22 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
-         "rel" : "related",
          "href" : "http://www.scholarships.com",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "rel" : "related"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digestType" : "2",
             "keyTag" : "57649",
             "algorithm" : "8",
+            "digestType" : "2",
             "digest" : "24261732a51a4d33adc9a823ee1e38139bcabbda2f4c2eb7f6c8ceb3480b64b6"
          }
       ],
@@ -34,50 +98,7 @@
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Scholarships.com, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "513 Central Ave., Suite 300\nHighland Park IL 60035\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "scholarships-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
          "handle" : "scholarships-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -137,10 +158,14 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "scholarships-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -200,10 +225,49 @@
                ]
             ]
          ],
-         "handle" : "scholarships-technical",
          "roles" : [
             "technical"
          ]
+      },
+      {
+         "handle" : "scholarships-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Scholarships.com, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "513 Central Ave., Suite 300\nHighland Park IL 60035\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "notices" : [
@@ -224,6 +288,7 @@
          ]
       }
    ],
+   "ldhName" : "scholarships",
    "remarks" : [
       {
          "description" : [
@@ -232,10 +297,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.scholarships.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -244,73 +309,8 @@
          "title" : "Source"
       }
    ],
-   "handle" : "scholarships",
-   "ldhName" : "scholarships",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.SCHOLARSHIPS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.140.17"
-            ],
-            "v6" : [
-               "2a01:8840:8a:0:0:0:0:17"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.SCHOLARSHIPS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:8d:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.143.17"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:8b:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.141.17"
-            ]
-         },
-         "ldhName" : "B0.NIC.SCHOLARSHIPS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:8c:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.142.17"
-            ]
-         },
-         "ldhName" : "C0.NIC.SCHOLARSHIPS",
-         "objectClassName" : "nameserver"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-07-10"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ]
+   "handle" : "scholarships"
 }

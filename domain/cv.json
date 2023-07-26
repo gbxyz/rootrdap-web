@@ -1,24 +1,38 @@
 {
-   "links" : [
+   "events" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/cv.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "eventAction" : "registration",
+         "eventDate" : "1996-10-21"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "eventDate" : "2023-06-07",
+         "eventAction" : "last changed"
       },
       {
-         "rel" : "related",
-         "href" : "http://www.dns.cv/",
-         "title" : "URL for registration services"
+         "eventDate" : "2023-07-26T12:29:08",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cv.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.dns.cv/",
+         "rel" : "related"
+      }
+   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -78,16 +92,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "cv-administrative",
          "roles" : [
             "administrative"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "cv-technical",
          "vcardArray" : [
             "vcard",
@@ -148,9 +159,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
@@ -187,35 +201,10 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "cv",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.dns.cv/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -226,35 +215,18 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1996-10-21"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-07"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "ldhName" : "cv",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYC.DNSNODE.NET",
          "ipAddresses" : {
             "v6" : [
                "2a01:3f1:3032:8001:0:0:0:135"
@@ -262,11 +234,10 @@
             "v4" : [
                "194.58.198.135"
             ]
-         }
+         },
+         "ldhName" : "ANYC.DNSNODE.NET"
       },
       {
-         "ldhName" : "C.DNS.PT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:6105:ad:0:0:1"
@@ -274,9 +245,13 @@
             "v4" : [
                "204.61.216.105"
             ]
-         }
+         },
+         "ldhName" : "C.DNS.PT",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "CV01.DNS.PT",
          "ipAddresses" : {
             "v6" : [
                "2a04:6d80:0:0:0:0:0:18"
@@ -284,20 +259,45 @@
             "v4" : [
                "185.39.208.18"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "CV01.DNS.PT"
+         }
       },
       {
+         "ldhName" : "NS.DNS.CV",
          "ipAddresses" : {
             "v4" : [
                "41.221.192.220"
             ],
             "v6" : []
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS.DNS.CV"
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "cv"
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "cv",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.dns.cv/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

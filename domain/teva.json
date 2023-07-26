@@ -1,23 +1,11 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2016-02-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "status" : [
       "active"
    ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:9"
@@ -26,24 +14,22 @@
                "37.209.192.9"
             ]
          },
-         "ldhName" : "A.NIC.TEVA",
-         "objectClassName" : "nameserver"
+         "ldhName" : "A.NIC.TEVA"
       },
       {
-         "ldhName" : "B.NIC.TEVA",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
             ]
-         }
+         },
+         "ldhName" : "B.NIC.TEVA"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.TEVA",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
@@ -51,18 +37,19 @@
             "v4" : [
                "37.209.196.9"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.TEVA"
       },
       {
+         "ldhName" : "NS1.DNS.NIC.TEVA",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:a0"
-            ],
             "v4" : [
                "156.154.144.160"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:a0"
             ]
          },
-         "ldhName" : "NS1.DNS.NIC.TEVA",
          "objectClassName" : "nameserver"
       },
       {
@@ -81,45 +68,66 @@
          "objectClassName" : "nameserver",
          "ldhName" : "NS3.DNS.NIC.TEVA",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.159.160"
-            ],
             "v6" : [
                "2610:a1:1073:0:0:0:0:a0"
+            ],
+            "v4" : [
+               "156.154.159.160"
             ]
          }
       }
    ],
    "ldhName" : "teva",
-   "handle" : "teva",
-   "remarks" : [
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "7e670079255665759e954def033d30aaa2dabb07cf77eca7f27975fd03e0cfc8",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "46417"
+         }
+      ]
+   },
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TEVA."
-         ],
-         "title" : "Whois Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/teva.html"
       },
       {
-         "description" : [
-            "Registration information: http://nic.teva"
-         ],
-         "title" : "Remark"
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://nic.teva"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-02-19",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventDate" : "2023-07-26T12:32:02",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -132,104 +140,8 @@
    ],
    "entities" : [
       {
-         "handle" : "teva-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Teva Pharmaceutical Industries Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "5 Basel Street\nPetach Tikva 49131\nIsrael"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "handle" : "teva-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Domain Manager"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Teva Pharmaceutical Industries Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "425 Privet Road\nHorsham PA 19044\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 215 293 6509"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domainadmincorp@teva.co.il"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "teva-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -289,44 +201,132 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "teva-technical",
          "roles" : [
             "technical"
          ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Teva Pharmaceutical Industries Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "5 Basel Street\nPetach Tikva 49131\nIsrael"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "teva-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "teva-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Domain Manager"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Teva Pharmaceutical Industries Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "425 Privet Road\nHorsham PA 19044\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 215 293 6509"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domainadmincorp@teva.co.il"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "7e670079255665759e954def033d30aaa2dabb07cf77eca7f27975fd03e0cfc8",
-            "algorithm" : "8",
-            "keyTag" : "46417",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "links" : [
+   "remarks" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/teva.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TEVA."
+         ]
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: http://nic.teva"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://nic.teva",
-         "rel" : "related"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "objectClassName" : "domain"
+   "handle" : "teva"
 }

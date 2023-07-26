@@ -1,22 +1,73 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "24967",
-            "digestType" : "2",
-            "digest" : "3facb67c61427cac01c712ea17c8d0e9eb74f5290a2d36311499c096578254bd",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
+               ]
+            ]
+         ],
+         "handle" : "parts-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -79,76 +130,14 @@
          "handle" : "parts-technical",
          "roles" : [
             "technical"
-         ]
-      },
-      {
-         "handle" : "parts-administrative",
-         "roles" : [
-            "administrative"
          ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
-               ]
-            ]
-         ]
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,13 +171,52 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "parts-registrant"
       }
    ],
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-02-06",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-27"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:17",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "24967",
+            "digest" : "3facb67c61427cac01c712ea17c8d0e9eb74f5290a2d36311499c096578254bd"
+         }
+      ]
+   },
    "links" : [
       {
          "rel" : "related",
@@ -206,18 +234,19 @@
          "rel" : "related"
       }
    ],
+   "ldhName" : "parts",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.PARTS",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.20.53"
-            ],
             "v6" : [
                "2a01:8840:16:0:0:0:0:53"
+            ],
+            "v4" : [
+               "65.22.20.53"
             ]
-         }
+         },
+         "ldhName" : "V0N0.NIC.PARTS"
       },
       {
          "ipAddresses" : {
@@ -232,15 +261,15 @@
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V0N2.NIC.PARTS",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:18:0:0:0:0:53"
-            ],
             "v4" : [
                "65.22.22.53"
+            ],
+            "v6" : [
+               "2a01:8840:18:0:0:0:0:53"
             ]
          },
-         "ldhName" : "V0N2.NIC.PARTS",
          "objectClassName" : "nameserver"
       },
       {
@@ -256,7 +285,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V2N0.NIC.PARTS",
          "ipAddresses" : {
             "v6" : [
@@ -265,57 +293,27 @@
             "v4" : [
                "65.22.23.53"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V2N1.NIC.PARTS",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f5:0:0:0:0:53"
-            ],
             "v4" : [
                "161.232.11.53"
+            ],
+            "v6" : [
+               "2a01:8840:f5:0:0:0:0:53"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.PARTS"
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "parts",
+   "objectClassName" : "domain",
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-06"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-27"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "parts",
    "remarks" : [
       {
          "description" : [
@@ -330,11 +328,13 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "parts"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

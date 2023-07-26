@@ -1,4 +1,19 @@
 {
+   "ldhName" : "sas",
+   "events" : [
+      {
+         "eventDate" : "2015-11-20",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:39"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
@@ -6,33 +21,33 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "http://www.sas.com",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "href" : "http://www.sas.com"
       }
    ],
-   "objectClassName" : "domain",
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "245081f2a99002cfba295d87b98465b3b4a2df0023364e577292c15103fcc0a4",
             "algorithm" : "8",
+            "digestType" : "2",
             "keyTag" : "20119",
-            "digestType" : "2"
+            "digest" : "245081f2a99002cfba295d87b98465b3b4a2df0023364e577292c15103fcc0a4"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -66,14 +81,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "sas-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "sas-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -132,13 +148,10 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "sas-technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -201,11 +214,109 @@
                   "gtldinfo@sas.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.SAS",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.SAS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.SAS",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:27"
+            ],
+            "v4" : [
+               "156.154.169.39"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.SAS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.170.39"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:1:27"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.SAS"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.171.39"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:1:27"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.SAS",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "sas",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -225,116 +336,5 @@
             "IANA"
          ]
       }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "sas",
-   "ldhName" : "sas",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.SAS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.SAS"
-      },
-      {
-         "ldhName" : "C.NIC.SAS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.SAS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:1:27"
-            ],
-            "v4" : [
-               "156.154.169.39"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.170.39"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:1:27"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.SAS"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:1:27"
-            ],
-            "v4" : [
-               "156.154.171.39"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.SAS",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
    ]
 }

@@ -1,4 +1,5 @@
 {
+   "ldhName" : "tf",
    "events" : [
       {
          "eventDate" : "1997-08-26",
@@ -9,110 +10,43 @@
          "eventDate" : "2022-10-04"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:02"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "tf",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
-            ],
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "4110abe221396d1a9493c5dd67140890e14c73d7ac0fcd67f4b60979e9881283",
+            "digestType" : "2",
+            "algorithm" : "13",
+            "keyTag" : "12095"
          }
+      ]
+   },
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/tf.html",
+         "rel" : "related"
       },
       {
-         "ldhName" : "E.EXT.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a00:d78:0:102:193:176:144:22"
-            ],
-            "v4" : [
-               "193.176.144.22"
-            ]
-         }
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.46"
-            ],
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "ldhName" : "G.EXT.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.36.1"
-            ],
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ]
-         }
+         "rel" : "related",
+         "href" : "http://www.nic.tf",
+         "title" : "URL for registration services"
       }
    ],
-   "handle" : "tf",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TF."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.tf"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "tf-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
+         "handle" : "tf-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -145,10 +79,12 @@
                   ]
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       },
       {
-         "handle" : "tf-technical",
          "roles" : [
             "technical"
          ],
@@ -211,10 +147,15 @@
                ]
             ]
          ],
+         "handle" : "tf-technical",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "tf-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -273,44 +214,103 @@
                   "tld-admin@nic.fr"
                ]
             ]
-         ],
-         "handle" : "tf-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "12095",
-            "digestType" : "2",
-            "digest" : "4110abe221396d1a9493c5dd67140890e14c73d7ac0fcd67f4b60979e9881283",
-            "algorithm" : "13"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.FR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.9.1"
+            ]
          }
-      ]
-   },
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a00:d78:0:102:193:176:144:22"
+            ],
+            "v4" : [
+               "193.176.144.22"
+            ]
+         },
+         "ldhName" : "E.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "G.EXT.NIC.FR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.36.1"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "tf",
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "links" : [
+   "remarks" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tf.html"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TF."
+         ]
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "description" : [
+            "Registration information: http://www.nic.tf"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.tf",
-         "rel" : "related"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

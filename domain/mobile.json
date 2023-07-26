@@ -1,6 +1,29 @@
 {
+   "ldhName" : "mobile",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -11,16 +34,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Director Advanced Video Products"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "DISH DBS Corporation"
+                  "Dish DBS Corporation"
                ],
                [
                   "adr",
@@ -37,36 +54,14 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.303.723.1000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.303.723.1699"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "cscngtlds28@cscinfo.com"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "mobile-administrative"
+         "handle" : "mobile-registrant",
+         "objectClassName" : "entity"
       },
       {
+         "handle" : "mobile-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -126,13 +121,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "mobile-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "mobile-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -143,10 +139,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Director Advanced Video Products"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Dish DBS Corporation"
+                  "DISH DBS Corporation"
                ],
                [
                   "adr",
@@ -163,47 +165,60 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.303.723.1000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.303.723.1699"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "cscngtlds28@cscinfo.com"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "mobile-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "85",
             "digestType" : "2",
-            "digest" : "7e9719c718c3954d6f5d3c8967b1424f663ac3ff24d49ba6c26a52ebcd2c3b0f",
-            "algorithm" : "8"
+            "algorithm" : "8",
+            "keyTag" : "85",
+            "digest" : "7e9719c718c3954d6f5d3c8967b1424f663ac3ff24d49ba6c26a52ebcd2c3b0f"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/mobile.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mobile.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
          "rel" : "related"
       },
       {
          "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
          "href" : "https://www.dish.com/",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "rel" : "related"
       }
    ],
    "events" : [
@@ -216,13 +231,14 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:58",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "status" : [
       "active"
    ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -233,10 +249,11 @@
                "2a01:8840:5e:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.MOBILE"
+         "ldhName" : "A0.NIC.MOBILE",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.99.9"
@@ -245,12 +262,11 @@
                "2a01:8840:61:0:0:0:0:9"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "A2.NIC.MOBILE"
       },
       {
-         "ldhName" : "B0.NIC.MOBILE",
          "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.MOBILE",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:5f:0:0:0:0:9"
@@ -262,25 +278,27 @@
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.MOBILE",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.98.9"
-            ],
             "v6" : [
                "2a01:8840:60:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.98.9"
             ]
-         }
+         },
+         "ldhName" : "C0.NIC.MOBILE"
       }
    ],
-   "ldhName" : "mobile",
    "handle" : "mobile",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.MOBILE."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -293,24 +311,6 @@
             "IANA"
          ],
          "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ]
 }

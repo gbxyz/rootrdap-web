@@ -1,26 +1,77 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.192.4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "5225",
-            "algorithm" : "8",
-            "digest" : "9a1fc16a90acf3c7d3233480f45f595debdef3f71ae637bf3f8093670dda7d8a"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "entities" : [
       {
-         "handle" : "canon-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
+         "handle" : "canon-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -31,21 +82,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Representative Director"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "GMO Registry, Inc."
+                  "Canon Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 1508512\nJapan"
+                     "label" : "30-2, Shimomaruko 3-chome\nOhta-ku Tokyo 1468501\nJapan"
                   },
                   "text",
                   [
@@ -57,32 +102,20 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81-3-5456-1601"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81-3-3780-5239"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtld@gmoregistry.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "canon-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -141,18 +174,10 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "handle" : "canon-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
-         "handle" : "canon-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
+         "handle" : "canon-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -163,15 +188,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Representative Director"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Canon Inc."
+                  "GMO Registry, Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "30-2, Shimomaruko 3-chome\nOhta-ku Tokyo 1468501\nJapan"
+                     "label" : "26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 1508512\nJapan"
                   },
                   "text",
                   [
@@ -183,17 +214,41 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81-3-5456-1601"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81-3-3780-5239"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtld@gmoregistry.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/canon.html"
+         "href" : "https://www.iana.org/domains/root/db/canon.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
@@ -202,94 +257,36 @@
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.canon"
+         "href" : "http://nic.canon",
+         "title" : "URL for registration services"
       }
    ],
-   "ldhName" : "canon",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "5225",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "9a1fc16a90acf3c7d3233480f45f595debdef3f71ae637bf3f8093670dda7d8a"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+      ]
+   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2015-01-29"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
+         "eventDate" : "2019-08-20",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:38"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "canon",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -298,10 +295,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://nic.canon"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -309,6 +306,9 @@
             "IANA"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "canon"
 }

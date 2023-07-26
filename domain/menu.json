@@ -1,12 +1,49 @@
 {
-   "port43" : "whois.iana.org",
+   "handle" : "menu",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MENU."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.nic.menu"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "entities" : [
       {
          "handle" : "menu-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -65,14 +102,58 @@
                   "kenwei@nic.menu"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dot Menu Registry LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "9440 Santa Monica Blvd, Suite 301\nBeverly Hills CA 90210\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "menu-registrant"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
          "handle" : "menu-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -132,73 +213,19 @@
                ]
             ]
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dot Menu Registry LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "9440 Santa Monica Blvd, Suite 301\nBeverly Hills CA 90210\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "menu-registrant",
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "31309",
-            "digestType" : "2",
-            "digest" : "dea786e2b9c069e2595d79b03f3a920b0342bfbc017ec606a0184340e9c9c88d",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/menu.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/menu.html"
+         "rel" : "related"
       },
       {
+         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
@@ -206,13 +233,21 @@
          "title" : "URL for registration services"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "dea786e2b9c069e2595d79b03f3a920b0342bfbc017ec606a0184340e9c9c88d",
+            "keyTag" : "31309",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "events" : [
       {
-         "eventDate" : "2013-11-13",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2013-11-13"
       },
       {
          "eventAction" : "last changed",
@@ -220,14 +255,13 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:54"
       }
    ],
    "ldhName" : "menu",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.MENU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.10"
@@ -235,35 +269,35 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.MENU",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ],
             "v4" : [
                "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "B.NIC.MENU"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.MENU",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
             "v6" : [
                "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
             ]
-         }
+         },
+         "ldhName" : "C.NIC.MENU"
       },
       {
-         "ldhName" : "X.NIC.MENU",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.172.82"
@@ -271,7 +305,9 @@
             "v6" : [
                "2610:a1:1074:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "X.NIC.MENU",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
@@ -287,54 +323,18 @@
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
             ]
          },
          "ldhName" : "Z.NIC.MENU",
          "objectClassName" : "nameserver"
       }
    ],
-   "handle" : "menu",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MENU."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nic.menu"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
+   "status" : [
+      "active"
    ]
 }

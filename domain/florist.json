@@ -1,21 +1,26 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "3fdfbf7d66854164bd6f7ee44ca6e92f8e7d23e577bdc213d34dfb62a0093e85",
-            "digestType" : "2",
-            "keyTag" : "48775"
-         }
-      ]
-   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "florist-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -49,18 +54,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "florist-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "florist-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "florist-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -119,10 +122,15 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "florist-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -181,19 +189,25 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "florist-administrative"
+         ]
       }
    ],
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "3fdfbf7d66854164bd6f7ee44ca6e92f8e7d23e577bdc213d34dfb62a0093e85",
+            "keyTag" : "48775",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/florist.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
          "href" : "https://about.rdap.org",
@@ -202,38 +216,52 @@
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
       }
    ],
-   "nameservers" : [
+   "events" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:30"
-            ],
-            "v4" : [
-               "65.22.32.30"
-            ]
-         },
-         "ldhName" : "V0N0.NIC.FLORIST",
-         "objectClassName" : "nameserver"
+         "eventDate" : "2013-12-19",
+         "eventAction" : "registration"
       },
       {
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:46",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "florist",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.FLORIST",
+         "ldhName" : "V0N0.NIC.FLORIST",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:23:0:0:0:0:30"
-            ],
             "v4" : [
-               "65.22.33.30"
+               "65.22.32.30"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:30"
             ]
          }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.FLORIST",
+         "ldhName" : "V0N1.NIC.FLORIST",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.33.30"
+            ],
+            "v6" : [
+               "2a01:8840:23:0:0:0:0:30"
+            ]
+         }
+      },
+      {
          "ipAddresses" : {
             "v4" : [
                "65.22.34.30"
@@ -241,19 +269,21 @@
             "v6" : [
                "2a01:8840:24:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.FLORIST",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.FLORIST",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fa:0:0:0:0:30"
-            ],
             "v4" : [
                "161.232.16.30"
+            ],
+            "v6" : [
+               "2a01:8840:fa:0:0:0:0:30"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.FLORIST"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -268,54 +298,22 @@
          }
       },
       {
+         "ldhName" : "V2N1.NIC.FLORIST",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:30"
-            ],
             "v4" : [
                "161.232.17.30"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:30"
             ]
          },
-         "ldhName" : "V2N1.NIC.FLORIST",
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "florist",
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventDate" : "2013-12-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "florist",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -330,11 +328,13 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "handle" : "florist"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

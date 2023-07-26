@@ -1,64 +1,9 @@
 {
-   "handle" : "tube",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://tubetld.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-12-23",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:40"
-      }
-   ],
    "status" : [
       "active"
    ],
-   "ldhName" : "tube",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.TUBE",
          "ipAddresses" : {
             "v6" : [
@@ -67,11 +12,11 @@
             "v4" : [
                "37.209.192.10"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "B.NIC.TUBE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.194.10"
@@ -79,47 +24,48 @@
             "v6" : [
                "2001:dcd:2:0:0:0:0:10"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "C.NIC.TUBE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
             "v6" : [
                "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.TUBE",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:1:50"
-            ],
             "v4" : [
                "156.154.169.80"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:1:50"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.NIC.TUBE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.DNS.NIC.TUBE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:1:50"
-            ],
             "v4" : [
                "156.154.170.80"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:1:50"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.TUBE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.TUBE",
          "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.TUBE",
          "ipAddresses" : {
             "v4" : [
                "156.154.171.80"
@@ -131,26 +77,13 @@
       }
    ],
    "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/tube.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://tubetld.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "ldhName" : "tube",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -210,17 +143,14 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "tube-administrative"
+         "handle" : "tube-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "tube-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "tube-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -279,14 +209,14 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
             "registrant"
          ],
          "handle" : "tube-registrant",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -319,22 +249,92 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-12-23",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:10"
+      }
+   ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digest" : "a5918afdeeed73d4603adf2ec0ec6a2735b7ded61849c500deb6b68a5bd03610",
+            "keyTag" : "45112",
             "digestType" : "2",
-            "keyTag" : "45112"
+            "algorithm" : "8",
+            "digest" : "a5918afdeeed73d4603adf2ec0ec6a2735b7ded61849c500deb6b68a5bd03610"
          }
       ]
    },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tube.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://tubetld.com",
+         "rel" : "related"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
-   ]
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://tubetld.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "tube"
 }

@@ -1,4 +1,29 @@
 {
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-21"
+      },
+      {
+         "eventDate" : "2020-10-15",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:47"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "127adbfe87ea3d320525990c4783db7eafb3fc10de688eb7b593836b6ce02cca",
+            "keyTag" : "18211",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -6,9 +31,9 @@
          "rel" : "related"
       },
       {
+         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
@@ -16,9 +41,13 @@
          "href" : "http://www.showtime.com"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "showtime-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -78,13 +107,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "showtime-administrative"
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -147,10 +173,10 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -184,46 +210,9 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "showtime-registrant",
          "roles" : [
             "registrant"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "18211",
-            "algorithm" : "8",
-            "digest" : "127adbfe87ea3d320525990c4783db7eafb3fc10de688eb7b593836b6ce02cca"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "showtime",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.showtime.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
          ]
       }
    ],
@@ -245,23 +234,6 @@
          "title" : "Comments"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-15"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "ldhName" : "showtime",
    "nameservers" : [
       {
@@ -277,20 +249,20 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.SHOWTIME",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.71.1"
-            ],
             "v6" : [
                "2a01:8840:45:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.71.1"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.SHOWTIME"
+         }
       },
       {
-         "ldhName" : "B0.NIC.SHOWTIME",
          "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.SHOWTIME",
          "ipAddresses" : {
             "v4" : [
                "65.22.69.1"
@@ -301,16 +273,44 @@
          }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.SHOWTIME",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.70.1"
-            ],
             "v6" : [
                "2a01:8840:44:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.70.1"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.SHOWTIME"
+         }
       }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "showtime",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.showtime.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

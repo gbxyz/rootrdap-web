@@ -1,38 +1,27 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "notices" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/training.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "44281",
-            "algorithm" : "8",
-            "digest" : "80dd6f1aad9c85fed280bc232c0dd8426c09dd7bdd6f6e6bc16232e252cba059"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "training-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -92,18 +81,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "training-administrative",
          "roles" : [
             "administrative"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
          "handle" : "training-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -162,13 +145,13 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "training-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -202,50 +185,57 @@
                ]
             ]
          ],
+         "handle" : "training-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "remarks" : [
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TRAINING."
-         ]
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/training.html"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
       }
    ],
-   "notices" : [
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "44281",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "80dd6f1aad9c85fed280bc232c0dd8426c09dd7bdd6f6e6bc16232e252cba059"
+         }
+      ]
+   },
+   "events" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "eventDate" : "2013-12-19",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:08"
       }
    ],
-   "handle" : "training",
    "ldhName" : "training",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -256,23 +246,22 @@
                "2a01:8840:1a:0:0:0:0:41"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.TRAINING"
+         "ldhName" : "V0N0.NIC.TRAINING",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "65.22.25.41"
-            ],
             "v6" : [
                "2a01:8840:1b:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.25.41"
             ]
          },
          "ldhName" : "V0N1.NIC.TRAINING",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.TRAINING",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -281,19 +270,20 @@
             "v4" : [
                "65.22.26.41"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.TRAINING"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.12.41"
-            ],
             "v6" : [
                "2a01:8840:f6:0:0:0:0:41"
+            ],
+            "v4" : [
+               "161.232.12.41"
             ]
          },
-         "ldhName" : "V0N3.NIC.TRAINING",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N3.NIC.TRAINING"
       },
       {
          "objectClassName" : "nameserver",
@@ -320,21 +310,31 @@
          "objectClassName" : "nameserver"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-12-19"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-02"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:39"
-      }
-   ],
    "status" : [
       "active"
+   ],
+   "handle" : "training",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TRAINING."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

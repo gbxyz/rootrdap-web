@@ -1,25 +1,100 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "13987",
-            "algorithm" : "8",
-            "digest" : "ff87e9205f88e1d32c67a65bd61c68c56689c607d7684d12c867dc933d546ec8"
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "139.91.191.3"
+            ],
+            "v6" : [
+               "2001:648:2c30:0:0:0:191:3"
+            ]
+         },
+         "ldhName" : "ESTIA.ICS.FORTH.GR"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "78.104.145.227"
+            ]
+         },
+         "ldhName" : "GR-AT.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "GR-C.ICS.FORTH.GR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4:0:0:0:0:19"
+            ],
+            "v4" : [
+               "194.0.1.25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "GR-D.ICS.FORTH.GR",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.102"
+            ],
+            "v6" : [
+               "2001:678:e:102:0:0:0:53"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:7:0:0:0:4:10"
+            ],
+            "v4" : [
+               "194.0.4.10"
+            ]
+         },
+         "ldhName" : "GR-M.ICS.FORTH.GR"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "139.91.1.1"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "GRDNS.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "gr",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "entities" : [
       {
          "handle" : "gr-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,10 +154,56 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ICS-FORTH GR"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Nikolaou Plastira str.\nVassilika Vouton\nHeraklion Crete GR-70013\nGreece"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "gr-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "gr-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -142,57 +263,15 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "gr-administrative"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ICS-FORTH GR"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Nikolaou Plastira str.\nVassilika Vouton\nHeraklion Crete GR-70013\nGreece"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gr-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
+   "port43" : "whois.iana.org",
    "links" : [
       {
-         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/gr.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
       },
       {
          "href" : "https://about.rdap.org",
@@ -200,117 +279,38 @@
          "rel" : "related"
       },
       {
-         "href" : "http://www.gr",
          "title" : "URL for registration services",
+         "href" : "http://www.gr",
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
-   "ldhName" : "gr",
-   "nameservers" : [
-      {
-         "ldhName" : "ESTIA.ICS.FORTH.GR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:648:2c30:0:0:0:191:3"
-            ],
-            "v4" : [
-               "139.91.191.3"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "13987",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "ff87e9205f88e1d32c67a65bd61c68c56689c607d7684d12c867dc933d546ec8"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "GR-AT.ICS.FORTH.GR",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "78.104.145.227"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4:0:0:0:0:19"
-            ],
-            "v4" : [
-               "194.0.1.25"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "GR-C.ICS.FORTH.GR"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:e:102:0:0:0:53"
-            ],
-            "v4" : [
-               "194.0.11.102"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "GR-D.ICS.FORTH.GR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.4.10"
-            ],
-            "v6" : [
-               "2001:678:7:0:0:0:4:10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "GR-M.ICS.FORTH.GR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "139.91.1.1"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "GRDNS.ICS.FORTH.GR",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "1989-02-19"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-06-16"
+         "eventDate" : "2022-06-16",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:30:09",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {

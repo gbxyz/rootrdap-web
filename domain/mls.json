@@ -1,24 +1,5 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MLS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "ldhName" : "mls",
    "notices" : [
       {
          "title" : "About This Service",
@@ -37,120 +18,11 @@
          ]
       }
    ],
-   "handle" : "mls",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NS.NIC.MLS",
-         "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80aa:0:0:0:0:8"
-            ],
-            "v4" : [
-               "185.159.197.8"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NS.NIC.MLS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.159.198.8"
-            ],
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:8"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "mls",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-08-20"
-      },
-      {
-         "eventDate" : "2022-09-13",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mls.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "ea3c1c5994bb36364acb0a9b8c09cd84477d6707c9317259bcbc8149992a485c",
-            "algorithm" : "8",
-            "keyTag" : "32866",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "The Canadian Real Estate Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "200 Catherine Street, 6th Floor\nOttawa ON K2P 2K9\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "mls-registrant",
          "roles" : [
-            "registrant"
-         ]
-      },
-      {
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -210,18 +82,52 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "mls-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "mls-administrative",
-         "roles" : [
-            "administrative"
+         "handle" : "mls-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "The Canadian Real Estate Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "200 Catherine Street, 6th Floor\nOttawa ON K2P 2K9\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
+         "handle" : "mls-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -272,8 +178,102 @@
                   "legal@crea.ca"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/mls.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "32866",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "ea3c1c5994bb36364acb0a9b8c09cd84477d6707c9317259bcbc8149992a485c"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-08-20"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-09-13"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:57"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NS.NIC.MLS",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80aa:0:0:0:0:8"
+            ],
+            "v4" : [
+               "185.159.197.8"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:8"
+            ],
+            "v4" : [
+               "185.159.198.8"
+            ]
+         },
+         "ldhName" : "B.NS.NIC.MLS"
+      }
+   ],
+   "handle" : "mls",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MLS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: "
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ]
 }

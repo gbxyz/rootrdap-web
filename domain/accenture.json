@@ -1,17 +1,16 @@
 {
-   "ldhName" : "accenture",
    "nameservers" : [
       {
-         "ldhName" : "AC1.NSTLD.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
             ]
-         }
+         },
+         "ldhName" : "AC1.NSTLD.COM"
       },
       {
          "ipAddresses" : {
@@ -22,22 +21,23 @@
                "2001:500:121:0:0:0:0:30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM"
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "AC3.NSTLD.COM",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
             "v6" : [
                "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:500:123:0:0:0:0:30"
@@ -46,124 +46,20 @@
                "192.42.176.30"
             ]
          },
-         "ldhName" : "AC4.NSTLD.COM",
          "objectClassName" : "nameserver"
       }
    ],
+   "objectClassName" : "domain",
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-30"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.accenture.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "accenture",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "0c1ddb821c823afec10942d3dcd16d6306221e4ee7f2f524e5d9bad48bafd8fc",
-            "digestType" : "2",
-            "keyTag" : "35388"
-         }
-      ]
-   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "accenture-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Accenture plc"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1 Grand Canal Square, Grand Harbour\nDublin Dublin 2\nIreland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "objectClassName" : "entity",
+         "handle" : "accenture-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -223,13 +119,10 @@
                ]
             ]
          ],
-         "handle" : "accenture-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "accenture-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -292,7 +185,79 @@
          "roles" : [
             "technical"
          ],
-         "handle" : "accenture-technical"
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "accenture-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Accenture plc"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1 Grand Canal Square, Grand Harbour\nDublin Dublin 2\nIreland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-04-30",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:27:41"
       }
    ],
    "links" : [
@@ -302,15 +267,50 @@
          "href" : "https://www.iana.org/domains/root/db/accenture.html"
       },
       {
+         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
-         "href" : "http://www.accenture.com",
+         "rel" : "related",
          "title" : "URL for registration services",
-         "rel" : "related"
+         "href" : "http://www.accenture.com"
       }
    ],
-   "objectClassName" : "domain"
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "35388",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "0c1ddb821c823afec10942d3dcd16d6306221e4ee7f2f524e5d9bad48bafd8fc"
+         }
+      ]
+   },
+   "ldhName" : "accenture",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.accenture.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "accenture"
 }

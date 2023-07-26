@@ -1,13 +1,83 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "A.NS.GQ",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:1b00:10:0:0:0:0:1"
+            ],
+            "v4" : [
+               "185.21.168.65"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.21.169.65"
+            ],
+            "v6" : [
+               "2a04:1b00:11:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B.NS.GQ"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:1b00:12:0:0:0:0:1"
+            ],
+            "v4" : [
+               "185.21.170.65"
+            ]
+         },
+         "ldhName" : "C.NS.GQ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NS.GQ",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:1b00:13:0:0:0:0:1"
+            ],
+            "v4" : [
+               "185.21.171.65"
+            ]
+         }
+      }
+   ],
+   "ldhName" : "gq",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "entities" : [
       {
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "gq-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -41,10 +111,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "gq-registrant"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "gq-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -104,12 +177,14 @@
                ]
             ]
          ],
-         "handle" : "gq-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "gq-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -160,100 +235,43 @@
                   "bibang.yembi@orange-getesa.gq"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "gq-administrative"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
    "links" : [
       {
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/gq.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.dominio.gq",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "gq",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NS.GQ",
-         "ipAddresses" : {
-            "v4" : [
-               "185.21.168.65"
-            ],
-            "v6" : [
-               "2a04:1b00:10:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NS.GQ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.21.169.65"
-            ],
-            "v6" : [
-               "2a04:1b00:11:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C.NS.GQ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:1b00:12:0:0:0:0:1"
-            ],
-            "v4" : [
-               "185.21.170.65"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NS.GQ",
-         "ipAddresses" : {
-            "v4" : [
-               "185.21.171.65"
-            ],
-            "v6" : [
-               "2a04:1b00:13:0:0:0:0:1"
-            ]
-         }
+         "title" : "URL for registration services"
       }
    ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "1997-07-10"
+         "eventDate" : "1997-07-10",
+         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2015-12-24"
+         "eventDate" : "2015-12-24",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:09"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -272,24 +290,6 @@
          "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],

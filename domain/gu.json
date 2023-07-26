@@ -1,57 +1,42 @@
 {
-   "events" : [
-      {
-         "eventDate" : "1994-04-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-08-04"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "status" : [
       "active"
    ],
-   "ldhName" : "gu",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "GOLD.UOG.EDU",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "168.123.250.66"
-            ]
-         },
-         "ldhName" : "GOLD.UOG.EDU",
-         "objectClassName" : "nameserver"
+            ],
+            "v6" : []
+         }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "GREEN.UOG.EDU",
          "ipAddresses" : {
             "v4" : [
                "168.123.250.56"
             ],
             "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "GREEN.UOG.EDU"
+         }
       },
       {
+         "ldhName" : "GU.CCTLD.AUTHDNS.RIPE.NET",
          "ipAddresses" : {
-            "v4" : [
-               "193.0.9.78"
-            ],
             "v6" : [
                "2001:67c:e0:0:0:0:0:78"
+            ],
+            "v4" : [
+               "193.0.9.78"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "GU.CCTLD.AUTHDNS.RIPE.NET"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "PHLOEM.UOREGON.EDU",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -60,30 +45,11 @@
             "v4" : [
                "128.223.32.35"
             ]
-         }
+         },
+         "ldhName" : "PHLOEM.UOREGON.EDU"
       }
    ],
-   "handle" : "gu",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://give.uog.edu/shop/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
+   "ldhName" : "gu",
    "notices" : [
       {
          "description" : [
@@ -102,7 +68,48 @@
          "title" : "Comments"
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "University of Guam"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Office of Information Technology\n303 University Drive\nUOG Station\nMangilao 96923\nGuam"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "gu-registrant"
+      },
       {
          "objectClassName" : "entity",
          "vcardArray" : [
@@ -170,10 +177,7 @@
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "gu-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -233,69 +237,65 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "University of Guam"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Office of Information Technology\n303 University Drive\nUOG Station\nMangilao 96923\nGuam"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "gu-registrant",
+         "handle" : "gu-administrative",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gu.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://give.uog.edu/shop/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "1994-04-15",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-08-04"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:12",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "links" : [
+   "remarks" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/gu.html"
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://give.uog.edu/shop/"
+         ]
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://give.uog.edu/shop/"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "objectClassName" : "domain"
+   "handle" : "gu"
 }

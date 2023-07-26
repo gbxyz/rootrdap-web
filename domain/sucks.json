@@ -1,22 +1,7 @@
 {
    "handle" : "sucks",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -26,10 +11,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.voxpopregistry.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -38,124 +23,13 @@
          "title" : "Source"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-02-19",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-06"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "ldhName" : "sucks",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.SUCKS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.SUCKS",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "ldhName" : "C.NIC.SUCKS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ]
-         },
-         "ldhName" : "X.NIC.SUCKS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.SUCKS"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "ldhName" : "Z.NIC.SUCKS",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/sucks.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.voxpopregistry.com"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "sucks-administrative",
-         "objectClassName" : "entity",
+         "handle" : "sucks-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -164,12 +38,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "John Berard"
                ],
                [
                   "org",
@@ -192,31 +60,15 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+18299473020"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+61398661970"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "support@registry.sucks"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -276,14 +128,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "sucks-technical"
+         "handle" : "sucks-technical",
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "sucks-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -292,6 +145,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "John Berard"
                ],
                [
                   "org",
@@ -314,27 +173,168 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+18299473020"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+61398661970"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "support@registry.sucks"
                ]
             ]
-         ],
-         "handle" : "sucks-registrant",
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-02-19",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-12-06",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:56",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/sucks.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.voxpopregistry.com"
+      }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "keyTag" : "33844",
+            "digestType" : "2",
             "algorithm" : "8",
             "digest" : "3bc39b543789de80c38841624e4195136cc4cf04f47ab5a09d052998e9f374ec"
          }
       ]
-   }
+   },
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.SUCKS",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "B.NIC.SUCKS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.SUCKS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "X.NIC.SUCKS",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.172.82"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Y.NIC.SUCKS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         },
+         "ldhName" : "Z.NIC.SUCKS"
+      }
+   ],
+   "objectClassName" : "domain"
 }

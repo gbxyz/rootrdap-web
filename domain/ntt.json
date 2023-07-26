@@ -1,72 +1,5 @@
 {
-   "ldhName" : "ntt",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dda:0:0:0:0:0:2"
-            ],
-            "v4" : [
-               "103.47.2.2"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "TLD1.NIC.NTT"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:218:3001:0:0:0:0:2"
-            ],
-            "v4" : [
-               "117.104.133.17"
-            ]
-         },
-         "ldhName" : "TLD2.NIC.NTT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1ba:0:0:0:0:17"
-            ],
-            "v4" : [
-               "65.22.40.17"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "TLD3.NIC.NTT"
-      },
-      {
-         "ldhName" : "TLD5.NIC.NTT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.40.145"
-            ],
-            "v6" : [
-               "2a01:8840:1ba:0:0:0:0:145"
-            ]
-         }
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-01-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-11-29",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "handle" : "ntt",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -81,20 +14,23 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -105,23 +41,10 @@
          ]
       }
    ],
-   "handle" : "ntt",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "d21df93a73f35f8c3428a42db60da7ccebfc2a64a42b6f5e5024f358d5e18d44",
-            "algorithm" : "8",
-            "keyTag" : "42481",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "ntt-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -155,13 +78,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
-         ],
-         "handle" : "ntt-registrant"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "ntt-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -221,14 +144,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "ntt-technical",
          "roles" : [
             "technical"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "ntt-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -280,29 +201,108 @@
                ]
             ]
          ],
-         "handle" : "ntt-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ntt.html"
+         "href" : "https://www.iana.org/domains/root/db/ntt.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       },
       {
-         "href" : "https://group.ntt/en/dotntt/",
          "title" : "URL for registration services",
+         "href" : "https://group.ntt/en/dotntt/",
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "42481",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "d21df93a73f35f8c3428a42db60da7ccebfc2a64a42b6f5e5024f358d5e18d44"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-01-08"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-29"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:11",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "ntt",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "TLD1.NIC.NTT",
+         "ipAddresses" : {
+            "v4" : [
+               "103.47.2.2"
+            ],
+            "v6" : [
+               "2001:dda:0:0:0:0:0:2"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "117.104.133.17"
+            ],
+            "v6" : [
+               "2001:218:3001:0:0:0:0:2"
+            ]
+         },
+         "ldhName" : "TLD2.NIC.NTT"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1ba:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.40.17"
+            ]
+         },
+         "ldhName" : "TLD3.NIC.NTT"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1ba:0:0:0:0:145"
+            ],
+            "v4" : [
+               "65.22.40.145"
+            ]
+         },
+         "ldhName" : "TLD5.NIC.NTT",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ]
 }

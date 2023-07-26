@@ -1,29 +1,103 @@
 {
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.THD."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.homedepot.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "thd",
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/thd.html"
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.THD",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.192.9"
+            ],
+            "v6" : [
+               "2a01:8840:ba:0:0:0:0:9"
+            ]
+         }
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "ldhName" : "A2.NIC.THD",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.195.9"
+            ],
+            "v6" : [
+               "2a01:8840:bd:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "href" : "http://www.homedepot.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:bb:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.193.9"
+            ]
+         },
+         "ldhName" : "B0.NIC.THD"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:bc:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.194.9"
+            ]
+         },
+         "ldhName" : "C0.NIC.THD",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "thd-registrant",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -56,9 +130,18 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "thd-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -117,18 +200,9 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "thd-technical"
+         ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "thd-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -188,129 +262,55 @@
                ]
             ]
          ],
+         "handle" : "thd-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "a2b1e70ec2a5831a069b94ccf9b39e547cd9a351055ea87f4b74dd99f7b061e1",
             "digestType" : "2",
-            "keyTag" : "16237",
             "algorithm" : "8",
-            "digest" : "a2b1e70ec2a5831a069b94ccf9b39e547cd9a351055ea87f4b74dd99f7b061e1"
+            "keyTag" : "16237"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "thd",
-   "remarks" : [
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.THD."
-         ],
-         "title" : "Whois Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/thd.html"
       },
       {
-         "description" : [
-            "Registration information: http://www.homedepot.com"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "title" : "URL for registration services",
+         "href" : "http://www.homedepot.com",
+         "rel" : "related"
       }
    ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-05-14"
+         "eventDate" : "2015-05-14",
+         "eventAction" : "registration"
       },
       {
          "eventDate" : "2020-11-17",
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:32:03",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "thd",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.THD",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.192.9"
-            ],
-            "v6" : [
-               "2a01:8840:ba:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.THD",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.195.9"
-            ],
-            "v6" : [
-               "2a01:8840:bd:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B0.NIC.THD",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bb:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.193.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.THD",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:bc:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.194.9"
-            ]
-         }
-      }
-   ]
+   "ldhName" : "thd"
 }

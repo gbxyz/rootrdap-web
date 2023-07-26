@@ -1,7 +1,12 @@
 {
-   "ldhName" : "abc",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:500:120:0:0:0:0:30"
@@ -9,123 +14,66 @@
             "v4" : [
                "192.42.173.30"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM"
+         }
       },
       {
-         "ldhName" : "AC2.NSTLD.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
             "v6" : [
                "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
             ]
-         }
+         },
+         "ldhName" : "AC2.NSTLD.COM"
       },
       {
          "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
             "v6" : [
                "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
             ]
          }
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "ldhName" : "abc",
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ABC."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://abc.com"
          ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "title" : "Comments"
       }
    ],
-   "handle" : "abc",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "39900",
-            "digestType" : "2",
-            "digest" : "7abc5a1f64fbbfad550cfe06953aa56a030be7212a77a60813ff633de705dec8",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "abc-registrant",
          "vcardArray" : [
             "vcard",
@@ -160,76 +108,13 @@
                ]
             ]
          ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Executive Director of Technology"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Disney Enterprises, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "500 South Buena Vista Street\nBurbank CA 91521\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 818 560 1000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 818 553 7210"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-abc@cscglobal.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "abc-administrative"
-      },
-      {
-         "handle" : "abc-technical",
          "roles" : [
             "technical"
          ],
@@ -292,10 +177,87 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "abc-technical"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "abc-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Executive Director of Technology"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Disney Enterprises, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "500 South Buena Vista Street\nBurbank CA 91521\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 818 560 1000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 818 553 7210"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-abc@cscglobal.com"
+               ]
+            ]
+         ]
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "39900",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "7abc5a1f64fbbfad550cfe06953aa56a030be7212a77a60813ff633de705dec8"
+         }
+      ]
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -303,14 +265,52 @@
          "rel" : "related"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
          "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://abc.com"
+         "href" : "http://abc.com",
+         "title" : "URL for registration services"
       }
-   ]
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-07-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:27:39",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ABC."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://abc.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "abc"
 }

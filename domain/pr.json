@@ -1,25 +1,170 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.LACTLD.ORG",
+         "ipAddresses" : {
+            "v4" : [
+               "200.0.68.10"
+            ],
+            "v6" : [
+               "2801:14:a000:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "A0.PR.AFILIAS-NST.INFO",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:25:0:0:0:0:17"
+            ],
+            "v4" : [
+               "199.254.59.17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "199.249.116.17"
+            ],
+            "v6" : [
+               "2001:500:44:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "A2.PR.AFILIAS-NST.INFO"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.60.17"
+            ],
+            "v6" : [
+               "2001:500:26:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "B0.PR.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B2.PR.AFILIAS-NST.ORG",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:4c:0:0:0:0:17"
+            ],
+            "v4" : [
+               "199.249.124.17"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:27:0:0:0:0:17"
+            ],
+            "v4" : [
+               "199.254.61.17"
+            ]
+         },
+         "ldhName" : "C0.PR.AFILIAS-NST.INFO"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.62.17"
+            ],
+            "v6" : [
+               "2001:500:28:0:0:0:0:17"
+            ]
+         },
+         "ldhName" : "D0.PR.AFILIAS-NST.ORG"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.111"
+            ],
+            "v6" : [
+               "2001:678:e:111:0:0:0:53"
+            ]
+         },
+         "ldhName" : "PR-DNS.DENIC.DE",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/pr.html"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.pr"
+      }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digest" : "2e7f12833596203dbef32dbcebc2cfd2f6d3aa4432a9bb39927394c6cf1a844a",
+            "algorithm" : "8",
             "digestType" : "2",
             "keyTag" : "5134"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "1989-08-27"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:24"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "pr-administrative",
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -71,13 +216,53 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "pr-administrative",
+         "roles" : [
+            "administrative"
+         ]
       },
       {
          "roles" : [
-            "technical"
+            "registrant"
          ],
-         "handle" : "pr-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Gauss Research Laboratory Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Calle Vesta 801\nSan Juan 00923\nPuerto Rico"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "pr-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -129,213 +314,25 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Gauss Research Laboratory Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Calle Vesta 801\nSan Juan 00923\nPuerto Rico"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "pr-registrant",
+         "handle" : "pr-technical",
          "roles" : [
-            "registrant"
+            "technical"
          ]
-      }
-   ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pr.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.nic.pr",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "200.0.68.10"
-            ],
-            "v6" : [
-               "2801:14:a000:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.LACTLD.ORG"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.PR.AFILIAS-NST.INFO",
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.59.17"
-            ],
-            "v6" : [
-               "2001:500:25:0:0:0:0:17"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:44:0:0:0:0:17"
-            ],
-            "v4" : [
-               "199.249.116.17"
-            ]
-         },
-         "ldhName" : "A2.PR.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.PR.AFILIAS-NST.ORG",
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.60.17"
-            ],
-            "v6" : [
-               "2001:500:26:0:0:0:0:17"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:4c:0:0:0:0:17"
-            ],
-            "v4" : [
-               "199.249.124.17"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B2.PR.AFILIAS-NST.ORG"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.61.17"
-            ],
-            "v6" : [
-               "2001:500:27:0:0:0:0:17"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.PR.AFILIAS-NST.INFO"
-      },
-      {
-         "ldhName" : "D0.PR.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:28:0:0:0:0:17"
-            ],
-            "v4" : [
-               "199.254.62.17"
-            ]
-         }
-      },
-      {
-         "ldhName" : "PR-DNS.DENIC.DE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.11.111"
-            ],
-            "v6" : [
-               "2001:678:e:111:0:0:0:53"
-            ]
-         }
       }
    ],
    "ldhName" : "pr",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1989-08-27"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.pr"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -343,6 +340,9 @@
             "IANA"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "pr"
 }

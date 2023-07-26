@@ -1,5 +1,15 @@
 {
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "38860",
+            "digest" : "8ff5818a6631fe5ed105d1e518de91a91535a52cf8c0e90ba448f0dc78fdf536"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/cash.html",
@@ -8,59 +18,49 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services",
          "rel" : "related"
       }
    ],
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "events" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "cash-registrant"
+         "eventDate" : "2014-04-17",
+         "eventAction" : "registration"
       },
       {
-         "handle" : "cash-administrative",
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:42",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "entities" : [
+      {
          "roles" : [
             "administrative"
          ],
@@ -123,14 +123,50 @@
                ]
             ]
          ],
+         "handle" : "cash-administrative",
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "cash-technical",
-         "objectClassName" : "entity",
+         "handle" : "cash-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -189,79 +225,17 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "8ff5818a6631fe5ed105d1e518de91a91535a52cf8c0e90ba448f0dc78fdf536",
-            "algorithm" : "8",
-            "keyTag" : "38860",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "handle" : "cash",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "handle" : "cash-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CASH."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-17"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "cash",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
@@ -276,43 +250,42 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N1.NIC.CASH",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.33.44"
-            ],
             "v6" : [
                "2a01:8840:23:0:0:0:0:44"
+            ],
+            "v4" : [
+               "65.22.33.44"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.CASH",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.34.44"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:44"
             ]
          }
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:44"
-            ],
-            "v4" : [
-               "65.22.34.44"
-            ]
-         },
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.CASH"
-      },
-      {
+         "ldhName" : "V0N3.NIC.CASH",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.16.44"
-            ],
             "v6" : [
                "2a01:8840:fa:0:0:0:0:44"
+            ],
+            "v4" : [
+               "161.232.16.44"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.CASH"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V2N0.NIC.CASH",
          "ipAddresses" : {
             "v6" : [
@@ -321,20 +294,47 @@
             "v4" : [
                "65.22.35.44"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V2N1.NIC.CASH",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:44"
-            ],
             "v4" : [
                "161.232.17.44"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:44"
             ]
          },
-         "ldhName" : "V2N1.NIC.CASH",
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "cash"
+   "status" : [
+      "active"
+   ],
+   "handle" : "cash",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CASH."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

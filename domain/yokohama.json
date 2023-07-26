@@ -1,52 +1,11 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "status" : [
+      "active"
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.YOKOHAMA."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "http://www.gmo-registry.com/en/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "yokohama",
-   "ldhName" : "yokohama",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.4"
@@ -54,34 +13,31 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.GMOREGISTRY.NET"
-      },
-      {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
          }
       },
       {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
          "objectClassName" : "nameserver",
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "37.209.196.4"
+            ]
+         }
+      },
+      {
          "ldhName" : "L.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v6" : [
@@ -90,54 +46,49 @@
             "v4" : [
                "37.209.198.4"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "ldhName" : "yokohama",
    "events" : [
       {
-         "eventDate" : "2014-03-27",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-27"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2019-08-20"
       },
       {
-         "eventDate" : "2023-07-26T12:04:24",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:59"
       }
-   ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/yokohama.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digest" : "e03e2af9c07c1acde150dc51e5a2d8803f70626fb5b6deecdabc5f8fdd0bdbaa",
             "digestType" : "2",
-            "keyTag" : "40754"
+            "algorithm" : "8",
+            "keyTag" : "40754",
+            "digest" : "e03e2af9c07c1acde150dc51e5a2d8803f70626fb5b6deecdabc5f8fdd0bdbaa"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/yokohama.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      }
+   ],
    "entities" : [
       {
          "objectClassName" : "entity",
@@ -174,13 +125,15 @@
                ]
             ]
          ],
+         "handle" : "yokohama-registrant",
          "roles" : [
             "registrant"
-         ],
-         "handle" : "yokohama-registrant"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -240,16 +193,15 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "yokohama-technical"
+         "handle" : "yokohama-technical",
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "yokohama-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
+         "handle" : "yokohama-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -308,8 +260,56 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
-   ]
+   ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.YOKOHAMA."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://www.gmo-registry.com/en/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "yokohama"
 }

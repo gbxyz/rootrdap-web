@@ -1,69 +1,84 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/winners.html"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         },
+         "ldhName" : "A.NIC.WINNERS"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.WINNERS",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         }
       },
       {
-         "href" : "http://www.tjx.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "ldhName" : "C.NIC.WINNERS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:b7"
+            ],
+            "v4" : [
+               "156.154.144.183"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.WINNERS"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.WINNERS",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.183"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:b7"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:b7"
+            ],
+            "v4" : [
+               "156.154.159.183"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.WINNERS"
       }
    ],
-   "port43" : "whois.iana.org",
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "The TJX Companies, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "770 Cochituate Road\nFramingham MA 01701\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "winners-registrant"
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "winners-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -123,10 +138,57 @@
                ]
             ]
          ],
+         "handle" : "winners-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "winners-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "The TJX Companies, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "770 Cochituate Road\nFramingham MA 01701\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "winners-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -186,27 +248,10 @@
                ]
             ]
          ],
-         "handle" : "winners-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "e0735a12e87e2c61da2a863567d0d12d3754b2bc42237c53f08280f833f9b42a",
-            "digestType" : "2",
-            "keyTag" : "44842"
-         }
-      ]
-   },
-   "handle" : "winners",
+   "port43" : "whois.iana.org",
    "notices" : [
       {
          "title" : "About This Service",
@@ -217,36 +262,13 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.tjx.com"
          ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "title" : "Comments"
       }
-   ],
-   "status" : [
-      "active"
    ],
    "events" : [
       {
@@ -258,83 +280,61 @@
          "eventDate" : "2022-07-21"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:54"
+         "eventDate" : "2023-07-26T12:32:23",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "ldhName" : "winners",
-   "nameservers" : [
+   "links" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.WINNERS"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/winners.html"
       },
       {
-         "ldhName" : "B.NIC.WINNERS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         }
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.WINNERS",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.WINNERS",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.183"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:b7"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.WINNERS",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:b7"
-            ],
-            "v4" : [
-               "156.154.145.183"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.WINNERS",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.183"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:b7"
-            ]
-         }
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.tjx.com"
       }
-   ]
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "44842",
+            "digest" : "e0735a12e87e2c61da2a863567d0d12d3754b2bc42237c53f08280f833f9b42a"
+         }
+      ]
+   },
+   "ldhName" : "winners",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.tjx.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "winners"
 }

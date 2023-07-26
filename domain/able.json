@@ -1,8 +1,28 @@
 {
+   "ldhName" : "able",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "able-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -38,14 +58,9 @@
          ],
          "roles" : [
             "registrant"
-         ],
-         "handle" : "able-registrant"
+         ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "able-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -105,14 +120,18 @@
                ]
             ]
          ],
+         "handle" : "able-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "handle" : "able-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "able-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -174,30 +193,16 @@
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "45202",
-            "digestType" : "2",
-            "digest" : "c7832f26b62fdf91da819ac5fa524eae2eebe0651caf074b59dc0176d49fd836",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/able.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/able.html"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
          "rel" : "related",
@@ -205,10 +210,17 @@
          "title" : "URL for registration services"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "c7832f26b62fdf91da819ac5fa524eae2eebe0651caf074b59dc0176d49fd836",
+            "keyTag" : "45202",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventDate" : "2016-03-03",
@@ -220,14 +232,16 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:27:40"
       }
    ],
-   "ldhName" : "able",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ldhName" : "A.NIC.ABLE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.10"
@@ -235,11 +249,11 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "B.NIC.ABLE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:2:0:0:0:0:10"
@@ -247,22 +261,22 @@
             "v4" : [
                "37.209.194.10"
             ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
          },
-         "ldhName" : "C.NIC.ABLE",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "C.NIC.ABLE"
+      },
+      {
          "ldhName" : "NS1.DNS.NIC.ABLE",
          "ipAddresses" : {
             "v4" : [
@@ -271,9 +285,12 @@
             "v6" : [
                "2610:a1:1071:0:0:0:0:3"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.DNS.NIC.ABLE",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1072:0:0:0:0:3"
@@ -281,9 +298,7 @@
             "v4" : [
                "156.154.145.3"
             ]
-         },
-         "ldhName" : "NS2.DNS.NIC.ABLE",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
@@ -294,28 +309,13 @@
                "2610:a1:1073:0:0:0:0:3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.ABLE"
+         "ldhName" : "NS3.DNS.NIC.ABLE",
+         "objectClassName" : "nameserver"
       }
    ],
    "handle" : "able",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {

@@ -1,137 +1,43 @@
 {
-   "handle" : "nra",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information:"
-         ]
-      },
-      {
-         "description" : [
-            "http://contact.nra.org/contact-us.aspx"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-07-10"
+         "eventDate" : "2014-07-10",
+         "eventAction" : "registration"
       },
       {
          "eventDate" : "2020-12-10",
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:31:10",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.NRA",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.240.25"
-            ],
-            "v6" : [
-               "2a01:8840:ea:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "ldhName" : "A2.NIC.NRA",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ed:0:0:0:0:25"
-            ],
-            "v4" : [
-               "65.22.243.25"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B0.NIC.NRA",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.241.25"
-            ],
-            "v6" : [
-               "2a01:8840:eb:0:0:0:0:25"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.NRA",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.242.25"
-            ],
-            "v6" : [
-               "2a01:8840:ec:0:0:0:0:25"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "nra",
-   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/nra.html"
+         "href" : "https://www.iana.org/domains/root/db/nra.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
          "rel" : "related"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "44089",
+            "digest" : "c9ce8fb22e6e9eaa566d79696115fc26158be3f19c520de9490748be01982f4d"
+         }
+      ]
+   },
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "nra-administrative",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -191,14 +97,13 @@
                   "nraadmin@nrahq.org"
                ]
             ]
+         ],
+         "handle" : "nra-administrative",
+         "roles" : [
+            "administrative"
          ]
       },
       {
-         "handle" : "nra-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -257,7 +162,12 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ]
+         ],
+         "handle" : "nra-technical",
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
@@ -300,18 +210,108 @@
          ]
       }
    ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "nra",
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.NRA",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:ea:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.240.25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:ed:0:0:0:0:25"
+            ],
+            "v4" : [
+               "65.22.243.25"
+            ]
+         },
+         "ldhName" : "A2.NIC.NRA",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.241.25"
+            ],
+            "v6" : [
+               "2a01:8840:eb:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "B0.NIC.NRA"
+      },
+      {
+         "ldhName" : "C0.NIC.NRA",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.242.25"
+            ],
+            "v6" : [
+               "2a01:8840:ec:0:0:0:0:25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "nra",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information:"
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "http://contact.nra.org/contact-us.aspx"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "44089",
-            "digestType" : "2",
-            "digest" : "c9ce8fb22e6e9eaa566d79696115fc26158be3f19c520de9490748be01982f4d",
-            "algorithm" : "8"
-         }
-      ]
-   }
+   ]
 }

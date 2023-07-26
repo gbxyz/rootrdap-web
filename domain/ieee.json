@@ -1,10 +1,10 @@
 {
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -13,35 +13,19 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "ieee",
-   "ldhName" : "ieee",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "DNS1.NIC.IEEE",
          "ipAddresses" : {
             "v4" : [
@@ -50,23 +34,24 @@
             "v6" : [
                "2a01:618:403:0:0:0:0:125"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "DNS2.NIC.IEEE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:403:0:0:0:0:125"
-            ],
             "v4" : [
                "103.49.83.125"
+            ],
+            "v6" : [
+               "2401:fd80:403:0:0:0:0:125"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS3.NIC.IEEE",
          "objectClassName" : "nameserver",
+         "ldhName" : "DNS3.NIC.IEEE",
          "ipAddresses" : {
             "v6" : [
                "2a01:618:407:0:0:0:0:125"
@@ -77,8 +62,6 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS4.NIC.IEEE",
          "ipAddresses" : {
             "v4" : [
                "43.230.51.125"
@@ -86,10 +69,11 @@
             "v6" : [
                "2401:fd80:407:0:0:0:0:125"
             ]
-         }
+         },
+         "ldhName" : "DNS4.NIC.IEEE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSA.NIC.IEEE",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -98,63 +82,49 @@
             "v6" : [
                "2001:502:ad09:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSA.NIC.IEEE"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.IEEE",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.101.3"
-            ],
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
             ],
             "v4" : [
-               "156.154.102.3"
+               "156.154.101.3"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSC.NIC.IEEE"
+         "ldhName" : "DNSB.NIC.IEEE"
+      },
+      {
+         "ldhName" : "DNSC.NIC.IEEE",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "DNSD.NIC.IEEE",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
          }
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-06-09"
-      },
-      {
-         "eventDate" : "2022-03-23",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
       }
    ],
    "status" : [
       "active"
    ],
-   "objectClassName" : "domain",
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -162,100 +132,69 @@
          "rel" : "related"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.ieee.org",
+         "title" : "URL for registration services",
          "rel" : "related"
       }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digest" : "f12a037a0d1108bdf15c5a58cc488efc19f3b9100c643c67181703e2747be9ab",
-            "digestType" : "2",
-            "keyTag" : "39700"
+            "keyTag" : "39700",
+            "algorithm" : "8",
+            "digestType" : "2"
          },
          {
-            "algorithm" : "8",
             "digest" : "babdaa67d51ee0c44ab2a25b88427f9bdac5bd271dcf6074684d0356de2469b6",
+            "keyTag" : "16667",
             "digestType" : "2",
-            "keyTag" : "16667"
+            "algorithm" : "8"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "entities" : [
+   "events" : [
       {
-         "handle" : "ieee-technical",
-         "roles" : [
-            "technical"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Registry Services Technical"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Nominet"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44.1865332211"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registrytechnical@nominet.uk"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         "eventDate" : "2016-06-09",
+         "eventAction" : "registration"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "ieee-administrative",
+         "eventDate" : "2022-03-23",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:23"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "entities" : [
+      {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -315,12 +254,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "ieee-administrative",
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "ieee-registrant",
          "vcardArray" : [
             "vcard",
@@ -355,8 +294,69 @@
                ]
             ]
          ],
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "ieee-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Registry Services Technical"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Nominet"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Minerva House\nEdmund Halley Road\nOxford Science Park\nOxford OX4 4DQ\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44.1865332211"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registrytechnical@nominet.uk"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "ldhName" : "ieee"
 }

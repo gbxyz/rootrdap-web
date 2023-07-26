@@ -1,11 +1,42 @@
 {
+   "handle" : "tokyo",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TOKYO."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information:"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "http://www.gmo-registry.com/en/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "ldhName" : "tokyo",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
          "handle" : "tokyo-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -67,6 +98,11 @@
          ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "tokyo-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -125,14 +161,14 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "tokyo-technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "tokyo-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -165,40 +201,26 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "tokyo-registrant"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "009538d854dc2b09a147c657b496a8cd5151bc2fbadd83cf0c322f625fa5a7ce",
-            "digestType" : "2",
-            "keyTag" : "34775"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
-   "links" : [
+   "notices" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tokyo.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
    "events" : [
@@ -207,20 +229,44 @@
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2019-08-20",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2019-08-20"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:37"
+         "eventDate" : "2023-07-26T12:32:06",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "009538d854dc2b09a147c657b496a8cd5151bc2fbadd83cf0c322f625fa5a7ce",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "34775"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/tokyo.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
       }
    ],
    "status" : [
       "active"
    ],
-   "ldhName" : "tokyo",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "37.209.192.4"
@@ -228,21 +274,19 @@
             "v6" : [
                "2001:dcd:1:0:0:0:0:4"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET"
+         }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.GMOREGISTRY.NET",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
             "v6" : [
                "2001:dcd:2:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.194.4"
             ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -255,6 +299,7 @@
          }
       },
       {
+         "ldhName" : "L.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:4:0:0:0:0:4"
@@ -263,53 +308,8 @@
                "37.209.198.4"
             ]
          },
-         "ldhName" : "L.GMOREGISTRY.NET",
          "objectClassName" : "nameserver"
       }
    ],
-   "handle" : "tokyo",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TOKYO."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information:"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "http://www.gmo-registry.com/en/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ]
+   "objectClassName" : "domain"
 }

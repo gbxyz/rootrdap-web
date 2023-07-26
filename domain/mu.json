@@ -1,20 +1,23 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "handle" : "mu",
+   "remarks" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/mu.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MU."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: http://www.nic.mu/"
+         ],
+         "title" : "Remark"
       },
       {
-         "rel" : "related",
-         "href" : "http://www.nic.mu/",
-         "title" : "URL for registration services"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
@@ -26,7 +29,6 @@
          "roles" : [
             "registrant"
          ],
-         "handle" : "mu-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -60,9 +62,11 @@
                ]
             ]
          ],
+         "handle" : "mu-registrant",
          "objectClassName" : "entity"
       },
       {
+         "handle" : "mu-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -122,17 +126,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "mu-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "mu-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -192,7 +193,9 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
    "notices" : [
@@ -213,66 +216,78 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
+   "events" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MU."
-         ]
+         "eventDate" : "1995-10-06",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.nic.mu/"
-         ]
+         "eventDate" : "2017-09-14",
+         "eventAction" : "last changed"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventDate" : "2023-07-26T12:31:02",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "handle" : "mu",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/mu.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.mu/",
+         "rel" : "related"
+      }
+   ],
    "ldhName" : "mu",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST1.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:5"
-            ],
             "v4" : [
                "195.253.64.5"
+            ],
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:5"
             ]
-         }
+         },
+         "ldhName" : "ANYCAST1.IRONDNS.NET"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "FORK.STH.DNSNODE.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:3f0:0:306:0:0:0:53"
-            ],
             "v4" : [
                "77.72.229.254"
+            ],
+            "v6" : [
+               "2a01:3f0:0:306:0:0:0:53"
             ]
-         }
+         },
+         "ldhName" : "FORK.STH.DNSNODE.NET"
+      },
+      {
+         "ldhName" : "UDNS1.TLD.MU",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6010:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "UDNS1.TLD.MU",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.10"
-            ],
-            "v6" : [
-               "2001:500:14:6010:ad:0:0:1"
-            ]
-         }
-      },
-      {
+         "ldhName" : "UDNS2.TLD.MU",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:e0:0:0:0:0:98"
@@ -280,26 +295,11 @@
             "v4" : [
                "193.0.9.98"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "UDNS2.TLD.MU"
+         }
       }
    ],
+   "objectClassName" : "domain",
    "status" : [
       "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1995-10-06"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2017-09-14"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
    ]
 }

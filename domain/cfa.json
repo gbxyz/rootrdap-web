@@ -1,8 +1,87 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CFA."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.cfainstitute.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "cfa",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "cfa",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/cfa.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "rel" : "related"
       },
       {
@@ -11,96 +90,60 @@
          "rel" : "related"
       },
       {
-         "href" : "https://www.cfainstitute.org",
          "title" : "URL for registration services",
+         "href" : "https://www.cfainstitute.org",
          "rel" : "related"
       }
-   ],
-   "objectClassName" : "domain",
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "afc328685d96ea41036f4563042db2d7485c8ad9c790bd22111abd414bcafd17",
             "algorithm" : "8",
+            "digestType" : "2",
             "keyTag" : "53505",
-            "digestType" : "2"
+            "digest" : "afc328685d96ea41036f4563042db2d7485c8ad9c790bd22111abd414bcafd17"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "events" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Director, Global Network Engineering, IT Operations"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CFA Institute"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "915 E. High Street\nCharlottesville VA 22902\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "434 951 5310"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "434 951 5320"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-cfa@cscinfo.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cfa-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2015-04-16"
       },
       {
-         "objectClassName" : "entity",
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:46",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "entities" : [
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "cfa-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -160,13 +203,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "cfa-technical"
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -200,117 +243,74 @@
                ]
             ]
          ],
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "cfa-registrant"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CFA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.cfainstitute.org"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "cfa",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
+         "objectClassName" : "entity",
+         "handle" : "cfa-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Director, Global Network Engineering, IT Operations"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CFA Institute"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "915 E. High Street\nCharlottesville VA 22902\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "434 951 5310"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "434 951 5320"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-cfa@cscinfo.com"
+               ]
             ]
-         },
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM"
+         ],
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "ldhName" : "cfa",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-04-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ]
+   "port43" : "whois.iana.org"
 }

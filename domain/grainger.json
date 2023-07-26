@@ -1,97 +1,4 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-10-29",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "grainger",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.GRAINGER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.GRAINGER"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.GRAINGER",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.68"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:44"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.GRAINGER"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.68"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:44"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.GRAINGER"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.GRAINGER",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:44"
-            ],
-            "v4" : [
-               "156.154.159.68"
-            ]
-         }
-      }
-   ],
-   "handle" : "grainger",
    "notices" : [
       {
          "description" : [
@@ -102,80 +9,17 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
          ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.grainger.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "title" : "Comments"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Grainger Registry Services, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Grainger Pkwy\nLake Forest IL 60045\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "grainger-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "grainger-administrative",
          "vcardArray" : [
             "vcard",
@@ -236,9 +80,17 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "grainger-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -297,29 +149,60 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ],
+         ]
+      },
+      {
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
+         "handle" : "grainger-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Grainger Registry Services, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Grainger Pkwy\nLake Forest IL 60045\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "grainger-technical"
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
-            "keyTag" : "63544",
+            "digest" : "9d220e1effe75aebee784d7066bd378773a55462c2da902458de3f80a8bd069e",
             "algorithm" : "8",
-            "digest" : "9d220e1effe75aebee784d7066bd378773a55462c2da902458de3f80a8bd069e"
+            "digestType" : "2",
+            "keyTag" : "63544"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "objectClassName" : "domain",
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -327,14 +210,131 @@
          "rel" : "related"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
-         "href" : "http://www.grainger.com",
          "title" : "URL for registration services",
+         "href" : "http://www.grainger.com",
          "rel" : "related"
       }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-10-29"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:10",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "grainger",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.GRAINGER",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.GRAINGER",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "C.NIC.GRAINGER",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.GRAINGER",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:44"
+            ],
+            "v4" : [
+               "156.154.144.68"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.GRAINGER",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:44"
+            ],
+            "v4" : [
+               "156.154.145.68"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:44"
+            ],
+            "v4" : [
+               "156.154.159.68"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.GRAINGER",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "handle" : "grainger",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.grainger.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

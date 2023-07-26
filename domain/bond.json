@@ -1,21 +1,32 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "fa12aa0eba1f60642345ceefbdd7a36ec310eb1602547beaad5a1793ecca9dd5",
-            "digestType" : "2",
-            "keyTag" : "35002"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "handle" : "bond",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BOND."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.bond"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "ldhName" : "bond",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -49,17 +60,14 @@
                ]
             ]
          ],
+         "handle" : "bond-registrant",
          "roles" : [
             "registrant"
          ],
-         "handle" : "bond-registrant"
+         "objectClassName" : "entity"
       },
       {
          "handle" : "bond-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -118,10 +126,18 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "bond-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -180,15 +196,52 @@
                   "sales@nic.icu"
                ]
             ]
-         ],
-         "handle" : "bond-administrative",
-         "roles" : [
-            "administrative"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-10-30"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-29"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:22",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "35002",
+            "digest" : "fa12aa0eba1f60642345ceefbdd7a36ec310eb1602547beaad5a1793ecca9dd5"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/bond.html",
@@ -206,7 +259,9 @@
          "href" : "http://nic.bond"
       }
    ],
-   "ldhName" : "bond",
+   "status" : [
+      "active"
+   ],
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -221,96 +276,41 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.BOND",
          "ipAddresses" : {
-            "v4" : [
-               "185.24.64.85"
-            ],
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:85"
+            ],
+            "v4" : [
+               "185.24.64.85"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.BOND"
+         }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.BOND",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.248.85"
-            ],
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:85"
-            ]
-         }
-      },
-      {
-         "ldhName" : "D.NIC.BOND",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:85"
             ],
             "v4" : [
+               "212.18.248.85"
+            ]
+         },
+         "ldhName" : "C.NIC.BOND",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.BOND",
+         "ipAddresses" : {
+            "v4" : [
                "212.18.249.85"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:85"
             ]
          }
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-10-30"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-29"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BOND."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://nic.bond"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "bond"
+   "objectClassName" : "domain"
 }

@@ -1,88 +1,5 @@
 {
-   "ldhName" : "ggee",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-12-18"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-07"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "handle" : "ggee",
    "remarks" : [
       {
          "description" : [
@@ -103,65 +20,55 @@
          "title" : "Source"
       }
    ],
-   "handle" : "ggee",
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "0d54d07bebf1a6afe76ecf6d55c48698d8f233b719009329e4465b75078479d5",
-            "digestType" : "2",
-            "keyTag" : "602"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "events" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "GMO Internet, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "ggee-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "2014-12-18"
       },
       {
+         "eventDate" : "2019-08-07",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:00",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "602",
+            "digest" : "0d54d07bebf1a6afe76ecf6d55c48698d8f233b719009329e4465b75078479d5"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ggee.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://nic.ggee",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "entities" : [
+      {
          "objectClassName" : "entity",
+         "handle" : "ggee-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -221,13 +128,12 @@
                ]
             ]
          ],
-         "handle" : "ggee-administrative",
          "roles" : [
             "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "ggee-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -290,25 +196,119 @@
          "roles" : [
             "technical"
          ],
-         "handle" : "ggee-technical"
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "GMO Internet, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Cerulean Tower\n26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "ggee-registrant",
+         "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "ggee",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.192.4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         }
       }
    ],
    "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/ggee.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://nic.ggee",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
+   "status" : [
+      "active"
    ]
 }

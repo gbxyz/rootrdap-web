@@ -1,37 +1,18 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-04-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "nameservers" : [
       {
          "ldhName" : "V0N0.NIC.AIRFORCE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:34"
-            ],
             "v4" : [
                "65.22.32.34"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:34"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.AIRFORCE",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:23:0:0:0:0:34"
@@ -39,18 +20,20 @@
             "v4" : [
                "65.22.33.34"
             ]
-         }
+         },
+         "ldhName" : "V0N1.NIC.AIRFORCE",
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V0N2.NIC.AIRFORCE",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:34"
-            ],
             "v4" : [
                "65.22.34.34"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:34"
             ]
          },
-         "ldhName" : "V0N2.NIC.AIRFORCE",
          "objectClassName" : "nameserver"
       },
       {
@@ -62,20 +45,20 @@
                "161.232.16.34"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.AIRFORCE"
+         "ldhName" : "V0N3.NIC.AIRFORCE",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V2N0.NIC.AIRFORCE",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:34"
-            ],
             "v4" : [
                "65.22.35.34"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:34"
             ]
-         }
+         },
+         "ldhName" : "V2N0.NIC.AIRFORCE"
       },
       {
          "ipAddresses" : {
@@ -90,50 +73,57 @@
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "airforce",
-   "handle" : "airforce",
-   "notices" : [
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "2014-04-17",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:27:47"
       }
    ],
-   "remarks" : [
+   "links" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.AIRFORCE."
-         ]
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/airforce.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "d8c2c957776b06cc6b58a15da206712613092e36e90af34015d6881061dfb5a8",
+            "keyTag" : "3715",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,82 +158,14 @@
             ]
          ],
          "handle" : "airforce-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "airforce-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Donuts Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
-               ]
-            ]
-         ]
-      },
-      {
-         "handle" : "airforce-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "airforce-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -303,38 +225,116 @@
                ]
             ]
          ]
+      },
+      {
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Donuts Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
+               ]
+            ]
+         ],
+         "handle" : "airforce-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "airforce",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.AIRFORCE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "3715",
-            "algorithm" : "8",
-            "digest" : "d8c2c957776b06cc6b58a15da206712613092e36e90af34015d6881061dfb5a8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/airforce.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
-      }
-   ],
-   "objectClassName" : "domain"
+   "handle" : "airforce"
 }

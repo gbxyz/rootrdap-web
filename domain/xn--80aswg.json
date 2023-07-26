@@ -1,84 +1,9 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/xn--80aswg.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://corenic.org",
-         "rel" : "related"
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "fd5803e5d6ca1b8b5b3345b8e6aea0e640988d973ae153713a7bc890a84e3400",
-            "algorithm" : "10",
-            "keyTag" : "61281",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CORE Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "xn--80aswg-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "handle" : "xn--80aswg-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -137,12 +62,51 @@
                   "secretariat@corenic.org"
                ]
             ]
+         ],
+         "handle" : "xn--80aswg-administrative",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CORE Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2, Cours de Rive\nGeneva CH-1204\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "xn--80aswg-registrant",
+         "roles" : [
+            "registrant"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
          "handle" : "xn--80aswg-technical",
          "vcardArray" : [
             "vcard",
@@ -203,9 +167,13 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       }
    ],
+   "port43" : "whois.iana.org",
    "notices" : [
       {
          "description" : [
@@ -224,12 +192,110 @@
          "title" : "Comments"
       }
    ],
+   "events" : [
+      {
+         "eventDate" : "2013-10-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-01-07"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:31"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "fd5803e5d6ca1b8b5b3345b8e6aea0e640988d973ae153713a7bc890a84e3400",
+            "keyTag" : "61281",
+            "digestType" : "2",
+            "algorithm" : "10"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/xn--80aswg.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://corenic.org"
+      }
+   ],
+   "ldhName" : "xn--80aswg",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.64.12"
+            ]
+         },
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.65.11"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.65.12"
+            ]
+         },
+         "ldhName" : "ANYCAST24.IRONDNS.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "xn--80aswg",
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.XN--80ASWG."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -244,73 +310,7 @@
          "title" : "Source"
       }
    ],
-   "handle" : "xn--80aswg",
-   "ldhName" : "xn--80aswg",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST10.IRONDNS.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.12"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.11"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
-      },
-      {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.65.12"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ],
-            "v4" : [
-               "195.253.64.11"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST9.IRONDNS.NET"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2013-10-21"
-      },
-      {
-         "eventDate" : "2022-01-07",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:04:01",
-         "eventAction" : "last update of RDAP database"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

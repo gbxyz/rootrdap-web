@@ -1,25 +1,105 @@
 {
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/pramerica.html"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.prudential.com",
-         "title" : "URL for registration services"
-      }
+   "status" : [
+      "active"
    ],
    "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.PRAMERICA",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.PRAMERICA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.PRAMERICA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:8a"
+            ],
+            "v4" : [
+               "156.154.144.138"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.PRAMERICA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.138"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:8a"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.PRAMERICA"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.138"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:8a"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.PRAMERICA"
+      }
+   ],
+   "ldhName" : "pramerica",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "pramerica-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -53,14 +133,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "pramerica-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "pramerica-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -120,16 +202,13 @@
                ]
             ]
          ],
-         "handle" : "pramerica-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "pramerica-administrative",
          "roles" : [
             "administrative"
          ],
+         "handle" : "pramerica-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -184,38 +263,50 @@
          "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
+            "digest" : "34c29e72afde2f27194a21e6d5c9e91ac44b5c04328d7fade36c026c18c118ea",
             "keyTag" : "42634",
             "algorithm" : "8",
-            "digest" : "34c29e72afde2f27194a21e6d5c9e91ac44b5c04328d7fade36c026c18c118ea"
+            "digestType" : "2"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "handle" : "pramerica",
-   "notices" : [
+   "links" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/pramerica.html"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://www.prudential.com",
+         "rel" : "related"
       }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-14"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:24"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -225,10 +316,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: https://www.prudential.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -237,96 +328,5 @@
          ]
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-07-14"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "pramerica",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.PRAMERICA",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.PRAMERICA"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.PRAMERICA"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.PRAMERICA",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.138"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:8a"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:8a"
-            ],
-            "v4" : [
-               "156.154.145.138"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.PRAMERICA",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.138"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:8a"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.PRAMERICA",
-         "objectClassName" : "nameserver"
-      }
-   ]
+   "handle" : "pramerica"
 }

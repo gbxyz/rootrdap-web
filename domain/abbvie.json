@@ -1,12 +1,157 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ABBVIE."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.abbvie.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "abbvie",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "DNS1.NIC.ABBVIE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:618:403:0:0:0:0:41"
+            ],
+            "v4" : [
+               "213.248.219.41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNS2.NIC.ABBVIE",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:403:0:0:0:0:41"
+            ],
+            "v4" : [
+               "103.49.83.41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.223.41"
+            ],
+            "v6" : [
+               "2a01:618:407:0:0:0:0:41"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.ABBVIE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:407:0:0:0:0:41"
+            ],
+            "v4" : [
+               "43.230.51.41"
+            ]
+         },
+         "ldhName" : "DNS4.NIC.ABBVIE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSA.NIC.ABBVIE",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.100.3"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSB.NIC.ABBVIE",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ]
+         }
+      },
+      {
+         "ldhName" : "DNSC.NIC.ABBVIE",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.103.3"
+            ]
+         },
+         "ldhName" : "DNSD.NIC.ABBVIE",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "abbvie",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "abbvie-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "abbvie-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -68,11 +213,8 @@
          ]
       },
       {
-         "handle" : "abbvie-technical",
-         "roles" : [
-            "technical"
-         ],
          "objectClassName" : "entity",
+         "handle" : "abbvie-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -123,13 +265,13 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
-         "handle" : "abbvie-registrant",
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -163,24 +305,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "abbvie-registrant",
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "56720",
-            "algorithm" : "8",
-            "digest" : "11e4530f78b2c9cb2455d04dfa886a61c3f23e1887e53245b7950fff03ad8b2b"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
@@ -198,9 +328,17 @@
          "title" : "URL for registration services"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "11e4530f78b2c9cb2455d04dfa886a61c3f23e1887e53245b7950fff03ad8b2b",
+            "keyTag" : "56720",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventAction" : "registration",
@@ -212,145 +350,7 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "abbvie",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:403:0:0:0:0:41"
-            ],
-            "v4" : [
-               "213.248.219.41"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS1.NIC.ABBVIE"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:403:0:0:0:0:41"
-            ],
-            "v4" : [
-               "103.49.83.41"
-            ]
-         },
-         "ldhName" : "DNS2.NIC.ABBVIE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.223.41"
-            ],
-            "v6" : [
-               "2a01:618:407:0:0:0:0:41"
-            ]
-         },
-         "ldhName" : "DNS3.NIC.ABBVIE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS4.NIC.ABBVIE",
-         "ipAddresses" : {
-            "v4" : [
-               "43.230.51.41"
-            ],
-            "v6" : [
-               "2401:fd80:407:0:0:0:0:41"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSA.NIC.ABBVIE",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.100.3"
-            ],
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.ABBVIE"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSC.NIC.ABBVIE",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.102.3"
-            ]
-         }
-      },
-      {
-         "ldhName" : "DNSD.NIC.ABBVIE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.103.3"
-            ],
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ]
-         }
-      }
-   ],
-   "handle" : "abbvie",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ABBVIE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.abbvie.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventDate" : "2023-07-26T12:27:39"
       }
    ]
 }

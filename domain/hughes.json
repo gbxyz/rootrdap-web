@@ -1,152 +1,7 @@
 {
-   "events" : [
-      {
-         "eventDate" : "2016-08-04",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "ldhName" : "hughes",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.HUGHES",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6a:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.108.1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6d:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.111.1"
-            ]
-         },
-         "ldhName" : "A2.NIC.HUGHES",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.HUGHES",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.109.1"
-            ],
-            "v6" : [
-               "2a01:8840:6b:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.HUGHES",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.110.1"
-            ],
-            "v6" : [
-               "2a01:8840:6c:0:0:0:0:1"
-            ]
-         }
-      }
-   ],
-   "handle" : "hughes",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.HUGHES."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.hughes.com/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
-      {
-         "handle" : "hughes-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Hughes Satellite Systems Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Inverness Terrace East\nEnglewood CO 80112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
       {
          "vcardArray" : [
             "vcard",
@@ -207,14 +62,58 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "hughes-administrative",
          "roles" : [
             "administrative"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Hughes Satellite Systems Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Inverness Terrace East\nEnglewood CO 80112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "hughes-registrant",
+         "roles" : [
+            "registrant"
          ]
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "hughes-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -273,44 +172,145 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "handle" : "hughes-technical",
-         "roles" : [
-            "technical"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-08-04",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-30"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:21",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "29a6ae50d287b301e6624077720bea37aa9cd752183dd014e7f3028cbcb740f2",
-            "algorithm" : "8",
             "keyTag" : "64252",
-            "digestType" : "2"
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "29a6ae50d287b301e6624077720bea37aa9cd752183dd014e7f3028cbcb740f2"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/hughes.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/hughes.html"
       },
       {
          "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
          "title" : "URL for registration services",
-         "href" : "http://www.hughes.com/"
+         "href" : "http://www.hughes.com/",
+         "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:6a:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.108.1"
+            ]
+         },
+         "ldhName" : "A0.NIC.HUGHES",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.111.1"
+            ],
+            "v6" : [
+               "2a01:8840:6d:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A2.NIC.HUGHES"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.109.1"
+            ],
+            "v6" : [
+               "2a01:8840:6b:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B0.NIC.HUGHES"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.HUGHES",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:6c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.110.1"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "hughes",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.HUGHES."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.hughes.com/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ]
 }

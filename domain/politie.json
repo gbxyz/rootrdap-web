@@ -2,23 +2,9 @@
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventDate" : "2016-06-16",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-07-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "NS1.DNS.POLITIE",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -27,9 +13,11 @@
             "v6" : [
                "2001:678:2c:0:194:0:28:5"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.POLITIE"
       },
       {
+         "ldhName" : "NS3.DNS.POLITIE",
          "ipAddresses" : {
             "v4" : [
                "194.0.25.27"
@@ -38,12 +26,10 @@
                "2001:678:20:0:0:0:0:27"
             ]
          },
-         "ldhName" : "NS3.DNS.POLITIE",
          "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "NS4.DNS.POLITIE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.159.199.203"
@@ -51,11 +37,11 @@
             "v6" : [
                "2620:10a:80ac:0:0:0:0:203"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "ldhName" : "politie",
-   "handle" : "politie",
    "notices" : [
       {
          "description" : [
@@ -66,38 +52,17 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.POLITIE."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
          ]
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -149,10 +114,51 @@
                ]
             ]
          ],
+         "handle" : "politie-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "politie-technical"
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "politie-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Politie Nederland"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Zeisterweg 1\nOdijk 3984 NH\nNetherlands (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
@@ -211,73 +217,67 @@
             ]
          ],
          "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Politie Nederland"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Zeisterweg 1\nOdijk 3984 NH\nNetherlands (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "politie-registrant",
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/politie.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "13",
             "digest" : "7cd0f19183c87d685057bf63640434b80bf32608eb2e014854e398b437b543ce",
+            "algorithm" : "13",
             "digestType" : "2",
             "keyTag" : "9518"
          }
       ]
    },
-   "links" : [
+   "events" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/politie.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "eventDate" : "2016-06-16",
+         "eventAction" : "registration"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-07-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:23",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.POLITIE."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "politie"
 }

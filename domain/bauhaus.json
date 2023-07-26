@@ -1,118 +1,53 @@
 {
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
-         "eventDate" : "2015-03-12",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
       },
       {
          "eventDate" : "2023-07-07",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:09"
       }
    ],
-   "ldhName" : "bauhaus",
-   "nameservers" : [
+   "links" : [
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.64.12"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST10.IRONDNS.NET"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/bauhaus.html",
+         "rel" : "related"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.65.11"
-            ],
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:b"
-            ]
-         },
-         "ldhName" : "ANYCAST23.IRONDNS.NET",
-         "objectClassName" : "nameserver"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
-         "ldhName" : "ANYCAST24.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
-            "v4" : [
-               "195.253.65.12"
-            ]
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.bauhaus.info"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "8e5c6c53e04001f14305794f1b28eb612b8d297cc190f8662b53e3710ce82456",
+            "digestType" : "2",
+            "algorithm" : "10",
+            "keyTag" : "3408"
          }
-      },
-      {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "195.253.64.11"
-            ],
-            "v6" : [
-               "2a01:5b0:4:0:0:0:0:b"
-            ]
-         }
-      }
-   ],
-   "handle" : "bauhaus",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BAUHAUS."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.bauhaus.info"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "bauhaus-registrant",
          "roles" : [
             "registrant"
          ],
+         "handle" : "bauhaus-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -149,9 +84,72 @@
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
+         "objectClassName" : "entity",
+         "handle" : "bauhaus-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "ironDNS Support"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Knipp Medien und Kommunikation GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Martin-Schmeisser-Weg 9\nDortmund North Rhine-Westphalia 44227\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+49-231-9703-0"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+49-231-9703-200"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dnsmaster@irondns.net"
+               ]
+            ]
          ],
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
          "handle" : "bauhaus-administrative",
          "vcardArray" : [
             "vcard",
@@ -212,105 +210,107 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "handle" : "bauhaus-technical",
-         "roles" : [
-            "technical"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "ironDNS Support"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Knipp Medien und Kommunikation GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Martin-Schmeisser-Weg 9\nDortmund North Rhine-Westphalia 44227\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+49-231-9703-0"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+49-231-9703-200"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dnsmaster@irondns.net"
-               ]
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "bauhaus",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST10.IRONDNS.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.64.12"
             ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.65.11"
+            ]
+         },
+         "ldhName" : "ANYCAST23.IRONDNS.NET"
+      },
+      {
+         "ldhName" : "ANYCAST24.IRONDNS.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
+            ],
+            "v4" : [
+               "195.253.65.12"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:5b0:4:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.64.11"
+            ]
+         },
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "bauhaus",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BAUHAUS."
          ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.bauhaus.info"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "3408",
-            "digestType" : "2",
-            "digest" : "8e5c6c53e04001f14305794f1b28eb612b8d297cc190f8662b53e3710ce82456",
-            "algorithm" : "10"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/bauhaus.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.bauhaus.info",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

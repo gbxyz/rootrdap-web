@@ -1,66 +1,102 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cz.html"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:f:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.12.1"
+            ]
+         },
+         "ldhName" : "A.NS.NIC.CZ"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "ldhName" : "B.NS.NIC.CZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:10:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.13.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.cz/",
-         "rel" : "related"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:11:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.14.1"
+            ]
+         },
+         "ldhName" : "C.NS.NIC.CZ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "D.NS.NIC.CZ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:1:0:0:0:0:1"
+            ],
+            "v4" : [
+               "193.29.206.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
       {
-         "handle" : "cz-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CZ.NIC, z.s.p.o"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Milesovska 5\nPrague 130 00\nCzechia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
+         "eventAction" : "registration",
+         "eventDate" : "1993-01-13"
       },
       {
-         "objectClassName" : "entity",
+         "eventDate" : "2023-03-07",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:10",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "20237",
+            "algorithm" : "13",
+            "digestType" : "2",
+            "digest" : "cff0f3ecdbc529c1f0031ba1840bfb835853b9209ed1e508fff48451d7b778e2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cz.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.nic.cz/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -120,12 +156,57 @@
                ]
             ]
          ],
+         "handle" : "cz-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "cz-administrative"
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CZ.NIC, z.s.p.o"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Milesovska 5\nPrague 130 00\nCzechia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "cz-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -185,28 +266,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "handle" : "cz-technical"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "cff0f3ecdbc529c1f0031ba1840bfb835853b9209ed1e508fff48451d7b778e2",
-            "algorithm" : "13",
-            "keyTag" : "20237",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "handle" : "cz",
+   "port43" : "whois.iana.org",
    "notices" : [
       {
          "description" : [
@@ -225,18 +288,19 @@
          ]
       }
    ],
+   "ldhName" : "cz",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.CZ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.cz/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -245,72 +309,8 @@
          "title" : "Source"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1993-01-13"
-      },
-      {
-         "eventDate" : "2023-03-07",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "cz",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NS.NIC.CZ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:f:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.12.1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:10:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.13.1"
-            ]
-         },
-         "ldhName" : "B.NS.NIC.CZ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.14.1"
-            ],
-            "v6" : [
-               "2001:678:11:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NS.NIC.CZ"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "193.29.206.1"
-            ],
-            "v6" : [
-               "2001:678:1:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "D.NS.NIC.CZ",
-         "objectClassName" : "nameserver"
-      }
-   ]
+   "handle" : "cz"
 }

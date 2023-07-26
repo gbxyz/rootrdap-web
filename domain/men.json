@@ -1,27 +1,144 @@
 {
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/men.html",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.10"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ]
+         },
+         "ldhName" : "A.NIC.MEN"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.MEN",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.194.10"
+            ]
+         }
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://nic.men",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         },
+         "ldhName" : "C.NIC.MEN"
+      },
+      {
+         "ldhName" : "X.NIC.MEN",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "Y.NIC.MEN",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.173.82"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "Z.NIC.MEN",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         }
       }
    ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "roles" : [
-            "technical"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Exclusive Registry Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Famous Four Media/Exclusive Registry Limited\n2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "men-registrant"
+      },
+      {
+         "objectClassName" : "entity",
          "handle" : "men-technical",
          "vcardArray" : [
             "vcard",
@@ -82,10 +199,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "men-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -139,104 +259,37 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "handle" : "men-administrative"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "men-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Exclusive Registry Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Famous Four Media/Exclusive Registry Limited\n2nd Floor, Leisure Island Business Centre, Ocean Village\nGibraltar  GX11 1AA\nGibraltar"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/men.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://nic.men",
+         "rel" : "related"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "6c3f496f5f6ada95799145c17fb84c995554114a8e2a77d27c58d7f383c9407f",
             "algorithm" : "8",
-            "keyTag" : "21250",
-            "digestType" : "2"
+            "digestType" : "2",
+            "keyTag" : "21250"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "men",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MEN."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.men"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "events" : [
       {
          "eventDate" : "2015-05-08",
@@ -247,86 +300,33 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:54"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
+   "ldhName" : "men",
+   "remarks" : [
       {
-         "ldhName" : "A.NIC.MEN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         }
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MEN."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "B.NIC.MEN",
-         "objectClassName" : "nameserver"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.men"
+         ]
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.10"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.MEN"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.172.82"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.MEN"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.MEN",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ],
-            "v4" : [
-               "156.154.174.82"
-            ]
-         },
-         "ldhName" : "Z.NIC.MEN",
-         "objectClassName" : "nameserver"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "ldhName" : "men"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "men"
 }

@@ -1,65 +1,88 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "df8506247c16ff7ee32eb239208b60960639af729379a13c135c52d606e8520d",
-            "algorithm" : "8",
-            "keyTag" : "62356",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "entities" : [
+   "nameservers" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "World Rugby Strategic Developments Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "World Rugby House\n8-10 Pembroke Street\nDublin Dublin 2\nIreland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         "ldhName" : "A.NIC.RUGBY",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "rugby-registrant"
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "handle" : "rugby-administrative",
+         "ldhName" : "B.NIC.RUGBY",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.10"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.RUGBY",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.196.10"
+            ]
+         }
+      },
+      {
+         "ldhName" : "X.NIC.RUGBY",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.172.82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "Y.NIC.RUGBY",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
+            ]
+         }
+      },
+      {
+         "ldhName" : "Z.NIC.RUGBY",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.174.82"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:1:82"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "port43" : "whois.iana.org",
+   "entities" : [
+      {
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -110,10 +133,11 @@
                   "primary@rugbydomains.co"
                ]
             ]
-         ]
+         ],
+         "handle" : "rugby-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -176,137 +200,47 @@
          "handle" : "rugby-technical",
          "roles" : [
             "technical"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/rugby.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://nic.rugby/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.RUGBY",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.10"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "B.NIC.RUGBY",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C.NIC.RUGBY",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.172.82"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "X.NIC.RUGBY"
-      },
-      {
-         "ldhName" : "Y.NIC.RUGBY",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.173.82"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ]
-         }
-      },
-      {
-         "ldhName" : "Z.NIC.RUGBY",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.174.82"
-            ],
-            "v6" : [
-               "2610:a1:1076:0:0:0:1:82"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "rugby",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2017-03-23"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-02"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RUGBY."
          ],
-         "title" : "Whois Service"
+         "objectClassName" : "entity"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://nic.rugby/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "World Rugby Strategic Developments Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "World Rugby House\n8-10 Pembroke Street\nDublin Dublin 2\nIreland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "rugby-registrant",
+         "roles" : [
+            "registrant"
          ]
       }
    ],
@@ -327,6 +261,72 @@
          ],
          "title" : "Comments"
       }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2017-03-23",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:36"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "df8506247c16ff7ee32eb239208b60960639af729379a13c135c52d606e8520d",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "62356"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/rugby.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://nic.rugby/",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "ldhName" : "rugby",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RUGBY."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://nic.rugby/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "rugby"
 }

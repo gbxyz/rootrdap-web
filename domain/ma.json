@@ -1,25 +1,7 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1993-11-26"
-      },
-      {
-         "eventDate" : "2023-06-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "ma",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "A.TLD.MA",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -29,10 +11,10 @@
                "81.192.171.131",
                "81.192.171.83"
             ]
-         }
+         },
+         "ldhName" : "A.TLD.MA"
       },
       {
-         "ldhName" : "B.TLD.MA",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -42,7 +24,8 @@
                "81.192.171.132",
                "81.192.171.84"
             ]
-         }
+         },
+         "ldhName" : "B.TLD.MA"
       },
       {
          "objectClassName" : "nameserver",
@@ -67,55 +50,99 @@
                "81.192.171.140"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.TLD.MA"
+         "ldhName" : "D.TLD.MA",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS.INRIA.FR",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "193.51.208.13"
             ]
-         }
+         },
+         "ldhName" : "DNS.INRIA.FR",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "E.TLD.MA",
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "105.73.80.236"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.TLD.MA"
+            ]
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "F.TLD.MA",
          "ipAddresses" : {
-            "v6" : [
-               "2c0f:fb20:100:fc:0:0:0:33"
-            ],
             "v4" : [
                "41.214.240.4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-MA.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
             ],
             "v6" : [
-               "2001:678:c:0:0:0:0:1"
+               "2c0f:fb20:100:fc:0:0:0:33"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.9.1"
+            ]
+         },
+         "ldhName" : "NS-MA.NIC.FR",
+         "objectClassName" : "nameserver"
       }
    ],
-   "handle" : "ma",
+   "status" : [
+      "active"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ma.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.registre.ma"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "41102",
+            "digest" : "ec91608875e8628e96fb65403d828e0782103ee815fd7e0b67ecccab4b44ef56"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "1993-11-26",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-06-20"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:49",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "notices" : [
       {
          "description" : [
@@ -134,74 +161,13 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.REGISTRE.MA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.registre.ma"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "ma-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Agence Nationale de Réglementation des Télécommunications (ANRT)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Avenue Ennakhil, Complexe d'Affaires\nAile Sud, Hay Ryad\nRabat 10100\nMorocco"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "ma-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "ma-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -260,10 +226,54 @@
                   "ma@anrt.ma"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "handle" : "ma-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Agence Nationale de Réglementation des Télécommunications (ANRT)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Avenue Ennakhil, Complexe d'Affaires\nAile Sud, Hay Ryad\nRabat 10100\nMorocco"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "ma-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -323,42 +333,32 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
+         "objectClassName" : "entity"
+      }
+   ],
+   "ldhName" : "ma",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.REGISTRE.MA."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.registre.ma"
          ],
-         "handle" : "ma-technical"
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "ec91608875e8628e96fb65403d828e0782103ee815fd7e0b67ecccab4b44ef56",
-            "algorithm" : "8",
-            "keyTag" : "41102",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ma.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "href" : "http://www.registre.ma",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain"
+   "handle" : "ma"
 }

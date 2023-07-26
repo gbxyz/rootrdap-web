@@ -1,21 +1,142 @@
 {
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LPLFINANCIAL."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "lplfinancial",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.LPLFINANCIAL",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:93"
+            ],
+            "v4" : [
+               "194.169.218.93"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.93"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:93"
+            ]
+         },
+         "ldhName" : "B.NIC.LPLFINANCIAL"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.93"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:93"
+            ]
+         },
+         "ldhName" : "C.NIC.LPLFINANCIAL",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "D.NIC.LPLFINANCIAL",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:93"
+            ],
+            "v4" : [
+               "212.18.249.93"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
    "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-06-30"
+      },
+      {
+         "eventDate" : "2023-02-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:47"
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/lplfinancial.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lplfinancial.html",
          "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "3615",
+            "algorithm" : "7",
+            "digestType" : "1",
+            "digest" : "2d15ec1892f7e0ae2491b0cd144a114f65605778"
+         },
+         {
+            "digest" : "0d3ea589cbd6c634cecf40050614ee0f1a4c364f7cc74e225d29138db054a4fe",
+            "keyTag" : "3615",
+            "digestType" : "2",
+            "algorithm" : "7"
+         },
+         {
+            "keyTag" : "8455",
+            "algorithm" : "7",
+            "digestType" : "1",
+            "digest" : "96f3c31c34d12d10939065bb2b1e0ea86176da0d"
+         },
+         {
+            "digest" : "91d851ae03523f99d6c6def2d0ee451c6778ea3d58f4c347852972cc7b6b50b9",
+            "digestType" : "2",
+            "algorithm" : "7",
+            "keyTag" : "8455"
+         }
+      ]
+   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "lplfinancial-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -26,6 +147,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Richard Cook"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -34,7 +161,7 @@
                [
                   "adr",
                   {
-                     "label" : "4828 Parkway Plaza Blvd\nCharlotte NC 28217\nUnited States of America (the)"
+                     "label" : "4707 Executive Drive\nSan Diego CA 91921-3091\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -46,20 +173,27 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 858-779-5818"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "richard.cook@lplfinancial.com"
                ]
             ]
          ],
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "lplfinancial-registrant"
+            "administrative"
+         ]
       },
       {
          "handle" : "lplfinancial-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -118,10 +252,13 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -132,12 +269,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Richard Cook"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -146,7 +277,7 @@
                [
                   "adr",
                   {
-                     "label" : "4707 Executive Drive\nSan Diego CA 91921-3091\nUnited States of America (the)"
+                     "label" : "4828 Parkway Plaza Blvd\nCharlotte NC 28217\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -158,60 +289,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 858-779-5818"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "richard.cook@lplfinancial.com"
                ]
             ]
          ],
-         "handle" : "lplfinancial-administrative",
+         "handle" : "lplfinancial-registrant",
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "2d15ec1892f7e0ae2491b0cd144a114f65605778",
-            "algorithm" : "7",
-            "keyTag" : "3615",
-            "digestType" : "1"
-         },
-         {
-            "digestType" : "2",
-            "keyTag" : "3615",
-            "algorithm" : "7",
-            "digest" : "0d3ea589cbd6c634cecf40050614ee0f1a4c364f7cc74e225d29138db054a4fe"
-         },
-         {
-            "digest" : "96f3c31c34d12d10939065bb2b1e0ea86176da0d",
-            "algorithm" : "7",
-            "keyTag" : "8455",
-            "digestType" : "1"
-         },
-         {
-            "keyTag" : "8455",
-            "digestType" : "2",
-            "digest" : "91d851ae03523f99d6c6def2d0ee451c6778ea3d58f4c347852972cc7b6b50b9",
-            "algorithm" : "7"
-         }
-      ]
-   },
-   "handle" : "lplfinancial",
    "notices" : [
       {
          "description" : [
@@ -230,92 +317,5 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LPLFINANCIAL."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-06-30",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-02-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "lplfinancial",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.LPLFINANCIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.93"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:93"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.LPLFINANCIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.93"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:93"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.LPLFINANCIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.93"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:93"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.LPLFINANCIAL",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.93"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:93"
-            ]
-         }
-      }
-   ]
+   "ldhName" : "lplfinancial"
 }

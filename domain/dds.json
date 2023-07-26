@@ -1,21 +1,31 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "13ef8fe3e8e2afae0a24b7453d086e2eb0df7828b03a8af18fcae43bec07fd38",
-            "digestType" : "2",
-            "keyTag" : "51931"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "handle" : "dds",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DDS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.dds/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "ldhName" : "dds",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -78,14 +88,11 @@
          "handle" : "dds-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "handle" : "dds-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -144,14 +151,18 @@
                   "iana@registry.godaddy"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "dds-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "objectClassName" : "entity",
+         "handle" : "dds-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -188,17 +199,59 @@
       }
    ],
    "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-01-08",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:13"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "13ef8fe3e8e2afae0a24b7453d086e2eb0df7828b03a8af18fcae43bec07fd38",
+            "keyTag" : "51931",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/dds.html"
+         "href" : "https://www.iana.org/domains/root/db/dds.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
+         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
          "href" : "http://nic.dds/",
@@ -206,21 +259,24 @@
          "rel" : "related"
       }
    ],
-   "ldhName" : "dds",
+   "status" : [
+      "active"
+   ],
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.DDS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "37.209.192.10"
-            ],
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
+            ],
+            "v4" : [
+               "37.209.192.10"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.DDS",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:2:0:0:0:0:10"
@@ -229,42 +285,41 @@
                "37.209.194.10"
             ]
          },
-         "ldhName" : "B.NIC.DDS",
+         "ldhName" : "B.NIC.DDS"
+      },
+      {
+         "ldhName" : "C.NIC.DDS",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
          "objectClassName" : "nameserver"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.DDS"
-      },
-      {
-         "ldhName" : "X.NIC.DDS",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.172.82"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:1:82"
             ]
-         }
+         },
+         "ldhName" : "X.NIC.DDS"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "Y.NIC.DDS",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:1:82"
-            ],
             "v4" : [
                "156.154.173.82"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:1:82"
             ]
          }
       },
@@ -281,60 +336,5 @@
          "objectClassName" : "nameserver"
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-08"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DDS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.dds/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "dds"
+   "objectClassName" : "domain"
 }

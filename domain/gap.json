@@ -1,59 +1,102 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "4462",
-            "algorithm" : "8",
-            "digest" : "59be1d87d0d5d5fd371368fa00c3e73b9e3215ed06cbec2459b8a25c49248b07"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.GAP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "ldhName" : "B.NIC.GAP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.GAP",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.66"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "NS1.DNS.NIC.GAP"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.66"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:42"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.GAP",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.GAP",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.66"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:42"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "gap",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "entities" : [
-      {
-         "handle" : "gap-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "The Gap, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2 Folsom Street\nSan Francisco CA 94105\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
       {
          "objectClassName" : "entity",
          "vcardArray" : [
@@ -121,6 +164,50 @@
          ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "The Gap, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2 Folsom Street\nSan Francisco CA 94105\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "gap-registrant"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "gap-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -180,11 +267,7 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "gap-administrative"
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
@@ -201,102 +284,37 @@
       },
       {
          "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.gap.com"
+         "href" : "http://www.gap.com",
+         "title" : "URL for registration services"
       }
    ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.GAP",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         },
-         "ldhName" : "B.NIC.GAP",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.GAP",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "59be1d87d0d5d5fd371368fa00c3e73b9e3215ed06cbec2459b8a25c49248b07",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "4462"
          }
-      },
-      {
-         "ldhName" : "NS1.DNS.NIC.GAP",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.144.66"
-            ],
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:42"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:42"
-            ],
-            "v4" : [
-               "156.154.145.66"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.GAP",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.GAP",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.66"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:42"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "gap",
+      ]
+   },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-07-14"
+         "eventDate" : "2016-07-14",
+         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:29:56"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -315,24 +333,6 @@
          "title" : "Source",
          "description" : [
             "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],

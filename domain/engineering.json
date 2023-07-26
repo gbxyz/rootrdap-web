@@ -1,23 +1,4 @@
 {
-   "handle" : "engineering",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "remarks" : [
       {
          "description" : [
@@ -38,24 +19,10 @@
          "title" : "Source"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
-      {
-         "eventDate" : "2014-04-03",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-03",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "engineering",
+   "handle" : "engineering",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -70,8 +37,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.ENGINEERING",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1b:0:0:0:0:18"
@@ -79,10 +44,11 @@
             "v4" : [
                "65.22.25.18"
             ]
-         }
+         },
+         "ldhName" : "V0N1.NIC.ENGINEERING",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.ENGINEERING",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -91,11 +57,11 @@
             "v4" : [
                "65.22.26.18"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.ENGINEERING"
       },
       {
          "ldhName" : "V0N3.NIC.ENGINEERING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:f6:0:0:0:0:18"
@@ -103,23 +69,23 @@
             "v4" : [
                "161.232.12.18"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "V2N0.NIC.ENGINEERING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:18"
-            ],
             "v4" : [
                "65.22.27.18"
+            ],
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:18"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "V2N1.NIC.ENGINEERING",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:f7:0:0:0:0:18"
@@ -127,30 +93,19 @@
             "v4" : [
                "161.232.13.18"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/engineering.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
+   "status" : [
+      "active"
    ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -161,21 +116,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Donuts Inc."
+                  "Binky Moon, LLC"
                ],
                [
                   "adr",
                   {
-                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -187,37 +136,16 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "engineering-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "handle" : "engineering-registrant",
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -277,12 +205,13 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "engineering-technical"
+         "handle" : "engineering-technical",
+         "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -293,15 +222,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Binky Moon, LLC"
+                  "Donuts Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                     "label" : "10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -313,28 +248,93 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "engineering-registrant",
-         "roles" : [
-            "registrant"
+         "handle" : "engineering-administrative",
+         "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventDate" : "2014-04-03",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-03"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:30"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/engineering.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/",
+         "rel" : "related"
+      }
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
+            "digest" : "255f04d5d9bd1e74b0cb27ea0a6330e6445fe33ff6dd0a87b5c8fd1fba7e0439",
             "keyTag" : "60949",
             "algorithm" : "8",
-            "digest" : "255f04d5d9bd1e74b0cb27ea0a6330e6445fe33ff6dd0a87b5c8fd1fba7e0439"
+            "digestType" : "2"
          }
-      ],
-      "delegationSigned" : true
-   }
+      ]
+   },
+   "ldhName" : "engineering"
 }

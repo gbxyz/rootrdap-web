@@ -1,44 +1,80 @@
 {
+   "status" : [
+      "active"
+   ],
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/yahoo.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.yahoo"
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
+            ]
+         }
+      },
+      {
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "ldhName" : "yahoo",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "99da5ed59ca94fc8c28c5c7a4a817e7fc0c52688b115dcf743fb914be65ba447",
-            "algorithm" : "8",
-            "keyTag" : "52260",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "yahoo-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -89,10 +125,55 @@
                   "ngtld-oath@cscglobal.com"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "yahoo-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "OATH INC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "701 First Avenue\nSunnyvale CA 94089\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "yahoo-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -152,157 +233,76 @@
                ]
             ]
          ],
-         "handle" : "yahoo-technical",
          "roles" : [
             "technical"
          ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "OATH INC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "701 First Avenue\nSunnyvale CA 94089\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "yahoo-registrant",
-         "roles" : [
-            "registrant"
-         ]
       }
    ],
-   "notices" : [
+   "port43" : "whois.iana.org",
+   "links" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/yahoo.html"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://nic.yahoo",
+         "title" : "URL for registration services"
       }
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.yahoo"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "yahoo",
-   "ldhName" : "yahoo",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "99da5ed59ca94fc8c28c5c7a4a817e7fc0c52688b115dcf743fb914be65ba447",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "52260"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
-      },
-      {
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+      ]
+   },
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2016-01-29"
       },
       {
-         "eventDate" : "2021-07-08",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2021-07-08"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:04:23"
+         "eventDate" : "2023-07-26T12:32:57",
+         "eventAction" : "last update of RDAP database"
       }
-   ]
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://nic.yahoo"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "yahoo"
 }

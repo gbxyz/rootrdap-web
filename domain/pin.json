@@ -1,24 +1,11 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-11-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "status" : [
       "active"
    ],
-   "ldhName" : "pin",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:618:402:0:0:0:0:75"
@@ -27,44 +14,43 @@
                "213.248.218.75"
             ]
          },
-         "ldhName" : "DNS1.NIC.PIN",
-         "objectClassName" : "nameserver"
+         "ldhName" : "DNS1.NIC.PIN"
       },
       {
+         "ldhName" : "DNS2.NIC.PIN",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:75"
-            ],
             "v4" : [
                "103.49.82.75"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:75"
             ]
          },
-         "ldhName" : "DNS2.NIC.PIN",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNS3.NIC.PIN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:75"
-            ],
             "v4" : [
                "213.248.222.75"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:75"
             ]
-         }
+         },
+         "ldhName" : "DNS3.NIC.PIN",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "DNS4.NIC.PIN",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:75"
-            ],
             "v4" : [
                "43.230.50.75"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:75"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -79,30 +65,32 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSB.NIC.PIN",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.101.3"
-            ],
             "v6" : [
                "2001:502:2eda:0:0:0:0:3"
-            ]
-         },
-         "ldhName" : "DNSB.NIC.PIN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "DNSC.NIC.PIN",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
             ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
+            "v4" : [
+               "156.154.101.3"
             ]
          }
       },
       {
+         "ldhName" : "DNSC.NIC.PIN",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNSD.NIC.PIN",
          "ipAddresses" : {
             "v4" : [
                "156.154.103.3"
@@ -110,40 +98,18 @@
             "v6" : [
                "2610:a1:1010:0:0:0:0:3"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.PIN"
+         }
       }
    ],
-   "handle" : "pin",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.PIN."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
+   "ldhName" : "pin",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -156,11 +122,48 @@
    ],
    "entities" : [
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "pin-technical",
          "objectClassName" : "entity",
+         "handle" : "pin-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amazon Registry Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "pin-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -211,6 +214,9 @@
                   "registrytechnical@nominet.uk"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
@@ -274,49 +280,9 @@
                ]
             ]
          ],
+         "handle" : "pin-administrative",
          "roles" : [
             "administrative"
-         ],
-         "handle" : "pin-administrative"
-      },
-      {
-         "handle" : "pin-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amazon Registry Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
@@ -325,32 +291,66 @@
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "keyTag" : "63869",
             "algorithm" : "8",
+            "digestType" : "2",
             "digest" : "b1e2d98d05c72adebb4876fd43cd7b3f1ed02856eeae8547b34769633e056b92"
          }
       ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/pin.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/pin.html",
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "rel" : "related"
       },
       {
-         "rel" : "related",
+         "href" : "https://www.amazonregistry.com",
          "title" : "URL for registration services",
-         "href" : "https://www.amazonregistry.com"
+         "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:20",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.PIN."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "pin"
 }

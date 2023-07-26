@@ -1,43 +1,4 @@
 {
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BEST."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.go.best"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "best",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -52,32 +13,31 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.BEST",
          "ipAddresses" : {
-            "v4" : [
-               "185.24.64.109"
-            ],
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:109"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.BEST"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.BEST",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.109"
             ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:109"
+            "v4" : [
+               "185.24.64.109"
             ]
          }
       },
       {
+         "ldhName" : "C.NIC.BEST",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:109"
+            ],
+            "v4" : [
+               "212.18.248.109"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
          "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.BEST",
          "ipAddresses" : {
             "v4" : [
                "212.18.249.109"
@@ -85,10 +45,11 @@
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:109"
             ]
-         }
+         },
+         "ldhName" : "D.NIC.BEST"
       }
    ],
-   "ldhName" : "best",
+   "objectClassName" : "domain",
    "status" : [
       "active"
    ],
@@ -98,15 +59,14 @@
          "eventDate" : "2014-02-20"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-05-04"
+         "eventDate" : "2022-05-04",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:28:13",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
@@ -119,20 +79,17 @@
          "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "href" : "https://www.go.best",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
       "dsData" : [
          {
+            "digest" : "d0c266b147e9fa7122215ccca36b23d43407bd2f03b2e3b6e917d350b31aa5fd",
             "keyTag" : "41279",
             "digestType" : "2",
-            "digest" : "d0c266b147e9fa7122215ccca36b23d43407bd2f03b2e3b6e917d350b31aa5fd",
             "algorithm" : "8"
          }
       ],
@@ -141,51 +98,10 @@
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "best-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "BestTLD Pty Ltd"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Level 6\n1 Chifley Square\nSydney NSW 2000\nAustralia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "best-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "best-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -244,9 +160,53 @@
                   "tld.ops@centralnic.com"
                ]
             ]
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "BestTLD Pty Ltd"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Level 6\n1 Chifley Square\nSydney NSW 2000\nAustralia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "best-registrant",
+         "roles" : [
+            "registrant"
          ]
       },
       {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -298,11 +258,51 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "best-administrative"
+         "handle" : "best-administrative",
+         "objectClassName" : "entity"
       }
-   ]
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "best",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BEST."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://www.go.best"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "best"
 }

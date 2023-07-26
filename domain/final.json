@@ -1,6 +1,52 @@
 {
+   "ldhName" : "final",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "final-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Núcleo de Informação e Coordenação do Ponto BR - NIC.br"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Av. das Nações Unidas, 11541, 7. andar\nSão Paulo SP 04578-000\nBrazil"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "final-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -52,14 +98,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "final-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "final-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -110,81 +156,27 @@
                   "gtlds-nic@registro.br"
                ]
             ]
-         ],
-         "handle" : "final-administrative",
-         "roles" : [
-            "administrative"
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Núcleo de Informação e Coordenação do Ponto BR - NIC.br"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Av. das Nações Unidas, 11541, 7. andar\nSão Paulo SP 04578-000\nBrazil"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "final-registrant"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "13",
-            "digest" : "d2ecd166572437125f8d9b0157e59bb3d4201f5700c2749eb4b8dc1d30b2964b",
-            "digestType" : "2",
-            "keyTag" : "2471"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/final.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
    "events" : [
       {
          "eventAction" : "registration",
@@ -196,7 +188,30 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:29:42"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "d2ecd166572437125f8d9b0157e59bb3d4201f5700c2749eb4b8dc1d30b2964b",
+            "algorithm" : "13",
+            "digestType" : "2",
+            "keyTag" : "2471"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/final.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       }
    ],
    "status" : [
@@ -204,8 +219,8 @@
    ],
    "nameservers" : [
       {
-         "ldhName" : "A.DNS.BR",
          "objectClassName" : "nameserver",
+         "ldhName" : "A.DNS.BR",
          "ipAddresses" : {
             "v4" : [
                "200.219.148.10"
@@ -216,6 +231,7 @@
          }
       },
       {
+         "ldhName" : "B.DNS.BR",
          "ipAddresses" : {
             "v6" : [
                "2001:12f8:8:0:0:0:0:10"
@@ -224,32 +240,31 @@
                "200.189.41.10"
             ]
          },
-         "ldhName" : "B.DNS.BR",
          "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "C.DNS.BR",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:a:0:0:0:0:10"
-            ],
             "v4" : [
                "200.192.233.10"
+            ],
+            "v6" : [
+               "2001:12f8:a:0:0:0:0:10"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "D.DNS.BR",
          "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:4:0:0:0:0:10"
-            ],
             "v4" : [
                "200.219.154.10"
+            ],
+            "v6" : [
+               "2001:12f8:4:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "D.DNS.BR"
       },
       {
          "ipAddresses" : {
@@ -264,7 +279,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "F.DNS.BR",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -273,11 +287,15 @@
             "v6" : [
                "2001:12f8:c:0:0:0:0:10"
             ]
-         }
+         },
+         "ldhName" : "F.DNS.BR"
       }
    ],
-   "ldhName" : "final",
+   "objectClassName" : "domain",
    "handle" : "final",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -286,34 +304,16 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: "
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
          "description" : [
             "IANA"
          ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ]
 }

@@ -1,44 +1,5 @@
 {
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LIPSY."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "lipsy",
-   "ldhName" : "lipsy",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -53,18 +14,20 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.LIPSY",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:71:0:0:0:0:59"
-            ],
             "v4" : [
                "65.22.115.59"
+            ],
+            "v6" : [
+               "2a01:8840:71:0:0:0:0:59"
             ]
-         },
-         "ldhName" : "A2.NIC.LIPSY",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.LIPSY",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:6f:0:0:0:0:59"
@@ -72,9 +35,7 @@
             "v4" : [
                "65.22.113.59"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.LIPSY"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -92,21 +53,17 @@
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventDate" : "2016-04-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2023-05-25",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "14890",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "af1fcd22dc45f40ee44921a2cdb562f28f3412b8e9fd8648dd393282c29dd449"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "rel" : "related",
@@ -115,27 +72,104 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-21"
+      },
+      {
+         "eventDate" : "2023-05-25",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:45",
+         "eventAction" : "last update of RDAP database"
+      }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "14890",
-            "digestType" : "2",
-            "digest" : "af1fcd22dc45f40ee44921a2cdb562f28f3412b8e9fd8648dd393282c29dd449",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "entities" : [
       {
+         "handle" : "lipsy-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "John Dickinson"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Lipsy Ltd"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Desford Road\nEnderby Leicestershire LE19 4AT\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 844 844 8888"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-lipsy@cscinfo.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "lipsy-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -195,109 +229,75 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
-         ],
-         "handle" : "lipsy-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "John Dickinson"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Lipsy Ltd"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Desford Road\nEnderby Leicestershire LE19 4AT\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 844 844 8888"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-lipsy@cscinfo.com"
-               ]
-            ]
-         ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "lipsy-administrative"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Lipsy Ltd"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Desford Road\nEnderby Leicestershire LE19 4AT\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "lipsy-registrant",
          "roles" : [
             "registrant"
+         ],
+         "handle" : "lipsy-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Lipsy Ltd"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Desford Road\nEnderby Leicestershire LE19 4AT\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "lipsy",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LIPSY."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: "
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
          ]
       }
-   ]
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "lipsy"
 }

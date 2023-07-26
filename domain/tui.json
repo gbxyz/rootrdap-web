@@ -1,17 +1,20 @@
 {
    "handle" : "tui",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TUI."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.tuiregistry.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -20,112 +23,52 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-09-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-11-14",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:41"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.TUI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.103"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:103"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.TUI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.103"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:103"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.TUI",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.103"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:103"
-            ]
-         }
-      },
-      {
-         "ldhName" : "D.NIC.TUI",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:103"
-            ],
-            "v4" : [
-               "212.18.249.103"
-            ]
-         }
-      }
-   ],
    "ldhName" : "tui",
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/tui.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.tuiregistry.com"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "TUI AG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Karl-Wiechert-Allee 4\nLower Saxony\nHannover 30625\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "tui-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "tui-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -185,14 +128,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
-         ],
-         "handle" : "tui-technical"
+         ]
       },
       {
-         "handle" : "tui-administrative",
          "roles" : [
             "administrative"
          ],
@@ -255,68 +195,128 @@
                ]
             ]
          ],
+         "handle" : "tui-administrative",
          "objectClassName" : "entity"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "tui-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "TUI AG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Karl-Wiechert-Allee 4\nLower Saxony\nHannover 30625\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-09-18"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-14"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:10"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/tui.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.tuiregistry.com",
+         "title" : "URL for registration services"
+      }
+   ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digest" : "d53c138ead14027d6192dfb0c2cd0b7cff36986e47fe680d8b05f84ac78d633b",
+            "keyTag" : "23290",
             "digestType" : "2",
-            "keyTag" : "23290"
+            "algorithm" : "8",
+            "digest" : "d53c138ead14027d6192dfb0c2cd0b7cff36986e47fe680d8b05f84ac78d633b"
          },
          {
-            "keyTag" : "35342",
-            "digestType" : "2",
             "digest" : "60bac1e816660ea6cc89bbe453c4cac50ee7fbc9bbac3ca6f8eebfb1a24af721",
-            "algorithm" : "8"
+            "keyTag" : "35342",
+            "algorithm" : "8",
+            "digestType" : "2"
          }
       ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.TUI",
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.103"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:103"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.TUI",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:103"
+            ],
+            "v4" : [
+               "185.24.64.103"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.TUI",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:103"
+            ],
+            "v4" : [
+               "212.18.248.103"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.103"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:103"
+            ]
+         },
+         "ldhName" : "D.NIC.TUI",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain"
 }

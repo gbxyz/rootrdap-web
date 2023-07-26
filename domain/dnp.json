@@ -1,25 +1,50 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/dnp.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.gmoregistry.com/",
-         "rel" : "related"
-      }
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "dnp-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dai Nippon Printing Co., Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1-1-1, Ichigaya-Kagacho\nShinjuku-ku Tokyo 162-8001\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "dnp-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -79,12 +104,10 @@
                ]
             ]
          ],
-         "handle" : "dnp-technical",
-         "roles" : [
-            "technical"
-         ]
+         "objectClassName" : "entity"
       },
       {
+         "handle" : "dnp-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -144,89 +167,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "dnp-administrative",
          "roles" : [
             "administrative"
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dai Nippon Printing Co., Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1-1-1, Ichigaya-Kagacho\nShinjuku-ku Tokyo 162-8001\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "dnp-registrant"
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "51c787a8914386558c84d6cc426e45e73445a0d91094d2a8fb8f4d0ecdb60293",
-            "algorithm" : "8",
-            "keyTag" : "45296",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "dnp",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DNP."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.gmoregistry.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -247,20 +194,45 @@
    ],
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2014-02-27"
+         "eventDate" : "2014-02-27",
+         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2019-08-28",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2019-08-28"
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:29:21"
       }
    ],
-   "status" : [
-      "active"
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "45296",
+            "digest" : "51c787a8914386558c84d6cc426e45e73445a0d91094d2a8fb8f4d0ecdb60293"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/dnp.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.gmoregistry.com/",
+         "title" : "URL for registration services"
+      }
    ],
    "ldhName" : "dnp",
    "nameservers" : [
@@ -277,30 +249,29 @@
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "B.GMOREGISTRY.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
             "v4" : [
                "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [],
             "v4" : [
                "37.209.196.4"
             ]
          },
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
+         "ldhName" : "K.GMOREGISTRY.NET"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "37.209.198.4"
@@ -308,7 +279,36 @@
             "v6" : [
                "2001:dcd:4:0:0:0:0:4"
             ]
-         }
+         },
+         "ldhName" : "L.GMOREGISTRY.NET"
       }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "dnp",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DNP."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.gmoregistry.com/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

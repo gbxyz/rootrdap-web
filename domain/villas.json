@@ -1,10 +1,73 @@
 {
+   "handle" : "villas",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.VILLAS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-06"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:16"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/villas.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "ce7cf1b69581dc8a7d97b190d57a0d90de2f35f3f906e15984163f3bd62b6a7a",
+            "keyTag" : "32191",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "villas-administrative",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -64,14 +127,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "villas-administrative",
+         "roles" : [
+            "administrative"
+         ]
       },
       {
-         "handle" : "villas-technical",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "villas-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -130,10 +195,14 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -167,75 +236,41 @@
                ]
             ]
          ],
-         "handle" : "villas-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "handle" : "villas-registrant"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "ce7cf1b69581dc8a7d97b190d57a0d90de2f35f3f906e15984163f3bd62b6a7a",
-            "algorithm" : "8",
-            "keyTag" : "32191",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "links" : [
+   "notices" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/villas.html",
-         "rel" : "related"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
-   ],
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2014-02-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:47",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
    ],
    "ldhName" : "villas",
    "nameservers" : [
       {
          "ldhName" : "V0N0.NIC.VILLAS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.28.62"
-            ],
             "v6" : [
                "2a01:8840:1e:0:0:0:0:62"
+            ],
+            "v4" : [
+               "65.22.28.62"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -250,6 +285,7 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.30.62"
@@ -258,7 +294,6 @@
                "2a01:8840:20:0:0:0:0:62"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N2.NIC.VILLAS"
       },
       {
@@ -274,6 +309,7 @@
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V2N0.NIC.VILLAS",
          "ipAddresses" : {
             "v4" : [
                "65.22.31.62"
@@ -282,59 +318,23 @@
                "2a01:8840:21:0:0:0:0:62"
             ]
          },
-         "ldhName" : "V2N0.NIC.VILLAS",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:62"
-            ],
             "v4" : [
                "161.232.15.62"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:62"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.VILLAS"
+         "ldhName" : "V2N1.NIC.VILLAS",
+         "objectClassName" : "nameserver"
       }
    ],
-   "handle" : "villas",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.VILLAS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ]
 }

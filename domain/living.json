@@ -14,29 +14,14 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "events" : [
       {
@@ -44,69 +29,25 @@
          "eventDate" : "2015-12-10"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-02"
+         "eventDate" : "2023-06-02",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:30:45",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "living",
-   "nameservers" : [
-      {
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.173.30"
-            ],
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "9429",
+            "digest" : "341ce294ded797dd426a6b6afeaa0c85ba65bbc8ec3d5a7895d77dee88435df4"
          }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "objectClassName" : "domain",
+      ]
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -119,12 +60,10 @@
          "rel" : "related"
       }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "living-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -158,10 +97,78 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "living-registrant",
+         "roles" : [
+            "registrant"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "living-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Bonnie Bryant"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Verisign, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "12061 Bluemont Way\nReston VA 20190\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1-703-925-6999"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1-703-948-3978"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "info@verisign-grs.com"
+               ]
+            ]
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -221,91 +228,84 @@
                ]
             ]
          ],
+         "handle" : "living-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "living-administrative"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Bonnie Bryant"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Verisign, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "12061 Bluemont Way\nReston VA 20190\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1-703-925-6999"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1-703-948-3978"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "info@verisign-grs.com"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "living-technical"
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "341ce294ded797dd426a6b6afeaa0c85ba65bbc8ec3d5a7895d77dee88435df4",
-            "digestType" : "2",
-            "keyTag" : "9429"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "ldhName" : "living",
+   "nameservers" : [
+      {
+         "ldhName" : "AC1.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
          }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ]
 }

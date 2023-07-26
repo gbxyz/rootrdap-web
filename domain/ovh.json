@@ -1,8 +1,55 @@
 {
+   "ldhName" : "ovh",
+   "events" : [
+      {
+         "eventDate" : "2014-05-01",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:15"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "13",
+            "keyTag" : "24939",
+            "digest" : "02a3f789b7d6c726513eebadf7f64741fed1acd57405339d9d50191c620cd914"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ovh.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.ovh.com"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "ovh-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -11,12 +58,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Technical Project Manager"
                ],
                [
                   "org",
@@ -39,38 +80,12 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33 320827332"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33 320839928"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "whois@domain.ovh.net"
                ]
             ]
-         ],
-         "handle" : "ovh-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "handle" : "ovh-technical",
          "vcardArray" : [
             "vcard",
@@ -131,9 +146,13 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "ovh-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -142,6 +161,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Technical Project Manager"
                ],
                [
                   "org",
@@ -164,113 +189,42 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33 320827332"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33 320839928"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "whois@domain.ovh.net"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "ovh-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "02a3f789b7d6c726513eebadf7f64741fed1acd57405339d9d50191c620cd914",
-            "algorithm" : "13",
-            "keyTag" : "24939",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ovh.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.ovh.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-05-01",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.9.1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.FR"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ],
-            "v4" : [
-               "194.146.106.46"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.EXT.NIC.FR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.36.1"
-            ],
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "G.EXT.NIC.FR"
-      }
-   ],
-   "ldhName" : "ovh",
-   "handle" : "ovh",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -281,24 +235,70 @@
          ]
       }
    ],
-   "remarks" : [
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.OVH."
-         ],
-         "title" : "Whois Service"
+         "ldhName" : "D.NIC.FR",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Remark",
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.EXT.NIC.FR",
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.36.1"
+            ]
+         },
+         "ldhName" : "G.EXT.NIC.FR"
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "ovh",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
          "description" : [
-            "Registration information: http://www.ovh.com"
+            "The port-43 whois service for this TLD is WHOIS.NIC.OVH."
          ]
       },
       {
          "description" : [
-            "IANA"
+            "Registration information: http://www.ovh.com"
          ],
-         "title" : "Source"
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ]
 }

@@ -1,25 +1,6 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-06-04",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-01-07"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "bcn",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "ANYCAST10.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
@@ -28,35 +9,36 @@
             "v6" : [
                "2a01:5b0:4:0:0:0:0:c"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "195.253.65.11"
-            ],
             "v6" : [
                "2a01:5b0:5:0:0:0:0:b"
+            ],
+            "v4" : [
+               "195.253.65.11"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "ANYCAST23.IRONDNS.NET"
+         "ldhName" : "ANYCAST23.IRONDNS.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "ANYCAST24.IRONDNS.NET",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:5b0:5:0:0:0:0:c"
-            ],
             "v4" : [
                "195.253.65.12"
+            ],
+            "v6" : [
+               "2a01:5b0:5:0:0:0:0:c"
             ]
          }
       },
       {
-         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "objectClassName" : "nameserver",
+         "ldhName" : "ANYCAST9.IRONDNS.NET",
          "ipAddresses" : {
             "v4" : [
                "195.253.64.11"
@@ -67,115 +49,55 @@
          }
       }
    ],
-   "handle" : "bcn",
-   "notices" : [
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-04"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2022-01-07",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:11",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "remarks" : [
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "2c1faf28afb91e2a2fe1a6c27e480ce2077ccff57cd7e8eac1b658cf2b9d9260",
+            "keyTag" : "20194",
+            "algorithm" : "10",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BCN."
-         ],
-         "title" : "Whois Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/bcn.html"
       },
       {
-         "description" : [
-            "Registration information: http://www.barcelona.cat"
-         ],
-         "title" : "Remark"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "rel" : "related",
+         "href" : "http://www.barcelona.cat",
+         "title" : "URL for registration services"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  ".bcn Admin Contact"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Fundació puntCAT"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Plaça Nova 5, 7a planta\nBarcelona 08002\nSpain"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+34 936 750 354"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+34 934 672 959"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "newgtlds@domini.cat"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "bcn-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "handle" : "bcn-technical",
          "roles" : [
             "technical"
          ],
@@ -238,10 +160,11 @@
                ]
             ]
          ],
+         "handle" : "bcn-technical",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "bcn-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -278,39 +201,116 @@
          "roles" : [
             "registrant"
          ],
-         "handle" : "bcn-registrant"
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "bcn-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  ".bcn Admin Contact"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Fundació puntCAT"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Plaça Nova 5, 7a planta\nBarcelona 08002\nSpain"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+34 936 750 354"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+34 934 672 959"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "newgtlds@domini.cat"
+               ]
+            ]
+         ]
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "ldhName" : "bcn",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BCN."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.barcelona.cat"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "20194",
-            "digestType" : "2",
-            "digest" : "2c1faf28afb91e2a2fe1a6c27e480ce2077ccff57cd7e8eac1b658cf2b9d9260",
-            "algorithm" : "10"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bcn.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.barcelona.cat",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ]
+   "handle" : "bcn"
 }

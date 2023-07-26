@@ -1,90 +1,7 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-11-25",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:40",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.TRAVELERS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.200.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.203.9"
-            ],
-            "v6" : [
-               "2a01:8840:c5:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.TRAVELERS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.TRAVELERS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.201.9"
-            ],
-            "v6" : [
-               "2a01:8840:c3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.TRAVELERS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c4:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.202.9"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "travelers",
    "handle" : "travelers",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -106,7 +23,7 @@
          ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "travelers",
    "entities" : [
       {
          "objectClassName" : "entity",
@@ -175,6 +92,9 @@
          ]
       },
       {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -234,17 +154,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "travelers-technical"
+         "handle" : "travelers-technical",
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "travelers-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -278,24 +192,56 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "travelers-registrant",
+         "roles" : [
+            "registrant"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-11-25",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-11-17",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:09"
+      }
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "975d9fd3b056e286263f680f31106c7509ed466eae0aa08b3b045abae39945f6",
+            "digestType" : "2",
             "algorithm" : "8",
             "keyTag" : "967",
-            "digestType" : "2"
+            "digest" : "975d9fd3b056e286263f680f31106c7509ed466eae0aa08b3b045abae39945f6"
          }
       ],
       "delegationSigned" : true
    },
-   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
@@ -303,14 +249,68 @@
          "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
          "title" : "URL for registration services",
          "href" : "http://www.travelers.com"
       }
-   ]
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.200.9"
+            ]
+         },
+         "ldhName" : "A0.NIC.TRAVELERS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.203.9"
+            ],
+            "v6" : [
+               "2a01:8840:c5:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A2.NIC.TRAVELERS",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.201.9"
+            ]
+         },
+         "ldhName" : "B0.NIC.TRAVELERS"
+      },
+      {
+         "ldhName" : "C0.NIC.TRAVELERS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c4:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.202.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain"
 }

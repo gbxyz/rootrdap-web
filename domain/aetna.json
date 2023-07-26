@@ -1,114 +1,7 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-04-21"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.AETNA",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.AETNA",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.AETNA"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.AETNA",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:5"
-            ],
-            "v4" : [
-               "156.154.144.5"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.5"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:5"
-            ]
-         },
-         "ldhName" : "NS2.DNS.NIC.AETNA",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:5"
-            ],
-            "v4" : [
-               "156.154.159.5"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.AETNA"
-      }
-   ],
-   "ldhName" : "aetna",
    "handle" : "aetna",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -118,25 +11,66 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: https://www.aetna.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
+   "ldhName" : "aetna",
+   "events" : [
+      {
+         "eventDate" : "2016-04-21",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:27:44"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/aetna.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "https://www.aetna.com"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "2f8cd71c2ca149b4da0f60092c775fecdff60b52d0a61064f458e0a99f378012",
+            "keyTag" : "49819",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "aetna-registrant",
+         "objectClassName" : "entity",
+         "handle" : "aetna-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -145,6 +79,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Jeff Muehlhausen"
                ],
                [
                   "org",
@@ -167,12 +107,28 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+011 860 273 0123"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "domains@aetna.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "aetna-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -232,17 +188,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "aetna-technical",
          "roles" : [
             "technical"
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "aetna-administrative",
+         "handle" : "aetna-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -251,12 +202,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Jeff Muehlhausen"
                ],
                [
                   "org",
@@ -279,53 +224,108 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+011 860 273 0123"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "domains@aetna.com"
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ],
          "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "2f8cd71c2ca149b4da0f60092c775fecdff60b52d0a61064f458e0a99f378012",
-            "algorithm" : "8",
-            "keyTag" : "49819",
-            "digestType" : "2"
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.AETNA",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.AETNA",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
          }
-      ]
-   },
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/aetna.html",
-         "rel" : "related"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.AETNA"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "https://www.aetna.com",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.AETNA",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.5"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:5"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.AETNA",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.5"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:5"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.AETNA",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:5"
+            ],
+            "v4" : [
+               "156.154.159.5"
+            ]
+         }
       }
    ],
    "objectClassName" : "domain"

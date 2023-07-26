@@ -1,179 +1,5 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-17"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:56"
-      }
-   ],
-   "ldhName" : "wtc",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.WTC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.WTC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.WTC"
-      },
-      {
-         "ldhName" : "D.NIC.WTC",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.198.9"
-            ]
-         }
-      }
-   ],
-   "handle" : "wtc",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.WTC."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.wtc/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Chief Operating Officer"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "World Trade Centers Association, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "120 Broadway, Suite 3350\nNew York NY 10271\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "(212) 432-2647"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "(212) 488-0064"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "trademark@wtca.org"
-               ]
-            ]
-         ],
-         "handle" : "wtc-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
       {
          "vcardArray" : [
             "vcard",
@@ -234,14 +60,17 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "wtc-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "wtc-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -275,32 +104,113 @@
                ]
             ]
          ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
-            "registrant"
+            "technical"
          ],
-         "handle" : "wtc-registrant"
+         "handle" : "wtc-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Chief Operating Officer"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "World Trade Centers Association, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "120 Broadway, Suite 3350\nNew York NY 10271\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "(212) 432-2647"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "(212) 488-0064"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "trademark@wtca.org"
+               ]
+            ]
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "44554",
-            "algorithm" : "8",
-            "digest" : "b9a169f58e754770e8e23d48da8591a92f602f3d94862b33344c996c0590a6c4"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventDate" : "2014-04-17",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:25"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/wtc.html"
+         "href" : "https://www.iana.org/domains/root/db/wtc.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
@@ -308,9 +218,99 @@
          "href" : "https://about.rdap.org"
       },
       {
-         "rel" : "related",
+         "title" : "URL for registration services",
          "href" : "http://nic.wtc/",
-         "title" : "URL for registration services"
+         "rel" : "related"
       }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "44554",
+            "digest" : "b9a169f58e754770e8e23d48da8591a92f602f3d94862b33344c996c0590a6c4"
+         }
+      ]
+   },
+   "ldhName" : "wtc",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.WTC",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.WTC",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.WTC",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.NIC.WTC",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.198.9"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "wtc",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.WTC."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.wtc/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

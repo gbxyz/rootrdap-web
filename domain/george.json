@@ -1,43 +1,81 @@
 {
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/george.html",
-         "rel" : "related"
+         "ldhName" : "AC1.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM"
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.walmart.com"
+         "ldhName" : "AC3.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC4.NSTLD.COM",
+         "objectClassName" : "nameserver"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "944d283dd22b4fec947c88d9c8369c75852a9b74a3a88a74756864de374496d4",
-            "algorithm" : "8",
-            "keyTag" : "24255",
-            "digestType" : "2"
-         }
-      ]
-   },
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "handle" : "george-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -97,9 +135,55 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "george-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Wal-Mart Stores, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "702 Southwest 8th Street\nBentonville AR 72716\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "george-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -151,77 +235,58 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "george-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "george-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Wal-Mart Stores, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "702 Southwest 8th Street\nBentonville AR 72716\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "notices" : [
+   "links" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/george.html",
+         "rel" : "related"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.walmart.com"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "944d283dd22b4fec947c88d9c8369c75852a9b74a3a88a74756864de374496d4",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "24255"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-07-21"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:59",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "george",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.GEORGE."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -230,79 +295,14 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "handle" : "george",
-   "ldhName" : "george",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC2.NSTLD.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.175.30"
-            ],
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-07-21",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ]
+   "handle" : "george"
 }

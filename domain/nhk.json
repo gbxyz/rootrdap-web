@@ -1,4 +1,56 @@
 {
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         }
+      },
+      {
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
    "links" : [
       {
          "rel" : "related",
@@ -11,9 +63,53 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "6e9c65a3131229436d4c649a5b32377024f1a8d74ae38dfbadde3a007d00c6ae",
+            "keyTag" : "26765",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2014-04-24",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2019-08-20"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:07",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -76,14 +172,9 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "nhk-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -143,9 +234,15 @@
                ]
             ]
          ],
+         "handle" : "nhk-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "nhk-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -179,29 +276,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
-         ],
-         "handle" : "nhk-registrant"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "6e9c65a3131229436d4c649a5b32377024f1a8d74ae38dfbadde3a007d00c6ae",
-            "digestType" : "2",
-            "keyTag" : "26765"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "nhk",
+   "ldhName" : "nhk",
    "remarks" : [
       {
          "description" : [
@@ -210,106 +290,26 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information:"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "http://www.gmo-registry.com/en/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-24"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2019-08-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "nhk",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET"
-      }
-   ]
+   "handle" : "nhk"
 }

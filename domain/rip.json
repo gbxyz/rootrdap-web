@@ -1,6 +1,34 @@
 {
+   "handle" : "rip",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RIP."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "ldhName" : "rip",
    "entities" : [
       {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -60,18 +88,55 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "rip-administrative"
+         "handle" : "rip-administrative",
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "rip-technical",
+         "handle" : "rip-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dog Beach, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "rip-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -131,101 +196,75 @@
                ]
             ]
          ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "rip-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dog Beach, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-10-09"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:34",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/rip.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "e5771475fcab4c6df4608be0ede2efd5cfbcfa1405ca0b121c57557b959a40bd",
             "algorithm" : "8",
-            "keyTag" : "64594",
-            "digestType" : "2"
+            "digestType" : "2",
+            "keyTag" : "64594"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/rip.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2014-10-09",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "status" : [
       "active"
    ],
-   "ldhName" : "rip",
    "nameservers" : [
       {
+         "ldhName" : "V0N0.NIC.RIP",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:22:0:0:0:0:22"
@@ -234,7 +273,6 @@
                "65.22.32.22"
             ]
          },
-         "ldhName" : "V0N0.NIC.RIP",
          "objectClassName" : "nameserver"
       },
       {
@@ -246,11 +284,10 @@
                "65.22.33.22"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.RIP"
+         "ldhName" : "V0N1.NIC.RIP",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.RIP",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -259,29 +296,30 @@
             "v6" : [
                "2a01:8840:24:0:0:0:0:22"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.RIP"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.16.22"
-            ],
             "v6" : [
                "2a01:8840:fa:0:0:0:0:22"
+            ],
+            "v4" : [
+               "161.232.16.22"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N3.NIC.RIP"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "V2N0.NIC.RIP",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:22"
-            ],
             "v4" : [
                "65.22.35.22"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:22"
             ]
          }
       },
@@ -289,52 +327,14 @@
          "objectClassName" : "nameserver",
          "ldhName" : "V2N1.NIC.RIP",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:fb:0:0:0:0:22"
-            ],
             "v4" : [
                "161.232.17.22"
+            ],
+            "v6" : [
+               "2a01:8840:fb:0:0:0:0:22"
             ]
          }
       }
    ],
-   "handle" : "rip",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RIP."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ]
+   "objectClassName" : "domain"
 }

@@ -1,21 +1,49 @@
 {
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "7af19d7f0da9372dc3ce58871f2a06efebdb7d44248ef60a7b0ca5a595192b4c",
-            "algorithm" : "8",
-            "keyTag" : "46084",
-            "digestType" : "2"
-         }
-      ]
-   },
+   "handle" : "exchange",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.EXCHANGE."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "ldhName" : "exchange",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -78,13 +106,11 @@
          "handle" : "exchange-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "exchange-technical",
-         "roles" : [
-            "technical"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -144,13 +170,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "exchange-technical",
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "exchange-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -184,15 +213,25 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "exchange-registrant"
       }
    ],
    "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "7af19d7f0da9372dc3ce58871f2a06efebdb7d44248ef60a7b0ca5a595192b4c",
+            "keyTag" : "46084",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/exchange.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/exchange.html",
          "rel" : "related"
       },
       {
@@ -201,84 +240,9 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "title" : "URL for registration services",
          "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "ldhName" : "exchange",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.14"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:14"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.EXCHANGE"
-      },
-      {
-         "ldhName" : "V0N1.NIC.EXCHANGE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.14"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:14"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N2.NIC.EXCHANGE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:14"
-            ],
-            "v4" : [
-               "65.22.30.14"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.14"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:14"
-            ]
-         },
-         "ldhName" : "V0N3.NIC.EXCHANGE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "V2N0.NIC.EXCHANGE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.31.14"
-            ],
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:14"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.EXCHANGE",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.14"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:14"
-            ]
-         }
+         "rel" : "related"
       }
    ],
    "events" : [
@@ -287,54 +251,90 @@
          "eventDate" : "2014-04-17"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-10"
+         "eventDate" : "2021-11-10",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:35"
       }
    ],
    "status" : [
       "active"
    ],
-   "remarks" : [
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.EXCHANGE."
-         ],
-         "title" : "Whois Service"
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:14"
+            ],
+            "v4" : [
+               "65.22.28.14"
+            ]
+         },
+         "ldhName" : "V0N0.NIC.EXCHANGE",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.14"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:14"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.EXCHANGE",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:14"
+            ],
+            "v4" : [
+               "65.22.30.14"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.EXCHANGE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.EXCHANGE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:14"
+            ],
+            "v4" : [
+               "161.232.14.14"
+            ]
+         }
+      },
+      {
+         "ldhName" : "V2N0.NIC.EXCHANGE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:14"
+            ],
+            "v4" : [
+               "65.22.31.14"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.14"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:14"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.EXCHANGE",
+         "objectClassName" : "nameserver"
       }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "exchange"
+   ]
 }

@@ -1,9 +1,113 @@
 {
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.CHASE",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:27"
+            ],
+            "v4" : [
+               "156.154.144.39"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.39"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:27"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.CHASE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.CHASE",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.39"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:27"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS4.DNS.NIC.CHASE",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.156.39"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:0:27"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.157.39"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:27"
+            ]
+         },
+         "ldhName" : "NS5.DNS.NIC.CHASE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.158.39"
+            ],
+            "v6" : [
+               "2610:a1:1076:0:0:0:0:27"
+            ]
+         },
+         "ldhName" : "NS6.DNS.NIC.CHASE"
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "chase",
+   "events" : [
+      {
+         "eventDate" : "2016-01-14",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:48",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "618f99e685339cf7c8afac24ec3c9a7eaa56b41f622d34f23af944b83be839af",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "35866"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/chase.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
@@ -11,15 +115,16 @@
          "href" : "https://about.rdap.org"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.jpmorganchase.com",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
-   "objectClassName" : "domain",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,12 +184,52 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "chase-administrative"
+         "handle" : "chase-administrative",
+         "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "JPMorgan Chase Bank, National Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "270 Park Avenue\nNew York NY 10017\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "chase-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "chase-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -144,89 +289,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
-         ],
-         "handle" : "chase-technical"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "chase-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "JPMorgan Chase Bank, National Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "270 Park Avenue\nNew York NY 10017\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "35866",
-            "algorithm" : "8",
-            "digest" : "618f99e685339cf7c8afac24ec3c9a7eaa56b41f622d34f23af944b83be839af"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "chase",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.jpmorganchase.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -237,104 +305,36 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.jpmorganchase.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
          ],
-         "title" : "Comments"
+         "title" : "Source"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2016-01-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "NS1.DNS.NIC.CHASE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:27"
-            ],
-            "v4" : [
-               "156.154.144.39"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:27"
-            ],
-            "v4" : [
-               "156.154.145.39"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.CHASE"
-      },
-      {
-         "ldhName" : "NS3.DNS.NIC.CHASE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.39"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:27"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS4.DNS.NIC.CHASE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.156.39"
-            ],
-            "v6" : [
-               "2610:a1:1074:0:0:0:0:27"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS5.DNS.NIC.CHASE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.157.39"
-            ],
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:27"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1076:0:0:0:0:27"
-            ],
-            "v4" : [
-               "156.154.158.39"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS6.DNS.NIC.CHASE"
-      }
-   ],
-   "ldhName" : "chase"
+   "handle" : "chase"
 }

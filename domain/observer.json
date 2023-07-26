@@ -1,38 +1,90 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/observer.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.OBSERVER",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.24.63"
+            ],
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:63"
+            ]
+         }
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.25.63"
+            ],
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:63"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.OBSERVER",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "https://donuts.domains/",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.26.63"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:63"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.OBSERVER"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.12.63"
+            ],
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:63"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.OBSERVER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N0.NIC.OBSERVER",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.27.63"
+            ],
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:63"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.13.63"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:63"
+            ]
+         },
+         "ldhName" : "V2N1.NIC.OBSERVER"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "46084",
-            "digestType" : "2",
-            "digest" : "366c4c042dbbaa5636c254a7ab2331102545dca6f2c81c8ce6b42c6dd0cadeb4",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "objectClassName" : "domain",
+   "ldhName" : "observer",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "observer-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -91,18 +143,50 @@
                   "tldtech@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "observer-technical"
+         ]
       },
       {
-         "handle" : "observer-administrative",
+         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dog Beach, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "observer-registrant"
+      },
+      {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -162,50 +246,76 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "observer-administrative",
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "observer-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dog Beach, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+            "administrative"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-09-15"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-02"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:12"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "46084",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "366c4c042dbbaa5636c254a7ab2331102545dca6f2c81c8ce6b42c6dd0cadeb4"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/observer.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "https://donuts.domains/",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -220,121 +330,11 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "observer",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:63"
-            ],
-            "v4" : [
-               "65.22.24.63"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.OBSERVER"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:63"
-            ],
-            "v4" : [
-               "65.22.25.63"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.OBSERVER"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.OBSERVER",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.26.63"
-            ],
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:63"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.12.63"
-            ],
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:63"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.OBSERVER"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.27.63"
-            ],
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:63"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.OBSERVER"
-      },
-      {
-         "ldhName" : "V2N1.NIC.OBSERVER",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:63"
-            ],
-            "v4" : [
-               "161.232.13.63"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "observer",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-09-15"
-      },
-      {
-         "eventDate" : "2021-11-02",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "handle" : "observer"
 }

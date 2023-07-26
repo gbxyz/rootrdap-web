@@ -1,20 +1,72 @@
 {
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/nec.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "A.GMOREGISTRY.NET"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET"
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nec.com/"
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "37.209.196.4"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         }
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
    "entities" : [
@@ -52,18 +104,18 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "nec-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "nec-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "nec-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -128,7 +180,6 @@
          "roles" : [
             "administrative"
          ],
-         "handle" : "nec-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -188,6 +239,7 @@
                ]
             ]
          ],
+         "handle" : "nec-administrative",
          "objectClassName" : "entity"
       }
    ],
@@ -196,17 +248,45 @@
       "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "3352",
-            "digestType" : "2",
             "digest" : "077c18d635da43d7201764e89118f552f72428b12763f1bc258a5619b71458e7",
-            "algorithm" : "8"
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "3352"
          }
       ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/nec.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.nec.com/",
+         "title" : "URL for registration services"
+      }
    ],
-   "handle" : "nec",
+   "events" : [
+      {
+         "eventDate" : "2015-04-02",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-06-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:05"
+      }
+   ],
+   "ldhName" : "nec",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -215,10 +295,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nec.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -227,88 +307,8 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-02"
-      },
-      {
-         "eventDate" : "2023-06-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.4"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET"
-      },
-      {
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "nec"
+   "handle" : "nec"
 }

@@ -1,31 +1,34 @@
 {
-   "ldhName" : "ruhr",
+   "status" : [
+      "active"
+   ],
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
          "ldhName" : "A.NIC.RUHR",
          "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:155"
-            ],
             "v4" : [
                "194.169.218.155"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:155"
             ]
          }
       },
       {
          "ldhName" : "B.NIC.RUHR",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:155"
-            ],
             "v4" : [
                "185.24.64.155"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:155"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "212.18.248.155"
@@ -34,12 +37,10 @@
                "2a04:2b00:13ee:0:0:0:0:155"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "C.NIC.RUHR"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.RUHR",
          "ipAddresses" : {
             "v4" : [
                "212.18.249.155"
@@ -47,89 +48,67 @@
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:155"
             ]
-         }
+         },
+         "ldhName" : "D.NIC.RUHR"
       }
    ],
-   "status" : [
-      "active"
-   ],
+   "objectClassName" : "domain",
+   "ldhName" : "ruhr",
    "events" : [
       {
          "eventAction" : "registration",
          "eventDate" : "2013-11-25"
       },
       {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-01-18"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:36"
       }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.RUHR."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://dot.ruhr"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "ruhr",
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
       "dsData" : [
          {
-            "digest" : "ec453960c396742efa2ef815fa9c9dba146e838f86f11643704c1630424f4e78",
             "algorithm" : "10",
+            "digestType" : "2",
             "keyTag" : "25131",
-            "digestType" : "2"
+            "digest" : "ec453960c396742efa2ef815fa9c9dba146e838f86f11643704c1630424f4e78"
          },
          {
-            "digestType" : "2",
+            "digest" : "74fb0b871adf46aab5d49a1eb3b8b0b7dda42c023dd045ec0282b6187b3b4cf7",
             "keyTag" : "40422",
             "algorithm" : "10",
-            "digest" : "74fb0b871adf46aab5d49a1eb3b8b0b7dda42c023dd045ec0282b6187b3b4cf7"
+            "digestType" : "2"
          }
       ],
       "delegationSigned" : true
    },
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ruhr.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://dot.ruhr",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "ruhr-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -162,13 +141,79 @@
                   ]
                ]
             ]
-         ],
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "ruhr-registrant"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "ruhr-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Head of Registry Engineering"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "CentralNic"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "44 Gutter Lane, Saddlers House\nLondon EC2V 6BR\nUnited Kingdom of Great Britain and Northern Ireland (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+44 20 33 88 0600"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+44 20 33 88 0601"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld.ops@centralnic.com"
+               ]
+            ]
+         ],
+         "roles" : [
+            "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "ruhr-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -228,95 +273,50 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "ruhr-administrative"
-      },
-      {
-         "handle" : "ruhr-technical",
-         "roles" : [
-            "technical"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Head of Registry Engineering"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "CentralNic"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "44 Gutter Lane, Saddlers House\nLondon EC2V 6BR\nUnited Kingdom of Great Britain and Northern Ireland (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+44 20 33 88 0600"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+44 20 33 88 0601"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld.ops@centralnic.com"
-               ]
-            ]
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
-   "links" : [
+   "port43" : "whois.iana.org",
+   "notices" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ruhr.html"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://dot.ruhr",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
-   ]
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.RUHR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://dot.ruhr"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "ruhr"
 }

@@ -1,4 +1,29 @@
 {
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.UNIREGISTRY.NET."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://uniregistry.link"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "gift",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
@@ -13,16 +38,17 @@
          }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS2.UNIREGISTRY.INFO",
          "ipAddresses" : {
+            "v6" : [],
             "v4" : [
                "64.96.2.1"
-            ],
-            "v6" : []
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.UNIREGISTRY.INFO"
+            ]
+         }
       },
       {
+         "ldhName" : "NS3.UNIREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "185.159.197.3"
@@ -31,39 +57,23 @@
                "2620:10a:80aa:0:0:0:0:3"
             ]
          },
-         "ldhName" : "NS3.UNIREGISTRY.NET",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS4.UNIREGISTRY.INFO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2620:10a:80ab:0:0:0:0:3"
-            ],
             "v4" : [
                "185.159.198.3"
+            ],
+            "v6" : [
+               "2620:10a:80ab:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "NS4.UNIREGISTRY.INFO",
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "gift",
    "status" : [
       "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-01-09"
-      },
-      {
-         "eventDate" : "2022-11-22",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
    ],
    "notices" : [
       {
@@ -83,107 +93,12 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.UNIREGISTRY.NET."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://uniregistry.link"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "gift",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "13",
-            "digest" : "eea1dc9ae9e1bd91256962bfb0d639c8df881e8c56981b667fffc27daf293a6b",
-            "digestType" : "2",
-            "keyTag" : "45508"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Francisco Obispo"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Tucows Inc"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.949.903.3449"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "trs-ops@tucows.com"
-               ]
-            ]
-         ],
          "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "gift-technical"
-      },
-      {
          "roles" : [
             "administrative"
          ],
-         "handle" : "gift-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -242,7 +157,66 @@
                   "contact@unr.com"
                ]
             ]
-         ]
+         ],
+         "handle" : "gift-administrative"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "gift-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Francisco Obispo"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Tucows Inc"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "96 Mowat Avenue\nToronto ON M6K3M1\nCanada"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.949.903.3449"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "trs-ops@tucows.com"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "vcardArray" : [
@@ -278,14 +252,25 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "gift-registrant",
          "roles" : [
             "registrant"
          ],
-         "handle" : "gift-registrant"
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "eea1dc9ae9e1bd91256962bfb0d639c8df881e8c56981b667fffc27daf293a6b",
+            "algorithm" : "13",
+            "digestType" : "2",
+            "keyTag" : "45508"
+         }
+      ]
+   },
    "links" : [
       {
          "rel" : "related",
@@ -293,14 +278,29 @@
          "href" : "https://www.iana.org/domains/root/db/gift.html"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
+         "rel" : "related",
          "href" : "http://uniregistry.link",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
-   ]
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-01-09",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-11-22"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:01"
+      }
+   ],
+   "ldhName" : "gift"
 }

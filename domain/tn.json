@@ -1,5 +1,15 @@
 {
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "05c891303fdee4fdae258e2a7d48370ce21f98058c0ee0a50c438c2878a8e2d6",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "8629"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -7,36 +17,56 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
-         "href" : "http://whois.ati.tn",
          "title" : "URL for registration services",
+         "href" : "http://whois.ati.tn",
          "rel" : "related"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "8629",
-            "algorithm" : "8",
-            "digest" : "05c891303fdee4fdae258e2a7d48370ce21f98058c0ee0a50c438c2878a8e2d6"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventDate" : "1991-05-17",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2017-08-05"
+      },
+      {
+         "eventDate" : "2023-07-26T12:32:06",
+         "eventAction" : "last update of RDAP database"
+      }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "tn-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
+         "handle" : "tn-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -69,77 +99,10 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Mrs WAFA DAHMANI"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Agence Tunisienne d'Internet"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "13 Rue Jugurtha Mutuelle-ville\nTunis 1002\nTunisia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+216 71 846 100"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+216 71 846 600"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "nicadmin@ati.tn"
-               ]
-            ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "tn-administrative",
-         "roles" : [
-            "administrative"
          ]
       },
       {
-         "handle" : "tn-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -202,16 +165,161 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "tn-technical"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "tn-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Mrs WAFA DAHMANI"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Agence Tunisienne d'Internet"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "13 Rue Jugurtha Mutuelle-ville\nTunis 1002\nTunisia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+216 71 846 100"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+216 71 846 600"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "nicadmin@ati.tn"
+               ]
+            ]
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "ldhName" : "tn",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.25"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:25"
+            ]
+         },
+         "ldhName" : "NS-TN.AFRINIC.NET"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.ATI.TN",
+         "ipAddresses" : {
+            "v6" : [
+               "2c0f:fab0:ffff:4:41:228:62:63"
+            ],
+            "v4" : [
+               "41.228.62.63"
+            ]
+         }
+      },
+      {
+         "ldhName" : "NS2.ATI.TN",
+         "ipAddresses" : {
+            "v6" : [
+               "2c0f:fab0:ffff:5:41:228:63:62"
+            ],
+            "v4" : [
+               "41.228.63.62"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.NIC.FR",
+         "ipAddresses" : {
+            "v4" : [
+               "192.93.0.4"
+            ],
+            "v6" : [
+               "2001:660:3005:1:0:0:1:2"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "PCH.ATI.TN",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.94"
+            ],
+            "v6" : [
+               "2001:500:14:6004:ad:0:0:1"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:418:1:0:0:0:0:39"
+            ],
+            "v4" : [
+               "147.28.0.39"
+            ]
+         },
+         "ldhName" : "RIP.PSG.COM",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "handle" : "tn",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.ATI.TN."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -226,115 +334,7 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "tn",
-   "ldhName" : "tn",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TN.AFRINIC.NET",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:25"
-            ],
-            "v4" : [
-               "196.216.168.25"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.ATI.TN",
-         "ipAddresses" : {
-            "v4" : [
-               "41.228.62.63"
-            ],
-            "v6" : [
-               "2c0f:fab0:ffff:4:41:228:62:63"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "41.228.63.62"
-            ],
-            "v6" : [
-               "2c0f:fab0:ffff:5:41:228:63:62"
-            ]
-         },
-         "ldhName" : "NS2.ATI.TN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.93.0.4"
-            ],
-            "v6" : [
-               "2001:660:3005:1:0:0:1:2"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.NIC.FR"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6004:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.94"
-            ]
-         },
-         "ldhName" : "PCH.ATI.TN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:418:1:0:0:0:0:39"
-            ],
-            "v4" : [
-               "147.28.0.39"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "RIP.PSG.COM"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1991-05-17",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2017-08-05"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:37",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

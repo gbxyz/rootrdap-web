@@ -1,64 +1,109 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "49289",
-            "digestType" : "2",
-            "digest" : "79fe828514049fe47cf888bd5bcc827503356c085951aaf089894c61c28f7496",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "punkt Tirol GmbH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Brunecker Strasse 3\nInnsbruck 6020\nAustria"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:e:114:0:0:0:53"
+            ],
+            "v4" : [
+               "194.0.11.114"
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "tirol-registrant"
+         },
+         "ldhName" : "DNS.RYCE-RSP.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "157.90.205.138"
+            ],
+            "v6" : [
+               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
+            ]
+         },
+         "ldhName" : "NS1.DNS.BUSINESS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "193.56.204.153"
+            ],
+            "v6" : [
+               "2a0c:8f40:0:701:0:0:0:153"
+            ]
+         },
+         "ldhName" : "NS1.RYCE-RSP.COM"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tirol.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.nic.tirol"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "79fe828514049fe47cf888bd5bcc827503356c085951aaf089894c61c28f7496",
+            "keyTag" : "49289",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2014-05-29",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-03-11"
+      },
+      {
+         "eventDate" : "2023-07-26T12:32:04",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "entities" : [
+      {
+         "objectClassName" : "entity",
          "handle" : "tirol-administrative",
          "vcardArray" : [
             "vcard",
@@ -119,10 +164,54 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "punkt Tirol GmbH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Brunecker Strasse 3\nInnsbruck 6020\nAustria"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "tirol-registrant",
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -182,104 +271,12 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "tirol-technical"
+         "handle" : "tirol-technical",
+         "objectClassName" : "entity"
       }
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tirol.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.nic.tirol",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS.RYCE-RSP.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.11.114"
-            ],
-            "v6" : [
-               "2001:678:e:114:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.BUSINESS",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:4f8:252:4295:0:0:9d5a:cd8a"
-            ],
-            "v4" : [
-               "157.90.205.138"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.RYCE-RSP.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "193.56.204.153"
-            ],
-            "v6" : [
-               "2a0c:8f40:0:701:0:0:0:153"
-            ]
-         }
-      }
-   ],
+   "port43" : "whois.iana.org",
    "ldhName" : "tirol",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-05-29",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-03-11"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:35"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "remarks" : [
       {
          "description" : [
@@ -288,10 +285,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.tirol"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
@@ -299,6 +296,9 @@
             "IANA"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "tirol"
 }

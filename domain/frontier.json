@@ -1,109 +1,20 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-29"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "frontier",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "ldhName" : "A.NIC.FRONTIER",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.NIC.FRONTIER",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C.NIC.FRONTIER",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:40"
-            ],
-            "v4" : [
-               "156.154.144.64"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.FRONTIER"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:40"
-            ],
-            "v4" : [
-               "156.154.145.64"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.FRONTIER"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.64"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:40"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.FRONTIER",
-         "objectClassName" : "nameserver"
-      }
-   ],
    "handle" : "frontier",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://frontier.com"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -112,24 +23,50 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
+   "ldhName" : "frontier",
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-29"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:52",
+         "eventAction" : "last update of RDAP database"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "b81514d86b0ae37d16a0676680b70b9c714036de9993afb8d38fdbc6879a0062",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "50689"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/frontier.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://frontier.com",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
@@ -199,9 +136,45 @@
       },
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "frontier-administrative",
+         "handle" : "frontier-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Frontier Communications Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "401 Merritt 7\nNorwalk CT 06851\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -253,79 +226,106 @@
                   "hostmaster@frontier.com"
                ]
             ]
-         ]
-      },
-      {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Frontier Communications Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "401 Merritt 7\nNorwalk CT 06851\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "frontier-administrative",
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "frontier-registrant"
+            "administrative"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "50689",
-            "algorithm" : "8",
-            "digest" : "b81514d86b0ae37d16a0676680b70b9c714036de9993afb8d38fdbc6879a0062"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
-   "links" : [
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/frontier.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "ldhName" : "A.NIC.FRONTIER",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.FRONTIER",
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "href" : "http://frontier.com",
-         "title" : "URL for registration services"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "ldhName" : "C.NIC.FRONTIER",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.FRONTIER",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:40"
+            ],
+            "v4" : [
+               "156.154.144.64"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.64"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:40"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.FRONTIER"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.FRONTIER",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.159.64"
+            ],
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:40"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "objectClassName" : "domain"

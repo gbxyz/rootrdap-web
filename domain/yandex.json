@@ -1,47 +1,8 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.yandex.ru/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "handle" : "yandex",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS1.UNIREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "64.96.1.1"
@@ -49,19 +10,22 @@
             "v6" : [
                "2620:57:4000:1:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "NS1.UNIREGISTRY.NET"
       },
       {
+         "ldhName" : "NS2.UNIREGISTRY.INFO",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "64.96.2.1"
-            ]
+            ],
+            "v6" : []
          },
-         "ldhName" : "NS2.UNIREGISTRY.INFO",
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.UNIREGISTRY.NET",
          "ipAddresses" : {
             "v4" : [
                "185.159.197.3"
@@ -69,13 +33,10 @@
             "v6" : [
                "2620:10a:80aa:0:0:0:0:3"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.UNIREGISTRY.NET"
+         }
       },
       {
          "ldhName" : "NS4.UNIREGISTRY.INFO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "185.159.198.3"
@@ -83,12 +44,40 @@
             "v6" : [
                "2620:10a:80ab:0:0:0:0:3"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "yandex",
    "status" : [
       "active"
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "50324",
+            "digestType" : "2",
+            "algorithm" : "13",
+            "digest" : "3f25b6eaf2b08861672673779cb294ce5154337b250da78fb9ed949a997c38df"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/yandex.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.yandex.ru/",
+         "title" : "URL for registration services"
+      }
    ],
    "events" : [
       {
@@ -100,46 +89,30 @@
          "eventDate" : "2022-11-22"
       },
       {
-         "eventDate" : "2023-07-26T12:04:24",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:58"
       }
    ],
-   "links" : [
+   "notices" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/yandex.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.yandex.ru/",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
-   "objectClassName" : "domain",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "3f25b6eaf2b08861672673779cb294ce5154337b250da78fb9ed949a997c38df",
-            "algorithm" : "13",
-            "keyTag" : "50324",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -176,10 +149,11 @@
          "handle" : "yandex-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "yandex-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -231,17 +205,12 @@
                ]
             ]
          ],
-         "handle" : "yandex-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "yandex-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -300,7 +269,38 @@
                   "hostmaster@yandex.net"
                ]
             ]
-         ]
+         ],
+         "handle" : "yandex-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
-   ]
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "yandex",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.yandex.ru/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "yandex"
 }

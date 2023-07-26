@@ -1,23 +1,4 @@
 {
-   "handle" : "flights",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -26,10 +7,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -38,40 +19,27 @@
          "title" : "Source"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
-      {
-         "eventDate" : "2014-01-30",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-10"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "flights",
+   "handle" : "flights",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N0.NIC.FLIGHTS",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.28.31"
-            ],
             "v6" : [
                "2a01:8840:1e:0:0:0:0:31"
+            ],
+            "v4" : [
+               "65.22.28.31"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N1.NIC.FLIGHTS",
          "objectClassName" : "nameserver",
+         "ldhName" : "V0N1.NIC.FLIGHTS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1f:0:0:0:0:31"
@@ -83,7 +51,6 @@
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.FLIGHTS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:20:0:0:0:0:31"
@@ -91,9 +58,12 @@
             "v4" : [
                "65.22.30.31"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.FLIGHTS"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N3.NIC.FLIGHTS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:f8:0:0:0:0:31"
@@ -101,56 +71,102 @@
             "v4" : [
                "161.232.14.31"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.FLIGHTS"
+         }
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "V2N0.NIC.FLIGHTS",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.31.31"
-            ],
             "v6" : [
                "2a01:8840:21:0:0:0:0:31"
+            ],
+            "v4" : [
+               "65.22.31.31"
             ]
          }
       },
       {
-         "ldhName" : "V2N1.NIC.FLIGHTS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.15.31"
-            ],
             "v6" : [
                "2a01:8840:f9:0:0:0:0:31"
+            ],
+            "v4" : [
+               "161.232.15.31"
             ]
-         }
+         },
+         "ldhName" : "V2N1.NIC.FLIGHTS",
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/flights.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/flights.html"
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "rel" : "related",
+         "title" : "URL for registration services",
          "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services"
+         "rel" : "related"
       }
    ],
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e78701c441507ded68434984e0842f491bb2bcef7f0f06c9b4c964aaaad7222f",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "2104"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-01-30"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:45",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "entities" : [
       {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "flights-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -210,14 +226,53 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "flights-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "flights-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "flights-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -277,64 +332,9 @@
                ]
             ]
          ],
-         "handle" : "flights-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "handle" : "flights-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "2104",
-            "algorithm" : "8",
-            "digest" : "e78701c441507ded68434984e0842f491bb2bcef7f0f06c9b4c964aaaad7222f"
-         }
-      ]
-   }
+   "port43" : "whois.iana.org",
+   "ldhName" : "flights"
 }

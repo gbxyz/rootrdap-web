@@ -1,65 +1,108 @@
 {
-   "links" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lidl.html"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LIDL."
+         ]
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.nic.lidl"
+         ]
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.nic.lidl"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
+   "handle" : "lidl",
+   "status" : [
+      "active"
+   ],
    "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.LIDL",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:91"
+            ],
+            "v4" : [
+               "194.169.218.91"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.LIDL",
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.91"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:91"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:91"
+            ],
+            "v4" : [
+               "212.18.248.91"
+            ]
+         },
+         "ldhName" : "C.NIC.LIDL",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:91"
+            ],
+            "v4" : [
+               "212.18.249.91"
+            ]
+         },
+         "ldhName" : "D.NIC.LIDL",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "lidl",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "lidl-registrant",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Schwarz Domains und Services GmbH & Co. KG"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Stiftsbergstrasse 1\nNeckarsulm 74172\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "lidl-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -119,13 +162,50 @@
                ]
             ]
          ],
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
-         "handle" : "lidl-administrative",
+         "handle" : "lidl-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Schwarz Domains und Services GmbH & Co. KG"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Stiftsbergstrasse 1\nNeckarsulm 74172\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "roles" : [
-            "administrative"
+            "registrant"
          ]
       },
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -185,86 +265,57 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "lidl-technical",
          "roles" : [
             "technical"
-         ],
-         "handle" : "lidl-technical"
+         ]
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "5d6de6274d4355afe0aeab14a7090eceefedfe0c",
-            "algorithm" : "7",
             "keyTag" : "25884",
-            "digestType" : "1"
-         },
-         {
+            "algorithm" : "7",
             "digestType" : "1",
-            "keyTag" : "54241",
+            "digest" : "5d6de6274d4355afe0aeab14a7090eceefedfe0c"
+         },
+         {
+            "digest" : "d4a5619a11199e9c1ccdb83c02f2f710ddd79ee8",
+            "digestType" : "1",
             "algorithm" : "7",
-            "digest" : "d4a5619a11199e9c1ccdb83c02f2f710ddd79ee8"
+            "keyTag" : "54241"
          },
          {
-            "keyTag" : "54241",
-            "digestType" : "2",
             "digest" : "12602baa0fe5b77f6070a3e78c6bb5734bc8c415a7a74724d7060d8e23cb7a30",
-            "algorithm" : "7"
+            "digestType" : "2",
+            "algorithm" : "7",
+            "keyTag" : "54241"
          },
          {
+            "digest" : "417e1d3643742999e4f0041289835fcc4691e0462316515ece2cb61db57ef6e9",
             "keyTag" : "25884",
             "digestType" : "2",
-            "digest" : "417e1d3643742999e4f0041289835fcc4691e0462316515ece2cb61db57ef6e9",
             "algorithm" : "7"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "handle" : "lidl",
-   "notices" : [
+   "links" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/lidl.html"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://www.nic.lidl",
+         "title" : "URL for registration services",
+         "rel" : "related"
       }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LIDL."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.nic.lidl"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "status" : [
-      "active"
    ],
    "events" : [
       {
@@ -276,59 +327,8 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:43",
+         "eventAction" : "last update of RDAP database"
       }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:91"
-            ],
-            "v4" : [
-               "194.169.218.91"
-            ]
-         },
-         "ldhName" : "A.NIC.LIDL",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.91"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:91"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.LIDL"
-      },
-      {
-         "ldhName" : "C.NIC.LIDL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:91"
-            ],
-            "v4" : [
-               "212.18.248.91"
-            ]
-         }
-      },
-      {
-         "ldhName" : "D.NIC.LIDL",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:91"
-            ],
-            "v4" : [
-               "212.18.249.91"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "lidl"
+   ]
 }

@@ -1,22 +1,118 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "1d7c249775114e100decb96c9e6cba080bffc5398498c6d3fe2eed6cbaa34663",
-            "digestType" : "2",
-            "keyTag" : "24325"
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:56:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.88.33"
+            ]
+         },
+         "ldhName" : "A0.NIC.DISH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.DISH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:59:0:0:0:0:33"
+            ],
+            "v4" : [
+               "65.22.91.33"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.DISH",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.89.33"
+            ],
+            "v6" : [
+               "2a01:8840:57:0:0:0:0:33"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "port43" : "whois.iana.org",
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.90.33"
+            ],
+            "v6" : [
+               "2a01:8840:58:0:0:0:0:33"
+            ]
+         },
+         "ldhName" : "C0.NIC.DISH"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "entities" : [
       {
-         "handle" : "dish-technical",
+         "handle" : "dish-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dish DBS Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "9601 S. Meridian Boulevard\nEnglewood CO 80112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
             "technical"
          ],
@@ -79,9 +175,11 @@
                ]
             ]
          ],
+         "handle" : "dish-technical",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -144,60 +242,19 @@
                   "ngtld-dish@cscglobal.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "dish-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dish DBS Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "9601 S. Meridian Boulevard\nEnglewood CO 80112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/dish.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/dish.html",
          "rel" : "related"
       },
       {
-         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
          "rel" : "related"
       },
       {
@@ -206,92 +263,32 @@
          "title" : "URL for registration services"
       }
    ],
-   "ldhName" : "dish",
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.DISH",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.88.33"
-            ],
-            "v6" : [
-               "2a01:8840:56:0:0:0:0:33"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "1d7c249775114e100decb96c9e6cba080bffc5398498c6d3fe2eed6cbaa34663",
+            "keyTag" : "24325",
+            "digestType" : "2",
+            "algorithm" : "8"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:59:0:0:0:0:33"
-            ],
-            "v4" : [
-               "65.22.91.33"
-            ]
-         },
-         "ldhName" : "A2.NIC.DISH",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B0.NIC.DISH",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.89.33"
-            ],
-            "v6" : [
-               "2a01:8840:57:0:0:0:0:33"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.90.33"
-            ],
-            "v6" : [
-               "2a01:8840:58:0:0:0:0:33"
-            ]
-         },
-         "ldhName" : "C0.NIC.DISH",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-08-04"
+         "eventDate" : "2016-08-04",
+         "eventAction" : "registration"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-30"
+         "eventDate" : "2020-10-30",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:29:20",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "dish",
    "remarks" : [
       {
          "description" : [
@@ -300,10 +297,10 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.dish.com/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -311,6 +308,9 @@
          ],
          "title" : "Source"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "dish"
 }

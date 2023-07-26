@@ -1,89 +1,6 @@
 {
-   "ldhName" : "kfh",
-   "nameservers" : [
-      {
-         "ldhName" : "A.NIC.KFH",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:43"
-            ],
-            "v4" : [
-               "194.169.218.43"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:43"
-            ],
-            "v4" : [
-               "185.24.64.43"
-            ]
-         },
-         "ldhName" : "B.NIC.KFH",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.KFH",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.43"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:43"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:43"
-            ],
-            "v4" : [
-               "212.18.249.43"
-            ]
-         },
-         "ldhName" : "D.NIC.KFH",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-10-29"
-      },
-      {
-         "eventDate" : "2021-10-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -99,37 +16,113 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
    "handle" : "kfh",
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "47020",
-            "digestType" : "1",
-            "digest" : "2ff9a7948808d902d399e6119e3734c64078ba79",
-            "algorithm" : "8"
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.43"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:43"
+            ]
          },
-         {
-            "keyTag" : "47020",
-            "digestType" : "2",
-            "digest" : "602ee5eb852a6581e8cbdabe8d6685a881cc2783b4de8d8947393231243b80b2",
-            "algorithm" : "8"
-         }
-      ]
-   },
+         "ldhName" : "A.NIC.KFH",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.KFH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:43"
+            ],
+            "v4" : [
+               "185.24.64.43"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.KFH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:43"
+            ],
+            "v4" : [
+               "212.18.248.43"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "D.NIC.KFH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:43"
+            ],
+            "v4" : [
+               "212.18.249.43"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "kfh",
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Kuwait Finance House"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "P.O. Box 24989\nSafat 13110\nKuwait"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "kfh-registrant"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "kfh-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -191,8 +184,7 @@
          ],
          "roles" : [
             "technical"
-         ],
-         "handle" : "kfh-technical"
+         ]
       },
       {
          "objectClassName" : "entity",
@@ -255,57 +247,66 @@
                ]
             ]
          ],
+         "handle" : "kfh-administrative",
          "roles" : [
             "administrative"
-         ],
-         "handle" : "kfh-administrative"
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "kfh-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Kuwait Finance House"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "P.O. Box 24989\nSafat 13110\nKuwait"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         ]
       }
    ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-10-29",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-10-12"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:34"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "1",
+            "algorithm" : "8",
+            "keyTag" : "47020",
+            "digest" : "2ff9a7948808d902d399e6119e3734c64078ba79"
+         },
+         {
+            "digest" : "602ee5eb852a6581e8cbdabe8d6685a881cc2783b4de8d8947393231243b80b2",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "47020"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/kfh.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "title" : "About RDAP",
@@ -314,9 +315,8 @@
       },
       {
          "rel" : "related",
-         "href" : "http://kfh.com",
-         "title" : "URL for registration services"
+         "title" : "URL for registration services",
+         "href" : "http://kfh.com"
       }
-   ],
-   "objectClassName" : "domain"
+   ]
 }

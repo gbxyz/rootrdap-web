@@ -1,5 +1,4 @@
 {
-   "handle" : "na",
    "remarks" : [
       {
          "description" : [
@@ -8,10 +7,10 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.na-nic.com.na/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -20,44 +19,14 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "events" : [
-      {
-         "eventDate" : "1991-05-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-10-04",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "na",
+   "handle" : "na",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "195.253.64.7"
@@ -66,12 +35,9 @@
                "2a01:5b0:4:0:0:0:0:7"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "ANYC2.IRONDNS.NET"
       },
       {
-         "ldhName" : "ETLD-1.ANYCAST.NET",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "45.54.45.54"
@@ -79,7 +45,9 @@
             "v6" : [
                "2607:f740:45:0:0:0:0:54"
             ]
-         }
+         },
+         "ldhName" : "ETLD-1.ANYCAST.NET",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
@@ -94,23 +62,36 @@
          }
       },
       {
-         "ldhName" : "NA.ANYCASTDNS.CZ",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [],
             "v4" : [
                "185.28.194.194",
                "185.38.108.108"
-            ]
-         }
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NA.ANYCASTDNS.CZ",
+         "objectClassName" : "nameserver"
       }
    ],
-   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "eae8c2767c1c52c78b844247a31b0ef44988782cb5517d502983ba75de98a627",
+            "keyTag" : "25079",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
-         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
          "href" : "https://www.iana.org/domains/root/db/na.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "rel" : "related"
       },
       {
          "href" : "https://about.rdap.org",
@@ -118,17 +99,45 @@
          "rel" : "related"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.na-nic.com.na/",
-         "rel" : "related"
+         "title" : "URL for registration services"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "1991-05-08",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-10-04"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:03"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
       }
    ],
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "na-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -162,14 +171,84 @@
                ]
             ]
          ],
+         "handle" : "na-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "handle" : "na-administrative",
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "NA Domain Techs"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Namibian Network Information Center"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "PO Box 7022\nSwakopmund 13002\nNamibia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+264 81 124 6733"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+264 88 624273"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "dns-admin@na-nic.com"
+               ]
+            ]
+         ],
+         "handle" : "na-technical"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "na-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -229,87 +308,8 @@
                ]
             ]
          ]
-      },
-      {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "na-technical",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "NA Domain Techs"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Namibian Network Information Center"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "PO Box 7022\nSwakopmund 13002\nNamibia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+264 81 124 6733"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+264 88 624273"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "dns-admin@na-nic.com"
-               ]
-            ]
-         ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "25079",
-            "algorithm" : "8",
-            "digest" : "eae8c2767c1c52c78b844247a31b0ef44988782cb5517d502983ba75de98a627"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+   "ldhName" : "na"
 }

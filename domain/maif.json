@@ -1,32 +1,67 @@
 {
-   "remarks" : [
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.173.30"
+            ],
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "description" : [
-            "Registration information: http://www.maif.fr"
-         ],
-         "title" : "Remark"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
+            ]
+         },
+         "ldhName" : "AC2.NSTLD.COM",
+         "objectClassName" : "nameserver"
       },
       {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ],
+   "ldhName" : "maif",
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
          "title" : "Comments",
@@ -37,109 +72,10 @@
          ]
       }
    ],
-   "handle" : "maif",
-   "ldhName" : "maif",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM"
-      },
-      {
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         }
-      },
-      {
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-02-13",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/maif.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.maif.fr"
-      }
-   ],
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "e44bc6e7cba1624a5f16941f1d53fe470a3a7da4b1c592878d1b32e8ebef667c",
-            "algorithm" : "8",
-            "keyTag" : "48459",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -199,14 +135,57 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "maif-technical",
          "roles" : [
             "technical"
+         ]
+      },
+      {
+         "roles" : [
+            "registrant"
          ],
-         "handle" : "maif-technical"
+         "handle" : "maif-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Mutuelle Assurance Instituteur France (MAIF)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "200 avenue Salvador Allende\nBP 303 Cedex\nNiort 79038\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "maif-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -265,52 +244,73 @@
                   "ngtld-maif@cscinfo.com"
                ]
             ]
-         ],
-         "handle" : "maif-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Mutuelle Assurance Instituteur France (MAIF)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "200 avenue Salvador Allende\nBP 303 Cedex\nNiort 79038\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "maif-registrant",
-         "roles" : [
-            "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "48459",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "e44bc6e7cba1624a5f16941f1d53fe470a3a7da4b1c592878d1b32e8ebef667c"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/maif.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.maif.fr",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-02-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:50"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.maif.fr"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "maif"
 }

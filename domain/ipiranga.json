@@ -1,21 +1,67 @@
 {
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "64375",
             "digestType" : "2",
-            "digest" : "acf8a18748a01a0dfeea2a9078c2ca53721c508831b9c151db77ae4342065538",
-            "algorithm" : "8"
+            "algorithm" : "8",
+            "keyTag" : "64375",
+            "digest" : "acf8a18748a01a0dfeea2a9078c2ca53721c508831b9c151db77ae4342065538"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/ipiranga.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://ipiranga.com.br"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-04-02",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:27",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
    ],
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "handle" : "ipiranga-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -26,21 +72,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Fernanda Menezes"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Ipiranga Produtos de Petroleo"
+                  "Ipiranga Produtos de Petroleo S.A."
                ],
                [
                   "adr",
                   {
-                     "label" : "329 Sao Cristovao\nRio de Janeiro RJ 20941-900\nBrazil"
+                     "label" : "Rua Francisco Eugenio, 329 Sao Cristovao\nRio de Janeiro RJ 20941-900\nBrazil"
                   },
                   "text",
                   [
@@ -52,25 +92,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+55.2125745923"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "fernandarm@ipiranga.com.br"
                ]
             ]
          ],
-         "handle" : "ipiranga-administrative",
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
@@ -133,12 +161,13 @@
                ]
             ]
          ],
+         "handle" : "ipiranga-technical",
          "roles" : [
             "technical"
-         ],
-         "handle" : "ipiranga-technical"
+         ]
       },
       {
+         "handle" : "ipiranga-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -149,15 +178,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Fernanda Menezes"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Ipiranga Produtos de Petroleo S.A."
+                  "Ipiranga Produtos de Petroleo"
                ],
                [
                   "adr",
                   {
-                     "label" : "Rua Francisco Eugenio, 329 Sao Cristovao\nRio de Janeiro RJ 20941-900\nBrazil"
+                     "label" : "329 Sao Cristovao\nRio de Janeiro RJ 20941-900\nBrazil"
                   },
                   "text",
                   [
@@ -169,39 +204,32 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+55.2125745923"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "fernandarm@ipiranga.com.br"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "ipiranga-registrant",
          "roles" : [
-            "registrant"
-         ]
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "ldhName" : "ipiranga",
    "objectClassName" : "domain",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ipiranga.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://ipiranga.com.br",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
    "nameservers" : [
       {
-         "ldhName" : "NS1.DNS.NIC.IPIRANGA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1071:0:0:0:0:53"
@@ -209,9 +237,12 @@
             "v4" : [
                "156.154.144.83"
             ]
-         }
+         },
+         "ldhName" : "NS1.DNS.NIC.IPIRANGA",
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "NS2.DNS.NIC.IPIRANGA",
          "ipAddresses" : {
             "v4" : [
                "156.154.145.83"
@@ -220,11 +251,9 @@
                "2610:a1:1072:0:0:0:0:53"
             ]
          },
-         "ldhName" : "NS2.DNS.NIC.IPIRANGA",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.IPIRANGA",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
@@ -233,29 +262,30 @@
             "v4" : [
                "156.154.159.83"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.IPIRANGA"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.DNS.NIC.IPIRANGA",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:0:53"
-            ],
             "v4" : [
                "156.154.156.83"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:0:53"
             ]
-         }
+         },
+         "ldhName" : "NS4.DNS.NIC.IPIRANGA",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "NS5.DNS.NIC.IPIRANGA",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1075:0:0:0:0:53"
-            ],
             "v4" : [
                "156.154.157.83"
+            ],
+            "v6" : [
+               "2610:a1:1075:0:0:0:0:53"
             ]
          }
       },
@@ -272,24 +302,10 @@
          "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "ipiranga",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-04-02"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "status" : [
       "active"
    ],
+   "handle" : "ipiranga",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -304,29 +320,13 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "ipiranga"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

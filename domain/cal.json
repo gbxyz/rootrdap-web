@@ -1,43 +1,77 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cal.html",
-         "rel" : "related"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://www.registry.google",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
+   "handle" : "cal",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "ldhName" : "cal",
+   "events" : [
+      {
+         "eventDate" : "2014-09-04",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-04-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:36"
+      }
+   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
             "digest" : "5d5349186bbcc0b98dcc5662af9140ffe0b36f982043e2888043ba80665b08e3",
             "digestType" : "2",
+            "algorithm" : "8",
             "keyTag" : "18550"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/cal.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://www.registry.google",
+         "title" : "URL for registration services"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "cal-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -97,9 +131,15 @@
                ]
             ]
          ],
+         "handle" : "cal-administrative",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "cal-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -158,14 +198,10 @@
                   "crr-tech@google.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "cal-technical",
-         "roles" : [
-            "technical"
          ]
       },
       {
+         "handle" : "cal-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -199,21 +235,20 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "cal-registrant"
+         "objectClassName" : "entity"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -224,44 +259,23 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
+   "status" : [
+      "active"
    ],
-   "handle" : "cal",
-   "ldhName" : "cal",
    "nameservers" : [
       {
          "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
             "v4" : [
                "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:34:0:0:0:69"
@@ -269,60 +283,46 @@
             "v4" : [
                "216.239.34.105"
             ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.36.105"
-            ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         },
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
-               "216.239.60.105"
+               "216.239.36.105"
             ],
             "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
+               "2001:4860:4802:36:0:0:0:69"
             ]
          }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-09-04",
-         "eventAction" : "registration"
       },
       {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.38.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.60.105"
+            ]
+         },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
-   ]
+   ],
+   "objectClassName" : "domain"
 }

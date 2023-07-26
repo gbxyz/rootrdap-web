@@ -2,13 +2,105 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.ML."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.ml"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "ml",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.10.220.136"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "A.NIC.ML",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "165.90.218.166"
+            ],
+            "v6" : [
+               "2c0f:f900:2:3:0:0:0:2"
+            ]
+         },
+         "ldhName" : "B.NIC.ML"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.ML",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:14:6144:ad:0:0:1"
+            ],
+            "v4" : [
+               "204.61.216.144"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.37"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:37"
+            ]
+         },
+         "ldhName" : "D.NIC.ML",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "ml",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "ml-registrant",
+         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -41,13 +133,15 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "handle" : "ml-registrant"
       },
       {
-         "handle" : "ml-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
+         "handle" : "ml-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -98,11 +192,12 @@
                   "ada@agetic.gouv.ml"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -163,18 +258,14 @@
             ]
          ],
          "handle" : "ml-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/ml.html",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
@@ -182,58 +273,9 @@
          "href" : "https://about.rdap.org"
       },
       {
-         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.nic.ml"
-      }
-   ],
-   "ldhName" : "ml",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "196.10.220.136"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.ML"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "165.90.218.166"
-            ],
-            "v6" : [
-               "2c0f:f900:2:3:0:0:0:2"
-            ]
-         },
-         "ldhName" : "B.NIC.ML",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.ML",
-         "ipAddresses" : {
-            "v4" : [
-               "204.61.216.144"
-            ],
-            "v6" : [
-               "2001:500:14:6144:ad:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.ML",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:37"
-            ],
-            "v4" : [
-               "196.216.168.37"
-            ]
-         }
+         "href" : "http://www.nic.ml",
+         "rel" : "related"
       }
    ],
    "events" : [
@@ -246,50 +288,8 @@
          "eventDate" : "2023-07-24"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:56"
       }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.ML."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nic.ml"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "ml"
+   ]
 }

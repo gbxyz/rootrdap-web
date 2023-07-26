@@ -1,11 +1,84 @@
 {
-   "port43" : "whois.iana.org",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A.NIC.MARSHALLS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.9"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B.NIC.MARSHALLS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.9"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "C.NIC.MARSHALLS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS1.DNS.NIC.MARSHALLS",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:6c"
+            ],
+            "v4" : [
+               "156.154.144.108"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:6c"
+            ],
+            "v4" : [
+               "156.154.145.108"
+            ]
+         },
+         "ldhName" : "NS2.DNS.NIC.MARSHALLS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:6c"
+            ],
+            "v4" : [
+               "156.154.159.108"
+            ]
+         },
+         "ldhName" : "NS3.DNS.NIC.MARSHALLS"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
    "entities" : [
       {
-         "handle" : "marshalls-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -39,75 +112,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
+         "handle" : "marshalls-registrant",
          "roles" : [
-            "administrative"
-         ],
-         "handle" : "marshalls-administrative",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Taylor Frank"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "FairWinds Partners, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1000 Potomac Street NW #350\nWashington DC 20007\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "1.202.223.5232"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "1.202.223.9256"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tjxregistries@fairwindspartners.com"
-               ]
-            ]
+            "registrant"
          ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
@@ -170,23 +182,118 @@
                   "iana@registry.godaddy"
                ]
             ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "marshalls-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Taylor Frank"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "FairWinds Partners, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1000 Potomac Street NW #350\nWashington DC 20007\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "1.202.223.5232"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "1.202.223.9256"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tjxregistries@fairwindspartners.com"
+               ]
+            ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-04-07",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:52",
+         "eventAction" : "last update of RDAP database"
+      }
    ],
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digest" : "5202ea0f1adf8fa9a0fdb1ebd7b3da0ad6274731623eb7e6ed2012f47678e413",
             "algorithm" : "8",
+            "digestType" : "2",
             "keyTag" : "33055",
-            "digestType" : "2"
+            "digest" : "5202ea0f1adf8fa9a0fdb1ebd7b3da0ad6274731623eb7e6ed2012f47678e413"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
    "links" : [
       {
@@ -205,118 +312,7 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-04-07"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.MARSHALLS",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.9"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "ldhName" : "B.NIC.MARSHALLS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.194.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.9"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.MARSHALLS"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.MARSHALLS",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:6c"
-            ],
-            "v4" : [
-               "156.154.144.108"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.MARSHALLS",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.145.108"
-            ],
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:6c"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.MARSHALLS",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.108"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:6c"
-            ]
-         }
-      }
-   ],
    "ldhName" : "marshalls",
-   "handle" : "marshalls",
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "remarks" : [
       {
          "description" : [
@@ -325,16 +321,20 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.tjx.com"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
-   ]
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "marshalls"
 }

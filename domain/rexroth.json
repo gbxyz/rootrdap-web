@@ -1,117 +1,35 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.REXROTH."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: "
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "rexroth",
    "ldhName" : "rexroth",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6e:0:0:0:0:65"
-            ],
-            "v4" : [
-               "65.22.112.65"
-            ]
-         },
-         "ldhName" : "A0.NIC.REXROTH",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.115.65"
-            ],
-            "v6" : [
-               "2a01:8840:71:0:0:0:0:65"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.REXROTH"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:6f:0:0:0:0:65"
-            ],
-            "v4" : [
-               "65.22.113.65"
-            ]
-         },
-         "ldhName" : "B0.NIC.REXROTH",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.114.65"
-            ],
-            "v6" : [
-               "2a01:8840:70:0:0:0:0:65"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.REXROTH"
-      }
-   ],
    "events" : [
       {
          "eventDate" : "2015-12-17",
          "eventAction" : "registration"
       },
       {
-         "eventDate" : "2023-05-25",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-05-25"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:33"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "3fdb1d716cc4d502c89094eb8b0f44056e6bdebefdfdba79632c5dc606238e70",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "13240"
+         }
+      ]
+   },
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/rexroth.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/rexroth.html"
+         "rel" : "related"
       },
       {
          "rel" : "related",
@@ -119,67 +37,9 @@
          "href" : "https://about.rdap.org"
       }
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "13240",
-            "digestType" : "2",
-            "digest" : "3fdb1d716cc4d502c89094eb8b0f44056e6bdebefdfdba79632c5dc606238e70",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "rexroth-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Robert Bosch GMBH"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Robert-Bosch-Platz 1\nGerlingen-Schillerhöhe 70839\nGermany"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
-      },
-      {
          "handle" : "rexroth-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -238,10 +98,14 @@
                   "ngtld-rexroth@cscinfo.com"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "rexroth-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -301,11 +165,147 @@
                ]
             ]
          ],
-         "handle" : "rexroth-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "rexroth-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Robert Bosch GMBH"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Robert-Bosch-Platz 1\nGerlingen-Schillerhöhe 70839\nGermany"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org"
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.112.65"
+            ],
+            "v6" : [
+               "2a01:8840:6e:0:0:0:0:65"
+            ]
+         },
+         "ldhName" : "A0.NIC.REXROTH"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:71:0:0:0:0:65"
+            ],
+            "v4" : [
+               "65.22.115.65"
+            ]
+         },
+         "ldhName" : "A2.NIC.REXROTH"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B0.NIC.REXROTH",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.113.65"
+            ],
+            "v6" : [
+               "2a01:8840:6f:0:0:0:0:65"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.REXROTH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:70:0:0:0:0:65"
+            ],
+            "v4" : [
+               "65.22.114.65"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "handle" : "rexroth",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.REXROTH."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: "
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ]
 }

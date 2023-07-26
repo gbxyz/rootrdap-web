@@ -1,5 +1,7 @@
 {
-   "handle" : "lc",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -8,10 +10,10 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.lc"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -20,43 +22,13 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1991-09-03"
-      },
-      {
-         "eventDate" : "2023-01-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "handle" : "lc",
    "status" : [
       "active"
    ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:500:25:0:0:0:0:1"
@@ -65,16 +37,15 @@
                "199.254.59.1"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "A0.CCTLD.AFILIAS-NST.INFO"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:44:0:0:0:0:1"
-            ],
             "v4" : [
                "199.249.116.1"
+            ],
+            "v6" : [
+               "2001:500:44:0:0:0:0:1"
             ]
          },
          "ldhName" : "A2.CCTLD.AFILIAS-NST.INFO",
@@ -82,19 +53,18 @@
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:26:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.60.1"
+            ],
+            "v6" : [
+               "2001:500:26:0:0:0:0:1"
             ]
-         }
+         },
+         "ldhName" : "B0.CCTLD.AFILIAS-NST.ORG"
       },
       {
          "ldhName" : "B2.CCTLD.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "199.249.124.1"
@@ -102,9 +72,12 @@
             "v6" : [
                "2001:500:4c:0:0:0:0:1"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO",
          "ipAddresses" : {
             "v6" : [
                "2001:500:27:0:0:0:0:1"
@@ -112,48 +85,69 @@
             "v4" : [
                "199.254.61.1"
             ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.CCTLD.AFILIAS-NST.INFO"
+         }
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:28:0:0:0:0:1"
-            ],
             "v4" : [
                "199.254.62.1"
+            ],
+            "v6" : [
+               "2001:500:28:0:0:0:0:1"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG"
+         "ldhName" : "D0.CCTLD.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "lc",
    "objectClassName" : "domain",
+   "ldhName" : "lc",
+   "events" : [
+      {
+         "eventDate" : "1991-09-03",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:41"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/lc.html"
+         "href" : "https://www.iana.org/domains/root/db/lc.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
-         "href" : "http://www.nic.lc",
          "title" : "URL for registration services",
+         "href" : "http://www.nic.lc",
          "rel" : "related"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "a729b4e0d245d3cc81fc71893943df13f55c26d8415aa042c5adff42c76d25de",
+            "keyTag" : "28069",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ]
+   },
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "lc-registrant",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -164,15 +158,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Dr. Patrick W. Lay"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "University of Puerto Rico"
+                  "ISIS World Corporation"
                ],
                [
                   "adr",
                   {
-                     "label" : "Central Administration Building\nP.O. Box 364984G\nSan Juan 00936\nPuerto Rico"
+                     "label" : "PO Box GM 717\nCastries\nSaint Lucia"
                   },
                   "text",
                   [
@@ -184,10 +184,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 758 572-8188"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 758 452-0065"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "patricklay@yahoo.com"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "lc-administrative",
+         "roles" : [
+            "administrative"
+         ]
       },
       {
          "vcardArray" : [
@@ -249,17 +272,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "lc-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "lc-administrative",
-         "roles" : [
-            "administrative"
-         ],
+         "handle" : "lc-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -270,21 +290,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Dr. Patrick W. Lay"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "ISIS World Corporation"
+                  "University of Puerto Rico"
                ],
                [
                   "adr",
                   {
-                     "label" : "PO Box GM 717\nCastries\nSaint Lucia"
+                     "label" : "Central Administration Building\nP.O. Box 364984G\nSan Juan 00936\nPuerto Rico"
                   },
                   "text",
                   [
@@ -296,45 +310,31 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 758 572-8188"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 758 452-0065"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "patricklay@yahoo.com"
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ],
          "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "28069",
-            "algorithm" : "8",
-            "digest" : "a729b4e0d245d3cc81fc71893943df13f55c26d8415aa042c5adff42c76d25de"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ]
 }

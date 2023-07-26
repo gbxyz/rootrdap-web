@@ -1,14 +1,25 @@
 {
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "29161",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "a36cbb75c2c810d16fdd5562c334351bdd007f5aeb008537115586951ac39240"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "links" : [
       {
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tvs.html",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/tvs.html"
       },
       {
-         "rel" : "related",
+         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "rel" : "related"
       },
       {
          "href" : "http://www.tvs.in",
@@ -16,55 +27,40 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "events" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "tvs-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "T V SUNDRAM IYENGAR  & SONS PRIVATE LIMITED"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "TVS Building, 7 B West Veli Street\nMadurai Tamil Nadu 625001\nIndia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         "eventDate" : "2016-02-05",
+         "eventAction" : "registration"
       },
       {
-         "handle" : "tvs-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
+         "eventDate" : "2020-10-30",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:11"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "entities" : [
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -123,13 +119,14 @@
                   "registry.gtld@tvs.in"
                ]
             ]
-         ]
+         ],
+         "handle" : "tvs-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "tvs-technical",
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -189,48 +186,116 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ]
-      }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "a36cbb75c2c810d16fdd5562c334351bdd007f5aeb008537115586951ac39240",
-            "algorithm" : "8",
-            "keyTag" : "29161",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "handle" : "tvs",
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ],
-         "title" : "About This Service"
+         "handle" : "tvs-technical",
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
+         "roles" : [
+            "registrant"
          ],
-         "title" : "Comments"
+         "handle" : "tvs-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "T V SUNDRAM IYENGAR  & SONS PRIVATE LIMITED"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "TVS Building, 7 B West Veli Street\nMadurai Tamil Nadu 625001\nIndia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "tvs",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.TVS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.204.9"
+            ],
+            "v6" : [
+               "2a01:8840:c6:0:0:0:0:9"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.207.9"
+            ],
+            "v6" : [
+               "2a01:8840:c9:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "A2.NIC.TVS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.205.9"
+            ],
+            "v6" : [
+               "2a01:8840:c7:0:0:0:0:9"
+            ]
+         },
+         "ldhName" : "B0.NIC.TVS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:c8:0:0:0:0:9"
+            ],
+            "v4" : [
+               "65.22.206.9"
+            ]
+         },
+         "ldhName" : "C0.NIC.TVS"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "handle" : "tvs",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TVS."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "description" : [
@@ -245,72 +310,7 @@
          "title" : "Source"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-02-05"
-      },
-      {
-         "eventDate" : "2020-10-30",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:41",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c6:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.204.9"
-            ]
-         },
-         "ldhName" : "A0.NIC.TVS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "A2.NIC.TVS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:c9:0:0:0:0:9"
-            ],
-            "v4" : [
-               "65.22.207.9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.TVS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.205.9"
-            ],
-            "v6" : [
-               "2a01:8840:c7:0:0:0:0:9"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.NIC.TVS",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.206.9"
-            ],
-            "v6" : [
-               "2a01:8840:c8:0:0:0:0:9"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "tvs"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

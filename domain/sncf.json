@@ -1,61 +1,4 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-05-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-09-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "sncf",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.9.1"
-            ],
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:1010:11:0:0:0:53"
-            ],
-            "v4" : [
-               "194.146.106.46"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.EXT.NIC.FR"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "G.EXT.NIC.FR",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.36.1"
-            ],
-            "v6" : [
-               "2001:678:4c:0:0:0:0:1"
-            ]
-         }
-      }
-   ],
-   "handle" : "sncf",
    "notices" : [
       {
          "description" : [
@@ -74,33 +17,11 @@
          "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.SNCF."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.sncf.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "sncf-administrative",
+         "objectClassName" : "entity",
+         "handle" : "sncf-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -111,16 +32,10 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Domain Name MANAGER"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "SNCF"
+                  "SNCF (Société Nationale des Chemins de fer Francais)"
                ],
                [
                   "adr",
@@ -137,32 +52,18 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+33153256000"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+33171825805"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "contact-j-nomsdedomaine@sncf.fr"
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -222,14 +123,9 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "sncf-technical",
-         "roles" : [
-            "technical"
-         ]
+         "handle" : "sncf-technical"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -240,10 +136,16 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Domain Name MANAGER"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "SNCF (Société Nationale des Chemins de fer Francais)"
+                  "SNCF"
                ],
                [
                   "adr",
@@ -260,45 +162,143 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+33153256000"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+33171825805"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "contact-j-nomsdedomaine@sncf.fr"
                ]
             ]
          ],
+         "handle" : "sncf-administrative",
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "sncf-registrant"
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/sncf.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.sncf.com",
+         "rel" : "related"
+      }
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "76868912d2c9ac062cc7b403ad3f32daffeb37cf4c220bf74e196fb75f7c861c",
-            "algorithm" : "13",
             "keyTag" : "42021",
-            "digestType" : "2"
+            "digestType" : "2",
+            "algorithm" : "13"
          }
       ]
    },
-   "objectClassName" : "domain",
-   "links" : [
+   "events" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/sncf.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "eventDate" : "2015-05-08",
+         "eventAction" : "registration"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "eventDate" : "2022-09-20",
+         "eventAction" : "last changed"
       },
       {
-         "rel" : "related",
-         "href" : "http://www.sncf.com",
-         "title" : "URL for registration services"
+         "eventDate" : "2023-07-26T12:31:50",
+         "eventAction" : "last update of RDAP database"
       }
+   ],
+   "ldhName" : "sncf",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "D.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.46"
+            ],
+            "v6" : [
+               "2001:67c:1010:11:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.EXT.NIC.FR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "G.EXT.NIC.FR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4c:0:0:0:0:1"
+            ],
+            "v4" : [
+               "194.0.36.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "handle" : "sncf",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.SNCF."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.sncf.com"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

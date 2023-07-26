@@ -1,24 +1,4 @@
 {
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DTV."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.dish.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
    "notices" : [
       {
          "description" : [
@@ -37,110 +17,53 @@
          ]
       }
    ],
-   "handle" : "dtv",
-   "ldhName" : "dtv",
-   "nameservers" : [
-      {
-         "ldhName" : "A0.NIC.DTV",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.228.1"
-            ],
-            "v6" : [
-               "2a01:8840:de:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:e1:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.231.1"
-            ]
-         },
-         "ldhName" : "A2.NIC.DTV",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B0.NIC.DTV",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.229.1"
-            ],
-            "v6" : [
-               "2a01:8840:df:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.230.1"
-            ],
-            "v6" : [
-               "2a01:8840:e0:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "C0.NIC.DTV",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-05-19"
-      },
-      {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/dtv.html",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.dish.com",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "51301",
-            "digestType" : "2",
-            "digest" : "eb39cb7d7771f169881c4b9ece63e510c949949741d56988d8bb9cce24eb3479",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
+         "handle" : "dtv-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Dish DBS Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "9601 S. Meridian Boulevard\nEnglewood CO 80112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "dtv-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -199,18 +122,10 @@
                   "tld-tech-poc@afilias.info"
                ]
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "dtv-technical"
+         ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "dtv-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -269,48 +184,133 @@
                   "ngtld-dtv@cscglobal.com"
                ]
             ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Dish DBS Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "9601 S. Meridian Boulevard\nEnglewood CO 80112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "dtv-registrant"
+         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org"
+   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/dtv.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.dish.com",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "51301",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "eb39cb7d7771f169881c4b9ece63e510c949949741d56988d8bb9cce24eb3479"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-05-19"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventDate" : "2023-07-26T12:29:24",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "dtv",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:de:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.228.1"
+            ]
+         },
+         "ldhName" : "A0.NIC.DTV",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.DTV",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.231.1"
+            ],
+            "v6" : [
+               "2a01:8840:e1:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B0.NIC.DTV",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.229.1"
+            ],
+            "v6" : [
+               "2a01:8840:df:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.230.1"
+            ],
+            "v6" : [
+               "2a01:8840:e0:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "C0.NIC.DTV"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "handle" : "dtv",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DTV."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.dish.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

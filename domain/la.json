@@ -1,34 +1,16 @@
 {
-   "events" : [
-      {
-         "eventDate" : "1996-05-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-17"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "la",
    "nameservers" : [
       {
          "ldhName" : "NS1.NIC.LA",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "185.24.64.15"
-            ],
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:15"
+            ],
+            "v4" : [
+               "185.24.64.15"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -43,6 +25,7 @@
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "NS3.NIC.LA",
          "ipAddresses" : {
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:14"
@@ -51,12 +34,10 @@
                "185.24.64.14"
             ]
          },
-         "ldhName" : "NS3.NIC.LA",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS4.NIC.LA",
          "ipAddresses" : {
             "v6" : [
                "2001:67c:13cc:0:0:0:1:15"
@@ -64,55 +45,114 @@
             "v4" : [
                "194.169.218.15"
             ]
+         },
+         "ldhName" : "NS4.NIC.LA"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventDate" : "1996-05-14",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-03-17"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:38",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/la.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.la"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "e7d0c3bcdf60e8d842e882d90b4ec263c8889b760098492c798841c13b4ea13f",
+            "algorithm" : "7",
+            "digestType" : "2",
+            "keyTag" : "42973"
+         },
+         {
+            "algorithm" : "7",
+            "digestType" : "1",
+            "keyTag" : "42973",
+            "digest" : "1f0cefa420e9101bb5791f3ab93e85917a72978b"
          }
-      }
-   ],
-   "handle" : "la",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.LA."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.la"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
+         "handle" : "la-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Lao National Internet Center (LANIC),"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Ministry of Technology and Communications"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Lane Xang Avenue, Chanthaboury\nVientiane 01000\nLao People's Democratic Republic (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "la-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -171,10 +211,11 @@
                   "technicalcontact@lanic.gov.la"
                ]
             ]
-         ]
+         ],
+         "handle" : "la-technical"
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "la-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -237,92 +278,51 @@
          "roles" : [
             "administrative"
          ],
-         "handle" : "la-administrative"
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Lao National Internet Center (LANIC),"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Ministry of Technology and Communications"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Lane Xang Avenue, Chanthaboury\nVientiane 01000\nLao People's Democratic Republic (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "la-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "42973",
-            "algorithm" : "7",
-            "digest" : "e7d0c3bcdf60e8d842e882d90b4ec263c8889b760098492c798841c13b4ea13f"
-         },
-         {
-            "digestType" : "1",
-            "keyTag" : "42973",
-            "algorithm" : "7",
-            "digest" : "1f0cefa420e9101bb5791f3ab93e85917a72978b"
-         }
-      ]
-   },
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "ldhName" : "la",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.LA."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.la"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "links" : [
-      {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/la.html",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.la",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain"
+   "handle" : "la"
 }

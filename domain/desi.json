@@ -1,7 +1,7 @@
 {
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "A.NIC.DESI",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -10,10 +10,10 @@
             "v6" : [
                "2001:67c:13cc:0:0:0:1:81"
             ]
-         }
+         },
+         "ldhName" : "A.NIC.DESI"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "B.NIC.DESI",
          "ipAddresses" : {
             "v4" : [
@@ -22,79 +22,99 @@
             "v6" : [
                "2a04:2b00:13cc:0:0:0:1:81"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C.NIC.DESI",
          "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.DESI",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.248.81"
-            ],
             "v6" : [
                "2a04:2b00:13ee:0:0:0:0:81"
+            ],
+            "v4" : [
+               "212.18.248.81"
             ]
          }
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.DESI",
          "ipAddresses" : {
-            "v4" : [
-               "212.18.249.81"
-            ],
             "v6" : [
                "2a04:2b00:13ff:0:0:0:0:81"
+            ],
+            "v4" : [
+               "212.18.249.81"
             ]
-         }
+         },
+         "ldhName" : "D.NIC.DESI",
+         "objectClassName" : "nameserver"
       }
    ],
-   "ldhName" : "desi",
+   "status" : [
+      "active"
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/desi.html",
+         "rel" : "related"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "href" : "http://www.dotdesi.com/",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "1382964834be4f7bf4830a27955ec8f6a1557ec20479ae946f6910a131e54ab9",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "39859"
+         },
+         {
+            "digest" : "948f1b60d22606e7488f84c0ad2e0546376aeedfd15b6ded198127add5d8928f",
+            "keyTag" : "32296",
+            "digestType" : "2",
+            "algorithm" : "8"
+         },
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "11020",
+            "digest" : "5017e17ac3f43d2dcca968723fddb1b641765a38f53afba0469e33c9ac75c582"
+         }
+      ]
+   },
    "events" : [
       {
-         "eventDate" : "2014-03-06",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-03-06"
       },
       {
          "eventAction" : "last changed",
          "eventDate" : "2021-10-12"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DESI."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.dotdesi.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         "eventDate" : "2023-07-26T12:29:17",
+         "eventAction" : "last update of RDAP database"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -105,39 +125,12 @@
          "title" : "Comments"
       }
    ],
-   "handle" : "desi",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "39859",
-            "digestType" : "2",
-            "digest" : "1382964834be4f7bf4830a27955ec8f6a1557ec20479ae946f6910a131e54ab9",
-            "algorithm" : "8"
-         },
-         {
-            "keyTag" : "32296",
-            "digestType" : "2",
-            "digest" : "948f1b60d22606e7488f84c0ad2e0546376aeedfd15b6ded198127add5d8928f",
-            "algorithm" : "8"
-         },
-         {
-            "keyTag" : "11020",
-            "digestType" : "2",
-            "digest" : "5017e17ac3f43d2dcca968723fddb1b641765a38f53afba0469e33c9ac75c582",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "desi-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -189,9 +182,11 @@
                ]
             ]
          ],
+         "handle" : "desi-administrative",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -251,18 +246,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "desi-technical",
          "roles" : [
             "technical"
          ]
       },
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "desi-registrant",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -295,26 +284,37 @@
                   ]
                ]
             ]
+         ],
+         "handle" : "desi-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      }
+   ],
+   "ldhName" : "desi",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DESI."
          ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/desi.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.dotdesi.com/"
+         ]
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.dotdesi.com/"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
-   "objectClassName" : "domain"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "desi"
 }

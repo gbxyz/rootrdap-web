@@ -1,128 +1,11 @@
 {
-   "ldhName" : "goodyear",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.120.41"
-            ],
-            "v6" : [
-               "2a01:8840:76:0:0:0:0:41"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.GOODYEAR"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:79:0:0:0:0:41"
-            ],
-            "v4" : [
-               "65.22.123.41"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A2.NIC.GOODYEAR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.121.41"
-            ],
-            "v6" : [
-               "2a01:8840:77:0:0:0:0:41"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.GOODYEAR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.122.41"
-            ],
-            "v6" : [
-               "2a01:8840:78:0:0:0:0:41"
-            ]
-         },
-         "ldhName" : "C0.NIC.GOODYEAR",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-12-17"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-17"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOODYEAR."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.goodyear.com/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "goodyear",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "31677e86241af9fac9000ae3681f1054bb94fade26d91a92109547d4231a64bc",
-            "digestType" : "2",
-            "keyTag" : "43276"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "goodyear-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -155,15 +38,11 @@
                   ]
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "goodyear-registrant",
-         "roles" : [
-            "registrant"
          ]
       },
       {
          "objectClassName" : "entity",
+         "handle" : "goodyear-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -223,7 +102,6 @@
                ]
             ]
          ],
-         "handle" : "goodyear-technical",
          "roles" : [
             "technical"
          ]
@@ -288,14 +166,57 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "goodyear-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "goodyear-administrative"
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-12-17",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:07"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "31677e86241af9fac9000ae3681f1054bb94fade26d91a92109547d4231a64bc",
+            "keyTag" : "43276",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ]
+   },
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/goodyear.html",
@@ -303,14 +224,93 @@
          "rel" : "related"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
-         "href" : "https://www.goodyear.com/",
+         "rel" : "related",
          "title" : "URL for registration services",
-         "rel" : "related"
+         "href" : "https://www.goodyear.com/"
       }
+   ],
+   "ldhName" : "goodyear",
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.GOODYEAR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:76:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.120.41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.GOODYEAR",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:79:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.123.41"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B0.NIC.GOODYEAR",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.121.41"
+            ],
+            "v6" : [
+               "2a01:8840:77:0:0:0:0:41"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:78:0:0:0:0:41"
+            ],
+            "v4" : [
+               "65.22.122.41"
+            ]
+         },
+         "ldhName" : "C0.NIC.GOODYEAR"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "goodyear",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOODYEAR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.goodyear.com/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

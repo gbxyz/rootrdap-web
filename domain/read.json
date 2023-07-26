@@ -1,13 +1,154 @@
 {
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.READ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: https://www.amazonregistry.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "read",
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "213.248.218.76"
+            ],
+            "v6" : [
+               "2a01:618:402:0:0:0:0:76"
+            ]
+         },
+         "ldhName" : "DNS1.NIC.READ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "DNS2.NIC.READ",
+         "ipAddresses" : {
+            "v4" : [
+               "103.49.82.76"
+            ],
+            "v6" : [
+               "2401:fd80:402:0:0:0:0:76"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:618:406:0:0:0:0:76"
+            ],
+            "v4" : [
+               "213.248.222.76"
+            ]
+         },
+         "ldhName" : "DNS3.NIC.READ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:76"
+            ],
+            "v4" : [
+               "43.230.50.76"
+            ]
+         },
+         "ldhName" : "DNS4.NIC.READ",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSA.NIC.READ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:502:ad09:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.100.3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.101.3"
+            ],
+            "v6" : [
+               "2001:502:2eda:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSB.NIC.READ"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ]
+         },
+         "ldhName" : "DNSC.NIC.READ"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.103.3"
+            ]
+         },
+         "ldhName" : "DNSD.NIC.READ",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "read",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-11-12"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-18"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:29",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/read.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/read.html"
       },
       {
-         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
          "rel" : "related"
       },
       {
@@ -16,17 +157,13 @@
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "secureDNS" : {
       "dsData" : [
          {
             "digest" : "688ba91ca7dc1405423b597ef47becde3188530011815fbb5c55b484eecd9f31",
+            "digestType" : "2",
             "algorithm" : "8",
-            "keyTag" : "15481",
-            "digestType" : "2"
+            "keyTag" : "15481"
          }
       ],
       "delegationSigned" : true
@@ -34,11 +171,6 @@
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "read-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -71,10 +203,14 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "handle" : "read-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "read-technical",
          "roles" : [
             "technical"
          ],
@@ -129,6 +265,7 @@
                ]
             ]
          ],
+         "handle" : "read-technical",
          "objectClassName" : "entity"
       },
       {
@@ -192,10 +329,10 @@
                ]
             ]
          ],
+         "handle" : "read-administrative",
          "roles" : [
             "administrative"
-         ],
-         "handle" : "read-administrative"
+         ]
       }
    ],
    "notices" : [
@@ -208,149 +345,12 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.READ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.amazonregistry.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
          ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "read",
-   "ldhName" : "read",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "213.248.218.76"
-            ],
-            "v6" : [
-               "2a01:618:402:0:0:0:0:76"
-            ]
-         },
-         "ldhName" : "DNS1.NIC.READ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:402:0:0:0:0:76"
-            ],
-            "v4" : [
-               "103.49.82.76"
-            ]
-         },
-         "ldhName" : "DNS2.NIC.READ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:76"
-            ],
-            "v4" : [
-               "213.248.222.76"
-            ]
-         },
-         "ldhName" : "DNS3.NIC.READ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:76"
-            ],
-            "v4" : [
-               "43.230.50.76"
-            ]
-         },
-         "ldhName" : "DNS4.NIC.READ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:ad09:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.100.3"
-            ]
-         },
-         "ldhName" : "DNSA.NIC.READ",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:502:2eda:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.101.3"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSB.NIC.READ"
-      },
-      {
-         "ldhName" : "DNSC.NIC.READ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
-            "v4" : [
-               "156.154.103.3"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNSD.NIC.READ"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-11-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-11-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "title" : "Comments"
       }
    ]
 }

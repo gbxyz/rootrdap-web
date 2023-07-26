@@ -1,11 +1,14 @@
 {
    "handle" : "hyundai",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.HYUNDAI."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -14,30 +17,13 @@
          "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "ldhName" : "hyundai",
    "events" : [
       {
          "eventAction" : "registration",
@@ -49,62 +35,9 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:22"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.192.4"
-            ]
-         },
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.4"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.196.4"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.4"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "hyundai",
-   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
@@ -113,22 +46,30 @@
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.hyundai.com",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "48091",
+            "digest" : "d4178e0bd6ef00a383544da7d1856cb37034c64a64cf70d1e08d67bb9ee2e3b2"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "hyundai-registrant",
          "objectClassName" : "entity",
+         "handle" : "hyundai-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -139,15 +80,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Chief Operating Officer"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Hyundai Motor Company"
+                  "GMO BRAND SECURITY Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "231 Yangjae-dong\nSeocho-gu\nSeoul 137-938\nKorea (the Republic of)"
+                     "label" : "Cerulean Tower 26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
                   },
                   "text",
                   [
@@ -159,12 +106,35 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+81.357841069"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+81.334625040"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "registry@brightsconsulting.com"
                ]
             ]
+         ],
+         "roles" : [
+            "administrative"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "hyundai-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -224,17 +194,16 @@
                ]
             ]
          ],
-         "handle" : "hyundai-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "hyundai-administrative",
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -245,21 +214,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Chief Operating Officer"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "GMO BRAND SECURITY Inc."
+                  "Hyundai Motor Company"
                ],
                [
                   "adr",
                   {
-                     "label" : "Cerulean Tower 26-1 Sakuragaoka-cho\nShibuya-ku Tokyo 150-8512\nJapan"
+                     "label" : "231 Yangjae-dong\nSeocho-gu\nSeoul 137-938\nKorea (the Republic of)"
                   },
                   "text",
                   [
@@ -271,44 +234,81 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+81.357841069"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+81.334625040"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "registry@brightsconsulting.com"
                ]
             ]
-         ]
+         ],
+         "handle" : "hyundai-registrant"
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "d4178e0bd6ef00a383544da7d1856cb37034c64a64cf70d1e08d67bb9ee2e3b2",
-            "digestType" : "2",
-            "keyTag" : "48091"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.192.4"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.194.4"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "37.209.196.4"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET"
+      }
+   ],
+   "objectClassName" : "domain"
 }

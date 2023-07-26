@@ -1,114 +1,8 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-07-03"
-      },
-      {
-         "eventDate" : "2022-07-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.169.218.89"
-            ],
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:89"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.GENT"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.GENT",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:89"
-            ],
-            "v4" : [
-               "185.24.64.89"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.89"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:89"
-            ]
-         },
-         "ldhName" : "C.NIC.GENT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.249.89"
-            ],
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:89"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.GENT"
-      }
-   ],
-   "ldhName" : "gent",
-   "handle" : "gent",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GENT."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.nic.gent"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "gent-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -170,11 +64,54 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "handle" : "gent-administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "gent-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Combell nv"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Skaldenstraat 121\nGent 9042\nBelgium"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "gent-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -233,78 +170,63 @@
                   "tld.ops@centralnic.com"
                ]
             ]
-         ],
-         "handle" : "gent-technical",
-         "roles" : [
-            "technical"
-         ]
-      },
-      {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "gent-registrant",
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Combell nv"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Skaldenstraat 121\nGent 9042\nBelgium"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "e97c1f6f53e1284399d6daaf670d8fcbddb5618710ade52c1219757c14c77d88",
-            "algorithm" : "13",
-            "keyTag" : "2640",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "links" : [
+   "notices" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/gent.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
       },
       {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-03"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-20"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:59"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "13",
+            "digestType" : "2",
+            "keyTag" : "2640",
+            "digest" : "e97c1f6f53e1284399d6daaf670d8fcbddb5618710ade52c1219757c14c77d88"
+         }
+      ]
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/gent.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "href" : "https://about.rdap.org"
       },
       {
          "rel" : "related",
@@ -312,5 +234,83 @@
          "href" : "http://www.nic.gent"
       }
    ],
-   "objectClassName" : "domain"
+   "ldhName" : "gent",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:89"
+            ],
+            "v4" : [
+               "194.169.218.89"
+            ]
+         },
+         "ldhName" : "A.NIC.GENT"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "185.24.64.89"
+            ],
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:89"
+            ]
+         },
+         "ldhName" : "B.NIC.GENT",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.GENT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:89"
+            ],
+            "v4" : [
+               "212.18.248.89"
+            ]
+         }
+      },
+      {
+         "ldhName" : "D.NIC.GENT",
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.249.89"
+            ],
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:89"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "gent",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GENT."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.nic.gent"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

@@ -1,104 +1,5 @@
 {
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "130.59.31.41"
-            ],
-            "v6" : [
-               "2001:620:0:ff:0:0:0:56"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.CH"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.CH",
-         "ipAddresses" : {
-            "v4" : [
-               "130.59.31.43"
-            ],
-            "v6" : [
-               "2001:620:0:ff:0:0:0:58"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.CH",
-         "ipAddresses" : {
-            "v4" : [
-               "194.0.25.39"
-            ],
-            "v6" : [
-               "2001:678:20:0:0:0:0:39"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:3:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.17.1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.NIC.CH"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.NIC.CH",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.10"
-            ],
-            "v6" : [
-               "2001:67c:1010:2:0:0:0:53"
-            ]
-         }
-      }
-   ],
    "ldhName" : "ch",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "1987-05-20"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-05"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CH."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: https://www.nic.ch/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
    "notices" : [
       {
          "description" : [
@@ -117,27 +18,75 @@
          "title" : "Comments"
       }
    ],
-   "handle" : "ch",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "10",
-            "digestType" : "2",
-            "digest" : "0e175543a74d9083ea977bab2bee98a771995f80982fb796b2b0b9cc6413d1a6",
-            "algorithm" : "13"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "ch-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "SWITCH TLD Administration"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "SWITCH The Swiss Education & Research Network"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Werdstrasse 2\nZurich CH-8021\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+41 44 268 15 40"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+41 44 268 15 78"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tld-admin@switch.ch"
+               ]
+            ]
+         ],
+         "handle" : "ch-administrative",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -171,13 +120,15 @@
                ]
             ]
          ],
+         "handle" : "ch-registrant",
+         "roles" : [
+            "registrant"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "handle" : "ch-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -237,76 +188,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "ch-administrative",
          "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "SWITCH TLD Administration"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "SWITCH The Swiss Education & Research Network"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Werdstrasse 2\nZurich CH-8021\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+41 44 268 15 40"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+41 44 268 15 78"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tld-admin@switch.ch"
-               ]
-            ]
+            "technical"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
    "links" : [
       {
          "href" : "https://www.iana.org/domains/root/db/ch.html",
@@ -314,15 +200,129 @@
          "rel" : "related"
       },
       {
-         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "rel" : "related"
       },
       {
-         "rel" : "related",
+         "href" : "https://www.nic.ch/",
          "title" : "URL for registration services",
-         "href" : "https://www.nic.ch/"
+         "rel" : "related"
       }
    ],
-   "objectClassName" : "domain"
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "0e175543a74d9083ea977bab2bee98a771995f80982fb796b2b0b9cc6413d1a6",
+            "digestType" : "2",
+            "algorithm" : "13",
+            "keyTag" : "10"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "1987-05-20",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-05"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:47",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.CH",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:620:0:ff:0:0:0:56"
+            ],
+            "v4" : [
+               "130.59.31.41"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.NIC.CH",
+         "ipAddresses" : {
+            "v4" : [
+               "130.59.31.43"
+            ],
+            "v6" : [
+               "2001:620:0:ff:0:0:0:58"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.25.39"
+            ],
+            "v6" : [
+               "2001:678:20:0:0:0:0:39"
+            ]
+         },
+         "ldhName" : "D.NIC.CH"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.17.1"
+            ],
+            "v6" : [
+               "2001:678:3:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "E.NIC.CH"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.10"
+            ],
+            "v6" : [
+               "2001:67c:1010:2:0:0:0:53"
+            ]
+         },
+         "ldhName" : "F.NIC.CH"
+      }
+   ],
+   "handle" : "ch",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CH."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://www.nic.ch/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ]
 }

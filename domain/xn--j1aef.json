@@ -1,21 +1,69 @@
 {
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/xn--j1aef.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.verisigninc.com",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
+            "algorithm" : "8",
             "digestType" : "2",
             "keyTag" : "32220",
-            "algorithm" : "8",
             "digest" : "8cbaa94cf4c8387c6e98dcc53a90c9c7ce339029cf54d43e59e89b7d9c6f086c"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventDate" : "2015-07-02",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-10-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:39"
+      }
    ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "objectClassName" : "entity",
+         "handle" : "xn--j1aef-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -77,14 +125,49 @@
          ],
          "roles" : [
             "administrative"
-         ],
-         "handle" : "xn--j1aef-administrative"
+         ]
       },
       {
-         "roles" : [
-            "technical"
+         "objectClassName" : "entity",
+         "handle" : "xn--j1aef-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "VeriSign Sarl"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "3 rue des Pilettes\nFribourg CH-1700\nSwitzerland"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "xn--j1aef-technical",
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -144,71 +227,18 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "xn--j1aef-registrant",
+         "handle" : "xn--j1aef-technical",
          "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "VeriSign Sarl"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "3 rue des Pilettes\nFribourg CH-1700\nSwitzerland"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+            "technical"
          ],
          "objectClassName" : "entity"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/xn--j1aef.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.verisigninc.com"
       }
    ],
    "ldhName" : "xn--j1aef",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "AC1.NSTLD.COM",
          "ipAddresses" : {
             "v6" : [
                "2001:500:120:0:0:0:0:30"
@@ -217,11 +247,9 @@
                "192.42.173.30"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM"
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "AC2.NSTLD.COM",
          "ipAddresses" : {
             "v6" : [
@@ -230,56 +258,44 @@
             "v4" : [
                "192.42.174.30"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "AC3.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
             "v4" : [
                "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
             ]
-         }
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-07-02"
-      },
-      {
-         "eventDate" : "2020-10-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:04:09",
-         "eventAction" : "last update of RDAP database"
+         },
+         "ldhName" : "AC4.NSTLD.COM"
       }
    ],
    "status" : [
       "active"
    ],
+   "handle" : "xn--j1aef",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.XN--J1AEF."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
          "title" : "Remark",
@@ -288,29 +304,13 @@
          ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
          ]
       }
    ],
-   "handle" : "xn--j1aef"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

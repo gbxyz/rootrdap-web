@@ -1,25 +1,117 @@
 {
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.DNS.RIPN.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:17:0:193:232:128:6"
+            ],
+            "v4" : [
+               "193.232.128.6"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.DNS.RIPN.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "194.85.252.62"
+            ],
+            "v6" : [
+               "2001:678:16:0:194:85:252:62"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.190.124.17"
+            ],
+            "v6" : [
+               "2001:678:18:0:194:190:124:17"
+            ]
+         },
+         "ldhName" : "D.DNS.RIPN.NET"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:15:0:193:232:142:17"
+            ],
+            "v4" : [
+               "193.232.142.17"
+            ]
+         },
+         "ldhName" : "E.DNS.RIPN.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.DNS.RIPN.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "193.232.156.17"
+            ],
+            "v6" : [
+               "2001:678:14:0:193:232:156:17"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "tatar",
+   "events" : [
+      {
+         "eventDate" : "2014-07-03",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2023-03-15"
+      },
+      {
+         "eventDate" : "2023-07-26T12:32:00",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/tatar.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.dottatar.ru",
+         "rel" : "related"
+      }
+   ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
+            "digest" : "cced6d290e870530527adfda81f3277c9f64b8dc2724dc9d90640946d176a01f",
             "keyTag" : "27077",
-            "algorithm" : "8",
-            "digest" : "cced6d290e870530527adfda81f3277c9f64b8dc2724dc9d90640946d176a01f"
+            "digestType" : "2",
+            "algorithm" : "8"
          }
       ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "tatar-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
+         "handle" : "tatar-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -28,12 +120,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Project Manager"
                ],
                [
                   "org",
@@ -56,28 +142,17 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+7-495-7302967"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "gtld-tatar@tcinet.ru"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "tatar-technical",
          "objectClassName" : "entity",
+         "handle" : "tatar-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -136,14 +211,16 @@
                   "gtld-tech@tcinet.ru"
                ]
             ]
+         ],
+         "roles" : [
+            "technical"
          ]
       },
       {
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "tatar-registrant",
-         "objectClassName" : "entity",
+         "handle" : "tatar-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -152,6 +229,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Project Manager"
                ],
                [
                   "org",
@@ -174,138 +257,32 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+7-495-7302967"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "gtld-tatar@tcinet.ru"
                ]
             ]
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/tatar.html"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://www.dottatar.ru",
-         "title" : "URL for registration services",
-         "rel" : "related"
-      }
-   ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.DNS.RIPN.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "193.232.128.6"
-            ],
-            "v6" : [
-               "2001:678:17:0:193:232:128:6"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.DNS.RIPN.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "194.85.252.62"
-            ],
-            "v6" : [
-               "2001:678:16:0:194:85:252:62"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.190.124.17"
-            ],
-            "v6" : [
-               "2001:678:18:0:194:190:124:17"
-            ]
-         },
-         "ldhName" : "D.DNS.RIPN.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:15:0:193:232:142:17"
-            ],
-            "v4" : [
-               "193.232.142.17"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.DNS.RIPN.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "193.232.156.17"
-            ],
-            "v6" : [
-               "2001:678:14:0:193:232:156:17"
-            ]
-         },
-         "ldhName" : "F.DNS.RIPN.NET",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "tatar",
-   "events" : [
-      {
-         "eventDate" : "2014-07-03",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-03-15"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TATAR."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.dottatar.ru"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -314,6 +291,29 @@
             "This query returned 1 object"
          ],
          "title" : "Comments"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TATAR."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.dottatar.ru"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "handle" : "tatar"

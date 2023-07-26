@@ -1,96 +1,5 @@
 {
    "ldhName" : "discount",
-   "nameservers" : [
-      {
-         "ldhName" : "V0N0.NIC.DISCOUNT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:57"
-            ],
-            "v4" : [
-               "65.22.28.57"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N1.NIC.DISCOUNT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.57"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:57"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.DISCOUNT",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.30.57"
-            ],
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:57"
-            ]
-         }
-      },
-      {
-         "ldhName" : "V0N3.NIC.DISCOUNT",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:57"
-            ],
-            "v4" : [
-               "161.232.14.57"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:57"
-            ],
-            "v4" : [
-               "65.22.31.57"
-            ]
-         },
-         "ldhName" : "V2N0.NIC.DISCOUNT",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.57"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:57"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.DISCOUNT"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-04-17"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
    "notices" : [
       {
          "description" : [
@@ -101,52 +10,59 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.DISCOUNT."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "discount",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "51140",
-            "algorithm" : "8",
-            "digest" : "fa79b01e16956fa153e17df749592ab311ac88f7cca89102145a31bf327e7c0d"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "discount-registrant",
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -206,13 +122,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "discount-technical"
+         "handle" : "discount-technical",
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "discount-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -271,70 +189,152 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "discount-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "handle" : "discount-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ]
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/discount.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/discount.html",
          "rel" : "related"
       },
       {
-         "rel" : "related",
+         "href" : "https://about.rdap.org",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "rel" : "related"
       },
       {
          "rel" : "related",
          "href" : "http://www.donuts.domains/",
          "title" : "URL for registration services"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "fa79b01e16956fa153e17df749592ab311ac88f7cca89102145a31bf327e7c0d",
+            "keyTag" : "51140",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-04-17"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:19"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.DISCOUNT",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:57"
+            ],
+            "v4" : [
+               "65.22.28.57"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N1.NIC.DISCOUNT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.29.57"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:57"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.DISCOUNT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.30.57"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:57"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:57"
+            ],
+            "v4" : [
+               "161.232.14.57"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.DISCOUNT"
+      },
+      {
+         "ldhName" : "V2N0.NIC.DISCOUNT",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.31.57"
+            ],
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:57"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V2N1.NIC.DISCOUNT",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.57"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:57"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "handle" : "discount",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.DISCOUNT."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ]
 }

@@ -1,7 +1,12 @@
 {
-   "ldhName" : "ltda",
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A0.NIC.LTDA",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:72:0:0:0:0:17"
@@ -9,11 +14,10 @@
             "v4" : [
                "65.22.116.17"
             ]
-         },
-         "ldhName" : "A0.NIC.LTDA",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "ldhName" : "A2.NIC.LTDA",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:75:0:0:0:0:17"
@@ -22,16 +26,15 @@
                "65.22.119.17"
             ]
          },
-         "ldhName" : "A2.NIC.LTDA",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "65.22.117.17"
-            ],
             "v6" : [
                "2a01:8840:73:0:0:0:0:17"
+            ],
+            "v4" : [
+               "65.22.117.17"
             ]
          },
          "ldhName" : "B0.NIC.LTDA",
@@ -50,84 +53,71 @@
          }
       }
    ],
-   "status" : [
-      "active"
+   "ldhName" : "ltda",
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/ltda.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "href" : "http://www.internetx.info",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "44371eb8133d637de5a5f08b4465f9f92624d581808bb4547635815d455bd804",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "28549"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
-         "eventDate" : "2014-07-03",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2014-07-03"
       },
       {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:48"
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
          ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.internetx.info"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
-   "handle" : "ltda",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "28549",
-            "algorithm" : "8",
-            "digest" : "44371eb8133d637de5a5f08b4465f9f92624d581808bb4547635815d455bd804"
-         }
-      ]
-   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "handle" : "ltda-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -160,13 +150,13 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "ltda-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -226,12 +216,13 @@
                ]
             ]
          ],
+         "handle" : "ltda-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "ltda-administrative",
          "vcardArray" : [
             "vcard",
@@ -292,25 +283,34 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       }
    ],
-   "links" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ltda.html",
-         "rel" : "related"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.AFILIAS-SRS.NET."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "description" : [
+            "Registration information: http://www.internetx.info"
+         ],
+         "title" : "Remark"
       },
       {
-         "href" : "http://www.internetx.info",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "objectClassName" : "domain"
+   "handle" : "ltda"
 }

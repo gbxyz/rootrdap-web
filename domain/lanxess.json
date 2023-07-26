@@ -1,17 +1,19 @@
 {
-   "ldhName" : "lanxess",
+   "status" : [
+      "active"
+   ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.LANXESS",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.192.9"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
             ]
-         },
-         "ldhName" : "A.NIC.LANXESS",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "ipAddresses" : {
@@ -27,57 +29,59 @@
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.LANXESS",
          "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
             "v4" : [
                "37.209.196.9"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:65"
             ],
-            "v4" : [
-               "156.154.144.101"
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
             ]
          },
+         "ldhName" : "C.NIC.LANXESS"
+      },
+      {
          "ldhName" : "NS1.DNS.NIC.LANXESS",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.144.101"
+            ],
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:65"
+            ]
+         },
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.LANXESS",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:65"
-            ],
             "v4" : [
                "156.154.145.101"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.101"
             ],
             "v6" : [
-               "2610:a1:1073:0:0:0:0:65"
+               "2610:a1:1072:0:0:0:0:65"
             ]
          },
+         "ldhName" : "NS2.DNS.NIC.LANXESS"
+      },
+      {
          "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:65"
+            ],
+            "v4" : [
+               "156.154.159.101"
+            ]
+         },
          "ldhName" : "NS3.DNS.NIC.LANXESS"
       }
    ],
+   "objectClassName" : "domain",
+   "ldhName" : "lanxess",
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-08"
+         "eventDate" : "2016-01-08",
+         "eventAction" : "registration"
       },
       {
          "eventAction" : "last changed",
@@ -85,71 +89,40 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:39"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.lanxess.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "lanxess",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "algorithm" : "8",
-            "digest" : "e7715a76b9ec7c6f1f6553100bc86f7c705078b27a8aeef20a3cee83a939069f",
             "digestType" : "2",
-            "keyTag" : "27220"
+            "algorithm" : "8",
+            "keyTag" : "27220",
+            "digest" : "e7715a76b9ec7c6f1f6553100bc86f7c705078b27a8aeef20a3cee83a939069f"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/lanxess.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.lanxess.com",
+         "title" : "URL for registration services"
+      }
    ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "lanxess-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -209,10 +182,56 @@
                ]
             ]
          ],
+         "handle" : "lanxess-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "lanxess-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "LANXESS Corporation"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "111 RIDC Park West Drive\nPittsburgh PA 15275-1112\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -273,68 +292,49 @@
             ]
          ],
          "handle" : "lanxess-administrative",
-         "roles" : [
-            "administrative"
+         "objectClassName" : "entity"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ]
       },
       {
-         "handle" : "lanxess-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "LANXESS Corporation"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "111 RIDC Park West Drive\nPittsburgh PA 15275-1112\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ]
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
-   "links" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/lanxess.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "description" : [
+            "Registration information: http://www.lanxess.com"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.lanxess.com",
-         "rel" : "related"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
-   ]
+   ],
+   "handle" : "lanxess"
 }

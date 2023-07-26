@@ -1,22 +1,5 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-04-07",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "ldhName" : "homegoods",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -32,17 +15,19 @@
       },
       {
          "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
             "v6" : [
                "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.HOMEGOODS"
+         "ldhName" : "B.NIC.HOMEGOODS",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C.NIC.HOMEGOODS",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:3:0:0:0:0:9"
@@ -50,9 +35,7 @@
             "v4" : [
                "37.209.196.9"
             ]
-         },
-         "ldhName" : "C.NIC.HOMEGOODS",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -67,31 +50,75 @@
          }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:49"
-            ],
             "v4" : [
                "156.154.145.73"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:49"
             ]
          },
-         "ldhName" : "NS2.DNS.NIC.HOMEGOODS",
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS2.DNS.NIC.HOMEGOODS"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS3.DNS.NIC.HOMEGOODS",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.159.73"
-            ],
             "v6" : [
                "2610:a1:1073:0:0:0:0:49"
+            ],
+            "v4" : [
+               "156.154.159.73"
             ]
-         }
+         },
+         "ldhName" : "NS3.DNS.NIC.HOMEGOODS"
       }
    ],
-   "handle" : "homegoods",
+   "status" : [
+      "active"
+   ],
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/homegoods.html"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://www.tjx.com",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "ff29069ba0204e904c1ba9407d98664383c7c9d65f4d33008a13042b497c93dd",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "8509"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-04-07"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:18"
+      }
+   ],
    "notices" : [
       {
          "title" : "About This Service",
@@ -102,41 +129,19 @@
          ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.tjx.com"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
             "registrant"
          ],
-         "handle" : "homegoods-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -170,76 +175,11 @@
                ]
             ]
          ],
+         "handle" : "homegoods-registrant",
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Taylor Frank"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "FairWinds Partners, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1000 Potomac Street NW #350\nWashington DC 20007\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "1.202.223.5232"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "1.202.223.9256"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tjxregistries@fairwindspartners.com"
-               ]
-            ]
-         ],
-         "handle" : "homegoods-administrative",
-         "roles" : [
-            "administrative"
-         ]
-      },
-      {
-         "handle" : "homegoods-technical",
          "roles" : [
             "technical"
          ],
@@ -302,39 +242,99 @@
                ]
             ]
          ],
+         "handle" : "homegoods-technical"
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Taylor Frank"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "FairWinds Partners, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1000 Potomac Street NW #350\nWashington DC 20007\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "1.202.223.5232"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "1.202.223.9256"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tjxregistries@fairwindspartners.com"
+               ]
+            ]
+         ],
+         "handle" : "homegoods-administrative",
          "objectClassName" : "entity"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "homegoods",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.tjx.com"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "ff29069ba0204e904c1ba9407d98664383c7c9d65f4d33008a13042b497c93dd",
-            "digestType" : "2",
-            "keyTag" : "8509"
-         }
-      ]
-   },
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/homegoods.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "http://www.tjx.com",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain"
+   "handle" : "homegoods"
 }

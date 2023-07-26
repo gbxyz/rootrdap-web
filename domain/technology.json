@@ -1,21 +1,18 @@
 {
-   "ldhName" : "technology",
    "nameservers" : [
       {
-         "ldhName" : "V0N0.NIC.TECHNOLOGY",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v4" : [
-               "65.22.28.37"
-            ],
             "v6" : [
                "2a01:8840:1e:0:0:0:0:37"
+            ],
+            "v4" : [
+               "65.22.28.37"
             ]
-         }
+         },
+         "ldhName" : "V0N0.NIC.TECHNOLOGY"
       },
       {
-         "ldhName" : "V0N1.NIC.TECHNOLOGY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:1f:0:0:0:0:37"
@@ -23,11 +20,13 @@
             "v4" : [
                "65.22.29.37"
             ]
-         }
+         },
+         "ldhName" : "V0N1.NIC.TECHNOLOGY",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.TECHNOLOGY",
          "objectClassName" : "nameserver",
+         "ldhName" : "V0N2.NIC.TECHNOLOGY",
          "ipAddresses" : {
             "v4" : [
                "65.22.30.37"
@@ -39,7 +38,6 @@
       },
       {
          "ldhName" : "V0N3.NIC.TECHNOLOGY",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.14.37"
@@ -47,7 +45,8 @@
             "v6" : [
                "2a01:8840:f8:0:0:0:0:37"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
@@ -62,90 +61,29 @@
          }
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:37"
-            ],
             "v4" : [
                "161.232.15.37"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:37"
             ]
          },
-         "ldhName" : "V2N1.NIC.TECHNOLOGY",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V2N1.NIC.TECHNOLOGY"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2013-11-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "objectClassName" : "domain",
    "status" : [
       "active"
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TECHNOLOGY."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "technology",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "27175",
-            "digestType" : "2",
-            "digest" : "dbbbb57529756c1bf2ed1ab1ca275b580c2f3296fcb65689844a8d58cd936516",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "technology-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -205,17 +143,53 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "technology-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "technology-technical",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "technology-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "roles" : [
             "technical"
          ],
+         "handle" : "technology-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -276,65 +250,91 @@
             ]
          ],
          "objectClassName" : "entity"
-      },
-      {
-         "handle" : "technology-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
       }
    ],
-   "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2013-11-08"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:01"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "dbbbb57529756c1bf2ed1ab1ca275b580c2f3296fcb65689844a8d58cd936516",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "27175"
+         }
+      ]
+   },
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/technology.html"
+         "href" : "https://www.iana.org/domains/root/db/technology.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       },
       {
          "title" : "URL for registration services",
          "href" : "http://www.donuts.domains/",
          "rel" : "related"
       }
-   ]
+   ],
+   "ldhName" : "technology",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TECHNOLOGY."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "technology"
 }

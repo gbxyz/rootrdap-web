@@ -1,79 +1,75 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "handle" : "mtn",
+   "remarks" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mtn.html",
-         "rel" : "related"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MTN."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "description" : [
+            "Registration information: http://www.mtn.com"
+         ],
+         "title" : "Remark"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.mtn.com",
-         "rel" : "related"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
+      },
+      {
+         "eventDate" : "2021-10-19",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:01",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "58114b80a64f8617af3ec29668c55519d8ccb44a203562d746e7f2cc8850a1eb",
-            "algorithm" : "8",
             "keyTag" : "18374",
-            "digestType" : "2"
+            "digestType" : "2",
+            "algorithm" : "8"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/mtn.html"
+      },
+      {
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.mtn.com"
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "mtn-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "MTN Dubai Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Floor 23, DIFC Currency House\nDubai\nUnited Arab Emirates (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
+         "handle" : "mtn-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -125,14 +121,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "administrative"
-         ],
-         "handle" : "mtn-administrative"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -185,50 +181,67 @@
             ]
          ],
          "handle" : "mtn-technical",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "MTN Dubai Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Floor 23, DIFC Currency House\nDubai\nUnited Arab Emirates (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "mtn-registrant",
          "roles" : [
-            "technical"
+            "registrant"
          ]
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MTN."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.mtn.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
          ],
-         "title" : "Source"
+         "title" : "Comments"
       }
    ],
-   "handle" : "mtn",
    "ldhName" : "mtn",
    "nameservers" : [
       {
@@ -244,42 +257,43 @@
          }
       },
       {
-         "ldhName" : "DNS2.NIC.MTN",
          "objectClassName" : "nameserver",
+         "ldhName" : "DNS2.NIC.MTN",
          "ipAddresses" : {
-            "v4" : [
-               "103.49.83.42"
-            ],
             "v6" : [
                "2401:fd80:403:0:0:0:0:42"
+            ],
+            "v4" : [
+               "103.49.83.42"
             ]
          }
       },
       {
+         "ldhName" : "DNS3.NIC.MTN",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:407:0:0:0:0:42"
-            ],
             "v4" : [
                "213.248.223.42"
+            ],
+            "v6" : [
+               "2a01:618:407:0:0:0:0:42"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.MTN"
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "DNS4.NIC.MTN",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:407:0:0:0:0:42"
-            ],
             "v4" : [
                "43.230.51.42"
+            ],
+            "v6" : [
+               "2401:fd80:407:0:0:0:0:42"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "DNSA.NIC.MTN",
          "ipAddresses" : {
             "v6" : [
                "2001:502:ad09:0:0:0:0:3"
@@ -288,7 +302,6 @@
                "156.154.100.3"
             ]
          },
-         "ldhName" : "DNSA.NIC.MTN",
          "objectClassName" : "nameserver"
       },
       {
@@ -304,45 +317,32 @@
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSC.NIC.MTN",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.102.3"
+            ],
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
             ]
-         }
+         },
+         "ldhName" : "DNSC.NIC.MTN"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "DNSD.NIC.MTN",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1010:0:0:0:0:3"
-            ],
             "v4" : [
                "156.154.103.3"
+            ],
+            "v6" : [
+               "2610:a1:1010:0:0:0:0:3"
             ]
          }
       }
    ],
+   "objectClassName" : "domain",
    "status" : [
       "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-03-12"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-19"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
    ]
 }

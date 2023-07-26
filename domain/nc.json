@@ -1,46 +1,11 @@
 {
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NC."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.domaine.nc"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
+   "status" : [
+      "active"
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "handle" : "nc",
-   "ldhName" : "nc",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "ANY-NS1.NC",
          "ipAddresses" : {
             "v6" : [
                "2001:500:14:8000:7245:de00:0:1"
@@ -48,23 +13,22 @@
             "v4" : [
                "114.69.222.1"
             ]
-         },
-         "ldhName" : "ANY-NS1.NC",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "NC.CCTLD.AUTHDNS.RIPE.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "193.0.9.100"
-            ],
-            "v6" : [
-               "2001:67c:e0:0:0:0:0:100"
-            ]
          }
       },
       {
+         "ldhName" : "NC.CCTLD.AUTHDNS.RIPE.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:e0:0:0:0:0:100"
+            ],
+            "v4" : [
+               "193.0.9.100"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.NC",
          "ipAddresses" : {
             "v6" : [
                "2404:2200:10:1000:0:0:53:1"
@@ -73,117 +37,26 @@
                "202.87.129.16"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.NC"
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS2.NC",
          "objectClassName" : "nameserver",
+         "ldhName" : "NS2.NC",
          "ipAddresses" : {
-            "v4" : [
-               "202.87.129.17"
-            ],
             "v6" : [
                "2404:2200:10:1000:0:0:53:2"
+            ],
+            "v4" : [
+               "202.87.129.17"
             ]
          }
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "1993-10-13",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-03-23",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/nc.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.domaine.nc"
       }
    ],
    "objectClassName" : "domain",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digest" : "5957ab66cf4871c8c39edebc78dfab2b6dcbb3ea5e97278ea27190539410b753",
-            "algorithm" : "8",
-            "keyTag" : "49057",
-            "digestType" : "2"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
+   "ldhName" : "nc",
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Office des Postes et Telecommunications"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2 Rue Monchovet - Port Plaisance\nNoumea 98841\nNew Caledonia"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "handle" : "nc-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "nc-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -243,10 +116,16 @@
                ]
             ]
          ],
+         "handle" : "nc-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -307,10 +186,131 @@
             ]
          ],
          "handle" : "nc-technical",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "handle" : "nc-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Office des Postes et Telecommunications"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2 Rue Monchovet - Port Plaisance\nNoumea 98841\nNew Caledonia"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
          "roles" : [
-            "technical"
+            "registrant"
          ]
       }
    ],
-   "port43" : "whois.iana.org"
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "1993-10-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-03-23"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:04"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "5957ab66cf4871c8c39edebc78dfab2b6dcbb3ea5e97278ea27190539410b753",
+            "keyTag" : "49057",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/nc.html"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.domaine.nc",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NC."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.domaine.nc"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "nc"
 }

@@ -1,70 +1,5 @@
 {
-   "ldhName" : "otsuka",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.4"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ]
-         },
-         "ldhName" : "A.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.196.4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "K.GMOREGISTRY.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "L.GMOREGISTRY.NET"
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-06-26",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2019-08-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "handle" : "otsuka",
    "remarks" : [
       {
          "description" : [
@@ -73,10 +8,10 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.gmoregistry.com/en/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "title" : "Source",
@@ -84,6 +19,9 @@
             "IANA"
          ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "notices" : [
       {
@@ -103,67 +41,8 @@
          ]
       }
    ],
-   "handle" : "otsuka",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "1147",
-            "digestType" : "2",
-            "digest" : "99fa7ba5260c1c400fc5d65616fd3d796a6ab5aea557314cab10392de8fc90b3",
-            "algorithm" : "8"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "handle" : "otsuka-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Otsuka Holdings Co., Ltd."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "2-9 Kanda-Tsukasamachi\nChiyoda-ku Tokyo\nJapan"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "otsuka-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -222,6 +101,10 @@
                   "newgtld@gmoregistry.com"
                ]
             ]
+         ],
+         "handle" : "otsuka-administrative",
+         "roles" : [
+            "administrative"
          ],
          "objectClassName" : "entity"
       },
@@ -285,30 +168,147 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "otsuka-technical",
          "roles" : [
             "technical"
          ],
-         "handle" : "otsuka-technical"
+         "objectClassName" : "entity"
+      },
+      {
+         "handle" : "otsuka-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Otsuka Holdings Co., Ltd."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "2-9 Kanda-Tsukasamachi\nChiyoda-ku Tokyo\nJapan"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "99fa7ba5260c1c400fc5d65616fd3d796a6ab5aea557314cab10392de8fc90b3",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "1147"
+         }
+      ]
+   },
    "links" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related",
          "href" : "https://www.iana.org/domains/root/db/otsuka.html",
-         "rel" : "related"
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "http://www.gmoregistry.com/en/",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2014-06-26",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2019-08-20"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:15",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "otsuka",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.192.4"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.194.4"
+            ],
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.4"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.198.4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
    ]
 }

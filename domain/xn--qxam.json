@@ -1,64 +1,88 @@
 {
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "10384",
-            "algorithm" : "8",
-            "digest" : "10a432dbf0112ce38a83ced26f36ce36aac7a3d37cec8d07583c01a5e9fd8ed1"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "ESTIA.ICS.FORTH.GR",
+         "ipAddresses" : {
+            "v4" : [
+               "139.91.191.3"
+            ],
+            "v6" : [
+               "2001:648:2c30:0:0:0:191:3"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "78.104.145.227"
+            ]
+         },
+         "ldhName" : "GR-AT.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "GR-C.ICS.FORTH.GR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:678:4:0:0:0:0:19"
+            ],
+            "v4" : [
+               "194.0.1.25"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.11.102"
+            ],
+            "v6" : [
+               "2001:678:e:102:0:0:0:53"
+            ]
+         },
+         "ldhName" : "GR-D.ICS.FORTH.GR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "GRDNS.ICS.FORTH.GR",
+         "ipAddresses" : {
+            "v4" : [
+               "139.91.1.1"
+            ],
+            "v6" : []
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "ldhName" : "xn--qxam",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
    ],
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ICS-FORTH GR"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "100 Nikolaou Plastira str.\nVassilika Vouton\nHeraklion Crete GR-70013\nGreece"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "objectClassName" : "entity",
-         "handle" : "xn--qxam-registrant",
-         "roles" : [
-            "registrant"
-         ]
-      },
-      {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "xn--qxam-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -118,14 +142,53 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "xn--qxam-administrative",
+         "roles" : [
+            "administrative"
+         ]
       },
       {
          "roles" : [
-            "technical"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ICS-FORTH GR"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "100 Nikolaou Plastira str.\nVassilika Vouton\nHeraklion Crete GR-70013\nGreece"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "xn--qxam-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "handle" : "xn--qxam-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -184,16 +247,19 @@
                   "gr-noc@ics.forth.gr"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "technical"
+         ],
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "objectClassName" : "domain",
    "links" : [
       {
-         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/xn--qxam.html"
+         "href" : "https://www.iana.org/domains/root/db/xn--qxam.html",
+         "rel" : "related"
       },
       {
          "title" : "About RDAP",
@@ -206,81 +272,33 @@
          "href" : "http://www.gr"
       }
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "ESTIA.ICS.FORTH.GR",
-         "ipAddresses" : {
-            "v4" : [
-               "139.91.191.3"
-            ],
-            "v6" : [
-               "2001:648:2c30:0:0:0:191:3"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "10a432dbf0112ce38a83ced26f36ce36aac7a3d37cec8d07583c01a5e9fd8ed1",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "10384"
          }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "78.104.145.227"
-            ],
-            "v6" : []
-         },
-         "ldhName" : "GR-AT.ICS.FORTH.GR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:4:0:0:0:0:19"
-            ],
-            "v4" : [
-               "194.0.1.25"
-            ]
-         },
-         "ldhName" : "GR-C.ICS.FORTH.GR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "GR-D.ICS.FORTH.GR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:e:102:0:0:0:53"
-            ],
-            "v4" : [
-               "194.0.11.102"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "139.91.1.1"
-            ]
-         },
-         "ldhName" : "GRDNS.ICS.FORTH.GR",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "xn--qxam",
+      ]
+   },
    "events" : [
       {
-         "eventAction" : "registration",
-         "eventDate" : "2015-05-06"
+         "eventDate" : "2015-05-06",
+         "eventAction" : "registration"
       },
       {
          "eventDate" : "2023-03-07",
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:04:18",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:49"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "remarks" : [
       {
@@ -290,34 +308,16 @@
          "title" : "Whois Service"
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.gr"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "title" : "Source",
          "description" : [
             "IANA"
          ]
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
       }
    ],
    "handle" : "xn--qxam"

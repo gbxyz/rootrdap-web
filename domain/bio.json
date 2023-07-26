@@ -1,39 +1,77 @@
 {
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bio.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://donuts.domains/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "16334",
-            "digestType" : "2",
-            "digest" : "aeaf99ce9c6f64b1607605dae987d3bd0acd4c5490691322b98c592c9c27b14b",
-            "algorithm" : "8"
-         }
-      ]
-   },
+   "handle" : "bio",
    "rdapConformance" : [
       "rdap_level_0"
    ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BIO."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://donuts.domains/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "ldhName" : "bio",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-15"
+      },
+      {
+         "eventDate" : "2021-12-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:17"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "aeaf99ce9c6f64b1607605dae987d3bd0acd4c5490691322b98c592c9c27b14b",
+            "keyTag" : "16334",
+            "algorithm" : "8",
+            "digestType" : "2"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/bio.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "https://donuts.domains/",
+         "rel" : "related"
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -42,6 +80,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Vice President, Engineering"
                ],
                [
                   "org",
@@ -64,13 +108,31 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.425.298.2200"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.425.671.0020"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "handle" : "bio-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "handle" : "bio-administrative",
+         "objectClassName" : "entity"
       },
       {
          "vcardArray" : [
@@ -132,13 +194,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "bio-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "bio-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -147,12 +211,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Vice President, Engineering"
                ],
                [
                   "org",
@@ -175,79 +233,38 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.425.298.2200"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.425.671.0020"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "tldadmin@donuts.email"
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
-            "administrative"
-         ],
-         "handle" : "bio-administrative"
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BIO."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://donuts.domains/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
+            "registrant"
          ]
       }
    ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         ]
       }
    ],
-   "handle" : "bio",
-   "ldhName" : "bio",
+   "status" : [
+      "active"
+   ],
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:52:0:0:0:0:9"
@@ -256,12 +273,10 @@
                "65.22.84.9"
             ]
          },
-         "ldhName" : "A0.NIC.BIO",
-         "objectClassName" : "nameserver"
+         "ldhName" : "A0.NIC.BIO"
       },
       {
          "ldhName" : "A2.NIC.BIO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:55:0:0:0:0:9"
@@ -269,11 +284,10 @@
             "v4" : [
                "65.22.87.9"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.NIC.BIO",
          "ipAddresses" : {
             "v4" : [
                "65.22.85.9"
@@ -281,36 +295,22 @@
             "v6" : [
                "2a01:8840:53:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "B0.NIC.BIO",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "C0.NIC.BIO",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:54:0:0:0:0:9"
-            ],
             "v4" : [
                "65.22.86.9"
+            ],
+            "v6" : [
+               "2a01:8840:54:0:0:0:0:9"
             ]
-         }
+         },
+         "ldhName" : "C0.NIC.BIO",
+         "objectClassName" : "nameserver"
       }
    ],
-   "events" : [
-      {
-         "eventDate" : "2014-05-15",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-12-01",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "objectClassName" : "domain"
 }

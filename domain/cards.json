@@ -1,26 +1,77 @@
 {
+   "handle" : "cards",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CARDS."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-06"
+      },
+      {
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:28:40"
+      }
+   ],
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/cards.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/cards.html"
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services",
          "rel" : "related"
       }
    ],
-   "objectClassName" : "domain",
-   "port43" : "whois.iana.org",
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "40594",
+            "digest" : "0a2ec0d96558b08e99f3eb0cfa6b80ce64cb9994cf16726d56af60fd2b5d3f9d"
+         }
+      ]
+   },
    "entities" : [
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "cards-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -53,17 +104,10 @@
                   ]
                ]
             ]
-         ],
-         "handle" : "cards-registrant",
-         "roles" : [
-            "registrant"
          ]
       },
       {
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "cards-technical",
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -123,10 +167,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "cards-technical",
+         "roles" : [
+            "technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "cards-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -186,35 +236,18 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "cards-administrative"
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "40594",
-            "algorithm" : "8",
-            "digest" : "0a2ec0d96558b08e99f3eb0cfa6b80ce64cb9994cf16726d56af60fd2b5d3f9d"
-         }
-      ]
-   },
-   "handle" : "cards",
+   "port43" : "whois.iana.org",
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -225,56 +258,19 @@
          ]
       }
    ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CARDS."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2014-02-06",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "ldhName" : "cards",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.CARDS",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:50"
-            ],
             "v4" : [
                "65.22.32.50"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:50"
             ]
-         },
-         "ldhName" : "V0N0.NIC.CARDS",
-         "objectClassName" : "nameserver"
+         }
       },
       {
          "objectClassName" : "nameserver",
@@ -290,17 +286,18 @@
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:24:0:0:0:0:50"
-            ],
             "v4" : [
                "65.22.34.50"
+            ],
+            "v6" : [
+               "2a01:8840:24:0:0:0:0:50"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.CARDS"
+         "ldhName" : "V0N2.NIC.CARDS",
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V0N3.NIC.CARDS",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:fa:0:0:0:0:50"
@@ -309,12 +306,10 @@
                "161.232.16.50"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.CARDS"
+         "objectClassName" : "nameserver"
       },
       {
          "ldhName" : "V2N0.NIC.CARDS",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2a01:8840:25:0:0:0:0:50"
@@ -322,9 +317,11 @@
             "v4" : [
                "65.22.35.50"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V2N1.NIC.CARDS",
          "ipAddresses" : {
             "v4" : [
                "161.232.17.50"
@@ -333,8 +330,11 @@
                "2a01:8840:fb:0:0:0:0:50"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.CARDS"
+         "objectClassName" : "nameserver"
       }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ]
 }

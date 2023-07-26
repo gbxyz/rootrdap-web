@@ -1,73 +1,28 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-04-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-11-17"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:43",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "ups",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.240.1"
-            ],
-            "v6" : [
-               "2a01:8840:ea:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.UPS"
-      },
-      {
-         "ldhName" : "A2.NIC.UPS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ed:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.243.1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:eb:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.241.1"
-            ]
-         },
-         "ldhName" : "B0.NIC.UPS",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "C0.NIC.UPS",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:ec:0:0:0:0:1"
-            ],
-            "v4" : [
-               "65.22.242.1"
-            ]
-         }
-      }
-   ],
    "handle" : "ups",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.UPS."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.ups.com"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "notices" : [
       {
          "description" : [
@@ -86,33 +41,12 @@
          ]
       }
    ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.UPS."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.ups.com"
-         ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
          "roles" : [
-            "administrative"
+            "registrant"
          ],
-         "handle" : "ups-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -121,12 +55,6 @@
                   {},
                   "text",
                   "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Attorney"
                ],
                [
                   "org",
@@ -149,33 +77,13 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1.404.828.7121"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1.404.828.3116"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ngtld-ups@cscglobal.com"
                ]
             ]
          ],
+         "handle" : "ups-registrant",
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -238,9 +146,13 @@
          "handle" : "ups-technical",
          "roles" : [
             "technical"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -249,6 +161,12 @@
                   {},
                   "text",
                   "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Attorney"
                ],
                [
                   "org",
@@ -271,46 +189,128 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1.404.828.7121"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1.404.828.3116"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ngtld-ups@cscglobal.com"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "ups-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "handle" : "ups-administrative",
+         "objectClassName" : "entity"
       }
-   ],
-   "rdapConformance" : [
-      "rdap_level_0"
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
+            "algorithm" : "8",
             "digestType" : "2",
             "keyTag" : "2002",
-            "algorithm" : "8",
             "digest" : "28e49220a4b3bc519f2cd5800b8c96db682a9651eec3bb19ff98d670cbe4be36"
          }
       ]
    },
-   "objectClassName" : "domain",
    "links" : [
       {
-         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/ups.html",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/ups.html"
+         "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       },
       {
-         "href" : "http://www.ups.com",
          "title" : "URL for registration services",
+         "href" : "http://www.ups.com",
          "rel" : "related"
       }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2016-04-14",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2020-11-17",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:32:13",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "ups",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "A0.NIC.UPS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:ea:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.240.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "A2.NIC.UPS",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:ed:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.243.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.241.1"
+            ],
+            "v6" : [
+               "2a01:8840:eb:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B0.NIC.UPS"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.NIC.UPS",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.242.1"
+            ],
+            "v6" : [
+               "2a01:8840:ec:0:0:0:0:1"
+            ]
+         }
+      }
+   ],
+   "status" : [
+      "active"
    ]
 }

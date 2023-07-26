@@ -1,121 +1,4 @@
 {
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TAX."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "handle" : "tax",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1a:0:0:0:0:16"
-            ],
-            "v4" : [
-               "65.22.24.16"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.TAX"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1b:0:0:0:0:16"
-            ],
-            "v4" : [
-               "65.22.25.16"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.TAX"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.TAX",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1c:0:0:0:0:16"
-            ],
-            "v4" : [
-               "65.22.26.16"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.12.16"
-            ],
-            "v6" : [
-               "2a01:8840:f6:0:0:0:0:16"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.TAX"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.27.16"
-            ],
-            "v6" : [
-               "2a01:8840:1d:0:0:0:0:16"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.TAX"
-      },
-      {
-         "ldhName" : "V2N1.NIC.TAX",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f7:0:0:0:0:16"
-            ],
-            "v4" : [
-               "161.232.13.16"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "tax",
-   "status" : [
-      "active"
-   ],
    "events" : [
       {
          "eventAction" : "registration",
@@ -126,21 +9,20 @@
          "eventAction" : "last changed"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:32:00",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "objectClassName" : "domain",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/tax.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/tax.html"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
          "title" : "URL for registration services",
@@ -148,24 +30,21 @@
          "rel" : "related"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "3385",
+            "algorithm" : "8",
             "digestType" : "2",
-            "digest" : "4d66cf4d6309a91268d634432d008877ab792d0632a1f8775b732a18c277786f",
-            "algorithm" : "8"
+            "keyTag" : "3385",
+            "digest" : "4d66cf4d6309a91268d634432d008877ab792d0632a1f8775b732a18c277786f"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "handle" : "tax-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -228,7 +107,7 @@
          "roles" : [
             "administrative"
          ],
-         "handle" : "tax-administrative"
+         "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
@@ -291,13 +170,12 @@
                ]
             ]
          ],
+         "handle" : "tax-technical",
          "roles" : [
             "technical"
-         ],
-         "handle" : "tax-technical"
+         ]
       },
       {
-         "handle" : "tax-registrant",
          "roles" : [
             "registrant"
          ],
@@ -334,7 +212,129 @@
                ]
             ]
          ],
+         "handle" : "tax-registrant",
          "objectClassName" : "entity"
       }
+   ],
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "ldhName" : "tax",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V0N0.NIC.TAX",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.24.16"
+            ],
+            "v6" : [
+               "2a01:8840:1a:0:0:0:0:16"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1b:0:0:0:0:16"
+            ],
+            "v4" : [
+               "65.22.25.16"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.TAX",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.26.16"
+            ],
+            "v6" : [
+               "2a01:8840:1c:0:0:0:0:16"
+            ]
+         },
+         "ldhName" : "V0N2.NIC.TAX",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "V0N3.NIC.TAX",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.12.16"
+            ],
+            "v6" : [
+               "2a01:8840:f6:0:0:0:0:16"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.27.16"
+            ],
+            "v6" : [
+               "2a01:8840:1d:0:0:0:0:16"
+            ]
+         },
+         "ldhName" : "V2N0.NIC.TAX",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.TAX",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.13.16"
+            ],
+            "v6" : [
+               "2a01:8840:f7:0:0:0:0:16"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "handle" : "tax",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TAX."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

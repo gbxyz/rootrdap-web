@@ -1,69 +1,53 @@
 {
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2016-01-14",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v4" : [
-               "156.154.144.92"
-            ],
             "v6" : [
                "2610:a1:1071:0:0:0:0:5c"
+            ],
+            "v4" : [
+               "156.154.144.92"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.JPMORGAN"
+         "ldhName" : "NS1.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.JPMORGAN",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.145.92"
-            ],
             "v6" : [
                "2610:a1:1072:0:0:0:0:5c"
+            ],
+            "v4" : [
+               "156.154.145.92"
             ]
-         }
+         },
+         "ldhName" : "NS2.DNS.NIC.JPMORGAN",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "NS3.DNS.NIC.JPMORGAN",
          "objectClassName" : "nameserver",
+         "ldhName" : "NS3.DNS.NIC.JPMORGAN",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.159.92"
-            ],
             "v6" : [
                "2610:a1:1073:0:0:0:0:5c"
+            ],
+            "v4" : [
+               "156.154.159.92"
             ]
          }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "NS4.DNS.NIC.JPMORGAN",
          "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1074:0:0:0:0:5c"
-            ],
             "v4" : [
                "156.154.156.92"
+            ],
+            "v6" : [
+               "2610:a1:1074:0:0:0:0:5c"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -78,6 +62,7 @@
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.158.92"
@@ -86,57 +71,76 @@
                "2610:a1:1076:0:0:0:0:5c"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "NS6.DNS.NIC.JPMORGAN"
       }
    ],
-   "ldhName" : "jpmorgan",
-   "handle" : "jpmorgan",
+   "status" : [
+      "active"
+   ],
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/jpmorgan.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "href" : "http://www.jpmorganchase.com",
+         "title" : "URL for registration services",
+         "rel" : "related"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "ee3004dfa6162785f6c80c697e79d43f8fe436189a5cd880c971d4cc2870b139",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "3652"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "2016-01-14",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:32"
+      }
+   ],
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is ."
          ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.jpmorganchase.com"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
-   "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
          "handle" : "jpmorgan-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -196,9 +200,56 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "jpmorgan-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "JPMorgan Chase Bank, National Association"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "270 Park Avenue\nNew York NY 10017\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "jpmorgan-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -257,84 +308,33 @@
                   "dotchase@markmonitor.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "handle" : "jpmorgan-administrative",
-         "roles" : [
-            "administrative"
          ]
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "ldhName" : "jpmorgan",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is ."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "JPMorgan Chase Bank, National Association"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "270 Park Avenue\nNew York NY 10017\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "description" : [
+            "Registration information: http://www.jpmorganchase.com"
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "jpmorgan-registrant"
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "3652",
-            "digestType" : "2",
-            "digest" : "ee3004dfa6162785f6c80c697e79d43f8fe436189a5cd880c971d4cc2870b139",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/jpmorgan.html"
-      },
-      {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.jpmorganchase.com",
-         "rel" : "related"
-      }
-   ]
+   "handle" : "jpmorgan"
 }

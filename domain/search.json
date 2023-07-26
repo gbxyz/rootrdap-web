@@ -1,41 +1,91 @@
 {
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/search.html"
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.32.105"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "https://www.registry.google"
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.36.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:36:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4802:38:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.38.105"
+            ]
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ]
+         },
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "objectClassName" : "nameserver"
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digest" : "afaec406996df5555fc4365c07c7c74de82fe7cf5264fc5fad9d1ab948f3da28",
-            "algorithm" : "8",
-            "keyTag" : "36497",
-            "digestType" : "2"
-         }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "status" : [
+      "active"
    ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "search-registrant",
          "vcardArray" : [
             "vcard",
@@ -70,76 +120,16 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
-      },
-      {
-         "handle" : "search-administrative",
          "roles" : [
-            "administrative"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Google Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 404 978 8419"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 650 492 5631"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-contact@google.com"
-               ]
-            ]
+            "registrant"
          ],
          "objectClassName" : "entity"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "search-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -199,13 +189,118 @@
                ]
             ]
          ],
-         "roles" : [
-            "technical"
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Google Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 404 978 8419"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 650 492 5631"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-contact@google.com"
+               ]
+            ]
          ],
-         "handle" : "search-technical"
+         "handle" : "search-administrative",
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/search.html"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "https://www.registry.google"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "36497",
+            "digest" : "afaec406996df5555fc4365c07c7c74de82fe7cf5264fc5fad9d1ab948f3da28"
+         }
+      ]
+   },
+   "events" : [
+      {
+         "eventDate" : "2017-06-08",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventDate" : "2023-07-26T12:31:42",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "ldhName" : "search",
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -226,103 +321,8 @@
          ]
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "handle" : "search",
-   "nameservers" : [
-      {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.32.105"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.34.105"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.36.105"
-            ],
-            "v6" : [
-               "2001:4860:4802:36:0:0:0:69"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.38.105"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
-            "v4" : [
-               "216.239.60.105"
-            ]
-         }
-      }
-   ],
-   "ldhName" : "search",
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2017-06-08"
-      },
-      {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ]
+   "handle" : "search"
 }

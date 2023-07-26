@@ -1,50 +1,130 @@
 {
-   "entities" : [
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
       {
-         "roles" : [
-            "registrant"
-         ],
-         "handle" : "globo-registrant",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Globo Comunicação e Participações S.A"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Av. Afranio de Melo, 135, 3. andar\nRio de Janeiro RJ 22430-060\nBrazil"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
+         "ipAddresses" : {
+            "v6" : [
+               "2001:12f8:6:0:0:0:0:10"
+            ],
+            "v4" : [
+               "200.219.148.10"
             ]
-         ],
-         "objectClassName" : "entity"
+         },
+         "ldhName" : "A.DNS.BR",
+         "objectClassName" : "nameserver"
       },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:12f8:8:0:0:0:0:10"
+            ],
+            "v4" : [
+               "200.189.41.10"
+            ]
+         },
+         "ldhName" : "B.DNS.BR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.DNS.BR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:12f8:a:0:0:0:0:10"
+            ],
+            "v4" : [
+               "200.192.233.10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "D.DNS.BR",
+         "ipAddresses" : {
+            "v4" : [
+               "200.219.154.10"
+            ],
+            "v6" : [
+               "2001:12f8:4:0:0:0:0:10"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:12f8:2:0:0:0:0:10"
+            ],
+            "v4" : [
+               "200.229.248.10"
+            ]
+         },
+         "ldhName" : "E.DNS.BR"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "F.DNS.BR",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:12f8:c:0:0:0:0:10"
+            ],
+            "v4" : [
+               "200.219.159.10"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "globo",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-02-20"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-08-14"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:03",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/globo.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "https://nic.globo/"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "13",
+            "keyTag" : "2471",
+            "digest" : "47016576766a31841f591b328d8ea0ed33c9f057740d1a625c57a746eb67cd98"
+         }
+      ]
+   },
+   "entities" : [
       {
          "roles" : [
             "administrative"
          ],
-         "handle" : "globo-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -96,9 +176,55 @@
                ]
             ]
          ],
+         "handle" : "globo-administrative",
          "objectClassName" : "entity"
       },
       {
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Globo Comunicação e Participações S.A"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Av. Afranio de Melo, 135, 3. andar\nRio de Janeiro RJ 22430-060\nBrazil"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "globo-registrant",
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "globo-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -149,146 +275,37 @@
                   "gtlds-tech@registro.br"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "globo-technical"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "2471",
-            "algorithm" : "13",
-            "digest" : "47016576766a31841f591b328d8ea0ed33c9f057740d1a625c57a746eb67cd98"
-         }
-      ],
-      "delegationSigned" : true
-   },
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/globo.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://nic.globo/",
-         "title" : "URL for registration services"
-      }
-   ],
-   "objectClassName" : "domain",
-   "events" : [
-      {
-         "eventDate" : "2014-02-20",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-08-14",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "globo",
-   "nameservers" : [
-      {
-         "ldhName" : "A.DNS.BR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:6:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.219.148.10"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:8:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.189.41.10"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.DNS.BR"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "200.192.233.10"
-            ],
-            "v6" : [
-               "2001:12f8:a:0:0:0:0:10"
-            ]
-         },
-         "ldhName" : "C.DNS.BR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.DNS.BR",
-         "ipAddresses" : {
-            "v4" : [
-               "200.219.154.10"
-            ],
-            "v6" : [
-               "2001:12f8:4:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.DNS.BR",
-         "ipAddresses" : {
-            "v4" : [
-               "200.229.248.10"
-            ],
-            "v6" : [
-               "2001:12f8:2:0:0:0:0:10"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "F.DNS.BR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:12f8:c:0:0:0:0:10"
-            ],
-            "v4" : [
-               "200.219.159.10"
-            ]
-         }
-      }
-   ],
-   "handle" : "globo",
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.GTLDS.NIC.BR."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -303,22 +320,5 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ]
+   "handle" : "globo"
 }

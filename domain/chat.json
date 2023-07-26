@@ -1,39 +1,50 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "handle" : "chat",
+   "remarks" : [
       {
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/chat.html",
-         "rel" : "related"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.CHAT."
+         ]
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.donuts.domains/"
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
       }
    ],
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "45004",
-            "digestType" : "2",
-            "digest" : "cfbaed6bb4f9a66e0ecba421e368dd33b881319a74d3375d3a0f8a88fb9bda59",
-            "algorithm" : "8"
-         }
-      ]
-   },
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "handle" : "chat-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -67,18 +78,17 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "registrant"
          ],
-         "handle" : "chat-registrant"
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "chat-technical",
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
+         "handle" : "chat-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -140,11 +150,7 @@
          ]
       },
       {
-         "roles" : [
-            "administrative"
-         ],
          "handle" : "chat-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -203,65 +209,71 @@
                   "tldadmin@donuts.email"
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "notices" : [
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "cfbaed6bb4f9a66e0ecba421e368dd33b881319a74d3375d3a0f8a88fb9bda59",
+            "keyTag" : "45004",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
       {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/chat.html"
       },
       {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://www.donuts.domains/"
       }
    ],
-   "remarks" : [
+   "events" : [
       {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.CHAT."
-         ],
-         "title" : "Whois Service"
+         "eventDate" : "2015-01-29",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
+         "eventDate" : "2021-11-18",
+         "eventAction" : "last changed"
       },
       {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
+         "eventDate" : "2023-07-26T12:28:49",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "handle" : "chat",
    "ldhName" : "chat",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:22:0:0:0:0:42"
-            ],
             "v4" : [
                "65.22.32.42"
+            ],
+            "v6" : [
+               "2a01:8840:22:0:0:0:0:42"
             ]
          },
          "ldhName" : "V0N0.NIC.CHAT",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N1.NIC.CHAT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.33.42"
@@ -269,11 +281,11 @@
             "v6" : [
                "2a01:8840:23:0:0:0:0:42"
             ]
-         }
+         },
+         "ldhName" : "V0N1.NIC.CHAT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N2.NIC.CHAT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.34.42"
@@ -281,11 +293,11 @@
             "v6" : [
                "2a01:8840:24:0:0:0:0:42"
             ]
-         }
+         },
+         "ldhName" : "V0N2.NIC.CHAT",
+         "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "V0N3.NIC.CHAT",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "161.232.16.42"
@@ -293,21 +305,25 @@
             "v6" : [
                "2a01:8840:fa:0:0:0:0:42"
             ]
-         }
+         },
+         "ldhName" : "V0N3.NIC.CHAT",
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.CHAT",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:25:0:0:0:0:42"
-            ],
             "v4" : [
                "65.22.35.42"
+            ],
+            "v6" : [
+               "2a01:8840:25:0:0:0:0:42"
             ]
-         }
+         },
+         "ldhName" : "V2N0.NIC.CHAT"
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.CHAT",
          "ipAddresses" : {
             "v4" : [
                "161.232.17.42"
@@ -315,26 +331,10 @@
             "v6" : [
                "2a01:8840:fb:0:0:0:0:42"
             ]
-         },
-         "ldhName" : "V2N1.NIC.CHAT",
-         "objectClassName" : "nameserver"
+         }
       }
    ],
    "status" : [
       "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2015-01-29"
-      },
-      {
-         "eventDate" : "2021-11-18",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
    ]
 }

@@ -1,80 +1,5 @@
 {
-   "nameservers" : [
-      {
-         "ldhName" : "NS-BJ.AFRINIC.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "196.216.168.33"
-            ],
-            "v6" : [
-               "2001:43f8:120:0:0:0:0:33"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS-BJ.NIC.FR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:678:c:0:0:0:0:1"
-            ],
-            "v4" : [
-               "194.0.9.1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS1.NIC.BJ",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "154.65.28.218"
-            ],
-            "v6" : []
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.NIC.BJ",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "41.85.191.2"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:14:6125:ad:0:0:1"
-            ],
-            "v4" : [
-               "204.61.216.125"
-            ]
-         },
-         "ldhName" : "PCH.NIC.BJ",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "bj",
-   "events" : [
-      {
-         "eventDate" : "1996-01-18",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-04-14"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
+   "handle" : "bj",
    "remarks" : [
       {
          "description" : [
@@ -83,54 +8,66 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.nic.bj"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
       {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         "eventDate" : "1996-01-18",
+         "eventAction" : "registration"
       },
       {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
+         "eventDate" : "2023-04-14",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:18",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "handle" : "bj",
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/bj.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.nic.bj",
+         "title" : "URL for registration services"
+      }
+   ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
+            "digest" : "f408c0b3c28d87a76175348b27f6d26ca47231fc29071ab6b5f849777c6548b5",
             "keyTag" : "26617",
             "algorithm" : "8",
-            "digest" : "f408c0b3c28d87a76175348b27f6d26ca47231fc29071ab6b5f849777c6548b5"
+            "digestType" : "2"
          }
       ]
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "handle" : "bj-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -190,12 +127,17 @@
                ]
             ]
          ],
-         "handle" : "bj-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "handle" : "bj-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -246,15 +188,13 @@
                   "deogratias.tonouhewa@jenysas.bj"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "bj-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "bj-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -288,29 +228,89 @@
                ]
             ]
          ],
-         "handle" : "bj-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
-   "links" : [
+   "notices" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/bj.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.nic.bj"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
-   "objectClassName" : "domain"
+   "ldhName" : "bj",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS-BJ.AFRINIC.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "196.216.168.33"
+            ],
+            "v6" : [
+               "2001:43f8:120:0:0:0:0:33"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "194.0.9.1"
+            ],
+            "v6" : [
+               "2001:678:c:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "NS-BJ.NIC.FR"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "154.65.28.218"
+            ],
+            "v6" : []
+         },
+         "ldhName" : "NS1.NIC.BJ"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "41.85.191.2"
+            ]
+         },
+         "ldhName" : "NS2.NIC.BJ"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "PCH.NIC.BJ",
+         "ipAddresses" : {
+            "v4" : [
+               "204.61.216.125"
+            ],
+            "v6" : [
+               "2001:500:14:6125:ad:0:0:1"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ]
 }

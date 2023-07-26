@@ -2,24 +2,83 @@
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "02836f0e9fdb7e3ca5983577ccfed953698bd173d92a2e65650f73f14c39ac8d",
-            "digestType" : "2",
-            "keyTag" : "30364"
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://www.gmoregistry.com/en/"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "hisamitsu",
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.GMOREGISTRY.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.192.4"
+            ],
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:4"
+            ]
          }
-      ]
-   },
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:4"
+            ],
+            "v4" : [
+               "37.209.194.4"
+            ]
+         },
+         "ldhName" : "B.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [],
+            "v4" : [
+               "37.209.196.4"
+            ]
+         },
+         "ldhName" : "K.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.4"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:4"
+            ]
+         },
+         "ldhName" : "L.GMOREGISTRY.NET",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "hisamitsu",
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "hisamitsu-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -79,9 +138,15 @@
                ]
             ]
          ],
+         "handle" : "hisamitsu-administrative",
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "hisamitsu-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -141,11 +206,9 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "roles" : [
             "technical"
-         ],
-         "handle" : "hisamitsu-technical"
+         ]
       },
       {
          "roles" : [
@@ -188,90 +251,6 @@
          "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/hisamitsu.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.gmoregistry.com/en/"
-      }
-   ],
-   "ldhName" : "hisamitsu",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.4"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:4"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.GMOREGISTRY.NET"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.194.4"
-            ]
-         },
-         "ldhName" : "B.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "K.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [],
-            "v4" : [
-               "37.209.196.4"
-            ]
-         }
-      },
-      {
-         "ldhName" : "L.GMOREGISTRY.NET",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:4"
-            ],
-            "v4" : [
-               "37.209.198.4"
-            ]
-         }
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-05-13"
-      },
-      {
-         "eventDate" : "2023-06-12",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "notices" : [
       {
          "description" : [
@@ -282,33 +261,54 @@
          "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GMO."
          ]
-      },
-      {
-         "description" : [
-            "Registration information: http://www.gmoregistry.com/en/"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
-   "handle" : "hisamitsu"
+   "events" : [
+      {
+         "eventDate" : "2016-05-13",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-06-12",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:16"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/hisamitsu.html",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.gmoregistry.com/en/",
+         "title" : "URL for registration services"
+      }
+   ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "30364",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "digest" : "02836f0e9fdb7e3ca5983577ccfed953698bd173d92a2e65650f73f14c39ac8d"
+         }
+      ]
+   }
 }

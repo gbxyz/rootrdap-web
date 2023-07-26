@@ -1,4 +1,59 @@
 {
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "ldhName" : "A.NIC.TECH",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:60"
+            ],
+            "v4" : [
+               "194.169.218.60"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B.NIC.TECH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:60"
+            ],
+            "v4" : [
+               "185.24.64.60"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "E.NIC.TECH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:60"
+            ],
+            "v4" : [
+               "212.18.248.60"
+            ]
+         }
+      },
+      {
+         "ldhName" : "F.NIC.TECH",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:60"
+            ],
+            "v4" : [
+               "212.18.249.60"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "objectClassName" : "domain",
+   "ldhName" : "tech",
    "port43" : "whois.iana.org",
    "entities" : [
       {
@@ -68,6 +123,10 @@
          ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -127,13 +186,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "tech-technical",
-         "roles" : [
-            "technical"
-         ]
+         "handle" : "tech-technical"
       },
       {
+         "handle" : "tech-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -167,120 +223,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "tech-registrant",
          "roles" : [
             "registrant"
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "82f72f2462dee25b99da2470535ad0a7d131f1eb",
-            "digestType" : "1",
-            "keyTag" : "50095"
-         },
-         {
-            "digestType" : "2",
-            "keyTag" : "50095",
-            "algorithm" : "8",
-            "digest" : "83f40d01141484d8f07305e5d2e44ac5663149054c598d6e9d993c661686c6ee"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "objectClassName" : "domain",
-   "links" : [
-      {
-         "href" : "https://www.iana.org/domains/root/db/tech.html",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "title" : "URL for registration services",
-         "href" : "http://www.radix.website",
-         "rel" : "related"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-03-12",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2021-10-12"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "tech",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:60"
-            ],
-            "v4" : [
-               "194.169.218.60"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.TECH"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.60"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:60"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.TECH"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "E.NIC.TECH",
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:60"
-            ],
-            "v4" : [
-               "212.18.248.60"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:60"
-            ],
-            "v4" : [
-               "212.18.249.60"
-            ]
-         },
-         "ldhName" : "F.NIC.TECH",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "handle" : "tech",
    "notices" : [
       {
          "description" : [
@@ -299,12 +247,63 @@
          "title" : "Comments"
       }
    ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-03-12"
+      },
+      {
+         "eventDate" : "2021-10-12",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:01"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "82f72f2462dee25b99da2470535ad0a7d131f1eb",
+            "algorithm" : "8",
+            "digestType" : "1",
+            "keyTag" : "50095"
+         },
+         {
+            "digest" : "83f40d01141484d8f07305e5d2e44ac5663149054c598d6e9d993c661686c6ee",
+            "keyTag" : "50095",
+            "digestType" : "2",
+            "algorithm" : "8"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/tech.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.radix.website",
+         "title" : "URL for registration services"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.TECH."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "title" : "Remark",
@@ -318,5 +317,6 @@
          ],
          "title" : "Source"
       }
-   ]
+   ],
+   "handle" : "tech"
 }

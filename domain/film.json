@@ -1,60 +1,8 @@
 {
-   "handle" : "film",
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.FILM."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.film"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-02-27",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-12-01"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
    "status" : [
       "active"
    ],
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
@@ -69,8 +17,6 @@
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "B.NIC.FILM",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:2:0:0:0:0:10"
@@ -78,21 +24,25 @@
             "v4" : [
                "37.209.194.10"
             ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:10"
-            ],
-            "v4" : [
-               "37.209.196.10"
-            ]
          },
-         "ldhName" : "C.NIC.FILM",
+         "ldhName" : "B.NIC.FILM",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "C.NIC.FILM",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.10"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:10"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "X.NIC.FILM",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1074:0:0:0:1:82"
@@ -100,11 +50,11 @@
             "v4" : [
                "156.154.172.82"
             ]
-         },
-         "ldhName" : "X.NIC.FILM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
+         "objectClassName" : "nameserver",
+         "ldhName" : "Y.NIC.FILM",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1075:0:0:0:1:82"
@@ -112,44 +62,46 @@
             "v4" : [
                "156.154.173.82"
             ]
-         },
-         "ldhName" : "Y.NIC.FILM",
-         "objectClassName" : "nameserver"
+         }
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "Z.NIC.FILM",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.174.82"
-            ],
             "v6" : [
                "2610:a1:1076:0:0:0:1:82"
+            ],
+            "v4" : [
+               "156.154.174.82"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
    "ldhName" : "film",
-   "objectClassName" : "domain",
-   "links" : [
+   "notices" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/film.html"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
       },
       {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      },
-      {
-         "href" : "http://nic.film",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
       }
    ],
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -183,18 +135,14 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "registrant"
-         ],
          "handle" : "film-registrant"
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
          "handle" : "film-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -248,10 +196,7 @@
          ]
       },
       {
-         "handle" : "film-administrative",
-         "roles" : [
-            "administrative"
-         ],
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -303,22 +248,77 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "film-administrative",
+         "roles" : [
+            "administrative"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
+      "delegationSigned" : true,
       "dsData" : [
          {
             "algorithm" : "8",
-            "digest" : "713e96c6a83bf8e26d80db818d4061793b4c10405c13e7d9cf7d471ceefb6009",
             "digestType" : "2",
-            "keyTag" : "37210"
+            "keyTag" : "37210",
+            "digest" : "713e96c6a83bf8e26d80db818d4061793b4c10405c13e7d9cf7d471ceefb6009"
          }
-      ],
-      "delegationSigned" : true
+      ]
    },
+   "links" : [
+      {
+         "rel" : "related",
+         "href" : "https://www.iana.org/domains/root/db/film.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "title" : "URL for registration services",
+         "href" : "http://nic.film",
+         "rel" : "related"
+      }
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-02-27"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-12-01"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:29:41"
+      }
+   ],
    "rdapConformance" : [
       "rdap_level_0"
-   ]
+   ],
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.FILM."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "description" : [
+            "Registration information: http://nic.film"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "handle" : "film"
 }

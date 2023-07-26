@@ -9,134 +9,43 @@
          "eventAction" : "last changed"
       },
       {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:38"
+         "eventDate" : "2023-07-26T12:32:07",
+         "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.28.55"
-            ],
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:55"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N0.NIC.TOWN"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.29.55"
-            ],
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:55"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N1.NIC.TOWN"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N2.NIC.TOWN",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.30.55"
-            ],
-            "v6" : [
-               "2a01:8840:20:0:0:0:0:55"
-            ]
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "digest" : "515451761441c5c476f32ee4d28ae24d5179521fb505c318ef721e5fd6165c16",
+            "keyTag" : "63256",
+            "digestType" : "2",
+            "algorithm" : "8"
          }
+      ]
+   },
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/town.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.14.55"
-            ],
-            "v6" : [
-               "2a01:8840:f8:0:0:0:0:55"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V0N3.NIC.TOWN"
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.31.55"
-            ],
-            "v6" : [
-               "2a01:8840:21:0:0:0:0:55"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N0.NIC.TOWN"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "V2N1.NIC.TOWN",
-         "ipAddresses" : {
-            "v4" : [
-               "161.232.15.55"
-            ],
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:55"
-            ]
-         }
+         "rel" : "related",
+         "href" : "http://www.donuts.domains/",
+         "title" : "URL for registration services"
       }
    ],
-   "ldhName" : "town",
-   "handle" : "town",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.TOWN."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: http://www.donuts.domains/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
-         ]
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "town-registrant",
-         "roles" : [
-            "registrant"
-         ],
          "objectClassName" : "entity",
+         "handle" : "town-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -169,10 +78,13 @@
                   ]
                ]
             ]
+         ],
+         "roles" : [
+            "registrant"
          ]
       },
       {
-         "objectClassName" : "entity",
+         "handle" : "town-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -235,10 +147,10 @@
          "roles" : [
             "technical"
          ],
-         "handle" : "town-technical"
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "town-administrative",
+         "objectClassName" : "entity",
          "roles" : [
             "administrative"
          ],
@@ -301,40 +213,128 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "town-administrative"
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "keyTag" : "63256",
-            "digestType" : "2",
-            "digest" : "515451761441c5c476f32ee4d28ae24d5179521fb505c318ef721e5fd6165c16",
-            "algorithm" : "8"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
+   "ldhName" : "town",
+   "nameservers" : [
+      {
+         "ldhName" : "V0N0.NIC.TOWN",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:55"
+            ],
+            "v4" : [
+               "65.22.28.55"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:55"
+            ],
+            "v4" : [
+               "65.22.29.55"
+            ]
+         },
+         "ldhName" : "V0N1.NIC.TOWN"
+      },
+      {
+         "ldhName" : "V0N2.NIC.TOWN",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.30.55"
+            ],
+            "v6" : [
+               "2a01:8840:20:0:0:0:0:55"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.14.55"
+            ],
+            "v6" : [
+               "2a01:8840:f8:0:0:0:0:55"
+            ]
+         },
+         "ldhName" : "V0N3.NIC.TOWN"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N0.NIC.TOWN",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:21:0:0:0:0:55"
+            ],
+            "v4" : [
+               "65.22.31.55"
+            ]
          }
-      ]
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "V2N1.NIC.TOWN",
+         "ipAddresses" : {
+            "v4" : [
+               "161.232.15.55"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:55"
+            ]
+         }
+      }
    ],
    "objectClassName" : "domain",
-   "links" : [
+   "status" : [
+      "active"
+   ],
+   "handle" : "town",
+   "remarks" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/town.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.TOWN."
+         ],
+         "title" : "Whois Service"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "title" : "Remark",
+         "description" : [
+            "Registration information: http://www.donuts.domains/"
+         ]
       },
       {
-         "href" : "http://www.donuts.domains/",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ]
 }

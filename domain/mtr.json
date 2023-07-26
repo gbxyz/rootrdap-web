@@ -1,104 +1,106 @@
 {
-   "objectClassName" : "domain",
-   "links" : [
+   "remarks" : [
       {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/mtr.html"
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.MTR."
+         ]
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "description" : [
+            "Registration information: http://nic.mtr"
+         ],
+         "title" : "Remark"
       },
       {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://nic.mtr"
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
       }
    ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "ce2ae4bc0908188f044ce4b2ac931119311272d0fb3842a36f2abbfa059e093a",
-            "digestType" : "2",
-            "keyTag" : "7114"
-         }
-      ]
-   },
    "rdapConformance" : [
       "rdap_level_0"
    ],
-   "entities" : [
+   "handle" : "mtr",
+   "objectClassName" : "domain",
+   "nameservers" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Ben Lee"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Hong Kong Internet Registration Corporation Limited"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Unit 501, Level 5, Core C, Cyberport 3\n100 Cyberport Road\nHong Kong"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+852 2319 2303"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+852 2319 2626"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "hk.tech@hkirc.hk"
-               ]
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dca:4000:0:0:0:cb77:2a4"
+            ],
+            "v4" : [
+               "203.119.2.164"
             ]
-         ],
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "mtr-technical"
+         },
+         "ldhName" : "NS1.NIC.MTR",
+         "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dca:2000:0:0:0:cb77:57a4"
+            ],
+            "v4" : [
+               "203.119.87.164"
+            ]
+         },
+         "ldhName" : "NS2.NIC.MTR"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "169.54.247.173"
+            ],
+            "v6" : [
+               "2607:f0d0:1b02:b9:0:0:0:4"
+            ]
+         },
+         "ldhName" : "NS3.NIC.MTR",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2401:c900:2101:2a:0:0:0:b"
+            ],
+            "v4" : [
+               "135.90.90.24"
+            ]
+         },
+         "ldhName" : "NS4.NIC.MTR",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "entities" : [
+      {
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -158,18 +160,11 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
          "handle" : "mtr-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       },
       {
          "handle" : "mtr-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -202,115 +197,120 @@
                   ]
                ]
             ]
-         ]
+         ],
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Ben Lee"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Hong Kong Internet Registration Corporation Limited"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Unit 501, Level 5, Core C, Cyberport 3\n100 Cyberport Road\nHong Kong"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+852 2319 2303"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+852 2319 2626"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "hk.tech@hkirc.hk"
+               ]
+            ]
+         ],
+         "handle" : "mtr-technical"
       }
    ],
-   "port43" : "whois.iana.org",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.MTR."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: http://nic.mtr"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "handle" : "mtr",
-   "ldhName" : "mtr",
-   "nameservers" : [
-      {
-         "ldhName" : "NS1.NIC.MTR",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "203.119.2.164"
-            ],
-            "v6" : [
-               "2001:dca:4000:0:0:0:cb77:2a4"
-            ]
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "ce2ae4bc0908188f044ce4b2ac931119311272d0fb3842a36f2abbfa059e093a",
+            "keyTag" : "7114",
+            "digestType" : "2",
+            "algorithm" : "8"
          }
+      ],
+      "delegationSigned" : true
+   },
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/mtr.html",
+         "rel" : "related"
       },
       {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.NIC.MTR",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dca:2000:0:0:0:cb77:57a4"
-            ],
-            "v4" : [
-               "203.119.87.164"
-            ]
-         }
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
-         "ipAddresses" : {
-            "v6" : [
-               "2607:f0d0:1b02:b9:0:0:0:4"
-            ],
-            "v4" : [
-               "169.54.247.173"
-            ]
-         },
-         "ldhName" : "NS3.NIC.MTR",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS4.NIC.MTR",
-         "ipAddresses" : {
-            "v4" : [
-               "135.90.90.24"
-            ],
-            "v6" : [
-               "2401:c900:2101:2a:0:0:0:b"
-            ]
-         }
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://nic.mtr"
       }
    ],
    "events" : [
       {
-         "eventDate" : "2015-07-31",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-07-31"
       },
       {
-         "eventDate" : "2023-02-15",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2023-02-15"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:01"
       }
    ],
-   "status" : [
-      "active"
-   ]
+   "ldhName" : "mtr"
 }

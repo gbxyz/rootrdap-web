@@ -1,6 +1,80 @@
 {
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.148.1"
+            ],
+            "v6" : [
+               "2a01:8840:92:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A0.NIC.LASALLE"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A2.NIC.LASALLE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:95:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.151.1"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "65.22.149.1"
+            ],
+            "v6" : [
+               "2a01:8840:93:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "B0.NIC.LASALLE",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C0.NIC.LASALLE",
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:8840:94:0:0:0:0:1"
+            ],
+            "v4" : [
+               "65.22.150.1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "handle" : "lasalle-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -60,13 +134,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "lasalle-administrative",
          "roles" : [
             "administrative"
          ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -126,14 +202,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "lasalle-technical",
-         "roles" : [
-            "technical"
-         ]
+         "handle" : "lasalle-technical"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -168,27 +242,21 @@
             ]
          ],
          "handle" : "lasalle-registrant",
-         "roles" : [
-            "registrant"
-         ]
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
+            "digest" : "b7ceb81d5279786be446c8d6981f911d3cb31dfc7e192de510c6d489ca3ba370",
             "keyTag" : "6184",
             "digestType" : "2",
-            "digest" : "b7ceb81d5279786be446c8d6981f911d3cb31dfc7e192de510c6d489ca3ba370",
             "algorithm" : "8"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
    "links" : [
       {
          "title" : "Entry for this TLD in the Root Zone Database",
@@ -196,85 +264,31 @@
          "rel" : "related"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
-         "title" : "URL for registration services",
          "href" : "http://www.jll.com",
+         "title" : "URL for registration services",
          "rel" : "related"
       }
    ],
    "events" : [
       {
-         "eventDate" : "2015-06-04",
-         "eventAction" : "registration"
+         "eventAction" : "registration",
+         "eventDate" : "2015-06-04"
       },
       {
-         "eventDate" : "2020-11-17",
-         "eventAction" : "last changed"
+         "eventAction" : "last changed",
+         "eventDate" : "2020-11-17"
       },
       {
-         "eventDate" : "2023-07-26T12:03:34",
+         "eventDate" : "2023-07-26T12:30:40",
          "eventAction" : "last update of RDAP database"
       }
    ],
-   "status" : [
-      "active"
-   ],
    "ldhName" : "lasalle",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.148.1"
-            ],
-            "v6" : [
-               "2a01:8840:92:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A0.NIC.LASALLE"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.151.1"
-            ],
-            "v6" : [
-               "2a01:8840:95:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "A2.NIC.LASALLE",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ldhName" : "B0.NIC.LASALLE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.149.1"
-            ],
-            "v6" : [
-               "2a01:8840:93:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ldhName" : "C0.NIC.LASALLE",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "65.22.150.1"
-            ],
-            "v6" : [
-               "2a01:8840:94:0:0:0:0:1"
-            ]
-         }
-      }
-   ],
-   "handle" : "lasalle",
    "remarks" : [
       {
          "description" : [
@@ -289,28 +303,14 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ]
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "lasalle"
 }

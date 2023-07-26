@@ -1,6 +1,80 @@
 {
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "194.169.218.90"
+            ],
+            "v6" : [
+               "2001:67c:13cc:0:0:0:1:90"
+            ]
+         },
+         "ldhName" : "A.NIC.KPN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13cc:0:0:0:1:90"
+            ],
+            "v4" : [
+               "185.24.64.90"
+            ]
+         },
+         "ldhName" : "B.NIC.KPN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "212.18.248.90"
+            ],
+            "v6" : [
+               "2a04:2b00:13ee:0:0:0:0:90"
+            ]
+         },
+         "ldhName" : "C.NIC.KPN",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2a04:2b00:13ff:0:0:0:0:90"
+            ],
+            "v4" : [
+               "212.18.249.90"
+            ]
+         },
+         "ldhName" : "D.NIC.KPN"
+      }
+   ],
+   "ldhName" : "kpn",
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "entities" : [
       {
+         "handle" : "kpn-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -11,12 +85,6 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "Laura Jansen"
-               ],
-               [
                   "org",
                   {},
                   "text",
@@ -25,7 +93,7 @@
                [
                   "adr",
                   {
-                     "label" : "P.O. Box 25110\nRotterdam 3001 HC\nNetherlands (the)"
+                     "label" : "Maanplein 55\nThe Hague 2516 CK\nNetherlands (the)"
                   },
                   "text",
                   [
@@ -37,32 +105,19 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+31610163500"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "laura.jansen@kpn.com"
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "kpn-administrative",
          "roles" : [
-            "administrative"
-         ]
+            "registrant"
+         ],
+         "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "handle" : "kpn-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -122,9 +177,10 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "handle" : "kpn-technical"
       },
       {
+         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -135,6 +191,12 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "Laura Jansen"
+               ],
+               [
                   "org",
                   {},
                   "text",
@@ -143,7 +205,7 @@
                [
                   "adr",
                   {
-                     "label" : "Maanplein 55\nThe Hague 2516 CK\nNetherlands (the)"
+                     "label" : "P.O. Box 25110\nRotterdam 3001 HC\nNetherlands (the)"
                   },
                   "text",
                   [
@@ -155,44 +217,51 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+31610163500"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "laura.jansen@kpn.com"
                ]
             ]
          ],
-         "objectClassName" : "entity",
+         "handle" : "kpn-administrative",
          "roles" : [
-            "registrant"
-         ],
-         "handle" : "kpn-registrant"
+            "administrative"
+         ]
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
       "dsData" : [
          {
-            "algorithm" : "7",
             "digest" : "f265871198c769849f8acf952f01fcd412c9b3dc5dbf8fca98911d5052c0a240",
+            "algorithm" : "7",
             "digestType" : "2",
             "keyTag" : "10051"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/kpn.html",
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "rel" : "related"
+         "href" : "https://www.iana.org/domains/root/db/kpn.html"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       }
    ],
-   "objectClassName" : "domain",
    "events" : [
       {
          "eventAction" : "registration",
@@ -204,100 +273,31 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:30:37"
       }
    ],
-   "status" : [
-      "active"
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.KPN",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:67c:13cc:0:0:0:1:90"
-            ],
-            "v4" : [
-               "194.169.218.90"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "185.24.64.90"
-            ],
-            "v6" : [
-               "2a04:2b00:13cc:0:0:0:1:90"
-            ]
-         },
-         "ldhName" : "B.NIC.KPN",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.KPN",
-         "ipAddresses" : {
-            "v4" : [
-               "212.18.248.90"
-            ],
-            "v6" : [
-               "2a04:2b00:13ee:0:0:0:0:90"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2a04:2b00:13ff:0:0:0:0:90"
-            ],
-            "v4" : [
-               "212.18.249.90"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "D.NIC.KPN"
-      }
-   ],
-   "ldhName" : "kpn",
-   "handle" : "kpn",
    "remarks" : [
       {
+         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ],
-         "title" : "Whois Service"
+         ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: "
-         ]
+         ],
+         "title" : "Remark"
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ]
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ]
+   "handle" : "kpn"
 }

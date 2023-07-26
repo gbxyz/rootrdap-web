@@ -1,65 +1,126 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "93baec1bc806c42034f1ba91345d8aa439242ea114157951bf6b7e9f79fc9e0c",
-            "digestType" : "2",
-            "keyTag" : "51813"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "remarks" : [
       {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Lifestyle Domain Holdings, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "9721 Sherill Blvd.\nKnoxville TN 37932\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.VANA."
          ],
-         "handle" : "vana-registrant",
-         "roles" : [
-            "registrant"
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: "
          ]
       },
       {
-         "handle" : "vana-technical",
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "vana",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.174.30"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.175.30"
+            ]
+         },
+         "ldhName" : "AC3.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.176.30"
+            ],
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
+   ],
+   "events" : [
+      {
+         "eventDate" : "2015-09-24",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2023-06-02",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:14"
+      }
+   ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/vana.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "51813",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "93baec1bc806c42034f1ba91345d8aa439242ea114157951bf6b7e9f79fc9e0c"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "entities" : [
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
+         "handle" : "vana-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -118,10 +179,50 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Lifestyle Domain Holdings, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "9721 Sherill Blvd.\nKnoxville TN 37932\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "vana-registrant"
+      },
+      {
+         "handle" : "vana-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -181,131 +282,30 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "vana-administrative",
          "roles" : [
             "administrative"
-         ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/vana.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
-      },
-      {
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP",
-         "rel" : "related"
-      }
-   ],
-   "objectClassName" : "domain",
-   "ldhName" : "vana",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC1.NSTLD.COM",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.174.30"
-            ],
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "ldhName" : "AC3.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.176.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC4.NSTLD.COM"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-09-24",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-06-02"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:44"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "notices" : [
       {
-         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ]
+         ],
+         "title" : "About This Service"
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.VANA."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "description" : [
-            "Registration information: "
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
          ]
       }
    ],
-   "handle" : "vana"
+   "ldhName" : "vana"
 }

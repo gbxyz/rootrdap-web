@@ -1,5 +1,7 @@
 {
-   "handle" : "reise",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -8,10 +10,10 @@
          ]
       },
       {
-         "title" : "Remark",
          "description" : [
             "Registration information: http://www.donuts.domains/"
-         ]
+         ],
+         "title" : "Remark"
       },
       {
          "description" : [
@@ -20,68 +22,38 @@
          "title" : "Source"
       }
    ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-05-15"
-      },
-      {
-         "eventDate" : "2021-11-10",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
+   "handle" : "reise",
    "status" : [
       "active"
    ],
-   "ldhName" : "reise",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1e:0:0:0:0:63"
-            ],
             "v4" : [
                "65.22.28.63"
+            ],
+            "v6" : [
+               "2a01:8840:1e:0:0:0:0:63"
             ]
          },
          "ldhName" : "V0N0.NIC.REISE",
          "objectClassName" : "nameserver"
       },
       {
+         "ldhName" : "V0N1.NIC.REISE",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:1f:0:0:0:0:63"
-            ],
             "v4" : [
                "65.22.29.63"
+            ],
+            "v6" : [
+               "2a01:8840:1f:0:0:0:0:63"
             ]
          },
-         "ldhName" : "V0N1.NIC.REISE",
          "objectClassName" : "nameserver"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "65.22.30.63"
@@ -90,20 +62,19 @@
                "2a01:8840:20:0:0:0:0:63"
             ]
          },
-         "ldhName" : "V0N2.NIC.REISE",
-         "objectClassName" : "nameserver"
+         "ldhName" : "V0N2.NIC.REISE"
       },
       {
-         "objectClassName" : "nameserver",
          "ldhName" : "V0N3.NIC.REISE",
          "ipAddresses" : {
-            "v4" : [
-               "161.232.14.63"
-            ],
             "v6" : [
                "2a01:8840:f8:0:0:0:0:63"
+            ],
+            "v4" : [
+               "161.232.14.63"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
@@ -119,27 +90,28 @@
       },
       {
          "ldhName" : "V2N1.NIC.REISE",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2a01:8840:f9:0:0:0:0:63"
-            ],
             "v4" : [
                "161.232.15.63"
+            ],
+            "v6" : [
+               "2a01:8840:f9:0:0:0:0:63"
             ]
-         }
+         },
+         "objectClassName" : "nameserver"
       }
    ],
+   "ldhName" : "reise",
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/reise.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/reise.html",
          "rel" : "related"
       },
       {
-         "rel" : "related",
          "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "rel" : "related"
       },
       {
          "rel" : "related",
@@ -147,54 +119,56 @@
          "href" : "http://www.donuts.domains/"
       }
    ],
-   "objectClassName" : "domain",
-   "entities" : [
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "25897",
+            "digest" : "4d05b8cdd95e0502923689dfeb01db93185455e252acab2556af477baaf4865d"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
       {
-         "handle" : "reise-registrant",
-         "roles" : [
-            "registrant"
-         ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Binky Moon, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         "eventAction" : "registration",
+         "eventDate" : "2014-05-15"
       },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-10"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:31:31"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "port43" : "whois.iana.org",
+   "entities" : [
       {
          "roles" : [
             "administrative"
          ],
          "handle" : "reise-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -253,13 +227,52 @@
                   "tldadmin@donuts.email"
                ]
             ]
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Binky Moon, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "c/o Donuts Inc.\n10500 NE 8th Street, Suite 750\nBellevue WA 98004\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "reise-registrant",
+         "roles" : [
+            "registrant"
          ]
       },
       {
+         "objectClassName" : "entity",
          "handle" : "reise-technical",
-         "roles" : [
-            "technical"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -319,22 +332,9 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "technical"
+         ]
       }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "keyTag" : "25897",
-            "digestType" : "2",
-            "digest" : "4d05b8cdd95e0502923689dfeb01db93185455e252acab2556af477baaf4865d",
-            "algorithm" : "8"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
    ]
 }

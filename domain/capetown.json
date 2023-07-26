@@ -1,49 +1,8 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-06-05"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-05-16"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "capetown",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "COZA1.DNSNODE.NET",
-         "ipAddresses" : {
-            "v4" : [
-               "194.146.106.74"
-            ],
-            "v6" : [
-               "2001:67c:1010:18:0:0:0:53"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "194.58.198.33"
-            ],
-            "v6" : [
-               "2a01:3f1:3033:0:0:0:0:53"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NSP.NETNOD.SE"
-      }
-   ],
    "handle" : "capetown",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "title" : "Whois Service",
@@ -58,12 +17,13 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "ldhName" : "capetown",
    "notices" : [
       {
          "description" : [
@@ -74,56 +34,21 @@
          "title" : "About This Service"
       },
       {
-         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ]
+         ],
+         "title" : "Comments"
       }
    ],
    "entities" : [
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "ZA Central Registry NPC trading as ZA Central Registry"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "COZA House\nGazelle Close\nCorporate Park South\nMidrand\nMidrand 1685\nSouth Africa"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
          "objectClassName" : "entity",
-         "handle" : "capetown-registrant",
          "roles" : [
-            "registrant"
-         ]
-      },
-      {
+            "technical"
+         ],
+         "handle" : "capetown-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -174,15 +99,49 @@
                   "theo@dnservices.co.za"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
-         "handle" : "capetown-technical"
+         ]
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "ZA Central Registry NPC trading as ZA Central Registry"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "COZA House\nGazelle Close\nCorporate Park South\nMidrand\nMidrand 1685\nSouth Africa"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "capetown-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -242,43 +201,84 @@
                ]
             ]
          ],
+         "handle" : "capetown-administrative",
          "roles" : [
             "administrative"
          ],
-         "handle" : "capetown-administrative"
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "rel" : "related",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/capetown.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "http://registry.net.za"
+      }
+   ],
    "secureDNS" : {
       "dsData" : [
          {
-            "keyTag" : "58120",
+            "algorithm" : "8",
             "digestType" : "2",
-            "digest" : "0d66710dd001e9120a86952cebb8c21aedd72d5e2ca46f0a40266529e7133107",
-            "algorithm" : "8"
+            "keyTag" : "58120",
+            "digest" : "0d66710dd001e9120a86952cebb8c21aedd72d5e2ca46f0a40266529e7133107"
          }
       ],
       "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
+   "events" : [
+      {
+         "eventDate" : "2014-06-05",
+         "eventAction" : "registration"
+      },
+      {
+         "eventDate" : "2022-05-16",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:28:38",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "status" : [
+      "active"
    ],
    "objectClassName" : "domain",
-   "links" : [
+   "nameservers" : [
       {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/capetown.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "ldhName" : "COZA1.DNSNODE.NET",
+         "ipAddresses" : {
+            "v4" : [
+               "194.146.106.74"
+            ],
+            "v6" : [
+               "2001:67c:1010:18:0:0:0:53"
+            ]
+         },
+         "objectClassName" : "nameserver"
       },
       {
-         "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
-      },
-      {
-         "href" : "http://registry.net.za",
-         "title" : "URL for registration services",
-         "rel" : "related"
+         "ipAddresses" : {
+            "v6" : [
+               "2a01:3f1:3033:0:0:0:0:53"
+            ],
+            "v4" : [
+               "194.58.198.33"
+            ]
+         },
+         "ldhName" : "NSP.NETNOD.SE",
+         "objectClassName" : "nameserver"
       }
    ]
 }

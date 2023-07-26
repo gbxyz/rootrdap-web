@@ -1,65 +1,25 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "2212",
-            "algorithm" : "8",
-            "digest" : "750ae447b9a971825d2818be9dbe88896f6fcd9148fba4cf481f4323dd2e9633"
-         }
-      ]
-   },
-   "port43" : "whois.iana.org",
-   "entities" : [
+   "notices" : [
       {
-         "handle" : "xn--cckwcxetd-registrant",
-         "roles" : [
-            "registrant"
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
          ],
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Amazon Registry Services, Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ],
-         "objectClassName" : "entity"
+         "title" : "About This Service"
       },
       {
-         "handle" : "xn--cckwcxetd-technical",
-         "roles" : [
-            "technical"
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
          ],
+         "title" : "Comments"
+      }
+   ],
+   "entities" : [
+      {
+         "handle" : "xn--cckwcxetd-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -111,10 +71,56 @@
                ]
             ]
          ],
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
          "objectClassName" : "entity",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Amazon Registry Services, Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "410 Terry Avenue North\nSeattle WA 98109\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "xn--cckwcxetd-registrant",
+         "roles" : [
+            "registrant"
+         ]
+      },
+      {
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "xn--cckwcxetd-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -174,28 +180,51 @@
                ]
             ]
          ],
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "xn--cckwcxetd-administrative"
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain",
+   "port43" : "whois.iana.org",
    "links" : [
       {
          "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/xn--cckwcxetd.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/xn--cckwcxetd.html"
       },
       {
-         "rel" : "related",
+         "title" : "About RDAP",
          "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "rel" : "related"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digest" : "750ae447b9a971825d2818be9dbe88896f6fcd9148fba4cf481f4323dd2e9633",
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "2212"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2020-05-28"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2021-11-19"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:33"
+      }
+   ],
+   "ldhName" : "xn--cckwcxetd",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
-         "ldhName" : "DNS1.NIC.XN--CCKWCXETD",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -204,9 +233,11 @@
             "v6" : [
                "2a01:618:402:0:0:0:0:92"
             ]
-         }
+         },
+         "ldhName" : "DNS1.NIC.XN--CCKWCXETD"
       },
       {
+         "ldhName" : "DNS2.NIC.XN--CCKWCXETD",
          "ipAddresses" : {
             "v4" : [
                "103.49.82.92"
@@ -215,46 +246,46 @@
                "2401:fd80:402:0:0:0:0:92"
             ]
          },
-         "ldhName" : "DNS2.NIC.XN--CCKWCXETD",
          "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2a01:618:406:0:0:0:0:92"
-            ],
             "v4" : [
                "213.248.222.92"
+            ],
+            "v6" : [
+               "2a01:618:406:0:0:0:0:92"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "DNS3.NIC.XN--CCKWCXETD"
+         "ldhName" : "DNS3.NIC.XN--CCKWCXETD",
+         "objectClassName" : "nameserver"
       },
       {
          "ipAddresses" : {
-            "v6" : [
-               "2401:fd80:406:0:0:0:0:92"
-            ],
             "v4" : [
                "43.230.50.92"
+            ],
+            "v6" : [
+               "2401:fd80:406:0:0:0:0:92"
             ]
          },
          "ldhName" : "DNS4.NIC.XN--CCKWCXETD",
          "objectClassName" : "nameserver"
       },
       {
-         "ldhName" : "DNSA.NIC.XN--CCKWCXETD",
          "objectClassName" : "nameserver",
+         "ldhName" : "DNSA.NIC.XN--CCKWCXETD",
          "ipAddresses" : {
-            "v4" : [
-               "156.154.100.3"
-            ],
             "v6" : [
                "2001:502:ad09:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.100.3"
             ]
          }
       },
       {
+         "ldhName" : "DNSB.NIC.XN--CCKWCXETD",
          "ipAddresses" : {
             "v4" : [
                "156.154.101.3"
@@ -263,24 +294,23 @@
                "2001:502:2eda:0:0:0:0:3"
             ]
          },
-         "ldhName" : "DNSB.NIC.XN--CCKWCXETD",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "DNSC.NIC.XN--CCKWCXETD",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1009:0:0:0:0:3"
+            ],
+            "v4" : [
+               "156.154.102.3"
+            ]
+         },
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "DNSC.NIC.XN--CCKWCXETD",
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.102.3"
-            ],
-            "v6" : [
-               "2610:a1:1009:0:0:0:0:3"
-            ]
-         }
-      },
-      {
          "ldhName" : "DNSD.NIC.XN--CCKWCXETD",
-         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
                "156.154.103.3"
@@ -291,42 +321,10 @@
          }
       }
    ],
-   "ldhName" : "xn--cckwcxetd",
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2020-05-28"
-      },
-      {
-         "eventDate" : "2021-11-19",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:04:04"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
+   "handle" : "xn--cckwcxetd",
    "remarks" : [
       {
          "description" : [
@@ -341,17 +339,19 @@
          ]
       },
       {
+         "title" : "Remark",
          "description" : [
             "https://www.amazonregistry.com/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
+         ]
       }
    ],
-   "handle" : "xn--cckwcxetd"
+   "rdapConformance" : [
+      "rdap_level_0"
+   ]
 }

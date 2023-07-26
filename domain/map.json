@@ -2,23 +2,10 @@
    "status" : [
       "active"
    ],
-   "events" : [
-      {
-         "eventDate" : "2017-06-08",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2020-04-20",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "ldhName" : "map",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:4860:4802:32:0:0:0:69"
@@ -27,22 +14,22 @@
                "216.239.32.105"
             ]
          },
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
       },
       {
-         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver",
+         "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
             "v4" : [
                "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
             ]
          }
       },
       {
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.36.105"
@@ -51,35 +38,34 @@
                "2001:4860:4802:36:0:0:0:69"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
+         "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:38:0:0:0:69"
-            ],
             "v4" : [
                "216.239.38.105"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "216.239.60.105"
             ],
             "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
+               "2001:4860:4802:38:0:0:0:69"
             ]
          },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
+      },
+      {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
+            ],
+            "v4" : [
+               "216.239.60.105"
+            ]
+         }
       }
    ],
-   "handle" : "map",
+   "ldhName" : "map",
    "notices" : [
       {
          "title" : "About This Service",
@@ -90,37 +76,22 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ],
-         "title" : "Whois Service"
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.registry.google"
          ]
-      },
-      {
-         "description" : [
-            "IANA"
-         ],
-         "title" : "Source"
       }
    ],
    "port43" : "whois.iana.org",
    "entities" : [
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "registrant"
+         ],
+         "handle" : "map-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -131,21 +102,15 @@
                   "4.0"
                ],
                [
-                  "fn",
-                  {},
-                  "text",
-                  "TLD Admin"
-               ],
-               [
                   "org",
                   {},
                   "text",
-                  "Google Inc."
+                  "Charleston Road Registry Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -157,37 +122,15 @@
                      "",
                      ""
                   ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 404 978 8419"
-               ],
-               [
-                  "tel",
-                  {
-                     "type" : "fax"
-                  },
-                  "text",
-                  "+1 650 492 5631"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "iana-contact@google.com"
                ]
             ]
-         ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "map-administrative"
+         ]
       },
       {
          "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -247,16 +190,12 @@
                ]
             ]
          ],
-         "handle" : "map-technical",
-         "roles" : [
-            "technical"
-         ]
+         "handle" : "map-technical"
       },
       {
          "roles" : [
-            "registrant"
+            "administrative"
          ],
-         "handle" : "map-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -267,15 +206,21 @@
                   "4.0"
                ],
                [
+                  "fn",
+                  {},
+                  "text",
+                  "TLD Admin"
+               ],
+               [
                   "org",
                   {},
                   "text",
-                  "Charleston Road Registry Inc."
+                  "Google Inc."
                ],
                [
                   "adr",
                   {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                     "label" : "111 8th Avenue\nNew York NY 10011\nUnited States of America (the)"
                   },
                   "text",
                   [
@@ -287,27 +232,33 @@
                      "",
                      ""
                   ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 404 978 8419"
+               ],
+               [
+                  "tel",
+                  {
+                     "type" : "fax"
+                  },
+                  "text",
+                  "+1 650 492 5631"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "iana-contact@google.com"
                ]
             ]
          ],
+         "handle" : "map-administrative",
          "objectClassName" : "entity"
       }
    ],
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "2b0dbafc4eafa98fbed02adb2ff33c9af7666f2f9910a141573f511397393a4b",
-            "digestType" : "2",
-            "keyTag" : "16600"
-         }
-      ]
-   },
-   "objectClassName" : "domain",
    "links" : [
       {
          "rel" : "related",
@@ -320,9 +271,58 @@
          "rel" : "related"
       },
       {
-         "title" : "URL for registration services",
+         "rel" : "related",
          "href" : "https://www.registry.google",
-         "rel" : "related"
+         "title" : "URL for registration services"
       }
-   ]
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "keyTag" : "16600",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "2b0dbafc4eafa98fbed02adb2ff33c9af7666f2f9910a141573f511397393a4b"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "events" : [
+      {
+         "eventDate" : "2017-06-08",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2020-04-20"
+      },
+      {
+         "eventDate" : "2023-07-26T12:30:51",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ]
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ]
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "handle" : "map"
 }

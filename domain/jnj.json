@@ -1,109 +1,17 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2016-01-14"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2022-07-21"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:34",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "ldhName" : "jnj",
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.192.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "A.NIC.JNJ"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.9"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B.NIC.JNJ"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:9"
-            ],
-            "v4" : [
-               "37.209.196.9"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "C.NIC.JNJ"
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.DNS.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1071:0:0:0:0:59"
-            ],
-            "v4" : [
-               "156.154.144.89"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.DNS.NIC.JNJ",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1072:0:0:0:0:59"
-            ],
-            "v4" : [
-               "156.154.145.89"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "156.154.159.89"
-            ],
-            "v6" : [
-               "2610:a1:1073:0:0:0:0:59"
-            ]
-         },
-         "ldhName" : "NS3.DNS.NIC.JNJ",
-         "objectClassName" : "nameserver"
-      }
-   ],
    "handle" : "jnj",
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is ."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: http://www.jnj.com/"
-         ],
-         "title" : "Remark"
+         ]
       },
       {
          "description" : [
@@ -112,14 +20,17 @@
          "title" : "Source"
       }
    ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "description" : [
@@ -132,9 +43,7 @@
    ],
    "entities" : [
       {
-         "roles" : [
-            "registrant"
-         ],
+         "objectClassName" : "entity",
          "handle" : "jnj-registrant",
          "vcardArray" : [
             "vcard",
@@ -169,9 +78,15 @@
                ]
             ]
          ],
-         "objectClassName" : "entity"
+         "roles" : [
+            "registrant"
+         ]
       },
       {
+         "objectClassName" : "entity",
+         "roles" : [
+            "technical"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -231,14 +146,12 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "roles" : [
-            "technical"
-         ],
          "handle" : "jnj-technical"
       },
       {
-         "objectClassName" : "entity",
+         "roles" : [
+            "administrative"
+         ],
          "vcardArray" : [
             "vcard",
             [
@@ -299,42 +212,129 @@
             ]
          ],
          "handle" : "jnj-administrative",
-         "roles" : [
-            "administrative"
-         ]
+         "objectClassName" : "entity"
       }
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
             "digest" : "8e9740b903122d7dfed99cf66764bbb9b24eabe8b5a3c37bd0d876f47d69956f",
             "algorithm" : "8",
-            "keyTag" : "16897",
-            "digestType" : "2"
+            "digestType" : "2",
+            "keyTag" : "16897"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
    "links" : [
       {
          "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/jnj.html"
+         "href" : "https://www.iana.org/domains/root/db/jnj.html",
+         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
+         "rel" : "related",
          "href" : "https://about.rdap.org",
-         "rel" : "related"
+         "title" : "About RDAP"
       },
       {
+         "rel" : "related",
          "title" : "URL for registration services",
-         "href" : "http://www.jnj.com/",
-         "rel" : "related"
+         "href" : "http://www.jnj.com/"
       }
    ],
-   "objectClassName" : "domain"
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2016-01-14"
+      },
+      {
+         "eventDate" : "2022-07-21",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:31"
+      }
+   ],
+   "ldhName" : "jnj",
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "A.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.192.9"
+            ]
+         }
+      },
+      {
+         "ldhName" : "B.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.194.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "C.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:9"
+            ],
+            "v4" : [
+               "37.209.196.9"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS1.DNS.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1071:0:0:0:0:59"
+            ],
+            "v4" : [
+               "156.154.144.89"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS2.DNS.NIC.JNJ",
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.145.89"
+            ],
+            "v6" : [
+               "2610:a1:1072:0:0:0:0:59"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "NS3.DNS.NIC.JNJ",
+         "ipAddresses" : {
+            "v6" : [
+               "2610:a1:1073:0:0:0:0:59"
+            ],
+            "v4" : [
+               "156.154.159.89"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
+   ]
 }

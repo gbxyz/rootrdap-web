@@ -1,5 +1,8 @@
 {
    "handle" : "weber",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
          "description" : [
@@ -8,124 +11,63 @@
          "title" : "Whois Service"
       },
       {
+         "title" : "Remark",
          "description" : [
             "Registration information: "
-         ],
-         "title" : "Remark"
+         ]
       },
       {
+         "title" : "Source",
          "description" : [
             "IANA"
-         ],
-         "title" : "Source"
-      }
-   ],
-   "notices" : [
-      {
-         "title" : "About This Service",
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
          ]
-      },
-      {
-         "title" : "Comments",
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ]
-      }
-   ],
-   "events" : [
-      {
-         "eventDate" : "2015-12-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-10-01"
-      },
-      {
-         "eventDate" : "2023-07-26T12:03:52",
-         "eventAction" : "last update of RDAP database"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ldhName" : "AC1.NSTLD.COM",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:120:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.173.30"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:121:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.174.30"
-            ]
-         },
-         "ldhName" : "AC2.NSTLD.COM",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:122:0:0:0:0:30"
-            ],
-            "v4" : [
-               "192.42.175.30"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "AC3.NSTLD.COM"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "192.42.176.30"
-            ],
-            "v6" : [
-               "2001:500:123:0:0:0:0:30"
-            ]
-         },
-         "ldhName" : "AC4.NSTLD.COM",
-         "objectClassName" : "nameserver"
       }
    ],
    "ldhName" : "weber",
-   "objectClassName" : "domain",
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2015-12-10"
+      },
+      {
+         "eventDate" : "2020-10-01",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:21"
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/weber.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/weber.html",
          "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
       }
    ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "algorithm" : "8",
+            "digestType" : "2",
+            "keyTag" : "32799",
+            "digest" : "67f60d0f656284c11307fbc8402e280ba0e53d83f601ec4adf2eb54fca93aad9"
+         }
+      ],
+      "delegationSigned" : true
+   },
+   "port43" : "whois.iana.org",
    "entities" : [
       {
-         "handle" : "weber-administrative",
          "roles" : [
             "administrative"
          ],
-         "objectClassName" : "entity",
+         "handle" : "weber-administrative",
          "vcardArray" : [
             "vcard",
             [
@@ -184,14 +126,54 @@
                   "ngtld-weber@cscinfo.com"
                ]
             ]
-         ]
+         ],
+         "objectClassName" : "entity"
       },
       {
-         "handle" : "weber-technical",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Saint-Gobain Weber SA"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Rue de Brie\nServon 77170\nFrance"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "weber-registrant",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
+         "objectClassName" : "entity",
          "roles" : [
             "technical"
          ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -250,62 +232,80 @@
                   "info@verisign-grs.com"
                ]
             ]
-         ]
-      },
-      {
-         "handle" : "weber-registrant",
-         "roles" : [
-            "registrant"
          ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Saint-Gobain Weber SA"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Rue de Brie\nServon 77170\nFrance"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
+         "handle" : "weber-technical"
       }
    ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "32799",
-            "algorithm" : "8",
-            "digest" : "67f60d0f656284c11307fbc8402e280ba0e53d83f601ec4adf2eb54fca93aad9"
+   "notices" : [
+      {
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ],
+         "title" : "About This Service"
+      },
+      {
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ],
+         "title" : "Comments"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:120:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.173.30"
+            ]
+         },
+         "ldhName" : "AC1.NSTLD.COM"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC2.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.174.30"
+            ],
+            "v6" : [
+               "2001:500:121:0:0:0:0:30"
+            ]
          }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ]
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC3.NSTLD.COM",
+         "ipAddresses" : {
+            "v4" : [
+               "192.42.175.30"
+            ],
+            "v6" : [
+               "2001:500:122:0:0:0:0:30"
+            ]
+         }
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "AC4.NSTLD.COM",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:123:0:0:0:0:30"
+            ],
+            "v4" : [
+               "192.42.176.30"
+            ]
+         }
+      }
+   ],
+   "objectClassName" : "domain"
 }

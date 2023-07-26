@@ -1,103 +1,14 @@
 {
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2007-05-02"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2023-01-18"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
-   "nameservers" : [
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "199.19.55.1"
-            ],
-            "v6" : [
-               "2001:500:d:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "A0.ASIA.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v6" : [
-               "2001:500:42:0:0:0:0:1"
-            ],
-            "v4" : [
-               "199.249.114.1"
-            ]
-         },
-         "ldhName" : "A2.ASIA.AFILIAS-NST.INFO",
-         "objectClassName" : "nameserver"
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.28.1"
-            ],
-            "v6" : [
-               "2001:500:16:0:0:0:0:1"
-            ]
-         },
-         "objectClassName" : "nameserver",
-         "ldhName" : "B0.ASIA.AFILIAS-NST.ASIA"
-      },
-      {
-         "ldhName" : "B2.ASIA.AFILIAS-NST.ORG",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "199.249.122.1"
-            ],
-            "v6" : [
-               "2001:500:4a:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "C0.ASIA.AFILIAS-NST.INFO",
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.29.1"
-            ],
-            "v6" : [
-               "2001:500:17:0:0:0:0:1"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "199.254.30.1"
-            ],
-            "v6" : [
-               "2001:500:18:0:0:0:0:1"
-            ]
-         },
-         "ldhName" : "D0.ASIA.AFILIAS-NST.ASIA",
-         "objectClassName" : "nameserver"
-      }
-   ],
-   "ldhName" : "asia",
    "handle" : "asia",
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
    "remarks" : [
       {
-         "title" : "Whois Service",
          "description" : [
             "The port-43 whois service for this TLD is WHOIS.NIC.ASIA."
-         ]
+         ],
+         "title" : "Whois Service"
       },
       {
          "description" : [
@@ -106,12 +17,13 @@
          "title" : "Remark"
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
    ],
+   "ldhName" : "asia",
    "notices" : [
       {
          "title" : "About This Service",
@@ -132,11 +44,6 @@
    ],
    "entities" : [
       {
-         "handle" : "asia-administrative",
-         "roles" : [
-            "administrative"
-         ],
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -195,13 +102,17 @@
                   "admin@iana.whois.asia"
                ]
             ]
-         ]
+         ],
+         "handle" : "asia-administrative",
+         "roles" : [
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       },
       {
          "roles" : [
             "technical"
          ],
-         "handle" : "asia-technical",
          "vcardArray" : [
             "vcard",
             [
@@ -261,9 +172,12 @@
                ]
             ]
          ],
+         "handle" : "asia-technical",
          "objectClassName" : "entity"
       },
       {
+         "objectClassName" : "entity",
+         "handle" : "asia-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -297,8 +211,6 @@
                ]
             ]
          ],
-         "objectClassName" : "entity",
-         "handle" : "asia-registrant",
          "roles" : [
             "registrant"
          ]
@@ -306,35 +218,123 @@
    ],
    "port43" : "whois.iana.org",
    "secureDNS" : {
-      "delegationSigned" : true,
       "dsData" : [
          {
-            "digestType" : "2",
             "keyTag" : "23407",
+            "digestType" : "2",
             "algorithm" : "8",
             "digest" : "0f51a4e5ef96b66c2078f7735b41860c83da0746ddda1a1b2b893ab056b3058c"
          }
-      ]
+      ],
+      "delegationSigned" : true
    },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "objectClassName" : "domain",
    "links" : [
       {
+         "rel" : "related",
          "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/asia.html",
+         "href" : "https://www.iana.org/domains/root/db/asia.html"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
          "rel" : "related"
       },
       {
          "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
+         "href" : "http://www.registry.asia",
+         "title" : "URL for registration services"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "2007-05-02",
+         "eventAction" : "registration"
       },
       {
-         "title" : "URL for registration services",
-         "href" : "http://www.registry.asia",
-         "rel" : "related"
+         "eventDate" : "2023-01-18",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventDate" : "2023-07-26T12:27:59",
+         "eventAction" : "last update of RDAP database"
+      }
+   ],
+   "status" : [
+      "active"
+   ],
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "ldhName" : "A0.ASIA.AFILIAS-NST.INFO",
+         "ipAddresses" : {
+            "v4" : [
+               "199.19.55.1"
+            ],
+            "v6" : [
+               "2001:500:d:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "199.249.114.1"
+            ],
+            "v6" : [
+               "2001:500:42:0:0:0:0:1"
+            ]
+         },
+         "ldhName" : "A2.ASIA.AFILIAS-NST.INFO",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ldhName" : "B0.ASIA.AFILIAS-NST.ASIA",
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.28.1"
+            ],
+            "v6" : [
+               "2001:500:16:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v6" : [
+               "2001:500:4a:0:0:0:0:1"
+            ],
+            "v4" : [
+               "199.249.122.1"
+            ]
+         },
+         "ldhName" : "B2.ASIA.AFILIAS-NST.ORG",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "C0.ASIA.AFILIAS-NST.INFO",
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.29.1"
+            ],
+            "v6" : [
+               "2001:500:17:0:0:0:0:1"
+            ]
+         }
+      },
+      {
+         "ldhName" : "D0.ASIA.AFILIAS-NST.ASIA",
+         "ipAddresses" : {
+            "v4" : [
+               "199.254.30.1"
+            ],
+            "v6" : [
+               "2001:500:18:0:0:0:0:1"
+            ]
+         },
+         "objectClassName" : "nameserver"
       }
    ]
 }

@@ -1,25 +1,160 @@
 {
-   "rdapConformance" : [
-      "rdap_level_0"
+   "objectClassName" : "domain",
+   "nameservers" : [
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:1:0:0:0:0:6"
+            ],
+            "v4" : [
+               "37.209.192.6"
+            ]
+         },
+         "ldhName" : "NS1.TLDNS.VU"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ipAddresses" : {
+            "v6" : [
+               "2001:dcd:2:0:0:0:0:6"
+            ],
+            "v4" : [
+               "37.209.194.6"
+            ]
+         },
+         "ldhName" : "NS2.TLDNS.VU"
+      },
+      {
+         "objectClassName" : "nameserver",
+         "ldhName" : "NS3.TLDNS.VU",
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.196.6"
+            ],
+            "v6" : [
+               "2001:dcd:3:0:0:0:0:6"
+            ]
+         }
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "37.209.198.6"
+            ],
+            "v6" : [
+               "2001:dcd:4:0:0:0:0:6"
+            ]
+         },
+         "ldhName" : "NS4.TLDNS.VU",
+         "objectClassName" : "nameserver"
+      }
+   ],
+   "status" : [
+      "active"
    ],
    "secureDNS" : {
       "delegationSigned" : true,
       "dsData" : [
          {
-            "keyTag" : "50412",
             "digestType" : "2",
-            "digest" : "49257111e03ad5f8c450f8330f101b87b84f82251fa54ce67c832b7eefa45232",
-            "algorithm" : "10"
+            "algorithm" : "10",
+            "keyTag" : "50412",
+            "digest" : "49257111e03ad5f8c450f8330f101b87b84f82251fa54ce67c832b7eefa45232"
          }
       ]
    },
-   "port43" : "whois.iana.org",
+   "links" : [
+      {
+         "href" : "https://www.iana.org/domains/root/db/vu.html",
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "rel" : "related"
+      },
+      {
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "href" : "http://www.hello.vu",
+         "title" : "URL for registration services"
+      }
+   ],
+   "events" : [
+      {
+         "eventDate" : "1995-04-10",
+         "eventAction" : "registration"
+      },
+      {
+         "eventAction" : "last changed",
+         "eventDate" : "2022-07-21"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:32:19"
+      }
+   ],
+   "notices" : [
+      {
+         "title" : "About This Service",
+         "description" : [
+            "Please note that this RDAP service is NOT provided by the IANA.",
+            "",
+            "For more information, please see https://about.rdap.org"
+         ]
+      },
+      {
+         "title" : "Comments",
+         "description" : [
+            "IANA WHOIS server",
+            "for more information on IANA, visit http://www.iana.org",
+            "This query returned 1 object"
+         ]
+      }
+   ],
    "entities" : [
       {
-         "handle" : "vu-technical",
          "roles" : [
-            "technical"
+            "registrant"
          ],
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "Kumul Highway\nPort Vila 3547\nVanuatu"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
+         ],
+         "handle" : "vu-registrant",
+         "objectClassName" : "entity"
+      },
+      {
          "vcardArray" : [
             "vcard",
             [
@@ -79,14 +214,13 @@
                ]
             ]
          ],
+         "handle" : "vu-technical",
+         "roles" : [
+            "technical"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "vu-administrative",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -145,153 +279,16 @@
                   "iana@trbr.vu"
                ]
             ]
-         ]
-      },
-      {
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Telecommunications Radiocommunications and Broadcasting Regulator (TRBR)"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "Kumul Highway\nPort Vila 3547\nVanuatu"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
          ],
-         "handle" : "vu-registrant",
+         "handle" : "vu-administrative",
          "roles" : [
-            "registrant"
-         ]
+            "administrative"
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "links" : [
-      {
-         "rel" : "related",
-         "title" : "Entry for this TLD in the Root Zone Database",
-         "href" : "https://www.iana.org/domains/root/db/vu.html"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://about.rdap.org",
-         "title" : "About RDAP"
-      },
-      {
-         "rel" : "related",
-         "title" : "URL for registration services",
-         "href" : "http://www.hello.vu"
-      }
-   ],
-   "objectClassName" : "domain",
-   "nameservers" : [
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS1.TLDNS.VU",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.192.6"
-            ],
-            "v6" : [
-               "2001:dcd:1:0:0:0:0:6"
-            ]
-         }
-      },
-      {
-         "objectClassName" : "nameserver",
-         "ldhName" : "NS2.TLDNS.VU",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.194.6"
-            ],
-            "v6" : [
-               "2001:dcd:2:0:0:0:0:6"
-            ]
-         }
-      },
-      {
-         "ldhName" : "NS3.TLDNS.VU",
-         "objectClassName" : "nameserver",
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.196.6"
-            ],
-            "v6" : [
-               "2001:dcd:3:0:0:0:0:6"
-            ]
-         }
-      },
-      {
-         "ipAddresses" : {
-            "v4" : [
-               "37.209.198.6"
-            ],
-            "v6" : [
-               "2001:dcd:4:0:0:0:0:6"
-            ]
-         },
-         "ldhName" : "NS4.TLDNS.VU",
-         "objectClassName" : "nameserver"
-      }
-   ],
+   "port43" : "whois.iana.org",
    "ldhName" : "vu",
-   "status" : [
-      "active"
-   ],
-   "events" : [
-      {
-         "eventDate" : "1995-04-10",
-         "eventAction" : "registration"
-      },
-      {
-         "eventDate" : "2022-07-21",
-         "eventAction" : "last changed"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:50"
-      }
-   ],
-   "notices" : [
-      {
-         "description" : [
-            "Please note that this RDAP service is NOT provided by the IANA.",
-            "",
-            "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
-      },
-      {
-         "description" : [
-            "IANA WHOIS server",
-            "for more information on IANA, visit http://www.iana.org",
-            "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
    "remarks" : [
       {
          "description" : [
@@ -306,11 +303,14 @@
          ]
       },
       {
-         "title" : "Source",
          "description" : [
             "IANA"
-         ]
+         ],
+         "title" : "Source"
       }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
    ],
    "handle" : "vu"
 }

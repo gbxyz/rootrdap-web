@@ -1,7 +1,8 @@
 {
-   "ldhName" : "bank",
+   "objectClassName" : "domain",
    "nameservers" : [
       {
+         "ldhName" : "D.NIC.BANK",
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1010:0:0:0:0:27"
@@ -10,22 +11,22 @@
                "156.154.103.27"
             ]
          },
-         "ldhName" : "D.NIC.BANK",
+         "objectClassName" : "nameserver"
+      },
+      {
+         "ipAddresses" : {
+            "v4" : [
+               "156.154.104.27"
+            ],
+            "v6" : [
+               "2610:a1:1011:0:0:0:0:27"
+            ]
+         },
+         "ldhName" : "E.NIC.BANK",
          "objectClassName" : "nameserver"
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "E.NIC.BANK",
-         "ipAddresses" : {
-            "v6" : [
-               "2610:a1:1011:0:0:0:0:27"
-            ],
-            "v4" : [
-               "156.154.104.27"
-            ]
-         }
-      },
-      {
          "ipAddresses" : {
             "v6" : [
                "2610:a1:1012:0:0:0:0:27"
@@ -34,10 +35,10 @@
                "156.154.105.27"
             ]
          },
-         "objectClassName" : "nameserver",
          "ldhName" : "F.NIC.BANK"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v6" : [
                "2001:dcd:1:0:0:0:0:10"
@@ -46,8 +47,7 @@
                "37.209.192.10"
             ]
          },
-         "ldhName" : "W.NIC.BANK",
-         "objectClassName" : "nameserver"
+         "ldhName" : "W.NIC.BANK"
       },
       {
          "objectClassName" : "nameserver",
@@ -70,13 +70,41 @@
                "2001:dcd:3:0:0:0:0:10"
             ]
          },
-         "objectClassName" : "nameserver",
-         "ldhName" : "Y.NIC.BANK"
+         "ldhName" : "Y.NIC.BANK",
+         "objectClassName" : "nameserver"
       }
    ],
    "status" : [
       "active"
    ],
+   "links" : [
+      {
+         "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/bank.html",
+         "rel" : "related"
+      },
+      {
+         "rel" : "related",
+         "title" : "About RDAP",
+         "href" : "https://about.rdap.org"
+      },
+      {
+         "rel" : "related",
+         "title" : "URL for registration services",
+         "href" : "https://www.ftld.com/"
+      }
+   ],
+   "secureDNS" : {
+      "dsData" : [
+         {
+            "digestType" : "2",
+            "algorithm" : "8",
+            "keyTag" : "15994",
+            "digest" : "659d10863a42e4957ad8f9ad97a56f8de227aa74fc9e3aa4c0e8afac0458071a"
+         }
+      ],
+      "delegationSigned" : true
+   },
    "events" : [
       {
          "eventDate" : "2014-11-26",
@@ -88,7 +116,7 @@
       },
       {
          "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
+         "eventDate" : "2023-07-26T12:28:07"
       }
    ],
    "notices" : [
@@ -101,53 +129,18 @@
          ]
       },
       {
+         "title" : "Comments",
          "description" : [
             "IANA WHOIS server",
             "for more information on IANA, visit http://www.iana.org",
             "This query returned 1 object"
-         ],
-         "title" : "Comments"
-      }
-   ],
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.BANK."
-         ]
-      },
-      {
-         "title" : "Remark",
-         "description" : [
-            "Registration information: https://www.ftld.com/"
-         ]
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
          ]
       }
    ],
-   "handle" : "bank",
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "secureDNS" : {
-      "delegationSigned" : true,
-      "dsData" : [
-         {
-            "digestType" : "2",
-            "keyTag" : "15994",
-            "algorithm" : "8",
-            "digest" : "659d10863a42e4957ad8f9ad97a56f8de227aa74fc9e3aa4c0e8afac0458071a"
-         }
-      ]
-   },
    "port43" : "whois.iana.org",
    "entities" : [
       {
-         "objectClassName" : "entity",
+         "handle" : "bank-registrant",
          "vcardArray" : [
             "vcard",
             [
@@ -184,72 +177,14 @@
          "roles" : [
             "registrant"
          ],
-         "handle" : "bank-registrant"
+         "objectClassName" : "entity"
       },
       {
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "fn",
-                  {},
-                  "text",
-                  "Managing Director"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "fTLD Registry Services, LLC"
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1300 Eye Street, NW\nSuite 1100 West\nWashington DC 20005\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ],
-               [
-                  "tel",
-                  {},
-                  "text",
-                  "+1 202 236 1154"
-               ],
-               [
-                  "email",
-                  {},
-                  "text",
-                  "ftld@ftld.com"
-               ]
-            ]
-         ],
          "objectClassName" : "entity",
-         "roles" : [
-            "administrative"
-         ],
-         "handle" : "bank-administrative"
-      },
-      {
          "roles" : [
             "technical"
          ],
          "handle" : "bank-technical",
-         "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
             [
@@ -309,24 +244,89 @@
                ]
             ]
          ]
-      }
-   ],
-   "links" : [
-      {
-         "rel" : "related",
-         "href" : "https://www.iana.org/domains/root/db/bank.html",
-         "title" : "Entry for this TLD in the Root Zone Database"
       },
       {
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org",
-         "rel" : "related"
-      },
-      {
-         "rel" : "related",
-         "href" : "https://www.ftld.com/",
-         "title" : "URL for registration services"
+         "roles" : [
+            "administrative"
+         ],
+         "handle" : "bank-administrative",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "fn",
+                  {},
+                  "text",
+                  "Managing Director"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "fTLD Registry Services, LLC"
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1300 Eye Street, NW\nSuite 1100 West\nWashington DC 20005\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ],
+               [
+                  "tel",
+                  {},
+                  "text",
+                  "+1 202 236 1154"
+               ],
+               [
+                  "email",
+                  {},
+                  "text",
+                  "ftld@ftld.com"
+               ]
+            ]
+         ],
+         "objectClassName" : "entity"
       }
    ],
-   "objectClassName" : "domain"
+   "ldhName" : "bank",
+   "remarks" : [
+      {
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.BANK."
+         ],
+         "title" : "Whois Service"
+      },
+      {
+         "title" : "Remark",
+         "description" : [
+            "Registration information: https://www.ftld.com/"
+         ]
+      },
+      {
+         "title" : "Source",
+         "description" : [
+            "IANA"
+         ]
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "handle" : "bank"
 }

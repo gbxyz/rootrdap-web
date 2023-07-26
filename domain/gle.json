@@ -1,15 +1,52 @@
 {
-   "objectClassName" : "domain",
+   "handle" : "gle",
+   "remarks" : [
+      {
+         "title" : "Whois Service",
+         "description" : [
+            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
+         ]
+      },
+      {
+         "description" : [
+            "Registration information: https://www.registry.google"
+         ],
+         "title" : "Remark"
+      },
+      {
+         "description" : [
+            "IANA"
+         ],
+         "title" : "Source"
+      }
+   ],
+   "rdapConformance" : [
+      "rdap_level_0"
+   ],
+   "events" : [
+      {
+         "eventAction" : "registration",
+         "eventDate" : "2014-09-04"
+      },
+      {
+         "eventDate" : "2020-04-20",
+         "eventAction" : "last changed"
+      },
+      {
+         "eventAction" : "last update of RDAP database",
+         "eventDate" : "2023-07-26T12:30:03"
+      }
+   ],
    "links" : [
       {
-         "href" : "https://www.iana.org/domains/root/db/gle.html",
          "title" : "Entry for this TLD in the Root Zone Database",
+         "href" : "https://www.iana.org/domains/root/db/gle.html",
          "rel" : "related"
       },
       {
          "rel" : "related",
-         "title" : "About RDAP",
-         "href" : "https://about.rdap.org"
+         "href" : "https://about.rdap.org",
+         "title" : "About RDAP"
       },
       {
          "rel" : "related",
@@ -17,12 +54,21 @@
          "href" : "https://www.registry.google"
       }
    ],
+   "secureDNS" : {
+      "delegationSigned" : true,
+      "dsData" : [
+         {
+            "keyTag" : "35609",
+            "algorithm" : "8",
+            "digestType" : "2",
+            "digest" : "254367c4fa9fae6e0675ee721943c4cd97371553c9669e4bc424b00cff86e6aa"
+         }
+      ]
+   },
+   "port43" : "whois.iana.org",
    "entities" : [
       {
          "handle" : "gle-administrative",
-         "roles" : [
-            "administrative"
-         ],
          "vcardArray" : [
             "vcard",
             [
@@ -82,13 +128,52 @@
                ]
             ]
          ],
+         "roles" : [
+            "administrative"
+         ],
          "objectClassName" : "entity"
       },
       {
-         "roles" : [
-            "technical"
+         "handle" : "gle-registrant",
+         "vcardArray" : [
+            "vcard",
+            [
+               [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+               ],
+               [
+                  "org",
+                  {},
+                  "text",
+                  "Charleston Road Registry Inc."
+               ],
+               [
+                  "adr",
+                  {
+                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
+                  },
+                  "text",
+                  [
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     "",
+                     ""
+                  ]
+               ]
+            ]
          ],
-         "handle" : "gle-technical",
+         "roles" : [
+            "registrant"
+         ],
+         "objectClassName" : "entity"
+      },
+      {
          "objectClassName" : "entity",
          "vcardArray" : [
             "vcard",
@@ -148,93 +233,21 @@
                   "crr-tech@google.com"
                ]
             ]
-         ]
-      },
-      {
-         "handle" : "gle-registrant",
+         ],
+         "handle" : "gle-technical",
          "roles" : [
-            "registrant"
-         ],
-         "objectClassName" : "entity",
-         "vcardArray" : [
-            "vcard",
-            [
-               [
-                  "version",
-                  {},
-                  "text",
-                  "4.0"
-               ],
-               [
-                  "org",
-                  {},
-                  "text",
-                  "Charleston Road Registry Inc."
-               ],
-               [
-                  "adr",
-                  {
-                     "label" : "1600 Amphitheatre Parkway\nMountain View CA 94043\nUnited States of America (the)"
-                  },
-                  "text",
-                  [
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     "",
-                     ""
-                  ]
-               ]
-            ]
-         ]
-      }
-   ],
-   "port43" : "whois.iana.org",
-   "secureDNS" : {
-      "dsData" : [
-         {
-            "algorithm" : "8",
-            "digest" : "254367c4fa9fae6e0675ee721943c4cd97371553c9669e4bc424b00cff86e6aa",
-            "digestType" : "2",
-            "keyTag" : "35609"
-         }
-      ],
-      "delegationSigned" : true
-   },
-   "rdapConformance" : [
-      "rdap_level_0"
-   ],
-   "handle" : "gle",
-   "remarks" : [
-      {
-         "title" : "Whois Service",
-         "description" : [
-            "The port-43 whois service for this TLD is WHOIS.NIC.GOOGLE."
-         ]
-      },
-      {
-         "description" : [
-            "Registration information: https://www.registry.google"
-         ],
-         "title" : "Remark"
-      },
-      {
-         "title" : "Source",
-         "description" : [
-            "IANA"
+            "technical"
          ]
       }
    ],
    "notices" : [
       {
+         "title" : "About This Service",
          "description" : [
             "Please note that this RDAP service is NOT provided by the IANA.",
             "",
             "For more information, please see https://about.rdap.org"
-         ],
-         "title" : "About This Service"
+         ]
       },
       {
          "title" : "Comments",
@@ -245,52 +258,34 @@
          ]
       }
    ],
-   "events" : [
-      {
-         "eventAction" : "registration",
-         "eventDate" : "2014-09-04"
-      },
-      {
-         "eventAction" : "last changed",
-         "eventDate" : "2020-04-20"
-      },
-      {
-         "eventAction" : "last update of RDAP database",
-         "eventDate" : "2023-07-26T12:03:34"
-      }
-   ],
-   "status" : [
-      "active"
-   ],
    "ldhName" : "gle",
    "nameservers" : [
       {
-         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:32:0:0:0:69"
-            ],
             "v4" : [
                "216.239.32.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:32:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD1.CHARLESTONROADREGISTRY.COM"
       },
       {
          "objectClassName" : "nameserver",
          "ldhName" : "NS-TLD2.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4802:34:0:0:0:69"
-            ],
             "v4" : [
                "216.239.34.105"
+            ],
+            "v6" : [
+               "2001:4860:4802:34:0:0:0:69"
             ]
          }
       },
       {
          "objectClassName" : "nameserver",
-         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM",
          "ipAddresses" : {
             "v4" : [
                "216.239.36.105"
@@ -298,10 +293,10 @@
             "v6" : [
                "2001:4860:4802:36:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD3.CHARLESTONROADREGISTRY.COM"
       },
       {
-         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM",
          "objectClassName" : "nameserver",
          "ipAddresses" : {
             "v4" : [
@@ -310,19 +305,24 @@
             "v6" : [
                "2001:4860:4802:38:0:0:0:69"
             ]
-         }
+         },
+         "ldhName" : "NS-TLD4.CHARLESTONROADREGISTRY.COM"
       },
       {
+         "objectClassName" : "nameserver",
          "ipAddresses" : {
-            "v6" : [
-               "2001:4860:4805:0:0:0:0:69"
-            ],
             "v4" : [
                "216.239.60.105"
+            ],
+            "v6" : [
+               "2001:4860:4805:0:0:0:0:69"
             ]
          },
-         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM",
-         "objectClassName" : "nameserver"
+         "ldhName" : "NS-TLD5.CHARLESTONROADREGISTRY.COM"
       }
+   ],
+   "objectClassName" : "domain",
+   "status" : [
+      "active"
    ]
 }
